@@ -1,0 +1,182 @@
+{
+ "LARGE_CAPSULE": {
+  "score": 0.227,
+  "n": 600
+ },
+ "ARCANE_SCROLL": {
+  "score": 0.176,
+  "n": 509
+ },
+ "LEAFY_POULTICE": {
+  "score": 0.232,
+  "n": 533
+ },
+ "FISHING_ROD": {
+  "score": 0.169,
+  "n": 260
+ },
+ "STONE_HUMIDIFIER": {
+  "score": 0.196,
+  "n": 79
+ },
+ "SILKEN_TRESS": {
+  "score": 0.218,
+  "n": 718
+ },
+ "GOLDEN_PEARL": {
+  "score": 0.239,
+  "n": 453
+ },
+ "PHIAL_HOLSTER": {
+  "score": 0.239,
+  "n": 206
+ },
+ "BOOMING_CONCH": {
+  "score": 0.267,
+  "n": 326
+ },
+ "CURSED_PEARL": {
+  "score": 0.208,
+  "n": 601
+ },
+ "KALEIDOSCOPE": {
+  "score": 0.168,
+  "n": 595
+ },
+ "NEOWS_TORMENT": {
+  "score": 0.236,
+  "n": 205
+ },
+ "NEOWS_BONES": {
+  "score": 0.198,
+  "n": 493
+ },
+ "LEAD_PAPERWEIGHT": {
+  "score": 0.197,
+  "n": 494
+ },
+ "SMALL_CAPSULE": {
+  "score": 0.238,
+  "n": 241
+ },
+ "PRECARIOUS_SHEARS": {
+  "score": 0.206,
+  "n": 218
+ },
+ "HEFTY_TABLET": {
+  "score": 0.141,
+  "n": 534
+ },
+ "SILVER_CRUCIBLE": {
+  "score": 0.183,
+  "n": 508
+ },
+ "NEW_LEAF": {
+  "score": 0.181,
+  "n": 376
+ },
+ "LOST_COFFER": {
+  "score": 0.172,
+  "n": 225
+ },
+ "NEOWS_TALISMAN": {
+  "score": 0.267,
+  "n": 161
+ },
+ "DOWSING_ROD": {
+  "score": 0.198,
+  "n": 289
+ },
+ "NEOWS_SACRIFICE": {
+  "score": 0.27,
+  "n": 225
+ },
+ "LAVA_ROCK": {
+  "score": 0.241,
+  "n": 117
+ },
+ "POMANDER": {
+  "score": 0.2,
+  "n": 81
+ },
+ "SCROLL_BOXES": {
+  "score": 0.181,
+  "n": 339
+ },
+ "WINGED_BOOTS": {
+  "score": 0.19,
+  "n": 194
+ },
+ "NUTRITIOUS_OYSTER": {
+  "score": 0.141,
+  "n": 58
+ },
+ "PRECISE_SCISSORS": {
+  "score": 0.241,
+  "n": 96
+ },
+ "BING_BONG": {
+  "score": 0.201,
+  "n": 1
+ },
+ "CLAWS": {
+  "score": 0.197,
+  "n": 2
+ },
+ "GLITTER": {
+  "score": 0.201,
+  "n": 1
+ },
+ "TUNING_FORK": {
+  "score": 0.201,
+  "n": 1
+ },
+ "KUSARIGAMA": {
+  "score": 0.201,
+  "n": 1
+ },
+ "BRIMSTONE": {
+  "score": 0.201,
+  "n": 1
+ },
+ "ANCIENT_AFFECTION_BOND": {
+  "score": 0.221,
+  "n": 1
+ },
+ "ANCIENT_AFFECTION_MARRIAGE_BOND": {
+  "score": 0.221,
+  "n": 1
+ },
+ "AKABEKO": {
+  "score": 0.197,
+  "n": 2
+ },
+ "GIRYA": {
+  "score": 0.197,
+  "n": 2
+ },
+ "LOOMING_FRUIT": {
+  "score": 0.201,
+  "n": 1
+ },
+ "VAJRA": {
+  "score": 0.197,
+  "n": 2
+ },
+ "DRAGON_FRUIT": {
+  "score": 0.201,
+  "n": 1
+ },
+ "CHEMICAL_X": {
+  "score": 0.197,
+  "n": 2
+ },
+ "ARCHAIC_TOOTH": {
+  "score": 0.221,
+  "n": 1
+ },
+ "NECROBINDER": {
+  "score": 0.221,
+  "n": 1
+ }
+}

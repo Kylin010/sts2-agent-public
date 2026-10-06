@@ -1,0 +1,29 @@
+--- a/src/Sts2Headless/RunSimulator.cs	2026-10-02 03:41:55.859187114 +0000
++++ b/src/Sts2Headless/RunSimulator.cs	2026-10-02 03:41:55.885187519 +0000
+@@ -205,6 +205,7 @@
+ /// </summary>
+ public class RunSimulator
+ {
++    private string? _seedStr;
+     private static int? _expectedSaveSchemaVersion;
+     private static bool _expectedSaveSchemaVersionReady;
+     private static readonly object _expectedSaveSchemaVersionLock = new();
+@@ -240,7 +241,9 @@
+             if (player == null)
+                 return Error($"Unknown character: {character}");
+ 
+-            var seedStr = seed ?? "headless_" + DateTimeOffset.UtcNow.ToUnixTimeSeconds();
++            // 不传种子时用游戏自己的种子生成（12 位，字符集不含 O 和 I，过滤不雅词），和真游戏开新局一样
++            var seedStr = string.IsNullOrEmpty(seed) ? MegaCrit.Sts2.Core.Helpers.SeedHelper.GetRandomSeed() : MegaCrit.Sts2.Core.Helpers.SeedHelper.CanonicalizeSeed(seed);
++            _seedStr = seedStr;
+             Log($"Creating RunState with seed={seedStr}");
+ 
+             // Use CreateForTest which properly handles mutable copies internally
+@@ -3071,6 +3074,7 @@
+         if (_runState == null) return new();
+         var ctx = new Dictionary<string, object?>
+         {
++            ["seed"] = _seedStr,
+             ["act"] = _runState.CurrentActIndex + 1,
+             ["act_name"] = _loc.Act(_runState.Act?.Id.Entry ?? "OVERGROWTH"),
+             ["floor"] = _runState.ActFloor,

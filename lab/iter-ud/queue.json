@@ -1,0 +1,46 @@
+[
+ {
+  "name": "别把乐加维林族母打醒（睡着的免费回合留着）",
+  "params": {
+   "asleep_wake_pen": 15
+  }
+ },
+ {
+  "name": "每打一张就重新推演",
+  "params": {
+   "search_replan_on_draw": 3,
+   "search_replan_max": 6,
+   "search_sec_mult": 40
+  }
+ },
+ {
+  "name": "篝火学高手",
+  "params": {
+   "rest_mode": "imitate"
+  }
+ },
+ {
+  "name": "第一幕省药留给Boss",
+  "params": {
+   "potion_save_acts": [
+    1
+   ]
+  }
+ },
+ {
+  "name": "第一幕精英加分80",
+  "params": {
+   "route_elite_bonus": [
+    80,
+    0,
+    0
+   ]
+  }
+ },
+ {
+  "name": "兑换率按整副牌",
+  "params": {
+   "alpha_dpt_source": "deck"
+  }
+ }
+]

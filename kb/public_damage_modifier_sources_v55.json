@@ -1,0 +1,3410 @@
+{
+  "CORRUPTION_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/CorruptionPower.cs",
+    "sha256": "f7db11dee58381e9da5df7955d59cf29797dc26067020937affd70fa9f614c63",
+    "no_direct_damage_hook": true
+  },
+  "SLOTH_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SlothPower.cs",
+    "sha256": "a9a2cfea97fd6afa836e0b1b8439e3ea69e732f1f533cb8cb28a3937985fb544",
+    "no_direct_damage_hook": true
+  },
+  "PIERCING_WAIL_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/PiercingWailPower.cs",
+    "sha256": "2ac9a4908da0b6e7467dddd6036c2d931f7e7e13f2e468bb0f2fe92d9ec89c55",
+    "no_direct_damage_hook": false
+  },
+  "CALAMITY_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/CalamityPower.cs",
+    "sha256": "c4f55d42c349a1514dbf2b8f29a4ba65d2ba583cf17b21a086640ff8dc916dca",
+    "no_direct_damage_hook": true
+  },
+  "BATTLEWORN_DUMMY_TIME_LIMIT_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/BattlewornDummyTimeLimitPower.cs",
+    "sha256": "db7ef51bc50c7eeea99c83fc8777037f2ff0d2c0bf6f272561178c80bce939c6",
+    "no_direct_damage_hook": true
+  },
+  "PLOW_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/PlowPower.cs",
+    "sha256": "3c59d2c0e4bcae4dc599453d81188eeeef4aa6d9d4e5290181f3fa0279bf2f89",
+    "no_direct_damage_hook": true
+  },
+  "HIGH_VOLTAGE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/HighVoltagePower.cs",
+    "sha256": "015990a50c382afc81255522b6147972d6140f704ba06f502e602a9ea951568a",
+    "no_direct_damage_hook": true
+  },
+  "SHADOWMELD_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ShadowmeldPower.cs",
+    "sha256": "5192775e12e165e0b4634e39a206c2247cb8592c96246b9c638c37e5d456c18f",
+    "no_direct_damage_hook": true
+  },
+  "ONE_TWO_PUNCH_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/OneTwoPunchPower.cs",
+    "sha256": "293fe6f5f10155b7fac864388563f11b833e75f52548ef0ceed9d5befd4eeff3",
+    "no_direct_damage_hook": true
+  },
+  "VIGOR_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/VigorPower.cs",
+    "sha256": "55dcf1d1fec473d5c3da51d253ff9159e1e5c715bc2453a7c518531317bd3290",
+    "no_direct_damage_hook": false
+  },
+  "DANSE_MACABRE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/DanseMacabrePower.cs",
+    "sha256": "631dc66487701779f9f47e968cd8bde9ce2461a12d335f32e040f26c54031ea0",
+    "no_direct_damage_hook": true
+  },
+  "JUGGERNAUT_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/JuggernautPower.cs",
+    "sha256": "4310fdefaab7301e55942fb037ddc0cd07ef404b4e5f2402eff61f72173244de",
+    "no_direct_damage_hook": true
+  },
+  "STRATAGEM_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/StratagemPower.cs",
+    "sha256": "a3326b138b55d9b860d944c77ebc87af4f6836504b57bc47f785621433558be5",
+    "no_direct_damage_hook": true
+  },
+  "LETHALITY_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/LethalityPower.cs",
+    "sha256": "ef5ad4a11c3d89d058afbf604cc556cd3b1fb6b78f784c0dc19a588b1701f09f",
+    "no_direct_damage_hook": false
+  },
+  "BEACON_OF_HOPE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/BeaconOfHopePower.cs",
+    "sha256": "8db09cbcdc118822a359fe2e42a43603efbb4a037f11be0fbfdae8a8f8c2e973",
+    "no_direct_damage_hook": true
+  },
+  "CONSUMING_SHADOW_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ConsumingShadowPower.cs",
+    "sha256": "fa492bb03e7083d13f64ae47472383221e1a650d9ad8e90fd3a31ba0f9f4d1d6",
+    "no_direct_damage_hook": true
+  },
+  "FRAIL_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/FrailPower.cs",
+    "sha256": "0c1090da7732348da9a8c5ab595b0ed11e30079298c94c51983f5660c65cc4dd",
+    "no_direct_damage_hook": true
+  },
+  "MACHINE_LEARNING_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/MachineLearningPower.cs",
+    "sha256": "1dc17878c1bb7edecfcd5fd170437ba4686c5d3c2479aee7565b868513db3220",
+    "no_direct_damage_hook": true
+  },
+  "AUTOMATION_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/AutomationPower.cs",
+    "sha256": "568fac0e930bd76b3887f9a6a82f81421a8daba902ea988d396d21ecbd931505",
+    "no_direct_damage_hook": true
+  },
+  "HEX_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/HexPower.cs",
+    "sha256": "feaef7aa442f007a8be314e0f02dcfb9bf2aa4ee2c9a313d0d87bc39fa55f574",
+    "no_direct_damage_hook": true
+  },
+  "FORBIDDEN_GRIMOIRE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ForbiddenGrimoirePower.cs",
+    "sha256": "8e868cf479d3fbf94264b9512fde1f552aede7cf6e08e18fa62a36a854643566",
+    "no_direct_damage_hook": true
+  },
+  "ARSENAL_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ArsenalPower.cs",
+    "sha256": "2816ed70db32a980c9b093af26d893b41c43b4565a324b5f72af1b29c7af10ae",
+    "no_direct_damage_hook": true
+  },
+  "SMOGGY_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SmoggyPower.cs",
+    "sha256": "8f367f87a5f67b1fcb6672b51ba44759b2abfe0f968b55971e907cffc5256f95",
+    "no_direct_damage_hook": true
+  },
+  "MONARCHS_GAZE_STRENGTH_DOWN_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/MonarchsGazeStrengthDownPower.cs",
+    "sha256": "6c5db5bb3fc2a8aa33c4bdff11a0a7187724c830527ecb171fd5335444ad0df1",
+    "no_direct_damage_hook": false
+  },
+  "GRAVITY_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/GravityPower.cs",
+    "sha256": "6f5bd930e8f0ba6150d67e3914042baf40bfb624c4563bb68619f3c983c62536",
+    "no_direct_damage_hook": true
+  },
+  "GENESIS_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/GenesisPower.cs",
+    "sha256": "f0f70adffe2ef3457b96e2186dc6d38622a68e79da17550f320aba59a4190175",
+    "no_direct_damage_hook": true
+  },
+  "NOXIOUS_FUMES_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/NoxiousFumesPower.cs",
+    "sha256": "040d92aee8859435d68df00666acb42ed0605730d5f647d4bf4663ae105dace1",
+    "no_direct_damage_hook": true
+  },
+  "MASTER_PLANNER_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/MasterPlannerPower.cs",
+    "sha256": "f9ad362d73ae828f3ae0a2cad3152521951e53c84e054f1e5e8e593b48b6b26f",
+    "no_direct_damage_hook": true
+  },
+  "HEIST_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/HeistPower.cs",
+    "sha256": "b7cecfad5fc4dd1cd77a7312ce5bbf97f0e788d11688b42848840c0368dcf1cf",
+    "no_direct_damage_hook": true
+  },
+  "TEMPORARY_FOCUS_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/TemporaryFocusPower.cs",
+    "sha256": "6704bad2a89eccb748805e9c6e4d5246f655d3be66f92b01540432f7113772f5",
+    "no_direct_damage_hook": true
+  },
+  "PALE_BLUE_DOT_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/PaleBlueDotPower.cs",
+    "sha256": "871e17d36367b4dad095061d431d8c60fded3f66f9858b6ccd01cab757781c95",
+    "no_direct_damage_hook": true
+  },
+  "SENTRY_MODE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SentryModePower.cs",
+    "sha256": "815e688b13194e790ebf184b0594b8b0e4eef927e3d232502183d9628c350f6b",
+    "no_direct_damage_hook": true
+  },
+  "ESCAPE_ARTIST_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/EscapeArtistPower.cs",
+    "sha256": "ee57a2996eb2307c23959f721c9a90b8ffc6491c284d93101b3b2d771a1b2657",
+    "no_direct_damage_hook": true
+  },
+  "DUPLICATION_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/DuplicationPower.cs",
+    "sha256": "7b601e4615be02e223e5e6a3dbeac7835cc31b4a43043379937bb14a12f3cef1",
+    "no_direct_damage_hook": true
+  },
+  "VICIOUS_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ViciousPower.cs",
+    "sha256": "612363fd7b9401ed1970cfa473b6ae843b9afbc898ef24b63cb1f4c10356ecf8",
+    "no_direct_damage_hook": true
+  },
+  "DARK_EMBRACE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/DarkEmbracePower.cs",
+    "sha256": "e33847a1e5a34a66eebc8f196384e6ac4f21c26374dff7d7c6110d6f88c5119c",
+    "no_direct_damage_hook": true
+  },
+  "COORDINATE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/CoordinatePower.cs",
+    "sha256": "e00e4cf6a5cafe6379b28028148f5686a8beec764087fd30329ebe2c3160fd3d",
+    "no_direct_damage_hook": false
+  },
+  "TEMPORARY_STRENGTH_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/TemporaryStrengthPower.cs",
+    "sha256": "5a0bd8788489f1e6b01dcec2a9614b882b6e86ef445da461f7c147ce91e4d9d4",
+    "no_direct_damage_hook": true
+  },
+  "SUCK_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SuckPower.cs",
+    "sha256": "5ebaf91333d36fa92c1fecf8a2627cbfda340d399e95016b4fa8e562e60c20e3",
+    "no_direct_damage_hook": true
+  },
+  "IMITATION_LEARNING_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ImitationLearningPower.cs",
+    "sha256": "80e22495e1e96fb661d3db41399d04a0481ea5e6501379042bb2e28bd61f0d12",
+    "no_direct_damage_hook": true
+  },
+  "ROYALTIES_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/RoyaltiesPower.cs",
+    "sha256": "47645a1cf8483349870eaac6621202fbf3c833ab06489eb2db49cedefbaaa4ee",
+    "no_direct_damage_hook": true
+  },
+  "RAVENOUS_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/RavenousPower.cs",
+    "sha256": "b4170e30ef56029db52adbb21603a0c3e2ed9d02dbba9afd298844ac7173501c",
+    "no_direct_damage_hook": true
+  },
+  "ANTICIPATE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/AnticipatePower.cs",
+    "sha256": "a1f9946cd970509f532c9be6d2145bd8e1267b562217038793c39d5478c7dac6",
+    "no_direct_damage_hook": false
+  },
+  "FASTEN_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/FastenPower.cs",
+    "sha256": "a7d67c5fa1269971bec979bd63e6c0100c1482f636c641741d512edcfa7cd6ac",
+    "no_direct_damage_hook": true
+  },
+  "FERAL_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/FeralPower.cs",
+    "sha256": "eabd551211171e8ef34b3f2deb9572f11e8951f219d58feefd60ff670492617c",
+    "no_direct_damage_hook": true
+  },
+  "ARTIFACT_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ArtifactPower.cs",
+    "sha256": "7fbccd6288412f8f5c5d183596f98c5117210bc4fe0da15634fbacdb5d0c4a8e",
+    "no_direct_damage_hook": true
+  },
+  "STORM_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/StormPower.cs",
+    "sha256": "01d393f0de9807bae1ef427bbeb26b852956aea6352402cf914831e22dc070e9",
+    "no_direct_damage_hook": true
+  },
+  "SWIPE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SwipePower.cs",
+    "sha256": "25bc80f818baa5bf58a0aa0c6ece876ab675150f8ff4d9eab86a2f1d07708aac",
+    "no_direct_damage_hook": true
+  },
+  "SPIRIT_OF_ASH_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SpiritOfAshPower.cs",
+    "sha256": "26d0d4fd22f4ee46bb6f26bae5e43172af0c91e85e43a7e332d761dbbeaa0335",
+    "no_direct_damage_hook": true
+  },
+  "CORROSIVE_WAVE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/CorrosiveWavePower.cs",
+    "sha256": "72d23449af5408a119ba8903375aafb6c6f072f133424774053971b0f92ecf9e",
+    "no_direct_damage_hook": true
+  },
+  "SHACKLING_POTION_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ShacklingPotionPower.cs",
+    "sha256": "ac5cbfd82e17796ed9de5193492bd84b7f3f4870597039ebcaa57db64011838e",
+    "no_direct_damage_hook": false
+  },
+  "HAILSTORM_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/HailstormPower.cs",
+    "sha256": "71b92124c304ea7e2ab779ae88dc4524d37634a7d5603d94f8bddb9fb0de1a09",
+    "no_direct_damage_hook": true
+  },
+  "TAINTED_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/TaintedPower.cs",
+    "sha256": "795f015fbe6e6b69d7d03dc2936f69b0e5eb19d06b83f8aa34bcaeea001ea75d",
+    "no_direct_damage_hook": false
+  },
+  "TERRITORIAL_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/TerritorialPower.cs",
+    "sha256": "7b8d8182290cdbc7a2c2a184e8684703ccebdbbdb0b99d0f9909b7d1601877e0",
+    "no_direct_damage_hook": true
+  },
+  "WASTE_AWAY_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/WasteAwayPower.cs",
+    "sha256": "c4a913157037a86fec1f816c79e8b0fba6f5b422494daa0533e2dd17810999f9",
+    "no_direct_damage_hook": true
+  },
+  "IMPROVEMENT_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ImprovementPower.cs",
+    "sha256": "2af9811d1c6336a1692d81d7f9644fbc85b2f27a68b98169d720d0fb9be01de5",
+    "no_direct_damage_hook": true
+  },
+  "WITHERING_PRESENCE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/WitheringPresencePower.cs",
+    "sha256": "aa46615f0397905cd8f4becbed94af6ca1fdbf66010be9cc7f3c22392171be24",
+    "no_direct_damage_hook": true
+  },
+  "SHRINK_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ShrinkPower.cs",
+    "sha256": "c5d922d4e2fd20804939ca73a9ccbd527587d28d262c664c5c84ea8c52f9ba6c",
+    "no_direct_damage_hook": false
+  },
+  "DEBILITATE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/DebilitatePower.cs",
+    "sha256": "044aeb663cafa659e031a0c54380bf51a18670ca575ee5685a1cd19fecc05032",
+    "no_direct_damage_hook": true
+  },
+  "SKITTISH_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SkittishPower.cs",
+    "sha256": "b7fcc40241e8edfedc2de36404537e61f5b454ee32faa797e248bd9252acdfe7",
+    "no_direct_damage_hook": true
+  },
+  "FLAME_BARRIER_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/FlameBarrierPower.cs",
+    "sha256": "7808c901f9b89b72060ef12abd938afeb23f6b1e39473298e68553f91682993d",
+    "no_direct_damage_hook": true
+  },
+  "SPINNER_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SpinnerPower.cs",
+    "sha256": "3c04a6a02161ba475d91ba5ef33113608dbd77cef53848b1051127d26c4fdd95",
+    "no_direct_damage_hook": true
+  },
+  "THE_GAMBIT_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/TheGambitPower.cs",
+    "sha256": "79042e9a52b1beabe93a03ae23292711b7689faf59dcc85bd6470a1fb3de4faa",
+    "no_direct_damage_hook": true
+  },
+  "FREE_POWER_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/FreePowerPower.cs",
+    "sha256": "0f78cef48fad784663d3b68aedfe4a32dca50bd444a5de5cbcb037ea5f100dc7",
+    "no_direct_damage_hook": true
+  },
+  "SUBROUTINE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SubroutinePower.cs",
+    "sha256": "fa02f21fc00acd7b414401c79a4d366ee98f3618a409f2b9ba2172d49eeae705",
+    "no_direct_damage_hook": true
+  },
+  "DEMISE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/DemisePower.cs",
+    "sha256": "be71652f4440d981f36b1bb0509cea5693ce8810cbe3e972293e42e9f1289348",
+    "no_direct_damage_hook": true
+  },
+  "UNDERWORLD_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/UnderworldPower.cs",
+    "sha256": "bce5bcf01ebdf6a49fd9acf22a4de1f0d01473b4556f7a152c7989f5be6998f9",
+    "no_direct_damage_hook": true
+  },
+  "DEXTERITY_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/DexterityPower.cs",
+    "sha256": "40117b7d813af37ed580a278f516ce276d15cc89dd1ccaaa8876a0681f754096",
+    "no_direct_damage_hook": true
+  },
+  "FLUTTER_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/FlutterPower.cs",
+    "sha256": "61c76bc99a0cca773045018c7c33abdb0b6b1ecb0aafa2b8a6b9ba7f65a341f0",
+    "no_direct_damage_hook": false
+  },
+  "SWORD_SAGE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SwordSagePower.cs",
+    "sha256": "23d93bdf10196039b329863b30c40defd1c9102cd983f486c46a95f14851257f",
+    "no_direct_damage_hook": true
+  },
+  "CACOPHONY_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/CacophonyPower.cs",
+    "sha256": "91a9225d8d52bd53b48ef332780f5406108d1cf2bb5260cb7a4f79ecd5e1ddeb",
+    "no_direct_damage_hook": true
+  },
+  "TAG_TEAM_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/TagTeamPower.cs",
+    "sha256": "672c3e30af91e5a25b33a3e0851eb11825817505c388aaaf2db085187e0e58f4",
+    "no_direct_damage_hook": true
+  },
+  "CALL_OF_THE_VOID_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/CallOfTheVoidPower.cs",
+    "sha256": "11fd0e9466e9b2df0542e37c56aecacd533bfa4a6f16a0a95c67c36db185ab97",
+    "no_direct_damage_hook": true
+  },
+  "SEEKING_EDGE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SeekingEdgePower.cs",
+    "sha256": "eb292ed8bbbf8a306632b4de33e8d1af440ec63fa421f322c0741a4f5ea3de36",
+    "no_direct_damage_hook": true
+  },
+  "NO_ENERGY_GAIN_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/NoEnergyGainPower.cs",
+    "sha256": "304884e9f63d266f3745e852c3f34fa0e198eb23e688d86a50f622f8cbc7aebc",
+    "no_direct_damage_hook": true
+  },
+  "VULNERABLE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/VulnerablePower.cs",
+    "sha256": "836ae57ad21b7663130b13a02b1acbfb9d7201bf64b6eb3e222b78a09b75936a",
+    "no_direct_damage_hook": false
+  },
+  "CONFUSED_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ConfusedPower.cs",
+    "sha256": "d38af5402c260325c9371b0ab688f66242b97ece96e6d6c32dfb8413638fc603",
+    "no_direct_damage_hook": true
+  },
+  "STRENGTH_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/StrengthPower.cs",
+    "sha256": "3b924e73b1b1f65c8d5cf2e3b4796210f0073d641cd1a94707a3e6145ca125ff",
+    "no_direct_damage_hook": false
+  },
+  "BLACK_HOLE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/BlackHolePower.cs",
+    "sha256": "5008f981fc224af0243376b97102e311e2ecf6b4998beb4de3763d3b256564f0",
+    "no_direct_damage_hook": true
+  },
+  "KNOCKDOWN_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/KnockdownPower.cs",
+    "sha256": "7dd2042e0ff94a492da5bf4d367fec9e4c858e820b209c4102fae32a2eb4cc3c",
+    "no_direct_damage_hook": false
+  },
+  "POSSESS_STRENGTH_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/PossessStrengthPower.cs",
+    "sha256": "983c6efcb84feb5dad5dabab06dfd319f2b220ae4620a50fe8edff50c8d65526",
+    "no_direct_damage_hook": true
+  },
+  "NO_DRAW_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/NoDrawPower.cs",
+    "sha256": "21aedfb76a47719d32f82129b65116ea9526b49d5b4a8b6a0cd08330ed30d6ef",
+    "no_direct_damage_hook": true
+  },
+  "BACK_ATTACK_LEFT_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/BackAttackLeftPower.cs",
+    "sha256": "9f8ef0a68efa3833bd7384c5d916a2db8d708d90ab26552a4f48a5345c906819",
+    "no_direct_damage_hook": true
+  },
+  "CURL_UP_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/CurlUpPower.cs",
+    "sha256": "6d8853584508a821720b91a1fb3afb8b0195884b563898a9ba02c4bc89f12100",
+    "no_direct_damage_hook": true
+  },
+  "WELL_LAID_PLANS_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/WellLaidPlansPower.cs",
+    "sha256": "7c1b1988eb74f338375d9d0efae0ebfd18423d850c39759acbb9a6b9ee4aac8f",
+    "no_direct_damage_hook": true
+  },
+  "NO_BLOCK_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/NoBlockPower.cs",
+    "sha256": "72c475f498ed9559ceac3bff15a2caeb10a0d738d1f4a7c50444aa8d48b7e419",
+    "no_direct_damage_hook": true
+  },
+  "TANK_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/TankPower.cs",
+    "sha256": "a9e6a5c5326f15e0309813dfda894e3feab7af153b96198e292308f7b1df0b66",
+    "no_direct_damage_hook": false
+  },
+  "HELICAL_DART_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/HelicalDartPower.cs",
+    "sha256": "954c8d51b99b489a0185b835dfc2c81cd4f711c19055747287d9b0e6cfd3309d",
+    "no_direct_damage_hook": false
+  },
+  "PAINFUL_STABS_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/PainfulStabsPower.cs",
+    "sha256": "831faebcd0e3abddd1d9970cef5ccb5968e8c6f82c5c8531ab4f37ab7d2d71a9",
+    "no_direct_damage_hook": true
+  },
+  "AGGRESSION_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/AggressionPower.cs",
+    "sha256": "97fc50abc153d4e57d43a5ad70217405287f88c844d56c2e8d7ddb74644d7c94",
+    "no_direct_damage_hook": true
+  },
+  "NECRO_MASTERY_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/NecroMasteryPower.cs",
+    "sha256": "7e71c7378866150bfb2e9f736cb21907909c22e0fdc40d90cd207ef88ea86bf4",
+    "no_direct_damage_hook": true
+  },
+  "ENRAGE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/EnragePower.cs",
+    "sha256": "ff5fc31f32e76264ac9548c102f9d7923f4fc15e53af249e99308cdd76b2b4ce",
+    "no_direct_damage_hook": true
+  },
+  "ITERATION_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/IterationPower.cs",
+    "sha256": "896351258260df6cd83852172de0edc73694aa7edad47ea4701d3782720834fd",
+    "no_direct_damage_hook": true
+  },
+  "POISON_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/PoisonPower.cs",
+    "sha256": "2a384357cacd0e942d8fa6da7629cbff3b300f69712fcf831c926135a88e9ae5",
+    "no_direct_damage_hook": false
+  },
+  "AMBERGRIS_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/AmbergrisPower.cs",
+    "sha256": "a86663ed249254bcdd874eab5fa6a996037d2f05321e35b51c76121045b244af",
+    "no_direct_damage_hook": true
+  },
+  "BUFFER_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/BufferPower.cs",
+    "sha256": "bf95bf58bf220b5e5dfe112a32834d857be8f9ce44c0ebbebb69a6caef805231",
+    "no_direct_damage_hook": true
+  },
+  "MIND_ROT_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/MindRotPower.cs",
+    "sha256": "3676390da138fd28e1f6289419ffd57b0fa4e0e96f7509f0354f11dc855849a1",
+    "no_direct_damage_hook": true
+  },
+  "VEILPIERCER_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/VeilpiercerPower.cs",
+    "sha256": "4331f7090e7a6e09a26c6f7b86a30dee635373ccbaa65fefdd7443e65e350793",
+    "no_direct_damage_hook": true
+  },
+  "VITAL_SPARK_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/VitalSparkPower.cs",
+    "sha256": "a38f842d4de1fa70c3f268f1df8c168290b3b66b87cfbb11736999a5821db1fe",
+    "no_direct_damage_hook": true
+  },
+  "OBLIVION_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/OblivionPower.cs",
+    "sha256": "20075eff663e2cf06e92ecb5edc145541912f80b0b3df97e311a9e70153308ef",
+    "no_direct_damage_hook": true
+  },
+  "RETAIN_HAND_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/RetainHandPower.cs",
+    "sha256": "1ff9604e0cbc7bb8f13fa843f3b1e716cb43f954aab7eb87b41108ae983b2ba4",
+    "no_direct_damage_hook": true
+  },
+  "RITUAL_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/RitualPower.cs",
+    "sha256": "b8917547dbef7e61619523c35d30c478645b8eea612fbcc20e15eacac10f1912",
+    "no_direct_damage_hook": true
+  },
+  "FLEX_POTION_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/FlexPotionPower.cs",
+    "sha256": "97c133d55e521321f80ba4f02c638bf30350f5402794c7883be663ad1a4cd416",
+    "no_direct_damage_hook": false
+  },
+  "CONCOCT_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ConcoctPower.cs",
+    "sha256": "aae0ad6b299b46f8d823fa30cca54fa842f819541dc84f27098b1005965f7219",
+    "no_direct_damage_hook": true
+  },
+  "HARD_TO_KILL_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/HardToKillPower.cs",
+    "sha256": "b29b9ec57bf2e55f56f15b170a142490052a732c53676d734445828c2e9345df",
+    "no_direct_damage_hook": false
+  },
+  "MAGIC_BOMB_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/MagicBombPower.cs",
+    "sha256": "2c5e921dc4b5dfce02c6ab191fde10fb9fbd6578cc18888c8a71dc2f919934cc",
+    "no_direct_damage_hook": true
+  },
+  "UNMOVABLE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/UnmovablePower.cs",
+    "sha256": "4d897e594668d26fcf92bf9b46eb7f15cc05e502f6cb68fade6fd2d9d61b6bd5",
+    "no_direct_damage_hook": true
+  },
+  "VOID_FORM_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/VoidFormPower.cs",
+    "sha256": "39249f2134c2b96a471d233643f1eef7e00853fe182e365f0395cb923094706b",
+    "no_direct_damage_hook": true
+  },
+  "DEMON_FORM_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/DemonFormPower.cs",
+    "sha256": "75555c224e6be1d7c74faae525372ee896fa0a3a913e14fa40f8185a7217db76",
+    "no_direct_damage_hook": true
+  },
+  "THE_BOMB_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/TheBombPower.cs",
+    "sha256": "134cacd31438d5972a1979b438f973258b8d7259dfc0cea49b1b298f247319f3",
+    "no_direct_damage_hook": true
+  },
+  "CONSTRICT_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ConstrictPower.cs",
+    "sha256": "22b408703c3af988b72813f894d7036b59f3727caa0464863fad83927f66ae0d",
+    "no_direct_damage_hook": true
+  },
+  "MONARCHS_GAZE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/MonarchsGazePower.cs",
+    "sha256": "1aa07a1b268d90c96ad73c2dffb60096f15acb7d9c15250a08edbf7d24d22995",
+    "no_direct_damage_hook": true
+  },
+  "NEMESIS_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/NemesisPower.cs",
+    "sha256": "26f4d0934e270d6cc6ac3dbccf6174d61687f7ec798910fe7093d6a772a4c22e",
+    "no_direct_damage_hook": true
+  },
+  "PLATING_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/PlatingPower.cs",
+    "sha256": "d3cd1402c704dcc379caf0981595356d449ccd81da10ff043836e0c1644cc2f1",
+    "no_direct_damage_hook": true
+  },
+  "THIEVERY_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ThieveryPower.cs",
+    "sha256": "a2bd149b4083c8756546851bf8bbbcbd6d7288a748699526757b9a34a38c8138",
+    "no_direct_damage_hook": true
+  },
+  "AFTERIMAGE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/AfterimagePower.cs",
+    "sha256": "34e1163a145be8e2a01332394903970e3a7dc81c472697bde128bef477c9b682",
+    "no_direct_damage_hook": true
+  },
+  "REGEN_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/RegenPower.cs",
+    "sha256": "c42df743d59330a1559687470e23790e0a9e2e148be85423073ce80b76e5a853",
+    "no_direct_damage_hook": true
+  },
+  "RAGE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/RagePower.cs",
+    "sha256": "2472e1f67e5eac3cce87d9c6b170930729ff66a538c19513dbeb1f41c788002a",
+    "no_direct_damage_hook": true
+  },
+  "FURNACE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/FurnacePower.cs",
+    "sha256": "b4a82bd464c8d9cea173b6907fd3e67dcc7e76b143fb81930b62773553feffc4",
+    "no_direct_damage_hook": true
+  },
+  "HIBERNATE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/HibernatePower.cs",
+    "sha256": "9f699ab6ed9b03e708321c12bcafd4d42eacbd4bdbba8cd753fda10dd3166ea1",
+    "no_direct_damage_hook": true
+  },
+  "REAPER_FORM_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ReaperFormPower.cs",
+    "sha256": "ef7433c14dd059f901fa16e5209e1d8ee230a55169bc56507cb7ad8124f4c361",
+    "no_direct_damage_hook": true
+  },
+  "BLUR_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/BlurPower.cs",
+    "sha256": "387abd1abc357e33a785ebb881ea64e011ad4860bc83505d850468773a7d3d70",
+    "no_direct_damage_hook": true
+  },
+  "SELF_FORMING_CLAY_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SelfFormingClayPower.cs",
+    "sha256": "0ca726387dcf1fe713df8c29f55c06764767c3b886e274efcf68fffd61a1d431",
+    "no_direct_damage_hook": true
+  },
+  "SANDPIT_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SandpitPower.cs",
+    "sha256": "e462e0e30741cb1c1d11c70ce7b2b721f356e5cff0e734f94305b26a0274d6b9",
+    "no_direct_damage_hook": true
+  },
+  "RINGING_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/RingingPower.cs",
+    "sha256": "ac56cca21c934bbd7e51554b0294a21cef9a334fff47dd84f4aa9b4cd8d904d1",
+    "no_direct_damage_hook": true
+  },
+  "PYRE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/PyrePower.cs",
+    "sha256": "0b16372599254f8aa08bd1dd94d4c1d111fb2f66db6f02e21f26d156e5c8863e",
+    "no_direct_damage_hook": true
+  },
+  "CHILD_OF_THE_STARS_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ChildOfTheStarsPower.cs",
+    "sha256": "b0f3f777f6dfc2e5c0e6b57c9994bcaf11edba9d16cd691c55d321b08692e1d2",
+    "no_direct_damage_hook": true
+  },
+  "PAPER_CUTS_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/PaperCutsPower.cs",
+    "sha256": "451342ada2c96adbf7c1aabf5e8a508ea4d1da32eb302d44cb8280e178aa7623",
+    "no_direct_damage_hook": true
+  },
+  "ENTROPY_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/EntropyPower.cs",
+    "sha256": "139d073dec2c97530f47b5de39b4ba25d0e99d098df13303b779b920f673b135",
+    "no_direct_damage_hook": true
+  },
+  "ACCURACY_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/AccuracyPower.cs",
+    "sha256": "53d44adf0b774d4f3218ab1e9ce58ea09fcff9b66ee9c7724142a265da9f9d10",
+    "no_direct_damage_hook": false
+  },
+  "NEUROSURGE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/NeurosurgePower.cs",
+    "sha256": "ebd577a0a5fff3b13966529cd32e68de70e69bcfed264c58607c9a44a8404b2c",
+    "no_direct_damage_hook": true
+  },
+  "SHRIEK_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ShriekPower.cs",
+    "sha256": "4695f16955ff21fd5b84bb8403067ab0b55e982c8153b1eca3ea05bbeda233df",
+    "no_direct_damage_hook": true
+  },
+  "DRAW_CARDS_NEXT_TURN_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/DrawCardsNextTurnPower.cs",
+    "sha256": "4f1016ca490b0f374cdf4aa48d3d8a3a013867c0e5bad730c57649720cc0c8a5",
+    "no_direct_damage_hook": true
+  },
+  "TEMPORARY_DEXTERITY_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/TemporaryDexterityPower.cs",
+    "sha256": "c72505343f0ed59f1338097823c0b3d3219d2718d2a324f81f991675bba52c37",
+    "no_direct_damage_hook": true
+  },
+  "BURST_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/BurstPower.cs",
+    "sha256": "1b9573b547f6586529731beaf644866662a5672d957dc4905433b0eabf2b6bec",
+    "no_direct_damage_hook": true
+  },
+  "LIGHTNING_ROD_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/LightningRodPower.cs",
+    "sha256": "ad1c386716b1db1b27206255fd6d50d2048863a1e158393781c099e2594296fb",
+    "no_direct_damage_hook": true
+  },
+  "ILLUSION_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/IllusionPower.cs",
+    "sha256": "7461c923281077a0f9acf3647dc08ec0ff75ed04e1098406f6dc8b6fbb6fb31d",
+    "no_direct_damage_hook": true
+  },
+  "LOOP_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/LoopPower.cs",
+    "sha256": "cfabd01b7f1a63b0971657f6b0e9791c9eb17c43df73b6d8ebff9cac5cd0c120",
+    "no_direct_damage_hook": true
+  },
+  "ENERGY_NEXT_TURN_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/EnergyNextTurnPower.cs",
+    "sha256": "22b833f1d2c6d1730df56aaabc2945ede621c22add0499700e2dc53af311982b",
+    "no_direct_damage_hook": true
+  },
+  "DEVOUR_LIFE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/DevourLifePower.cs",
+    "sha256": "9eb527c54ae0dd5e2f8e551e4e18fc4f65b752ccdfe43da5c56fd01dabced941",
+    "no_direct_damage_hook": true
+  },
+  "HELLRAISER_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/HellraiserPower.cs",
+    "sha256": "3f357af4bf761b6f7cbaa9023a2b62c233b24069e751b3e04b1e23453a26c53a",
+    "no_direct_damage_hook": true
+  },
+  "PANACHE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/PanachePower.cs",
+    "sha256": "9d57377900654c1ad4f909a78f2e1897a1988025e53d03e188bd9cc4737046af",
+    "no_direct_damage_hook": true
+  },
+  "BORROWED_TIME_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/BorrowedTimePower.cs",
+    "sha256": "4e815b8173ad252159e8aaa354cc9e832f83e0cc7cffd68f36afc64a059f4b97",
+    "no_direct_damage_hook": true
+  },
+  "RAMPART_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/RampartPower.cs",
+    "sha256": "89acacd7c482efce7773b5c1980a84f5825ddcdade6f35a6f672db854f22931a",
+    "no_direct_damage_hook": true
+  },
+  "INFINITE_BLADES_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/InfiniteBladesPower.cs",
+    "sha256": "ce8e7daaa020c82451bb2b71f23d16d01da1f86d91f4e4cf95c83f2693087de3",
+    "no_direct_damage_hook": true
+  },
+  "WRAITH_FORM_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/WraithFormPower.cs",
+    "sha256": "a0276620bb615375ebb98f2a9904299e52dabe5c9a8e9613edadc2223edd8141",
+    "no_direct_damage_hook": true
+  },
+  "FREE_SKILL_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/FreeSkillPower.cs",
+    "sha256": "02f4f3dcdcb53db2fefeb6a95c0c83149926122a967424a58cccea3d9737f65b",
+    "no_direct_damage_hook": true
+  },
+  "CRUELTY_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/CrueltyPower.cs",
+    "sha256": "9407d8e2f7a7c32fed9a29ad3868953e9e93f776560d3b9682eccc28c68948f5",
+    "no_direct_damage_hook": true
+  },
+  "BACK_ATTACK_RIGHT_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/BackAttackRightPower.cs",
+    "sha256": "b1188d1375c88b2ba7aea9f527408f258d01b41767d58d30891c8ad9478cabd8",
+    "no_direct_damage_hook": true
+  },
+  "POSSESS_SPEED_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/PossessSpeedPower.cs",
+    "sha256": "96bea597fc9827911f2a3d052f3f1061c0f1b6c5d18a15c685273e9617b35a86",
+    "no_direct_damage_hook": true
+  },
+  "THE_SEALED_THRONE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/TheSealedThronePower.cs",
+    "sha256": "2f94d34fc7b473e9cc0508133ee9122aca51f2ea60d05c5779e9c1c4ac2c774a",
+    "no_direct_damage_hook": true
+  },
+  "SETUP_STRIKE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SetupStrikePower.cs",
+    "sha256": "83e4d4d20b3783557a72dc32580a52e6ae960807a00135a5a0aba8c473b4ef15",
+    "no_direct_damage_hook": false
+  },
+  "TRASH_TO_TREASURE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/TrashToTreasurePower.cs",
+    "sha256": "5ddb4fca2ecfdd33506954bc371dbf69b37789b1cc0d0d374b573bf983045752",
+    "no_direct_damage_hook": true
+  },
+  "TOOLS_OF_THE_TRADE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ToolsOfTheTradePower.cs",
+    "sha256": "fc6994221ff82deae5a070b6af27bdcac8c289317d1272b9e70a4c6b68af4cfe",
+    "no_direct_damage_hook": true
+  },
+  "DARK_SHACKLES_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/DarkShacklesPower.cs",
+    "sha256": "a241dadc5d57e9f337f5837a3c607343073954aaaae17bb5de4cbc17b8bc358a",
+    "no_direct_damage_hook": false
+  },
+  "DISINTEGRATION_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/DisintegrationPower.cs",
+    "sha256": "f95b7bca0dd7f4309850945563e53f0417b83a0b9d0b56e8d61f42fa6460bb15",
+    "no_direct_damage_hook": true
+  },
+  "PAGESTORM_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/PagestormPower.cs",
+    "sha256": "50738440fa08366a481f82e0b815276f506613b0a807d562ebbd91f6db238353",
+    "no_direct_damage_hook": true
+  },
+  "GALVANIC_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/GalvanicPower.cs",
+    "sha256": "a5ab939011e8a3d9e9c54da251db9fb3a066a762a063df6d868267396b10c11e",
+    "no_direct_damage_hook": true
+  },
+  "CRAB_RAGE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/CrabRagePower.cs",
+    "sha256": "22f7549ab14eff908bf14cb06f23c79542347cf1792b09fee0008c6905b6d0f1",
+    "no_direct_damage_hook": true
+  },
+  "SLUMBER_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SlumberPower.cs",
+    "sha256": "0fbebdf8142f3ce901298e7c60721c863d04b1a163e576947b679b1c1969252c",
+    "no_direct_damage_hook": true
+  },
+  "COOLANT_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/CoolantPower.cs",
+    "sha256": "ce91dbce9afbfebdf91fbc8c1f5344ccc7ea51bd5546fbf548c48523182d5c2a",
+    "no_direct_damage_hook": true
+  },
+  "SPEEDSTER_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SpeedsterPower.cs",
+    "sha256": "1774fc5651f01f57153e6f0b094b0b5a795942c609d01fa80a26229aa8952d41",
+    "no_direct_damage_hook": true
+  },
+  "REPTILE_TRINKET_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ReptileTrinketPower.cs",
+    "sha256": "2de89d2f2438446cc50830e372eade77df244eee8652502a60319eaaf6ae088a",
+    "no_direct_damage_hook": false
+  },
+  "HARDENED_SHELL_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/HardenedShellPower.cs",
+    "sha256": "81ebdd1312d4e08d1a901981776349c1c09456b7dd51c93de424b32b92fe42d8",
+    "no_direct_damage_hook": true
+  },
+  "SOAR_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SoarPower.cs",
+    "sha256": "287fec7765d95441421e8e89653d4e5383f940bf388962cb183fe33b25788523",
+    "no_direct_damage_hook": false
+  },
+  "RUPTURE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/RupturePower.cs",
+    "sha256": "df96d99885ac965299a007c14234f028f4e4ba53d08be499b26fcd600ac7bc9a",
+    "no_direct_damage_hook": true
+  },
+  "HANG_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/HangPower.cs",
+    "sha256": "db9cd04eb08b0914d0046d33328a4e2828eb44cf7f9c7087c46dc6f696fc299f",
+    "no_direct_damage_hook": false
+  },
+  "HOTFIX_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/HotfixPower.cs",
+    "sha256": "30abfae57790186233628d420dd82cb9aed7e93a37adc50e849aac07db1a6fd8",
+    "no_direct_damage_hook": false
+  },
+  "ROLLING_BOULDER_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/RollingBoulderPower.cs",
+    "sha256": "c40d3c3632ae50d4914eaee33c3c48ddd259e7e41061b389d82a45aa49d4bd39",
+    "no_direct_damage_hook": true
+  },
+  "STOCK_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/StockPower.cs",
+    "sha256": "707113cbe540c98339f8d65d6521630c644638e3c6e3576dbce0b3c812151d67",
+    "no_direct_damage_hook": true
+  },
+  "FEEDING_FRENZY_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/FeedingFrenzyPower.cs",
+    "sha256": "e38fe224161f27669e54ce18be6a1889367fac48024851da597b5269e3e31968",
+    "no_direct_damage_hook": false
+  },
+  "PILLAR_OF_CREATION_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/PillarOfCreationPower.cs",
+    "sha256": "ce1cab8110cb87a8423f399f4bd3b9317ed264a9de9d0f21951ff1109a0fe000",
+    "no_direct_damage_hook": true
+  },
+  "HAUNT_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/HauntPower.cs",
+    "sha256": "e474466ff316948845161491954c4adbb9ba351a44e949d8a81e985bf6766cb1",
+    "no_direct_damage_hook": true
+  },
+  "ORBIT_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/OrbitPower.cs",
+    "sha256": "1060f66977b53b1da1fc72a08f50370c8e3f0ce45b4e4944b5822df07b14f470",
+    "no_direct_damage_hook": true
+  },
+  "REBOUND_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ReboundPower.cs",
+    "sha256": "4c49d901fe4ea28502dd51ddda84b9f4032251aa838d5f3014da99dde4ab8a90",
+    "no_direct_damage_hook": true
+  },
+  "BURROWED_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/BurrowedPower.cs",
+    "sha256": "13ac83a6bf4c8f82d6212941ac66c7d3c5da666109597ce3b44727ca80e1cced",
+    "no_direct_damage_hook": true
+  },
+  "FADE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/FadePower.cs",
+    "sha256": "114cfe32124fa92587ef2ef57fe86f829133965dc5090d1640f1b1a58b2d8e97",
+    "no_direct_damage_hook": false
+  },
+  "ENFEEBLING_TOUCH_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/EnfeeblingTouchPower.cs",
+    "sha256": "b4ff5551993e28125b1bb101ee03fe63a47b2c22a3027a86906b7a9e9d5cda5c",
+    "no_direct_damage_hook": false
+  },
+  "CONQUEROR_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ConquerorPower.cs",
+    "sha256": "341dd9566959781c68142e5373d685f72523c8ff95ce8ff811287ab0af934a83",
+    "no_direct_damage_hook": false
+  },
+  "PERSONAL_HIVE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/PersonalHivePower.cs",
+    "sha256": "c92eb7f3b43b1554c3406a9b95c4d98b3581cec40a3b0bae1bfc953b0785b297",
+    "no_direct_damage_hook": true
+  },
+  "SMOKESTACK_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SmokestackPower.cs",
+    "sha256": "4e5708d24f827f34d7704c9e1691eee431511b9dde8d2df3f9fe871f84518a88",
+    "no_direct_damage_hook": true
+  },
+  "RADIANCE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/RadiancePower.cs",
+    "sha256": "c62191ff61c078fe096901da2a272b884468c12aea287c65bf5ed6037e30a364",
+    "no_direct_damage_hook": true
+  },
+  "THUNDER_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ThunderPower.cs",
+    "sha256": "68cdd1ec7e50d5580339df1103741d729342b693c2f4dce009ca3cace0bb2dff",
+    "no_direct_damage_hook": true
+  },
+  "MAYHEM_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/MayhemPower.cs",
+    "sha256": "37c1ebc22d563421d57d8d96ef81dc6f5da064d20520e3ddaad7425d93f9f5e3",
+    "no_direct_damage_hook": true
+  },
+  "ACCELERANT_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/AccelerantPower.cs",
+    "sha256": "8deac6167cff38c2f8455f629ae597976302469ae586961767e9e36a6dbbfc02",
+    "no_direct_damage_hook": true
+  },
+  "TANGLED_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/TangledPower.cs",
+    "sha256": "f52ae733202234b2cf4dfe54c05d3657e24a996e867d6142048b2d106650d022",
+    "no_direct_damage_hook": true
+  },
+  "SLIPPERY_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SlipperyPower.cs",
+    "sha256": "f9d568f0b566404d1dee89e8e2a3a93fda5f2b7ee02993a3acf12333d5aef51f",
+    "no_direct_damage_hook": true
+  },
+  "ONE_FOR_ALL_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/OneForAllPower.cs",
+    "sha256": "185fe60b87e88a64ab410122ea3de0ce5ef4cf6e9dea7faed57efa16bac8d77e",
+    "no_direct_damage_hook": false
+  },
+  "COLOSSUS_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ColossusPower.cs",
+    "sha256": "8dcf3e5b406108634580430d63a861fc180d58f8513dcc958d8c88cd167fec0d",
+    "no_direct_damage_hook": false
+  },
+  "HYPERBEAM_FOCUS_DOWN_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/HyperbeamFocusDownPower.cs",
+    "sha256": "a0319ac5e14e3adb78b0e57ff3bf6df2ffabddbb5e7311e3a0eb3006269fa626",
+    "no_direct_damage_hook": false
+  },
+  "MANGLE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ManglePower.cs",
+    "sha256": "bcd39ae2678966e154491b11cbc17bf2d11fbf26e138de543f2aa1b9fc37e988",
+    "no_direct_damage_hook": false
+  },
+  "SIC_EM_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SicEmPower.cs",
+    "sha256": "31ddcb9797340e32597032080b46e4d2c74d9743ba56e0a42803559f14a53942",
+    "no_direct_damage_hook": true
+  },
+  "ENVENOM_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/EnvenomPower.cs",
+    "sha256": "de38f8bf32de6b0cc01a49a9dbad77cd357f73afe4ee36a569871127d1597ce9",
+    "no_direct_damage_hook": true
+  },
+  "SERPENT_FORM_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SerpentFormPower.cs",
+    "sha256": "df7db65155760c80efef510b934884f25fdab825fc36c3388904ae4781922130",
+    "no_direct_damage_hook": true
+  },
+  "IMBALANCED_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ImbalancedPower.cs",
+    "sha256": "7620e27c03d07e67845d2bad487c2ca1d5338ae3c861239287ca17d4eb0b1043",
+    "no_direct_damage_hook": true
+  },
+  "FOCUS_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/FocusPower.cs",
+    "sha256": "8f23e8b08688c9bf31a2d9b0f1277a4a63bb1f5f6047f27da5e3b2fc4cfefff6",
+    "no_direct_damage_hook": true
+  },
+  "FAN_OF_KNIVES_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/FanOfKnivesPower.cs",
+    "sha256": "f1ca87c2d80b3be17545f830aa337b9d63c5694cebd70e86aa1da13f4b760409",
+    "no_direct_damage_hook": true
+  },
+  "SIGNAL_BOOST_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SignalBoostPower.cs",
+    "sha256": "e2308b80e49de1007f6ca44bcbbcae7139faffd58ba5aaad12a061f6314a4e2f",
+    "no_direct_damage_hook": true
+  },
+  "FOREGONE_CONCLUSION_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ForegoneConclusionPower.cs",
+    "sha256": "b7314466c64eeabf69a71f0ebfa0e1bffe44c56994e8c253d5a4b0113d128c52",
+    "no_direct_damage_hook": true
+  },
+  "SLEIGHT_OF_FLESH_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SleightOfFleshPower.cs",
+    "sha256": "a7d44ab8badce2f5f86ca232f3edd3d7380a31334b8a7654fd6840d346a0da93",
+    "no_direct_damage_hook": true
+  },
+  "MONOLOGUE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/MonologuePower.cs",
+    "sha256": "0d69be6a77ae6f51a37446ceda27c4477f2aa82efdfeec0b9885e526c2d3e9cb",
+    "no_direct_damage_hook": true
+  },
+  "TRACKING_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/TrackingPower.cs",
+    "sha256": "6b067407a5922c0631fce3314484601301ae3c8c03121e6db875462681a61e88",
+    "no_direct_damage_hook": false
+  },
+  "SOULBOUND_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SoulboundPower.cs",
+    "sha256": "088e546b047ec8bbc188c13461a94a06acefbef32a7ee2a50352e7614df51628",
+    "no_direct_damage_hook": true
+  },
+  "ASLEEP_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/AsleepPower.cs",
+    "sha256": "8a48187e4c0369d92adc6a2c72dd1f4972ab41645a386e69717cb438502c05da",
+    "no_direct_damage_hook": true
+  },
+  "JUGGLING_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/JugglingPower.cs",
+    "sha256": "ca4b2e59d6e791c588285a5a3d4642841be0b2c4d1a13f50f1a5a9794e5c2bb7",
+    "no_direct_damage_hook": true
+  },
+  "SHROUD_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ShroudPower.cs",
+    "sha256": "434ac08e7840c4419cf84e770cf38b3875c67d7e6381ac0644a3ffb56e0f6792",
+    "no_direct_damage_hook": true
+  },
+  "FLANKING_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/FlankingPower.cs",
+    "sha256": "0412db5d4880aee6387be58d30b262db02ca7c430e575159ec7e6b4a5d301b2c",
+    "no_direct_damage_hook": false
+  },
+  "SPEED_POTION_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SpeedPotionPower.cs",
+    "sha256": "82c63f0efdbdb78c73882634d2c7ce2ad5e4ba0e3f30768f61e5984d344a5e9c",
+    "no_direct_damage_hook": false
+  },
+  "INTERCEPT_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/InterceptPower.cs",
+    "sha256": "ce4dba5b78a39c0d5720d2b64848b320bfee5be98dd9569b30f4d44f6d0ad923",
+    "no_direct_damage_hook": false
+  },
+  "CALCIFY_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/CalcifyPower.cs",
+    "sha256": "920e1d7975ae653f8f21af6320c863ba47fe8e3bd867f3384ae76189a7e49fd8",
+    "no_direct_damage_hook": false
+  },
+  "GUARDED_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/GuardedPower.cs",
+    "sha256": "5258c41fe9574fa447da46429aeb28e7d28a6ca89889e9ba54629f1f5ff28dd0",
+    "no_direct_damage_hook": false
+  },
+  "TORIC_TOUGHNESS_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ToricToughnessPower.cs",
+    "sha256": "456720b22457cdbce2d3badc5229e365718425b814c06aaf13d9da7b9b6bc639",
+    "no_direct_damage_hook": true
+  },
+  "THE_HUNT_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/TheHuntPower.cs",
+    "sha256": "5acefa8252a2a71db054ee00da5451b7ae29994c9c03985649a8b249de41a5e0",
+    "no_direct_damage_hook": true
+  },
+  "CLARITY_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ClarityPower.cs",
+    "sha256": "5bdcc464468e318c2e4f196e093b44318a3a7b3a001a5febb4a0d9d336b34034",
+    "no_direct_damage_hook": true
+  },
+  "COUNTDOWN_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/CountdownPower.cs",
+    "sha256": "0539541906c07d103ed4e1609c93be3281bbd5c5afa0f743a6b556b66f89e8bd",
+    "no_direct_damage_hook": true
+  },
+  "CRUSH_UNDER_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/CrushUnderPower.cs",
+    "sha256": "b85d3c6e592eeae0aa9eb403682416a3cca47b1522f5b5e9301c098019cf5808",
+    "no_direct_damage_hook": false
+  },
+  "DAMPEN_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/DampenPower.cs",
+    "sha256": "66cb5be80b0b7575bcf55a783f224dedb4cf65c5f0514eec980972560492fa4d",
+    "no_direct_damage_hook": true
+  },
+  "REATTACH_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ReattachPower.cs",
+    "sha256": "7d8b21db9c6908f0e87c1a4c803cdca54066ba628df5f9ee2e066fa71bf0e652",
+    "no_direct_damage_hook": true
+  },
+  "SHADOW_STEP_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ShadowStepPower.cs",
+    "sha256": "da44daf519b60dc50a5a8fcab81bb8a0710fecf0e222a8fc2ffb0de5bdbbef99",
+    "no_direct_damage_hook": true
+  },
+  "PHANTOM_BLADES_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/PhantomBladesPower.cs",
+    "sha256": "06f7885b21737cb0e9af67008115f2a0cc79732a6708b55255cbefc7dce82888",
+    "no_direct_damage_hook": false
+  },
+  "CURIOUS_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/CuriousPower.cs",
+    "sha256": "f3df630baac3366c2e297a029df30eee1abd014d0e752fa4142c540ee545ec6c",
+    "no_direct_damage_hook": true
+  },
+  "HATCH_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/HatchPower.cs",
+    "sha256": "f5bb49856cc482d818b7a49a828ba7c135509fed828612ce7556f69793f50092",
+    "no_direct_damage_hook": true
+  },
+  "STEAM_ERUPTION_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SteamEruptionPower.cs",
+    "sha256": "84f1f3ed19556c3101079b793c7d7f6e0227a477c25103c686e0a3b6042ba7a0",
+    "no_direct_damage_hook": true
+  },
+  "WEAK_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/WeakPower.cs",
+    "sha256": "5336dcab83b9c15a2d77712ecc29aa447f1d02697446ce9078f013f9d8e01b59",
+    "no_direct_damage_hook": false
+  },
+  "DOOM_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/DoomPower.cs",
+    "sha256": "6289776b0138de4e0fdb65329fae07dc91f2f156153c42270ceef3792d3ffc29",
+    "no_direct_damage_hook": true
+  },
+  "INFESTED_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/InfestedPower.cs",
+    "sha256": "d496c595a5fbc7527cd5bd6ca4282ec2bbecd3f5fdc36a72a3d777e35ea3a38f",
+    "no_direct_damage_hook": true
+  },
+  "FRIENDSHIP_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/FriendshipPower.cs",
+    "sha256": "7404a151dfa1ff5be401e099115af996a29eab9a895f5af94baeb5e008444c3b",
+    "no_direct_damage_hook": true
+  },
+  "SNEAKY_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SneakyPower.cs",
+    "sha256": "e911ac24138be6fc7028ef2932e90b0905a86a37dbc70332fa784ad677f4f25f",
+    "no_direct_damage_hook": true
+  },
+  "REFLECT_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ReflectPower.cs",
+    "sha256": "78435f27c3d46da28b17f89301895efd4113e8181b46852a609a6d9791264005",
+    "no_direct_damage_hook": true
+  },
+  "SUMMON_NEXT_TURN_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SummonNextTurnPower.cs",
+    "sha256": "a40da74dae4f47196a6fde8bb02c638b5b6e072422414c750d6c29bdc22fc2e0",
+    "no_direct_damage_hook": true
+  },
+  "CHAINS_OF_BINDING_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ChainsOfBindingPower.cs",
+    "sha256": "24b13c2fd3f33f6ad639b4f3bf40b001a3a8253eb5162243fe1f0159331bf9a2",
+    "no_direct_damage_hook": true
+  },
+  "NIGHTMARE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/NightmarePower.cs",
+    "sha256": "5d2cb4f59448de6d461f6dd7f3df7effa7a1af6c2b6188d07a9abde677d75979",
+    "no_direct_damage_hook": true
+  },
+  "BARRICADE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/BarricadePower.cs",
+    "sha256": "a5ecba6bc6007bbe200879d545ec975002bd6230145248e3cf9732b73cd5eb04",
+    "no_direct_damage_hook": true
+  },
+  "MINION_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/MinionPower.cs",
+    "sha256": "10ed71ca328a4cc2325a7424ea67df54ca93e73562f22ca7dcb3964962c05537",
+    "no_direct_damage_hook": true
+  },
+  "FEEL_NO_PAIN_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/FeelNoPainPower.cs",
+    "sha256": "2a56d06c88a43237f75b9aeab62d28776eefd9214e6de0dc094b7db934474a27",
+    "no_direct_damage_hook": true
+  },
+  "BIASED_COGNITION_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/BiasedCognitionPower.cs",
+    "sha256": "60cc4cce1d99f7de38783e211d87b1218f527b68acc2c9bf332b970f343eb921",
+    "no_direct_damage_hook": true
+  },
+  "DYING_STAR_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/DyingStarPower.cs",
+    "sha256": "8ee1a92a36dd6a060e30acd83469eaf494d1e2c547cc383c21ea785310f38128",
+    "no_direct_damage_hook": false
+  },
+  "DIE_FOR_YOU_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/DieForYouPower.cs",
+    "sha256": "d10239549df78b7db970f66b1e5a8ec8ff4c19b2dd9fbd9d7dc27c086113580b",
+    "no_direct_damage_hook": true
+  },
+  "SYNCHRONIZE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SynchronizePower.cs",
+    "sha256": "ac1e67ec9c579c58fec6833f73a8c5fa0a2a2b10f176bc2776629c56bbdb6651",
+    "no_direct_damage_hook": false
+  },
+  "STAR_NEXT_TURN_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/StarNextTurnPower.cs",
+    "sha256": "32ffc5e24bb13eea7e128e0fd7c1b681ce888eff9c89b00d2ba9eeb4141e9d3d",
+    "no_direct_damage_hook": true
+  },
+  "PARRY_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ParryPower.cs",
+    "sha256": "ad7fcb7208552b98cf5415f7f1cd03773e120aa9c707f55a0ac6c4f99a9911d3",
+    "no_direct_damage_hook": true
+  },
+  "HAMMER_TIME_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/HammerTimePower.cs",
+    "sha256": "b355bdfe48a3d566f594b0fd3dbde315a0c91fa3e96f9c246e06b7a8d1156254",
+    "no_direct_damage_hook": true
+  },
+  "PREP_TIME_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/PrepTimePower.cs",
+    "sha256": "fdebb30036a2a186074132df5cc7207390721dbca0ce754486ea4f9116bcd69d",
+    "no_direct_damage_hook": true
+  },
+  "CREATIVE_AI_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/CreativeAiPower.cs",
+    "sha256": "d78a5270cda0ff387dd0adf737cbc8b3a67e5c69897e173f137de6325b8f3d9d",
+    "no_direct_damage_hook": true
+  },
+  "THORNS_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ThornsPower.cs",
+    "sha256": "0e405bb5509da536a90712c0d2475fbd59ebf3e76c93d335e1150819f1883b6c",
+    "no_direct_damage_hook": true
+  },
+  "CRIMSON_MANTLE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/CrimsonMantlePower.cs",
+    "sha256": "4e32008e5a7c8d311d0874a705c8afe91e882ab8fcbbbb2e81cebf8c09e215d1",
+    "no_direct_damage_hook": true
+  },
+  "BLOCK_NEXT_TURN_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/BlockNextTurnPower.cs",
+    "sha256": "cd97a64ecf79b7259101d74d03ff2fa37b1bd40d39ae1c35477a32c60a45cec4",
+    "no_direct_damage_hook": true
+  },
+  "STRANGLE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/StranglePower.cs",
+    "sha256": "c1a2932f962be486559c73985d104f06e0d6d5b0b96ad54d5c1b7eeda60e3736",
+    "no_direct_damage_hook": true
+  },
+  "INFERNO_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/InfernoPower.cs",
+    "sha256": "f1419c39d197759d4fd3ac1a8b153905cb018c960b42c98ae91bb7fee9d7e545",
+    "no_direct_damage_hook": true
+  },
+  "LEADERSHIP_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/LeadershipPower.cs",
+    "sha256": "412d6c6ecf8cecf2e501320b34d02894fda59616564ba3e1ca62eb76b31d739a",
+    "no_direct_damage_hook": false
+  },
+  "SURROUNDED_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SurroundedPower.cs",
+    "sha256": "84bae6b0b80ef8786cdbfd3b223a7f61d6c90df6dab83aad4e74c601961c7238",
+    "no_direct_damage_hook": false
+  },
+  "NOSTALGIA_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/NostalgiaPower.cs",
+    "sha256": "4609b20a802ad069ced0fe79149f3fc224db588933eef65292c831685011d051",
+    "no_direct_damage_hook": true
+  },
+  "ADAPTABLE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/AdaptablePower.cs",
+    "sha256": "d52696c9f8e9b8753844c46a7d9e1a8644bcadcf332a93042fa8440ad91285d4",
+    "no_direct_damage_hook": true
+  },
+  "ECHO_FORM_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/EchoFormPower.cs",
+    "sha256": "910f27e0d0ebbde3973056d89c41eec9bb7eef7c35ee74b9411e670e6be730e3",
+    "no_direct_damage_hook": true
+  },
+  "GIGANTIFICATION_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/GigantificationPower.cs",
+    "sha256": "8101edb97133e204284e6a8e27bf3b917dad3a04de0209668fefe46cdabb1451",
+    "no_direct_damage_hook": false
+  },
+  "FOCUSED_STRIKE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/FocusedStrikePower.cs",
+    "sha256": "d2b9bbabfbe4d2e56f18e87f2f62fb48d4d9df40dbf3a64387678aea4b3549ae",
+    "no_direct_damage_hook": false
+  },
+  "DEMESNE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/DemesnePower.cs",
+    "sha256": "eee5ece54a143c2cd9eee06a0db2e6b7751bc71f780768205793ed402b1e1169",
+    "no_direct_damage_hook": true
+  },
+  "SPECTRUM_SHIFT_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SpectrumShiftPower.cs",
+    "sha256": "5e2b72c84d10b0db337e196dca935e47558c6d9ed48c3215de745d024760b2cb",
+    "no_direct_damage_hook": true
+  },
+  "COVERED_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/CoveredPower.cs",
+    "sha256": "3b10a21ca63a3ac79f19e92e84ee2187b1100b93b340980b482b40cfb3d00dfe",
+    "no_direct_damage_hook": false
+  },
+  "FREE_ATTACK_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/FreeAttackPower.cs",
+    "sha256": "3b5e91b54cfa618c14e9567d99c0fab1292e057db822817207c4e4ddda4a00d2",
+    "no_direct_damage_hook": true
+  },
+  "SLOW_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SlowPower.cs",
+    "sha256": "3ee56099b7e2f557d6dd46cb58f72a5e0c23519153ed69422e964523bcae9b24",
+    "no_direct_damage_hook": false
+  },
+  "STAMPEDE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/StampedePower.cs",
+    "sha256": "efc803dce77ed62afa8c57a61088c80eac386e54a3ca26111da3063120aa1a8a",
+    "no_direct_damage_hook": true
+  },
+  "SURPRISE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/SurprisePower.cs",
+    "sha256": "4eb5c8002b2c3ad0e5ef8e92c2d3ceba79720cca44ae674a8de1c2d96bd8cb53",
+    "no_direct_damage_hook": true
+  },
+  "TENDER_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/TenderPower.cs",
+    "sha256": "7701c261dac64d191e48d43e4b9dc305203b9652456ad72892b91c1e46bdd72e",
+    "no_direct_damage_hook": true
+  },
+  "INTANGIBLE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/IntangiblePower.cs",
+    "sha256": "9862e8fc5b8997da105bf388cfc75449f8a38922b244ba85eaa454d0fcf59fc7",
+    "no_direct_damage_hook": false
+  },
+  "HELLO_WORLD_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/HelloWorldPower.cs",
+    "sha256": "f1601b6e650ab7a9c93be878a3a1925126f5b5762d1cc27856aa782226d97d2d",
+    "no_direct_damage_hook": true
+  },
+  "DOUBLE_DAMAGE_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/DoubleDamagePower.cs",
+    "sha256": "3dc0f97f5585146a463999822677b1853994badd4e93d8b4ee69d04d60f8d3c5",
+    "no_direct_damage_hook": false
+  },
+  "TYRANNY_POWER": {
+    "kind": "PowerModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/TyrannyPower.cs",
+    "sha256": "14a6d9d2cc21dbba8e7a8e7322440cd51cbfcdb73470a93ddbf8a65d2c9282b4",
+    "no_direct_damage_hook": true
+  },
+  "FUR_COAT": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/FurCoat.cs",
+    "sha256": "bd00005bae367e1ba29b51239aaba8fc17cdde27ac1f66eb47e931a76ebee1f9",
+    "no_direct_damage_hook": true
+  },
+  "PAPER_KRANE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/PaperKrane.cs",
+    "sha256": "f1e5b7e31cdf642085e9e74cd13bbad2fef3babf50a88becc3e950158020bce9",
+    "no_direct_damage_hook": true
+  },
+  "VITRUVIAN_MINION": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/VitruvianMinion.cs",
+    "sha256": "b5c2ef8f17d662c83e3b933fec1204635f956ad3936d25be79327003f9e6b204",
+    "no_direct_damage_hook": false
+  },
+  "RED_MASK": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/RedMask.cs",
+    "sha256": "5464edf9bebbc3e8b86a52f42f95e108fa678871351dc53bcddcdc3878d8c3f6",
+    "no_direct_damage_hook": true
+  },
+  "POCKETWATCH": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Pocketwatch.cs",
+    "sha256": "34ace6fd79250582c18f53ea514062b8c7963f290e4fd389cace177464a192f6",
+    "no_direct_damage_hook": true
+  },
+  "RADIANT_PEARL": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/RadiantPearl.cs",
+    "sha256": "8a1f60ae5158fd9536b135407743576b1ddf337d6e6ea05c260e153427d7e304",
+    "no_direct_damage_hook": true
+  },
+  "ORICHALCUM": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Orichalcum.cs",
+    "sha256": "26ea7db10392ce478bef226d3b112f7b17575177d3d839ce176c135f031c06f8",
+    "no_direct_damage_hook": true
+  },
+  "DAUGHTER_OF_THE_WIND": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/DaughterOfTheWind.cs",
+    "sha256": "d54d6e169c6d61993c31313953524df5888bd4eadccfcdc7a1345e93a1a1cb21",
+    "no_direct_damage_hook": true
+  },
+  "PAELS_WING": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/PaelsWing.cs",
+    "sha256": "90908efdfa3e6686395fbdc3ae6987a299f1bcdad5e8e128de56c79fe7e977ca",
+    "no_direct_damage_hook": true
+  },
+  "PAELS_BLOOD": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/PaelsBlood.cs",
+    "sha256": "311c23ed2996c13c9279eaf34aec9c139633f6a5443cdf256c2687d67ee21b59",
+    "no_direct_damage_hook": true
+  },
+  "AKABEKO": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Akabeko.cs",
+    "sha256": "c7987f6de16afb2a7910507f12fc9803298798a8425b670d8f44e1f2ed058236",
+    "no_direct_damage_hook": true
+  },
+  "SILKEN_TRESS": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/SilkenTress.cs",
+    "sha256": "f045974dee1b42bf18fb678bd11b4f60b529f3d272866dfad3c266884d099139",
+    "no_direct_damage_hook": true
+  },
+  "FORGOTTEN_SOUL": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/ForgottenSoul.cs",
+    "sha256": "1faa9b48c82680094333903c7f59bdae31ba226506c3c58217b3406fa5b34a79",
+    "no_direct_damage_hook": true
+  },
+  "DEMON_TONGUE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/DemonTongue.cs",
+    "sha256": "23a0a62f9b47c0fa786df2e8a56aee86a4223b015c5c4510f1cee5c891010d3e",
+    "no_direct_damage_hook": true
+  },
+  "RING_OF_THE_DRAKE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/RingOfTheDrake.cs",
+    "sha256": "41ee243f146f5cff3f1bffaca11425359248e1f5ea88b0ee7034f267f0a6c507",
+    "no_direct_damage_hook": true
+  },
+  "LEAD_PAPERWEIGHT": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/LeadPaperweight.cs",
+    "sha256": "3631dcf67276d245a1613031a97b95be33c3c0fdf83b2cf17fac22f10744f8b4",
+    "no_direct_damage_hook": true
+  },
+  "MINIATURE_CANNON": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/MiniatureCannon.cs",
+    "sha256": "a19365a8ed8a04b6de0ca0b2fffbcf25c464b27cc4bd55b2e2d795c347ad4c0f",
+    "no_direct_damage_hook": false
+  },
+  "TOXIC_EGG": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/ToxicEgg.cs",
+    "sha256": "5199ee81e31f3273550d0fddf884df69a6d876df34c3b94f5105c5e946701d60",
+    "no_direct_damage_hook": true
+  },
+  "LAVA_LAMP": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/LavaLamp.cs",
+    "sha256": "ffe3a17d65b89b10d9f6750ef2aa6273fccfe6adac2ea3412a5187af61baf242",
+    "no_direct_damage_hook": true
+  },
+  "NINJA_SCROLL": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/NinjaScroll.cs",
+    "sha256": "a210090a28ea97bbfb1941fb97e678226a62488e6b20225dc796e0ca78c95434",
+    "no_direct_damage_hook": true
+  },
+  "TINY_MAILBOX": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/TinyMailbox.cs",
+    "sha256": "1a182ac3e18b3eecb44a826274b4bfa83e3bef5fc49d3d1745546edcd281d285",
+    "no_direct_damage_hook": true
+  },
+  "TOUGH_BANDAGES": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/ToughBandages.cs",
+    "sha256": "860aa8aff3813a08399488e6eadebcf486f5e02f19c1bf46dfb43f674867827d",
+    "no_direct_damage_hook": true
+  },
+  "LEAFY_POULTICE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/LeafyPoultice.cs",
+    "sha256": "c57b9ef7112f3c6b7c316ef54a607fd8afa2b5f7ea18f93a6ae85ddb2a2243c4",
+    "no_direct_damage_hook": true
+  },
+  "STONE_CALENDAR": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/StoneCalendar.cs",
+    "sha256": "e408de85fc808a1bac043a45ab5e9eb0f80af95e7c955491cd0bc92bad503699",
+    "no_direct_damage_hook": true
+  },
+  "BLOOD_VIAL": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/BloodVial.cs",
+    "sha256": "68a09be73d3832bd3f4eac44bc1d81d6165f33a306b896fdcfdff141499fa7b6",
+    "no_direct_damage_hook": true
+  },
+  "TINGSHA": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Tingsha.cs",
+    "sha256": "6229a87a90dd90e48a3af54bfbcc67424cf853f175760da6dc70dbb34ff800a7",
+    "no_direct_damage_hook": true
+  },
+  "KUNAI": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Kunai.cs",
+    "sha256": "acbf0464c5202e7e6446f7b3186113a23797ac15ddd0486cb23d71ee52936fcc",
+    "no_direct_damage_hook": true
+  },
+  "PHYLACTERY_UNBOUND": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/PhylacteryUnbound.cs",
+    "sha256": "91045600aefa8224485024d5d7654b835f6f612f93f068926472defcd564afa6",
+    "no_direct_damage_hook": true
+  },
+  "TOUCH_OF_OROBAS": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/TouchOfOrobas.cs",
+    "sha256": "383244ea3be8742267dbe023d6cbc59f19fcc2cbd062bec34acd04d9a965bc7c",
+    "no_direct_damage_hook": true
+  },
+  "BOOMING_CONCH": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/BoomingConch.cs",
+    "sha256": "2fc65d5ef863470bccc223d4abe903d9ad0a86492cbc5807da978dc0490b5867",
+    "no_direct_damage_hook": true
+  },
+  "PUMPKIN_CANDLE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/PumpkinCandle.cs",
+    "sha256": "807de4c900f8d2dc20c55e7eba2bfa554a64f9a667d25bf2425e91da4dc8033a",
+    "no_direct_damage_hook": true
+  },
+  "BAG_OF_MARBLES": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/BagOfMarbles.cs",
+    "sha256": "74dc0706aded95fe9d8639e42101d57dc9c8a4737f6a03a7e576381488ded908",
+    "no_direct_damage_hook": true
+  },
+  "LEES_WAFFLE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/LeesWaffle.cs",
+    "sha256": "f49b1c72ff824d5560ed68806e177b660308a1872a466e976dee95d57e9ad887",
+    "no_direct_damage_hook": true
+  },
+  "POTION_BELT": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/PotionBelt.cs",
+    "sha256": "7ae0b6d8da2b67ed4ed027502055b847cfc0658977f0bcb43035382261a3fb09",
+    "no_direct_damage_hook": true
+  },
+  "PAPER_PHROG": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/PaperPhrog.cs",
+    "sha256": "4f469cd1ce7b9c2f9326dc06dae7b7b1ab9d7eb65b3816d9ad99c59fe3da8538",
+    "no_direct_damage_hook": true
+  },
+  "WONGOS_MYSTERY_TICKET": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/WongosMysteryTicket.cs",
+    "sha256": "831872d73d4c25fca471afe636eb65d34677aba0a690239c471573ceb05b8cb9",
+    "no_direct_damage_hook": true
+  },
+  "SAND_CASTLE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/SandCastle.cs",
+    "sha256": "625d4c24adb07bf5332c6dff4c3a76d90ff7cfb20d48833c89d5894c53064b29",
+    "no_direct_damage_hook": true
+  },
+  "ROYAL_STAMP": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/RoyalStamp.cs",
+    "sha256": "db15cac7690e55153f7655e880c5f8bbb91cee5f574afa7de93228e8192c423c",
+    "no_direct_damage_hook": true
+  },
+  "SCROLL_BOXES": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/ScrollBoxes.cs",
+    "sha256": "0199d9370fac6d20d9dffeeb668dac478a3983fdac5ded24ea0f98711ad3d1cc",
+    "no_direct_damage_hook": true
+  },
+  "CAPTAINS_WHEEL": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/CaptainsWheel.cs",
+    "sha256": "1ed14a0fedcf0e97e38765d61c6a5d16bfb829609ad6ff8612aff9f9b73e603d",
+    "no_direct_damage_hook": true
+  },
+  "FRESNEL_LENS": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/FresnelLens.cs",
+    "sha256": "05b7cf19010bdf4beffc4d45a3d374ef160a89f8d8a98739de2609c597880b34",
+    "no_direct_damage_hook": true
+  },
+  "ODDLY_SMOOTH_STONE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/OddlySmoothStone.cs",
+    "sha256": "ae087678f5af9a76736b6b3970fe0732de6b8b3aee0407e9a16ad99d02143d70",
+    "no_direct_damage_hook": true
+  },
+  "DARKSTONE_PERIAPT": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/DarkstonePeriapt.cs",
+    "sha256": "0fa9543b7048eaad65a5420c0a2b91df94415a5e6434a8a39ca7d831eb4b112a",
+    "no_direct_damage_hook": true
+  },
+  "FAKE_VENERABLE_TEA_SET": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/FakeVenerableTeaSet.cs",
+    "sha256": "3c03881fcf41948d82c3f0038814fcfed114b3cf23ff76cb9c73399b958d03a7",
+    "no_direct_damage_hook": true
+  },
+  "ART_OF_WAR": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/ArtOfWar.cs",
+    "sha256": "24d63ae01faa77ad9e99b56e68a4716d155261f8cd4f7e42f0c3167a45c66a27",
+    "no_direct_damage_hook": true
+  },
+  "PEAR": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Pear.cs",
+    "sha256": "63d529653d676d8430d7c4a8fff9dd9242074ee3248c901db032b149e9504d37",
+    "no_direct_damage_hook": true
+  },
+  "FAKE_MANGO": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/FakeMango.cs",
+    "sha256": "af296375be99acd2f65bbb2d08b01ae6f6d84b37eea9bf31af0a434c7dd75e94",
+    "no_direct_damage_hook": true
+  },
+  "HAPPY_FLOWER": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/HappyFlower.cs",
+    "sha256": "8ad5559934d60a145251e438a1e0745e4501506f511f42f9f617f68b9a96a080",
+    "no_direct_damage_hook": true
+  },
+  "DUSTY_TOME": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/DustyTome.cs",
+    "sha256": "077a4d84772a1c4f6a98bd3e43112a69d2caa7cbc48e8e28dc1b45aab53bf4b5",
+    "no_direct_damage_hook": true
+  },
+  "CANDELABRA": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Candelabra.cs",
+    "sha256": "d5cd6181a82f34159c72c7938f891fe589e8ce152f9942c4dd280289903d1424",
+    "no_direct_damage_hook": true
+  },
+  "FAKE_ANCHOR": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/FakeAnchor.cs",
+    "sha256": "75273d725ef556851d7d53c00f7ab688471c5bfb195983222b38602746282e1f",
+    "no_direct_damage_hook": true
+  },
+  "ELECTRIC_SHRYMP": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/ElectricShrymp.cs",
+    "sha256": "7131ad4addc44b23c6397d9c6e72a3e636bcf379e3ec1b1760208ab9a46f6c54",
+    "no_direct_damage_hook": true
+  },
+  "REPTILE_TRINKET": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/ReptileTrinket.cs",
+    "sha256": "73dfefc29119cc91bab25f406d8ab6b40611067b812b0629354106efd740c241",
+    "no_direct_damage_hook": true
+  },
+  "PAELS_HORN": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/PaelsHorn.cs",
+    "sha256": "485cd839cb79a670b1054dd10076f8870913f64a5ea8f11742a8590cb24b98ac",
+    "no_direct_damage_hook": true
+  },
+  "AMETHYST_AUBERGINE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/AmethystAubergine.cs",
+    "sha256": "34446b1c3df8b87539f7c658e29cf42ebd7e70618789875f8fa7de42c3c3431f",
+    "no_direct_damage_hook": true
+  },
+  "EMBER_TEA": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/EmberTea.cs",
+    "sha256": "ec5fbc0128989b8b0128321f957efb40b161e2873bfbc060ace38e7a4625d52f",
+    "no_direct_damage_hook": true
+  },
+  "FAKE_BLOOD_VIAL": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/FakeBloodVial.cs",
+    "sha256": "a7bbf292cdc0b80f8c9135e900d324d67ea74e34e855d779abd3b729a59eb61c",
+    "no_direct_damage_hook": true
+  },
+  "PETRIFIED_TOAD": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/PetrifiedToad.cs",
+    "sha256": "54ba6448410b752412588b88e03c4304ef980ffedfb30ec6bd0a6c8a9083180e",
+    "no_direct_damage_hook": true
+  },
+  "NUNCHAKU": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Nunchaku.cs",
+    "sha256": "a92136bd62320001fe02783db5c11ef70aa5df3b4ef5226243df5f1830697243",
+    "no_direct_damage_hook": true
+  },
+  "WHITE_BEAST_STATUE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/WhiteBeastStatue.cs",
+    "sha256": "3007ded1a11f5287f780cc4b53b61e924b4166bc9ca83e1af371bfb5dc25a704",
+    "no_direct_damage_hook": true
+  },
+  "MUMMIFIED_HAND": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/MummifiedHand.cs",
+    "sha256": "6d42915b26aae3089dc6a389b85eeddc5d1f02ee97d34f0073abec88bebb1907",
+    "no_direct_damage_hook": true
+  },
+  "EMOTION_CHIP": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/EmotionChip.cs",
+    "sha256": "1a84080dab4bc047b8358e7f1c90fbb062b11cb204b8f2c4a6414903e12bed85",
+    "no_direct_damage_hook": true
+  },
+  "CHOSEN_CHEESE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/ChosenCheese.cs",
+    "sha256": "cbf74c424e68ccc4178e0379dd2ab26b22e3e289ac6f60eeffc7093c0eb3aa9a",
+    "no_direct_damage_hook": true
+  },
+  "THROWING_AXE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/ThrowingAxe.cs",
+    "sha256": "c7bb04ac13201a2ee892bc860caa37c0f2eff33efe31606c762442b3019a4c48",
+    "no_direct_damage_hook": true
+  },
+  "GALACTIC_DUST": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/GalacticDust.cs",
+    "sha256": "173a5b84adfd4fc3bf4796d4ba447655f6ba7b4cca7897332beb3963544962d4",
+    "no_direct_damage_hook": true
+  },
+  "PAELS_TEARS": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/PaelsTears.cs",
+    "sha256": "c3d66480072c3f19efd29e6eeab1f061b9c221e8e2507088580d58d3c2e88e8c",
+    "no_direct_damage_hook": true
+  },
+  "MYSTIC_LIGHTER": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/MysticLighter.cs",
+    "sha256": "7070800e3ea791d76b6ff3ddf41037d9a007924a3c985f1c35f09d46fb4998e5",
+    "no_direct_damage_hook": false
+  },
+  "WONGO_CUSTOMER_APPRECIATION_BADGE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/WongoCustomerAppreciationBadge.cs",
+    "sha256": "65ae690a4d9a5f92bf315b86d90e2c4d61c7eb315717a56c6820bc852ce62cad",
+    "no_direct_damage_hook": true
+  },
+  "CALLING_BELL": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/CallingBell.cs",
+    "sha256": "f986e370f212c579f9490494a816fa5a245b11e2609148693ba88de9f81b64b6",
+    "no_direct_damage_hook": true
+  },
+  "TANXS_WHISTLE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/TanxsWhistle.cs",
+    "sha256": "894920638a95080ea7e13f3b8417cf3d02e7cc4fef49bba559bfd7e7c80965d7",
+    "no_direct_damage_hook": true
+  },
+  "BIIIG_HUG": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/BiiigHug.cs",
+    "sha256": "3b936173431b86d6442f7ffa04cb982a354309dc356c642b5c025ec7782ba4d2",
+    "no_direct_damage_hook": true
+  },
+  "KIFUDA": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Kifuda.cs",
+    "sha256": "0b3c5203b4c3f1723b9a1e516152b5c37ef0a335831f1e9fa575d72a69f3f6ae",
+    "no_direct_damage_hook": true
+  },
+  "NEOWS_TALISMAN": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/NeowsTalisman.cs",
+    "sha256": "14359161e3d0b400712b19e30f37562b7ca78835b00cad111dd097cb2f3b2197",
+    "no_direct_damage_hook": true
+  },
+  "ORANGE_DOUGH": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/OrangeDough.cs",
+    "sha256": "1e2c4b6d33eea4c48afa7ab9cdd9ed75f4c6ca09406a5c43cd44ab209b6591bd",
+    "no_direct_damage_hook": true
+  },
+  "THE_ABACUS": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/TheAbacus.cs",
+    "sha256": "b2dd1a5e9fd38919053e754dfd981245a009d622bfd95f9b817ff3156519e0b1",
+    "no_direct_damage_hook": true
+  },
+  "SPIKED_GAUNTLETS": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/SpikedGauntlets.cs",
+    "sha256": "f68af9cb8e3369692db2538a06e81460a51fde3b66648e4bc2ccc9f472aa8faa",
+    "no_direct_damage_hook": true
+  },
+  "NEW_LEAF": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/NewLeaf.cs",
+    "sha256": "2f7b9b9549120353bcf6b219eeafd3ec821e76da0e41b4bfec3687b209bb6ec4",
+    "no_direct_damage_hook": true
+  },
+  "NUTRITIOUS_SOUP": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/NutritiousSoup.cs",
+    "sha256": "c75f5cc395bf71ec6e2282bf34dc59bbd6c6ef734a44e84529e1852eee719a82",
+    "no_direct_damage_hook": true
+  },
+  "BEAUTIFUL_BRACELET": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/BeautifulBracelet.cs",
+    "sha256": "5de3205cc373ee93763d5f136d07ae1268e7120f0776eac0c05edc4542045b9d",
+    "no_direct_damage_hook": true
+  },
+  "BLOOD_SOAKED_ROSE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/BloodSoakedRose.cs",
+    "sha256": "6738e21d8bab474b0e1755711d4d2d0df06aaecac02564260c3093d6da4d0bed",
+    "no_direct_damage_hook": true
+  },
+  "VELVET_CHOKER": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/VelvetChoker.cs",
+    "sha256": "418c2070e88c5f9145a55a393978a7f993ffd29ab4a1a9b514549294deb24140",
+    "no_direct_damage_hook": true
+  },
+  "MUSIC_BOX": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/MusicBox.cs",
+    "sha256": "8ffc2ec937b016f65d79cbfb6d1eb81126bee25a15ed1153a026e431e7db9044",
+    "no_direct_damage_hook": true
+  },
+  "SYMBIOTIC_VIRUS": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/SymbioticVirus.cs",
+    "sha256": "af63b6a1383d875a53d8b7c9c387cfe176c14cd5fad36eb97ada8d9034429c31",
+    "no_direct_damage_hook": true
+  },
+  "YUMMY_COOKIE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/YummyCookie.cs",
+    "sha256": "9db8648e11817c7d542ac53493cdaf3d5dacc222723c593a1b859c0287ec464e",
+    "no_direct_damage_hook": true
+  },
+  "WINGED_BOOTS": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/WingedBoots.cs",
+    "sha256": "7d0b9d0e3d301b54cb277d84a017c7fe1e74872943512e47a61fed20f843f7e7",
+    "no_direct_damage_hook": true
+  },
+  "NEOWS_SACRIFICE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/NeowsSacrifice.cs",
+    "sha256": "10d30481cf974fb002b9b7181a5eda84140dc451618d06bea4a87e4143a0a3b4",
+    "no_direct_damage_hook": true
+  },
+  "JEWELRY_BOX": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/JewelryBox.cs",
+    "sha256": "2046dc5ff02c3adaa595cdc2944c4a514b90cd71161ae03995378fd3451fc8dd",
+    "no_direct_damage_hook": true
+  },
+  "VEXING_PUZZLEBOX": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/VexingPuzzlebox.cs",
+    "sha256": "d12af68e178176839e1f32212123257ebd0ceeed35424bd5a3c6c4fa76a29e1f",
+    "no_direct_damage_hook": true
+  },
+  "BURNING_STICKS": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/BurningSticks.cs",
+    "sha256": "7c01f7308ea8d12a84161c069c669dbdadc18fb48ef5f551a5d9adcfbe3e8cf9",
+    "no_direct_damage_hook": true
+  },
+  "DATA_DISK": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/DataDisk.cs",
+    "sha256": "5ec796ec4d172dfb45e4352b9ad3e7ffc84427ea3b518604953f07f4a06333bf",
+    "no_direct_damage_hook": true
+  },
+  "UNDYING_SIGIL": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/UndyingSigil.cs",
+    "sha256": "15f574ad37d501b77fac736d9a0fdece39070ff8cd10f5e5c864e7c8e7c34ee5",
+    "no_direct_damage_hook": false
+  },
+  "FAKE_SNECKO_EYE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/FakeSneckoEye.cs",
+    "sha256": "f0bcbbdf8be0d04110eb621db96949f6ca51b183488dd52c5ae7866b39ea193d",
+    "no_direct_damage_hook": true
+  },
+  "BELT_BUCKLE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/BeltBuckle.cs",
+    "sha256": "1e72315fdaf11e92a555144fa8b255f3735bde2aaf590f92f6ece0288cab2831",
+    "no_direct_damage_hook": true
+  },
+  "POWER_CELL": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/PowerCell.cs",
+    "sha256": "9b1f7407fb6c5b2c6abc445a31702e0969de862d4cbeab2c1c9d15f221344fd1",
+    "no_direct_damage_hook": true
+  },
+  "ALCHEMICAL_COFFER": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/AlchemicalCoffer.cs",
+    "sha256": "f9e446f1c6dd40ba86490cb56127ad4ad0244fb3831cc26d98588be9089e6dca",
+    "no_direct_damage_hook": true
+  },
+  "DRIFTWOOD": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Driftwood.cs",
+    "sha256": "898c11b70a4d2c3fb89257a751d5d92e0abb87c13cfac6b92af59c7a12d30cd5",
+    "no_direct_damage_hook": true
+  },
+  "LOST_COFFER": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/LostCoffer.cs",
+    "sha256": "96579eaef2fdec892f201d1e643f0659d589a6521025339b06e762a5be85b79e",
+    "no_direct_damage_hook": true
+  },
+  "PAELS_GROWTH": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/PaelsGrowth.cs",
+    "sha256": "0ff5728cf4d9cd9861c51329f795afd985521aa4b4136cb10e59f55cb1a52155",
+    "no_direct_damage_hook": true
+  },
+  "FROZEN_EGG": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/FrozenEgg.cs",
+    "sha256": "09fdd62baaf545bfb544722d07a921db4cf406726cf327e636db96706efb7ceb",
+    "no_direct_damage_hook": true
+  },
+  "FIDDLE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Fiddle.cs",
+    "sha256": "6c2062234d4433cd088e7dd1b268b0f42c25bbd54190aa0a3e23940708787f96",
+    "no_direct_damage_hook": true
+  },
+  "PARRYING_SHIELD": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/ParryingShield.cs",
+    "sha256": "8938397a0a8fb658ea71e6e404340f186c388d8f00074549691e63b8fb209a35",
+    "no_direct_damage_hook": true
+  },
+  "PAELS_TOOTH": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/PaelsTooth.cs",
+    "sha256": "68053c79b69a1b47c3591a6dc9e750c3e032d5b814013c66a20e79aad6f7721d",
+    "no_direct_damage_hook": true
+  },
+  "CHARONS_ASHES": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/CharonsAshes.cs",
+    "sha256": "f09fa13f8ca1dc062070b14da370a53f5accdbca97b3c0ac24ddc4d3f8970924",
+    "no_direct_damage_hook": true
+  },
+  "RUNIC_PYRAMID": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/RunicPyramid.cs",
+    "sha256": "872632e4196b24167fe7a681827829d05486b29b4483467aa0c33f383ef5a3e3",
+    "no_direct_damage_hook": true
+  },
+  "REGALITE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Regalite.cs",
+    "sha256": "f731d4a522dfb3b98e282841951bafbc2af85d4aa4668d2662934433d19d9364",
+    "no_direct_damage_hook": true
+  },
+  "GLASS_EYE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/GlassEye.cs",
+    "sha256": "1cf2c74cfc8852970e07f40e2815f605806ba8f5a0d999cbaf4f49d99fe1f011",
+    "no_direct_damage_hook": true
+  },
+  "VENERABLE_TEA_SET": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/VenerableTeaSet.cs",
+    "sha256": "f7c950036fcd45178fe5fc5f41bb92a6b4e0af35625bd01696ec26af35c515f6",
+    "no_direct_damage_hook": true
+  },
+  "GOLDEN_PEARL": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/GoldenPearl.cs",
+    "sha256": "e130e8e60098aafeffdc71183191584be762a20a985cad003c02442289f8f01a",
+    "no_direct_damage_hook": true
+  },
+  "STONE_CRACKER": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/StoneCracker.cs",
+    "sha256": "db55f01feb6e71321b027eb0a3446fac1c1c00fb375b9c7084f3ea85dd673752",
+    "no_direct_damage_hook": true
+  },
+  "SWORD_OF_JADE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/SwordOfJade.cs",
+    "sha256": "26b124fec0f4564ea2ca63918f82bc9a52adaa2f869099d50b425998d63c2f6c",
+    "no_direct_damage_hook": true
+  },
+  "GAME_PIECE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/GamePiece.cs",
+    "sha256": "5b74b4ab96d1308141757e535a1e08f22aa6a52a80b23cdacc74cfefc9ad5bbf",
+    "no_direct_damage_hook": true
+  },
+  "DELICATE_FROND": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/DelicateFrond.cs",
+    "sha256": "df8797785c515b3392392623a941ecc2cf1e223a4759cc4b870ba96db1da58e5",
+    "no_direct_damage_hook": true
+  },
+  "PHIAL_HOLSTER": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/PhialHolster.cs",
+    "sha256": "b290e983f9a0697b8979545d15e8af6ab49762f2d4a90443c9164cc50967cacc",
+    "no_direct_damage_hook": true
+  },
+  "CRACKED_CORE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/CrackedCore.cs",
+    "sha256": "4bd7c31433fe8c1a4728779750ec51ca5d8283a8fdc156817f542e747c7f9146",
+    "no_direct_damage_hook": true
+  },
+  "INTIMIDATING_HELMET": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/IntimidatingHelmet.cs",
+    "sha256": "85eaad41fffa0ac0f622b91f2ee0b47490a47967436271d0021e3cfeb786ac8e",
+    "no_direct_damage_hook": true
+  },
+  "TOY_BOX": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/ToyBox.cs",
+    "sha256": "bda7689393bf69cea11f328ffc222af9156c73bd604bd452fb704e98c62695f1",
+    "no_direct_damage_hook": true
+  },
+  "SIGNET_RING": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/SignetRing.cs",
+    "sha256": "77b212d016fbac660c1572338023202796dcc2c460b6faf56d1153249e602951",
+    "no_direct_damage_hook": true
+  },
+  "GOLD_PLATED_CABLES": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/GoldPlatedCables.cs",
+    "sha256": "c810d6025cb0b8d026b9f6aa8d7f728788b539fa570b4740fd6385b4e7ff80e8",
+    "no_direct_damage_hook": true
+  },
+  "DIVINE_DESTINY": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/DivineDestiny.cs",
+    "sha256": "054af8b694890e86c22a048e21c8b47c011af814a69aa316143c6633a214ddfb",
+    "no_direct_damage_hook": true
+  },
+  "IVORY_TILE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/IvoryTile.cs",
+    "sha256": "ac9c758790db7ebb215bc7fdf1763786aa87db635fab0b9d43e4915580620f81",
+    "no_direct_damage_hook": true
+  },
+  "BOOKMARK": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Bookmark.cs",
+    "sha256": "ed424a146b8e841a10d77405b3b8fc0d45be0304da75846ee18a7f432c3e4a41",
+    "no_direct_damage_hook": true
+  },
+  "MEAL_TICKET": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/MealTicket.cs",
+    "sha256": "823e6af550e3807ae1bb54ed717625c7c198fd669e82945a2d363cd7a18d3d3e",
+    "no_direct_damage_hook": true
+  },
+  "GREMLIN_HORN": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/GremlinHorn.cs",
+    "sha256": "a132a06a66a9e90ee324e2a2316cbfb4f324705e0fef8e3c07561ce73b605ae6",
+    "no_direct_damage_hook": true
+  },
+  "RIPPLE_BASIN": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/RippleBasin.cs",
+    "sha256": "82e35ef2a263ca144d7f28e238826bcbd41a1fb8cfe295daffb36d2cd28463b0",
+    "no_direct_damage_hook": true
+  },
+  "CHOICES_PARADOX": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/ChoicesParadox.cs",
+    "sha256": "77f50ace7c6343b92ede9d2dc37af01ca35301d3eab1cae4f9294ca4bacf023b",
+    "no_direct_damage_hook": true
+  },
+  "PAELS_LEGION": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/PaelsLegion.cs",
+    "sha256": "c0b14b60d6b6d867538c56352ad59eea5ad4cbe1abd52914efc6ae3551c350f9",
+    "no_direct_damage_hook": true
+  },
+  "LIZARD_TAIL": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/LizardTail.cs",
+    "sha256": "76084bfb5a0e4d4a24605204176af9d0639b08d818df8038639c0825f76aa537",
+    "no_direct_damage_hook": true
+  },
+  "FRAGRANT_MUSHROOM": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/FragrantMushroom.cs",
+    "sha256": "0c9bb8fc7e261cbc721e4a361522cba3e00bac1513ba8eff13d030155c24a792",
+    "no_direct_damage_hook": true
+  },
+  "ECTOPLASM": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Ectoplasm.cs",
+    "sha256": "064fca6868e0ff78c19ed523f448fd0307df40625f431b1bed43c74025635815",
+    "no_direct_damage_hook": true
+  },
+  "PRECISE_SCISSORS": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/PreciseScissors.cs",
+    "sha256": "a11b3eb0fd8c99fb94457ed15192a9bd95137dcf55b470bbbe3ac9a5cfea08fe",
+    "no_direct_damage_hook": true
+  },
+  "NEOWS_BONES": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/NeowsBones.cs",
+    "sha256": "0dd7a63e3689e8a10b2b280305558904ec4429433cc218c7eb1acdaa00c73bb3",
+    "no_direct_damage_hook": true
+  },
+  "LASTING_CANDY": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/LastingCandy.cs",
+    "sha256": "44b7bb1caaa1d005d1aca51e10729247d97ab169c2233e658a8198f21cd1bb64",
+    "no_direct_damage_hook": true
+  },
+  "PRISMATIC_GEM": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/PrismaticGem.cs",
+    "sha256": "2c193ea0f0b91f85cb29a94fe432a777ffaef686f50957341ec7b5f873ad0f79",
+    "no_direct_damage_hook": true
+  },
+  "SILVER_CRUCIBLE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/SilverCrucible.cs",
+    "sha256": "f7495185bb9bedb4a90257a61520f36130af70a01374a2a4c5950febd767aaee",
+    "no_direct_damage_hook": true
+  },
+  "CHEMICAL_X": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/ChemicalX.cs",
+    "sha256": "51eeb60e471b2a4c44523822aa52515dd9740580621b2bc807418789ab45c7ba",
+    "no_direct_damage_hook": true
+  },
+  "WHISPERING_EARRING": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/WhisperingEarring.cs",
+    "sha256": "4d4a67823048a590d8d7984dd328fe44973da1c945277e262c6d722acc564bba",
+    "no_direct_damage_hook": true
+  },
+  "MINI_REGENT": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/MiniRegent.cs",
+    "sha256": "c36490b78249d15effa19b18a9463e7151fbb7a8aa36c42977b26544195fd234",
+    "no_direct_damage_hook": true
+  },
+  "HELICAL_DART": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/HelicalDart.cs",
+    "sha256": "25a04b2d07b1491016c9e3dadb21cb30209c18f090ea0c1f00416ec5fc4f6d34",
+    "no_direct_damage_hook": true
+  },
+  "LETTER_OPENER": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/LetterOpener.cs",
+    "sha256": "7e7baa1be33e66dad81bf434502c81d327e4980b94470fa76a00f3295f6b2679",
+    "no_direct_damage_hook": true
+  },
+  "RED_SKULL": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/RedSkull.cs",
+    "sha256": "cf57eb10a81ced7a20a845c53b1f58253fbf980f1b72f76243d57f1cbe165382",
+    "no_direct_damage_hook": true
+  },
+  "PHILOSOPHERS_STONE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/PhilosophersStone.cs",
+    "sha256": "71c53c9bac96a1ebfda53a04a3b36bcfdbd0cffea0ef02d45ee58bd777d1784a",
+    "no_direct_damage_hook": true
+  },
+  "LARGE_CAPSULE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/LargeCapsule.cs",
+    "sha256": "64b9a6ff561efb66fd9aff37c63f67ee3869aa6fbcb8ffe9cc7bf41a049e82f7",
+    "no_direct_damage_hook": true
+  },
+  "LORDS_PARASOL": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/LordsParasol.cs",
+    "sha256": "962f2adac8d5f509a702683965bc79d3b98eda4ca1d4522c5c9c41ae43db17b5",
+    "no_direct_damage_hook": true
+  },
+  "GNARLED_HAMMER": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/GnarledHammer.cs",
+    "sha256": "0914c857f04b0b0beaa6525f4d26f54d394e51d106cbe3c3532aad58435b6393",
+    "no_direct_damage_hook": true
+  },
+  "GIRYA": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Girya.cs",
+    "sha256": "15d115ec16da25982fb9f8d363eda8c639b6c2797ae9a5c66c0e8bd1ca08bc10",
+    "no_direct_damage_hook": true
+  },
+  "VAJRA": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Vajra.cs",
+    "sha256": "a55eba805b932ba1e2eb2e77ce71104a1bdde3fec4299285c7ef788120557148",
+    "no_direct_damage_hook": true
+  },
+  "GHOST_SEED": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/GhostSeed.cs",
+    "sha256": "eda050524222785279c87b4b15a5ad0487e37d7f0042a0bb4ce2c147a147b3a4",
+    "no_direct_damage_hook": true
+  },
+  "PERMAFROST": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Permafrost.cs",
+    "sha256": "15f99b67cc992dd3c88839f8eae79d829528b92ad6a57e71266cbf88897cd585",
+    "no_direct_damage_hook": true
+  },
+  "TRI_BOOMERANG": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/TriBoomerang.cs",
+    "sha256": "a7eb418f276ccc8a1989287d842cd4e40353ed9cf93ca859317b26e728fb9e9b",
+    "no_direct_damage_hook": true
+  },
+  "BOUND_PHYLACTERY": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/BoundPhylactery.cs",
+    "sha256": "4a24382fc0e8faf7def8fbf42623b29c65a77dc153dc29aec5a820e49916086d",
+    "no_direct_damage_hook": true
+  },
+  "PENDULUM": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Pendulum.cs",
+    "sha256": "b6cde64b88889ab99f32e49c660e864ecebe732b003220f1d9663b1025e592e9",
+    "no_direct_damage_hook": true
+  },
+  "MINIATURE_TENT": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/MiniatureTent.cs",
+    "sha256": "bff5579ca0489078bed1ab678da853295dd32650e9e62fe3315e56b43907d45f",
+    "no_direct_damage_hook": true
+  },
+  "RUNIC_CAPACITOR": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/RunicCapacitor.cs",
+    "sha256": "d1f7f4244fab0b4ae9e34b66a32a0a66dfd09fe5e8002da272668766f9aaf045",
+    "no_direct_damage_hook": true
+  },
+  "DRAGON_FRUIT": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/DragonFruit.cs",
+    "sha256": "582419724356f96b29ebe7e2f17e61a84495890137df14892f77580916a48941",
+    "no_direct_damage_hook": true
+  },
+  "BRONZE_SCALES": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/BronzeScales.cs",
+    "sha256": "f2f538709955773194cad98421b9cd8a7a4239ea4740a199ab900be4aa284a5a",
+    "no_direct_damage_hook": true
+  },
+  "CLAWS": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Claws.cs",
+    "sha256": "cda943bab0f737f687a5bcccb22a565a737befae8612a1a4f71eff513bf80d60",
+    "no_direct_damage_hook": true
+  },
+  "PAELS_CLAW": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/PaelsClaw.cs",
+    "sha256": "666d40b2d85e26e2272d51779c51fc36c8085067ca7dad0d267762f1af9e7be1",
+    "no_direct_damage_hook": true
+  },
+  "WAR_HAMMER": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/WarHammer.cs",
+    "sha256": "06c3653a4b15370a8a08d033c9eb0a4c3e9ffe9ce2797d7169f151dbc36cee7c",
+    "no_direct_damage_hook": true
+  },
+  "CURSED_PEARL": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/CursedPearl.cs",
+    "sha256": "efb50e73b017efc572fd5cf2beac968a4751af94bff36ead70ec6d0abba4f742",
+    "no_direct_damage_hook": true
+  },
+  "UNSETTLING_LAMP": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/UnsettlingLamp.cs",
+    "sha256": "9e346d15a956de6d6ba122dbf95eb0192f07626e332c373c735a0362a01ded64",
+    "no_direct_damage_hook": true
+  },
+  "STURDY_CLAMP": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/SturdyClamp.cs",
+    "sha256": "944ba6c3ad7040bdb710ed31dd0ff478f8dc212a95674ce42c44e9c8ed704e83",
+    "no_direct_damage_hook": true
+  },
+  "SNECKO_EYE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/SneckoEye.cs",
+    "sha256": "7b27d2c6246f9c377d403c052c882cdb146a46e8251197608707b8c9b78d135d",
+    "no_direct_damage_hook": true
+  },
+  "JEWELED_MASK": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/JeweledMask.cs",
+    "sha256": "4b972dc83eec39ec1fb7a7e1091a1c3f0f36c1bd4f981939a15bf5aa50e8c789",
+    "no_direct_damage_hook": true
+  },
+  "GLITTER": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Glitter.cs",
+    "sha256": "e2394bb75b61ac2ab906a4031f28e3127ecea186d6c932847c4de6b5c5001acb",
+    "no_direct_damage_hook": true
+  },
+  "VAKUU_CARD_SELECTOR": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/VakuuCardSelector.cs",
+    "sha256": "9a0cf2e8800326e52a8a829b5f6c8991241f3092adc3d0fb88d4e66651608948",
+    "no_direct_damage_hook": false
+  },
+  "DOWSING_ROD": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/DowsingRod.cs",
+    "sha256": "79f8f4d199b48bd53ec0329fd292733cd0c1c7b7c1eb1618891b1e9cc56ecfc9",
+    "no_direct_damage_hook": true
+  },
+  "PUNCH_DAGGER": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/PunchDagger.cs",
+    "sha256": "1847afb09cf4b098bce8dfc1d96bcb7abb6f55ab6af4b966f0a57de99a885c74",
+    "no_direct_damage_hook": true
+  },
+  "CENTENNIAL_PUZZLE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/CentennialPuzzle.cs",
+    "sha256": "610d506f51cef90c84cded79e508251f3ce462177fa3e7ccda88b8feac2593aa",
+    "no_direct_damage_hook": true
+  },
+  "HEFTY_TABLET": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/HeftyTablet.cs",
+    "sha256": "80f6caa9dd2738a9dd51878ee6f5c817642e8359c907dc2d8e5e811f9bec0d1d",
+    "no_direct_damage_hook": true
+  },
+  "TEA_OF_DISCOURTESY": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/TeaOfDiscourtesy.cs",
+    "sha256": "92715bb91a8888fb73935de43ce91631dfb10dd9d7100a4d366f1a68e0414e8a",
+    "no_direct_damage_hook": true
+  },
+  "DEPRECATED_RELIC": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/DeprecatedRelic.cs",
+    "sha256": "a7370dc72c028948b0669728d4bb46a2ee78d469cad582e2777aad1134a9ddb2",
+    "no_direct_damage_hook": true
+  },
+  "BLESSED_ANTLER": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/BlessedAntler.cs",
+    "sha256": "a1510a9be4bb28f9d34cce3977fcea155ee6a09be7b5e5d1dc68f2a7cf6ceb59",
+    "no_direct_damage_hook": true
+  },
+  "ROYAL_POISON": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/RoyalPoison.cs",
+    "sha256": "f1016293fd7fdc5439d4f775e0880b67d7669d2f982c6d46207c66a3ca1dbc1e",
+    "no_direct_damage_hook": true
+  },
+  "FENCING_MANUAL": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/FencingManual.cs",
+    "sha256": "5afa97fd8ba7dd5f771dc2fa16cd380a8c89db57219fd74b5c09bb2c67a6494e",
+    "no_direct_damage_hook": true
+  },
+  "TWISTED_FUNNEL": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/TwistedFunnel.cs",
+    "sha256": "eaae5c8f9234e708ef44e0d4c7f8fe106e4d7a0e9dd86572bb24c5520c0b3651",
+    "no_direct_damage_hook": true
+  },
+  "ICE_CREAM": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/IceCream.cs",
+    "sha256": "caa19e827662631dea281944be94ec30acf400aa0956227a094cae279c3e24c1",
+    "no_direct_damage_hook": true
+  },
+  "DREAM_CATCHER": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/DreamCatcher.cs",
+    "sha256": "8b0d1e60c9d2b41151cd2e523df3dccd7af610f56b15cac30bdc286aee645af9",
+    "no_direct_damage_hook": true
+  },
+  "DIAMOND_DIADEM": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/DiamondDiadem.cs",
+    "sha256": "47b2ea5938641c064f56f27e12d0675a8f710565544bbef61568c6f592f2238b",
+    "no_direct_damage_hook": true
+  },
+  "BRILLIANT_SCARF": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/BrilliantScarf.cs",
+    "sha256": "7256a929a0dff043f6d1a106df17917a47f6759b35c1b412476574d1e304ee04",
+    "no_direct_damage_hook": true
+  },
+  "BEATING_REMNANT": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/BeatingRemnant.cs",
+    "sha256": "4b376c76a452bdf3a7b3bdb4e491f74bf163f47c9564d936f5008d5fccbf4ae9",
+    "no_direct_damage_hook": false
+  },
+  "THE_BOOT": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/TheBoot.cs",
+    "sha256": "8576e133831f8964d485db7266957cc63e041aab4a397667350b4dae20f1aec6",
+    "no_direct_damage_hook": true
+  },
+  "INFUSED_CORE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/InfusedCore.cs",
+    "sha256": "e0abe43e18ac81cc67246d7dc5da53ca7b804fb6462c8cd82ff922d1ccdf4a20",
+    "no_direct_damage_hook": true
+  },
+  "METRONOME": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Metronome.cs",
+    "sha256": "ec079b03b3014e4074ad4f6a386ea81951b08f0670b41c3d8e93d579328e0e28",
+    "no_direct_damage_hook": true
+  },
+  "BIG_HAT": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/BigHat.cs",
+    "sha256": "85e94d7caa12a85443d8c811a10e7745ae7d6c1329888f665c020bca66267221",
+    "no_direct_damage_hook": true
+  },
+  "MASSIVE_SCROLL": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/MassiveScroll.cs",
+    "sha256": "c826e069cb32a7552f88661161467b5c18a9a0b0f27dd228a91b3ca9e0debffb",
+    "no_direct_damage_hook": true
+  },
+  "MR_STRUGGLES": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/MrStruggles.cs",
+    "sha256": "8a2d573c08904450b6426dd46d1606c1b549bd5798ab594ea0d739f5152d55ff",
+    "no_direct_damage_hook": true
+  },
+  "SNECKO_SKULL": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/SneckoSkull.cs",
+    "sha256": "6aedb8cd861eb8870e9aa934b8d37ab9697382fcfc01faa972b7908fe8610b3e",
+    "no_direct_damage_hook": true
+  },
+  "RINGING_TRIANGLE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/RingingTriangle.cs",
+    "sha256": "b22768d0aaef05a63bd42900d41a2e39e66a659065b789d96d09075708e0d293",
+    "no_direct_damage_hook": true
+  },
+  "DINGY_RUG": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/DingyRug.cs",
+    "sha256": "ec839a6c9e28aed733e4a4a6c6287b6808ebd75225032d6a575eb341d011543e",
+    "no_direct_damage_hook": true
+  },
+  "SPARKLING_ROUGE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/SparklingRouge.cs",
+    "sha256": "4ff8a99dd8c9982f47dc8e1b84f61441636b853c97b96e45101c04817be81e64",
+    "no_direct_damage_hook": true
+  },
+  "REGAL_PILLOW": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/RegalPillow.cs",
+    "sha256": "1407da39984ffc83cfa10b0fbf34331aceee2e1f68ede5441f27c5bb7362a2ad",
+    "no_direct_damage_hook": true
+  },
+  "BREAD": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Bread.cs",
+    "sha256": "06d6fdc5af92ae6c7b28f540fe7e46fc52b8dc31d08369ccfd34dff29ee3e85d",
+    "no_direct_damage_hook": true
+  },
+  "STONE_HUMIDIFIER": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/StoneHumidifier.cs",
+    "sha256": "2960faaf16a913f39159315d9acfa29b5e399c69867015ab31d76c8940714d64",
+    "no_direct_damage_hook": true
+  },
+  "MAW_BANK": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/MawBank.cs",
+    "sha256": "86bbd3a46a2b76d924e7ee07ecaa8dcbf2ee7514d555716b107c94ecd3c179ff",
+    "no_direct_damage_hook": true
+  },
+  "FAKE_LEES_WAFFLE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/FakeLeesWaffle.cs",
+    "sha256": "d5125732afa217b03144c673831c2937bc9005708c32b75966e7fe68748e96a6",
+    "no_direct_damage_hook": true
+  },
+  "FAKE_STRIKE_DUMMY": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/FakeStrikeDummy.cs",
+    "sha256": "1d0008cece4bb4c00ea33890ec1d9605deda8928db85016e29f1561a6d292b9a",
+    "no_direct_damage_hook": false
+  },
+  "CLOAK_CLASP": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/CloakClasp.cs",
+    "sha256": "1b8e9638fab92d0ea0322f48e9c4e48fe10ae7f2fb6696b21932dc1d73995f0d",
+    "no_direct_damage_hook": true
+  },
+  "SHOVEL": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Shovel.cs",
+    "sha256": "21947d0774964a18e0484d101f3cc4a1aca142b4d448092665820226143006a8",
+    "no_direct_damage_hook": true
+  },
+  "STRIKE_DUMMY": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/StrikeDummy.cs",
+    "sha256": "1a780effd408cedb8b2f9f30958a8b4786125a997af55fe57b97f5919fb3610a",
+    "no_direct_damage_hook": false
+  },
+  "ANCHOR": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Anchor.cs",
+    "sha256": "8ec8f84f20049c2b3613be8e6705a5a669ec6b2338984091d2774b4b39f5b647",
+    "no_direct_damage_hook": true
+  },
+  "JOSS_PAPER": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/JossPaper.cs",
+    "sha256": "97237a51eda6199f48455edf7e83c061a73b97980279ee4a6cfdd149561b6bf2",
+    "no_direct_damage_hook": true
+  },
+  "FUNERARY_MASK": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/FuneraryMask.cs",
+    "sha256": "cb83b2b36b15995e6950b286a3a21313835c6144fd5da64392a7ecdd07117167",
+    "no_direct_damage_hook": true
+  },
+  "THE_COURIER": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/TheCourier.cs",
+    "sha256": "2d2e8a3c5b662754b79bc06c07374af66764776a8e15cf30c3eb3149ec2ce307",
+    "no_direct_damage_hook": true
+  },
+  "BYRDPIP": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Byrdpip.cs",
+    "sha256": "af27959ddfe234c0aa644c9859e992451b6d64a672a084f6acd1db4e4a0acefa",
+    "no_direct_damage_hook": true
+  },
+  "BOOK_REPAIR_KNIFE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/BookRepairKnife.cs",
+    "sha256": "437bb746b16ed5e4dd125d8a1d666a060a18014ac0f60a02493f035ebb926b0b",
+    "no_direct_damage_hook": true
+  },
+  "LANTERN": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Lantern.cs",
+    "sha256": "e5fc452e0f38c418c0712ec30018085db24efd7912127ab6e6f6d62a8601fc04",
+    "no_direct_damage_hook": true
+  },
+  "DIVINE_RIGHT": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/DivineRight.cs",
+    "sha256": "41be4a065d2dfb38d7bfef4e2a021580c68340c6ce43c5705054722fbadd9a4d",
+    "no_direct_damage_hook": true
+  },
+  "DOLLYS_MIRROR": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/DollysMirror.cs",
+    "sha256": "99b9c95e83710132971f5ad0a44ee466d36a30dbfa8fd8bf54ad53ed50f647f5",
+    "no_direct_damage_hook": true
+  },
+  "HISTORY_COURSE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/HistoryCourse.cs",
+    "sha256": "9416136b224fbb966f3d8c0f3f5d3397cccec2517281cf0d5dfc7a45244f6dac",
+    "no_direct_damage_hook": true
+  },
+  "DISTINGUISHED_CAPE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/DistinguishedCape.cs",
+    "sha256": "0513ba2907671770a7eb6405752535e651db6300a1a426a5fabb914a0c223b00",
+    "no_direct_damage_hook": true
+  },
+  "NUTRITIOUS_OYSTER": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/NutritiousOyster.cs",
+    "sha256": "64f8b1624cebee34694043489acc51339d11db5e05cb76e3d4505f62c1473205",
+    "no_direct_damage_hook": true
+  },
+  "BRIMSTONE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Brimstone.cs",
+    "sha256": "c12ef310280c9a5c282bb18a96ac5d44c39b8dabdfe74041372eaab0b7c9724f",
+    "no_direct_damage_hook": true
+  },
+  "WING_CHARM": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/WingCharm.cs",
+    "sha256": "a1d90342e86af4edc76c48d513683d1561b72a141ccbaf8dd45504ea39942ef2",
+    "no_direct_damage_hook": true
+  },
+  "MEAT_ON_THE_BONE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/MeatOnTheBone.cs",
+    "sha256": "26a3652b82aff11b27e20553d601959deac3dd6600f27c3e5a8d593e8964bdd9",
+    "no_direct_damage_hook": true
+  },
+  "HORN_CLEAT": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/HornCleat.cs",
+    "sha256": "c410e13417a8b4ccb1acde332b8c4197901c746a76ba49aee8f387dff21eeb2f",
+    "no_direct_damage_hook": true
+  },
+  "LOOMING_FRUIT": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/LoomingFruit.cs",
+    "sha256": "a6479f0e8ea058e8bd87fd3834a4354ac0183a9681543cbc777e96619c4901a6",
+    "no_direct_damage_hook": true
+  },
+  "MEAT_CLEAVER": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/MeatCleaver.cs",
+    "sha256": "afc654aadcfa07dca0dcfcecf3fd74e762abff8ff9952bb4401d2d6cb1e5d99d",
+    "no_direct_damage_hook": true
+  },
+  "PAELS_FLESH": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/PaelsFlesh.cs",
+    "sha256": "48c5cd87a93b07237770cb66b849e1e187c127f9ab2cfd3f6e1954e4aeb06cde",
+    "no_direct_damage_hook": true
+  },
+  "BLACK_STAR": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/BlackStar.cs",
+    "sha256": "236a57f088df6306350579a36d3e9de80b705e12675eb6c9e18d82c9285c2e37",
+    "no_direct_damage_hook": true
+  },
+  "ORNAMENTAL_FAN": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/OrnamentalFan.cs",
+    "sha256": "96dcaeb91b7e6dc95a84802b1b1814131c9be636e44b090c5c84cfcce6e2c2e6",
+    "no_direct_damage_hook": true
+  },
+  "PAELS_EYE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/PaelsEye.cs",
+    "sha256": "0ff4149872257b8969c808d66f1e293c0aa33980f41be77618f2802d59b02d3e",
+    "no_direct_damage_hook": true
+  },
+  "EMPTY_CAGE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/EmptyCage.cs",
+    "sha256": "5e23c6d3170586d9a334062647dd28c51c50726176e8efa13cc1b959b1618300",
+    "no_direct_damage_hook": true
+  },
+  "TUNGSTEN_ROD": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/TungstenRod.cs",
+    "sha256": "b79fe26e7bcaeb914ac93cd7bc3be2706a2b8c2525d49e342ec6f76d23502b08",
+    "no_direct_damage_hook": true
+  },
+  "RAINBOW_RING": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/RainbowRing.cs",
+    "sha256": "2af36eb8b68494aabc34ac77cb75f7785850a5218631fe12c630cef96caab1a8",
+    "no_direct_damage_hook": true
+  },
+  "BLACK_BLOOD": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/BlackBlood.cs",
+    "sha256": "18b5c5b3e1c93af8cd6a2f9c1b7be5122e991d6e195799c1c3ad7e72ce3e8833",
+    "no_direct_damage_hook": true
+  },
+  "IRON_CLUB": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/IronClub.cs",
+    "sha256": "39e204592b870eb6aca976923ecaff137c0d7fc6a9503c9d82686d774ca7aaf2",
+    "no_direct_damage_hook": true
+  },
+  "SERE_TALON": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/SereTalon.cs",
+    "sha256": "26d2b7ceddd5b245661dd01b118a14a09d66110072ceaa00c5cc7dd22691093b",
+    "no_direct_damage_hook": true
+  },
+  "PEN_NIB": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/PenNib.cs",
+    "sha256": "ee66558cf183ea9f85a428f364167a956768b8eab075879fef50a0b9f033d063",
+    "no_direct_damage_hook": false
+  },
+  "SELF_FORMING_CLAY": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/SelfFormingClay.cs",
+    "sha256": "19ee66ecf2f4fbfb2cf1f6c15323e86977d32dd894253d429fb4b927f7b8d5a7",
+    "no_direct_damage_hook": true
+  },
+  "BING_BONG": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/BingBong.cs",
+    "sha256": "da18b6cc23b80747b57f79f110886fc9daa533e5aeb454946e0bbe23ca709595",
+    "no_direct_damage_hook": true
+  },
+  "ARCANE_SCROLL": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/ArcaneScroll.cs",
+    "sha256": "2c4ed3e98daa57d0d689bd0f4af253f2c5c09697190b9f0d6f2d1f3e946c19ba",
+    "no_direct_damage_hook": true
+  },
+  "POMANDER": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Pomander.cs",
+    "sha256": "d177eebfab71c051063cfac881eb9422208c3e91d944032ada013b921e5a8321",
+    "no_direct_damage_hook": true
+  },
+  "SEAL_OF_GOLD": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/SealOfGold.cs",
+    "sha256": "86d900d9284bbb555fd8264679274246d25f43a42a4a0f0c9f30c7aee4cc7a06",
+    "no_direct_damage_hook": true
+  },
+  "VERY_HOT_COCOA": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/VeryHotCocoa.cs",
+    "sha256": "c9e2450c2468814b974250fab23da84995ccff39938cfa0cbf96c401551a16b5",
+    "no_direct_damage_hook": true
+  },
+  "SAI": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Sai.cs",
+    "sha256": "fac96aa2e31e69eb5a346e902bf0430ae1b808766728ae7eaabb18cb10cc591d",
+    "no_direct_damage_hook": true
+  },
+  "SLING_OF_COURAGE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/SlingOfCourage.cs",
+    "sha256": "275be872ac99ee8c7df47df277f55110e96750c035730b63b43120fa7707a8b3",
+    "no_direct_damage_hook": true
+  },
+  "SEA_GLASS": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/SeaGlass.cs",
+    "sha256": "6833f9402cf40a44b2844589ef2b8391519c8181ad557ac8af2d9a1ebaa32665",
+    "no_direct_damage_hook": true
+  },
+  "CAULDRON": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Cauldron.cs",
+    "sha256": "6aaa5a7e8ec692857e14e739ca6a7db417a3fbd60f2a98efdd86b9de89b4b446",
+    "no_direct_damage_hook": true
+  },
+  "MERCURY_HOURGLASS": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/MercuryHourglass.cs",
+    "sha256": "6bb62618305f9fa0519293143fe55a91574ef2daa3ca3aeb44dfce7d7aaeda89",
+    "no_direct_damage_hook": true
+  },
+  "ASTROLABE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Astrolabe.cs",
+    "sha256": "8d8baaedd21687eaec5cb391cda4a6d0020b8951c3dbd688e570f6f0503ab928",
+    "no_direct_damage_hook": true
+  },
+  "MEMBERSHIP_CARD": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/MembershipCard.cs",
+    "sha256": "b9cc004e01d5dc5aeea99573a60bc4aa9e64f58e3368085f4aeec2a52f5db191",
+    "no_direct_damage_hook": true
+  },
+  "LUCKY_FYSH": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/LuckyFysh.cs",
+    "sha256": "0d1e889ba2653e9d46c9c7336c57cb7d3066e0d0e2d3fdf5e8f79d02cfb6b13b",
+    "no_direct_damage_hook": true
+  },
+  "FISHING_ROD": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/FishingRod.cs",
+    "sha256": "541ac89e243c0e3916d3b6cb4226a090b9e86f1ae5753640ffe3875507ed9938",
+    "no_direct_damage_hook": true
+  },
+  "PRESERVED_FOG": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/PreservedFog.cs",
+    "sha256": "78b7ba31a3122554398d3c6b8c8584edd6a7847cb8eafb3755876e21d595ab85",
+    "no_direct_damage_hook": true
+  },
+  "FAKE_HAPPY_FLOWER": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/FakeHappyFlower.cs",
+    "sha256": "f93bc450daf93f9c678a651f228603febaf43b9e3a01782f632fa322a8d8d1cf",
+    "no_direct_damage_hook": true
+  },
+  "ETERNAL_FEATHER": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/EternalFeather.cs",
+    "sha256": "d01b91f28cbd2725e9ce9c3869ca89a3736f9b965265b69540e24e31023a4ac1",
+    "no_direct_damage_hook": true
+  },
+  "PANDORAS_BOX": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/PandorasBox.cs",
+    "sha256": "db85af4910816592c10fe4c353a1901f6a91544bc3af9d1790b4b166ee1eb99a",
+    "no_direct_damage_hook": true
+  },
+  "BONE_FLUTE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/BoneFlute.cs",
+    "sha256": "db15656caeb975018f47bdc8f9001555a6ecbddd6e998309fbdef7cd30da0e75",
+    "no_direct_damage_hook": true
+  },
+  "SHURIKEN": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Shuriken.cs",
+    "sha256": "07a1162ad993818794a249365dad5769b1571ca6d310dc5f69bfee970c82eb7a",
+    "no_direct_damage_hook": true
+  },
+  "BELLOWS": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Bellows.cs",
+    "sha256": "26dadc70650d8a416c0f33c389904f574ad3ec03e04355bcafab2fd599a724fb",
+    "no_direct_damage_hook": true
+  },
+  "MANGO": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Mango.cs",
+    "sha256": "60aa9ac08a3feb291f2987e6eee622f8d13810d55108cd9bae912c2158b9b3cf",
+    "no_direct_damage_hook": true
+  },
+  "FESTIVE_POPPER": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/FestivePopper.cs",
+    "sha256": "6be306610fedfbfe4c666ae768cfa7dc27e2d3a22a2637438d6075d2d8149c5e",
+    "no_direct_damage_hook": true
+  },
+  "PRECARIOUS_SHEARS": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/PrecariousShears.cs",
+    "sha256": "dd5e9e50532c3bd4ad12a9ce5b92f49e5a814dfa9ae2a6a3a049f5cc834914e7",
+    "no_direct_damage_hook": true
+  },
+  "WHITE_STAR": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/WhiteStar.cs",
+    "sha256": "bca994fd23df8836f549b35fa2d2c2a6039c0a3def7786e223019025c88ab5df",
+    "no_direct_damage_hook": true
+  },
+  "RUINED_HELMET": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/RuinedHelmet.cs",
+    "sha256": "a88f33545295ad4025ad3c95e7e5bed4f32f892309eb3c10246010e3d8b32ff3",
+    "no_direct_damage_hook": true
+  },
+  "BOWLER_HAT": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/BowlerHat.cs",
+    "sha256": "87159fa44b87c32f66fa4b6c49989d6d8245a08e48d0465d24c3a0505f6729c0",
+    "no_direct_damage_hook": true
+  },
+  "LOST_WISP": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/LostWisp.cs",
+    "sha256": "1c9abca9e7341560b8d9a442037bd3bf4fd1aacaa708ac2dc4ec0f93b57a5249",
+    "no_direct_damage_hook": true
+  },
+  "CIRCLET": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Circlet.cs",
+    "sha256": "418c9acc19086b59ad09a499534d504f1727a2b79c6901257431171acb31b0be",
+    "no_direct_damage_hook": true
+  },
+  "BURNING_BLOOD": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/BurningBlood.cs",
+    "sha256": "eefa04d6cee4b2da1245894fe1e4e1ed3ff0c36db8c8011264955870fb422410",
+    "no_direct_damage_hook": true
+  },
+  "RING_OF_THE_SNAKE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/RingOfTheSnake.cs",
+    "sha256": "d04b919c6c705750de44ffee82f435ee491509f12723508a3a9679d26eb62eee",
+    "no_direct_damage_hook": true
+  },
+  "PLANISPHERE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Planisphere.cs",
+    "sha256": "0819493520a1e44b3ab00cd87821ebf8833f5941592e1297f0970da65bd7794f",
+    "no_direct_damage_hook": true
+  },
+  "SWORD_OF_STONE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/SwordOfStone.cs",
+    "sha256": "11452dd2cd6b4d9abbde417cbd02bf12f33af28c271482fab5c6216866ecfec5",
+    "no_direct_damage_hook": true
+  },
+  "OLD_COIN": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/OldCoin.cs",
+    "sha256": "01505b6abb0e448cf765e6d515e5bbb1bbe02cc061301b0a05465c650ce15378",
+    "no_direct_damage_hook": true
+  },
+  "KUSARIGAMA": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Kusarigama.cs",
+    "sha256": "ab44d98b0e24bf3ff1b80628f075835f7c3101c718b99d417d170909f9af05ea",
+    "no_direct_damage_hook": true
+  },
+  "GOLDEN_COMPASS": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/GoldenCompass.cs",
+    "sha256": "4c444add3c7a77ce07c202661e5507d1666966fb1e7f69ff21b52d2db2091f86",
+    "no_direct_damage_hook": true
+  },
+  "POLLINOUS_CORE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/PollinousCore.cs",
+    "sha256": "37cc32f0978fb0ce588e72a0e157db7501daa3253459c55d249759c39ffeddc9",
+    "no_direct_damage_hook": true
+  },
+  "JUZU_BRACELET": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/JuzuBracelet.cs",
+    "sha256": "241aa3308a6bbca80cab15e1b218230841a9ea5e40a81e8cd47fea205d1452a6",
+    "no_direct_damage_hook": true
+  },
+  "TOASTY_MITTENS": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/ToastyMittens.cs",
+    "sha256": "8c8aa3ab557673382847616931606a587a319ed7a4417bda613fd0fa3c550530",
+    "no_direct_damage_hook": true
+  },
+  "PANTOGRAPH": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Pantograph.cs",
+    "sha256": "37880f830fc16c478f474e49aa438496dadea31bd642de4bce9902a72a5b457c",
+    "no_direct_damage_hook": true
+  },
+  "ORRERY": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Orrery.cs",
+    "sha256": "1e14f14c3db789ac56b47053661019f25cf20ab2cde218a9ddbab2083ccfd88f",
+    "no_direct_damage_hook": true
+  },
+  "MOLTEN_EGG": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/MoltenEgg.cs",
+    "sha256": "b706622e797a32ba54e62bc05f71c67d7ace9f29254ba5111f49dbf14ac04571",
+    "no_direct_damage_hook": true
+  },
+  "HAND_DRILL": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/HandDrill.cs",
+    "sha256": "723430ed119427f5cb08509806804ec05db61730c7cc6b008b3e61a3f2bbe773",
+    "no_direct_damage_hook": true
+  },
+  "GAMBLING_CHIP": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/GamblingChip.cs",
+    "sha256": "bf589d53ed86e59ab0cac026b9e640097e492588d9b44cee4720465b014c450b",
+    "no_direct_damage_hook": true
+  },
+  "RAZOR_TOOTH": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/RazorTooth.cs",
+    "sha256": "ef30fdb40103dedfb43dc384c0e85933ceb18177a702b83d091cf593f49a9723",
+    "no_direct_damage_hook": true
+  },
+  "KALEIDOSCOPE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Kaleidoscope.cs",
+    "sha256": "81cf8cd603ba613fcd45640b8e878bd920751baca6994d2161065fcca0ceca44",
+    "no_direct_damage_hook": true
+  },
+  "TUNING_FORK": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/TuningFork.cs",
+    "sha256": "b70f96a86a8d49bba98c50d815a85b3272f128fc1a5410db0e0ff565d54146a5",
+    "no_direct_damage_hook": true
+  },
+  "CHANDELIER": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Chandelier.cs",
+    "sha256": "ab78a72c9a34a56d87bbad834b42d75aacdeca60e3653fd16905b4fd119afa0e",
+    "no_direct_damage_hook": true
+  },
+  "TOOLBOX": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Toolbox.cs",
+    "sha256": "8b68915fdcd5a9f62c4a299bbec42c1ed6c1b1d216ccfa630c183832a53175fc",
+    "no_direct_damage_hook": true
+  },
+  "GORGET": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Gorget.cs",
+    "sha256": "5a3daa66675fce1767a7e54e59b803cdbf7322c655e2c696def4027d80dc586a",
+    "no_direct_damage_hook": true
+  },
+  "STRAWBERRY": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Strawberry.cs",
+    "sha256": "1701eb3115bbdf02d5b64f94b9d1d785bbff2e8587303388834c0299c1251dc6",
+    "no_direct_damage_hook": true
+  },
+  "WAR_PAINT": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/WarPaint.cs",
+    "sha256": "14a04cdedec34cfce26aedb1b9d965c7e35bc41b5f54188c1fbf21915d35bca8",
+    "no_direct_damage_hook": true
+  },
+  "SMALL_CAPSULE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/SmallCapsule.cs",
+    "sha256": "ae052e2dbcfc30eed878ec64a6132f7d130273603379c818b547605f0ef6634c",
+    "no_direct_damage_hook": true
+  },
+  "SOZU": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Sozu.cs",
+    "sha256": "e4526ab54c41f21ad2aa135a7a41dff433b2f9b586041b319676b81011fc0c77",
+    "no_direct_damage_hook": true
+  },
+  "PRAYER_WHEEL": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/PrayerWheel.cs",
+    "sha256": "381a30c20ccef43ba13d43ae7b00ea5f5665ac63369649486408c4b3aa69c8fc",
+    "no_direct_damage_hook": true
+  },
+  "BAG_OF_PREPARATION": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/BagOfPreparation.cs",
+    "sha256": "c3b3a527c44562ca78288265f36ca10aa48b5c913ca363efda870761db35d761",
+    "no_direct_damage_hook": true
+  },
+  "NEOWS_TORMENT": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/NeowsTorment.cs",
+    "sha256": "ab4f7b9dbf1a3f2cb659935ac31a72716c3c62a84b31abe4133a5381815cf30a",
+    "no_direct_damage_hook": true
+  },
+  "VAMBRACE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Vambrace.cs",
+    "sha256": "d804bb40a837fa90b9b5e734e7dcdd61643cd0328f35a884ce07d97f1dc4a34a",
+    "no_direct_damage_hook": true
+  },
+  "WHETSTONE": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Whetstone.cs",
+    "sha256": "dab88b291bed7ecac5a7147d53dcd3f4fe64163c136284f42106d63339cfdc21",
+    "no_direct_damage_hook": true
+  },
+  "STORYBOOK": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Storybook.cs",
+    "sha256": "64a98b32fcc5e7ad02d40145e4975e770b7b4ba20cf6d56dcb5668b6a4ed1236",
+    "no_direct_damage_hook": true
+  },
+  "LUNAR_PASTRY": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/LunarPastry.cs",
+    "sha256": "19c75a215e3a4c3de6174642d7bceea1ba8cdfe6862cd613b64a761bccd6cda8",
+    "no_direct_damage_hook": true
+  },
+  "BIG_MUSHROOM": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/BigMushroom.cs",
+    "sha256": "164ccada42443b186a3b79cb8ebe3543704d19696aa7b19b75fa5cc07a47fddc",
+    "no_direct_damage_hook": true
+  },
+  "CROSSBOW": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/Crossbow.cs",
+    "sha256": "d78e68a17a38a6c0058fcc0b3d1d6a9d345691bb6555474da39f7289ca570b96",
+    "no_direct_damage_hook": true
+  },
+  "BOOK_OF_FIVE_RINGS": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/BookOfFiveRings.cs",
+    "sha256": "6c04d5b94b3814d04454fc6ce981881272500601fbaf1326b42a581eda5be8f6",
+    "no_direct_damage_hook": true
+  },
+  "LAVA_ROCK": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/LavaRock.cs",
+    "sha256": "3fb81e2b172260204bf0ae6a36891480d5924467b82ac0346a9023e6c5339859",
+    "no_direct_damage_hook": true
+  },
+  "BONE_TEA": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/BoneTea.cs",
+    "sha256": "e7aa581caffc77b37ad2a6f0a98c2785c6c811cb5efd977282aa511ce3df8c5a",
+    "no_direct_damage_hook": true
+  },
+  "FAKE_ORICHALCUM": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/FakeOrichalcum.cs",
+    "sha256": "1010bc68903e6cc43716a628162a44add0ebebcabe50c67ac548198779ccd506",
+    "no_direct_damage_hook": true
+  },
+  "SCREAMING_FLAGON": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/ScreamingFlagon.cs",
+    "sha256": "14a1510ada948a05db694d43ce856f83d4ef01ad2d280e5f8027d1b81810ea70",
+    "no_direct_damage_hook": true
+  },
+  "ARCHAIC_TOOTH": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/ArchaicTooth.cs",
+    "sha256": "a2b0e2e32c48689bc16f6c6225687b4c75a995e7ef5006f0cecc10de463d08fa",
+    "no_direct_damage_hook": true
+  },
+  "FAKE_MERCHANTS_RUG": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/FakeMerchantsRug.cs",
+    "sha256": "6e89bde811bdea1c7ff4c751e952b82fa99b92bc0e5d2e7eb1229d8dcb609037",
+    "no_direct_damage_hook": true
+  },
+  "UNCEASING_TOP": {
+    "kind": "RelicModel",
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/UnceasingTop.cs",
+    "sha256": "a00ca92b089176e93f9377585333323848fc7f7b50781397621a55ec54e3d323",
+    "no_direct_damage_hook": true
+  }
+}

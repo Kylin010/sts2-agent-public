@@ -1,0 +1,9 @@
+{
+  "MegaCrit.Sts2.Core.Models.Cards/Mangle.cs": "ec860f4e2df9b833369b82a372bf4f8fa1ef6b2f624654b6126f14e83c6bc02b",
+  "MegaCrit.Sts2.Core.Models.Powers/ManglePower.cs": "bcd39ae2678966e154491b11cbc17bf2d11fbf26e138de543f2aa1b9fc37e988",
+  "MegaCrit.Sts2.Core.Models.Powers/TemporaryStrengthPower.cs": "5a0bd8788489f1e6b01dcec2a9614b882b6e86ef445da461f7c147ce91e4d9d4",
+  "MegaCrit.Sts2.Core.Models.Powers/StrengthPower.cs": "3b924e73b1b1f65c8d5cf2e3b4796210f0073d641cd1a94707a3e6145ca125ff",
+  "MegaCrit.Sts2.Core.MonsterMoves.Intents/AttackIntent.cs": "d3ae4fbb17608980b98d4722b86e1484b88d6eb73f838c147899050c3f453ca6",
+  "MegaCrit.Sts2.Core.Models.Monsters/KnowledgeDemon.cs": "09b0f4b67dce8878b526db6dc9780da703a334cba975b540eccacc64231ad321",
+  "MegaCrit.Sts2.Core.Models.Monsters/TheInsatiable.cs": "66c6ad48b3544056e8f8057bea38376c919e70dfc153b79cf9525737eb68660f"
+}

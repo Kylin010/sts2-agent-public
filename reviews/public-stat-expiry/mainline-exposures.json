@@ -1,0 +1,756 @@
+{
+  "scope": "Read-only completed160 public trace snapshots with exact source enum .title keys only. Does not certify absent aliases as no powers. Counts are exposure, not native qualification or paired uplift.",
+  "sources": [
+    {
+      "path": "/opt/slay-the-spire-2/agent/results/it-iter-pub-1005-0032.jsonl",
+      "sha256": "177bd9c2c23b5d78aa15efb8b994989ebaf7debd2ab21d07c74ffeabec4e79e4",
+      "n": 34,
+      "unique_seeds": 14,
+      "by_act": {
+        "1": 10,
+        "3": 14,
+        "2": 10
+      },
+      "by_class": {
+        "MANGLE_POWER": 21,
+        "DARK_SHACKLES_POWER": 11,
+        "SHACKLING_POTION_POWER": 2
+      },
+      "rows": [
+        {
+          "seed": "4M1RRHRA2945",
+          "trace_index": 120,
+          "act": 1,
+          "floor": 17,
+          "round": 2,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 10,
+          "strength": -10
+        },
+        {
+          "seed": "4M1RRHRA2945",
+          "trace_index": 128,
+          "act": 1,
+          "floor": 17,
+          "round": 5,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 10,
+          "strength": -10
+        },
+        {
+          "seed": "9Y9B88YLJQ7E",
+          "trace_index": 548,
+          "act": 3,
+          "floor": 6,
+          "round": 1,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 10,
+          "strength": -10
+        },
+        {
+          "seed": "9Y9B88YLJQ7E",
+          "trace_index": 719,
+          "act": 3,
+          "floor": 13,
+          "round": 2,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 15,
+          "strength": -15
+        },
+        {
+          "seed": "9Y9B88YLJQ7E",
+          "trace_index": 728,
+          "act": 3,
+          "floor": 13,
+          "round": 4,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 15,
+          "strength": -15
+        },
+        {
+          "seed": "9Y9B88YLJQ7E",
+          "trace_index": 820,
+          "act": 3,
+          "floor": 16,
+          "round": 4,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 15,
+          "strength": -14
+        },
+        {
+          "seed": "GKFNQVVQMS7X",
+          "trace_index": 122,
+          "act": 1,
+          "floor": 15,
+          "round": 1,
+          "foe_index": 0,
+          "power_id": "DARK_SHACKLES_POWER",
+          "amount": 9,
+          "strength": -9
+        },
+        {
+          "seed": "GKFNQVVQMS7X",
+          "trace_index": 152,
+          "act": 1,
+          "floor": 17,
+          "round": 3,
+          "foe_index": 0,
+          "power_id": "DARK_SHACKLES_POWER",
+          "amount": 9,
+          "strength": -6
+        },
+        {
+          "seed": "AF473CEY4C40",
+          "trace_index": 192,
+          "act": 1,
+          "floor": 17,
+          "round": 3,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 10,
+          "strength": -10
+        },
+        {
+          "seed": "AF473CEY4C40",
+          "trace_index": 211,
+          "act": 1,
+          "floor": 17,
+          "round": 8,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 10,
+          "strength": -10
+        },
+        {
+          "seed": "AF473CEY4C40",
+          "trace_index": 257,
+          "act": 1,
+          "floor": 17,
+          "round": 19,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 10,
+          "strength": -10
+        },
+        {
+          "seed": "RRFXZSSZ95WV",
+          "trace_index": 227,
+          "act": 2,
+          "floor": 6,
+          "round": 2,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 15,
+          "strength": -15
+        },
+        {
+          "seed": "RRFXZSSZ95WV",
+          "trace_index": 268,
+          "act": 2,
+          "floor": 10,
+          "round": 1,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 15,
+          "strength": -15
+        },
+        {
+          "seed": "RRFXZSSZ95WV",
+          "trace_index": 295,
+          "act": 2,
+          "floor": 13,
+          "round": 2,
+          "foe_index": 1,
+          "power_id": "MANGLE_POWER",
+          "amount": 15,
+          "strength": -15
+        },
+        {
+          "seed": "RRFXZSSZ95WV",
+          "trace_index": 412,
+          "act": 3,
+          "floor": 5,
+          "round": 4,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 15,
+          "strength": 3
+        },
+        {
+          "seed": "RRFXZSSZ95WV",
+          "trace_index": 437,
+          "act": 3,
+          "floor": 9,
+          "round": 3,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 15,
+          "strength": -14
+        },
+        {
+          "seed": "RRFXZSSZ95WV",
+          "trace_index": 466,
+          "act": 3,
+          "floor": 11,
+          "round": 1,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 15,
+          "strength": -15
+        },
+        {
+          "seed": "RRFXZSSZ95WV",
+          "trace_index": 530,
+          "act": 3,
+          "floor": 15,
+          "round": 2,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 15,
+          "strength": -12
+        },
+        {
+          "seed": "BN8NVZXLZJVA",
+          "trace_index": 254,
+          "act": 2,
+          "floor": 2,
+          "round": 2,
+          "foe_index": 1,
+          "power_id": "DARK_SHACKLES_POWER",
+          "amount": 9,
+          "strength": -7
+        },
+        {
+          "seed": "BN8NVZXLZJVA",
+          "trace_index": 359,
+          "act": 2,
+          "floor": 16,
+          "round": 3,
+          "foe_index": 0,
+          "power_id": "DARK_SHACKLES_POWER",
+          "amount": 9,
+          "strength": -9
+        },
+        {
+          "seed": "GRNSN4LTMJ9Q",
+          "trace_index": 459,
+          "act": 3,
+          "floor": 2,
+          "round": 1,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 10,
+          "strength": -10
+        },
+        {
+          "seed": "GRNSN4LTMJ9Q",
+          "trace_index": 525,
+          "act": 3,
+          "floor": 10,
+          "round": 2,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 10,
+          "strength": -8
+        },
+        {
+          "seed": "GRNSN4LTMJ9Q",
+          "trace_index": 555,
+          "act": 3,
+          "floor": 13,
+          "round": 3,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 10,
+          "strength": -10
+        },
+        {
+          "seed": "3GQX98JH7M1M",
+          "trace_index": 332,
+          "act": 3,
+          "floor": 2,
+          "round": 1,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 10,
+          "strength": -10
+        },
+        {
+          "seed": "9STEP3EHQPGH",
+          "trace_index": 277,
+          "act": 2,
+          "floor": 5,
+          "round": 3,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 10,
+          "strength": -10
+        },
+        {
+          "seed": "UWZJRDLT3Y3T",
+          "trace_index": 477,
+          "act": 3,
+          "floor": 10,
+          "round": 2,
+          "foe_index": 0,
+          "power_id": "DARK_SHACKLES_POWER",
+          "amount": 9,
+          "strength": -9
+        },
+        {
+          "seed": "UWZJRDLT3Y3T",
+          "trace_index": 521,
+          "act": 3,
+          "floor": 15,
+          "round": 1,
+          "foe_index": 0,
+          "power_id": "DARK_SHACKLES_POWER",
+          "amount": 9,
+          "strength": -9
+        },
+        {
+          "seed": "N15NBHG9QSEW",
+          "trace_index": 290,
+          "act": 2,
+          "floor": 5,
+          "round": 4,
+          "foe_index": 0,
+          "power_id": "SHACKLING_POTION_POWER",
+          "amount": 7,
+          "strength": -7
+        },
+        {
+          "seed": "W5W6PU2N24TF",
+          "trace_index": 151,
+          "act": 1,
+          "floor": 17,
+          "round": 2,
+          "foe_index": 2,
+          "power_id": "DARK_SHACKLES_POWER",
+          "amount": 9,
+          "strength": -9
+        },
+        {
+          "seed": "YZV1LE7TPRSR",
+          "trace_index": 174,
+          "act": 1,
+          "floor": 17,
+          "round": 1,
+          "foe_index": 0,
+          "power_id": "SHACKLING_POTION_POWER",
+          "amount": 7,
+          "strength": -7
+        },
+        {
+          "seed": "4FPDA0QW6KPZ",
+          "trace_index": 163,
+          "act": 1,
+          "floor": 17,
+          "round": 3,
+          "foe_index": 0,
+          "power_id": "DARK_SHACKLES_POWER",
+          "amount": 9,
+          "strength": -9
+        },
+        {
+          "seed": "4FPDA0QW6KPZ",
+          "trace_index": 209,
+          "act": 2,
+          "floor": 4,
+          "round": 2,
+          "foe_index": 0,
+          "power_id": "DARK_SHACKLES_POWER",
+          "amount": 9,
+          "strength": -9
+        },
+        {
+          "seed": "4FPDA0QW6KPZ",
+          "trace_index": 227,
+          "act": 2,
+          "floor": 5,
+          "round": 2,
+          "foe_index": 0,
+          "power_id": "DARK_SHACKLES_POWER",
+          "amount": 9,
+          "strength": -9
+        },
+        {
+          "seed": "4FPDA0QW6KPZ",
+          "trace_index": 275,
+          "act": 2,
+          "floor": 6,
+          "round": 3,
+          "foe_index": 0,
+          "power_id": "DARK_SHACKLES_POWER",
+          "amount": 9,
+          "strength": -9
+        }
+      ],
+      "beyond_mangle": {
+        "frames": 13,
+        "seeds": 7,
+        "a2_frames": 6,
+        "a2_seeds": 3
+      }
+    },
+    {
+      "path": "/opt/slay-the-spire-2/agent/results/it-iter-pub-dev-1005-0034.jsonl",
+      "sha256": "09ce291f4be2460aa7094a36eec55a9ec7e894de8550dfdcda4e88da5e33a12d",
+      "n": 30,
+      "unique_seeds": 9,
+      "by_act": {
+        "2": 17,
+        "3": 5,
+        "1": 8
+      },
+      "by_class": {
+        "MANGLE_POWER": 25,
+        "DARK_SHACKLES_POWER": 5
+      },
+      "rows": [
+        {
+          "seed": "CJ2AJ95KRVKS",
+          "trace_index": 357,
+          "act": 2,
+          "floor": 16,
+          "round": 6,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 10,
+          "strength": -7
+        },
+        {
+          "seed": "CJ2AJ95KRVKS",
+          "trace_index": 373,
+          "act": 2,
+          "floor": 16,
+          "round": 10,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 10,
+          "strength": -4
+        },
+        {
+          "seed": "CJ2AJ95KRVKS",
+          "trace_index": 582,
+          "act": 3,
+          "floor": 11,
+          "round": 1,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 10,
+          "strength": -10
+        },
+        {
+          "seed": "CJ2AJ95KRVKS",
+          "trace_index": 647,
+          "act": 3,
+          "floor": 15,
+          "round": 6,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 10,
+          "strength": -7
+        },
+        {
+          "seed": "T122WFFW7D5Z",
+          "trace_index": 194,
+          "act": 1,
+          "floor": 17,
+          "round": 11,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 15,
+          "strength": -15
+        },
+        {
+          "seed": "T122WFFW7D5Z",
+          "trace_index": 245,
+          "act": 2,
+          "floor": 4,
+          "round": 3,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 15,
+          "strength": -15
+        },
+        {
+          "seed": "T122WFFW7D5Z",
+          "trace_index": 351,
+          "act": 2,
+          "floor": 13,
+          "round": 4,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 15,
+          "strength": -15
+        },
+        {
+          "seed": "LS345K6PB030",
+          "trace_index": 317,
+          "act": 2,
+          "floor": 8,
+          "round": 2,
+          "foe_index": 0,
+          "power_id": "DARK_SHACKLES_POWER",
+          "amount": 9,
+          "strength": -9
+        },
+        {
+          "seed": "LS345K6PB030",
+          "trace_index": 357,
+          "act": 2,
+          "floor": 12,
+          "round": 3,
+          "foe_index": 1,
+          "power_id": "DARK_SHACKLES_POWER",
+          "amount": 9,
+          "strength": -9
+        },
+        {
+          "seed": "LS345K6PB030",
+          "trace_index": 399,
+          "act": 2,
+          "floor": 16,
+          "round": 4,
+          "foe_index": 1,
+          "power_id": "DARK_SHACKLES_POWER",
+          "amount": 9,
+          "strength": -6
+        },
+        {
+          "seed": "3NGJW5SJL0M0",
+          "trace_index": 181,
+          "act": 1,
+          "floor": 17,
+          "round": 4,
+          "foe_index": 0,
+          "power_id": "DARK_SHACKLES_POWER",
+          "amount": 9,
+          "strength": -9
+        },
+        {
+          "seed": "PMHPRNBJCUY4",
+          "trace_index": 150,
+          "act": 1,
+          "floor": 17,
+          "round": 2,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 10,
+          "strength": -10
+        },
+        {
+          "seed": "PMHPRNBJCUY4",
+          "trace_index": 212,
+          "act": 2,
+          "floor": 4,
+          "round": 3,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 10,
+          "strength": -10
+        },
+        {
+          "seed": "PMHPRNBJCUY4",
+          "trace_index": 235,
+          "act": 2,
+          "floor": 6,
+          "round": 2,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 10,
+          "strength": -10
+        },
+        {
+          "seed": "RK76H4TF0G6A",
+          "trace_index": 46,
+          "act": 1,
+          "floor": 6,
+          "round": 1,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 10,
+          "strength": -10
+        },
+        {
+          "seed": "RK76H4TF0G6A",
+          "trace_index": 58,
+          "act": 1,
+          "floor": 6,
+          "round": 4,
+          "foe_index": 1,
+          "power_id": "MANGLE_POWER",
+          "amount": 10,
+          "strength": -8
+        },
+        {
+          "seed": "RK76H4TF0G6A",
+          "trace_index": 116,
+          "act": 1,
+          "floor": 14,
+          "round": 3,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 15,
+          "strength": -5
+        },
+        {
+          "seed": "RK76H4TF0G6A",
+          "trace_index": 149,
+          "act": 1,
+          "floor": 17,
+          "round": 7,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 15,
+          "strength": -13
+        },
+        {
+          "seed": "RK76H4TF0G6A",
+          "trace_index": 156,
+          "act": 2,
+          "floor": 2,
+          "round": 1,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 15,
+          "strength": -15
+        },
+        {
+          "seed": "RK76H4TF0G6A",
+          "trace_index": 158,
+          "act": 2,
+          "floor": 2,
+          "round": 2,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 10,
+          "strength": -10
+        },
+        {
+          "seed": "RK76H4TF0G6A",
+          "trace_index": 195,
+          "act": 2,
+          "floor": 5,
+          "round": 1,
+          "foe_index": 1,
+          "power_id": "MANGLE_POWER",
+          "amount": 15,
+          "strength": -15
+        },
+        {
+          "seed": "RK76H4TF0G6A",
+          "trace_index": 261,
+          "act": 2,
+          "floor": 11,
+          "round": 4,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 15,
+          "strength": -12
+        },
+        {
+          "seed": "RK76H4TF0G6A",
+          "trace_index": 276,
+          "act": 2,
+          "floor": 14,
+          "round": 1,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 10,
+          "strength": -10
+        },
+        {
+          "seed": "RK76H4TF0G6A",
+          "trace_index": 282,
+          "act": 2,
+          "floor": 14,
+          "round": 3,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 15,
+          "strength": -15
+        },
+        {
+          "seed": "RK76H4TF0G6A",
+          "trace_index": 314,
+          "act": 2,
+          "floor": 16,
+          "round": 6,
+          "foe_index": 1,
+          "power_id": "MANGLE_POWER",
+          "amount": 15,
+          "strength": -12
+        },
+        {
+          "seed": "N73TB4GBC59Q",
+          "trace_index": 103,
+          "act": 1,
+          "floor": 8,
+          "round": 2,
+          "foe_index": 2,
+          "power_id": "MANGLE_POWER",
+          "amount": 10,
+          "strength": -7
+        },
+        {
+          "seed": "N73TB4GBC59Q",
+          "trace_index": 396,
+          "act": 3,
+          "floor": 2,
+          "round": 1,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 10,
+          "strength": -10
+        },
+        {
+          "seed": "N73TB4GBC59Q",
+          "trace_index": 457,
+          "act": 3,
+          "floor": 5,
+          "round": 1,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 10,
+          "strength": -10
+        },
+        {
+          "seed": "GRW33CKE35CJ",
+          "trace_index": 335,
+          "act": 2,
+          "floor": 16,
+          "round": 3,
+          "foe_index": 0,
+          "power_id": "DARK_SHACKLES_POWER",
+          "amount": 9,
+          "strength": -9
+        },
+        {
+          "seed": "PYCJ0RR5MYMB",
+          "trace_index": 594,
+          "act": 3,
+          "floor": 15,
+          "round": 6,
+          "foe_index": 0,
+          "power_id": "MANGLE_POWER",
+          "amount": 15,
+          "strength": -11
+        }
+      ],
+      "beyond_mangle": {
+        "frames": 5,
+        "seeds": 3,
+        "a2_frames": 4,
+        "a2_seeds": 2
+      }
+    }
+  ]
+}

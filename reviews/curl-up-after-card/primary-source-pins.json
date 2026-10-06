@@ -1,0 +1,7 @@
+{
+  "MegaCrit.Sts2.Core.Models.Powers/CurlUpPower.cs": "6d8853584508a821720b91a1fb3afb8b0195884b563898a9ba02c4bc89f12100",
+  "MegaCrit.Sts2.Core.Commands/CreatureCmd.cs": "b4c0eace35caeb0998edb70af5b626f96835c0d3149d474b9b7c4693d9e30278",
+  "MegaCrit.Sts2.Core.Commands.Builders/AttackCommand.cs": "6e2611720bf778be9d814c01d130e1a2cced40a7366ef667cc0397e45093b878",
+  "MegaCrit.Sts2.Core.Models.Monsters/LouseProgenitor.cs": "6dfabc0855e4765c7a82c093f5a0997f3a1462e6ca3f9e2a8211788d1a80cd7f",
+  "MegaCrit.Sts2.Core.Models.Cards/TwinStrike.cs": "8e8a47fed7f942b061438bc32138c8d2e6d0badff6dd92fd91f0b305a4632270"
+}

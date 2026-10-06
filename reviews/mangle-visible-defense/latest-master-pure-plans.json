@@ -1,0 +1,887 @@
+{
+  "base_commit": "c0e6d01ba10361f5684e1b94fed28fab9123ad4c",
+  "baseline": [
+    [
+      -36.423225006038884,
+      [
+        [
+          {
+            "index": 2,
+            "id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "Self",
+            "stats": {
+              "block": 10
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          0
+        ],
+        [
+          {
+            "index": 4,
+            "id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "Self",
+            "stats": {
+              "block": 10
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          0
+        ],
+        [
+          {
+            "index": 5,
+            "id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "Self",
+            "stats": {
+              "block": 10
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          0
+        ]
+      ]
+    ],
+    [
+      -37.985792644033765,
+      [
+        [
+          {
+            "index": 2,
+            "id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "Self",
+            "stats": {
+              "block": 10
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          0
+        ],
+        [
+          {
+            "index": 4,
+            "id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "Self",
+            "stats": {
+              "block": 10
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          0
+        ],
+        [
+          {
+            "index": 6,
+            "id": "CARD.PECK",
+            "name": "Peck",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Attack",
+            "rarity": "Event",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "AnyEnemy",
+            "stats": {
+              "damage": 14,
+              "repeat": 3
+            },
+            "description": "Deal {Damage:diff()} damage {Repeat:diff()} times.",
+            "damage_by_target": [
+              {
+                "target_index": 0,
+                "name": "Test Subject #C{Count}",
+                "damage": 1,
+                "repeat": 3,
+                "total_damage": 3
+              }
+            ]
+          },
+          0
+        ]
+      ]
+    ],
+    [
+      -42.7194645326507,
+      [
+        [
+          {
+            "index": 2,
+            "id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "Self",
+            "stats": {
+              "block": 10
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          0
+        ],
+        [
+          {
+            "index": 4,
+            "id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "Self",
+            "stats": {
+              "block": 10
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          0
+        ],
+        [
+          {
+            "index": 0,
+            "id": "CARD.BREAKTHROUGH",
+            "name": "Breakthrough",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Attack",
+            "rarity": "Common",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "AllEnemies",
+            "stats": {
+              "damage": 21,
+              "hploss": 1
+            },
+            "description": "Lose {HpLoss:diff()} HP.\nDeal {Damage:diff()} damage to ALL enemies.",
+            "damage_by_target": [
+              {
+                "target_index": 0,
+                "name": "Test Subject #C{Count}",
+                "damage": 1
+              }
+            ]
+          },
+          0
+        ]
+      ]
+    ],
+    [
+      -44.26387873526725,
+      [
+        [
+          {
+            "index": 2,
+            "id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "Self",
+            "stats": {
+              "block": 10
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          0
+        ],
+        [
+          {
+            "index": 0,
+            "id": "CARD.BREAKTHROUGH",
+            "name": "Breakthrough",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Attack",
+            "rarity": "Common",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "AllEnemies",
+            "stats": {
+              "damage": 21,
+              "hploss": 1
+            },
+            "description": "Lose {HpLoss:diff()} HP.\nDeal {Damage:diff()} damage to ALL enemies.",
+            "damage_by_target": [
+              {
+                "target_index": 0,
+                "name": "Test Subject #C{Count}",
+                "damage": 1
+              }
+            ]
+          },
+          0
+        ],
+        [
+          {
+            "index": 6,
+            "id": "CARD.PECK",
+            "name": "Peck",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Attack",
+            "rarity": "Event",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "AnyEnemy",
+            "stats": {
+              "damage": 14,
+              "repeat": 3
+            },
+            "description": "Deal {Damage:diff()} damage {Repeat:diff()} times.",
+            "damage_by_target": [
+              {
+                "target_index": 0,
+                "name": "Test Subject #C{Count}",
+                "damage": 1,
+                "repeat": 3,
+                "total_damage": 3
+              }
+            ]
+          },
+          0
+        ]
+      ]
+    ],
+    [
+      -45.45009402539585,
+      [
+        [
+          {
+            "index": 2,
+            "id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "Self",
+            "stats": {
+              "block": 10
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          0
+        ],
+        [
+          {
+            "index": 4,
+            "id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "Self",
+            "stats": {
+              "block": 10
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          0
+        ],
+        [
+          {
+            "index": 3,
+            "id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Attack",
+            "rarity": "Basic",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "AnyEnemy",
+            "stats": {
+              "damage": 18
+            },
+            "description": "Deal {Damage:diff()} damage.",
+            "damage_by_target": [
+              {
+                "target_index": 0,
+                "name": "Test Subject #C{Count}",
+                "damage": 1
+              }
+            ]
+          },
+          0
+        ]
+      ]
+    ],
+    [
+      -56.070192744684746,
+      [
+        [
+          {
+            "index": 0,
+            "id": "CARD.BREAKTHROUGH",
+            "name": "Breakthrough",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Attack",
+            "rarity": "Common",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "AllEnemies",
+            "stats": {
+              "damage": 21,
+              "hploss": 1
+            },
+            "description": "Lose {HpLoss:diff()} HP.\nDeal {Damage:diff()} damage to ALL enemies.",
+            "damage_by_target": [
+              {
+                "target_index": 0,
+                "name": "Test Subject #C{Count}",
+                "damage": 1
+              }
+            ]
+          },
+          0
+        ],
+        [
+          {
+            "index": 3,
+            "id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Attack",
+            "rarity": "Basic",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "AnyEnemy",
+            "stats": {
+              "damage": 18
+            },
+            "description": "Deal {Damage:diff()} damage.",
+            "damage_by_target": [
+              {
+                "target_index": 0,
+                "name": "Test Subject #C{Count}",
+                "damage": 1
+              }
+            ]
+          },
+          0
+        ],
+        [
+          {
+            "index": 6,
+            "id": "CARD.PECK",
+            "name": "Peck",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Attack",
+            "rarity": "Event",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "AnyEnemy",
+            "stats": {
+              "damage": 14,
+              "repeat": 3
+            },
+            "description": "Deal {Damage:diff()} damage {Repeat:diff()} times.",
+            "damage_by_target": [
+              {
+                "target_index": 0,
+                "name": "Test Subject #C{Count}",
+                "damage": 1,
+                "repeat": 3,
+                "total_damage": 3
+              }
+            ]
+          },
+          0
+        ]
+      ]
+    ]
+  ],
+  "candidate": [
+    [
+      -22.72896258975642,
+      [
+        [
+          {
+            "index": 7,
+            "id": "CARD.MANGLE",
+            "name": "Mangle",
+            "cost": 3,
+            "costs_x": false,
+            "type": "Attack",
+            "rarity": "Rare",
+            "can_play": true,
+            "upgraded": true,
+            "public_replay_count": 0,
+            "target_type": "AnyEnemy",
+            "stats": {
+              "damage": 38,
+              "strengthloss": 15
+            },
+            "description": "Deal {Damage:diff()} damage.\nEnemy loses {StrengthLoss:diff()} Strength this turn.",
+            "damage_by_target": [
+              {
+                "target_index": 0,
+                "name": "Test Subject #C{Count}",
+                "damage": 1
+              }
+            ]
+          },
+          0
+        ]
+      ]
+    ],
+    [
+      -36.423225006038884,
+      [
+        [
+          {
+            "index": 2,
+            "id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "Self",
+            "stats": {
+              "block": 10
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          0
+        ],
+        [
+          {
+            "index": 4,
+            "id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "Self",
+            "stats": {
+              "block": 10
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          0
+        ],
+        [
+          {
+            "index": 5,
+            "id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "Self",
+            "stats": {
+              "block": 10
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          0
+        ]
+      ]
+    ],
+    [
+      -37.985792644033765,
+      [
+        [
+          {
+            "index": 2,
+            "id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "Self",
+            "stats": {
+              "block": 10
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          0
+        ],
+        [
+          {
+            "index": 4,
+            "id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "Self",
+            "stats": {
+              "block": 10
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          0
+        ],
+        [
+          {
+            "index": 6,
+            "id": "CARD.PECK",
+            "name": "Peck",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Attack",
+            "rarity": "Event",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "AnyEnemy",
+            "stats": {
+              "damage": 14,
+              "repeat": 3
+            },
+            "description": "Deal {Damage:diff()} damage {Repeat:diff()} times.",
+            "damage_by_target": [
+              {
+                "target_index": 0,
+                "name": "Test Subject #C{Count}",
+                "damage": 1,
+                "repeat": 3,
+                "total_damage": 3
+              }
+            ]
+          },
+          0
+        ]
+      ]
+    ],
+    [
+      -42.7194645326507,
+      [
+        [
+          {
+            "index": 2,
+            "id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "Self",
+            "stats": {
+              "block": 10
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          0
+        ],
+        [
+          {
+            "index": 4,
+            "id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "Self",
+            "stats": {
+              "block": 10
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          0
+        ],
+        [
+          {
+            "index": 0,
+            "id": "CARD.BREAKTHROUGH",
+            "name": "Breakthrough",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Attack",
+            "rarity": "Common",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "AllEnemies",
+            "stats": {
+              "damage": 21,
+              "hploss": 1
+            },
+            "description": "Lose {HpLoss:diff()} HP.\nDeal {Damage:diff()} damage to ALL enemies.",
+            "damage_by_target": [
+              {
+                "target_index": 0,
+                "name": "Test Subject #C{Count}",
+                "damage": 1
+              }
+            ]
+          },
+          0
+        ]
+      ]
+    ],
+    [
+      -44.26387873526725,
+      [
+        [
+          {
+            "index": 2,
+            "id": "CARD.DEFEND_IRONCLAD",
+            "name": "Defend",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Skill",
+            "rarity": "Basic",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "Self",
+            "stats": {
+              "block": 10
+            },
+            "description": "Gain {Block:diff()} Block."
+          },
+          0
+        ],
+        [
+          {
+            "index": 0,
+            "id": "CARD.BREAKTHROUGH",
+            "name": "Breakthrough",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Attack",
+            "rarity": "Common",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "AllEnemies",
+            "stats": {
+              "damage": 21,
+              "hploss": 1
+            },
+            "description": "Lose {HpLoss:diff()} HP.\nDeal {Damage:diff()} damage to ALL enemies.",
+            "damage_by_target": [
+              {
+                "target_index": 0,
+                "name": "Test Subject #C{Count}",
+                "damage": 1
+              }
+            ]
+          },
+          0
+        ],
+        [
+          {
+            "index": 6,
+            "id": "CARD.PECK",
+            "name": "Peck",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Attack",
+            "rarity": "Event",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "AnyEnemy",
+            "stats": {
+              "damage": 14,
+              "repeat": 3
+            },
+            "description": "Deal {Damage:diff()} damage {Repeat:diff()} times.",
+            "damage_by_target": [
+              {
+                "target_index": 0,
+                "name": "Test Subject #C{Count}",
+                "damage": 1,
+                "repeat": 3,
+                "total_damage": 3
+              }
+            ]
+          },
+          0
+        ]
+      ]
+    ],
+    [
+      -56.070192744684746,
+      [
+        [
+          {
+            "index": 0,
+            "id": "CARD.BREAKTHROUGH",
+            "name": "Breakthrough",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Attack",
+            "rarity": "Common",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "AllEnemies",
+            "stats": {
+              "damage": 21,
+              "hploss": 1
+            },
+            "description": "Lose {HpLoss:diff()} HP.\nDeal {Damage:diff()} damage to ALL enemies.",
+            "damage_by_target": [
+              {
+                "target_index": 0,
+                "name": "Test Subject #C{Count}",
+                "damage": 1
+              }
+            ]
+          },
+          0
+        ],
+        [
+          {
+            "index": 3,
+            "id": "CARD.STRIKE_IRONCLAD",
+            "name": "Strike",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Attack",
+            "rarity": "Basic",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "AnyEnemy",
+            "stats": {
+              "damage": 18
+            },
+            "description": "Deal {Damage:diff()} damage.",
+            "damage_by_target": [
+              {
+                "target_index": 0,
+                "name": "Test Subject #C{Count}",
+                "damage": 1
+              }
+            ]
+          },
+          0
+        ],
+        [
+          {
+            "index": 6,
+            "id": "CARD.PECK",
+            "name": "Peck",
+            "cost": 1,
+            "costs_x": false,
+            "type": "Attack",
+            "rarity": "Event",
+            "can_play": true,
+            "upgraded": false,
+            "public_replay_count": 0,
+            "target_type": "AnyEnemy",
+            "stats": {
+              "damage": 14,
+              "repeat": 3
+            },
+            "description": "Deal {Damage:diff()} damage {Repeat:diff()} times.",
+            "damage_by_target": [
+              {
+                "target_index": 0,
+                "name": "Test Subject #C{Count}",
+                "damage": 1,
+                "repeat": 3,
+                "total_damage": 3
+              }
+            ]
+          },
+          0
+        ]
+      ]
+    ]
+  ],
+  "root_origin": "Independent PUB6447 completed hypothetical public interface, not actual game",
+  "native_calls": 0,
+  "default_off_restored_exact": true
+}

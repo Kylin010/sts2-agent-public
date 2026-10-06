@@ -1,0 +1,867 @@
+{
+"1": {
+"LOST_COFFER": {
+"offered": 1179,
+"picked": 225,
+"win_when_picked": 0.164,
+"score": 0.1692
+},
+"NEOWS_TORMENT": {
+"offered": 1265,
+"picked": 205,
+"win_when_picked": 0.244,
+"score": 0.2389
+},
+"LARGE_CAPSULE": {
+"offered": 1006,
+"picked": 600,
+"win_when_picked": 0.228,
+"score": 0.2272
+},
+"KALEIDOSCOPE": {
+"offered": 1313,
+"picked": 595,
+"win_when_picked": 0.165,
+"score": 0.1666
+},
+"ARCANE_SCROLL": {
+"offered": 1175,
+"picked": 509,
+"win_when_picked": 0.173,
+"score": 0.1747
+},
+"PRECARIOUS_SHEARS": {
+"offered": 964,
+"picked": 218,
+"win_when_picked": 0.206,
+"score": 0.2062
+},
+"SCROLL_BOXES": {
+"offered": 1264,
+"picked": 339,
+"win_when_picked": 0.177,
+"score": 0.1793
+},
+"LEAFY_POULTICE": {
+"offered": 970,
+"picked": 533,
+"win_when_picked": 0.235,
+"score": 0.2329
+},
+"FISHING_ROD": {
+"offered": 1300,
+"picked": 260,
+"win_when_picked": 0.162,
+"score": 0.166
+},
+"PRECISE_SCISSORS": {
+"offered": 1128,
+"picked": 96,
+"win_when_picked": 0.26,
+"score": 0.2472
+},
+"STONE_HUMIDIFIER": {
+"offered": 589,
+"picked": 79,
+"win_when_picked": 0.19,
+"score": 0.194
+},
+"NEOWS_SACRIFICE": {
+"offered": 954,
+"picked": 225,
+"win_when_picked": 0.284,
+"score": 0.2751
+},
+"WINGED_BOOTS": {
+"offered": 1272,
+"picked": 194,
+"win_when_picked": 0.186,
+"score": 0.1881
+},
+"PHIAL_HOLSTER": {
+"offered": 1098,
+"picked": 206,
+"win_when_picked": 0.248,
+"score": 0.2421
+},
+"SILKEN_TRESS": {
+"offered": 1018,
+"picked": 718,
+"win_when_picked": 0.219,
+"score": 0.2181
+},
+"GOLDEN_PEARL": {
+"offered": 1186,
+"picked": 453,
+"win_when_picked": 0.243,
+"score": 0.2405
+},
+"SILVER_CRUCIBLE": {
+"offered": 963,
+"picked": 508,
+"win_when_picked": 0.181,
+"score": 0.1824
+},
+"HEFTY_TABLET": {
+"offered": 1003,
+"picked": 534,
+"win_when_picked": 0.135,
+"score": 0.1386
+},
+"BOOMING_CONCH": {
+"offered": 1286,
+"picked": 326,
+"win_when_picked": 0.276,
+"score": 0.2701
+},
+"LEAD_PAPERWEIGHT": {
+"offered": 1234,
+"picked": 494,
+"win_when_picked": 0.196,
+"score": 0.1968
+},
+"POMANDER": {
+"offered": 631,
+"picked": 81,
+"win_when_picked": 0.198,
+"score": 0.1995
+},
+"CURSED_PEARL": {
+"offered": 998,
+"picked": 601,
+"win_when_picked": 0.208,
+"score": 0.2078
+},
+"NEOWS_BONES": {
+"offered": 968,
+"picked": 493,
+"win_when_picked": 0.197,
+"score": 0.1972
+},
+"NEOWS_TALISMAN": {
+"offered": 650,
+"picked": 161,
+"win_when_picked": 0.286,
+"score": 0.273
+},
+"LAVA_ROCK": {
+"offered": 596,
+"picked": 117,
+"win_when_picked": 0.256,
+"score": 0.2459
+},
+"SMALL_CAPSULE": {
+"offered": 572,
+"picked": 241,
+"win_when_picked": 0.245,
+"score": 0.2404
+},
+"DOWSING_ROD": {
+"offered": 906,
+"picked": 289,
+"win_when_picked": 0.197,
+"score": 0.1979
+},
+"NEW_LEAF": {
+"offered": 1148,
+"picked": 376,
+"win_when_picked": 0.178,
+"score": 0.1802
+},
+"NUTRITIOUS_OYSTER": {
+"offered": 614,
+"picked": 58,
+"win_when_picked": 0.086,
+"score": 0.1266
+},
+"BING_BONG": {
+"offered": 3,
+"picked": 1,
+"win_when_picked": 0.0,
+"score": 0.1982
+},
+"CLAWS": {
+"offered": 2,
+"picked": 2,
+"win_when_picked": 0.0,
+"score": 0.192
+},
+"SNECKO_EYE": {
+"offered": 2,
+"picked": 0,
+"win_when_picked": 0.0,
+"score": 0.2048
+},
+"WAR_HAMMER": {
+"offered": 1,
+"picked": 0,
+"win_when_picked": 0.0,
+"score": 0.2048
+},
+"GLITTER": {
+"offered": 1,
+"picked": 1,
+"win_when_picked": 0.0,
+"score": 0.1982
+},
+"BLACK_STAR": {
+"offered": 1,
+"picked": 0,
+"win_when_picked": 0.0,
+"score": 0.2048
+},
+"TUNING_FORK": {
+"offered": 3,
+"picked": 1,
+"win_when_picked": 0.0,
+"score": 0.1982
+},
+"KUSARIGAMA": {
+"offered": 3,
+"picked": 1,
+"win_when_picked": 0.0,
+"score": 0.1982
+},
+"BRIMSTONE": {
+"offered": 3,
+"picked": 1,
+"win_when_picked": 0.0,
+"score": 0.1982
+},
+"DRAW_AND_GUESS_MOD_RELIC_DEATH_NOTE": {
+"offered": 1,
+"picked": 0,
+"win_when_picked": 0.0,
+"score": 0.2048
+},
+"ANCIENT_AFFECTION_BOND": {
+"offered": 1,
+"picked": 1,
+"win_when_picked": 1.0,
+"score": 0.2304
+},
+"ANCIENT_AFFECTION_MARRIAGE_BOND": {
+"offered": 5,
+"picked": 1,
+"win_when_picked": 1.0,
+"score": 0.2304
+},
+"AKABEKO": {
+"offered": 6,
+"picked": 2,
+"win_when_picked": 0.0,
+"score": 0.192
+},
+"GIRYA": {
+"offered": 6,
+"picked": 2,
+"win_when_picked": 0.0,
+"score": 0.192
+},
+"LOOMING_FRUIT": {
+"offered": 4,
+"picked": 2,
+"win_when_picked": 0.5,
+"score": 0.2232
+},
+"VAJRA": {
+"offered": 6,
+"picked": 2,
+"win_when_picked": 0.0,
+"score": 0.192
+},
+"DRAGON_FRUIT": {
+"offered": 3,
+"picked": 1,
+"win_when_picked": 0.0,
+"score": 0.1982
+},
+"CHEMICAL_X": {
+"offered": 6,
+"picked": 2,
+"win_when_picked": 0.0,
+"score": 0.192
+},
+"ELECTRIC_SHRYMP": {
+"offered": 1,
+"picked": 0,
+"win_when_picked": 0.0,
+"score": 0.2048
+},
+"DRIFTWOOD": {
+"offered": 1,
+"picked": 0,
+"win_when_picked": 0.0,
+"score": 0.2048
+},
+"ARCHAIC_TOOTH": {
+"offered": 2,
+"picked": 1,
+"win_when_picked": 1.0,
+"score": 0.2304
+},
+"NECROBINDER": {
+"offered": 1,
+"picked": 1,
+"win_when_picked": 1.0,
+"score": 0.2304
+},
+"SAND_CASTLE": {
+"offered": 1,
+"picked": 0,
+"win_when_picked": 0.0,
+"score": 0.2048
+},
+"BRILLIANT_SCARF": {
+"offered": 1,
+"picked": 0,
+"win_when_picked": 0.0,
+"score": 0.2048
+},
+"FUR_COAT": {
+"offered": 1,
+"picked": 0,
+"win_when_picked": 0.0,
+"score": 0.2048
+}
+},
+"2": {
+"VERY_HOT_COCOA": {
+"offered": 569,
+"picked": 220,
+"win_when_picked": 0.286,
+"score": 0.293
+},
+"BIIIG_HUG": {
+"offered": 613,
+"picked": 111,
+"win_when_picked": 0.45,
+"score": 0.4273
+},
+"GOLDEN_COMPASS": {
+"offered": 440,
+"picked": 66,
+"win_when_picked": 0.258,
+"score": 0.2838
+},
+"ASTROLABE": {
+"offered": 163,
+"picked": 93,
+"win_when_picked": 0.323,
+"score": 0.3272
+},
+"PANDORAS_BOX": {
+"offered": 177,
+"picked": 94,
+"win_when_picked": 0.468,
+"score": 0.4375
+},
+"PHILOSOPHERS_STONE": {
+"offered": 185,
+"picked": 75,
+"win_when_picked": 0.373,
+"score": 0.3643
+},
+"GLASS_EYE": {
+"offered": 538,
+"picked": 165,
+"win_when_picked": 0.291,
+"score": 0.2987
+},
+"ALCHEMICAL_COFFER": {
+"offered": 416,
+"picked": 87,
+"win_when_picked": 0.356,
+"score": 0.3526
+},
+"ARCHAIC_TOOTH": {
+"offered": 813,
+"picked": 541,
+"win_when_picked": 0.29,
+"score": 0.2929
+},
+"TOASTY_MITTENS": {
+"offered": 609,
+"picked": 376,
+"win_when_picked": 0.503,
+"score": 0.4908
+},
+"SEAL_OF_GOLD": {
+"offered": 439,
+"picked": 111,
+"win_when_picked": 0.351,
+"score": 0.3493
+},
+"NUTRITIOUS_SOUP": {
+"offered": 630,
+"picked": 350,
+"win_when_picked": 0.329,
+"score": 0.3296
+},
+"STORYBOOK": {
+"offered": 566,
+"picked": 110,
+"win_when_picked": 0.355,
+"score": 0.3518
+},
+"PAELS_FLESH": {
+"offered": 539,
+"picked": 221,
+"win_when_picked": 0.281,
+"score": 0.2878
+},
+"PAELS_TOOTH": {
+"offered": 515,
+"picked": 55,
+"win_when_picked": 0.327,
+"score": 0.3323
+},
+"PAELS_EYE": {
+"offered": 497,
+"picked": 103,
+"win_when_picked": 0.272,
+"score": 0.2876
+},
+"PAELS_BLOOD": {
+"offered": 598,
+"picked": 350,
+"win_when_picked": 0.443,
+"score": 0.4349
+},
+"PAELS_CLAW": {
+"offered": 449,
+"picked": 130,
+"win_when_picked": 0.408,
+"score": 0.3953
+},
+"PAELS_TEARS": {
+"offered": 544,
+"picked": 228,
+"win_when_picked": 0.333,
+"score": 0.3343
+},
+"PAELS_WING": {
+"offered": 459,
+"picked": 140,
+"win_when_picked": 0.236,
+"score": 0.2544
+},
+"YUMMY_COOKIE": {
+"offered": 587,
+"picked": 264,
+"win_when_picked": 0.254,
+"score": 0.2628
+},
+"CALLING_BELL": {
+"offered": 171,
+"picked": 70,
+"win_when_picked": 0.286,
+"score": 0.3025
+},
+"RUNIC_PYRAMID": {
+"offered": 158,
+"picked": 95,
+"win_when_picked": 0.537,
+"score": 0.49
+},
+"SOZU": {
+"offered": 181,
+"picked": 39,
+"win_when_picked": 0.282,
+"score": 0.308
+},
+"PAELS_HORN": {
+"offered": 555,
+"picked": 126,
+"win_when_picked": 0.397,
+"score": 0.3862
+},
+"PAELS_GROWTH": {
+"offered": 216,
+"picked": 46,
+"win_when_picked": 0.239,
+"score": 0.2796
+},
+"PAELS_LEGION": {
+"offered": 543,
+"picked": 239,
+"win_when_picked": 0.377,
+"score": 0.3727
+},
+"PUMPKIN_CANDLE": {
+"offered": 433,
+"picked": 94,
+"win_when_picked": 0.34,
+"score": 0.3407
+},
+"REGENT": {
+"offered": 93,
+"picked": 20,
+"win_when_picked": 0.2,
+"score": 0.285
+},
+"DRIFTWOOD": {
+"offered": 442,
+"picked": 50,
+"win_when_picked": 0.16,
+"score": 0.2281
+},
+"TOUCH_OF_OROBAS": {
+"offered": 860,
+"picked": 211,
+"win_when_picked": 0.232,
+"score": 0.2458
+},
+"SILENT": {
+"offered": 91,
+"picked": 39,
+"win_when_picked": 0.179,
+"score": 0.25
+},
+"RADIANT_PEARL": {
+"offered": 430,
+"picked": 108,
+"win_when_picked": 0.444,
+"score": 0.4221
+},
+"TOY_BOX": {
+"offered": 476,
+"picked": 81,
+"win_when_picked": 0.321,
+"score": 0.3266
+},
+"ECTOPLASM": {
+"offered": 152,
+"picked": 17,
+"win_when_picked": 0.294,
+"score": 0.3245
+},
+"ELECTRIC_SHRYMP": {
+"offered": 538,
+"picked": 165,
+"win_when_picked": 0.333,
+"score": 0.3346
+},
+"DUSTY_TOME": {
+"offered": 363,
+"picked": 85,
+"win_when_picked": 0.353,
+"score": 0.35
+},
+"NECROBINDER": {
+"offered": 105,
+"picked": 27,
+"win_when_picked": 0.148,
+"score": 0.25
+},
+"PRISMATIC_GEM": {
+"offered": 197,
+"picked": 107,
+"win_when_picked": 0.402,
+"score": 0.3887
+},
+"SAND_CASTLE": {
+"offered": 387,
+"picked": 118,
+"win_when_picked": 0.229,
+"score": 0.2517
+},
+"WATCHER-WATCHER": {
+"offered": 2,
+"picked": 0,
+"win_when_picked": 0.0,
+"score": 0.3417
+},
+"EMPTY_CAGE": {
+"offered": 183,
+"picked": 53,
+"win_when_picked": 0.245,
+"score": 0.2801
+},
+"VELVET_CHOKER": {
+"offered": 179,
+"picked": 30,
+"win_when_picked": 0.267,
+"score": 0.3042
+},
+"BLACK_STAR": {
+"offered": 174,
+"picked": 62,
+"win_when_picked": 0.371,
+"score": 0.3614
+},
+"DEFECT": {
+"offered": 110,
+"picked": 34,
+"win_when_picked": 0.265,
+"score": 0.3008
+},
+"SNECKO_EYE": {
+"offered": 179,
+"picked": 42,
+"win_when_picked": 0.762,
+"score": 0.5868
+},
+"ANCIENT_AFFECTION_BOND": {
+"offered": 2,
+"picked": 2,
+"win_when_picked": 1.0,
+"score": 0.3828
+},
+"ANCIENT_AFFECTION_MARRIAGE_BOND": {
+"offered": 1,
+"picked": 0,
+"win_when_picked": 0.0,
+"score": 0.3417
+}
+},
+"3": {
+"WHISPERING_EARRING": {
+"offered": 375,
+"picked": 81,
+"win_when_picked": 0.333,
+"score": 0.3922
+},
+"DISTINGUISHED_CAPE": {
+"offered": 363,
+"picked": 80,
+"win_when_picked": 0.55,
+"score": 0.5503
+},
+"MUSIC_BOX": {
+"offered": 270,
+"picked": 133,
+"win_when_picked": 0.586,
+"score": 0.58
+},
+"ASTROLABE": {
+"offered": 66,
+"picked": 32,
+"win_when_picked": 0.625,
+"score": 0.5893
+},
+"PHILOSOPHERS_STONE": {
+"offered": 78,
+"picked": 33,
+"win_when_picked": 0.545,
+"score": 0.5482
+},
+"VELVET_CHOKER": {
+"offered": 58,
+"picked": 8,
+"win_when_picked": 0.5,
+"score": 0.5404
+},
+"PRESERVED_FOG": {
+"offered": 355,
+"picked": 114,
+"win_when_picked": 0.579,
+"score": 0.5732
+},
+"JEWELED_MASK": {
+"offered": 287,
+"picked": 197,
+"win_when_picked": 0.574,
+"score": 0.5706
+},
+"SNECKO_EYE": {
+"offered": 70,
+"picked": 15,
+"win_when_picked": 0.733,
+"score": 0.6119
+},
+"LOOMING_FRUIT": {
+"offered": 337,
+"picked": 90,
+"win_when_picked": 0.456,
+"score": 0.4795
+},
+"FUR_COAT": {
+"offered": 319,
+"picked": 62,
+"win_when_picked": 0.339,
+"score": 0.408
+},
+"GLITTER": {
+"offered": 321,
+"picked": 132,
+"win_when_picked": 0.538,
+"score": 0.5403
+},
+"BLOOD_SOAKED_ROSE": {
+"offered": 381,
+"picked": 72,
+"win_when_picked": 0.417,
+"score": 0.4562
+},
+"SERE_TALON": {
+"offered": 413,
+"picked": 172,
+"win_when_picked": 0.547,
+"score": 0.5472
+},
+"LORDS_PARASOL": {
+"offered": 273,
+"picked": 76,
+"win_when_picked": 0.539,
+"score": 0.5428
+},
+"FIDDLE": {
+"offered": 375,
+"picked": 95,
+"win_when_picked": 0.589,
+"score": 0.5803
+},
+"SPIKED_GAUNTLETS": {
+"offered": 310,
+"picked": 73,
+"win_when_picked": 0.534,
+"score": 0.5392
+},
+"MEAT_CLEAVER": {
+"offered": 351,
+"picked": 82,
+"win_when_picked": 0.585,
+"score": 0.5762
+},
+"IRON_CLUB": {
+"offered": 346,
+"picked": 125,
+"win_when_picked": 0.6,
+"score": 0.5905
+},
+"DUSTY_TOME": {
+"offered": 121,
+"picked": 21,
+"win_when_picked": 0.667,
+"score": 0.5987
+},
+"CHOICES_PARADOX": {
+"offered": 304,
+"picked": 111,
+"win_when_picked": 0.468,
+"score": 0.4861
+},
+"DELICATE_FROND": {
+"offered": 352,
+"picked": 77,
+"win_when_picked": 0.519,
+"score": 0.5284
+},
+"SIGNET_RING": {
+"offered": 313,
+"picked": 153,
+"win_when_picked": 0.503,
+"score": 0.5111
+},
+"BEAUTIFUL_BRACELET": {
+"offered": 366,
+"picked": 105,
+"win_when_picked": 0.581,
+"score": 0.5743
+},
+"BLACK_STAR": {
+"offered": 61,
+"picked": 17,
+"win_when_picked": 0.353,
+"score": 0.4795
+},
+"JEWELRY_BOX": {
+"offered": 359,
+"picked": 99,
+"win_when_picked": 0.626,
+"score": 0.6088
+},
+"CROSSBOW": {
+"offered": 363,
+"picked": 153,
+"win_when_picked": 0.725,
+"score": 0.6969
+},
+"CLAWS": {
+"offered": 339,
+"picked": 104,
+"win_when_picked": 0.462,
+"score": 0.4816
+},
+"THROWING_AXE": {
+"offered": 362,
+"picked": 88,
+"win_when_picked": 0.511,
+"score": 0.5215
+},
+"SAI": {
+"offered": 339,
+"picked": 200,
+"win_when_picked": 0.625,
+"score": 0.6154
+},
+"TANXS_WHISTLE": {
+"offered": 348,
+"picked": 68,
+"win_when_picked": 0.471,
+"score": 0.4952
+},
+"WAR_HAMMER": {
+"offered": 333,
+"picked": 53,
+"win_when_picked": 0.528,
+"score": 0.5366
+},
+"BLESSED_ANTLER": {
+"offered": 337,
+"picked": 106,
+"win_when_picked": 0.538,
+"score": 0.5407
+},
+"DIAMOND_DIADEM": {
+"offered": 332,
+"picked": 189,
+"win_when_picked": 0.577,
+"score": 0.5732
+},
+"BRILLIANT_SCARF": {
+"offered": 321,
+"picked": 105,
+"win_when_picked": 0.638,
+"score": 0.6188
+},
+"TRI_BOOMERANG": {
+"offered": 311,
+"picked": 188,
+"win_when_picked": 0.553,
+"score": 0.5529
+},
+"EMPTY_CAGE": {
+"offered": 64,
+"picked": 18,
+"win_when_picked": 0.444,
+"score": 0.5111
+},
+"CALLING_BELL": {
+"offered": 61,
+"picked": 26,
+"win_when_picked": 0.385,
+"score": 0.4738
+},
+"PANDORAS_BOX": {
+"offered": 76,
+"picked": 27,
+"win_when_picked": 0.519,
+"score": 0.5357
+},
+"RUNIC_PYRAMID": {
+"offered": 71,
+"picked": 45,
+"win_when_picked": 0.667,
+"score": 0.6205
+},
+"ANCIENT_AFFECTION_BOND": {
+"offered": 2,
+"picked": 2,
+"win_when_picked": 1.0,
+"score": 0.5792
+}
+},
+"_说明": "社区 A10 铁甲 v0.111.0：各幕古神选项被选后的胜率，score = (赢 + 基准胜率×30) / (被选 + 30)（样本少时向该幕平均胜率收缩）。用于 events.choose_ancient"
+}

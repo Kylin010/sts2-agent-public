@@ -1,0 +1,1516 @@
+{
+ "_说明": "lift = 拿到这件遗物（前两幕）的对局最终胜率 − 活到第二幕的平均胜率 0.333；shop_buy = 赢家在商店见到它时买的比例",
+ "_baseline": 0.333,
+ "RINGING_TRIANGLE": {
+  "n": 35,
+  "win": 0.457,
+  "lift": 0.124,
+  "shop_seen": 124,
+  "shop_buy": 0.121
+ },
+ "WHETSTONE": {
+  "n": 787,
+  "win": 0.33,
+  "lift": -0.003,
+  "shop_seen": 137,
+  "shop_buy": 0.088
+ },
+ "FESTIVE_POPPER": {
+  "n": 811,
+  "win": 0.342,
+  "lift": 0.008,
+  "shop_seen": 137,
+  "shop_buy": 0.102
+ },
+ "VERY_HOT_COCOA": {
+  "n": 206,
+  "win": 0.282,
+  "lift": -0.052,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "VENERABLE_TEA_SET": {
+  "n": 762,
+  "win": 0.386,
+  "lift": 0.053,
+  "shop_seen": 147,
+  "shop_buy": 0.163
+ },
+ "MAW_BANK": {
+  "n": 40,
+  "win": 0.35,
+  "lift": 0.017,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "CLOAK_CLASP": {
+  "n": 218,
+  "win": 0.413,
+  "lift": 0.08,
+  "shop_seen": 29,
+  "shop_buy": 0.207
+ },
+ "UNCEASING_TOP": {
+  "n": 169,
+  "win": 0.355,
+  "lift": 0.022,
+  "shop_seen": 29,
+  "shop_buy": 0.069
+ },
+ "LARGE_CAPSULE": {
+  "n": 407,
+  "win": 0.342,
+  "lift": 0.008,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "GORGET": {
+  "n": 880,
+  "win": 0.408,
+  "lift": 0.075,
+  "shop_seen": 132,
+  "shop_buy": 0.311
+ },
+ "LANTERN": {
+  "n": 837,
+  "win": 0.401,
+  "lift": 0.068,
+  "shop_seen": 118,
+  "shop_buy": 0.39
+ },
+ "RED_SKULL": {
+  "n": 661,
+  "win": 0.345,
+  "lift": 0.012,
+  "shop_seen": 137,
+  "shop_buy": 0.204
+ },
+ "LASTING_CANDY": {
+  "n": 413,
+  "win": 0.356,
+  "lift": 0.023,
+  "shop_seen": 73,
+  "shop_buy": 0.0
+ },
+ "JUZU_BRACELET": {
+  "n": 681,
+  "win": 0.36,
+  "lift": 0.027,
+  "shop_seen": 127,
+  "shop_buy": 0.047
+ },
+ "ARCANE_SCROLL": {
+  "n": 279,
+  "win": 0.287,
+  "lift": -0.046,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "PETRIFIED_TOAD": {
+  "n": 453,
+  "win": 0.355,
+  "lift": 0.022,
+  "shop_seen": 79,
+  "shop_buy": 0.025
+ },
+ "PHILOSOPHERS_STONE": {
+  "n": 72,
+  "win": 0.375,
+  "lift": 0.042,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "HAPPY_FLOWER": {
+  "n": 850,
+  "win": 0.386,
+  "lift": 0.053,
+  "shop_seen": 106,
+  "shop_buy": 0.292
+ },
+ "STRIKE_DUMMY": {
+  "n": 923,
+  "win": 0.366,
+  "lift": 0.033,
+  "shop_seen": 151,
+  "shop_buy": 0.212
+ },
+ "TOASTY_MITTENS": {
+  "n": 350,
+  "win": 0.5,
+  "lift": 0.167,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "MEAL_TICKET": {
+  "n": 788,
+  "win": 0.34,
+  "lift": 0.007,
+  "shop_seen": 146,
+  "shop_buy": 0.041
+ },
+ "WAR_PAINT": {
+  "n": 781,
+  "win": 0.371,
+  "lift": 0.038,
+  "shop_seen": 121,
+  "shop_buy": 0.14
+ },
+ "REGAL_PILLOW": {
+  "n": 800,
+  "win": 0.365,
+  "lift": 0.032,
+  "shop_seen": 129,
+  "shop_buy": 0.14
+ },
+ "SILKEN_TRESS": {
+  "n": 439,
+  "win": 0.335,
+  "lift": 0.002,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "PERMAFROST": {
+  "n": 403,
+  "win": 0.362,
+  "lift": 0.029,
+  "shop_seen": 88,
+  "shop_buy": 0.148
+ },
+ "PENDULUM": {
+  "n": 781,
+  "win": 0.405,
+  "lift": 0.072,
+  "shop_seen": 137,
+  "shop_buy": 0.19
+ },
+ "BRONZE_SCALES": {
+  "n": 807,
+  "win": 0.358,
+  "lift": 0.025,
+  "shop_seen": 124,
+  "shop_buy": 0.185
+ },
+ "PAELS_FLESH": {
+  "n": 206,
+  "win": 0.286,
+  "lift": -0.047,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "SHURIKEN": {
+  "n": 181,
+  "win": 0.343,
+  "lift": 0.009,
+  "shop_seen": 27,
+  "shop_buy": 0.111
+ },
+ "CURSED_PEARL": {
+  "n": 356,
+  "win": 0.343,
+  "lift": 0.01,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "PARRYING_SHIELD": {
+  "n": 411,
+  "win": 0.353,
+  "lift": 0.02,
+  "shop_seen": 74,
+  "shop_buy": 0.014
+ },
+ "CENTENNIAL_PUZZLE": {
+  "n": 812,
+  "win": 0.427,
+  "lift": 0.094,
+  "shop_seen": 128,
+  "shop_buy": 0.297
+ },
+ "GHOST_SEED": {
+  "n": 83,
+  "win": 0.53,
+  "lift": 0.197,
+  "shop_seen": 143,
+  "shop_buy": 0.28
+ },
+ "VAJRA": {
+  "n": 792,
+  "win": 0.356,
+  "lift": 0.023,
+  "shop_seen": 133,
+  "shop_buy": 0.226
+ },
+ "PAELS_BLOOD": {
+  "n": 331,
+  "win": 0.438,
+  "lift": 0.105,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "RAINBOW_RING": {
+  "n": 209,
+  "win": 0.431,
+  "lift": 0.098,
+  "shop_seen": 26,
+  "shop_buy": 0.154
+ },
+ "ORNAMENTAL_FAN": {
+  "n": 429,
+  "win": 0.382,
+  "lift": 0.049,
+  "shop_seen": 77,
+  "shop_buy": 0.104
+ },
+ "LUCKY_FYSH": {
+  "n": 369,
+  "win": 0.409,
+  "lift": 0.076,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "PANTOGRAPH": {
+  "n": 476,
+  "win": 0.458,
+  "lift": 0.125,
+  "shop_seen": 70,
+  "shop_buy": 0.371
+ },
+ "RED_MASK": {
+  "n": 786,
+  "win": 0.364,
+  "lift": 0.031,
+  "shop_seen": 124,
+  "shop_buy": 0.202
+ },
+ "NEOWS_TORMENT": {
+  "n": 153,
+  "win": 0.359,
+  "lift": 0.026,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "LEES_WAFFLE": {
+  "n": 69,
+  "win": 0.319,
+  "lift": -0.014,
+  "shop_seen": 121,
+  "shop_buy": 0.165
+ },
+ "DRAGON_FRUIT": {
+  "n": 78,
+  "win": 0.346,
+  "lift": 0.013,
+  "shop_seen": 129,
+  "shop_buy": 0.202
+ },
+ "TUNING_FORK": {
+  "n": 413,
+  "win": 0.395,
+  "lift": 0.062,
+  "shop_seen": 74,
+  "shop_buy": 0.135
+ },
+ "TUNGSTEN_ROD": {
+  "n": 200,
+  "win": 0.305,
+  "lift": -0.028,
+  "shop_seen": 34,
+  "shop_buy": 0.235
+ },
+ "KIFUDA": {
+  "n": 98,
+  "win": 0.429,
+  "lift": 0.095,
+  "shop_seen": 128,
+  "shop_buy": 0.289
+ },
+ "STRAWBERRY": {
+  "n": 744,
+  "win": 0.367,
+  "lift": 0.034,
+  "shop_seen": 143,
+  "shop_buy": 0.07
+ },
+ "LEAD_PAPERWEIGHT": {
+  "n": 326,
+  "win": 0.294,
+  "lift": -0.039,
+  "shop_seen": 1,
+  "shop_buy": null
+ },
+ "ORICHALCUM": {
+  "n": 416,
+  "win": 0.392,
+  "lift": 0.059,
+  "shop_seen": 66,
+  "shop_buy": 0.091
+ },
+ "KUSARIGAMA": {
+  "n": 378,
+  "win": 0.357,
+  "lift": 0.024,
+  "shop_seen": 88,
+  "shop_buy": 0.068
+ },
+ "HORN_CLEAT": {
+  "n": 541,
+  "win": 0.431,
+  "lift": 0.098,
+  "shop_seen": 66,
+  "shop_buy": 0.318
+ },
+ "WINGED_BOOTS": {
+  "n": 102,
+  "win": 0.373,
+  "lift": 0.039,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "ODDLY_SMOOTH_STONE": {
+  "n": 832,
+  "win": 0.38,
+  "lift": 0.047,
+  "shop_seen": 133,
+  "shop_buy": 0.263
+ },
+ "BLOOD_VIAL": {
+  "n": 759,
+  "win": 0.341,
+  "lift": 0.008,
+  "shop_seen": 132,
+  "shop_buy": 0.106
+ },
+ "CHANDELIER": {
+  "n": 212,
+  "win": 0.425,
+  "lift": 0.091,
+  "shop_seen": 35,
+  "shop_buy": 0.143
+ },
+ "NEOWS_BONES": {
+  "n": 277,
+  "win": 0.332,
+  "lift": -0.001,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "CANDELABRA": {
+  "n": 452,
+  "win": 0.363,
+  "lift": 0.03,
+  "shop_seen": 78,
+  "shop_buy": 0.205
+ },
+ "PLANISPHERE": {
+  "n": 409,
+  "win": 0.374,
+  "lift": 0.041,
+  "shop_seen": 68,
+  "shop_buy": 0.074
+ },
+ "PAELS_TEARS": {
+  "n": 216,
+  "win": 0.333,
+  "lift": 0.0,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "SMALL_CAPSULE": {
+  "n": 157,
+  "win": 0.408,
+  "lift": 0.075,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "SWORD_OF_STONE": {
+  "n": 492,
+  "win": 0.38,
+  "lift": 0.047,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "REPTILE_TRINKET": {
+  "n": 379,
+  "win": 0.356,
+  "lift": 0.023,
+  "shop_seen": 74,
+  "shop_buy": 0.027
+ },
+ "FISHING_ROD": {
+  "n": 132,
+  "win": 0.356,
+  "lift": 0.023,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "PAPER_PHROG": {
+  "n": 355,
+  "win": 0.42,
+  "lift": 0.087,
+  "shop_seen": 84,
+  "shop_buy": 0.345
+ },
+ "YUMMY_COOKIE": {
+  "n": 242,
+  "win": 0.24,
+  "lift": -0.093,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "KUNAI": {
+  "n": 188,
+  "win": 0.34,
+  "lift": 0.007,
+  "shop_seen": 36,
+  "shop_buy": 0.222
+ },
+ "CALLING_BELL": {
+  "n": 62,
+  "win": 0.258,
+  "lift": -0.075,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "ICE_CREAM": {
+  "n": 216,
+  "win": 0.412,
+  "lift": 0.079,
+  "shop_seen": 29,
+  "shop_buy": 0.241
+ },
+ "PRECARIOUS_SHEARS": {
+  "n": 112,
+  "win": 0.384,
+  "lift": 0.051,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "UNSETTLING_LAMP": {
+  "n": 198,
+  "win": 0.389,
+  "lift": 0.056,
+  "shop_seen": 36,
+  "shop_buy": 0.139
+ },
+ "STONE_CRACKER": {
+  "n": 412,
+  "win": 0.376,
+  "lift": 0.043,
+  "shop_seen": 73,
+  "shop_buy": 0.068
+ },
+ "PAELS_GROWTH": {
+  "n": 44,
+  "win": 0.25,
+  "lift": -0.083,
+  "shop_seen": 1,
+  "shop_buy": null
+ },
+ "FAKE_HAPPY_FLOWER": {
+  "n": 154,
+  "win": 0.403,
+  "lift": 0.07,
+  "shop_seen": 1,
+  "shop_buy": null
+ },
+ "FAKE_ANCHOR": {
+  "n": 113,
+  "win": 0.372,
+  "lift": 0.039,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "GOLDEN_PEARL": {
+  "n": 282,
+  "win": 0.387,
+  "lift": 0.053,
+  "shop_seen": 1,
+  "shop_buy": null
+ },
+ "ETERNAL_FEATHER": {
+  "n": 497,
+  "win": 0.408,
+  "lift": 0.075,
+  "shop_seen": 74,
+  "shop_buy": 0.243
+ },
+ "FAKE_BLOOD_VIAL": {
+  "n": 82,
+  "win": 0.293,
+  "lift": -0.04,
+  "shop_seen": 1,
+  "shop_buy": null
+ },
+ "SEAL_OF_GOLD": {
+  "n": 106,
+  "win": 0.349,
+  "lift": 0.016,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "SILVER_CRUCIBLE": {
+  "n": 344,
+  "win": 0.265,
+  "lift": -0.069,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "FAKE_LEES_WAFFLE": {
+  "n": 60,
+  "win": 0.317,
+  "lift": -0.016,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "SEA_GLASS": {
+  "n": 115,
+  "win": 0.209,
+  "lift": -0.124,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "POTION_BELT": {
+  "n": 781,
+  "win": 0.389,
+  "lift": 0.056,
+  "shop_seen": 134,
+  "shop_buy": 0.239
+ },
+ "FAKE_STRIKE_DUMMY": {
+  "n": 60,
+  "win": 0.35,
+  "lift": 0.017,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "GREMLIN_HORN": {
+  "n": 411,
+  "win": 0.355,
+  "lift": 0.022,
+  "shop_seen": 87,
+  "shop_buy": 0.069
+ },
+ "BOOK_OF_FIVE_RINGS": {
+  "n": 773,
+  "win": 0.352,
+  "lift": 0.019,
+  "shop_seen": 134,
+  "shop_buy": 0.104
+ },
+ "KALEIDOSCOPE": {
+  "n": 374,
+  "win": 0.267,
+  "lift": -0.066,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "CHOSEN_CHEESE": {
+  "n": 518,
+  "win": 0.405,
+  "lift": 0.072,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "AMETHYST_AUBERGINE": {
+  "n": 735,
+  "win": 0.371,
+  "lift": 0.038,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "STONE_CALENDAR": {
+  "n": 190,
+  "win": 0.358,
+  "lift": 0.025,
+  "shop_seen": 34,
+  "shop_buy": 0.029
+ },
+ "NUNCHAKU": {
+  "n": 403,
+  "win": 0.377,
+  "lift": 0.044,
+  "shop_seen": 72,
+  "shop_buy": 0.097
+ },
+ "PAELS_LEGION": {
+  "n": 227,
+  "win": 0.379,
+  "lift": 0.046,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "LOST_COFFER": {
+  "n": 143,
+  "win": 0.28,
+  "lift": -0.053,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "VAMBRACE": {
+  "n": 420,
+  "win": 0.381,
+  "lift": 0.048,
+  "shop_seen": 62,
+  "shop_buy": 0.129
+ },
+ "MINIATURE_CANNON": {
+  "n": 420,
+  "win": 0.381,
+  "lift": 0.048,
+  "shop_seen": 71,
+  "shop_buy": 0.225
+ },
+ "LETTER_OPENER": {
+  "n": 369,
+  "win": 0.363,
+  "lift": 0.03,
+  "shop_seen": 80,
+  "shop_buy": 0.025
+ },
+ "ARCHAIC_TOOTH": {
+  "n": 492,
+  "win": 0.28,
+  "lift": -0.053,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "PHIAL_HOLSTER": {
+  "n": 138,
+  "win": 0.391,
+  "lift": 0.058,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "PAELS_CLAW": {
+  "n": 118,
+  "win": 0.364,
+  "lift": 0.031,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "PEN_NIB": {
+  "n": 426,
+  "win": 0.38,
+  "lift": 0.047,
+  "shop_seen": 81,
+  "shop_buy": 0.16
+ },
+ "NUTRITIOUS_SOUP": {
+  "n": 324,
+  "win": 0.324,
+  "lift": -0.009,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "BAG_OF_PREPARATION": {
+  "n": 902,
+  "win": 0.414,
+  "lift": 0.08,
+  "shop_seen": 148,
+  "shop_buy": 0.459
+ },
+ "LEAFY_POULTICE": {
+  "n": 338,
+  "win": 0.376,
+  "lift": 0.043,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "BONE_TEA": {
+  "n": 156,
+  "win": 0.34,
+  "lift": 0.007,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "POLLINOUS_CORE": {
+  "n": 229,
+  "win": 0.45,
+  "lift": 0.117,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "PAELS_WING": {
+  "n": 128,
+  "win": 0.227,
+  "lift": -0.107,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "CAPTAINS_WHEEL": {
+  "n": 202,
+  "win": 0.396,
+  "lift": 0.063,
+  "shop_seen": 24,
+  "shop_buy": 0.125
+ },
+ "BOOMING_CONCH": {
+  "n": 190,
+  "win": 0.416,
+  "lift": 0.083,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "SPARKLING_ROUGE": {
+  "n": 426,
+  "win": 0.415,
+  "lift": 0.082,
+  "shop_seen": 92,
+  "shop_buy": 0.174
+ },
+ "ROYAL_STAMP": {
+  "n": 72,
+  "win": 0.347,
+  "lift": 0.014,
+  "shop_seen": 121,
+  "shop_buy": 0.182
+ },
+ "MEAT_ON_THE_BONE": {
+  "n": 188,
+  "win": 0.399,
+  "lift": 0.066,
+  "shop_seen": 34,
+  "shop_buy": 0.118
+ },
+ "BELLOWS": {
+  "n": 197,
+  "win": 0.457,
+  "lift": 0.124,
+  "shop_seen": 32,
+  "shop_buy": 0.094
+ },
+ "TEA_OF_DISCOURTESY": {
+  "n": 146,
+  "win": 0.363,
+  "lift": 0.03,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "PAELS_EYE": {
+  "n": 93,
+  "win": 0.258,
+  "lift": -0.075,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "OLD_COIN": {
+  "n": 188,
+  "win": 0.351,
+  "lift": 0.018,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "ANCHOR": {
+  "n": 869,
+  "win": 0.398,
+  "lift": 0.065,
+  "shop_seen": 127,
+  "shop_buy": 0.394
+ },
+ "BAG_OF_MARBLES": {
+  "n": 779,
+  "win": 0.393,
+  "lift": 0.06,
+  "shop_seen": 124,
+  "shop_buy": 0.218
+ },
+ "SELF_FORMING_CLAY": {
+  "n": 348,
+  "win": 0.422,
+  "lift": 0.089,
+  "shop_seen": 64,
+  "shop_buy": 0.219
+ },
+ "LOST_WISP": {
+  "n": 118,
+  "win": 0.441,
+  "lift": 0.108,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "DAUGHTER_OF_THE_WIND": {
+  "n": 262,
+  "win": 0.336,
+  "lift": 0.003,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "PEAR": {
+  "n": 424,
+  "win": 0.441,
+  "lift": 0.108,
+  "shop_seen": 80,
+  "shop_buy": 0.125
+ },
+ "HEFTY_TABLET": {
+  "n": 248,
+  "win": 0.286,
+  "lift": -0.047,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "TINY_MAILBOX": {
+  "n": 386,
+  "win": 0.321,
+  "lift": -0.012,
+  "shop_seen": 77,
+  "shop_buy": 0.039
+ },
+ "MUMMIFIED_HAND": {
+  "n": 195,
+  "win": 0.467,
+  "lift": 0.134,
+  "shop_seen": 38,
+  "shop_buy": 0.289
+ },
+ "THE_COURIER": {
+  "n": 167,
+  "win": 0.437,
+  "lift": 0.104,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "ORRERY": {
+  "n": 87,
+  "win": 0.333,
+  "lift": 0.0,
+  "shop_seen": 123,
+  "shop_buy": 0.228
+ },
+ "AKABEKO": {
+  "n": 414,
+  "win": 0.394,
+  "lift": 0.061,
+  "shop_seen": 65,
+  "shop_buy": 0.031
+ },
+ "CHARONS_ASHES": {
+  "n": 140,
+  "win": 0.407,
+  "lift": 0.074,
+  "shop_seen": 38,
+  "shop_buy": 0.132
+ },
+ "JOSS_PAPER": {
+  "n": 383,
+  "win": 0.366,
+  "lift": 0.032,
+  "shop_seen": 79,
+  "shop_buy": 0.101
+ },
+ "PUNCH_DAGGER": {
+  "n": 79,
+  "win": 0.316,
+  "lift": -0.017,
+  "shop_seen": 122,
+  "shop_buy": 0.197
+ },
+ "RADIANT_PEARL": {
+  "n": 104,
+  "win": 0.433,
+  "lift": 0.1,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "SLING_OF_COURAGE": {
+  "n": 44,
+  "win": 0.318,
+  "lift": -0.015,
+  "shop_seen": 138,
+  "shop_buy": 0.094
+ },
+ "VEXING_PUZZLEBOX": {
+  "n": 193,
+  "win": 0.472,
+  "lift": 0.138,
+  "shop_seen": 29,
+  "shop_buy": 0.172
+ },
+ "MINIATURE_TENT": {
+  "n": 223,
+  "win": 0.341,
+  "lift": 0.008,
+  "shop_seen": 121,
+  "shop_buy": 0.562
+ },
+ "NEOWS_SACRIFICE": {
+  "n": 175,
+  "win": 0.354,
+  "lift": 0.021,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "BYRDPIP": {
+  "n": 144,
+  "win": 0.312,
+  "lift": -0.021,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "POCKETWATCH": {
+  "n": 210,
+  "win": 0.529,
+  "lift": 0.195,
+  "shop_seen": 39,
+  "shop_buy": 0.359
+ },
+ "DEMON_TONGUE": {
+  "n": 132,
+  "win": 0.417,
+  "lift": 0.084,
+  "shop_seen": 36,
+  "shop_buy": 0.111
+ },
+ "TOY_BOX": {
+  "n": 79,
+  "win": 0.316,
+  "lift": -0.017,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "BREAD": {
+  "n": 54,
+  "win": 0.37,
+  "lift": 0.037,
+  "shop_seen": 134,
+  "shop_buy": 0.142
+ },
+ "TOUCH_OF_OROBAS": {
+  "n": 193,
+  "win": 0.197,
+  "lift": -0.136,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "BLACK_BLOOD": {
+  "n": 193,
+  "win": 0.197,
+  "lift": -0.136,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "DRIFTWOOD": {
+  "n": 49,
+  "win": 0.163,
+  "lift": -0.17,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "LAVA_ROCK": {
+  "n": 82,
+  "win": 0.366,
+  "lift": 0.033,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "INTIMIDATING_HELMET": {
+  "n": 191,
+  "win": 0.408,
+  "lift": 0.075,
+  "shop_seen": 31,
+  "shop_buy": 0.129
+ },
+ "FRESNEL_LENS": {
+  "n": 227,
+  "win": 0.317,
+  "lift": -0.016,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "WHITE_BEAST_STATUE": {
+  "n": 189,
+  "win": 0.413,
+  "lift": 0.08,
+  "shop_seen": 31,
+  "shop_buy": 0.065
+ },
+ "BOWLER_HAT": {
+  "n": 385,
+  "win": 0.379,
+  "lift": 0.046,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "SWORD_OF_JADE": {
+  "n": 218,
+  "win": 0.56,
+  "lift": 0.227,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "EMBER_TEA": {
+  "n": 91,
+  "win": 0.286,
+  "lift": -0.047,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "FROZEN_EGG": {
+  "n": 191,
+  "win": 0.445,
+  "lift": 0.112,
+  "shop_seen": 29,
+  "shop_buy": 0.207
+ },
+ "GIRYA": {
+  "n": 173,
+  "win": 0.347,
+  "lift": 0.014,
+  "shop_seen": 24,
+  "shop_buy": 0.125
+ },
+ "ALCHEMICAL_COFFER": {
+  "n": 86,
+  "win": 0.36,
+  "lift": 0.027,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "MANGO": {
+  "n": 195,
+  "win": 0.385,
+  "lift": 0.052,
+  "shop_seen": 34,
+  "shop_buy": 0.118
+ },
+ "MOLTEN_EGG": {
+  "n": 213,
+  "win": 0.371,
+  "lift": 0.038,
+  "shop_seen": 22,
+  "shop_buy": 0.227
+ },
+ "RUINED_HELMET": {
+  "n": 129,
+  "win": 0.411,
+  "lift": 0.078,
+  "shop_seen": 36,
+  "shop_buy": 0.167
+ },
+ "BRIMSTONE": {
+  "n": 57,
+  "win": 0.439,
+  "lift": 0.106,
+  "shop_seen": 134,
+  "shop_buy": 0.157
+ },
+ "MR_STRUGGLES": {
+  "n": 135,
+  "win": 0.341,
+  "lift": 0.008,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "THE_ABACUS": {
+  "n": 25,
+  "win": 0.4,
+  "lift": 0.067,
+  "shop_seen": 105,
+  "shop_buy": 0.095
+ },
+ "VELVET_CHOKER": {
+  "n": 30,
+  "win": 0.267,
+  "lift": -0.066,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "SOZU": {
+  "n": 39,
+  "win": 0.282,
+  "lift": -0.051,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "LIZARD_TAIL": {
+  "n": 216,
+  "win": 0.398,
+  "lift": 0.065,
+  "shop_seen": 29,
+  "shop_buy": 0.207
+ },
+ "RIPPLE_BASIN": {
+  "n": 357,
+  "win": 0.336,
+  "lift": 0.003,
+  "shop_seen": 78,
+  "shop_buy": 0.013
+ },
+ "SHOVEL": {
+  "n": 162,
+  "win": 0.383,
+  "lift": 0.05,
+  "shop_seen": 36,
+  "shop_buy": 0.028
+ },
+ "PRAYER_WHEEL": {
+  "n": 184,
+  "win": 0.37,
+  "lift": 0.036,
+  "shop_seen": 37,
+  "shop_buy": 0.081
+ },
+ "DINGY_RUG": {
+  "n": 37,
+  "win": 0.324,
+  "lift": -0.009,
+  "shop_seen": 136,
+  "shop_buy": 0.066
+ },
+ "GLASS_EYE": {
+  "n": 155,
+  "win": 0.29,
+  "lift": -0.043,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "BEATING_REMNANT": {
+  "n": 163,
+  "win": 0.448,
+  "lift": 0.115,
+  "shop_seen": 31,
+  "shop_buy": 0.097
+ },
+ "SCROLL_BOXES": {
+  "n": 199,
+  "win": 0.276,
+  "lift": -0.057,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "MEMBERSHIP_CARD": {
+  "n": 212,
+  "win": 0.462,
+  "lift": 0.129,
+  "shop_seen": 140,
+  "shop_buy": 0.657
+ },
+ "DUSTY_TOME": {
+  "n": 79,
+  "win": 0.354,
+  "lift": 0.021,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "DOLLYS_MIRROR": {
+  "n": 79,
+  "win": 0.405,
+  "lift": 0.072,
+  "shop_seen": 124,
+  "shop_buy": 0.25
+ },
+ "WING_CHARM": {
+  "n": 49,
+  "win": 0.429,
+  "lift": 0.095,
+  "shop_seen": 128,
+  "shop_buy": 0.156
+ },
+ "SAND_CASTLE": {
+  "n": 110,
+  "win": 0.218,
+  "lift": -0.115,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "FAKE_ORICHALCUM": {
+  "n": 25,
+  "win": 0.4,
+  "lift": 0.067,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "NEOWS_TALISMAN": {
+  "n": 114,
+  "win": 0.412,
+  "lift": 0.079,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "NEW_LEAF": {
+  "n": 222,
+  "win": 0.284,
+  "lift": -0.049,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "ELECTRIC_SHRYMP": {
+  "n": 153,
+  "win": 0.333,
+  "lift": 0.0,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "MERCURY_HOURGLASS": {
+  "n": 435,
+  "win": 0.379,
+  "lift": 0.046,
+  "shop_seen": 67,
+  "shop_buy": 0.06
+ },
+ "NUTRITIOUS_OYSTER": {
+  "n": 43,
+  "win": 0.209,
+  "lift": -0.124,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "ART_OF_WAR": {
+  "n": 185,
+  "win": 0.286,
+  "lift": -0.047,
+  "shop_seen": 34,
+  "shop_buy": 0.059
+ },
+ "STORYBOOK": {
+  "n": 104,
+  "win": 0.365,
+  "lift": 0.032,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "GAME_PIECE": {
+  "n": 169,
+  "win": 0.444,
+  "lift": 0.111,
+  "shop_seen": 32,
+  "shop_buy": 0.156
+ },
+ "WHITE_STAR": {
+  "n": 203,
+  "win": 0.483,
+  "lift": 0.15,
+  "shop_seen": 32,
+  "shop_buy": 0.125
+ },
+ "ASTROLABE": {
+  "n": 82,
+  "win": 0.293,
+  "lift": -0.04,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "FAKE_VENERABLE_TEA_SET": {
+  "n": 96,
+  "win": 0.375,
+  "lift": 0.042,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "PUMPKIN_CANDLE": {
+  "n": 85,
+  "win": 0.329,
+  "lift": -0.004,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "STURDY_CLAMP": {
+  "n": 199,
+  "win": 0.357,
+  "lift": 0.024,
+  "shop_seen": 32,
+  "shop_buy": 0.188
+ },
+ "STONE_HUMIDIFIER": {
+  "n": 70,
+  "win": 0.343,
+  "lift": 0.01,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "PAELS_HORN": {
+  "n": 119,
+  "win": 0.412,
+  "lift": 0.079,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "CHEMICAL_X": {
+  "n": 51,
+  "win": 0.373,
+  "lift": 0.039,
+  "shop_seen": 119,
+  "shop_buy": 0.151
+ },
+ "POMANDER": {
+  "n": 68,
+  "win": 0.382,
+  "lift": 0.049,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "PAELS_TOOTH": {
+  "n": 54,
+  "win": 0.333,
+  "lift": 0.0,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "BING_BONG": {
+  "n": 87,
+  "win": 0.299,
+  "lift": -0.034,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "BIIIG_HUG": {
+  "n": 105,
+  "win": 0.448,
+  "lift": 0.115,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "WONGOS_MYSTERY_TICKET": {
+  "n": 39,
+  "win": 0.256,
+  "lift": -0.077,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "DOWSING_ROD": {
+  "n": 162,
+  "win": 0.383,
+  "lift": 0.05,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "RAZOR_TOOTH": {
+  "n": 197,
+  "win": 0.381,
+  "lift": 0.048,
+  "shop_seen": 30,
+  "shop_buy": 0.1
+ },
+ "TOXIC_EGG": {
+  "n": 202,
+  "win": 0.446,
+  "lift": 0.112,
+  "shop_seen": 32,
+  "shop_buy": 0.344
+ },
+ "PRECISE_SCISSORS": {
+  "n": 64,
+  "win": 0.406,
+  "lift": 0.073,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "EMPTY_CAGE": {
+  "n": 48,
+  "win": 0.208,
+  "lift": -0.125,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "TOOLBOX": {
+  "n": 81,
+  "win": 0.494,
+  "lift": 0.161,
+  "shop_seen": 139,
+  "shop_buy": 0.266
+ },
+ "GOLDEN_COMPASS": {
+  "n": 60,
+  "win": 0.217,
+  "lift": -0.116,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "HAND_DRILL": {
+  "n": 37,
+  "win": 0.297,
+  "lift": -0.036,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "GAMBLING_CHIP": {
+  "n": 179,
+  "win": 0.413,
+  "lift": 0.08,
+  "shop_seen": 29,
+  "shop_buy": 0.276
+ },
+ "FAKE_MANGO": {
+  "n": 64,
+  "win": 0.359,
+  "lift": 0.026,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "RUNIC_PYRAMID": {
+  "n": 85,
+  "win": 0.506,
+  "lift": 0.173,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "MYSTIC_LIGHTER": {
+  "n": 59,
+  "win": 0.322,
+  "lift": -0.011,
+  "shop_seen": 120,
+  "shop_buy": 0.15
+ },
+ "THE_BOOT": {
+  "n": 38,
+  "win": 0.342,
+  "lift": 0.009,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "PRISMATIC_GEM": {
+  "n": 106,
+  "win": 0.396,
+  "lift": 0.063,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "SNECKO_EYE": {
+  "n": 39,
+  "win": 0.744,
+  "lift": 0.411,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "BELT_BUCKLE": {
+  "n": 27,
+  "win": 0.333,
+  "lift": 0.0,
+  "shop_seen": 125,
+  "shop_buy": 0.064
+ },
+ "GNARLED_HAMMER": {
+  "n": 60,
+  "win": 0.35,
+  "lift": 0.017,
+  "shop_seen": 117,
+  "shop_buy": 0.171
+ },
+ "PANDORAS_BOX": {
+  "n": 86,
+  "win": 0.453,
+  "lift": 0.12,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "BURNING_STICKS": {
+  "n": 37,
+  "win": 0.459,
+  "lift": 0.126,
+  "shop_seen": 128,
+  "shop_buy": 0.117
+ },
+ "DREAM_CATCHER": {
+  "n": 37,
+  "win": 0.324,
+  "lift": -0.009,
+  "shop_seen": 0,
+  "shop_buy": null
+ },
+ "BLACK_STAR": {
+  "n": 57,
+  "win": 0.368,
+  "lift": 0.035,
+  "shop_seen": 0,
+  "shop_buy": null
+ }
+}

@@ -1,0 +1,11 @@
+--- a/src/Sts2Headless/RunSimulator.cs	2026-10-02 03:58:01.204089879 +0000
++++ b/src/Sts2Headless/RunSimulator.cs	2026-10-02 03:58:01.236090268 +0000
+@@ -3080,6 +3080,8 @@
+             ["floor"] = _runState.ActFloor,
+             ["room_type"] = _runState.CurrentRoom?.RoomType.ToString(),
+         };
++        // 当前战斗的遭遇 id（例如 DECIMILLIPEDE_ELITE），策略按它查敌人的特殊机制
++        try { if (_runState.CurrentRoom is CombatRoom cr) ctx["encounter"] = cr.Encounter?.Id.Entry; } catch { }
+ 
+         // Boss encounter info — use BossEncounter?.Id?.Entry
+         try

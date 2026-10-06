@@ -1,0 +1,2372 @@
+{
+ "_meta": {
+  "game_version": "v0.111.0",
+  "source": "/opt/slay-the-spire-2/decompiled/v0.111.0（反编译源码，只读）",
+  "observed_from": "sources/community-runs/ironclad-a10-v0.111.0.jsonl.gz，去掉带 BaseLib 模组痕迹的 623 局后剩 9138 局（A10 铁甲单人）",
+  "generated": "2026-10-02",
+  "id_format": "遭遇 id = 类名转大写下划线（StringHelper.Slugify），与 kb/enemies.json、sts2-cli 的 Encounter.Id.Entry 一致，不带 ENCOUNTER. 前缀；Kin 的 Boss 是 THE_KIN_BOSS",
+  "act_numbering": "幕号 act_no 从 1 起；act_index 从 0 起（源码 CurrentActIndex）；行号 row：0=古神，1=本幕第一场，最后一行=Boss",
+  "sts2_cli_note": "sts2-cli 用 RunState.CreateForTest + ActModel.GetDefaultList()，第1幕永远是 OVERGROWTH（没有 UNDERDOCKS）；UnlockState.all（NumberOfRuns=999999999，所有纪元解锁，所以没有新手教学排序，DARV 也可能出现）；测试模式下不应用 Boss 发现顺序"
+ },
+ "ascension_A10": {
+  "active_levels": {
+   "1 SwarmingElites": "每张地图精英 8 个（round(5*1.6)）",
+   "2 WearyTraveler": "古神只回复已损失HP的 80%（第1幕涅奥=开局 80% 血）",
+   "3 Poverty": "战斗/宝箱金币 ×0.75",
+   "4 TightBelt": "药水栏 3→2",
+   "5 AscendersBane": "开局牌组多一张进阶之灾（诅咒）",
+   "6 Inflation": "商店删牌 100 起、每次 +50（低进阶 75/+25）",
+   "7 Scarcity": "稀有/升级卡更少（见 card_rarity）",
+   "8 ToughEnemies": "敌人血量提高（各怪物文件里）",
+   "9 DeadlyEnemies": "敌人伤害提高（各怪物文件里）",
+   "10 DoubleBoss": "第3幕打两个不同 Boss，中间不回血不休息；第3幕两个 Boss 都没有战斗奖励"
+  },
+  "source": "Entities.Ascension/AscensionLevel.cs、AscensionManager.cs、Helpers/AscensionHelper.cs"
+ },
+ "encounter_generation": {
+  "when": "开局一次性生成整局三幕（RunManager.GenerateRooms，用 Rng.UpFront），之后按顺序取用",
+  "normal_queue": "每幕一条普通战队列：先抽 weak_count 个弱遭遇（弱遭遇袋），再抽 rooms-weak_count 个强遭遇（强遭遇袋）。袋子不放回、权重全 1、抽空再装满",
+  "consume": "本幕每进一场普通战（地图怪物点或问号变怪物）就取队列下一个；事件里的战斗不占队列",
+  "no_repeat_rule": "新抽的遭遇不能和队列里上一个相同，也不能和上一个共享任何 tag（找不到满足的才放宽）。弱→强交界处同样检查",
+  "consequence_normal": "同一幕里强遭遇在一个袋子用完前不会重复（OVERGROWTH 12 种恰好抽 12 次＝全排列；UNDERDOCKS/HIVE 10 种抽 12 次；GLORY 9 种抽 11 次）。已知本幕已打过哪些，下一场强遭遇＝在“没打过且不与上一场共享 tag”的里面均匀抽",
+  "elite_queue": "精英队列抽 15 个：3 个一袋不放回、不与上一个相同。推论：本幕第1个精英3选1、第2个在剩下2个里、第3个=唯一没打过的那个（必然）；第4个≠第3个",
+  "boss": "每幕 Boss 开局就从 3 个里均匀抽定（地图上可见）；A10 第3幕再从另外 2 个里抽第二个 Boss",
+  "boss_discovery_order_note": "真游戏标准模式下，如果存档里还有没见过的 Boss，会强制先出那个（按 BossDiscoveryOrder）；老存档/ sts2-cli 无此影响",
+  "gold_proportion": "普通战金币×(1-逃跑怪数/生成怪数)，偷钱怪逃跑会少给钱",
+  "source": "Models/ActModel.cs GenerateRooms/AddWithoutRepeatingTags、Helpers/GrabBag.cs、Rooms/RoomSet.cs、Runs/RunManager.cs GenerateRooms"
+ },
+ "unknown_room": {
+  "base": {
+   "monster": 0.1,
+   "elite": -1,
+   "treasure": 0.02,
+   "shop": 0.03
+  },
+  "event": "1 - 其余正值之和",
+  "roll_order": [
+   "monster",
+   "elite",
+   "treasure",
+   "shop",
+   "event(兜底)"
+  ],
+  "increment_when_not_rolled": {
+   "monster": 0.1,
+   "treasure": 0.02,
+   "shop": 0.03
+  },
+  "on_rolled": "抽中的类型回到基础值；其余“本次允许”的类型各加一次自己的基础值（被黑名单排除的不加）",
+  "elite_note": "精英基础值 -1（负数=永不出现，A10 也不会；只有 DeadlyEvents 自定义模式把它设成 0.1）",
+  "reset": "每进入新的一幕（SetActInternal → ResetToBase）全部回到基础值；跨幕不累积",
+  "shop_blacklist": "上一个房间是商店，或当前点的所有子节点都是商店 → 这次不能变商店（商店概率也不涨）",
+  "relics": {
+   "JUZU_BRACELET": "问号不会变怪物（怪物概率也冻结不涨）；第3幕宝箱前才会出现在遗物池",
+   "GOLDEN_COMPASS": "拿到的那一幕地图换成固定金色单线路，且问号全是事件",
+   "LANTERN_KEY(卡)": "第3幕问号全是事件，并且下一个事件强制为 WAR_HISTORIAN_REPY"
+  },
+  "first_run_tutorial": "存档第一局：前2个问号必是事件、第3个必是怪物（与我们无关）",
+  "theory_by_visit_index_in_act": [
+   {
+    "visit": 1,
+    "event": 0.85,
+    "monster": 0.1,
+    "treasure": 0.02,
+    "shop": 0.03
+   },
+   {
+    "visit": 2,
+    "event": 0.7113,
+    "monster": 0.19,
+    "treasure": 0.0396,
+    "shop": 0.0591
+   },
+   {
+    "visit": 3,
+    "event": 0.6034,
+    "monster": 0.253,
+    "treasure": 0.058,
+    "shop": 0.0856
+   },
+   {
+    "visit": 4,
+    "event": 0.5347,
+    "monster": 0.2827,
+    "treasure": 0.0746,
+    "shop": 0.108
+   },
+   {
+    "visit": 5,
+    "event": 0.4994,
+    "monster": 0.2862,
+    "treasure": 0.0888,
+    "shop": 0.1256
+   },
+   {
+    "visit": 6,
+    "event": 0.4835,
+    "monster": 0.2783,
+    "treasure": 0.1003,
+    "shop": 0.138
+   },
+   {
+    "visit": 7,
+    "event": 0.4741,
+    "monster": 0.2716,
+    "treasure": 0.109,
+    "shop": 0.1454
+   },
+   {
+    "visit": 8,
+    "event": 0.4657,
+    "monster": 0.2703,
+    "treasure": 0.1151,
+    "shop": 0.1489
+   },
+   {
+    "visit": 9,
+    "event": 0.4593,
+    "monster": 0.2722,
+    "treasure": 0.1188,
+    "shop": 0.1498
+   },
+   {
+    "visit": 10,
+    "event": 0.4568,
+    "monster": 0.2737,
+    "treasure": 0.1207,
+    "shop": 0.1488
+   }
+  ],
+  "observed_by_visit_index": {
+   "act1#1": {
+    "n": 7894,
+    "event": 0.863,
+    "monster": 0.09,
+    "shop": 0.027,
+    "treasure": 0.02
+   },
+   "act1#2": {
+    "n": 6843,
+    "event": 0.722,
+    "monster": 0.186,
+    "shop": 0.048,
+    "treasure": 0.044
+   },
+   "act1#3": {
+    "n": 4788,
+    "event": 0.623,
+    "monster": 0.245,
+    "shop": 0.068,
+    "treasure": 0.064
+   },
+   "act1#4": {
+    "n": 2496,
+    "event": 0.559,
+    "monster": 0.284,
+    "shop": 0.084,
+    "treasure": 0.073
+   },
+   "act1#5": {
+    "n": 1026,
+    "event": 0.526,
+    "monster": 0.288,
+    "shop": 0.098,
+    "treasure": 0.088
+   },
+   "act1#6": {
+    "n": 312,
+    "event": 0.506,
+    "monster": 0.295,
+    "shop": 0.093,
+    "treasure": 0.106
+   },
+   "act2#1": {
+    "n": 4447,
+    "event": 0.856,
+    "monster": 0.096,
+    "shop": 0.027,
+    "treasure": 0.021
+   },
+   "act2#2": {
+    "n": 3747,
+    "event": 0.718,
+    "monster": 0.196,
+    "shop": 0.044,
+    "treasure": 0.041
+   },
+   "act2#3": {
+    "n": 2441,
+    "event": 0.608,
+    "monster": 0.267,
+    "shop": 0.067,
+    "treasure": 0.058
+   },
+   "act2#4": {
+    "n": 1179,
+    "event": 0.551,
+    "monster": 0.289,
+    "shop": 0.082,
+    "treasure": 0.077
+   },
+   "act2#5": {
+    "n": 395,
+    "event": 0.504,
+    "monster": 0.256,
+    "shop": 0.129,
+    "treasure": 0.111
+   },
+   "act3#1": {
+    "n": 2453,
+    "event": 0.859,
+    "monster": 0.091,
+    "shop": 0.026,
+    "treasure": 0.024
+   },
+   "act3#2": {
+    "n": 2088,
+    "event": 0.733,
+    "monster": 0.179,
+    "shop": 0.047,
+    "treasure": 0.04
+   },
+   "act3#3": {
+    "n": 1377,
+    "event": 0.632,
+    "monster": 0.254,
+    "shop": 0.06,
+    "treasure": 0.054
+   },
+   "act3#4": {
+    "n": 642,
+    "event": 0.556,
+    "monster": 0.268,
+    "shop": 0.086,
+    "treasure": 0.09
+   }
+  },
+  "observed_total": {
+   "act1": {
+    "event": 16884,
+    "monster": 4273,
+    "shop": 1218,
+    "treasure": 1070
+   },
+   "act2": {
+    "event": 8889,
+    "shop": 608,
+    "monster": 2290,
+    "treasure": 532
+   },
+   "act3": {
+    "event": 4996,
+    "treasure": 309,
+    "monster": 1193,
+    "shop": 323
+   }
+  },
+  "source": "Odds/UnknownMapPointOdds.cs、Odds/RunOddsSet.cs、Runs/RunManager.cs BuildRoomTypeBlacklist/RollRoomTypeFor/SetActInternal"
+ },
+ "map": {
+  "width": 7,
+  "paths_generated": 7,
+  "rooms_per_act": {
+   "OVERGROWTH": 15,
+   "UNDERDOCKS": 15,
+   "HIVE": 14,
+   "GLORY": 13
+  },
+  "fixed_rows": "第0行古神；第1行全是普通怪；倒数第7行(=row rooms-6)整排宝箱；最后一行(row rooms)整排休息；row rooms+1 是 Boss；A10 第3幕 row rooms+2 是第二个 Boss（紧接第一个 Boss，中间没有休息）",
+  "rules": {
+   "row_lt_6": "不能放精英和休息（精英/休息最早在本幕第6行）",
+   "row_ge_rooms_minus_2": "Boss 前休息排之前的两行不能放休息",
+   "no_consecutive": "精英/休息/宝箱/商店不能和父节点或子节点同类型（不会连着两个）",
+   "siblings_differ": "同一个父节点的子节点里，休息/怪物/问号/精英/商店不重复（但最后填充的普通怪不受此限）",
+   "targets": "精英 8（A1+，否则 5）、商店 3、问号和额外休息见各幕 map_counts_target；放不下的丢弃，剪枝去掉重复路径后会补回到目标数"
+  },
+  "act_choice": "第1幕：OVERGROWTH 与 UNDERDOCKS（解锁后）随机各半；第2幕 HIVE；第3幕 GLORY",
+  "source": "Map/StandardActMap.cs、Map/MapPointTypeCounts.cs、Map/MapPathPruning.cs、Models/Acts/*.cs GetMapPointTypes"
+ },
+ "card_rarity": {
+  "note": "每张卡单独掷稀有度；稀有判定线 = 基础稀有 + offset；罕见区间宽度固定=罕见基础值；其余普通。boss 不加 offset（必稀有）",
+  "monster": {
+   "rare_base": 0.0149,
+   "uncommon": 0.37,
+   "uses_offset": true,
+   "A0_rare_base": 0.03
+  },
+  "elite": {
+   "rare_base": 0.05,
+   "uncommon": 0.4,
+   "uses_offset": true,
+   "A0_rare_base": 0.1
+  },
+  "boss": {
+   "rare": 1.0,
+   "uncommon": 0.0,
+   "common": 0.0,
+   "uses_offset": false,
+   "resets_offset": true
+  },
+  "shop": {
+   "rare_base": 0.045,
+   "uncommon": 0.37,
+   "uses_offset": true,
+   "changes_offset": false,
+   "A0_rare_base": 0.09
+  },
+  "offset": {
+   "start": -0.05,
+   "growth_per_non_rare_card": 0.005,
+   "A0_growth": 0.01,
+   "max": 0.4,
+   "reset_to_on_rare": -0.05,
+   "changed_by": "只有战斗奖励（Monster/Elite/Boss 卡牌奖励的每一张）；商店、事件、遗物生成都不改",
+   "example": "开局怪物战稀有率=max(0,1.49%-5%)=0；连续看到 8 张非稀有后才>0；之后每多 1 张非稀有 +0.5%"
+  },
+  "card_pool": "战斗奖励只从本角色卡池抽（无色只在商店/事件/遗物）；同一组 3 张不重复",
+  "upgrade": {
+   "non_rare_chance": "幕序号(0起)×12.5%：第1幕0%、第2幕12.5%、第3幕25%（A0 为 25%/50%）",
+   "rare": 0.0,
+   "shop_cards": "永不预升级"
+  },
+  "observed_rare_frac": {
+   "act1|boss": 0.9998,
+   "act1|elite": 0.0595,
+   "act1|monster": 0.0109,
+   "act2|boss": 1.0,
+   "act2|elite": 0.0539,
+   "act2|monster": 0.0085,
+   "act3|elite": 0.0553,
+   "act3|monster": 0.007
+  },
+  "theory_rare_frac_simulated_on_real_sequences": {
+   "act1|boss": 1.0,
+   "act1|elite": 0.0572,
+   "act1|monster": 0.011,
+   "act2|boss": 1.0,
+   "act2|elite": 0.0524,
+   "act2|monster": 0.0086,
+   "act3|elite": 0.05,
+   "act3|monster": 0.0077
+  },
+  "observed_upgrade_frac_non_rare": {
+   "act1|boss": 0.0,
+   "act1|elite": 0.0165,
+   "act1|monster": 0.0397,
+   "act2|elite": 0.1603,
+   "act2|monster": 0.1487,
+   "act3|elite": 0.2907,
+   "act3|monster": 0.2819
+  },
+  "source": "Odds/CardRarityOdds.cs、Factories/CardFactory.cs、Runs/CardCreationOptions.cs"
+ },
+ "potion_drop": {
+  "start": 0.4,
+  "elite_bonus": 0.125,
+  "elite_bonus_note": "eliteBonus 0.25 × 0.5",
+  "on_drop": -0.1,
+  "on_no_drop": 0.1,
+  "clamp": null,
+  "rolled_in": [
+   "monster",
+   "elite",
+   "boss"
+  ],
+  "target_long_run": 0.5,
+  "potion_rarity": {
+   "rare": 0.1,
+   "uncommon": 0.25,
+   "common": 0.65
+  },
+  "slots_A10": 2,
+  "forced_by": "WHITE_BEAST_STATUE（强制给药水，不改概率值）",
+  "observed_given_reward_screen": {
+   "monster": 0.4608,
+   "elite": 0.5967,
+   "boss": 0.4674
+  },
+  "theory_simulated_on_real_sequences": {
+   "monster": 0.4431,
+   "boss": 0.4426,
+   "elite": 0.5805
+  },
+  "source": "Odds/PotionRewardOdds.cs、Rewards/RewardsSet.cs、Factories/PotionFactory.cs、Entities.Players/Player.cs"
+ },
+ "rewards": {
+  "monster": {
+   "gold_A10": [
+    7,
+    15
+   ],
+   "gold_A0": [
+    10,
+    20
+   ],
+   "potion_roll": true,
+   "cards": 3,
+   "relic": false
+  },
+  "elite": {
+   "gold_A10": [
+    26,
+    33
+   ],
+   "gold_A0": [
+    35,
+    45
+   ],
+   "potion_roll": true,
+   "cards": 3,
+   "relic": true
+  },
+  "boss_act1_2": {
+   "gold_A10": 75,
+   "gold_A0": 100,
+   "potion_roll": true,
+   "cards": 3,
+   "card_rarity": "all rare",
+   "relic": false
+  },
+  "boss_act3": "没有任何奖励（A10 两个 Boss 都没有）",
+  "treasure": {
+   "gold_A10": [
+    31,
+    39
+   ],
+   "gold_A0": [
+    42,
+    52
+   ],
+   "relic": 1
+  },
+  "relic_rarity": {
+   "common": 0.5,
+   "uncommon": 0.33,
+   "rare": 0.17,
+   "applies_to": "精英遗物、宝箱遗物、商店前两格"
+  },
+  "relic_pool": "共享池+角色池，按稀有度各洗一次牌；精英/宝箱从前面取，商店从后面取；取过的不再出现",
+  "gold_formula": "GoldReward: NextInt(min, max+1)；A3 的 ×0.75 后取整",
+  "observed_gold": {
+   "monster_act1_row<=3": {
+    "n": 18652,
+    "min": 0,
+    "p5": 7,
+    "median": 11,
+    "p95": 15,
+    "max": 34,
+    "mean": 11.09
+   },
+   "treasure_act1": {
+    "n": 9283,
+    "min": 0,
+    "p5": 0,
+    "median": 35,
+    "p95": 39,
+    "max": 339,
+    "mean": 34.65
+   },
+   "boss_act1": {
+    "n": 7044,
+    "min": 0,
+    "p5": 0,
+    "median": 75,
+    "p95": 90,
+    "max": 375,
+    "mean": 59.68
+   },
+   "boss_act2": {
+    "n": 4151,
+    "min": 0,
+    "p5": 0,
+    "median": 75,
+    "p95": 93,
+    "max": 390,
+    "mean": 63.87
+   },
+   "elite_act1_row<=8": {
+    "n": 7249,
+    "min": 0,
+    "p5": 0,
+    "median": 29,
+    "p95": 33,
+    "max": 333,
+    "mean": 27.36
+   }
+  },
+  "source": "Rewards/RewardsSet.cs、Rewards/GoldReward.cs、Models/EncounterModel.cs Min/MaxGoldReward、Factories/RelicFactory.cs、Runs/RelicGrabBag.cs、Multiplayer.Game/OneOffSynchronizer.cs DoTreasureRoomRewards"
+ },
+ "shop": {
+  "character_cards": {
+   "count": 5,
+   "types": [
+    "Attack",
+    "Attack",
+    "Skill",
+    "Skill",
+    "Power"
+   ],
+   "rarity": "用 shop 赔率（会加当前 offset，但不改 offset）",
+   "price": {
+    "common": 50,
+    "uncommon": 75,
+    "rare": 150
+   },
+   "price_jitter": [
+    0.95,
+    1.05
+   ],
+   "on_sale": "5 张里随机 1 张半价"
+  },
+  "colorless_cards": {
+   "count": 2,
+   "rarities": [
+    "Uncommon",
+    "Rare"
+   ],
+   "price_multiplier": 1.15,
+   "price_jitter": [
+    0.95,
+    1.05
+   ]
+  },
+  "relics": {
+   "count": 3,
+   "slots": [
+    "rolled(50/33/17)",
+    "rolled(50/33/17)",
+    "Shop rarity"
+   ],
+   "price": {
+    "common": 175,
+    "uncommon": 225,
+    "rare": 275,
+    "shop": 200
+   },
+   "price_jitter": [
+    0.85,
+    1.15
+   ]
+  },
+  "potions": {
+   "count": 3,
+   "rarity": {
+    "rare": 0.1,
+    "uncommon": 0.25,
+    "common": 0.65
+   },
+   "price": {
+    "common": 50,
+    "uncommon": 75,
+    "rare": 100
+   },
+   "price_jitter": [
+    0.95,
+    1.05
+   ]
+  },
+  "card_removal": {
+   "A10_base": 100,
+   "A10_increase_per_use": 50,
+   "A0_base": 75,
+   "A0_increase": 25,
+   "per_shop": 1,
+   "counter": "整局累计（ExtraFields.CardShopRemovalsUsed），只算商店删牌"
+  },
+  "restock": "默认买走就空；只有 THE_COURIER 会补货（且 8 折）",
+  "discount_relics": {
+   "THE_COURIER": "全部 ×0.8 并补货",
+   "MEMBERSHIP_CARD": "全部 ×0.5"
+  },
+  "shops_per_map": 3,
+  "source": "Entities.Merchant/*.cs、Models/RelicModel.cs MerchantCost、Factories/CardFactory.cs CreateForMerchant"
+ },
+ "events_rules": {
+  "pool": "每幕 = 本幕事件 + 18 个共享事件，开局各自洗牌成一个列表（RunManager.GenerateRooms）",
+  "pull": "进事件房时从当前指针往后找第一个“当前满足条件且本局没见过”的事件；跳过的不满足事件指针直接越过（本幕基本不会再回来）",
+  "no_repeat": "同一局同一个事件只出现一次（VisitedEventIds 跨幕）",
+  "condition_check_time": "进房间那一刻（金币/HP/药水按当时）；total_floor = 进入前已走过的地图点数，含每幕第0层古神",
+  "epoch_locks": "TRASH_HEAP/REFLECTIONS/COLORFUL_PHILOSOPHERS 需要对应纪元，sts2-cli 全解锁",
+  "source": "Models/ActModel.cs GenerateRooms/PullNextEvent、Rooms/RoomSet.cs EnsureNextEventIsValid、Models/Events/*.cs IsAllowed"
+ },
+ "ancients": {
+  "act1": "NEOW（解锁纪元后必出）",
+  "act2": "OROBAS/PAEL/TEZCATARA 均匀 + 可能的 DARV",
+  "act3": "NONUPEIPE/TANX/VAKUU 均匀 + 可能的 DARV",
+  "darv": "共享古神 DARV：开局洗牌后先决定是否给第2幕（50%），没给再决定第3幕（50%）；进了候选再和本幕 3 个均匀抽 → 第2幕约 12.5%、第3幕约 6.25%",
+  "heal": "每幕古神开场先回血：A2+ 回已损失 HP 的 80%（社区数据实测小数向下取整，如 42×0.8=33.6→回33；sts2-cli 的 HealBetweenActs 用的是向上取整，会多 1 点）；涅奥先把 HP 设 0 再回 → 第1幕开局=最大HP×80%",
+  "options": "一般 3 个选项（遗物），各古神有自己的池",
+  "source": "Models/AncientEventModel.cs BeforeEventStarted、Models/Acts/*.cs AllAncients、Runs/RunManager.cs GenerateRooms"
+ },
+ "rest_site": {
+  "options": [
+   "HEAL 30% 最大HP",
+   "SMITH 升级1张"
+  ],
+  "extra_by_relic": {
+   "GIRYA": "LIFT",
+   "SHOVEL": "DIG",
+   "MEAT_CLEAVER": "COOK",
+   "PAELS_GROWTH": "CLONE",
+   "BYRDONIS_EGG(卡)": "HATCH",
+   "PUMPKIN_CANDLE": "KINDLE"
+  },
+  "heal_modifiers": [
+   "REGAL_PILLOW",
+   "NIGHT_TERRORS"
+  ],
+  "pre_boss_row": "每幕 Boss 前一整排都是休息点，任何路线都能在 Boss 前休息一次",
+  "source": "Entities.RestSite/RestSiteOption.cs、HealRestSiteOption.cs"
+ },
+ "player_start_A10": {
+  "character": "IRONCLAD",
+  "max_hp": 80,
+  "start_hp": 64,
+  "gold": 99,
+  "potion_slots": 2,
+  "extra_curse": "ASCENDERS_BANE",
+  "starter_relic": "BURNING_BLOOD"
+ },
+ "acts": {
+  "OVERGROWTH": {
+   "name_zh": "密林（第1幕A，默认）",
+   "act_no": 1,
+   "act_index": 0,
+   "is_default": true,
+   "rooms": 15,
+   "floors": 17,
+   "floors_note": "含第0层古神和Boss层；GLORY 在 A10 多一层第二Boss",
+   "rows": {
+    "ancient": 0,
+    "all_monster": 1,
+    "no_elite_or_rest_below": 6,
+    "treasure": 9,
+    "no_rest": [
+     13,
+     14
+    ],
+    "all_rest": 15,
+    "boss": 16,
+    "second_boss_A10": null
+   },
+   "weak_count": 3,
+   "weak": [
+    {
+     "encounter": "FUZZY_WURM_CRAWLER_WEAK",
+     "weight": 1.0,
+     "tags": [
+      "Crawler"
+     ],
+     "name_zh": "毛绒伏地虫"
+    },
+    {
+     "encounter": "NIBBITS_WEAK",
+     "weight": 1.0,
+     "tags": [
+      "Nibbit"
+     ],
+     "name_zh": "一只落单的小啃兽"
+    },
+    {
+     "encounter": "SHRINKER_BEETLE_WEAK",
+     "weight": 1.0,
+     "tags": [
+      "Shrinker"
+     ],
+     "name_zh": "缩小甲虫"
+    },
+    {
+     "encounter": "SLIMES_WEAK",
+     "weight": 1.0,
+     "tags": [
+      "Slimes"
+     ],
+     "name_zh": "一群史莱姆"
+    }
+   ],
+   "strong": [
+    {
+     "encounter": "CUBEX_CONSTRUCT_NORMAL",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "方柱构装体",
+     "p_first_strong_theory": 0.0936,
+     "observed_share_of_strong_fights": 0.091
+    },
+    {
+     "encounter": "FLYCONID_NORMAL",
+     "weight": 1.0,
+     "tags": [
+      "Mushroom",
+      "Slimes"
+     ],
+     "name_zh": "真菌与史莱姆",
+     "p_first_strong_theory": 0.0654,
+     "observed_share_of_strong_fights": 0.0645
+    },
+    {
+     "encounter": "FOGMOG_NORMAL",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "雾菇",
+     "p_first_strong_theory": 0.0948,
+     "observed_share_of_strong_fights": 0.0823
+    },
+    {
+     "encounter": "INKLETS_NORMAL",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "墨宝",
+     "p_first_strong_theory": 0.0938,
+     "observed_share_of_strong_fights": 0.0966
+    },
+    {
+     "encounter": "MAWLER_NORMAL",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "蛮兽",
+     "p_first_strong_theory": 0.0938,
+     "observed_share_of_strong_fights": 0.0934
+    },
+    {
+     "encounter": "NIBBITS_NORMAL",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "两只小啃兽",
+     "p_first_strong_theory": 0.0945,
+     "observed_share_of_strong_fights": 0.092
+    },
+    {
+     "encounter": "OVERGROWTH_CRAWLERS",
+     "weight": 1.0,
+     "tags": [
+      "Shrinker",
+      "Crawler"
+     ],
+     "name_zh": "密林爬虫",
+     "p_first_strong_theory": 0.0495,
+     "observed_share_of_strong_fights": 0.0694
+    },
+    {
+     "encounter": "RUBY_RAIDERS_NORMAL",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "红宝石劫掠者",
+     "p_first_strong_theory": 0.0926,
+     "observed_share_of_strong_fights": 0.0903
+    },
+    {
+     "encounter": "SLIMES_NORMAL",
+     "weight": 1.0,
+     "tags": [
+      "Slimes"
+     ],
+     "name_zh": "一大群史莱姆",
+     "p_first_strong_theory": 0.0656,
+     "observed_share_of_strong_fights": 0.0765
+    },
+    {
+     "encounter": "SLITHERING_STRANGLER_NORMAL",
+     "weight": 1.0,
+     "tags": [
+      "Jaxfruit",
+      "Slimes"
+     ],
+     "name_zh": "扼杀者与伙伴",
+     "p_first_strong_theory": 0.067,
+     "observed_share_of_strong_fights": 0.0697
+    },
+    {
+     "encounter": "SNAPPING_JAXFRUIT_NORMAL",
+     "weight": 1.0,
+     "tags": [
+      "Mushroom",
+      "Jaxfruit"
+     ],
+     "name_zh": "密林植物",
+     "p_first_strong_theory": 0.0956,
+     "observed_share_of_strong_fights": 0.0824
+    },
+    {
+     "encounter": "VINE_SHAMBLER_NORMAL",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "藤蔓蹒跚者",
+     "p_first_strong_theory": 0.0938,
+     "observed_share_of_strong_fights": 0.0917
+    }
+   ],
+   "strong_draws": 12,
+   "elites": [
+    {
+     "encounter": "BYGONE_EFFIGY_ELITE",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "旧日雕像",
+     "observed_share": 0.334
+    },
+    {
+     "encounter": "BYRDONIS_ELITE",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "多尼斯异鸟",
+     "observed_share": 0.3314
+    },
+    {
+     "encounter": "PHROG_PARASITE_ELITE",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "异蛙寄生虫",
+     "observed_share": 0.3346
+    }
+   ],
+   "bosses": [
+    {
+     "encounter": "VANTOM_BOSS",
+     "weight": 1.0,
+     "name_zh": "墨影幻灵",
+     "observed_share": 0.3424
+    },
+    {
+     "encounter": "CEREMONIAL_BEAST_BOSS",
+     "weight": 1.0,
+     "name_zh": "仪式兽",
+     "observed_share": 0.3382
+    },
+    {
+     "encounter": "THE_KIN_BOSS",
+     "weight": 1.0,
+     "name_zh": "同族小队",
+     "observed_share": 0.3194
+    }
+   ],
+   "ancients": [
+    {
+     "id": "NEOW",
+     "name_zh": "涅奥"
+    }
+   ],
+   "events": [
+    {
+     "id": "AROMA_OF_CHAOS",
+     "name_zh": "混沌芳香",
+     "shared": false,
+     "condition": "无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.0604
+    },
+    {
+     "id": "BYRDONIS_NEST",
+     "name_zh": "多尼斯异鸟巢",
+     "shared": false,
+     "condition": "身上没有事件宠物",
+     "cond": {
+      "no_event_pet": true
+     },
+     "observed_share_of_event_rooms": 0.0612
+    },
+    {
+     "id": "DENSE_VEGETATION",
+     "name_zh": "茂密的植被",
+     "shared": false,
+     "condition": "单人无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.0615
+    },
+    {
+     "id": "JUNGLE_MAZE_ADVENTURE",
+     "name_zh": "丛林迷宫奇遇",
+     "shared": false,
+     "condition": "单人无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.0623
+    },
+    {
+     "id": "LUMINOUS_CHOIR",
+     "name_zh": "冷光合唱团",
+     "shared": false,
+     "condition": "金币≥149 且遗物池还有可抽遗物",
+     "cond": {
+      "gold_min": 149
+     },
+     "observed_share_of_event_rooms": 0.0122
+    },
+    {
+     "id": "MORPHIC_GROVE",
+     "name_zh": "变形灵林谷",
+     "shared": false,
+     "condition": "金币≥100 且牌组里≥2张可变化的牌",
+     "cond": {
+      "gold_min": 100,
+      "transformable_min": 2
+     },
+     "observed_share_of_event_rooms": 0.0396
+    },
+    {
+     "id": "SAPPHIRE_SEED",
+     "name_zh": "蓝宝石种子",
+     "shared": false,
+     "condition": "无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.0605
+    },
+    {
+     "id": "SUNKEN_STATUE",
+     "name_zh": "沉没雕像",
+     "shared": false,
+     "condition": "无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.0572
+    },
+    {
+     "id": "TABLET_OF_TRUTH",
+     "name_zh": "真理石板",
+     "shared": false,
+     "condition": "无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.054
+    },
+    {
+     "id": "UNREST_SITE",
+     "name_zh": "无休之处",
+     "shared": false,
+     "condition": "当前HP≤最大HP的70%",
+     "cond": {
+      "hp_frac_max": 0.7
+     },
+     "observed_share_of_event_rooms": 0.024
+    },
+    {
+     "id": "WELLSPRING",
+     "name_zh": "泉水",
+     "shared": false,
+     "condition": "无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.0569
+    },
+    {
+     "id": "WHISPERING_HOLLOW",
+     "name_zh": "低语空谷",
+     "shared": false,
+     "condition": "金币≥44",
+     "cond": {
+      "gold_min": 44
+     },
+     "observed_share_of_event_rooms": 0.0489
+    },
+    {
+     "id": "WOOD_CARVINGS",
+     "name_zh": "木雕",
+     "shared": false,
+     "condition": "牌组里有可移除的基础牌",
+     "cond": {
+      "needs_basic_removable": true
+     },
+     "observed_share_of_event_rooms": 0.0629
+    },
+    {
+     "id": "BRAIN_LEECH",
+     "name_zh": "脑蛭",
+     "shared": true,
+     "condition": "仅第1、2幕",
+     "cond": {
+      "acts": [
+       1,
+       2
+      ]
+     },
+     "observed_share_of_event_rooms": 0.0561
+    },
+    {
+     "id": "ROOM_FULL_OF_CHEESE",
+     "name_zh": "满屋芝士",
+     "shared": true,
+     "condition": "仅第1、2幕",
+     "cond": {
+      "acts": [
+       1,
+       2
+      ]
+     },
+     "observed_share_of_event_rooms": 0.0579
+    },
+    {
+     "id": "SELF_HELP_BOOK",
+     "name_zh": "自助指南",
+     "shared": true,
+     "condition": "无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.0616
+    },
+    {
+     "id": "SLIPPERY_BRIDGE",
+     "name_zh": "滑脚木桥",
+     "shared": true,
+     "condition": "全程已走过>6个地图点（第1幕即本幕第7层起），牌组有可移除的牌",
+     "cond": {
+      "total_floor_min": 7
+     },
+     "observed_share_of_event_rooms": 0.0184
+    },
+    {
+     "id": "TEA_MASTER",
+     "name_zh": "茶艺大师",
+     "shared": true,
+     "condition": "第1、2幕，金币≥150",
+     "cond": {
+      "acts": [
+       1,
+       2
+      ],
+      "gold_min": 150
+     },
+     "observed_share_of_event_rooms": 0.0116
+    },
+    {
+     "id": "THE_FUTURE_OF_POTIONS",
+     "name_zh": "药水的未来？",
+     "shared": true,
+     "condition": "至少2瓶药水",
+     "cond": {
+      "potions_min": 2
+     },
+     "observed_share_of_event_rooms": 0.014
+    },
+    {
+     "id": "THE_LEGENDS_WERE_TRUE",
+     "name_zh": "传说是真的",
+     "shared": true,
+     "condition": "仅第1幕，HP≥10，牌组非空",
+     "cond": {
+      "acts": [
+       1
+      ],
+      "hp_min": 10
+     },
+     "observed_share_of_event_rooms": 0.059
+    },
+    {
+     "id": "THIS_OR_THAT",
+     "name_zh": "这个还是那个？",
+     "shared": true,
+     "condition": "无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.0596
+    }
+   ],
+   "map_counts_target": {
+    "elite": 8,
+    "shop": 3,
+    "rest_extra": {
+     "6": 0.387,
+     "7": 0.613
+    },
+    "rest_rule": "NextGaussianInt(7,1,6,7)（不含Boss前那一整排固定休息点）",
+    "unknown": {
+     "10": 0.061,
+     "11": 0.245,
+     "12": 0.388,
+     "13": 0.245,
+     "14": 0.061
+    },
+    "unknown_rule": "NextGaussianInt(12,1,10,14)",
+    "treasure": "只有固定的宝箱那一排",
+    "monster": "剩下的全部"
+   }
+  },
+  "UNDERDOCKS": {
+   "name_zh": "暗港（第1幕B，需解锁；已解锁后与密林各 50%）",
+   "act_no": 1,
+   "act_index": 0,
+   "is_default": false,
+   "rooms": 15,
+   "floors": 17,
+   "floors_note": "含第0层古神和Boss层；GLORY 在 A10 多一层第二Boss",
+   "rows": {
+    "ancient": 0,
+    "all_monster": 1,
+    "no_elite_or_rest_below": 6,
+    "treasure": 9,
+    "no_rest": [
+     13,
+     14
+    ],
+    "all_rest": 15,
+    "boss": 16,
+    "second_boss_A10": null
+   },
+   "weak_count": 3,
+   "weak": [
+    {
+     "encounter": "CORPSE_SLUGS_WEAK",
+     "weight": 1.0,
+     "tags": [
+      "Slugs"
+     ],
+     "name_zh": "一些噬尸蛞蝓"
+    },
+    {
+     "encounter": "SEAPUNK_WEAK",
+     "weight": 1.0,
+     "tags": [
+      "Seapunk"
+     ],
+     "name_zh": "海洋混混"
+    },
+    {
+     "encounter": "SLUDGE_SPINNER_WEAK",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "淤泥旋螺"
+    },
+    {
+     "encounter": "TOADPOLES_WEAK",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "蟾蜍蝌蚪"
+    }
+   ],
+   "strong": [
+    {
+     "encounter": "CORPSE_SLUGS_NORMAL",
+     "weight": 1.0,
+     "tags": [
+      "Slugs"
+     ],
+     "name_zh": "许多噬尸蛞蝓",
+     "p_first_strong_theory": 0.0778,
+     "observed_share_of_strong_fights": 0.0916
+    },
+    {
+     "encounter": "CULTISTS_NORMAL",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "邪教徒们",
+     "p_first_strong_theory": 0.105,
+     "observed_share_of_strong_fights": 0.1022
+    },
+    {
+     "encounter": "FOSSIL_STALKER_NORMAL",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "化石追踪者",
+     "p_first_strong_theory": 0.1054,
+     "observed_share_of_strong_fights": 0.1016
+    },
+    {
+     "encounter": "GREMLIN_MERC_NORMAL",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "穿着一件大衣的两只地精",
+     "p_first_strong_theory": 0.1052,
+     "observed_share_of_strong_fights": 0.1025
+    },
+    {
+     "encounter": "HAUNTED_SHIP_NORMAL",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "幽灵船",
+     "p_first_strong_theory": 0.1062,
+     "observed_share_of_strong_fights": 0.0999
+    },
+    {
+     "encounter": "LIVING_FOG_NORMAL",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "邪恶气体",
+     "p_first_strong_theory": 0.1053,
+     "observed_share_of_strong_fights": 0.1068
+    },
+    {
+     "encounter": "PUNCH_CONSTRUCT_NORMAL",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "拳击构装体",
+     "p_first_strong_theory": 0.1062,
+     "observed_share_of_strong_fights": 0.1069
+    },
+    {
+     "encounter": "SEAPUNK_NORMAL",
+     "weight": 1.0,
+     "tags": [
+      "Seapunk"
+     ],
+     "name_zh": "暗港野生动物",
+     "p_first_strong_theory": 0.0777,
+     "observed_share_of_strong_fights": 0.0911
+    },
+    {
+     "encounter": "SEWER_CLAM_NORMAL",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "下水道蚌",
+     "p_first_strong_theory": 0.1056,
+     "observed_share_of_strong_fights": 0.1014
+    },
+    {
+     "encounter": "TWO_TAILED_RATS_NORMAL",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "双尾鼠",
+     "p_first_strong_theory": 0.1057,
+     "observed_share_of_strong_fights": 0.096
+    }
+   ],
+   "strong_draws": 12,
+   "elites": [
+    {
+     "encounter": "PHANTASMAL_GARDENERS_ELITE",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "花园幽灵鳗",
+     "observed_share": 0.3337
+    },
+    {
+     "encounter": "SKULKING_COLONY_ELITE",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "鬼祟珊瑚群",
+     "observed_share": 0.3306
+    },
+    {
+     "encounter": "TERROR_EEL_ELITE",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "骇鳗",
+     "observed_share": 0.3356
+    }
+   ],
+   "bosses": [
+    {
+     "encounter": "WATERFALL_GIANT_BOSS",
+     "weight": 1.0,
+     "name_zh": "瀑布巨兽",
+     "observed_share": 0.3235
+    },
+    {
+     "encounter": "SOUL_FYSH_BOSS",
+     "weight": 1.0,
+     "name_zh": "灵魂异鱼",
+     "observed_share": 0.3442
+    },
+    {
+     "encounter": "LAGAVULIN_MATRIARCH_BOSS",
+     "weight": 1.0,
+     "name_zh": "乐加维林族母",
+     "observed_share": 0.332
+    }
+   ],
+   "ancients": [
+    {
+     "id": "NEOW",
+     "name_zh": "涅奥"
+    }
+   ],
+   "events": [
+    {
+     "id": "ABYSSAL_BATHS",
+     "name_zh": "深渊浴场",
+     "shared": false,
+     "condition": "无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.0676
+    },
+    {
+     "id": "DROWNING_BEACON",
+     "name_zh": "淹水灯塔",
+     "shared": false,
+     "condition": "无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.0687
+    },
+    {
+     "id": "ENDLESS_CONVEYOR",
+     "name_zh": "无尽传送带",
+     "shared": false,
+     "condition": "金币≥120",
+     "cond": {
+      "gold_min": 120
+     },
+     "observed_share_of_event_rooms": 0.0318
+    },
+    {
+     "id": "PUNCH_OFF",
+     "name_zh": "重拳出击",
+     "shared": false,
+     "condition": "全程已走过≥6个地图点（第1幕即本幕第6层起）",
+     "cond": {
+      "total_floor_min": 6
+     },
+     "observed_share_of_event_rooms": 0.0257
+    },
+    {
+     "id": "SPIRALING_WHIRLPOOL",
+     "name_zh": "螺旋漩涡",
+     "shared": false,
+     "condition": "牌组里有能附魔「螺旋」的牌（基础打击/防御）",
+     "cond": {
+      "needs_enchantable": "Spiral"
+     },
+     "observed_share_of_event_rooms": 0.0731
+    },
+    {
+     "id": "SUNKEN_STATUE",
+     "name_zh": "沉没雕像",
+     "shared": false,
+     "condition": "无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.0713
+    },
+    {
+     "id": "SUNKEN_TREASURY",
+     "name_zh": "淹水金库",
+     "shared": false,
+     "condition": "无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.0689
+    },
+    {
+     "id": "DOORS_OF_LIGHT_AND_DARK",
+     "name_zh": "光与暗的门扉",
+     "shared": false,
+     "condition": "无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.0726
+    },
+    {
+     "id": "TRASH_HEAP",
+     "name_zh": "垃圾堆",
+     "shared": false,
+     "condition": "当前HP>5",
+     "cond": {
+      "hp_min": 6
+     },
+     "observed_share_of_event_rooms": 0.0671
+    },
+    {
+     "id": "WATERLOGGED_SCRIPTORIUM",
+     "name_zh": "水漫缮写室",
+     "shared": false,
+     "condition": "金币≥55",
+     "cond": {
+      "gold_min": 55
+     },
+     "observed_share_of_event_rooms": 0.0512
+    },
+    {
+     "id": "BRAIN_LEECH",
+     "name_zh": "脑蛭",
+     "shared": true,
+     "condition": "仅第1、2幕",
+     "cond": {
+      "acts": [
+       1,
+       2
+      ]
+     },
+     "observed_share_of_event_rooms": 0.0731
+    },
+    {
+     "id": "ROOM_FULL_OF_CHEESE",
+     "name_zh": "满屋芝士",
+     "shared": true,
+     "condition": "仅第1、2幕",
+     "cond": {
+      "acts": [
+       1,
+       2
+      ]
+     },
+     "observed_share_of_event_rooms": 0.0715
+    },
+    {
+     "id": "SELF_HELP_BOOK",
+     "name_zh": "自助指南",
+     "shared": true,
+     "condition": "无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.0681
+    },
+    {
+     "id": "SLIPPERY_BRIDGE",
+     "name_zh": "滑脚木桥",
+     "shared": true,
+     "condition": "全程已走过>6个地图点（第1幕即本幕第7层起），牌组有可移除的牌",
+     "cond": {
+      "total_floor_min": 7
+     },
+     "observed_share_of_event_rooms": 0.0226
+    },
+    {
+     "id": "TEA_MASTER",
+     "name_zh": "茶艺大师",
+     "shared": true,
+     "condition": "第1、2幕，金币≥150",
+     "cond": {
+      "acts": [
+       1,
+       2
+      ],
+      "gold_min": 150
+     },
+     "observed_share_of_event_rooms": 0.0115
+    },
+    {
+     "id": "THE_FUTURE_OF_POTIONS",
+     "name_zh": "药水的未来？",
+     "shared": true,
+     "condition": "至少2瓶药水",
+     "cond": {
+      "potions_min": 2
+     },
+     "observed_share_of_event_rooms": 0.0158
+    },
+    {
+     "id": "THE_LEGENDS_WERE_TRUE",
+     "name_zh": "传说是真的",
+     "shared": true,
+     "condition": "仅第1幕，HP≥10，牌组非空",
+     "cond": {
+      "acts": [
+       1
+      ],
+      "hp_min": 10
+     },
+     "observed_share_of_event_rooms": 0.0705
+    },
+    {
+     "id": "THIS_OR_THAT",
+     "name_zh": "这个还是那个？",
+     "shared": true,
+     "condition": "无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.0682
+    }
+   ],
+   "map_counts_target": {
+    "elite": 8,
+    "shop": 3,
+    "rest_extra": {
+     "6": 0.387,
+     "7": 0.613
+    },
+    "rest_rule": "NextGaussianInt(7,1,6,7)（不含Boss前那一整排固定休息点）",
+    "unknown": {
+     "10": 0.061,
+     "11": 0.245,
+     "12": 0.388,
+     "13": 0.245,
+     "14": 0.061
+    },
+    "unknown_rule": "NextGaussianInt(12,1,10,14)",
+    "treasure": "只有固定的宝箱那一排",
+    "monster": "剩下的全部"
+   }
+  },
+  "HIVE": {
+   "name_zh": "虫巢（第2幕）",
+   "act_no": 2,
+   "act_index": 1,
+   "is_default": true,
+   "rooms": 14,
+   "floors": 16,
+   "floors_note": "含第0层古神和Boss层；GLORY 在 A10 多一层第二Boss",
+   "rows": {
+    "ancient": 0,
+    "all_monster": 1,
+    "no_elite_or_rest_below": 6,
+    "treasure": 8,
+    "no_rest": [
+     12,
+     13
+    ],
+    "all_rest": 14,
+    "boss": 15,
+    "second_boss_A10": null
+   },
+   "weak_count": 2,
+   "weak": [
+    {
+     "encounter": "BOWLBUGS_WEAK",
+     "weight": 1.0,
+     "tags": [
+      "Workers"
+     ],
+     "name_zh": "盛碗虫"
+    },
+    {
+     "encounter": "EXOSKELETONS_WEAK",
+     "weight": 1.0,
+     "tags": [
+      "Exoskeletons"
+     ],
+     "name_zh": "外骨骼虫"
+    },
+    {
+     "encounter": "THIEVING_HOPPER_WEAK",
+     "weight": 1.0,
+     "tags": [
+      "Thieves"
+     ],
+     "name_zh": "偷窃草蜢"
+    },
+    {
+     "encounter": "TUNNELER_WEAK",
+     "weight": 1.0,
+     "tags": [
+      "Burrower"
+     ],
+     "name_zh": "地道虫"
+    }
+   ],
+   "strong": [
+    {
+     "encounter": "BOWLBUGS_NORMAL",
+     "weight": 1.0,
+     "tags": [
+      "Workers"
+     ],
+     "name_zh": "盛碗虫群",
+     "p_first_strong_theory": 0.0774,
+     "observed_share_of_strong_fights": 0.0869
+    },
+    {
+     "encounter": "CHOMPERS_NORMAL",
+     "weight": 1.0,
+     "tags": [
+      "Chomper"
+     ],
+     "name_zh": "一对自动机械",
+     "p_first_strong_theory": 0.1102,
+     "observed_share_of_strong_fights": 0.1025
+    },
+    {
+     "encounter": "EXOSKELETONS_NORMAL",
+     "weight": 1.0,
+     "tags": [
+      "Exoskeletons"
+     ],
+     "name_zh": "许多外骨骼虫",
+     "p_first_strong_theory": 0.081,
+     "observed_share_of_strong_fights": 0.0919
+    },
+    {
+     "encounter": "HUNTER_KILLER_NORMAL",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "猎人杀手",
+     "p_first_strong_theory": 0.1098,
+     "observed_share_of_strong_fights": 0.1032
+    },
+    {
+     "encounter": "LOUSE_PROGENITOR_NORMAL",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "虱虫之祖",
+     "p_first_strong_theory": 0.1092,
+     "observed_share_of_strong_fights": 0.1062
+    },
+    {
+     "encounter": "MYTES_NORMAL",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "一群异螨",
+     "p_first_strong_theory": 0.1093,
+     "observed_share_of_strong_fights": 0.1006
+    },
+    {
+     "encounter": "OVICOPTER_NORMAL",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "直飞产卵虫",
+     "p_first_strong_theory": 0.1087,
+     "observed_share_of_strong_fights": 0.105
+    },
+    {
+     "encounter": "SLUMBERING_BEETLE_NORMAL",
+     "weight": 1.0,
+     "tags": [
+      "Workers"
+     ],
+     "name_zh": "熟睡派对",
+     "p_first_strong_theory": 0.0773,
+     "observed_share_of_strong_fights": 0.0869
+    },
+    {
+     "encounter": "SPINY_TOAD_NORMAL",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "棘刺蟾蜍",
+     "p_first_strong_theory": 0.1086,
+     "observed_share_of_strong_fights": 0.1069
+    },
+    {
+     "encounter": "THE_OBSCURA_NORMAL",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "胧光怪",
+     "p_first_strong_theory": 0.1085,
+     "observed_share_of_strong_fights": 0.11
+    }
+   ],
+   "strong_draws": 12,
+   "elites": [
+    {
+     "encounter": "DECIMILLIPEDE_ELITE",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "残杀千足虫",
+     "observed_share": 0.3428
+    },
+    {
+     "encounter": "ENTOMANCER_ELITE",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "蜂群术士",
+     "observed_share": 0.3287
+    },
+    {
+     "encounter": "INFESTED_PRISMS_ELITE",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "感染棱柱",
+     "observed_share": 0.3285
+    }
+   ],
+   "bosses": [
+    {
+     "encounter": "THE_INSATIABLE_BOSS",
+     "weight": 1.0,
+     "name_zh": "无厌沙虫",
+     "observed_share": 0.3414
+    },
+    {
+     "encounter": "KNOWLEDGE_DEMON_BOSS",
+     "weight": 1.0,
+     "name_zh": "知识恶魔",
+     "observed_share": 0.3354
+    },
+    {
+     "encounter": "KAISER_CRAB_BOSS",
+     "weight": 1.0,
+     "name_zh": "帝皇蟹",
+     "observed_share": 0.3231
+    }
+   ],
+   "ancients": [
+    {
+     "id": "OROBAS",
+     "name_zh": "欧洛巴斯"
+    },
+    {
+     "id": "PAEL",
+     "name_zh": "佩尔"
+    },
+    {
+     "id": "TEZCATARA",
+     "name_zh": "特兹卡塔拉"
+    },
+    {
+     "id": "DARV",
+     "name_zh": "达弗",
+     "shared_ancient": true
+    }
+   ],
+   "events": [
+    {
+     "id": "AMALGAMATOR",
+     "name_zh": "熔合者",
+     "shared": false,
+     "condition": "牌组里≥2张打击且≥2张防御",
+     "cond": {
+      "strikes_min": 2,
+      "defends_min": 2
+     },
+     "observed_share_of_event_rooms": 0.043
+    },
+    {
+     "id": "BUGSLAYER",
+     "name_zh": "害虫杀手",
+     "shared": false,
+     "condition": "无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.0421
+    },
+    {
+     "id": "COLORFUL_PHILOSOPHERS",
+     "name_zh": "色彩哲学家",
+     "shared": false,
+     "condition": "解锁了>1个角色卡池（老存档恒满足）",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.045
+    },
+    {
+     "id": "COLOSSAL_FLOWER",
+     "name_zh": "巨大花卉",
+     "shared": false,
+     "condition": "当前HP≥19",
+     "cond": {
+      "hp_min": 19
+     },
+     "observed_share_of_event_rooms": 0.0465
+    },
+    {
+     "id": "FIELD_OF_MAN_SIZED_HOLES",
+     "name_zh": "人形洞穴之地",
+     "shared": false,
+     "condition": "牌组里有能附魔「完美契合」的牌",
+     "cond": {
+      "needs_enchantable": "PerfectFit"
+     },
+     "observed_share_of_event_rooms": 0.0469
+    },
+    {
+     "id": "INFESTED_AUTOMATON",
+     "name_zh": "被寄生的自动机械",
+     "shared": false,
+     "condition": "无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.0468
+    },
+    {
+     "id": "LOST_WISP",
+     "name_zh": "迷失鬼火",
+     "shared": false,
+     "condition": "无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.0437
+    },
+    {
+     "id": "SPIRIT_GRAFTER",
+     "name_zh": "灵魂嫁接者",
+     "shared": false,
+     "condition": "无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.0444
+    },
+    {
+     "id": "THE_LANTERN_KEY",
+     "name_zh": "灯火钥匙",
+     "shared": false,
+     "condition": "无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.0468
+    },
+    {
+     "id": "ZEN_WEAVER",
+     "name_zh": "修禅织网者",
+     "shared": false,
+     "condition": "金币≥125",
+     "cond": {
+      "gold_min": 125
+     },
+     "observed_share_of_event_rooms": 0.0301
+    },
+    {
+     "id": "BRAIN_LEECH",
+     "name_zh": "脑蛭",
+     "shared": true,
+     "condition": "仅第1、2幕",
+     "cond": {
+      "acts": [
+       1,
+       2
+      ]
+     },
+     "observed_share_of_event_rooms": 0.04
+    },
+    {
+     "id": "CRYSTAL_SPHERE",
+     "name_zh": "水晶球",
+     "shared": true,
+     "condition": "第2、3幕，金币≥100",
+     "cond": {
+      "acts": [
+       2,
+       3
+      ],
+      "gold_min": 100
+     },
+     "observed_share_of_event_rooms": 0.0346
+    },
+    {
+     "id": "DOLL_ROOM",
+     "name_zh": "玩偶室",
+     "shared": true,
+     "condition": "仅第2幕",
+     "cond": {
+      "acts": [
+       2
+      ]
+     },
+     "observed_share_of_event_rooms": 0.0448
+    },
+    {
+     "id": "FAKE_MERCHANT",
+     "name_zh": "商人？？？",
+     "shared": true,
+     "condition": "第2、3幕，单人，金币≥100 或持有污浊药水",
+     "cond": {
+      "acts": [
+       2,
+       3
+      ],
+      "gold_min_or_foul_potion": 100
+     },
+     "observed_share_of_event_rooms": 0.0331
+    },
+    {
+     "id": "POTION_COURIER",
+     "name_zh": "药水快递员",
+     "shared": true,
+     "condition": "第2、3幕",
+     "cond": {
+      "acts": [
+       2,
+       3
+      ]
+     },
+     "observed_share_of_event_rooms": 0.0443
+    },
+    {
+     "id": "RANWID_THE_ELDER",
+     "name_zh": "长者兰伟德",
+     "shared": true,
+     "condition": "第2、3幕，有可交出的遗物、金币≥100、至少1瓶药水",
+     "cond": {
+      "acts": [
+       2,
+       3
+      ],
+      "gold_min": 100,
+      "potions_min": 1,
+      "needs_tradeable_relic": true
+     },
+     "observed_share_of_event_rooms": 0.0286
+    },
+    {
+     "id": "RELIC_TRADER",
+     "name_zh": "遗物交换商",
+     "shared": true,
+     "condition": "第2、3幕，≥5件可交换遗物",
+     "cond": {
+      "acts": [
+       2,
+       3
+      ],
+      "tradeable_relics_min": 5
+     },
+     "observed_share_of_event_rooms": 0.0191
+    },
+    {
+     "id": "ROOM_FULL_OF_CHEESE",
+     "name_zh": "满屋芝士",
+     "shared": true,
+     "condition": "仅第1、2幕",
+     "cond": {
+      "acts": [
+       1,
+       2
+      ]
+     },
+     "observed_share_of_event_rooms": 0.0382
+    },
+    {
+     "id": "SELF_HELP_BOOK",
+     "name_zh": "自助指南",
+     "shared": true,
+     "condition": "无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.0362
+    },
+    {
+     "id": "SLIPPERY_BRIDGE",
+     "name_zh": "滑脚木桥",
+     "shared": true,
+     "condition": "全程已走过>6个地图点（第1幕即本幕第7层起），牌组有可移除的牌",
+     "cond": {
+      "total_floor_min": 7
+     },
+     "observed_share_of_event_rooms": 0.0424
+    },
+    {
+     "id": "STONE_OF_ALL_TIME",
+     "name_zh": "永恒之石",
+     "shared": true,
+     "condition": "仅第2幕，至少1瓶药水",
+     "cond": {
+      "acts": [
+       2
+      ],
+      "potions_min": 1
+     },
+     "observed_share_of_event_rooms": 0.0416
+    },
+    {
+     "id": "SYMBIOTE",
+     "name_zh": "共生体",
+     "shared": true,
+     "condition": "第2、3幕",
+     "cond": {
+      "acts": [
+       2,
+       3
+      ]
+     },
+     "observed_share_of_event_rooms": 0.0496
+    },
+    {
+     "id": "TEA_MASTER",
+     "name_zh": "茶艺大师",
+     "shared": true,
+     "condition": "第1、2幕，金币≥150",
+     "cond": {
+      "acts": [
+       1,
+       2
+      ],
+      "gold_min": 150
+     },
+     "observed_share_of_event_rooms": 0.0228
+    },
+    {
+     "id": "THE_FUTURE_OF_POTIONS",
+     "name_zh": "药水的未来？",
+     "shared": true,
+     "condition": "至少2瓶药水",
+     "cond": {
+      "potions_min": 2
+     },
+     "observed_share_of_event_rooms": 0.0226
+    },
+    {
+     "id": "THIS_OR_THAT",
+     "name_zh": "这个还是那个？",
+     "shared": true,
+     "condition": "无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.0369
+    },
+    {
+     "id": "WELCOME_TO_WONGOS",
+     "name_zh": "欢迎来到旺购百货",
+     "shared": true,
+     "condition": "仅第2幕，金币≥100",
+     "cond": {
+      "acts": [
+       2
+      ],
+      "gold_min": 100
+     },
+     "observed_share_of_event_rooms": 0.0296
+    }
+   ],
+   "map_counts_target": {
+    "elite": 8,
+    "shop": 3,
+    "rest_extra": {
+     "6": 0.613,
+     "7": 0.387
+    },
+    "rest_rule": "NextGaussianInt(6,1,6,7)（不含Boss前那一整排固定休息点）",
+    "unknown": {
+     "9": 0.061,
+     "10": 0.245,
+     "11": 0.388,
+     "12": 0.245,
+     "13": 0.061
+    },
+    "unknown_rule": "NextGaussianInt(12,1,10,14)-1",
+    "treasure": "只有固定的宝箱那一排",
+    "monster": "剩下的全部"
+   }
+  },
+  "GLORY": {
+   "name_zh": "荣耀（第3幕）",
+   "act_no": 3,
+   "act_index": 2,
+   "is_default": true,
+   "rooms": 13,
+   "floors": 16,
+   "floors_note": "含第0层古神和Boss层；GLORY 在 A10 多一层第二Boss",
+   "rows": {
+    "ancient": 0,
+    "all_monster": 1,
+    "no_elite_or_rest_below": 6,
+    "treasure": 7,
+    "no_rest": [
+     11,
+     12
+    ],
+    "all_rest": 13,
+    "boss": 14,
+    "second_boss_A10": 15
+   },
+   "weak_count": 2,
+   "weak": [
+    {
+     "encounter": "DEVOTED_SCULPTOR_WEAK",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "虔诚雕刻师"
+    },
+    {
+     "encounter": "SCROLLS_OF_BITING_WEAK",
+     "weight": 1.0,
+     "tags": [
+      "Scrolls"
+     ],
+     "name_zh": "咬人卷轴"
+    },
+    {
+     "encounter": "TURRET_OPERATOR_WEAK",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "高塔炮手"
+    }
+   ],
+   "strong": [
+    {
+     "encounter": "AXEBOTS_NORMAL",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "巨斧机器人",
+     "p_first_strong_theory": 0.1167,
+     "observed_share_of_strong_fights": 0.1117
+    },
+    {
+     "encounter": "CONSTRUCT_MENAGERIE_NORMAL",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "一些构装体",
+     "p_first_strong_theory": 0.1153,
+     "observed_share_of_strong_fights": 0.1117
+    },
+    {
+     "encounter": "FABRICATOR_NORMAL",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "组装师",
+     "p_first_strong_theory": 0.1174,
+     "observed_share_of_strong_fights": 0.1149
+    },
+    {
+     "encounter": "FROG_KNIGHT_NORMAL",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "青蛙骑士",
+     "p_first_strong_theory": 0.1158,
+     "observed_share_of_strong_fights": 0.1094
+    },
+    {
+     "encounter": "GLOBE_HEAD_NORMAL",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "一个孤单的电球头",
+     "p_first_strong_theory": 0.1151,
+     "observed_share_of_strong_fights": 0.1114
+    },
+    {
+     "encounter": "OWL_MAGISTRATE_NORMAL",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "猫头鹰法官",
+     "p_first_strong_theory": 0.1153,
+     "observed_share_of_strong_fights": 0.11
+    },
+    {
+     "encounter": "SCROLLS_OF_BITING_NORMAL",
+     "weight": 1.0,
+     "tags": [
+      "Scrolls"
+     ],
+     "name_zh": "许多咬人卷轴",
+     "p_first_strong_theory": 0.0741,
+     "observed_share_of_strong_fights": 0.098
+    },
+    {
+     "encounter": "SLIMED_BERSERKER_NORMAL",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "史莱姆狂战士",
+     "p_first_strong_theory": 0.1149,
+     "observed_share_of_strong_fights": 0.1143
+    },
+    {
+     "encounter": "THE_LOST_AND_FORGOTTEN_NORMAL",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "失落与遗忘之物",
+     "p_first_strong_theory": 0.1155,
+     "observed_share_of_strong_fights": 0.1187
+    }
+   ],
+   "strong_draws": 11,
+   "elites": [
+    {
+     "encounter": "KNIGHTS_ELITE",
+     "weight": 1.0,
+     "tags": [
+      "Knights"
+     ],
+     "name_zh": "骑士团伙",
+     "observed_share": 0.3336
+    },
+    {
+     "encounter": "MECHA_KNIGHT_ELITE",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "机甲骑士",
+     "observed_share": 0.3398
+    },
+    {
+     "encounter": "SOUL_NEXUS_ELITE",
+     "weight": 1.0,
+     "tags": [],
+     "name_zh": "灵魂枢纽",
+     "observed_share": 0.3266
+    }
+   ],
+   "bosses": [
+    {
+     "encounter": "QUEEN_BOSS",
+     "weight": 1.0,
+     "name_zh": "女王",
+     "observed_share": 0.3317
+    },
+    {
+     "encounter": "TEST_SUBJECT_BOSS",
+     "weight": 1.0,
+     "name_zh": "实验体",
+     "observed_share": 0.3307
+    },
+    {
+     "encounter": "AEONGLASS_BOSS",
+     "weight": 1.0,
+     "name_zh": "永世沙漏",
+     "observed_share": 0.3377
+    }
+   ],
+   "ancients": [
+    {
+     "id": "NONUPEIPE",
+     "name_zh": "诺奴佩普"
+    },
+    {
+     "id": "TANX",
+     "name_zh": "坦克斯"
+    },
+    {
+     "id": "VAKUU",
+     "name_zh": "瓦库"
+    },
+    {
+     "id": "DARV",
+     "name_zh": "达弗",
+     "shared_ancient": true
+    }
+   ],
+   "events": [
+    {
+     "id": "BATTLEWORN_DUMMY",
+     "name_zh": "战痕累累的训练假人",
+     "shared": false,
+     "condition": "无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.069
+    },
+    {
+     "id": "GRAVE_OF_THE_FORGOTTEN",
+     "name_zh": "遗忘之墓",
+     "shared": false,
+     "condition": "牌组里有可附魔的牌",
+     "cond": {
+      "needs_enchantable": "any"
+     },
+     "observed_share_of_event_rooms": 0.0611
+    },
+    {
+     "id": "HUNGRY_FOR_MUSHROOMS",
+     "name_zh": "蘑菇饥渴",
+     "shared": false,
+     "condition": "无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.068
+    },
+    {
+     "id": "REFLECTIONS",
+     "name_zh": "镜中倒影  影倒中镜",
+     "shared": false,
+     "condition": "无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.0652
+    },
+    {
+     "id": "ROUND_TEA_PARTY",
+     "name_zh": "圆桌茶会",
+     "shared": false,
+     "condition": "当前HP≥12",
+     "cond": {
+      "hp_min": 12
+     },
+     "observed_share_of_event_rooms": 0.0677
+    },
+    {
+     "id": "TRIAL",
+     "name_zh": "审判",
+     "shared": false,
+     "condition": "无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.0734
+    },
+    {
+     "id": "TINKER_TIME",
+     "name_zh": "打造时间",
+     "shared": false,
+     "condition": "无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.0632
+    },
+    {
+     "id": "CRYSTAL_SPHERE",
+     "name_zh": "水晶球",
+     "shared": true,
+     "condition": "第2、3幕，金币≥100",
+     "cond": {
+      "acts": [
+       2,
+       3
+      ],
+      "gold_min": 100
+     },
+     "observed_share_of_event_rooms": 0.0455
+    },
+    {
+     "id": "FAKE_MERCHANT",
+     "name_zh": "商人？？？",
+     "shared": true,
+     "condition": "第2、3幕，单人，金币≥100 或持有污浊药水",
+     "cond": {
+      "acts": [
+       2,
+       3
+      ],
+      "gold_min_or_foul_potion": 100
+     },
+     "observed_share_of_event_rooms": 0.0444
+    },
+    {
+     "id": "POTION_COURIER",
+     "name_zh": "药水快递员",
+     "shared": true,
+     "condition": "第2、3幕",
+     "cond": {
+      "acts": [
+       2,
+       3
+      ]
+     },
+     "observed_share_of_event_rooms": 0.0627
+    },
+    {
+     "id": "RANWID_THE_ELDER",
+     "name_zh": "长者兰伟德",
+     "shared": true,
+     "condition": "第2、3幕，有可交出的遗物、金币≥100、至少1瓶药水",
+     "cond": {
+      "acts": [
+       2,
+       3
+      ],
+      "gold_min": 100,
+      "potions_min": 1,
+      "needs_tradeable_relic": true
+     },
+     "observed_share_of_event_rooms": 0.0425
+    },
+    {
+     "id": "RELIC_TRADER",
+     "name_zh": "遗物交换商",
+     "shared": true,
+     "condition": "第2、3幕，≥5件可交换遗物",
+     "cond": {
+      "acts": [
+       2,
+       3
+      ],
+      "tradeable_relics_min": 5
+     },
+     "observed_share_of_event_rooms": 0.0588
+    },
+    {
+     "id": "SELF_HELP_BOOK",
+     "name_zh": "自助指南",
+     "shared": true,
+     "condition": "无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.0506
+    },
+    {
+     "id": "SLIPPERY_BRIDGE",
+     "name_zh": "滑脚木桥",
+     "shared": true,
+     "condition": "全程已走过>6个地图点（第1幕即本幕第7层起），牌组有可移除的牌",
+     "cond": {
+      "total_floor_min": 7
+     },
+     "observed_share_of_event_rooms": 0.0553
+    },
+    {
+     "id": "SYMBIOTE",
+     "name_zh": "共生体",
+     "shared": true,
+     "condition": "第2、3幕",
+     "cond": {
+      "acts": [
+       2,
+       3
+      ]
+     },
+     "observed_share_of_event_rooms": 0.0591
+    },
+    {
+     "id": "THE_FUTURE_OF_POTIONS",
+     "name_zh": "药水的未来？",
+     "shared": true,
+     "condition": "至少2瓶药水",
+     "cond": {
+      "potions_min": 2
+     },
+     "observed_share_of_event_rooms": 0.0382
+    },
+    {
+     "id": "THIS_OR_THAT",
+     "name_zh": "这个还是那个？",
+     "shared": true,
+     "condition": "无条件",
+     "cond": {},
+     "observed_share_of_event_rooms": 0.0549
+    }
+   ],
+   "map_counts_target": {
+    "elite": 8,
+    "shop": 3,
+    "rest_extra": {
+     "5": 0.5,
+     "6": 0.5
+    },
+    "rest_rule": "NextInt(5,7) 即 5 或 6 各半（不含Boss前那一整排固定休息点）",
+    "unknown": {
+     "9": 0.061,
+     "10": 0.245,
+     "11": 0.388,
+     "12": 0.245,
+     "13": 0.061
+    },
+    "unknown_rule": "NextGaussianInt(12,1,10,14)-1",
+    "treasure": "只有固定的宝箱那一排",
+    "monster": "剩下的全部"
+   }
+  }
+ }
+}

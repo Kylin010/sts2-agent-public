@@ -1,0 +1,42 @@
+{
+  "BONE_TEA": {
+    "path": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/BoneTea.cs",
+    "sha256": "e7aa581caffc77b37ad2a6f0a98c2785c6c811cb5efd977282aa511ce3df8c5a"
+  },
+  "EMBER_TEA": {
+    "path": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/EmberTea.cs",
+    "sha256": "ec5fbc0128989b8b0128321f957efb40b161e2873bfbc060ace38e7a4625d52f"
+  },
+  "LIZARD_TAIL": {
+    "path": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/LizardTail.cs",
+    "sha256": "76084bfb5a0e4d4a24605204176af9d0639b08d818df8038639c0825f76aa537"
+  },
+  "MAW_BANK": {
+    "path": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/MawBank.cs",
+    "sha256": "86bbd3a46a2b76d924e7ee07ecaa8dcbf2ee7514d555716b107c94ecd3c179ff"
+  },
+  "SILKEN_TRESS": {
+    "path": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/SilkenTress.cs",
+    "sha256": "f045974dee1b42bf18fb678bd11b4f60b529f3d272866dfad3c266884d099139"
+  },
+  "SILVER_CRUCIBLE": {
+    "path": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/SilverCrucible.cs",
+    "sha256": "f7495185bb9bedb4a90257a61520f36130af70a01374a2a4c5950febd767aaee"
+  },
+  "TEA_OF_DISCOURTESY": {
+    "path": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/TeaOfDiscourtesy.cs",
+    "sha256": "92715bb91a8888fb73935de43ce91631dfb10dd9d7100a4d366f1a68e0414e8a"
+  },
+  "TOY_BOX": {
+    "path": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/ToyBox.cs",
+    "sha256": "bda7689393bf69cea11f328ffc222af9156c73bd604bd452fb704e98c62695f1"
+  },
+  "WINGED_BOOTS": {
+    "path": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/WingedBoots.cs",
+    "sha256": "7d0b9d0e3d301b54cb277d84a017c7fe1e74872943512e47a61fed20f843f7e7"
+  },
+  "WONGOS_MYSTERY_TICKET": {
+    "path": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/WongosMysteryTicket.cs",
+    "sha256": "831872d73d4c25fca471afe636eb65d34677aba0a690239c471573ceb05b8cb9"
+  }
+}

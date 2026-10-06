@@ -1,0 +1,43 @@
+--- a/src/Sts2Headless/RunSimulator.cs	2026-10-02 02:55:08.846673411 +0000
++++ b/src/Sts2Headless/RunSimulator.cs	2026-10-02 02:55:08.861673567 +0000
+@@ -325,17 +325,15 @@
+ 
+             if (args.TryGetValue("relics", out var relicsEl))
+             {
+-                var list = GetBackingList<RelicModel>(player, "_relics");
+-                if (list != null)
++                // 用游戏自己的 Add/RemoveRelicInternal：会设置遗物的主人（直接往列表里塞会缺 Owner，进房间时报空引用）
++                foreach (var r in player.Relics.ToList())
++                    player.RemoveRelicInternal(r, silent: true);
++                foreach (var rEl in relicsEl.EnumerateArray())
+                 {
+-                    list.Clear();
+-                    foreach (var rEl in relicsEl.EnumerateArray())
+-                    {
+-                        var id = rEl.GetString();
+-                        if (id == null) continue;
+-                        var model = ModelDb.GetById<RelicModel>(new ModelId("RELIC", id));
+-                        if (model != null) list.Add(model.ToMutable());
+-                    }
++                    var id = rEl.GetString();
++                    if (id == null) continue;
++                    var model = ModelDb.GetById<RelicModel>(new ModelId("RELIC", id));
++                    if (model != null) player.AddRelicInternal(model.ToMutable(), silent: true);
+                 }
+             }
+             if (args.TryGetValue("deck", out var deckEl))
+@@ -349,10 +347,14 @@
+                 {
+                     var id = cEl.GetString();
+                     if (id == null) continue;
++                    // 牌名后面带 + 表示升级过（例如 "BASH+"）
++                    var upgrades = 0;
++                    while (id.EndsWith("+")) { upgrades++; id = id.Substring(0, id.Length - 1); }
+                     var canonical = ModelDb.GetById<CardModel>(new ModelId("CARD", id));
+                     if (canonical != null)
+                     {
+                         var card = _runState.CreateCard(canonical, player);
++                        for (int u = 0; u < upgrades && card.IsUpgradable; u++) card.UpgradeInternal();
+                         player.Deck.AddInternal(card, silent: true);
+                     }
+                 }

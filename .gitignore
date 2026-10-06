@@ -1,0 +1,74 @@
+# 公开仓库的忽略规则。export_public.sh 从私有仓库同步时也按这份文件过滤（rsync --exclude-from），
+# 所以这里列的东西永远不会进公开仓库。注意：不要用 "!" 反选规则，rsync 不认。
+
+# ===== 1. 机器配置：真实 IP、SSH 端口、登录用户只放在本地文件 =====
+# 仓库里只有 machines.example.json（占位地址 203.0.113.x），复制成 machines.local.json 再填自己的机器
+machines.local.json
+*.local.json
+remote_cli.txt
+# 和某几台具体机器绑定的部署、体检脚本，以及算力机器的接入说明
+tools/health.sh
+tools/new_worker.sh
+lab/run_deploy_engine.sh
+docs/新增算力机器.md
+
+# ===== 2. 日志、运行输出、缓存：里面有机器地址、本地路径和实验流水账 =====
+*.log
+*.log.*
+*.out
+LOG.md
+results/
+reports/
+lab/trace/
+lab/trace-hk/
+lab/seeds/
+lab/rl/prefs-*.json
+lab/rl/seeds-*.txt
+lab/spec_*.json
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# ===== 3. 反编译的游戏源码：版权归 Mega Crit，不能再分发 =====
+decompiled/
+# 仓库自己的 C# 改动都以 patches/*.patch 的形式给 sts2-cli；单独的 .cs 文件一律不收，防止误带反编译出来的类
+*.cs
+reviews/**/subclasses-source.json
+**/primary-cost-harness/
+**/sdk-copy/
+**/sdk-chain-copy/
+
+# ===== 4. 由脚本从游戏数据生成、带游戏文本的知识库：用自己的游戏副本重新生成（见 README） =====
+# build_knowledge.py 生成（卡牌 / 遗物 / 药水的名字和描述，来自游戏本地化文本）
+kb/cards.json
+kb/relics.json
+kb/potions.json
+# tools/extract_monsters.py 生成（从反编译源码提取的怪物招式表）
+kb/monsters.json
+kb/encounters_src.json
+
+# ===== 5. 社区对局数据（spire-codex 玩家上传的对局 / 录像）：原始和逐回合数据不再分发，只保留汇总统计和训练好的模型 =====
+sources/
+data-nn/
+teach/
+lab/human/
+*.pkl
+*.pkl.gz
+*.jsonl.gz
+*.ndjson.gz
+*.tar.gz
+
+# ===== 6. 常见敏感文件 =====
+.env
+.env.*
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+id_ecdsa*
+id_dsa*
+*.p12
+*.pfx
+.netrc

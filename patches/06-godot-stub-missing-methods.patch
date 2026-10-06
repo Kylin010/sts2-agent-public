@@ -1,0 +1,68 @@
+diff --git a/src/GodotStubs/Core.cs b/src/GodotStubs/Core.cs
+index b80bedc..3a3d277 100644
+--- a/src/GodotStubs/Core.cs
++++ b/src/GodotStubs/Core.cs
+@@ -89,6 +89,7 @@ public class Node : GodotObject
+     public bool IsAncestorOf(Node node) => false;
+     public bool IsInsideTree() => false;
+     public int GetChildCount(bool includeInternal = false) => _children.Count;
++    public int GetIndex(bool includeInternal = false) => _parent == null ? 0 : Math.Max(0, _parent._children.IndexOf(this));   // 千足虫接回时会用
+ 
+     public void CallDeferred(StringName method, params Variant[] args) { }
+ 
+diff --git a/src/GodotStubs/Math.cs b/src/GodotStubs/Math.cs
+index e1be94d..0c3a62f 100644
+--- a/src/GodotStubs/Math.cs
++++ b/src/GodotStubs/Math.cs
+@@ -148,4 +148,33 @@ public static class Mathf
+     }
+     public static bool IsEqualApprox(float a, float b) => MathF.Abs(a - b) < Epsilon;
+     public static float Snapped(float value, float step) => step != 0 ? MathF.Round(value / step) * step : value;
++    // 以下是游戏代码用到、替身库原来缺的（缺了会抛 MissingMethodException，敌方回合卡死被判负，例：幻影园丁用 Log）
++    public static float Log(float s) => MathF.Log(s);
++    public static double Log(double s) => Math.Log(s);
++    public static float Exp(float s) => MathF.Exp(s);
++    public static float Atan2(float y, float x) => MathF.Atan2(y, x);
++    public static float Atan(float s) => MathF.Atan(s);
++    public static float Acos(float s) => MathF.Acos(s);
++    public static float Asin(float s) => MathF.Asin(s);
++    public static float InverseLerp(float from, float to, float weight) => to != from ? (weight - from) / (to - from) : 0f;
++    public static float LerpAngle(float from, float to, float weight)
++    {
++        float diff = (to - from) % Tau; float dist = (2f * diff) % Tau - diff;
++        return from + dist * weight;
++    }
++    public static float LinearToDb(float linear) => linear > 0 ? 20f * MathF.Log10(linear) : -80f;
++    public static float DbToLinear(float db) => MathF.Pow(10f, db / 20f);
++    public static float Wrap(float value, float min, float max) { float r = max - min; return r == 0 ? min : min + ((value - min) % r + r) % r; }
++    public static int Wrap(int value, int min, int max) { int r = max - min; return r == 0 ? min : min + ((value - min) % r + r) % r; }
++    public static float PosMod(float a, float b) => ((a % b) + b) % b;
++    public static int PosMod(int a, int b) => ((a % b) + b) % b;
++    public static float MoveToward(float from, float to, float delta) => MathF.Abs(to - from) <= delta ? to : from + MathF.Sign(to - from) * delta;
++    public static float SmoothStep(float from, float to, float s) { float t = Math.Clamp((s - from) / (to - from), 0f, 1f); return t * t * (3f - 2f * t); }
++    public static double Lerp(double from, double to, double weight) => from + (to - from) * weight;
++    public static double Clamp(double value, double min, double max) => Math.Clamp(value, min, max);
++    public static double Abs(double s) => Math.Abs(s);
++    public static double Sqrt(double s) => Math.Sqrt(s);
++    public static double Pow(double b, double e) => Math.Pow(b, e);
++    public static double Min(double a, double b) => Math.Min(a, b);
++    public static double Max(double a, double b) => Math.Max(a, b);
+ }
+diff --git a/src/GodotStubs/UI.cs b/src/GodotStubs/UI.cs
+index 7017644..098f5e9 100644
+--- a/src/GodotStubs/UI.cs
++++ b/src/GodotStubs/UI.cs
+@@ -6,6 +6,13 @@ public class CanvasItem : Node
+     public Color Modulate { get; set; } = Color.White;
+     public Color SelfModulate { get; set; } = Color.White;
+     public bool Visible { get; set; } = true;
++    // 真 Godot 的属性都有对应的 Set/Get 方法；游戏代码（如实验体复活）会直接调用，缺了会抛 MissingMethodException 卡死敌方回合
++    public void SetSelfModulate(Color c) => SelfModulate = c;
++    public Color GetSelfModulate() => SelfModulate;
++    public void SetModulate(Color c) => Modulate = c;
++    public Color GetModulate() => Modulate;
++    public void SetVisible(bool v) => Visible = v;
++    public bool IsVisible() => Visible;
+     public virtual void Show() => Visible = true;
+     public virtual void Hide() => Visible = false;
+     public bool IsVisibleInTree() => Visible;

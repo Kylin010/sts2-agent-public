@@ -1,0 +1,3777 @@
+{
+ "SPIRALING_WHIRLPOOL": {
+  "n": 746,
+  "options": {
+   "SPIRALING_WHIRLPOOL.pages.INITIAL.options.OBSERVE": {
+    "n": 552,
+    "pick": 0.74,
+    "win": 0.279,
+    "dmg": 0.0,
+    "heal": 0.04,
+    "maxhp": 0.0,
+    "gold": 0.04,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "SPIRALING_WHIRLPOOL.pages.INITIAL.options.DRINK": {
+    "n": 194,
+    "pick": 0.26,
+    "win": 0.18,
+    "dmg": 0.0,
+    "heal": 25.4,
+    "maxhp": 0.0,
+    "gold": 0.06,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "DROWNING_BEACON": {
+  "n": 694,
+  "options": {
+   "DROWNING_BEACON.pages.INITIAL.options.CLIMB": {
+    "n": 425,
+    "pick": 0.612,
+    "win": 0.181,
+    "dmg": 0.39,
+    "heal": 0.07,
+    "maxhp": -13.0,
+    "gold": 0.03,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "DROWNING_BEACON.pages.INITIAL.options.BOTTLE": {
+    "n": 269,
+    "pick": 0.388,
+    "win": 0.208,
+    "dmg": 0.0,
+    "heal": 0.2,
+    "maxhp": 0.02,
+    "gold": 0.06,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "TRASH_HEAP": {
+  "n": 687,
+  "options": {
+   "TRASH_HEAP.pages.INITIAL.options.DIVE_IN": {
+    "n": 372,
+    "pick": 0.541,
+    "win": 0.169,
+    "dmg": 8.0,
+    "heal": 0.0,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "TRASH_HEAP.pages.INITIAL.options.GRAB": {
+    "n": 315,
+    "pick": 0.459,
+    "win": 0.197,
+    "dmg": 0.0,
+    "heal": 0.02,
+    "maxhp": 0.0,
+    "gold": 100.16,
+    "cards_gained": 1.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "TEZCATARA": {
+  "n": 1785,
+  "options": {
+   "TOASTY_MITTENS": {
+    "n": 368,
+    "pick": 0.208,
+    "win": 0.503,
+    "dmg": 0.0,
+    "heal": 42.61,
+    "maxhp": 0.0,
+    "gold": 0.07,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "NUTRITIOUS_SOUP": {
+    "n": 342,
+    "pick": 0.194,
+    "win": 0.327,
+    "dmg": 0.0,
+    "heal": 43.08,
+    "maxhp": 0.0,
+    "gold": 0.07,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "YUMMY_COOKIE": {
+    "n": 265,
+    "pick": 0.15,
+    "win": 0.253,
+    "dmg": 0.0,
+    "heal": 43.2,
+    "maxhp": 0.0,
+    "gold": 0.09,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "VERY_HOT_COCOA": {
+    "n": 217,
+    "pick": 0.123,
+    "win": 0.29,
+    "dmg": 0.0,
+    "heal": 42.39,
+    "maxhp": 0.0,
+    "gold": 0.11,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "BIIIG_HUG": {
+    "n": 111,
+    "pick": 0.063,
+    "win": 0.45,
+    "dmg": 0.0,
+    "heal": 43.29,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 4.01,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "SEAL_OF_GOLD": {
+    "n": 109,
+    "pick": 0.062,
+    "win": 0.349,
+    "dmg": 0.0,
+    "heal": 43.35,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.01,
+    "curse": 0.0
+   },
+   "STORYBOOK": {
+    "n": 108,
+    "pick": 0.061,
+    "win": 0.352,
+    "dmg": 0.0,
+    "heal": 42.72,
+    "maxhp": 0.0,
+    "gold": 0.69,
+    "cards_gained": 1.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "PUMPKIN_CANDLE": {
+    "n": 94,
+    "pick": 0.053,
+    "win": 0.34,
+    "dmg": 0.0,
+    "heal": 41.98,
+    "maxhp": 0.0,
+    "gold": 0.26,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "TOY_BOX": {
+    "n": 81,
+    "pick": 0.046,
+    "win": 0.321,
+    "dmg": 0.0,
+    "heal": 44.84,
+    "maxhp": 1.98,
+    "gold": 14.81,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 6.0,
+    "curse": 0.0
+   },
+   "GOLDEN_COMPASS": {
+    "n": 66,
+    "pick": 0.037,
+    "win": 0.258,
+    "dmg": 0.0,
+    "heal": 47.2,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "MYMOD_REROLL": {
+    "n": 3,
+    "pick": 0.002,
+    "win": 0.667,
+    "dmg": 0.0,
+    "heal": 44.33,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "TEZCATARA.pages.INITIAL.options.ANCIENT_AFFECTION_BOND": {
+    "n": 1,
+    "pick": 0.001,
+    "win": 1.0,
+    "dmg": 0.0,
+    "heal": 51.0,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 1.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "AMALGAMATOR": {
+  "n": 512,
+  "options": {
+   "AMALGAMATOR.pages.INITIAL.options.COMBINE_STRIKES": {
+    "n": 292,
+    "pick": 0.57,
+    "win": 0.37,
+    "dmg": 0.0,
+    "heal": 0.41,
+    "maxhp": 0.0,
+    "gold": 0.12,
+    "cards_gained": 1.0,
+    "cards_removed": 2.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "AMALGAMATOR.pages.INITIAL.options.COMBINE_DEFENDS": {
+    "n": 220,
+    "pick": 0.43,
+    "win": 0.386,
+    "dmg": 0.0,
+    "heal": 0.42,
+    "maxhp": 0.0,
+    "gold": 0.68,
+    "cards_gained": 1.01,
+    "cards_removed": 2.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "BUGSLAYER": {
+  "n": 500,
+  "options": {
+   "BUGSLAYER.pages.INITIAL.options.EXTERMINATION": {
+    "n": 291,
+    "pick": 0.582,
+    "win": 0.33,
+    "dmg": 0.0,
+    "heal": 0.58,
+    "maxhp": 0.0,
+    "gold": 0.74,
+    "cards_gained": 1.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "BUGSLAYER.pages.INITIAL.options.SQUASH": {
+    "n": 209,
+    "pick": 0.418,
+    "win": 0.239,
+    "dmg": 0.0,
+    "heal": 0.23,
+    "maxhp": 0.0,
+    "gold": 0.36,
+    "cards_gained": 1.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "BRAIN_LEECH": {
+  "n": 1783,
+  "options": {
+   "BRAIN_LEECH.pages.INITIAL.options.RIP": {
+    "n": 1074,
+    "pick": 0.602,
+    "win": 0.286,
+    "dmg": 4.99,
+    "heal": 0.15,
+    "maxhp": 0.0,
+    "gold": 0.39,
+    "cards_gained": 0.98,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "BRAIN_LEECH.pages.INITIAL.options.SHARE_KNOWLEDGE": {
+    "n": 709,
+    "pick": 0.398,
+    "win": 0.182,
+    "dmg": 0.0,
+    "heal": 0.11,
+    "maxhp": 0.0,
+    "gold": 0.22,
+    "cards_gained": 1.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.01
+   }
+  }
+ },
+ "SELF_HELP_BOOK": {
+  "n": 2136,
+  "options": {
+   "SELF_HELP_BOOK.pages.INITIAL.options.READ_THE_BACK": {
+    "n": 898,
+    "pick": 0.42,
+    "win": 0.242,
+    "dmg": 0.0,
+    "heal": 0.06,
+    "maxhp": 0.0,
+    "gold": 0.03,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "SELF_HELP_BOOK.pages.INITIAL.options.READ_ENTIRE_BOOK": {
+    "n": 719,
+    "pick": 0.337,
+    "win": 0.491,
+    "dmg": 0.0,
+    "heal": 0.22,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "SELF_HELP_BOOK.pages.INITIAL.options.READ_PASSAGE": {
+    "n": 518,
+    "pick": 0.243,
+    "win": 0.228,
+    "dmg": 0.0,
+    "heal": 0.1,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "SELF_HELP_BOOK.pages.INITIAL.options.NO_OPTIONS": {
+    "n": 1,
+    "pick": 0.0,
+    "win": 0.0,
+    "dmg": 0.0,
+    "heal": 0.0,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "DARV": {
+  "n": 997,
+  "options": {
+   "RUNIC_PYRAMID": {
+    "n": 135,
+    "pick": 0.138,
+    "win": 0.578,
+    "dmg": 0.0,
+    "heal": 43.54,
+    "maxhp": 0.0,
+    "gold": 0.09,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "ASTROLABE": {
+    "n": 125,
+    "pick": 0.128,
+    "win": 0.4,
+    "dmg": 0.0,
+    "heal": 43.94,
+    "maxhp": 0.0,
+    "gold": 0.36,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "PHILOSOPHERS_STONE": {
+    "n": 108,
+    "pick": 0.111,
+    "win": 0.426,
+    "dmg": 0.0,
+    "heal": 41.1,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "PANDORAS_BOX": {
+    "n": 107,
+    "pick": 0.11,
+    "win": 0.458,
+    "dmg": 0.0,
+    "heal": 44.48,
+    "maxhp": 0.0,
+    "gold": 3.06,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "DUSTY_TOME": {
+    "n": 104,
+    "pick": 0.107,
+    "win": 0.413,
+    "dmg": 0.0,
+    "heal": 45.48,
+    "maxhp": 0.0,
+    "gold": 0.87,
+    "cards_gained": 1.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "CALLING_BELL": {
+    "n": 96,
+    "pick": 0.098,
+    "win": 0.312,
+    "dmg": 0.0,
+    "heal": 42.14,
+    "maxhp": 0.83,
+    "gold": 4.09,
+    "cards_gained": 1.01,
+    "cards_removed": 0.0,
+    "relics": 4.0,
+    "curse": 0.0
+   },
+   "BLACK_STAR": {
+    "n": 78,
+    "pick": 0.08,
+    "win": 0.359,
+    "dmg": 0.0,
+    "heal": 39.79,
+    "maxhp": 0.0,
+    "gold": 0.15,
+    "cards_gained": 0.01,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "EMPTY_CAGE": {
+    "n": 71,
+    "pick": 0.073,
+    "win": 0.296,
+    "dmg": 0.0,
+    "heal": 41.52,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 2.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "SNECKO_EYE": {
+    "n": 55,
+    "pick": 0.056,
+    "win": 0.764,
+    "dmg": 0.0,
+    "heal": 41.95,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "SOZU": {
+    "n": 39,
+    "pick": 0.04,
+    "win": 0.282,
+    "dmg": 0.0,
+    "heal": 42.64,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "VELVET_CHOKER": {
+    "n": 38,
+    "pick": 0.039,
+    "win": 0.316,
+    "dmg": 0.0,
+    "heal": 39.24,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "ECTOPLASM": {
+    "n": 17,
+    "pick": 0.017,
+    "win": 0.294,
+    "dmg": 0.0,
+    "heal": 40.0,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "MYMOD_REROLL": {
+    "n": 2,
+    "pick": 0.002,
+    "win": 1.0,
+    "dmg": 0.0,
+    "heal": 59.0,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "FIELD_OF_MAN_SIZED_HOLES": {
+  "n": 542,
+  "options": {
+   "FIELD_OF_MAN_SIZED_HOLES.pages.INITIAL.options.ENTER_YOUR_HOLE": {
+    "n": 398,
+    "pick": 0.734,
+    "win": 0.307,
+    "dmg": 0.0,
+    "heal": 0.25,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "FIELD_OF_MAN_SIZED_HOLES.pages.INITIAL.options.RESIST": {
+    "n": 144,
+    "pick": 0.266,
+    "win": 0.444,
+    "dmg": 0.0,
+    "heal": 0.42,
+    "maxhp": 0.0,
+    "gold": 0.85,
+    "cards_gained": 1.01,
+    "cards_removed": 2.0,
+    "relics": 0.0,
+    "curse": 1.01
+   }
+  }
+ },
+ "THE_LANTERN_KEY": {
+  "n": 547,
+  "options": {
+   "THE_LANTERN_KEY.pages.INITIAL.options.RETURN_THE_KEY": {
+    "n": 318,
+    "pick": 0.411,
+    "win": 0.305,
+    "dmg": 0.0,
+    "heal": 0.3,
+    "maxhp": 0.01,
+    "gold": 100.31,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "THE_LANTERN_KEY.pages.INITIAL.options.KEEP_THE_KEY": {
+    "n": 228,
+    "pick": 0.295,
+    "win": 0.482,
+    "dmg": 21.21,
+    "heal": 8.35,
+    "maxhp": 0.11,
+    "gold": 14.11,
+    "cards_gained": 1.65,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.04
+   },
+   "THE_LANTERN_KEY.pages.KEEP_THE_KEY.options.FIGHT": {
+    "n": 228,
+    "pick": 0.295,
+    "win": 0.482,
+    "dmg": 21.21,
+    "heal": 8.35,
+    "maxhp": 0.11,
+    "gold": 14.11,
+    "cards_gained": 1.65,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.04
+   }
+  }
+ },
+ "SLIPPERY_BRIDGE": {
+  "n": 1330,
+  "options": {
+   "SLIPPERY_BRIDGE.pages.INITIAL.options.OVERCOME": {
+    "n": 1329,
+    "pick": 0.404,
+    "win": 0.347,
+    "dmg": 5.66,
+    "heal": 0.42,
+    "maxhp": 0.0,
+    "gold": 0.04,
+    "cards_gained": 0.0,
+    "cards_removed": 1.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "SLIPPERY_BRIDGE.pages.INITIAL.options.HOLD_ON_0": {
+    "n": 1055,
+    "pick": 0.321,
+    "win": 0.347,
+    "dmg": 7.16,
+    "heal": 0.44,
+    "maxhp": 0.0,
+    "gold": 0.03,
+    "cards_gained": 0.0,
+    "cards_removed": 1.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "SLIPPERY_BRIDGE.pages.HOLD_ON_0.options.HOLD_ON_1": {
+    "n": 497,
+    "pick": 0.151,
+    "win": 0.344,
+    "dmg": 11.85,
+    "heal": 0.59,
+    "maxhp": 0.0,
+    "gold": 0.07,
+    "cards_gained": 0.0,
+    "cards_removed": 1.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "SLIPPERY_BRIDGE.pages.HOLD_ON_1.options.HOLD_ON_2": {
+    "n": 232,
+    "pick": 0.071,
+    "win": 0.349,
+    "dmg": 17.46,
+    "heal": 1.15,
+    "maxhp": 0.0,
+    "gold": 0.05,
+    "cards_gained": 0.0,
+    "cards_removed": 1.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "SLIPPERY_BRIDGE.pages.HOLD_ON_2.options.HOLD_ON_3": {
+    "n": 97,
+    "pick": 0.029,
+    "win": 0.392,
+    "dmg": 25.15,
+    "heal": 2.55,
+    "maxhp": 0.0,
+    "gold": 0.12,
+    "cards_gained": 0.0,
+    "cards_removed": 0.99,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "SLIPPERY_BRIDGE.pages.HOLD_ON_3.options.HOLD_ON_4": {
+    "n": 41,
+    "pick": 0.012,
+    "win": 0.317,
+    "dmg": 35.02,
+    "heal": 5.73,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.98,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "SLIPPERY_BRIDGE.pages.HOLD_ON_4.options.HOLD_ON_5": {
+    "n": 18,
+    "pick": 0.005,
+    "win": 0.389,
+    "dmg": 48.11,
+    "heal": 13.06,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.94,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "SLIPPERY_BRIDGE.pages.HOLD_ON_LOOP.options.HOLD_ON_LOOP": {
+    "n": 12,
+    "pick": 0.004,
+    "win": 1.0,
+    "dmg": 250.0,
+    "heal": 230.0,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 1.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "SLIPPERY_BRIDGE.pages.HOLD_ON_5.options.HOLD_ON_6": {
+    "n": 7,
+    "pick": 0.002,
+    "win": 0.429,
+    "dmg": 73.14,
+    "heal": 32.86,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 1.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "SLIPPERY_BRIDGE.pages.HOLD_ON_6.options.HOLD_ON_LOOP": {
+    "n": 2,
+    "pick": 0.001,
+    "win": 1.0,
+    "dmg": 151.0,
+    "heal": 115.0,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 1.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "VAKUU": {
+  "n": 1132,
+  "options": {
+   "JEWELED_MASK": {
+    "n": 195,
+    "pick": 0.175,
+    "win": 0.569,
+    "dmg": 0.0,
+    "heal": 39.66,
+    "maxhp": 0.0,
+    "gold": 0.06,
+    "cards_gained": 0.03,
+    "cards_removed": 0.01,
+    "relics": 1.01,
+    "curse": 0.01
+   },
+   "SERE_TALON": {
+    "n": 169,
+    "pick": 0.152,
+    "win": 0.55,
+    "dmg": 1.12,
+    "heal": 38.33,
+    "maxhp": -9.0,
+    "gold": 1.12,
+    "cards_gained": 3.02,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "MUSIC_BOX": {
+    "n": 130,
+    "pick": 0.117,
+    "win": 0.577,
+    "dmg": 0.0,
+    "heal": 37.95,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.01,
+    "curse": 0.0
+   },
+   "PRESERVED_FOG": {
+    "n": 114,
+    "pick": 0.103,
+    "win": 0.579,
+    "dmg": 0.0,
+    "heal": 38.23,
+    "maxhp": 0.06,
+    "gold": 1.61,
+    "cards_gained": 1.01,
+    "cards_removed": 3.0,
+    "relics": 1.0,
+    "curse": 1.01
+   },
+   "CHOICES_PARADOX": {
+    "n": 109,
+    "pick": 0.098,
+    "win": 0.459,
+    "dmg": 0.0,
+    "heal": 38.21,
+    "maxhp": 0.05,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "FIDDLE": {
+    "n": 91,
+    "pick": 0.082,
+    "win": 0.593,
+    "dmg": 0.0,
+    "heal": 38.81,
+    "maxhp": 0.0,
+    "gold": 0.13,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "DISTINGUISHED_CAPE": {
+    "n": 80,
+    "pick": 0.072,
+    "win": 0.55,
+    "dmg": 0.0,
+    "heal": 38.81,
+    "maxhp": 0.0,
+    "gold": 7.69,
+    "cards_gained": 5.19,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 2.08
+   },
+   "WHISPERING_EARRING": {
+    "n": 78,
+    "pick": 0.07,
+    "win": 0.346,
+    "dmg": 0.0,
+    "heal": 37.5,
+    "maxhp": 0.0,
+    "gold": 0.15,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "LORDS_PARASOL": {
+    "n": 75,
+    "pick": 0.067,
+    "win": 0.533,
+    "dmg": 0.0,
+    "heal": 39.97,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "BLOOD_SOAKED_ROSE": {
+    "n": 69,
+    "pick": 0.062,
+    "win": 0.406,
+    "dmg": 0.0,
+    "heal": 37.57,
+    "maxhp": 0.09,
+    "gold": 1.35,
+    "cards_gained": 1.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 1.0
+   },
+   "MYMOD_REROLL": {
+    "n": 1,
+    "pick": 0.001,
+    "win": 0.0,
+    "dmg": 0.0,
+    "heal": 11.0,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "VAKUU.pages.INITIAL.options.ANCIENT_AFFECTION_BOND": {
+    "n": 1,
+    "pick": 0.001,
+    "win": 1.0,
+    "dmg": 0.0,
+    "heal": 43.0,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 1.0,
+    "cards_removed": 3.0,
+    "relics": 1.0,
+    "curse": 1.0
+   }
+  }
+ },
+ "ROUND_TEA_PARTY": {
+  "n": 504,
+  "options": {
+   "ROUND_TEA_PARTY.pages.INITIAL.options.PICK_FIGHT": {
+    "n": 439,
+    "pick": 0.871,
+    "win": 0.59,
+    "dmg": 10.96,
+    "heal": 0.71,
+    "maxhp": 0.45,
+    "gold": 0.68,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "ROUND_TEA_PARTY.pages.INITIAL.options.ENJOY_TEA": {
+    "n": 65,
+    "pick": 0.129,
+    "win": 0.492,
+    "dmg": 0.0,
+    "heal": 40.43,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "SYMBIOTE": {
+  "n": 1008,
+  "options": {
+   "SYMBIOTE.pages.INITIAL.options.APPROACH": {
+    "n": 517,
+    "pick": 0.513,
+    "win": 0.385,
+    "dmg": 0.0,
+    "heal": 0.34,
+    "maxhp": 0.0,
+    "gold": 0.02,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "SYMBIOTE.pages.INITIAL.options.KILL_WITH_FIRE": {
+    "n": 491,
+    "pick": 0.487,
+    "win": 0.477,
+    "dmg": 0.0,
+    "heal": 0.51,
+    "maxhp": 0.0,
+    "gold": 1.1,
+    "cards_gained": 0.01,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "GRAVE_OF_THE_FORGOTTEN": {
+  "n": 459,
+  "options": {
+   "GRAVE_OF_THE_FORGOTTEN.pages.INITIAL.options.CONFRONT": {
+    "n": 292,
+    "pick": 0.636,
+    "win": 0.476,
+    "dmg": 0.0,
+    "heal": 0.54,
+    "maxhp": 0.0,
+    "gold": 0.96,
+    "cards_gained": 1.01,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 1.0
+   },
+   "GRAVE_OF_THE_FORGOTTEN.pages.INITIAL.options.ACCEPT": {
+    "n": 167,
+    "pick": 0.364,
+    "win": 0.575,
+    "dmg": 0.0,
+    "heal": 0.46,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "THIS_OR_THAT": {
+  "n": 2139,
+  "options": {
+   "THIS_OR_THAT.pages.INITIAL.options.ORNATE": {
+    "n": 1674,
+    "pick": 0.783,
+    "win": 0.283,
+    "dmg": 0.0,
+    "heal": 0.59,
+    "maxhp": 0.33,
+    "gold": 2.73,
+    "cards_gained": 1.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 1.0
+   },
+   "THIS_OR_THAT.pages.INITIAL.options.PLAIN": {
+    "n": 465,
+    "pick": 0.217,
+    "win": 0.411,
+    "dmg": 5.99,
+    "heal": 0.11,
+    "maxhp": 0.01,
+    "gold": 54.65,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.01,
+    "curse": 0.0
+   }
+  }
+ },
+ "REFLECTIONS": {
+  "n": 483,
+  "options": {
+   "REFLECTIONS.pages.INITIAL.options.TOUCH_A_MIRROR": {
+    "n": 380,
+    "pick": 0.787,
+    "win": 0.518,
+    "dmg": 0.0,
+    "heal": 0.24,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "REFLECTIONS.pages.INITIAL.options.SHATTER": {
+    "n": 103,
+    "pick": 0.213,
+    "win": 0.417,
+    "dmg": 0.0,
+    "heal": 2.8,
+    "maxhp": 0.32,
+    "gold": 34.08,
+    "cards_gained": 32.25,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 3.12
+   }
+  }
+ },
+ "THE_LEGENDS_WERE_TRUE": {
+  "n": 1321,
+  "options": {
+   "THE_LEGENDS_WERE_TRUE.pages.INITIAL.options.NAB_THE_MAP": {
+    "n": 1036,
+    "pick": 0.784,
+    "win": 0.22,
+    "dmg": 0.0,
+    "heal": 0.07,
+    "maxhp": 0.0,
+    "gold": 0.17,
+    "cards_gained": 1.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "THE_LEGENDS_WERE_TRUE.pages.INITIAL.options.SLOWLY_FIND_AN_EXIT": {
+    "n": 285,
+    "pick": 0.216,
+    "win": 0.186,
+    "dmg": 8.0,
+    "heal": 0.48,
+    "maxhp": 0.04,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "DOORS_OF_LIGHT_AND_DARK": {
+  "n": 743,
+  "options": {
+   "DOORS_OF_LIGHT_AND_DARK.pages.INITIAL.options.LIGHT": {
+    "n": 517,
+    "pick": 0.696,
+    "win": 0.228,
+    "dmg": 0.0,
+    "heal": 0.03,
+    "maxhp": 0.0,
+    "gold": 0.05,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "DOORS_OF_LIGHT_AND_DARK.pages.INITIAL.options.DARK": {
+    "n": 226,
+    "pick": 0.304,
+    "win": 0.279,
+    "dmg": 0.0,
+    "heal": 0.02,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 1.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "PUNCH_OFF": {
+  "n": 261,
+  "options": {
+   "PUNCH_OFF.pages.INITIAL.options.NAB": {
+    "n": 165,
+    "pick": 0.462,
+    "win": 0.103,
+    "dmg": 0.0,
+    "heal": 0.39,
+    "maxhp": 0.3,
+    "gold": 0.6,
+    "cards_gained": 1.0,
+    "cards_removed": 0.0,
+    "relics": 0.99,
+    "curse": 1.0
+   },
+   "PUNCH_OFF.pages.INITIAL.options.I_CAN_TAKE_THEM": {
+    "n": 96,
+    "pick": 0.269,
+    "win": 0.219,
+    "dmg": 28.34,
+    "heal": 8.92,
+    "maxhp": 0.4,
+    "gold": 17.47,
+    "cards_gained": 0.7,
+    "cards_removed": 0.04,
+    "relics": 0.89,
+    "curse": 0.02
+   },
+   "PUNCH_OFF.pages.I_CAN_TAKE_THEM.options.FIGHT": {
+    "n": 96,
+    "pick": 0.269,
+    "win": 0.219,
+    "dmg": 28.34,
+    "heal": 8.92,
+    "maxhp": 0.4,
+    "gold": 17.47,
+    "cards_gained": 0.7,
+    "cards_removed": 0.04,
+    "relics": 0.89,
+    "curse": 0.02
+   }
+  }
+ },
+ "LUMINOUS_CHOIR": {
+  "n": 122,
+  "options": {
+   "LUMINOUS_CHOIR.pages.INITIAL.options.OFFER_TRIBUTE": {
+    "n": 62,
+    "pick": 0.508,
+    "win": 0.129,
+    "dmg": 0.0,
+    "heal": 0.39,
+    "maxhp": 0.23,
+    "gold": -124.6,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "LUMINOUS_CHOIR.pages.INITIAL.options.REACH_INTO_THE_FLESH": {
+    "n": 60,
+    "pick": 0.492,
+    "win": 0.167,
+    "dmg": 0.0,
+    "heal": 0.08,
+    "maxhp": 0.0,
+    "gold": 0.5,
+    "cards_gained": 1.0,
+    "cards_removed": 2.0,
+    "relics": 0.0,
+    "curse": 1.0
+   }
+  }
+ },
+ "BYRDONIS_NEST": {
+  "n": 627,
+  "options": {
+   "BYRDONIS_NEST.pages.INITIAL.options.EAT": {
+    "n": 428,
+    "pick": 0.683,
+    "win": 0.215,
+    "dmg": 0.0,
+    "heal": 7.06,
+    "maxhp": 7.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "BYRDONIS_NEST.pages.INITIAL.options.TAKE": {
+    "n": 199,
+    "pick": 0.317,
+    "win": 0.226,
+    "dmg": 0.0,
+    "heal": 0.03,
+    "maxhp": 0.0,
+    "gold": 0.38,
+    "cards_gained": 1.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "SAPPHIRE_SEED": {
+  "n": 619,
+  "options": {
+   "SAPPHIRE_SEED.pages.INITIAL.options.PLANT": {
+    "n": 356,
+    "pick": 0.575,
+    "win": 0.264,
+    "dmg": 0.0,
+    "heal": 0.03,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "SAPPHIRE_SEED.pages.INITIAL.options.EAT": {
+    "n": 263,
+    "pick": 0.425,
+    "win": 0.183,
+    "dmg": 0.0,
+    "heal": 8.78,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "UNREST_SITE": {
+  "n": 246,
+  "options": {
+   "UNREST_SITE.pages.INITIAL.options.KILL": {
+    "n": 171,
+    "pick": 0.695,
+    "win": 0.193,
+    "dmg": 0.0,
+    "heal": 0.33,
+    "maxhp": -7.82,
+    "gold": 1.75,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "UNREST_SITE.pages.INITIAL.options.REST": {
+    "n": 75,
+    "pick": 0.305,
+    "win": 0.267,
+    "dmg": 0.0,
+    "heal": 48.57,
+    "maxhp": 0.0,
+    "gold": 0.2,
+    "cards_gained": 1.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 1.0
+   }
+  }
+ },
+ "OROBAS": {
+  "n": 1676,
+  "options": {
+   "ARCHAIC_TOOTH": {
+    "n": 534,
+    "pick": 0.326,
+    "win": 0.292,
+    "dmg": 0.0,
+    "heal": 43.44,
+    "maxhp": 0.0,
+    "gold": 0.47,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "TOUCH_OF_OROBAS": {
+    "n": 204,
+    "pick": 0.125,
+    "win": 0.235,
+    "dmg": 0.0,
+    "heal": 44.36,
+    "maxhp": 0.0,
+    "gold": 0.06,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 2.0,
+    "curse": 0.0
+   },
+   "ELECTRIC_SHRYMP": {
+    "n": 166,
+    "pick": 0.101,
+    "win": 0.331,
+    "dmg": 0.0,
+    "heal": 41.74,
+    "maxhp": 0.0,
+    "gold": 0.07,
+    "cards_gained": 0.01,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "GLASS_EYE": {
+    "n": 165,
+    "pick": 0.101,
+    "win": 0.291,
+    "dmg": 0.0,
+    "heal": 41.83,
+    "maxhp": 0.0,
+    "gold": 1.91,
+    "cards_gained": 3.67,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.06
+   },
+   "RADIANT_PEARL": {
+    "n": 108,
+    "pick": 0.066,
+    "win": 0.444,
+    "dmg": 0.0,
+    "heal": 41.2,
+    "maxhp": 0.0,
+    "gold": 0.22,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "PRISMATIC_GEM": {
+    "n": 104,
+    "pick": 0.064,
+    "win": 0.404,
+    "dmg": 0.0,
+    "heal": 42.18,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "SAND_CASTLE": {
+    "n": 101,
+    "pick": 0.062,
+    "win": 0.198,
+    "dmg": 0.0,
+    "heal": 41.65,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.01,
+    "curse": 0.0
+   },
+   "ALCHEMICAL_COFFER": {
+    "n": 83,
+    "pick": 0.051,
+    "win": 0.349,
+    "dmg": 0.0,
+    "heal": 44.87,
+    "maxhp": 0.06,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "DRIFTWOOD": {
+    "n": 49,
+    "pick": 0.03,
+    "win": 0.163,
+    "dmg": 0.0,
+    "heal": 41.63,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "SEA_GLASS.SILENT": {
+    "n": 39,
+    "pick": 0.024,
+    "win": 0.179,
+    "dmg": 0.0,
+    "heal": 38.03,
+    "maxhp": 0.0,
+    "gold": 0.62,
+    "cards_gained": 4.9,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "SEA_GLASS.DEFECT": {
+    "n": 34,
+    "pick": 0.021,
+    "win": 0.265,
+    "dmg": 0.0,
+    "heal": 43.71,
+    "maxhp": 0.0,
+    "gold": 3.97,
+    "cards_gained": 5.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "SEA_GLASS.NECROBINDER": {
+    "n": 28,
+    "pick": 0.017,
+    "win": 0.179,
+    "dmg": 0.0,
+    "heal": 41.64,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 3.79,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "SEA_GLASS.REGENT": {
+    "n": 20,
+    "pick": 0.012,
+    "win": 0.2,
+    "dmg": 0.0,
+    "heal": 42.05,
+    "maxhp": 0.0,
+    "gold": 6.0,
+    "cards_gained": 3.55,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "OROBAS.pages.INITIAL.options.ANCIENT_AFFECTION_BOND": {
+    "n": 1,
+    "pick": 0.001,
+    "win": 1.0,
+    "dmg": 0.0,
+    "heal": 44.0,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 4.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "TINKER_TIME": {
+  "n": 487,
+  "options": {
+   "TINKER_TIME.pages.INITIAL.options.CHOOSE_CARD_TYPE": {
+    "n": 487,
+    "pick": 0.333,
+    "win": 0.54,
+    "dmg": 0.0,
+    "heal": 0.7,
+    "maxhp": 0.0,
+    "gold": 0.94,
+    "cards_gained": 1.03,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "TINKER_TIME.pages.CHOOSE_CARD_TYPE.options.SKILL": {
+    "n": 220,
+    "pick": 0.151,
+    "win": 0.536,
+    "dmg": 0.0,
+    "heal": 0.79,
+    "maxhp": 0.0,
+    "gold": 0.9,
+    "cards_gained": 1.04,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "TINKER_TIME.pages.CHOOSE_CARD_TYPE.options.POWER": {
+    "n": 152,
+    "pick": 0.104,
+    "win": 0.52,
+    "dmg": 0.0,
+    "heal": 0.56,
+    "maxhp": 0.0,
+    "gold": 1.2,
+    "cards_gained": 1.03,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "TINKER_TIME.pages.CHOOSE_CARD_TYPE.options.ATTACK": {
+    "n": 115,
+    "pick": 0.079,
+    "win": 0.574,
+    "dmg": 0.0,
+    "heal": 0.72,
+    "maxhp": 0.0,
+    "gold": 0.65,
+    "cards_gained": 1.01,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "TINKER_TIME.pages.CHOOSE_RIDER.options.ENERGIZED": {
+    "n": 111,
+    "pick": 0.076,
+    "win": 0.523,
+    "dmg": 0.0,
+    "heal": 1.06,
+    "maxhp": 0.0,
+    "gold": 0.7,
+    "cards_gained": 1.05,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "TINKER_TIME.pages.CHOOSE_RIDER.options.WISDOM": {
+    "n": 78,
+    "pick": 0.053,
+    "win": 0.526,
+    "dmg": 0.0,
+    "heal": 0.65,
+    "maxhp": 0.0,
+    "gold": 0.58,
+    "cards_gained": 1.01,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "TINKER_TIME.pages.CHOOSE_RIDER.options.EXPERTISE": {
+    "n": 77,
+    "pick": 0.053,
+    "win": 0.545,
+    "dmg": 0.0,
+    "heal": 0.78,
+    "maxhp": 0.0,
+    "gold": 1.6,
+    "cards_gained": 1.03,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "TINKER_TIME.pages.CHOOSE_RIDER.options.CURIOUS": {
+    "n": 59,
+    "pick": 0.04,
+    "win": 0.542,
+    "dmg": 0.0,
+    "heal": 0.42,
+    "maxhp": 0.0,
+    "gold": 1.02,
+    "cards_gained": 1.03,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "TINKER_TIME.pages.CHOOSE_RIDER.options.SAPPING": {
+    "n": 58,
+    "pick": 0.04,
+    "win": 0.638,
+    "dmg": 0.0,
+    "heal": 1.07,
+    "maxhp": 0.0,
+    "gold": 0.78,
+    "cards_gained": 1.02,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "TINKER_TIME.pages.CHOOSE_RIDER.options.VIOLENCE": {
+    "n": 54,
+    "pick": 0.037,
+    "win": 0.5,
+    "dmg": 0.0,
+    "heal": 0.35,
+    "maxhp": 0.0,
+    "gold": 0.56,
+    "cards_gained": 1.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "TINKER_TIME.pages.CHOOSE_RIDER.options.CHAOS": {
+    "n": 31,
+    "pick": 0.021,
+    "win": 0.613,
+    "dmg": 0.0,
+    "heal": 0.16,
+    "maxhp": 0.0,
+    "gold": 2.42,
+    "cards_gained": 1.06,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "TINKER_TIME.pages.CHOOSE_RIDER.options.IMPROVEMENT": {
+    "n": 16,
+    "pick": 0.011,
+    "win": 0.312,
+    "dmg": 0.0,
+    "heal": 0.0,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 1.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "TINKER_TIME.pages.CHOOSE_RIDER.options.CHOKING": {
+    "n": 3,
+    "pick": 0.002,
+    "win": 0.667,
+    "dmg": 0.0,
+    "heal": 0.67,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 1.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "TABLET_OF_TRUTH": {
+  "n": 565,
+  "options": {
+   "TABLET_OF_TRUTH.pages.INITIAL.options.SMASH": {
+    "n": 336,
+    "pick": 0.325,
+    "win": 0.223,
+    "dmg": 0.0,
+    "heal": 18.12,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "TABLET_OF_TRUTH.pages.INITIAL.options.DECIPHER_1": {
+    "n": 229,
+    "pick": 0.221,
+    "win": 0.183,
+    "dmg": 4.03,
+    "heal": 0.03,
+    "maxhp": -12.8,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "TABLET_OF_TRUTH.pages.DECIPHER.options.GIVE_UP": {
+    "n": 220,
+    "pick": 0.213,
+    "win": 0.186,
+    "dmg": 2.0,
+    "heal": 0.03,
+    "maxhp": -10.2,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "TABLET_OF_TRUTH.pages.DECIPHER_1.options.DECIPHER": {
+    "n": 175,
+    "pick": 0.169,
+    "win": 0.149,
+    "dmg": 5.23,
+    "heal": 0.01,
+    "maxhp": -15.82,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "TABLET_OF_TRUTH.pages.DECIPHER_2.options.DECIPHER": {
+    "n": 54,
+    "pick": 0.052,
+    "win": 0.111,
+    "dmg": 14.83,
+    "heal": 0.0,
+    "maxhp": -31.11,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "TABLET_OF_TRUTH.pages.DECIPHER_3.options.DECIPHER": {
+    "n": 11,
+    "pick": 0.011,
+    "win": 0.091,
+    "dmg": 46.18,
+    "heal": 0.0,
+    "maxhp": -70.64,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "TABLET_OF_TRUTH.pages.DECIPHER_4.options.DECIPHER": {
+    "n": 9,
+    "pick": 0.009,
+    "win": 0.111,
+    "dmg": 53.56,
+    "heal": 0.0,
+    "maxhp": -76.33,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "POTION_COURIER": {
+  "n": 976,
+  "options": {
+   "POTION_COURIER.pages.INITIAL.options.RANSACK": {
+    "n": 508,
+    "pick": 0.52,
+    "win": 0.413,
+    "dmg": 0.0,
+    "heal": 0.67,
+    "maxhp": 0.0,
+    "gold": 0.05,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "POTION_COURIER.pages.INITIAL.options.GRAB_POTIONS": {
+    "n": 468,
+    "pick": 0.48,
+    "win": 0.479,
+    "dmg": 0.0,
+    "heal": 1.0,
+    "maxhp": 0.02,
+    "gold": 0.03,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "ROOM_FULL_OF_CHEESE": {
+  "n": 1774,
+  "options": {
+   "ROOM_FULL_OF_CHEESE.pages.INITIAL.options.GORGE": {
+    "n": 1006,
+    "pick": 0.567,
+    "win": 0.193,
+    "dmg": 0.0,
+    "heal": 0.23,
+    "maxhp": 0.0,
+    "gold": 0.45,
+    "cards_gained": 2.01,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "ROOM_FULL_OF_CHEESE.pages.INITIAL.options.SEARCH": {
+    "n": 768,
+    "pick": 0.433,
+    "win": 0.285,
+    "dmg": 13.99,
+    "heal": 0.18,
+    "maxhp": 0.0,
+    "gold": 0.03,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "CRYSTAL_SPHERE": {
+  "n": 722,
+  "options": {
+   "CRYSTAL_SPHERE.pages.INITIAL.options.PAYMENT_PLAN": {
+    "n": 462,
+    "pick": 0.64,
+    "win": 0.465,
+    "dmg": 0.0,
+    "heal": 2.07,
+    "maxhp": 0.57,
+    "gold": 43.5,
+    "cards_gained": 2.26,
+    "cards_removed": 0.0,
+    "relics": 0.9,
+    "curse": 1.1
+   },
+   "CRYSTAL_SPHERE.pages.INITIAL.options.UNCOVER_FUTURE": {
+    "n": 260,
+    "pick": 0.36,
+    "win": 0.473,
+    "dmg": 0.0,
+    "heal": 0.91,
+    "maxhp": 0.02,
+    "gold": -49.47,
+    "cards_gained": 1.0,
+    "cards_removed": 0.0,
+    "relics": 0.01,
+    "curse": 0.07
+   }
+  }
+ },
+ "RELIC_TRADER": {
+  "n": 656,
+  "options": {
+   "RELIC_TRADER.pages.INITIAL.options.BOTTOM": {
+    "n": 239,
+    "pick": 0.364,
+    "win": 0.506,
+    "dmg": 0.0,
+    "heal": 0.58,
+    "maxhp": 0.35,
+    "gold": 2.51,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "RELIC_TRADER.pages.INITIAL.options.TOP": {
+    "n": 211,
+    "pick": 0.322,
+    "win": 0.555,
+    "dmg": 0.0,
+    "heal": 0.68,
+    "maxhp": 0.39,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "RELIC_TRADER.pages.INITIAL.options.MIDDLE": {
+    "n": 206,
+    "pick": 0.314,
+    "win": 0.442,
+    "dmg": 0.0,
+    "heal": 0.47,
+    "maxhp": 0.14,
+    "gold": 1.46,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "ENDLESS_CONVEYOR": {
+  "n": 326,
+  "options": {
+   "ENDLESS_CONVEYOR.pages.ALL.options.CAVIAR": {
+    "n": 243,
+    "pick": 0.174,
+    "win": 0.239,
+    "dmg": 0.0,
+    "heal": 16.59,
+    "maxhp": 6.83,
+    "gold": -191.84,
+    "cards_gained": 1.16,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "ENDLESS_CONVEYOR.pages.GRAB_SOMETHING_OFF_THE_BELT.options.LEAVE": {
+    "n": 239,
+    "pick": 0.172,
+    "win": 0.238,
+    "dmg": 0.0,
+    "heal": 13.1,
+    "maxhp": 4.07,
+    "gold": -152.61,
+    "cards_gained": 0.92,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "ENDLESS_CONVEYOR.pages.ALL.options.CLAM_ROLL": {
+    "n": 216,
+    "pick": 0.155,
+    "win": 0.231,
+    "dmg": 0.0,
+    "heal": 20.11,
+    "maxhp": 4.48,
+    "gold": -184.46,
+    "cards_gained": 1.2,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "ENDLESS_CONVEYOR.pages.ALL.options.JELLY_LIVER": {
+    "n": 141,
+    "pick": 0.101,
+    "win": 0.227,
+    "dmg": 0.0,
+    "heal": 13.43,
+    "maxhp": 4.23,
+    "gold": -186.05,
+    "cards_gained": 1.08,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "ENDLESS_CONVEYOR.pages.ALL.options.SPICY_SNAPPY": {
+    "n": 133,
+    "pick": 0.095,
+    "win": 0.218,
+    "dmg": 0.0,
+    "heal": 14.84,
+    "maxhp": 4.87,
+    "gold": -205.14,
+    "cards_gained": 1.35,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "ENDLESS_CONVEYOR.pages.ALL.options.FRIED_EEL": {
+    "n": 128,
+    "pick": 0.092,
+    "win": 0.234,
+    "dmg": 0.0,
+    "heal": 13.61,
+    "maxhp": 4.09,
+    "gold": -193.01,
+    "cards_gained": 1.98,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "ENDLESS_CONVEYOR.pages.ALL.options.SEAPUNK_SALAD": {
+    "n": 92,
+    "pick": 0.066,
+    "win": 0.163,
+    "dmg": 0.0,
+    "heal": 20.67,
+    "maxhp": 6.57,
+    "gold": -264.65,
+    "cards_gained": 2.35,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "ENDLESS_CONVEYOR.pages.INITIAL.options.OBSERVE_CHEF": {
+    "n": 87,
+    "pick": 0.062,
+    "win": 0.184,
+    "dmg": 0.0,
+    "heal": 0.06,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "ENDLESS_CONVEYOR.pages.ALL.options.SUSPICIOUS_CONDIMENT": {
+    "n": 68,
+    "pick": 0.049,
+    "win": 0.176,
+    "dmg": 0.0,
+    "heal": 12.97,
+    "maxhp": 4.65,
+    "gold": -196.4,
+    "cards_gained": 1.34,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "ENDLESS_CONVEYOR.pages.ALL.options.GOLDEN_FYSH": {
+    "n": 46,
+    "pick": 0.033,
+    "win": 0.152,
+    "dmg": 0.0,
+    "heal": 18.48,
+    "maxhp": 5.57,
+    "gold": -171.3,
+    "cards_gained": 1.89,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "THE_FUTURE_OF_POTIONS": {
+  "n": 862,
+  "options": {
+   "THE_FUTURE_OF_POTIONS.pages.INITIAL.options.POTION": {
+    "n": 862,
+    "pick": 1.0,
+    "win": 0.407,
+    "dmg": 0.0,
+    "heal": 0.41,
+    "maxhp": 0.0,
+    "gold": 0.46,
+    "cards_gained": 0.92,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.02
+   }
+  }
+ },
+ "SUNKEN_STATUE": {
+  "n": 1315,
+  "options": {
+   "SUNKEN_STATUE.pages.INITIAL.options.GRAB_SWORD": {
+    "n": 877,
+    "pick": 0.667,
+    "win": 0.235,
+    "dmg": 0.0,
+    "heal": 0.04,
+    "maxhp": 0.0,
+    "gold": 0.05,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "SUNKEN_STATUE.pages.INITIAL.options.DIVE_INTO_WATER": {
+    "n": 438,
+    "pick": 0.333,
+    "win": 0.187,
+    "dmg": 7.0,
+    "heal": 0.09,
+    "maxhp": 0.0,
+    "gold": 111.76,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.01,
+    "curse": 0.0
+   }
+  }
+ },
+ "PAEL": {
+  "n": 1638,
+  "options": {
+   "PAELS_BLOOD": {
+    "n": 342,
+    "pick": 0.212,
+    "win": 0.447,
+    "dmg": 0.0,
+    "heal": 42.28,
+    "maxhp": 0.0,
+    "gold": 0.07,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "PAELS_LEGION": {
+    "n": 235,
+    "pick": 0.146,
+    "win": 0.374,
+    "dmg": 0.0,
+    "heal": 43.42,
+    "maxhp": 0.0,
+    "gold": 0.05,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "PAELS_TEARS": {
+    "n": 227,
+    "pick": 0.141,
+    "win": 0.33,
+    "dmg": 0.0,
+    "heal": 43.87,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "PAELS_FLESH": {
+    "n": 217,
+    "pick": 0.135,
+    "win": 0.286,
+    "dmg": 0.0,
+    "heal": 42.12,
+    "maxhp": 0.0,
+    "gold": 0.35,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "PAELS_WING": {
+    "n": 137,
+    "pick": 0.085,
+    "win": 0.241,
+    "dmg": 0.0,
+    "heal": 41.99,
+    "maxhp": 0.0,
+    "gold": 0.09,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "PAELS_CLAW": {
+    "n": 127,
+    "pick": 0.079,
+    "win": 0.417,
+    "dmg": 0.0,
+    "heal": 41.68,
+    "maxhp": 0.0,
+    "gold": 0.09,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "PAELS_HORN": {
+    "n": 123,
+    "pick": 0.076,
+    "win": 0.407,
+    "dmg": 0.0,
+    "heal": 44.18,
+    "maxhp": 0.0,
+    "gold": 1.83,
+    "cards_gained": 2.0,
+    "cards_removed": 0.0,
+    "relics": 1.01,
+    "curse": 0.0
+   },
+   "PAELS_EYE": {
+    "n": 101,
+    "pick": 0.063,
+    "win": 0.277,
+    "dmg": 0.0,
+    "heal": 42.91,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "PAELS_TOOTH": {
+    "n": 55,
+    "pick": 0.034,
+    "win": 0.327,
+    "dmg": 0.0,
+    "heal": 41.4,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 5.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "PAELS_GROWTH": {
+    "n": 46,
+    "pick": 0.029,
+    "win": 0.239,
+    "dmg": 0.0,
+    "heal": 45.54,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "MYMOD_REROLL": {
+    "n": 3,
+    "pick": 0.002,
+    "win": 0.0,
+    "dmg": 0.0,
+    "heal": 37.0,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "LOST_WISP": {
+  "n": 508,
+  "options": {
+   "LOST_WISP.pages.INITIAL.options.SEARCH": {
+    "n": 388,
+    "pick": 0.764,
+    "win": 0.314,
+    "dmg": 0.0,
+    "heal": 0.19,
+    "maxhp": 0.01,
+    "gold": 60.39,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "LOST_WISP.pages.INITIAL.options.CLAIM": {
+    "n": 120,
+    "pick": 0.236,
+    "win": 0.442,
+    "dmg": 0.0,
+    "heal": 0.38,
+    "maxhp": 0.0,
+    "gold": 0.5,
+    "cards_gained": 1.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 1.0
+   }
+  }
+ },
+ "COLOSSAL_FLOWER": {
+  "n": 533,
+  "options": {
+   "COLOSSAL_FLOWER.pages.INITIAL.options.REACH_DEEPER_1": {
+    "n": 330,
+    "pick": 0.282,
+    "win": 0.418,
+    "dmg": 15.62,
+    "heal": 0.14,
+    "maxhp": 0.0,
+    "gold": 33.86,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.72,
+    "curse": 0.0
+   },
+   "COLOSSAL_FLOWER.pages.REACH_DEEPER_1.options.REACH_DEEPER_2": {
+    "n": 309,
+    "pick": 0.264,
+    "win": 0.427,
+    "dmg": 16.34,
+    "heal": 0.15,
+    "maxhp": 0.0,
+    "gold": 31.01,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.77,
+    "curse": 0.0
+   },
+   "COLOSSAL_FLOWER.pages.REACH_DEEPER_2.options.POLLINOUS_CORE": {
+    "n": 239,
+    "pick": 0.204,
+    "win": 0.46,
+    "dmg": 17.92,
+    "heal": 0.09,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "COLOSSAL_FLOWER.pages.INITIAL.options.EXTRACT_CURRENT_PRIZE_1": {
+    "n": 203,
+    "pick": 0.173,
+    "win": 0.251,
+    "dmg": 0.0,
+    "heal": 0.3,
+    "maxhp": 0.0,
+    "gold": 35.09,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "COLOSSAL_FLOWER.pages.REACH_DEEPER_2.options.EXTRACT_INSTEAD": {
+    "n": 70,
+    "pick": 0.06,
+    "win": 0.314,
+    "dmg": 10.94,
+    "heal": 0.36,
+    "maxhp": 0.0,
+    "gold": 136.89,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "COLOSSAL_FLOWER.pages.REACH_DEEPER_1.options.EXTRACT_CURRENT_PRIZE_2": {
+    "n": 21,
+    "pick": 0.018,
+    "win": 0.286,
+    "dmg": 4.9,
+    "heal": 0.05,
+    "maxhp": 0.05,
+    "gold": 75.86,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "NONUPEIPE": {
+  "n": 1120,
+  "options": {
+   "DIAMOND_DIADEM": {
+    "n": 188,
+    "pick": 0.171,
+    "win": 0.58,
+    "dmg": 0.0,
+    "heal": 38.93,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "SIGNET_RING": {
+    "n": 151,
+    "pick": 0.138,
+    "win": 0.497,
+    "dmg": 0.0,
+    "heal": 41.08,
+    "maxhp": 0.01,
+    "gold": 901.23,
+    "cards_gained": 0.01,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "GLITTER": {
+    "n": 130,
+    "pick": 0.119,
+    "win": 0.546,
+    "dmg": 0.0,
+    "heal": 38.57,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.01,
+    "cards_removed": 0.01,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "BLESSED_ANTLER": {
+    "n": 102,
+    "pick": 0.093,
+    "win": 0.549,
+    "dmg": 0.0,
+    "heal": 39.91,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "BRILLIANT_SCARF": {
+    "n": 102,
+    "pick": 0.093,
+    "win": 0.627,
+    "dmg": 0.0,
+    "heal": 37.91,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "JEWELRY_BOX": {
+    "n": 98,
+    "pick": 0.089,
+    "win": 0.622,
+    "dmg": 0.0,
+    "heal": 39.74,
+    "maxhp": 0.06,
+    "gold": 0.89,
+    "cards_gained": 1.04,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "BEAUTIFUL_BRACELET": {
+    "n": 98,
+    "pick": 0.089,
+    "win": 0.571,
+    "dmg": 0.0,
+    "heal": 38.71,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "LOOMING_FRUIT": {
+    "n": 89,
+    "pick": 0.081,
+    "win": 0.449,
+    "dmg": 0.0,
+    "heal": 69.24,
+    "maxhp": 31.0,
+    "gold": 0.13,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "DELICATE_FROND": {
+    "n": 75,
+    "pick": 0.068,
+    "win": 0.533,
+    "dmg": 0.0,
+    "heal": 40.84,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "FUR_COAT": {
+    "n": 59,
+    "pick": 0.054,
+    "win": 0.322,
+    "dmg": 0.0,
+    "heal": 40.12,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "MYMOD_REROLL": {
+    "n": 4,
+    "pick": 0.004,
+    "win": 0.75,
+    "dmg": 0.0,
+    "heal": 39.25,
+    "maxhp": 0.0,
+    "gold": 222.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "NONUPEIPE.pages.INITIAL.options.ANCIENT_AFFECTION_BOND": {
+    "n": 1,
+    "pick": 0.001,
+    "win": 1.0,
+    "dmg": 0.0,
+    "heal": 52.0,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 1.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "SUNKEN_TREASURY": {
+  "n": 714,
+  "options": {
+   "SUNKEN_TREASURY.pages.INITIAL.options.SECOND_CHEST": {
+    "n": 357,
+    "pick": 0.5,
+    "win": 0.21,
+    "dmg": 0.0,
+    "heal": 0.02,
+    "maxhp": 0.02,
+    "gold": 334.11,
+    "cards_gained": 1.01,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 1.0
+   },
+   "SUNKEN_TREASURY.pages.INITIAL.options.FIRST_CHEST": {
+    "n": 357,
+    "pick": 0.5,
+    "win": 0.221,
+    "dmg": 0.0,
+    "heal": 0.02,
+    "maxhp": 0.0,
+    "gold": 59.98,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "AROMA_OF_CHAOS": {
+  "n": 617,
+  "options": {
+   "AROMA_OF_CHAOS.pages.INITIAL.options.LET_GO": {
+    "n": 356,
+    "pick": 0.577,
+    "win": 0.239,
+    "dmg": 0.0,
+    "heal": 0.1,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "AROMA_OF_CHAOS.pages.INITIAL.options.MAINTAIN_CONTROL": {
+    "n": 261,
+    "pick": 0.423,
+    "win": 0.241,
+    "dmg": 0.0,
+    "heal": 0.02,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "STONE_OF_ALL_TIME": {
+  "n": 475,
+  "options": {
+   "STONE_OF_ALL_TIME.pages.INITIAL.options.PUSH": {
+    "n": 271,
+    "pick": 0.571,
+    "win": 0.424,
+    "dmg": 5.96,
+    "heal": 0.27,
+    "maxhp": 0.0,
+    "gold": 0.04,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "STONE_OF_ALL_TIME.pages.INITIAL.options.LIFT": {
+    "n": 204,
+    "pick": 0.429,
+    "win": 0.422,
+    "dmg": 0.0,
+    "heal": 10.2,
+    "maxhp": 10.0,
+    "gold": 0.06,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "WHISPERING_HOLLOW": {
+  "n": 501,
+  "options": {
+   "WHISPERING_HOLLOW.pages.INITIAL.options.HUG": {
+    "n": 415,
+    "pick": 0.828,
+    "win": 0.27,
+    "dmg": 9.0,
+    "heal": 0.02,
+    "maxhp": 0.0,
+    "gold": 0.04,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "WHISPERING_HOLLOW.pages.INITIAL.options.GOLD": {
+    "n": 86,
+    "pick": 0.172,
+    "win": 0.198,
+    "dmg": 0.0,
+    "heal": 0.9,
+    "maxhp": 0.12,
+    "gold": -35.41,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "SPIRIT_GRAFTER": {
+  "n": 513,
+  "options": {
+   "SPIRIT_GRAFTER.pages.INITIAL.options.REJECTION": {
+    "n": 342,
+    "pick": 0.667,
+    "win": 0.442,
+    "dmg": 9.98,
+    "heal": 0.33,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "SPIRIT_GRAFTER.pages.INITIAL.options.LET_IT_IN": {
+    "n": 171,
+    "pick": 0.333,
+    "win": 0.263,
+    "dmg": 0.0,
+    "heal": 22.07,
+    "maxhp": 0.0,
+    "gold": 0.49,
+    "cards_gained": 1.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "TRIAL": {
+  "n": 545,
+  "options": {
+   "TRIAL.pages.INITIAL.options.ACCEPT": {
+    "n": 528,
+    "pick": 0.477,
+    "win": 0.519,
+    "dmg": 0.0,
+    "heal": 2.49,
+    "maxhp": 0.26,
+    "gold": 35.62,
+    "cards_gained": 0.91,
+    "cards_removed": 0.0,
+    "relics": 0.53,
+    "curse": 0.8
+   },
+   "TRIAL.pages.MERCHANT.options.GUILTY": {
+    "n": 141,
+    "pick": 0.127,
+    "win": 0.461,
+    "dmg": 0.0,
+    "heal": 1.5,
+    "maxhp": 0.87,
+    "gold": 1.32,
+    "cards_gained": 1.01,
+    "cards_removed": 0.0,
+    "relics": 2.01,
+    "curse": 1.01
+   },
+   "TRIAL.pages.NONDESCRIPT.options.INNOCENT": {
+    "n": 130,
+    "pick": 0.117,
+    "win": 0.569,
+    "dmg": 0.0,
+    "heal": 1.32,
+    "maxhp": 0.09,
+    "gold": 3.18,
+    "cards_gained": 1.02,
+    "cards_removed": 0.01,
+    "relics": 0.0,
+    "curse": 1.01
+   },
+   "TRIAL.pages.NOBLE.options.GUILTY": {
+    "n": 111,
+    "pick": 0.1,
+    "win": 0.495,
+    "dmg": 0.0,
+    "heal": 7.59,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "TRIAL.pages.NOBLE.options.INNOCENT": {
+    "n": 60,
+    "pick": 0.054,
+    "win": 0.583,
+    "dmg": 0.0,
+    "heal": 0.67,
+    "maxhp": 0.0,
+    "gold": 303.5,
+    "cards_gained": 1.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 1.0
+   },
+   "TRIAL.pages.NONDESCRIPT.options.GUILTY": {
+    "n": 56,
+    "pick": 0.051,
+    "win": 0.446,
+    "dmg": 0.0,
+    "heal": 0.71,
+    "maxhp": 0.0,
+    "gold": 0.8,
+    "cards_gained": 2.09,
+    "cards_removed": 0.0,
+    "relics": 0.02,
+    "curse": 1.05
+   },
+   "TRIAL.pages.MERCHANT.options.INNOCENT": {
+    "n": 47,
+    "pick": 0.042,
+    "win": 0.574,
+    "dmg": 0.0,
+    "heal": 0.98,
+    "maxhp": 0.0,
+    "gold": 0.64,
+    "cards_gained": 1.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 1.0
+   },
+   "TRIAL.pages.INITIAL.options.REJECT": {
+    "n": 17,
+    "pick": 0.015,
+    "win": 0.412,
+    "dmg": 0.0,
+    "heal": 2.06,
+    "maxhp": 0.0,
+    "gold": 4.41,
+    "cards_gained": 1.12,
+    "cards_removed": 0.0,
+    "relics": 0.24,
+    "curse": 0.88
+   },
+   "TRIAL.pages.REJECT.options.ACCEPT": {
+    "n": 17,
+    "pick": 0.015,
+    "win": 0.412,
+    "dmg": 0.0,
+    "heal": 2.06,
+    "maxhp": 0.0,
+    "gold": 4.41,
+    "cards_gained": 1.12,
+    "cards_removed": 0.0,
+    "relics": 0.24,
+    "curse": 0.88
+   }
+  }
+ },
+ "INFESTED_AUTOMATON": {
+  "n": 543,
+  "options": {
+   "INFESTED_AUTOMATON.pages.INITIAL.options.STUDY": {
+    "n": 340,
+    "pick": 0.626,
+    "win": 0.324,
+    "dmg": 0.0,
+    "heal": 0.37,
+    "maxhp": 0.0,
+    "gold": 0.61,
+    "cards_gained": 1.01,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.11
+   },
+   "INFESTED_AUTOMATON.pages.INITIAL.options.TOUCH_CORE": {
+    "n": 203,
+    "pick": 0.374,
+    "win": 0.33,
+    "dmg": 0.0,
+    "heal": 0.27,
+    "maxhp": 0.0,
+    "gold": 0.83,
+    "cards_gained": 1.01,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "DENSE_VEGETATION": {
+  "n": 626,
+  "options": {
+   "DENSE_VEGETATION.pages.INITIAL.options.TRUDGE_ON": {
+    "n": 363,
+    "pick": 0.407,
+    "win": 0.182,
+    "dmg": 8.0,
+    "heal": 0.03,
+    "maxhp": 0.0,
+    "gold": 80.67,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "DENSE_VEGETATION.pages.REST.options.FIGHT": {
+    "n": 265,
+    "pick": 0.297,
+    "win": 0.249,
+    "dmg": 14.42,
+    "heal": 26.78,
+    "maxhp": 0.14,
+    "gold": 11.21,
+    "cards_gained": 0.85,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "DENSE_VEGETATION.pages.INITIAL.options.REST": {
+    "n": 264,
+    "pick": 0.296,
+    "win": 0.25,
+    "dmg": 14.32,
+    "heal": 26.82,
+    "maxhp": 0.14,
+    "gold": 11.22,
+    "cards_gained": 0.85,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "WATERLOGGED_SCRIPTORIUM": {
+  "n": 520,
+  "options": {
+   "WATERLOGGED_SCRIPTORIUM.pages.INITIAL.options.BLOODY_INK": {
+    "n": 240,
+    "pick": 0.462,
+    "win": 0.183,
+    "dmg": 0.0,
+    "heal": 6.04,
+    "maxhp": 6.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "WATERLOGGED_SCRIPTORIUM.pages.INITIAL.options.PRICKLY_SPONGE": {
+    "n": 153,
+    "pick": 0.295,
+    "win": 0.294,
+    "dmg": 0.0,
+    "heal": 0.03,
+    "maxhp": 0.0,
+    "gold": -98.76,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "WATERLOGGED_SCRIPTORIUM.pages.INITIAL.options.TENTACLE_QUILL": {
+    "n": 126,
+    "pick": 0.243,
+    "win": 0.222,
+    "dmg": 0.0,
+    "heal": 0.04,
+    "maxhp": 0.0,
+    "gold": -54.47,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "TANX": {
+  "n": 1134,
+  "options": {
+   "SAI": {
+    "n": 198,
+    "pick": 0.176,
+    "win": 0.621,
+    "dmg": 0.0,
+    "heal": 39.34,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "TRI_BOOMERANG": {
+    "n": 188,
+    "pick": 0.167,
+    "win": 0.553,
+    "dmg": 0.0,
+    "heal": 38.24,
+    "maxhp": 0.0,
+    "gold": 0.06,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "CROSSBOW": {
+    "n": 151,
+    "pick": 0.134,
+    "win": 0.722,
+    "dmg": 0.0,
+    "heal": 37.67,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "IRON_CLUB": {
+    "n": 125,
+    "pick": 0.111,
+    "win": 0.6,
+    "dmg": 0.0,
+    "heal": 36.66,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "CLAWS": {
+    "n": 104,
+    "pick": 0.092,
+    "win": 0.462,
+    "dmg": 0.0,
+    "heal": 41.37,
+    "maxhp": 0.0,
+    "gold": 4.33,
+    "cards_gained": 0.12,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "THROWING_AXE": {
+    "n": 87,
+    "pick": 0.077,
+    "win": 0.517,
+    "dmg": 0.0,
+    "heal": 39.4,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.01,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "MEAT_CLEAVER": {
+    "n": 82,
+    "pick": 0.073,
+    "win": 0.585,
+    "dmg": 0.0,
+    "heal": 37.49,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "SPIKED_GAUNTLETS": {
+    "n": 72,
+    "pick": 0.064,
+    "win": 0.528,
+    "dmg": 0.0,
+    "heal": 37.21,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "TANXS_WHISTLE": {
+    "n": 67,
+    "pick": 0.06,
+    "win": 0.463,
+    "dmg": 0.0,
+    "heal": 41.28,
+    "maxhp": 0.0,
+    "gold": 1.7,
+    "cards_gained": 1.03,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "WAR_HAMMER": {
+    "n": 51,
+    "pick": 0.045,
+    "win": 0.529,
+    "dmg": 0.0,
+    "heal": 39.1,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "MYMOD_REROLL": {
+    "n": 1,
+    "pick": 0.001,
+    "win": 0.0,
+    "dmg": 0.0,
+    "heal": 51.0,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "BATTLEWORN_DUMMY": {
+  "n": 508,
+  "options": {
+   "BATTLEWORN_DUMMY.pages.INITIAL.options.SETTING_2": {
+    "n": 359,
+    "pick": 0.707,
+    "win": 0.476,
+    "dmg": 2.03,
+    "heal": 5.65,
+    "maxhp": 0.11,
+    "gold": -0.31,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "BATTLEWORN_DUMMY.pages.INITIAL.options.SETTING_3": {
+    "n": 112,
+    "pick": 0.22,
+    "win": 0.679,
+    "dmg": 3.5,
+    "heal": 5.97,
+    "maxhp": 0.31,
+    "gold": -0.2,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.65,
+    "curse": 0.0
+   },
+   "BATTLEWORN_DUMMY.pages.INITIAL.options.SETTING_1": {
+    "n": 37,
+    "pick": 0.073,
+    "win": 0.514,
+    "dmg": 0.81,
+    "heal": 7.35,
+    "maxhp": 0.49,
+    "gold": -0.27,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "HUNGRY_FOR_MUSHROOMS": {
+  "n": 509,
+  "options": {
+   "HUNGRY_FOR_MUSHROOMS.pages.INITIAL.options.FRAGRANT_MUSHROOM": {
+    "n": 399,
+    "pick": 0.784,
+    "win": 0.574,
+    "dmg": 14.87,
+    "heal": 0.31,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "HUNGRY_FOR_MUSHROOMS.pages.INITIAL.options.BIG_MUSHROOM": {
+    "n": 110,
+    "pick": 0.216,
+    "win": 0.373,
+    "dmg": 0.0,
+    "heal": 20.27,
+    "maxhp": 20.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "COLORFUL_PHILOSOPHERS": {
+  "n": 526,
+  "options": {
+   "COLORFUL_PHILOSOPHERS.pages.INITIAL.options.SILENT": {
+    "n": 232,
+    "pick": 0.441,
+    "win": 0.341,
+    "dmg": 0.0,
+    "heal": 0.76,
+    "maxhp": 0.04,
+    "gold": 1.31,
+    "cards_gained": 2.18,
+    "cards_removed": 0.0,
+    "relics": 0.03,
+    "curse": 0.0
+   },
+   "COLORFUL_PHILOSOPHERS.pages.INITIAL.options.DEFECT": {
+    "n": 131,
+    "pick": 0.249,
+    "win": 0.458,
+    "dmg": 0.0,
+    "heal": 0.98,
+    "maxhp": 0.0,
+    "gold": 3.3,
+    "cards_gained": 2.21,
+    "cards_removed": 0.0,
+    "relics": 0.03,
+    "curse": 0.0
+   },
+   "COLORFUL_PHILOSOPHERS.pages.INITIAL.options.NECROBINDER": {
+    "n": 105,
+    "pick": 0.2,
+    "win": 0.448,
+    "dmg": 0.0,
+    "heal": 0.95,
+    "maxhp": 0.0,
+    "gold": 1.14,
+    "cards_gained": 2.01,
+    "cards_removed": 0.0,
+    "relics": 0.02,
+    "curse": 0.0
+   },
+   "COLORFUL_PHILOSOPHERS.pages.INITIAL.options.REGENT": {
+    "n": 58,
+    "pick": 0.11,
+    "win": 0.466,
+    "dmg": 0.0,
+    "heal": 0.78,
+    "maxhp": 0.0,
+    "gold": 0.78,
+    "cards_gained": 1.83,
+    "cards_removed": 0.0,
+    "relics": 0.03,
+    "curse": 0.0
+   }
+  }
+ },
+ "ABYSSAL_BATHS": {
+  "n": 692,
+  "options": {
+   "ABYSSAL_BATHS.pages.ALL.options.LINGER": {
+    "n": 1039,
+    "pick": 0.524,
+    "win": 0.196,
+    "dmg": 37.6,
+    "heal": 13.92,
+    "maxhp": 12.36,
+    "gold": 0.03,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "ABYSSAL_BATHS.pages.INITIAL.options.ABSTAIN": {
+    "n": 437,
+    "pick": 0.22,
+    "win": 0.192,
+    "dmg": 0.0,
+    "heal": 9.97,
+    "maxhp": 0.0,
+    "gold": 0.14,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "ABYSSAL_BATHS.pages.INITIAL.options.IMMERSE": {
+    "n": 255,
+    "pick": 0.129,
+    "win": 0.208,
+    "dmg": 27.86,
+    "heal": 10.6,
+    "maxhp": 10.16,
+    "gold": 0.05,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "ABYSSAL_BATHS.pages.ALL.options.EXIT_BATHS": {
+    "n": 253,
+    "pick": 0.128,
+    "win": 0.209,
+    "dmg": 27.21,
+    "heal": 10.15,
+    "maxhp": 10.07,
+    "gold": 0.05,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "WOOD_CARVINGS": {
+  "n": 654,
+  "options": {
+   "WOOD_CARVINGS.pages.INITIAL.options.SNAKE": {
+    "n": 333,
+    "pick": 0.509,
+    "win": 0.204,
+    "dmg": 0.0,
+    "heal": 0.03,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "WOOD_CARVINGS.pages.INITIAL.options.BIRD": {
+    "n": 205,
+    "pick": 0.313,
+    "win": 0.263,
+    "dmg": 0.0,
+    "heal": 0.15,
+    "maxhp": 0.0,
+    "gold": 0.29,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "WOOD_CARVINGS.pages.INITIAL.options.TORUS": {
+    "n": 116,
+    "pick": 0.177,
+    "win": 0.198,
+    "dmg": 0.0,
+    "heal": 0.0,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "TEA_MASTER": {
+  "n": 500,
+  "options": {
+   "TEA_MASTER.pages.INITIAL.options.BONE_TEA": {
+    "n": 204,
+    "pick": 0.408,
+    "win": 0.279,
+    "dmg": 0.0,
+    "heal": 0.17,
+    "maxhp": 0.0,
+    "gold": -49.88,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "TEA_MASTER.pages.INITIAL.options.TEA_OF_DISCOURTESY": {
+    "n": 175,
+    "pick": 0.35,
+    "win": 0.303,
+    "dmg": 0.0,
+    "heal": 0.14,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "TEA_MASTER.pages.INITIAL.options.EMBER_TEA": {
+    "n": 121,
+    "pick": 0.242,
+    "win": 0.231,
+    "dmg": 0.0,
+    "heal": 0.17,
+    "maxhp": 0.0,
+    "gold": -149.9,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "WELCOME_TO_WONGOS": {
+  "n": 346,
+  "options": {
+   "WELCOME_TO_WONGOS.pages.INITIAL.options.BARGAIN_BIN": {
+    "n": 238,
+    "pick": 0.688,
+    "win": 0.424,
+    "dmg": 0.0,
+    "heal": 0.53,
+    "maxhp": 0.15,
+    "gold": -100.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "WELCOME_TO_WONGOS.pages.INITIAL.options.FEATURED_ITEM": {
+    "n": 50,
+    "pick": 0.145,
+    "win": 0.38,
+    "dmg": 0.0,
+    "heal": 0.1,
+    "maxhp": 0.0,
+    "gold": -200.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "WELCOME_TO_WONGOS.pages.INITIAL.options.MYSTERY_BOX": {
+    "n": 44,
+    "pick": 0.127,
+    "win": 0.295,
+    "dmg": 0.0,
+    "heal": 0.23,
+    "maxhp": 0.0,
+    "gold": -299.73,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "WELCOME_TO_WONGOS.pages.INITIAL.options.LEAVE": {
+    "n": 14,
+    "pick": 0.04,
+    "win": 0.357,
+    "dmg": 0.0,
+    "heal": 0.0,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "JUNGLE_MAZE_ADVENTURE": {
+  "n": 642,
+  "options": {
+   "JUNGLE_MAZE_ADVENTURE.pages.INITIAL.options.JOIN_FORCES": {
+    "n": 368,
+    "pick": 0.573,
+    "win": 0.185,
+    "dmg": 0.0,
+    "heal": 0.08,
+    "maxhp": 0.0,
+    "gold": 49.62,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "JUNGLE_MAZE_ADVENTURE.pages.INITIAL.options.SOLO_QUEST": {
+    "n": 274,
+    "pick": 0.427,
+    "win": 0.161,
+    "dmg": 18.0,
+    "heal": 0.02,
+    "maxhp": 0.0,
+    "gold": 150.09,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "ZEN_WEAVER": {
+  "n": 342,
+  "options": {
+   "ZEN_WEAVER.pages.INITIAL.options.EMOTIONAL_AWARENESS": {
+    "n": 195,
+    "pick": 0.57,
+    "win": 0.415,
+    "dmg": 0.0,
+    "heal": 0.27,
+    "maxhp": 0.0,
+    "gold": -125.0,
+    "cards_gained": 0.0,
+    "cards_removed": 1.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "ZEN_WEAVER.pages.INITIAL.options.ARACHNID_ACUPUNCTURE": {
+    "n": 76,
+    "pick": 0.222,
+    "win": 0.395,
+    "dmg": 0.0,
+    "heal": 0.13,
+    "maxhp": 0.0,
+    "gold": -250.0,
+    "cards_gained": 0.0,
+    "cards_removed": 2.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "ZEN_WEAVER.pages.INITIAL.options.BREATHING_TECHNIQUES": {
+    "n": 71,
+    "pick": 0.208,
+    "win": 0.211,
+    "dmg": 0.0,
+    "heal": 0.56,
+    "maxhp": 0.0,
+    "gold": -47.8,
+    "cards_gained": 2.03,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "WELLSPRING": {
+  "n": 591,
+  "options": {
+   "WELLSPRING.pages.INITIAL.options.BATHE": {
+    "n": 366,
+    "pick": 0.619,
+    "win": 0.246,
+    "dmg": 0.0,
+    "heal": 0.04,
+    "maxhp": 0.0,
+    "gold": 0.04,
+    "cards_gained": 1.0,
+    "cards_removed": 1.0,
+    "relics": 0.0,
+    "curse": 1.0
+   },
+   "WELLSPRING.pages.INITIAL.options.BOTTLE": {
+    "n": 225,
+    "pick": 0.381,
+    "win": 0.151,
+    "dmg": 0.0,
+    "heal": 0.23,
+    "maxhp": 0.02,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "DOLL_ROOM": {
+  "n": 522,
+  "options": {
+   "DOLL_ROOM.pages.INITIAL.options.TAKE_SOME_TIME": {
+    "n": 317,
+    "pick": 0.353,
+    "win": 0.388,
+    "dmg": 4.98,
+    "heal": 0.26,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "DAUGHTER_OF_THE_WIND": {
+    "n": 227,
+    "pick": 0.253,
+    "win": 0.383,
+    "dmg": 6.83,
+    "heal": 0.26,
+    "maxhp": 0.0,
+    "gold": 0.05,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "DOLL_ROOM.pages.INITIAL.options.RANDOM": {
+    "n": 147,
+    "pick": 0.164,
+    "win": 0.272,
+    "dmg": 0.0,
+    "heal": 0.07,
+    "maxhp": 0.0,
+    "gold": 0.08,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "MR_STRUGGLES": {
+    "n": 91,
+    "pick": 0.101,
+    "win": 0.385,
+    "dmg": 5.43,
+    "heal": 0.22,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "DOLL_ROOM.pages.INITIAL.options.EXAMINE": {
+    "n": 58,
+    "pick": 0.065,
+    "win": 0.31,
+    "dmg": 14.97,
+    "heal": 0.26,
+    "maxhp": 0.0,
+    "gold": 0.21,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "BING_BONG": {
+    "n": 57,
+    "pick": 0.064,
+    "win": 0.333,
+    "dmg": 7.09,
+    "heal": 0.3,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "RANWID_THE_ELDER": {
+  "n": 654,
+  "options": {
+   "RANWID_THE_ELDER.pages.INITIAL.options.POTION": {
+    "n": 282,
+    "pick": 0.431,
+    "win": 0.461,
+    "dmg": 0.0,
+    "heal": 0.3,
+    "maxhp": 0.02,
+    "gold": 1.06,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   },
+   "RANWID_THE_ELDER.pages.INITIAL.options.RELIC": {
+    "n": 228,
+    "pick": 0.349,
+    "win": 0.461,
+    "dmg": 0.0,
+    "heal": 1.07,
+    "maxhp": 0.67,
+    "gold": 2.63,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 2.0,
+    "curse": 0.0
+   },
+   "RANWID_THE_ELDER.pages.INITIAL.options.GOLD": {
+    "n": 144,
+    "pick": 0.22,
+    "win": 0.535,
+    "dmg": 0.0,
+    "heal": 0.89,
+    "maxhp": 0.57,
+    "gold": -100.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "MORPHIC_GROVE": {
+  "n": 406,
+  "options": {
+   "MORPHIC_GROVE.pages.INITIAL.options.GROUP": {
+    "n": 222,
+    "pick": 0.547,
+    "win": 0.315,
+    "dmg": 0.0,
+    "heal": 0.33,
+    "maxhp": 0.0,
+    "gold": 0.41,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "MORPHIC_GROVE.pages.INITIAL.options.LONER": {
+    "n": 184,
+    "pick": 0.453,
+    "win": 0.158,
+    "dmg": 0.0,
+    "heal": 5.0,
+    "maxhp": 5.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "WAR_HISTORIAN_REPY": {
+  "n": 150,
+  "options": {
+   "WAR_HISTORIAN_REPY.pages.INITIAL.options.UNLOCK_CAGE": {
+    "n": 139,
+    "pick": 0.921,
+    "win": 0.727,
+    "dmg": 0.0,
+    "heal": 0.44,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 1.0,
+    "relics": 1.01,
+    "curse": 0.0
+   },
+   "WAR_HISTORIAN_REPY.pages.INITIAL.options.UNLOCK_CHEST": {
+    "n": 12,
+    "pick": 0.079,
+    "win": 0.833,
+    "dmg": 0.0,
+    "heal": 0.0,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 1.08,
+    "relics": 2.08,
+    "curse": 0.0
+   }
+  }
+ },
+ "LEX_NINJA2_EVENT_DRINK": {
+  "n": 1,
+  "options": {
+   "LEX_NINJA2_EVENT_DRINK.pages.INITIAL.options.DRINK0": {
+    "n": 1,
+    "pick": 0.5,
+    "win": 0.0,
+    "dmg": 0.0,
+    "heal": 5.0,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   },
+   "LEX_NINJA2_EVENT_DRINK.pages.DRINK_OR_LEAVE.options.LEAVE": {
+    "n": 1,
+    "pick": 0.5,
+    "win": 0.0,
+    "dmg": 0.0,
+    "heal": 5.0,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "GENSOKYOSPIRE-SHIP_PHANTOM": {
+  "n": 1,
+  "options": {
+   "GENSOKYOSPIRE-SHIP_PHANTOM.pages.INITIAL.options.TAKE_DAMAGE": {
+    "n": 1,
+    "pick": 1.0,
+    "win": 0.0,
+    "dmg": 13.0,
+    "heal": 0.0,
+    "maxhp": 0.0,
+    "gold": 0.0,
+    "cards_gained": 0.0,
+    "cards_removed": 0.0,
+    "relics": 1.0,
+    "curse": 0.0
+   }
+  }
+ },
+ "GENSOKYOSPIRE-LUCKY_CHARM_FOR_PROSPEROUS_COMMERCE": {
+  "n": 2,
+  "options": {
+   "GENSOKYOSPIRE-LUCKY_CHARM_FOR_PROSPEROUS_COMMERCE.pages.INITIAL.options.BUY_POWER_CARD": {
+    "n": 2,
+    "pick": 1.0,
+    "win": 0.0,
+    "dmg": 0.0,
+    "heal": 0.0,
+    "maxhp": 0.0,
+    "gold": -50.0,
+    "cards_gained": 1.0,
+    "cards_removed": 0.0,
+    "relics": 0.0,
+    "curse": 0.0
+   }
+  }
+ }
+}

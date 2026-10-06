@@ -1,0 +1,558 @@
+{
+"STRIKE_IRONCLAD": {
+"rate": 0.472,
+"n": 63214
+},
+"BASH": {
+"rate": 0.563,
+"n": 14342
+},
+"EVIL_EYE": {
+"rate": 0.624,
+"n": 1759
+},
+"SHRUG_IT_OFF": {
+"rate": 0.719,
+"n": 6109
+},
+"DEFEND_IRONCLAD": {
+"rate": 0.442,
+"n": 57948
+},
+"ASCENDERS_BANE": {
+"rate": 0.0,
+"n": 12568
+},
+"SWORD_BOOMERANG": {
+"rate": 0.675,
+"n": 974
+},
+"CLUMSY": {
+"rate": 0.0,
+"n": 1131
+},
+"BREAKTHROUGH": {
+"rate": 0.553,
+"n": 1977
+},
+"STAMPEDE": {
+"rate": 0.767,
+"n": 867
+},
+"POMMEL_STRIKE": {
+"rate": 0.724,
+"n": 6006
+},
+"HAVOC": {
+"rate": 0.785,
+"n": 2082
+},
+"BLOOD_WALL": {
+"rate": 0.451,
+"n": 2586
+},
+"DEMON_FORM": {
+"rate": 0.448,
+"n": 524
+},
+"GUILTY": {
+"rate": 0.0,
+"n": 460
+},
+"CRIMSON_MANTLE": {
+"rate": 0.713,
+"n": 814
+},
+"FISTICUFFS": {
+"rate": 0.883,
+"n": 504
+},
+"SLIMED": {
+"rate": 0.38,
+"n": 972
+},
+"INFERNO": {
+"rate": 0.554,
+"n": 995
+},
+"BODY_SLAM": {
+"rate": 0.762,
+"n": 2343
+},
+"DOMINATE": {
+"rate": 0.729,
+"n": 1263
+},
+"JUGGLING": {
+"rate": 0.578,
+"n": 677
+},
+"HEADBUTT": {
+"rate": 0.694,
+"n": 2539
+},
+"BRAND": {
+"rate": 0.791,
+"n": 829
+},
+"RAGE": {
+"rate": 0.786,
+"n": 1620
+},
+"INFECTION": {
+"rate": 0.0,
+"n": 1442
+},
+"TREMBLE": {
+"rate": 0.711,
+"n": 3096
+},
+"UPPERCUT": {
+"rate": 0.735,
+"n": 2224
+},
+"ANGER": {
+"rate": 0.854,
+"n": 2478
+},
+"OFFERING": {
+"rate": 0.793,
+"n": 939
+},
+"BURNING_PACT": {
+"rate": 0.641,
+"n": 2689
+},
+"FLAME_BARRIER": {
+"rate": 0.591,
+"n": 2507
+},
+"NEOWS_FURY": {
+"rate": 0.726,
+"n": 307
+},
+"HOWL_FROM_BEYOND": {
+"rate": 0.205,
+"n": 800
+},
+"BATTLE_TRANCE": {
+"rate": 0.834,
+"n": 3086
+},
+"TRUE_GRIT": {
+"rate": 0.621,
+"n": 3381
+},
+"NOT_YET": {
+"rate": 0.477,
+"n": 599
+},
+"ASHEN_STRIKE": {
+"rate": 0.617,
+"n": 1498
+},
+"TAUNT": {
+"rate": 0.805,
+"n": 5874
+},
+"WOUND": {
+"rate": 0.0,
+"n": 732
+},
+"RELAX": {
+"rate": 0.602,
+"n": 457
+},
+"DAZED": {
+"rate": 0.0,
+"n": 2475
+},
+"STOKE": {
+"rate": 0.734,
+"n": 1228
+},
+"SECOND_WIND": {
+"rate": 0.546,
+"n": 2015
+},
+"FIGHT_ME": {
+"rate": 0.613,
+"n": 937
+},
+"STONE_ARMOR": {
+"rate": 0.81,
+"n": 1237
+},
+"MANGLE": {
+"rate": 0.556,
+"n": 726
+},
+"MAD_SCIENCE": {
+"rate": 0.866,
+"n": 389
+},
+"FEEL_NO_PAIN": {
+"rate": 0.74,
+"n": 1636
+},
+"FORGOTTEN_RITUAL": {
+"rate": 0.607,
+"n": 1815
+},
+"BARRICADE": {
+"rate": 0.52,
+"n": 619
+},
+"PILLAGE": {
+"rate": 0.688,
+"n": 551
+},
+"WITHER": {
+"rate": 0.0,
+"n": 582
+},
+"DISMANTLE": {
+"rate": 0.735,
+"n": 1128
+},
+"ARMAMENTS": {
+"rate": 0.77,
+"n": 3107
+},
+"PROLONG": {
+"rate": 0.804,
+"n": 301
+},
+"THUNDERCLAP": {
+"rate": 0.721,
+"n": 1504
+},
+"PROWESS": {
+"rate": 0.858,
+"n": 324
+},
+"BLOODLETTING": {
+"rate": 0.466,
+"n": 2807
+},
+"BULLY": {
+"rate": 0.884,
+"n": 1574
+},
+"COLOSSUS": {
+"rate": 0.626,
+"n": 3585
+},
+"ULTIMATE_STRIKE": {
+"rate": 0.664,
+"n": 485
+},
+"CRUELTY": {
+"rate": 0.741,
+"n": 1806
+},
+"SPITE": {
+"rate": 0.881,
+"n": 548
+},
+"FRANTIC_ESCAPE": {
+"rate": 0.596,
+"n": 1161
+},
+"IMPERVIOUS": {
+"rate": 0.487,
+"n": 672
+},
+"RUPTURE": {
+"rate": 0.569,
+"n": 854
+},
+"BURN": {
+"rate": 0.0,
+"n": 407
+},
+"WHIRLWIND": {
+"rate": 0.58,
+"n": 943
+},
+"TEAR_ASUNDER": {
+"rate": 0.432,
+"n": 412
+},
+"DISCOVERY": {
+"rate": 0.916,
+"n": 359
+},
+"CINDER": {
+"rate": 0.479,
+"n": 674
+},
+"UNRELENTING": {
+"rate": 0.73,
+"n": 1113
+},
+"INFLAME": {
+"rate": 0.731,
+"n": 1106
+},
+"FEED": {
+"rate": 0.373,
+"n": 399
+},
+"GREED": {
+"rate": 0.0,
+"n": 1463
+},
+"INJURY": {
+"rate": 0.0,
+"n": 892
+},
+"NEUTRALIZE": {
+"rate": 0.953,
+"n": 805
+},
+"STRIKE_SILENT": {
+"rate": 0.522,
+"n": 3207
+},
+"DEFEND_SILENT": {
+"rate": 0.398,
+"n": 3961
+},
+"SURVIVOR": {
+"rate": 0.55,
+"n": 836
+},
+"HEMOKINESIS": {
+"rate": 0.527,
+"n": 611
+},
+"IRON_WAVE": {
+"rate": 0.72,
+"n": 769
+},
+"BACKFLIP": {
+"rate": 0.713,
+"n": 422
+},
+"SETUP_STRIKE": {
+"rate": 0.682,
+"n": 1046
+},
+"LEADING_STRIKE": {
+"rate": 0.768,
+"n": 392
+},
+"PIERCING_WAIL": {
+"rate": 0.469,
+"n": 377
+},
+"EXPECT_A_FIGHT": {
+"rate": 0.531,
+"n": 746
+},
+"GRAVEBLAST": {
+"rate": 0.596,
+"n": 342
+},
+"CLOAK_AND_DAGGER": {
+"rate": 0.725,
+"n": 305
+},
+"TWIN_STRIKE": {
+"rate": 0.627,
+"n": 1002
+},
+"SPOILS_MAP": {
+"rate": 0.0,
+"n": 839
+},
+"VICIOUS": {
+"rate": 0.675,
+"n": 1054
+},
+"MOLTEN_FIST": {
+"rate": 0.645,
+"n": 2817
+},
+"BECKON": {
+"rate": 0.74,
+"n": 743
+},
+"CONFLAGRATION": {
+"rate": 0.691,
+"n": 648
+},
+"PERFECTED_STRIKE": {
+"rate": 0.542,
+"n": 1719
+},
+"PYRE": {
+"rate": 0.679,
+"n": 641
+},
+"INFERNAL_BLADE": {
+"rate": 0.825,
+"n": 658
+},
+"PRIMAL_FORCE": {
+"rate": 0.661,
+"n": 384
+},
+"BLUDGEON": {
+"rate": 0.46,
+"n": 984
+},
+"RAMPAGE": {
+"rate": 0.787,
+"n": 1014
+},
+"FLASH_OF_STEEL": {
+"rate": 0.94,
+"n": 397
+},
+"CASCADE": {
+"rate": 0.806,
+"n": 790
+},
+"BLADE_DANCE": {
+"rate": 0.768,
+"n": 362
+},
+"PECK": {
+"rate": 0.641,
+"n": 357
+},
+"DARK_EMBRACE": {
+"rate": 0.485,
+"n": 532
+},
+"FIEND_FIRE": {
+"rate": 0.555,
+"n": 510
+},
+"DEFEND_DEFECT": {
+"rate": 0.505,
+"n": 1844
+},
+"STRIKE_DEFECT": {
+"rate": 0.558,
+"n": 1390
+},
+"ZAP": {
+"rate": 0.745,
+"n": 506
+},
+"DUALCAST": {
+"rate": 0.603,
+"n": 481
+},
+"THRASH": {
+"rate": 0.74,
+"n": 909
+},
+"THE_BALL": {
+"rate": 0.882,
+"n": 322
+},
+"STOMP": {
+"rate": 0.415,
+"n": 629
+},
+"BREAK": {
+"rate": 0.919,
+"n": 542
+},
+"PACTS_END": {
+"rate": 0.697,
+"n": 485
+},
+"AGGRESSION": {
+"rate": 0.761,
+"n": 419
+},
+"DRUM_OF_BATTLE": {
+"rate": 0.418,
+"n": 1116
+},
+"STRIKE_NECROBINDER": {
+"rate": 0.445,
+"n": 2222
+},
+"BODYGUARD": {
+"rate": 0.796,
+"n": 818
+},
+"DEFEND_NECROBINDER": {
+"rate": 0.46,
+"n": 2816
+},
+"GRAVE_WARDEN": {
+"rate": 0.755,
+"n": 368
+},
+"UNLEASH": {
+"rate": 0.696,
+"n": 766
+},
+"SOUL": {
+"rate": 0.824,
+"n": 1115
+},
+"DEFY": {
+"rate": 0.909,
+"n": 505
+},
+"FINESSE": {
+"rate": 0.95,
+"n": 482
+},
+"UNMOVABLE": {
+"rate": 0.82,
+"n": 926
+},
+"ONE_TWO_PUNCH": {
+"rate": 0.607,
+"n": 575
+},
+"STRIKE_REGENT": {
+"rate": 0.509,
+"n": 1231
+},
+"FALLING_STAR": {
+"rate": 0.828,
+"n": 429
+},
+"DEFEND_REGENT": {
+"rate": 0.481,
+"n": 1540
+},
+"VENERATE": {
+"rate": 0.578,
+"n": 405
+},
+"HIDDEN_GEM": {
+"rate": 0.749,
+"n": 354
+},
+"ULTIMATE_DEFEND": {
+"rate": 0.617,
+"n": 423
+},
+"MAUL": {
+"rate": 0.558,
+"n": 373
+},
+"CHARGE_BATTERY": {
+"rate": 0.756,
+"n": 332
+},
+"PREPARED": {
+"rate": 0.821,
+"n": 442
+},
+"INVOKE": {
+"rate": 0.771,
+"n": 415
+}
+}

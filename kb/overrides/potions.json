@@ -1,0 +1,22 @@
+{
+  "_说明": "手写修正：药水用途。uses: offense 输出 / aoe 群伤 / setup 开局铺垫（力量、能力）/ defense 防守 / emergency 救命 / permanent 永久（拿到就喝）/ energy_draw 能量和抽牌 / utility 其他；target: enemy 要选目标",
+  "ATTACK_POTION": {"uses": ["offense"]},
+  "SKILL_POTION": {"uses": ["defense"]},
+  "POWER_POTION": {"uses": ["setup"]},
+  "STRENGTH_POTION": {"uses": ["setup"]},
+  "FLEX_POTION": {"uses": ["offense"]},
+  "DEXTERITY_POTION": {"uses": ["setup", "defense"]},
+  "ENERGY_POTION": {"uses": ["energy_draw"]},
+  "SWIFT_POTION": {"uses": ["energy_draw"]},
+  "FIRE_POTION": {"uses": ["offense"], "target": "enemy"},
+  "EXPLOSIVE_AMPOULE": {"uses": ["offense", "aoe"]},
+  "WEAK_POTION": {"uses": ["defense"], "target": "enemy"},
+  "VULNERABLE_POTION": {"uses": ["setup"], "target": "enemy"},
+  "BLOCK_POTION": {"uses": ["defense", "emergency"]},
+  "AMBERGRIS": {"uses": ["emergency"], "note": "回 50% 血；战斗中用还多一个回合"},
+  "BLOOD_POTION": {"uses": ["emergency"]},
+  "FAIRY_IN_A_BOTTLE": {"uses": ["emergency"], "note": "自动救命，不要主动喝"},
+  "DUPLICATOR": {"uses": ["setup"], "note": "下一张牌打两次：配大攻击或能力牌"},
+  "FRUIT_JUICE": {"uses": ["permanent"]},
+  "POWDERED_DEMISE": {"uses": ["offense"], "target": "enemy"}
+}

@@ -1,0 +1,20 @@
+{
+  "MegaCrit.Sts2.Core.Models.Powers/SkittishPower.cs": "b7fcc40241e8edfedc2de36404537e61f5b454ee32faa797e248bd9252acdfe7",
+  "MegaCrit.Sts2.Core.Commands.Builders/AttackCommand.cs": "6e2611720bf778be9d814c01d130e1a2cced40a7366ef667cc0397e45093b878",
+  "MegaCrit.Sts2.Core.Commands/CreatureCmd.cs": "b4c0eace35caeb0998edb70af5b626f96835c0d3149d474b9b7c4693d9e30278",
+  "MegaCrit.Sts2.Core.Entities.Creatures/DamageResult.cs": "33128b75cbb7863e8d56d116b0e517064500579284c1f9b668c07553b688dc49",
+  "MegaCrit.Sts2.Core.Models.Cards/Conflagration.cs": "b48af48e46d06061dbccc7708bbbcfa6b2ffeec06ef686285a3c23244f1eec11",
+  "MegaCrit.Sts2.Core.Models.Cards/Exterminate.cs": "08785fd2cb12a932484051077e67c4ab87a6bd97b18229c8b5abf6a0c4018433",
+  "MegaCrit.Sts2.Core.Models.Cards/FightMe.cs": "0ac96892cab59afe90a254ed9db0223113591ecd24db37494718b050c16d78cd",
+  "MegaCrit.Sts2.Core.Models.Cards/Maul.cs": "9c9f274d05484f408dbf379ee036b7c8e9056ea484739d196442d60a8cd1f8c4",
+  "MegaCrit.Sts2.Core.Models.Cards/Peck.cs": "bcc5e4b03dcffc3235ced65023cfde0eb26f0f3770586b8e13be485466996664",
+  "MegaCrit.Sts2.Core.Models.Cards/RipAndTear.cs": "c34ba7b0b2cdebc6009bca483acb9aeecc3f17de54e28c69996e4d39da5fe412",
+  "MegaCrit.Sts2.Core.Models.Cards/Spite.cs": "bfb50b6747679ca19feeb1c4e1ce019b97ff0cc4d214eb501494b005db7e24c1",
+  "MegaCrit.Sts2.Core.Models.Cards/SwordBoomerang.cs": "30396e5009159a29dc4bce78524619a185c476f745a3f9c476b9632f3e77e2a3",
+  "MegaCrit.Sts2.Core.Models.Cards/Thrash.cs": "62e6781c5d0b75d3a7633d6297aaa0d7f6aedf2bb652855c1b0a5863a8f0e7a5",
+  "MegaCrit.Sts2.Core.Models.Cards/TwinStrike.cs": "8e8a47fed7f942b061438bc32138c8d2e6d0badff6dd92fd91f0b305a4632270",
+  "MegaCrit.Sts2.Core.Models.Cards/Whirlwind.cs": "3cf5a8b673a8c45651c5835c07aef98b4d450ec1fa03972881ffc02d22fd418c",
+  "MegaCrit.Sts2.Core.Models.Cards/FiendFire.cs": "b6aac2acf9d62564987f0f2b16685de8e9fbf61fd2657b3cdf183dc88a6d1032",
+  "MegaCrit.Sts2.Core.Models.Cards/TearAsunder.cs": "fcf49863bbf7aeedae7fc6106bbccd50d1beb0beb216896b3076bf520c4a36d6",
+  "MegaCrit.Sts2.Core.Models.Cards/Dismantle.cs": "b80698380b1ee68a5757e4ba79f06d8adc659d3b37a485618e6b224eb3b76dd4"
+}

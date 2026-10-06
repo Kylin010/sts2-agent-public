@@ -1,0 +1,47 @@
+{
+  "base": "c0e6d01ba10361f5684e1b94fed28fab9123ad4c",
+  "source_result_hashes": {
+    "fresh100": "177bd9c2c23b5d78aa15efb8b994989ebaf7debd2ab21d07c74ffeabec4e79e4",
+    "dev60": "09ce291f4be2460aa7094a36eec55a9ec7e894de8550dfdcda4e88da5e33a12d"
+  },
+  "observational_bands": {
+    "fresh100": {
+      "1": {
+        "observed_decisions": 26,
+        "heal": 25
+      },
+      "2": {
+        "observed_decisions": 16,
+        "heal": 16
+      },
+      "3": {
+        "observed_decisions": 4,
+        "heal": 4
+      }
+    },
+    "dev60": {
+      "1": {
+        "observed_decisions": 21,
+        "heal": 21
+      },
+      "2": {
+        "observed_decisions": 9,
+        "heal": 9
+      },
+      "3": {
+        "observed_decisions": 7,
+        "heal": 6
+      }
+    }
+  },
+  "default_route_rest_boss_heal_below": null,
+  "proposed": 0.75,
+  "acts": [
+    2
+  ],
+  "pure_tests": 4,
+  "game_starts": 0,
+  "model_starts": 0,
+  "win_gain_unproven": true,
+  "raw_evidence": "/opt/slay-the-spire-2/codex-agent/research/normal-strategy-20261005"
+}

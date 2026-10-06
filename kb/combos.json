@@ -1,0 +1,5057 @@
+{
+ "_说明": {
+  "是什么": "铁甲战士（A10，测试版 v0.111.0）的牌组联动表和计分表。给路线 / 选牌 / 要不要打精英的「准备度」打分用。所有 id 都是卡牌 / 遗物 / 药水的英文 id（和 kb/cards.json、spire-codex 一致），中文只出现在 zh / note。校验和社区统计：python3 /opt/slay-the-spire-2/agent/docs/scripts/check_combos.py [--stats]；给人看的版本：agent/docs/联动计分表.md",
+  "分数尺度": "准备度满分 100。一条联动凑齐给 points（0~10）：9~10 = 改变整场打法的引擎（目前没有单条到这个数，最强的是 7）；6~7 = 社区胜率能拉开十几个百分点的经典组合（无惧疼痛 + 燃料、壁垒 + 全身撞击、势不可当 + 无惧疼痛、腐化引擎）；4~5 = 线上的主力组合（终端 + 它的引擎）；2~3 = 有用的小联动；1 = 锦上添花。partial = 只差一张牌时的分，表示「再拿一张就成型」，一般是 points 的 30~50%。card_tier 0~5、relic_tier 0~5、potion_tier 0~3 是不靠联动的单件强度。",
+  "匹配规则": "need_all 每张都要有；need_one 至少有其中一张；req_relics / req_potions 非空时至少持有其中一件 / 一瓶；need_any 按张数计（同名多张都算），relics_any / potions_any 每持有一件算一张，计数 ≥ min_any 才够。全部满足 = 凑齐，得 points + per_extra × min(max_extra, 计数 − min_any)（燃料越多越好的引擎才有 per_extra）。遗物 / 药水条件都满足、牌只差一张，并且「关键件」已经在手（need_all / need_one 里至少有一张在牌组里；靠遗物 / 药水起头的条目视为已有）= 差一张，得 partial。只有燃料没有引擎 / 终端时不给 partial（有力量来源但没有焚烧，不算「焚烧 + 力量」差一张）；差的是遗物或药水时也不给（它们不能像牌一样去拿）。anti 里的牌在牌组里、或 anti 里的遗物持有时，这条的得分 × anti.mult（例：钨合金棍 × 自伤线）。参考实现见 check_combos.py 的 match_combo / match_core / score_deck。",
+  "字段": "gives：凑齐后提供什么——aoe 群伤 / single 单体爆发 / scaling 成长 / block 格挡 / draw 抽牌 / energy 能量 / sustain 回血。vs：multi = 对多敌（精英、Boss 有 2 个以上敌人或会召唤）特别好；single = 对单体；all = 都好。source：依据（16 号 = ironclad/16-联动目录与输出终端.md，15 号 = 遗物与药水目录，07 号 = 社区对局胜率规律，规律 8 = research/玩家对局规律-20261002.md，共现 lift = kb/archetype_companions.json，landmark = research/community-ironclad-20261002/landmark-cards.csv）。data：社区数据（进第二幕 Boss 时牌组 + 遗物凑齐这条 vs 没凑齐的最终通关率，以及凑齐的局在赢家 / 输家里各占多少）；药水联动没法看「手上有没有」，data 是「用了这瓶药水的精英 / Boss 战，比同一遭遇平均多掉的血（负数 = 少掉）」，按牌组凑没凑齐分两组。",
+  "分数怎么定的": "先按机制强度（16 号 / 15 号的源码结论：伤害、格挡、成长的量级，触发是否稳定，有没有陷阱）定一个初值，再用社区数据校准：凑齐的局比没凑齐的通关率高 10 个百分点以上的往上调，低于没凑齐的往下调。数据是关联不是因果：稀有牌多来自精英和 Boss，好牌各自就好、凑在一起胜率是相加的（规律 8），所以联动分只奖励「终端遇到它的引擎」这一层，单张牌本身的好坏放在 card_tier 里。",
+  "建议怎么聚合": "见 scoring（参考实现 check_combos.py 的 score_deck）：同一条线的联动分相加后封顶 line_caps（一条线上的条目有重叠，避免叠爆），各线再相加封顶 combo_cap；核心取成型的最高一个满分 + 第二个的一半 + requires_cores 满足的额外分，封顶 core_cap；强力牌取牌组里 card_tier 最高的 card_top_n 张求和（升级过的加 upgrade_bonus）× card_weight，封顶 card_cap；遗物 / 药水按持有的 tier 求和 × 权重后封顶；五项相加 × total_scale 再封顶 total_cap（= 程序 params.json 的 combo_cap 20）。试算：初始牌组 0；第一幕拿到无惧疼痛 + 燃烧契约 + 坚毅约 13；第二幕消耗 + 格挡双核心成型封顶 20；只有狱火 + 放血约 2.5。对手是多敌而联动 vs=single（或对手是单体而 vs=multi）时，那条按 vs_mismatch_mult 打折。选牌时一张牌的联动价值 = 拿它之后的总分 − 现在的总分（差一张 → 凑齐的增量自然就算出来了）。这些封顶和权重是建议，程序可以按自己的准备度公式改。",
+  "和其他文件的关系": "cores 的定义和 agent/docs/scripts/cores.py（输出核心研究）一致（格挡转伤害一条是近似）；旧的 kb/synergies.json 是按 tag 加权的简化版，这份是按具体牌 id 的完整版。读这份文件的程序是 policy/combos.py（计分规则见 docs/路线分数制.md）：除了约定的 need_all / need_any / min_any / relics_any / potions_any，这里还用到 need_one、req_relics、req_potions、per_extra / max_extra、anti，核心用到 min_cards / count_mode / relic_companions / requires_cores，读的时候要照「匹配规则」处理，否则「卡戎之灰 + 消耗」这类靠遗物起头的条目会在没有遗物时被误判为凑齐。"
+ },
+ "scoring": {
+  "line_caps": {
+   "消耗线": 20,
+   "自伤线": 14,
+   "格挡线": 14,
+   "力量多段线": 10,
+   "易伤线": 8,
+   "打击线": 6,
+   "出牌数线": 5,
+   "能力牌线": 4,
+   "能量线": 5,
+   "药水×牌": 6
+  },
+  "combo_cap": 30,
+  "core_cap": 14,
+  "card_top_n": 8,
+  "card_weight": 0.25,
+  "card_cap": 8,
+  "relic_weight": 0.5,
+  "relic_cap": 6,
+  "potion_weight": 1.0,
+  "potion_cap": 4,
+  "total_scale": 0.5,
+  "total_cap": 20,
+  "vs_mismatch_mult": 0.5
+ },
+ "combos": [
+  {
+   "id": "exh_fnp_fuel",
+   "zh": "无惧疼痛 + 主动消耗手段",
+   "line": "消耗线",
+   "need_all": [
+    "FEEL_NO_PAIN"
+   ],
+   "need_any": [
+    "BURNING_PACT",
+    "TRUE_GRIT",
+    "SECOND_WIND",
+    "STOKE",
+    "FIEND_FIRE",
+    "HAVOC",
+    "BRAND",
+    "CINDER",
+    "THRASH",
+    "PURITY",
+    "CORRUPTION"
+   ],
+   "min_any": 2,
+   "relics_any": [
+    "TOASTY_MITTENS",
+    "GHOST_SEED",
+    "PAELS_CLAW"
+   ],
+   "potions_any": [
+    "ASHWATER",
+    "GLOWWATER_POTION"
+   ],
+   "per_extra": 1,
+   "max_extra": 2,
+   "gives": [
+    "block"
+   ],
+   "vs": "all",
+   "points": 7,
+   "partial": 3,
+   "source": "16 号 1.1/1.2/1.4；规律 8（消耗引擎 57%）",
+   "note": "每烧一张 3 格挡（升级 4），不吃敏捷也不怕脆弱；敌人塞的状态牌、进阶之灾都是免费燃料。燃料多一张 +1，最多 +2。数据 +17（793 局），全表最稳的正信号之一",
+   "data": {
+    "c2_n": 793,
+    "c2_wr": 0.59,
+    "c2_wr_without": 0.416,
+    "win_share": 0.234,
+    "lose_share": 0.132
+   }
+  },
+  {
+   "id": "exh_de_fuel",
+   "zh": "黑暗之拥 + 主动消耗手段",
+   "line": "消耗线",
+   "need_all": [
+    "DARK_EMBRACE"
+   ],
+   "need_any": [
+    "BURNING_PACT",
+    "TRUE_GRIT",
+    "SECOND_WIND",
+    "STOKE",
+    "FIEND_FIRE",
+    "HAVOC",
+    "BRAND",
+    "CINDER",
+    "THRASH",
+    "PURITY",
+    "CORRUPTION"
+   ],
+   "min_any": 2,
+   "relics_any": [
+    "TOASTY_MITTENS",
+    "GHOST_SEED",
+    "PAELS_CLAW"
+   ],
+   "potions_any": [
+    "ASHWATER",
+    "GLOWWATER_POTION"
+   ],
+   "per_extra": 1,
+   "max_extra": 2,
+   "anti": {
+    "relics": [
+     "FIDDLE"
+    ],
+    "mult": 0.2,
+    "why": "小提琴：回合中再也抽不了牌，黑暗之拥整张作废"
+   },
+   "gives": [
+    "draw"
+   ],
+   "vs": "all",
+   "points": 5,
+   "partial": 2,
+   "source": "16 号 1.2；07 号第二幕表（有黑暗之拥 66%）",
+   "note": "每烧一张抽 1：烧牌不再亏手牌。升级降到 1 费是质变",
+   "data": {
+    "c2_n": 227,
+    "c2_wr": 0.555,
+    "c2_wr_without": 0.442,
+    "win_share": 0.063,
+    "lose_share": 0.041
+   }
+  },
+  {
+   "id": "exh_fnp_de",
+   "zh": "无惧疼痛 + 黑暗之拥（+ 燃料）",
+   "line": "消耗线",
+   "need_all": [
+    "FEEL_NO_PAIN",
+    "DARK_EMBRACE"
+   ],
+   "need_any": [
+    "BURNING_PACT",
+    "TRUE_GRIT",
+    "SECOND_WIND",
+    "STOKE",
+    "FIEND_FIRE",
+    "HAVOC",
+    "BRAND",
+    "CINDER",
+    "THRASH",
+    "PURITY",
+    "CORRUPTION"
+   ],
+   "min_any": 1,
+   "relics_any": [
+    "TOASTY_MITTENS",
+    "GHOST_SEED",
+    "PAELS_CLAW"
+   ],
+   "potions_any": [
+    "ASHWATER",
+    "GLOWWATER_POTION"
+   ],
+   "anti": {
+    "relics": [
+     "FIDDLE"
+    ],
+    "mult": 0.5,
+    "why": "小提琴让黑暗之拥的抽牌作废，只剩无惧疼痛那半"
+   },
+   "gives": [
+    "block",
+    "draw"
+   ],
+   "vs": "all",
+   "points": 4,
+   "partial": 2,
+   "source": "16 号 1.4「无惧疼痛 + 黑暗之拥 + 燃料」；规律 8（消耗引擎 + 格挡转伤害 62%）；共现 lift 1.51",
+   "note": "在上面两条之外再加：一张消耗同时给格挡和抽牌，烧得越多越滚越快",
+   "data": {
+    "c2_n": 135,
+    "c2_wr": 0.57,
+    "c2_wr_without": 0.443,
+    "win_share": 0.039,
+    "lose_share": 0.023
+   }
+  },
+  {
+   "id": "exh_fnp_secondwind",
+   "zh": "无惧疼痛 + 重振精神",
+   "line": "消耗线",
+   "need_all": [
+    "FEEL_NO_PAIN",
+    "SECOND_WIND"
+   ],
+   "need_any": [],
+   "min_any": 0,
+   "relics_any": [],
+   "potions_any": [],
+   "gives": [
+    "block"
+   ],
+   "vs": "all",
+   "points": 4,
+   "partial": 2,
+   "source": "16 号 1.4 第一条",
+   "note": "烧 4 张非攻击牌 = 4×(5+3)=32 格挡；坚定不移在场时重振精神那部分还翻倍。数据 +18（350 局）",
+   "data": {
+    "c2_n": 350,
+    "c2_wr": 0.609,
+    "c2_wr_without": 0.434,
+    "win_share": 0.107,
+    "lose_share": 0.055
+   }
+  },
+  {
+   "id": "exh_de_fullhand",
+   "zh": "黑暗之拥 + 整手消耗（恶魔之焰 / 添柴）",
+   "line": "消耗线",
+   "need_all": [
+    "DARK_EMBRACE"
+   ],
+   "need_any": [
+    "FIEND_FIRE",
+    "STOKE"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [],
+   "anti": {
+    "relics": [
+     "FIDDLE"
+    ],
+    "mult": 0.2,
+    "why": "小提琴让黑暗之拥的抽牌作废"
+   },
+   "gives": [
+    "draw",
+    "single"
+   ],
+   "vs": "all",
+   "points": 4,
+   "partial": 2,
+   "source": "16 号 1.4 第二条；共现 lift（恶魔之焰 / 添柴和黑暗之拥同在赢家牌组）",
+   "note": "整手烧完再补满，恶魔之焰打完手里还有牌。数据 +22（88 局）",
+   "data": {
+    "c2_n": 88,
+    "c2_wr": 0.659,
+    "c2_wr_without": 0.443,
+    "win_share": 0.029,
+    "lose_share": 0.012
+   }
+  },
+  {
+   "id": "exh_ashen",
+   "zh": "灰烬打击 + 消耗手段 ≥3",
+   "line": "消耗线",
+   "need_all": [
+    "ASHEN_STRIKE"
+   ],
+   "need_any": [
+    "BURNING_PACT",
+    "TRUE_GRIT",
+    "SECOND_WIND",
+    "STOKE",
+    "FIEND_FIRE",
+    "HAVOC",
+    "BRAND",
+    "CINDER",
+    "THRASH",
+    "PURITY",
+    "CORRUPTION",
+    "OFFERING",
+    "IMPERVIOUS",
+    "TREMBLE",
+    "MOLTEN_FIST",
+    "DOMINATE",
+    "NOT_YET",
+    "FORGOTTEN_RITUAL",
+    "INFERNAL_BLADE",
+    "FEED"
+   ],
+   "min_any": 3,
+   "relics_any": [
+    "TOASTY_MITTENS",
+    "GHOST_SEED",
+    "PAELS_CLAW"
+   ],
+   "potions_any": [
+    "ASHWATER",
+    "GLOWWATER_POTION"
+   ],
+   "per_extra": 1,
+   "max_extra": 2,
+   "gives": [
+    "single"
+   ],
+   "vs": "single",
+   "points": 4,
+   "partial": 2,
+   "source": "16 号 1.3；共现 lift（黑暗之拥→灰烬打击 1.70、无惧疼痛 1.39）",
+   "note": "6 + 3×消耗堆张数（升级 +4/张），先烧牌后出它；没有 3~4 个稳定烧牌手段就只是一张 6 伤打击。自带消耗的牌（祭品、岿然不动……）也往消耗堆里加。数据 +8",
+   "data": {
+    "c2_n": 661,
+    "c2_wr": 0.519,
+    "c2_wr_without": 0.435,
+    "win_share": 0.172,
+    "lose_share": 0.129
+   }
+  },
+  {
+   "id": "exh_pacts_end",
+   "zh": "契约终结 + 消耗手段 ≥3",
+   "line": "消耗线",
+   "need_all": [
+    "PACTS_END"
+   ],
+   "need_any": [
+    "BURNING_PACT",
+    "TRUE_GRIT",
+    "SECOND_WIND",
+    "STOKE",
+    "FIEND_FIRE",
+    "HAVOC",
+    "BRAND",
+    "CINDER",
+    "THRASH",
+    "PURITY",
+    "CORRUPTION",
+    "OFFERING",
+    "IMPERVIOUS",
+    "TREMBLE",
+    "MOLTEN_FIST",
+    "DOMINATE",
+    "NOT_YET",
+    "FORGOTTEN_RITUAL",
+    "INFERNAL_BLADE",
+    "FEED"
+   ],
+   "min_any": 3,
+   "relics_any": [
+    "TOASTY_MITTENS",
+    "GHOST_SEED",
+    "PAELS_CLAW"
+   ],
+   "potions_any": [
+    "ASHWATER",
+    "GLOWWATER_POTION"
+   ],
+   "per_extra": 1,
+   "max_extra": 1,
+   "gives": [
+    "aoe"
+   ],
+   "vs": "multi",
+   "points": 3,
+   "partial": 1,
+   "source": "16 号 1.3；规律 8（契约终结单独 34% → 配无惧疼痛 53%）",
+   "note": "消耗堆 ≥3 张时 0 费全体 18（升级 24），不自带消耗、每轮都能打；第二幕普通战和多敌精英的答案。数据持平（−1，256 局）：机制上是 0 费群伤，但实际兑现不如预期，所以只给 3",
+   "data": {
+    "c2_n": 256,
+    "c2_wr": 0.434,
+    "c2_wr_without": 0.448,
+    "win_share": 0.056,
+    "lose_share": 0.059
+   }
+  },
+  {
+   "id": "exh_howl",
+   "zh": "彼岸咆哮 + 能烧掉它的牌",
+   "line": "消耗线",
+   "need_all": [
+    "HOWL_FROM_BEYOND"
+   ],
+   "need_any": [
+    "BURNING_PACT",
+    "TRUE_GRIT",
+    "BRAND",
+    "FIEND_FIRE",
+    "STOKE",
+    "THRASH",
+    "HAVOC",
+    "CINDER",
+    "PURITY"
+   ],
+   "min_any": 1,
+   "relics_any": [
+    "TOASTY_MITTENS"
+   ],
+   "potions_any": [
+    "ASHWATER",
+    "GLOWWATER_POTION"
+   ],
+   "per_extra": 1,
+   "max_extra": 2,
+   "gives": [
+    "aoe"
+   ],
+   "vs": "multi",
+   "points": 3,
+   "partial": 1,
+   "source": "16 号 1.3；共现 lift（恶魔之焰→彼岸咆哮 1.52、无惧疼痛 1.44）",
+   "note": "别花 3 费打它：被消耗后在你回合结束时免费打一次全体 18（升级 24）。坚毅要升级才能自选；痛殴 / 余烬是随机烧。数据 +5",
+   "data": {
+    "c2_n": 485,
+    "c2_wr": 0.489,
+    "c2_wr_without": 0.442,
+    "win_share": 0.119,
+    "lose_share": 0.1
+   }
+  },
+  {
+   "id": "exh_howl_havoc",
+   "zh": "彼岸咆哮 + 破灭（+ 头槌）",
+   "line": "消耗线",
+   "need_all": [
+    "HOWL_FROM_BEYOND",
+    "HAVOC"
+   ],
+   "need_any": [
+    "HEADBUTT"
+   ],
+   "min_any": 0,
+   "relics_any": [],
+   "potions_any": [],
+   "per_extra": 1,
+   "max_extra": 1,
+   "gives": [
+    "aoe"
+   ],
+   "vs": "multi",
+   "points": 2,
+   "partial": 1,
+   "source": "16 号 1.3「破灭翻到它 = 打两次」",
+   "note": "破灭翻到咆哮：先免费打一次 18，回合末再打一次；头槌能把它放回牌堆顶，配了头槌 +1",
+   "data": {
+    "c2_n": 94,
+    "c2_wr": 0.543,
+    "c2_wr_without": 0.445,
+    "win_share": 0.026,
+    "lose_share": 0.017
+   }
+  },
+  {
+   "id": "exh_evil_eye",
+   "zh": "邪眼 + 便宜的消耗手段",
+   "line": "消耗线",
+   "need_all": [
+    "EVIL_EYE"
+   ],
+   "need_any": [
+    "BRAND",
+    "BURNING_PACT",
+    "TRUE_GRIT",
+    "HAVOC",
+    "PURITY",
+    "CORRUPTION",
+    "OFFERING",
+    "TREMBLE",
+    "FORGOTTEN_RITUAL",
+    "INFERNAL_BLADE",
+    "SECOND_WIND"
+   ],
+   "min_any": 2,
+   "relics_any": [
+    "TOASTY_MITTENS"
+   ],
+   "potions_any": [
+    "ASHWATER",
+    "GLOWWATER_POTION"
+   ],
+   "gives": [
+    "block"
+   ],
+   "vs": "all",
+   "points": 3,
+   "partial": 1,
+   "source": "16 号 1.2/1.3「每回合先烧一张再打邪眼 = 16 格挡」",
+   "note": "本回合烧过任何牌就 8→16（升级 11→22）。烘焙手套每回合开始就烧一张，邪眼每回合都是满额",
+   "data": {
+    "c2_n": 681,
+    "c2_wr": 0.521,
+    "c2_wr_without": 0.434,
+    "win_share": 0.178,
+    "lose_share": 0.132
+   }
+  },
+  {
+   "id": "exh_drum",
+   "zh": "战鼓 + 能烧掉它的牌",
+   "line": "消耗线",
+   "need_all": [
+    "DRUM_OF_BATTLE"
+   ],
+   "need_any": [
+    "BURNING_PACT",
+    "TRUE_GRIT",
+    "SECOND_WIND",
+    "FIEND_FIRE",
+    "STOKE",
+    "BRAND",
+    "CORRUPTION",
+    "PURITY"
+   ],
+   "min_any": 1,
+   "relics_any": [
+    "TOASTY_MITTENS"
+   ],
+   "potions_any": [
+    "ASHWATER",
+    "GLOWWATER_POTION"
+   ],
+   "per_extra": 1,
+   "max_extra": 1,
+   "gives": [
+    "energy",
+    "draw"
+   ],
+   "vs": "all",
+   "points": 3,
+   "partial": 1,
+   "source": "16 号 1.2；07 号（没有消耗出口时是陷阱 −6.7）；共现 lift（黑暗之拥→战鼓 1.39）",
+   "note": "战鼓被消耗时 +2 能量（升级 3）：燃烧契约选它、重振精神 / 腐化顺手烧掉。没有出口时只是「1 费抽 2」",
+   "data": {
+    "c2_n": 485,
+    "c2_wr": 0.522,
+    "c2_wr_without": 0.438,
+    "win_share": 0.127,
+    "lose_share": 0.094
+   }
+  },
+  {
+   "id": "exh_corruption",
+   "zh": "腐化 + 无惧疼痛 / 黑暗之拥",
+   "line": "消耗线",
+   "need_all": [
+    "CORRUPTION"
+   ],
+   "need_any": [
+    "FEEL_NO_PAIN",
+    "DARK_EMBRACE"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [],
+   "per_extra": 2,
+   "max_extra": 1,
+   "gives": [
+    "block",
+    "draw",
+    "energy"
+   ],
+   "vs": "all",
+   "points": 7,
+   "partial": 3,
+   "source": "16 号 1.4 最后一条；15 号尘封魔典；GPT 赢的 5 局",
+   "note": "技能全 0 费、打出即烧，每张都给格挡和抽牌。腐化只能从先古拿（达夫的尘封魔典必给腐化+），不能当构筑前提",
+   "data": {
+    "c2_n": 32,
+    "c2_wr": 0.562,
+    "c2_wr_without": 0.446,
+    "win_share": 0.009,
+    "lose_share": 0.006
+   }
+  },
+  {
+   "id": "exh_selfexhaust",
+   "zh": "无惧疼痛 / 黑暗之拥 + 自带消耗的牌 ≥3",
+   "line": "消耗线",
+   "need_all": [],
+   "need_one": [
+    "FEEL_NO_PAIN",
+    "DARK_EMBRACE"
+   ],
+   "need_any": [
+    "OFFERING",
+    "IMPERVIOUS",
+    "TREMBLE",
+    "MOLTEN_FIST",
+    "DOMINATE",
+    "NOT_YET",
+    "FORGOTTEN_RITUAL",
+    "INFERNAL_BLADE",
+    "FEED"
+   ],
+   "min_any": 3,
+   "relics_any": [],
+   "potions_any": [],
+   "gives": [
+    "block",
+    "draw"
+   ],
+   "vs": "all",
+   "points": 2,
+   "partial": 0,
+   "source": "16 号 1.1「自带消耗的牌」",
+   "note": "祭品、岿然不动、战栗、熔融之拳、主宰……本来就要打，每打一张顺带触发一次引擎",
+   "data": {
+    "c2_n": 380,
+    "c2_wr": 0.513,
+    "c2_wr_without": 0.441,
+    "win_share": 0.098,
+    "lose_share": 0.075
+   }
+  },
+  {
+   "id": "exh_charons",
+   "zh": "卡戎之灰 + 消耗手段 ≥2",
+   "line": "消耗线",
+   "need_all": [],
+   "need_any": [
+    "BURNING_PACT",
+    "TRUE_GRIT",
+    "SECOND_WIND",
+    "STOKE",
+    "FIEND_FIRE",
+    "HAVOC",
+    "BRAND",
+    "CINDER",
+    "THRASH",
+    "PURITY",
+    "CORRUPTION",
+    "OFFERING",
+    "IMPERVIOUS",
+    "TREMBLE",
+    "MOLTEN_FIST",
+    "DOMINATE",
+    "NOT_YET",
+    "FORGOTTEN_RITUAL",
+    "INFERNAL_BLADE",
+    "FEED"
+   ],
+   "min_any": 2,
+   "relics_any": [
+    "TOASTY_MITTENS",
+    "GHOST_SEED",
+    "PAELS_CLAW"
+   ],
+   "potions_any": [
+    "ASHWATER",
+    "GLOWWATER_POTION"
+   ],
+   "req_relics": [
+    "CHARONS_ASHES"
+   ],
+   "per_extra": 1,
+   "max_extra": 2,
+   "gives": [
+    "aoe"
+   ],
+   "vs": "multi",
+   "points": 4,
+   "partial": 2,
+   "source": "16 号 1.2/九（续）；15 号（卡戎 ①+6 ②+8，消耗流 S）",
+   "note": "每消耗一张全体 3（不吃力量和易伤，会被格挡挡）；专克花园幽灵鳗（遗物伤害不触发它们加格挡）。数据 +4（122 局）",
+   "data": {
+    "c2_n": 122,
+    "c2_wr": 0.484,
+    "c2_wr_without": 0.446,
+    "win_share": 0.03,
+    "lose_share": 0.026
+   }
+  },
+  {
+   "id": "exh_charons_fullhand",
+   "zh": "卡戎之灰 + 整手消耗",
+   "line": "消耗线",
+   "need_all": [],
+   "need_any": [
+    "FIEND_FIRE",
+    "STOKE",
+    "SECOND_WIND"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [
+    "ASHWATER",
+    "GLOWWATER_POTION"
+   ],
+   "req_relics": [
+    "CHARONS_ASHES"
+   ],
+   "gives": [
+    "aoe"
+   ],
+   "vs": "multi",
+   "points": 3,
+   "partial": 1,
+   "source": "16 号 1.4「恶魔之焰烧 6 张 = 6×7 + 6×3 全体」",
+   "note": "一次烧 5~6 张 = 全体 15~18",
+   "data": {
+    "c2_n": 68,
+    "c2_wr": 0.529,
+    "c2_wr_without": 0.446,
+    "win_share": 0.018,
+    "lose_share": 0.013
+   }
+  },
+  {
+   "id": "exh_ghost_seed",
+   "zh": "幽灵种子 + 消耗收益",
+   "line": "消耗线",
+   "need_all": [],
+   "need_any": [
+    "FEEL_NO_PAIN",
+    "DARK_EMBRACE",
+    "ASHEN_STRIKE",
+    "PACTS_END"
+   ],
+   "min_any": 1,
+   "relics_any": [
+    "CHARONS_ASHES",
+    "JOSS_PAPER",
+    "FORGOTTEN_SOUL"
+   ],
+   "potions_any": [],
+   "req_relics": [
+    "GHOST_SEED"
+   ],
+   "per_extra": 1,
+   "max_extra": 2,
+   "gives": [
+    "block",
+    "draw"
+   ],
+   "vs": "all",
+   "points": 5,
+   "partial": 2,
+   "source": "15 号商店遗物（消耗流 A，①+14 ②+12）",
+   "note": "基础打击、防御变虚无：没打的回合末自动消耗 = 免费燃料 + 战斗内瘦身。数据 +19（44 局，样本小）",
+   "data": {
+    "c2_n": 44,
+    "c2_wr": 0.636,
+    "c2_wr_without": 0.445,
+    "win_share": 0.014,
+    "lose_share": 0.006
+   }
+  },
+  {
+   "id": "exh_toasty",
+   "zh": "烘焙手套 + 消耗收益",
+   "line": "消耗线",
+   "need_all": [],
+   "need_any": [
+    "FEEL_NO_PAIN",
+    "DARK_EMBRACE",
+    "ASHEN_STRIKE",
+    "PACTS_END",
+    "HOWL_FROM_BEYOND"
+   ],
+   "min_any": 1,
+   "relics_any": [
+    "CHARONS_ASHES"
+   ],
+   "potions_any": [],
+   "req_relics": [
+    "TOASTY_MITTENS"
+   ],
+   "per_extra": 1,
+   "max_extra": 2,
+   "gives": [
+    "scaling",
+    "block"
+   ],
+   "vs": "all",
+   "points": 5,
+   "partial": 2,
+   "source": "15 号先古（选了 50% vs 31%）；09 号第 12 条",
+   "note": "每回合抽完牌自选烧 1 张 +1 永久力量：自带消耗引擎 + 力量成长，状态、诅咒、打击都能烧。数据 +18（212 局）",
+   "data": {
+    "c2_n": 212,
+    "c2_wr": 0.618,
+    "c2_wr_without": 0.439,
+    "win_share": 0.066,
+    "lose_share": 0.033
+   }
+  },
+  {
+   "id": "exh_burning_sticks",
+   "zh": "燃烧木棍 + 自带消耗的大技能",
+   "line": "消耗线",
+   "need_all": [],
+   "need_any": [
+    "IMPERVIOUS",
+    "OFFERING",
+    "NOT_YET",
+    "FORGOTTEN_RITUAL"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "BURNING_STICKS"
+   ],
+   "gives": [
+    "block",
+    "energy"
+   ],
+   "vs": "all",
+   "points": 2,
+   "partial": 0,
+   "source": "15 号商店遗物",
+   "note": "每场第一张被消耗的技能复制一张进手：岿然不动再来 30 格挡、祭品再来 +2 能量抽 3",
+   "data": {
+    "c2_n": 19,
+    "c2_wr": 0.579,
+    "c2_wr_without": 0.447,
+    "win_share": 0.006,
+    "lose_share": 0.003
+   }
+  },
+  {
+   "id": "exh_joss",
+   "zh": "金纸 + 消耗手段 ≥2",
+   "line": "消耗线",
+   "need_all": [],
+   "need_any": [
+    "BURNING_PACT",
+    "TRUE_GRIT",
+    "SECOND_WIND",
+    "STOKE",
+    "FIEND_FIRE",
+    "HAVOC",
+    "BRAND",
+    "CINDER",
+    "THRASH",
+    "PURITY",
+    "CORRUPTION"
+   ],
+   "min_any": 2,
+   "relics_any": [
+    "GHOST_SEED",
+    "TOASTY_MITTENS"
+   ],
+   "potions_any": [],
+   "req_relics": [
+    "JOSS_PAPER"
+   ],
+   "gives": [
+    "draw"
+   ],
+   "vs": "all",
+   "points": 2,
+   "partial": 0,
+   "source": "16 号 1.2（计数跨战斗保留）",
+   "note": "每累计消耗 5 张抽 1，收益慢。数据 +11（167 局）",
+   "data": {
+    "c2_n": 167,
+    "c2_wr": 0.551,
+    "c2_wr_without": 0.443,
+    "win_share": 0.046,
+    "lose_share": 0.03
+   }
+  },
+  {
+   "id": "exh_forgotten_soul",
+   "zh": "遗忘之魂 + 消耗手段 ≥2",
+   "line": "消耗线",
+   "need_all": [],
+   "need_any": [
+    "BURNING_PACT",
+    "TRUE_GRIT",
+    "SECOND_WIND",
+    "STOKE",
+    "FIEND_FIRE",
+    "HAVOC",
+    "BRAND",
+    "CINDER",
+    "THRASH",
+    "PURITY",
+    "CORRUPTION"
+   ],
+   "min_any": 2,
+   "relics_any": [
+    "GHOST_SEED",
+    "TOASTY_MITTENS"
+   ],
+   "potions_any": [],
+   "req_relics": [
+    "FORGOTTEN_SOUL"
+   ],
+   "gives": [
+    "single"
+   ],
+   "vs": "all",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号 1.2",
+   "note": "每消耗一张随机敌人 1 伤，太小",
+   "data": {
+    "c2_n": 0,
+    "c2_wr": null,
+    "c2_wr_without": 0.447,
+    "win_share": 0.0,
+    "lose_share": 0.0
+   }
+  },
+  {
+   "id": "exh_flagon",
+   "zh": "尖叫酒壶 + 恶魔之焰",
+   "line": "消耗线",
+   "need_all": [],
+   "need_any": [
+    "FIEND_FIRE"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [
+    "GLOWWATER_POTION"
+   ],
+   "req_relics": [
+    "SCREAMING_FLAGON"
+   ],
+   "anti": {
+    "relics": [
+     "UNCEASING_TOP"
+    ],
+    "mult": 0.3,
+    "why": "不休陀螺会在手牌打空时补一张，酒壶要求回合末手牌为空"
+   },
+   "gives": [
+    "aoe"
+   ],
+   "vs": "multi",
+   "points": 2,
+   "partial": 0,
+   "source": "15 号商店遗物（尖叫酒壶）",
+   "note": "回合末手牌为空全体 20：恶魔之焰把整手烧光，正好满足",
+   "data": {
+    "c2_n": 4,
+    "c2_wr": 0.75,
+    "c2_wr_without": 0.447,
+    "win_share": 0.002,
+    "lose_share": 0.0
+   }
+  },
+  {
+   "id": "self_inferno",
+   "zh": "狱火 + 自伤来源",
+   "line": "自伤线",
+   "need_all": [
+    "INFERNO"
+   ],
+   "need_any": [
+    "BLOODLETTING",
+    "HEMOKINESIS",
+    "BREAKTHROUGH",
+    "BLOOD_WALL",
+    "OFFERING",
+    "BRAND",
+    "CRIMSON_MANTLE"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [],
+   "per_extra": 1,
+   "max_extra": 2,
+   "anti": {
+    "relics": [
+     "TUNGSTEN_ROD"
+    ],
+    "mult": 0.5,
+    "why": "钨合金棍把 1 点自伤（突破、烙印、绯红披风、狱火回合开始）减成 0，这些来源全不触发；放血、祭品、御血术、血墙还在"
+   },
+   "gives": [
+    "aoe"
+   ],
+   "vs": "multi",
+   "points": 4,
+   "partial": 2,
+   "source": "16 号 2.2/2.3；共现 lift（狱火→御血术 1.94、血墙 1.56、突破 1.54）",
+   "note": "你回合内每掉一次血全体 6（升级 9），不吃力量易伤。放血 0 费 = 全体 6 + 2 能量。狱火每回合开始自扣 1，低血时要算进击杀计划。数据 −5（683 局）：群伤是真的，但自伤流整体掉血多、胜率低于平均；对多敌精英仍是好答案",
+   "data": {
+    "c2_n": 683,
+    "c2_wr": 0.404,
+    "c2_wr_without": 0.455,
+    "win_share": 0.138,
+    "lose_share": 0.165
+   }
+  },
+  {
+   "id": "self_rupture",
+   "zh": "撕裂 + 自伤来源 ≥2",
+   "line": "自伤线",
+   "need_all": [
+    "RUPTURE"
+   ],
+   "need_any": [
+    "BLOODLETTING",
+    "HEMOKINESIS",
+    "BREAKTHROUGH",
+    "BLOOD_WALL",
+    "OFFERING",
+    "BRAND",
+    "CRIMSON_MANTLE",
+    "INFERNO"
+   ],
+   "min_any": 2,
+   "relics_any": [],
+   "potions_any": [],
+   "per_extra": 1,
+   "max_extra": 2,
+   "anti": {
+    "relics": [
+     "TUNGSTEN_ROD"
+    ],
+    "mult": 0.5,
+    "why": "钨合金棍把 1 点自伤（突破、烙印、绯红披风、狱火回合开始）减成 0，这些来源全不触发；放血、祭品、御血术、血墙还在"
+   },
+   "gives": [
+    "scaling"
+   ],
+   "vs": "all",
+   "points": 3,
+   "partial": 1,
+   "source": "16 号 2.2/2.3；规律 8（撕裂单独 36% → 配放血 49%）；07 号（没有来源时 −10）",
+   "note": "你回合内每掉一次血 +1 力量（升级 +2）。造成掉血的那张牌自己吃不到这点力量。先有来源再拿撕裂。数据 −3（522 局）",
+   "data": {
+    "c2_n": 522,
+    "c2_wr": 0.423,
+    "c2_wr_without": 0.45,
+    "win_share": 0.111,
+    "lose_share": 0.122
+   }
+  },
+  {
+   "id": "self_mantle_engine",
+   "zh": "绯红披风 + 撕裂 + 狱火",
+   "line": "自伤线",
+   "need_all": [
+    "CRIMSON_MANTLE",
+    "RUPTURE",
+    "INFERNO"
+   ],
+   "need_any": [],
+   "min_any": 0,
+   "relics_any": [],
+   "potions_any": [],
+   "anti": {
+    "relics": [
+     "TUNGSTEN_ROD"
+    ],
+    "mult": 0.0,
+    "why": "三张都靠 1 点自伤，钨合金棍下全部失效"
+   },
+   "gives": [
+    "aoe",
+    "scaling",
+    "block"
+   ],
+   "vs": "all",
+   "points": 4,
+   "partial": 2,
+   "source": "16 号 2.3 第一条",
+   "note": "每回合开始掉 2 次血：+2 力量（撕裂+ 是 +4）、全体 12（狱火+ 18）、外加 7 格挡。恶魔之舌会被回合开始那 1 点用掉",
+   "data": {
+    "c2_n": 48,
+    "c2_wr": 0.521,
+    "c2_wr_without": 0.447,
+    "win_share": 0.013,
+    "lose_share": 0.009
+   }
+  },
+  {
+   "id": "self_rupture_breakthrough",
+   "zh": "撕裂 + 突破",
+   "line": "自伤线",
+   "need_all": [
+    "RUPTURE",
+    "BREAKTHROUGH"
+   ],
+   "need_any": [],
+   "min_any": 0,
+   "relics_any": [],
+   "potions_any": [],
+   "anti": {
+    "relics": [
+     "TUNGSTEN_ROD"
+    ],
+    "mult": 0.0,
+    "why": "突破只扣 1 血，钨合金棍下不触发撕裂"
+   },
+   "gives": [
+    "aoe",
+    "scaling"
+   ],
+   "vs": "multi",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号 2.3 第二条（学习局 23 帝皇蟹 2 回合力量 2→11）",
+   "note": "每张突破 = 全体 9 + 1 次掉血 = +1 力量，狱火在场再加全体 6。数据 −6",
+   "data": {
+    "c2_n": 267,
+    "c2_wr": 0.386,
+    "c2_wr_without": 0.451,
+    "win_share": 0.052,
+    "lose_share": 0.066
+   }
+  },
+  {
+   "id": "self_tear_asunder",
+   "zh": "扯碎 + 自伤来源 ≥2",
+   "line": "自伤线",
+   "need_all": [
+    "TEAR_ASUNDER"
+   ],
+   "need_any": [
+    "BLOODLETTING",
+    "HEMOKINESIS",
+    "BREAKTHROUGH",
+    "BLOOD_WALL",
+    "OFFERING",
+    "BRAND",
+    "CRIMSON_MANTLE",
+    "INFERNO"
+   ],
+   "min_any": 2,
+   "relics_any": [],
+   "potions_any": [],
+   "per_extra": 1,
+   "max_extra": 2,
+   "anti": {
+    "relics": [
+     "TUNGSTEN_ROD"
+    ],
+    "mult": 0.5,
+    "why": "钨合金棍把 1 点自伤（突破、烙印、绯红披风、狱火回合开始）减成 0，这些来源全不触发；放血、祭品、御血术、血墙还在"
+   },
+   "gives": [
+    "single"
+   ],
+   "vs": "single",
+   "points": 3,
+   "partial": 1,
+   "source": "16 号 2.2/2.3；共现 lift（狱火→扯碎 2.94）",
+   "note": "段数 = 1 + 本场掉血次数（任何来源、任何回合），每段 5（升级 7）吃力量；长战越打越多段。数据 +2",
+   "data": {
+    "c2_n": 201,
+    "c2_wr": 0.468,
+    "c2_wr_without": 0.446,
+    "win_share": 0.047,
+    "lose_share": 0.043
+   }
+  },
+  {
+   "id": "self_spite",
+   "zh": "怨恨 + 自伤来源",
+   "line": "自伤线",
+   "need_all": [
+    "SPITE"
+   ],
+   "need_any": [
+    "BLOODLETTING",
+    "HEMOKINESIS",
+    "BREAKTHROUGH",
+    "BLOOD_WALL",
+    "OFFERING",
+    "BRAND",
+    "CRIMSON_MANTLE",
+    "INFERNO"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [],
+   "per_extra": 1,
+   "max_extra": 1,
+   "anti": {
+    "relics": [
+     "TUNGSTEN_ROD"
+    ],
+    "mult": 0.5,
+    "why": "钨合金棍把 1 点自伤（突破、烙印、绯红披风、狱火回合开始）减成 0，这些来源全不触发；放血、祭品、御血术、血墙还在"
+   },
+   "gives": [
+    "single"
+   ],
+   "vs": "single",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号 2.2；共现 lift（撕裂→怨恨 2.65、绯红披风 1.85）",
+   "note": "本回合掉过血就打 2 次（升级 3 次），0 费。绯红披风 / 狱火让每回合都满足。数据 −7",
+   "data": {
+    "c2_n": 264,
+    "c2_wr": 0.379,
+    "c2_wr_without": 0.452,
+    "win_share": 0.05,
+    "lose_share": 0.066
+   }
+  },
+  {
+   "id": "self_tongue",
+   "zh": "恶魔之舌 + 大自伤牌",
+   "line": "自伤线",
+   "need_all": [],
+   "need_any": [
+    "OFFERING",
+    "BLOODLETTING",
+    "HEMOKINESIS",
+    "BLOOD_WALL"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "DEMON_TONGUE"
+   ],
+   "per_extra": 1,
+   "max_extra": 1,
+   "anti": {
+    "cards": [
+     "INFERNO",
+     "CRIMSON_MANTLE"
+    ],
+    "mult": 0.5,
+    "why": "舌头每回合只回第一次掉的血，狱火 / 绯红披风回合开始先扣 1 点就把它用掉了"
+   },
+   "gives": [
+    "sustain",
+    "energy"
+   ],
+   "vs": "all",
+   "points": 5,
+   "partial": 2,
+   "source": "16 号 2.2；15 号（舌 ②+10，自伤流 S）",
+   "note": "自己回合第一次掉血原样回来：把最大的自伤放第一个，祭品 = 免费 2 能量 + 抽 3。数据 +13（89 局）",
+   "data": {
+    "c2_n": 89,
+    "c2_wr": 0.573,
+    "c2_wr_without": 0.445,
+    "win_share": 0.026,
+    "lose_share": 0.015
+   }
+  },
+  {
+   "id": "self_clay",
+   "zh": "自成型黏土 + 自伤来源 ≥2",
+   "line": "自伤线",
+   "need_all": [],
+   "need_any": [
+    "BLOODLETTING",
+    "HEMOKINESIS",
+    "BREAKTHROUGH",
+    "BLOOD_WALL",
+    "OFFERING",
+    "BRAND",
+    "CRIMSON_MANTLE",
+    "INFERNO"
+   ],
+   "min_any": 2,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "SELF_FORMING_CLAY"
+   ],
+   "anti": {
+    "relics": [
+     "TUNGSTEN_ROD"
+    ],
+    "mult": 0.5,
+    "why": "钨合金棍把 1 点自伤（突破、烙印、绯红披风、狱火回合开始）减成 0，这些来源全不触发；放血、祭品、御血术、血墙还在"
+   },
+   "gives": [
+    "block"
+   ],
+   "vs": "all",
+   "points": 2,
+   "partial": 0,
+   "source": "16 号 2.2；15 号",
+   "note": "每次掉血（任何回合）下回合 +3 格挡，可叠；狱火 / 绯红披风每回合稳定 +3",
+   "data": {
+    "c2_n": 175,
+    "c2_wr": 0.48,
+    "c2_wr_without": 0.446,
+    "win_share": 0.042,
+    "lose_share": 0.037
+   }
+  },
+  {
+   "id": "self_red_skull",
+   "zh": "红头骨 + 自伤来源 ≥2",
+   "line": "自伤线",
+   "need_all": [],
+   "need_any": [
+    "BLOODLETTING",
+    "HEMOKINESIS",
+    "BREAKTHROUGH",
+    "BLOOD_WALL",
+    "OFFERING",
+    "BRAND",
+    "CRIMSON_MANTLE",
+    "INFERNO"
+   ],
+   "min_any": 2,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "RED_SKULL"
+   ],
+   "gives": [
+    "scaling"
+   ],
+   "vs": "all",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号 2.2；15 号",
+   "note": "生命 ≤50% 时 +3 力量，自伤牌能主动压到半血以下；回血抬回 50% 以上就撤回",
+   "data": {
+    "c2_n": 317,
+    "c2_wr": 0.426,
+    "c2_wr_without": 0.449,
+    "win_share": 0.068,
+    "lose_share": 0.074
+   }
+  },
+  {
+   "id": "self_centennial",
+   "zh": "百年积木 + 0 费自伤",
+   "line": "自伤线",
+   "need_all": [],
+   "need_any": [
+    "BLOODLETTING",
+    "OFFERING",
+    "BRAND",
+    "BREAKTHROUGH",
+    "HEMOKINESIS"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "CENTENNIAL_PUZZLE"
+   ],
+   "anti": {
+    "relics": [
+     "TUNGSTEN_ROD"
+    ],
+    "mult": 0.5,
+    "why": "钨合金棍把 1 点自伤（突破、烙印、绯红披风、狱火回合开始）减成 0，这些来源全不触发；放血、祭品、御血术、血墙还在"
+   },
+   "gives": [
+    "draw"
+   ],
+   "vs": "all",
+   "points": 2,
+   "partial": 0,
+   "source": "16 号 2.2；15 号",
+   "note": "每场第一次掉血抽 3：第 1 回合打放血 = +2 能量再抽 3。数据 +7（491 局）",
+   "data": {
+    "c2_n": 491,
+    "c2_wr": 0.513,
+    "c2_wr_without": 0.439,
+    "win_share": 0.126,
+    "lose_share": 0.097
+   }
+  },
+  {
+   "id": "blk_barricade_bodyslam",
+   "zh": "壁垒 + 全身撞击",
+   "line": "格挡线",
+   "need_all": [
+    "BARRICADE",
+    "BODY_SLAM"
+   ],
+   "need_any": [],
+   "min_any": 0,
+   "relics_any": [],
+   "potions_any": [],
+   "gives": [
+    "single",
+    "block"
+   ],
+   "vs": "all",
+   "points": 7,
+   "partial": 3,
+   "source": "16 号 3.2 第一条；共现 lift（壁垒→全身撞击 2.28，全表最高之一）",
+   "note": "攒几回合格挡一下打出去；全身撞击按普通攻击算，吃力量、易伤。升级：壁垒 3→2 费、全身撞击 1→0 费都是质变",
+   "data": {
+    "c2_n": 99,
+    "c2_wr": 0.586,
+    "c2_wr_without": 0.444,
+    "win_share": 0.029,
+    "lose_share": 0.017
+   }
+  },
+  {
+   "id": "blk_bodyslam_bigblock",
+   "zh": "全身撞击 + 大格挡来源",
+   "line": "格挡线",
+   "need_all": [
+    "BODY_SLAM"
+   ],
+   "need_any": [
+    "UNMOVABLE",
+    "IMPERVIOUS",
+    "SECOND_WIND",
+    "BLOOD_WALL",
+    "FLAME_BARRIER",
+    "FEEL_NO_PAIN",
+    "STONE_ARMOR",
+    "EXPECT_A_FIGHT",
+    "ENTRENCH",
+    "PROLONG"
+   ],
+   "min_any": 2,
+   "relics_any": [
+    "STURDY_CLAMP",
+    "HORN_CLEAT",
+    "CAPTAINS_WHEEL",
+    "PAELS_LEGION",
+    "VAMBRACE"
+   ],
+   "potions_any": [
+    "FORTIFIER",
+    "BLOCK_POTION",
+    "SHIP_IN_A_BOTTLE"
+   ],
+   "per_extra": 1,
+   "max_extra": 1,
+   "gives": [
+    "single"
+   ],
+   "vs": "single",
+   "points": 3,
+   "partial": 1,
+   "source": "16 号 3.1/3.2；共现 lift（全身撞击→坚定不移 1.60）",
+   "note": "没有壁垒时全身撞击只吃当回合的格挡，要有能一口气堆起来的格挡",
+   "data": {
+    "c2_n": 413,
+    "c2_wr": 0.513,
+    "c2_wr_without": 0.441,
+    "win_share": 0.106,
+    "lose_share": 0.081
+   }
+  },
+  {
+   "id": "blk_juggernaut_fnp",
+   "zh": "势不可当 + 无惧疼痛 + 消耗",
+   "line": "格挡线",
+   "need_all": [
+    "JUGGERNAUT",
+    "FEEL_NO_PAIN"
+   ],
+   "need_any": [
+    "BURNING_PACT",
+    "TRUE_GRIT",
+    "SECOND_WIND",
+    "STOKE",
+    "FIEND_FIRE",
+    "HAVOC",
+    "BRAND",
+    "CINDER",
+    "THRASH",
+    "PURITY",
+    "CORRUPTION"
+   ],
+   "min_any": 1,
+   "relics_any": [
+    "TOASTY_MITTENS",
+    "GHOST_SEED"
+   ],
+   "potions_any": [
+    "ASHWATER"
+   ],
+   "gives": [
+    "aoe",
+    "single"
+   ],
+   "vs": "all",
+   "points": 7,
+   "partial": 3,
+   "source": "16 号 3.2 第二条；规律 8（势不可当单独 38% → 配无惧疼痛 63%）",
+   "note": "每烧一张 = 3 格挡 + 随机 6 伤（升级 8），不吃力量易伤；只剩一个敌人时等于定向伤害。数据 +21（69 局）；规律 8：势不可当单独 38% → 配无惧疼痛 63%",
+   "data": {
+    "c2_n": 69,
+    "c2_wr": 0.652,
+    "c2_wr_without": 0.444,
+    "win_share": 0.023,
+    "lose_share": 0.01
+   }
+  },
+  {
+   "id": "blk_juggernaut_multi",
+   "zh": "势不可当 + 多次格挡来源 ≥3",
+   "line": "格挡线",
+   "need_all": [
+    "JUGGERNAUT"
+   ],
+   "need_any": [
+    "RAGE",
+    "STONE_ARMOR",
+    "CRIMSON_MANTLE",
+    "IRON_WAVE",
+    "SECOND_WIND",
+    "EVIL_EYE",
+    "SHRUG_IT_OFF",
+    "TRUE_GRIT",
+    "FLAME_BARRIER",
+    "FEEL_NO_PAIN"
+   ],
+   "min_any": 3,
+   "relics_any": [
+    "DAUGHTER_OF_THE_WIND",
+    "ORICHALCUM",
+    "HORN_CLEAT",
+    "CAPTAINS_WHEEL",
+    "ORNAMENTAL_FAN",
+    "SAI",
+    "PERMAFROST",
+    "GORGET"
+   ],
+   "potions_any": [],
+   "per_extra": 1,
+   "max_extra": 2,
+   "gives": [
+    "single"
+   ],
+   "vs": "all",
+   "points": 3,
+   "partial": 1,
+   "source": "16 号 3.1/3.2；共现 lift（势不可当→岩石铠甲 1.97、铁斩波 1.84、狂怒 1.58）",
+   "note": "每次实际获得格挡（>0）对随机敌人 6 伤。狂怒每张攻击、重振精神每张、邪眼两次、绯红披风 / 岩石铠甲每回合都各算一次。数据 +4",
+   "data": {
+    "c2_n": 155,
+    "c2_wr": 0.49,
+    "c2_wr_without": 0.446,
+    "win_share": 0.038,
+    "lose_share": 0.032
+   }
+  },
+  {
+   "id": "blk_rage_cheap",
+   "zh": "狂怒 + 便宜攻击 ≥3",
+   "line": "格挡线",
+   "need_all": [
+    "RAGE"
+   ],
+   "need_any": [
+    "ANGER",
+    "BULLY",
+    "SPITE",
+    "PACTS_END",
+    "WHIRLWIND",
+    "OMNISLICE",
+    "FLASH_OF_STEEL",
+    "BOLAS",
+    "VOLLEY",
+    "DRAMATIC_ENTRANCE",
+    "TWIN_STRIKE",
+    "SWORD_BOOMERANG",
+    "POMMEL_STRIKE",
+    "HELLRAISER",
+    "STAMPEDE"
+   ],
+   "min_any": 3,
+   "relics_any": [],
+   "potions_any": [],
+   "gives": [
+    "block"
+   ],
+   "vs": "all",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号 3.1/七",
+   "note": "本回合每打一张攻击（含自动打出、重放）3 格挡，不吃敏捷也不怕脆弱。数据 −12",
+   "data": {
+    "c2_n": 239,
+    "c2_wr": 0.335,
+    "c2_wr_without": 0.454,
+    "win_share": 0.04,
+    "lose_share": 0.064
+   }
+  },
+  {
+   "id": "blk_unmovable",
+   "zh": "坚定不移 + 大格挡牌 ≥2",
+   "line": "格挡线",
+   "need_all": [
+    "UNMOVABLE"
+   ],
+   "need_any": [
+    "SECOND_WIND",
+    "IMPERVIOUS",
+    "BLOOD_WALL",
+    "FLAME_BARRIER",
+    "EVIL_EYE",
+    "EXPECT_A_FIGHT",
+    "SHRUG_IT_OFF",
+    "TRUE_GRIT"
+   ],
+   "min_any": 2,
+   "relics_any": [],
+   "potions_any": [],
+   "per_extra": 1,
+   "max_extra": 1,
+   "gives": [
+    "block"
+   ],
+   "vs": "all",
+   "points": 4,
+   "partial": 2,
+   "source": "16 号 3.1/3.2",
+   "note": "每回合第一张卡牌格挡翻倍：岿然不动 60、血墙 32、重振精神每张都翻。升级 2→1 费是质变",
+   "data": {
+    "c2_n": 504,
+    "c2_wr": 0.526,
+    "c2_wr_without": 0.437,
+    "win_share": 0.133,
+    "lose_share": 0.097
+   }
+  },
+  {
+   "id": "blk_expect_str",
+   "zh": "跃跃欲试 + 力量来源",
+   "line": "格挡线",
+   "need_all": [
+    "EXPECT_A_FIGHT"
+   ],
+   "need_any": [
+    "DEMON_FORM",
+    "INFLAME",
+    "FIGHT_ME",
+    "RUPTURE",
+    "BRAND",
+    "DOMINATE",
+    "PROWESS",
+    "FEEDING_FRENZY",
+    "SETUP_STRIKE"
+   ],
+   "min_any": 1,
+   "relics_any": [
+    "VAJRA",
+    "SWORD_OF_JADE",
+    "GIRYA",
+    "BRIMSTONE",
+    "TOASTY_MITTENS",
+    "SHURIKEN",
+    "EMBER_TEA",
+    "SLING_OF_COURAGE",
+    "RED_SKULL"
+   ],
+   "potions_any": [
+    "STRENGTH_POTION",
+    "FLEX_POTION",
+    "MAZALETHS_GIFT",
+    "FYSH_OIL"
+   ],
+   "per_extra": 1,
+   "max_extra": 2,
+   "gives": [
+    "block"
+   ],
+   "vs": "all",
+   "points": 2,
+   "partial": 1,
+   "source": "16 号 3.2 最后一条；07 号（没有力量时 12% vs 21%）；共现 lift（恶魔形态→跃跃欲试 1.69）",
+   "note": "15 + 5×力量；升级后 16 + 8×力量，临时力量也算。数据 +3",
+   "data": {
+    "c2_n": 471,
+    "c2_wr": 0.471,
+    "c2_wr_without": 0.444,
+    "win_share": 0.111,
+    "lose_share": 0.101
+   }
+  },
+  {
+   "id": "blk_barricade_sources",
+   "zh": "壁垒 + 持续格挡来源 ≥2",
+   "line": "格挡线",
+   "need_all": [
+    "BARRICADE"
+   ],
+   "need_any": [
+    "STONE_ARMOR",
+    "CRIMSON_MANTLE",
+    "FEEL_NO_PAIN",
+    "IMPERVIOUS",
+    "BLOOD_WALL",
+    "UNMOVABLE",
+    "SECOND_WIND",
+    "FLAME_BARRIER",
+    "PROLONG",
+    "ENTRENCH"
+   ],
+   "min_any": 2,
+   "relics_any": [
+    "HORN_CLEAT",
+    "CAPTAINS_WHEEL",
+    "GORGET",
+    "SAI"
+   ],
+   "potions_any": [],
+   "gives": [
+    "block"
+   ],
+   "vs": "all",
+   "points": 4,
+   "partial": 2,
+   "source": "16 号 3.1；共现 lift（壁垒→岩石铠甲 1.41、血墙 1.39）",
+   "note": "格挡不清零，越攒越厚；没有全身撞击时就是纯防守。数据 +16（186 局）",
+   "data": {
+    "c2_n": 188,
+    "c2_wr": 0.596,
+    "c2_wr_without": 0.441,
+    "win_share": 0.056,
+    "lose_share": 0.031
+   }
+  },
+  {
+   "id": "blk_vambrace",
+   "zh": "臂甲 + 大格挡牌",
+   "line": "格挡线",
+   "need_all": [],
+   "need_any": [
+    "IMPERVIOUS",
+    "BLOOD_WALL",
+    "FLAME_BARRIER",
+    "EXPECT_A_FIGHT",
+    "SECOND_WIND"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "VAMBRACE"
+   ],
+   "gives": [
+    "block"
+   ],
+   "vs": "all",
+   "points": 1,
+   "partial": 0,
+   "source": "15 号",
+   "note": "每场第一张给格挡的牌翻倍：让它是岿然不动（30→60）",
+   "data": {
+    "c2_n": 263,
+    "c2_wr": 0.46,
+    "c2_wr_without": 0.447,
+    "win_share": 0.061,
+    "lose_share": 0.057
+   }
+  },
+  {
+   "id": "blk_paels_legion",
+   "zh": "佩尔的士兵 + 大格挡牌",
+   "line": "格挡线",
+   "need_all": [],
+   "need_any": [
+    "IMPERVIOUS",
+    "BLOOD_WALL",
+    "SECOND_WIND",
+    "FLAME_BARRIER",
+    "EXPECT_A_FIGHT"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "PAELS_LEGION"
+   ],
+   "gives": [
+    "block"
+   ],
+   "vs": "all",
+   "points": 1,
+   "partial": 0,
+   "source": "15 号 / 16 号九（续）",
+   "note": "卡牌格挡 ×2，触发后休眠到下下回合",
+   "data": {
+    "c2_n": 147,
+    "c2_wr": 0.483,
+    "c2_wr_without": 0.446,
+    "win_share": 0.036,
+    "lose_share": 0.031
+   }
+  },
+  {
+   "id": "blk_parrying",
+   "zh": "招架盾 + 高格挡",
+   "line": "格挡线",
+   "need_all": [],
+   "need_any": [
+    "BARRICADE",
+    "UNMOVABLE",
+    "FEEL_NO_PAIN",
+    "STONE_ARMOR",
+    "IMPERVIOUS"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "PARRYING_SHIELD"
+   ],
+   "gives": [
+    "single"
+   ],
+   "vs": "all",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号九（续）",
+   "note": "回合末格挡 ≥10 打随机敌人 6",
+   "data": {
+    "c2_n": 206,
+    "c2_wr": 0.466,
+    "c2_wr_without": 0.446,
+    "win_share": 0.048,
+    "lose_share": 0.045
+   }
+  },
+  {
+   "id": "blk_cloak_clasp",
+   "zh": "斗篷扣 + 留手牌",
+   "line": "格挡线",
+   "need_all": [],
+   "need_any": [],
+   "min_any": 1,
+   "relics_any": [
+    "RUNIC_PYRAMID",
+    "RINGING_TRIANGLE",
+    "SNECKO_EYE"
+   ],
+   "potions_any": [
+    "STABLE_SERUM"
+   ],
+   "req_relics": [
+    "CLOAK_CLASP"
+   ],
+   "gives": [
+    "block"
+   ],
+   "vs": "all",
+   "points": 2,
+   "partial": 0,
+   "source": "15 号稀有遗物（斗篷扣）",
+   "note": "回合末手里每张牌 1 格挡：符文金字塔不弃手牌，手里常年 8~10 张",
+   "data": {
+    "c2_n": 11,
+    "c2_wr": 0.636,
+    "c2_wr_without": 0.447,
+    "win_share": 0.004,
+    "lose_share": 0.002
+   }
+  },
+  {
+   "id": "blk_intimidating",
+   "zh": "骇人头盔 + 2~3 费牌 ≥4",
+   "line": "格挡线",
+   "need_all": [],
+   "need_any": [
+    "BLUDGEON",
+    "DEMON_FORM",
+    "BARRICADE",
+    "STOMP",
+    "MANGLE",
+    "EXPECT_A_FIGHT",
+    "HOWL_FROM_BEYOND",
+    "IMPERVIOUS",
+    "FIEND_FIRE",
+    "UPPERCUT",
+    "FIGHT_ME",
+    "UNRELENTING",
+    "FLAME_BARRIER",
+    "BLOOD_WALL",
+    "TEAR_ASUNDER",
+    "JUGGERNAUT",
+    "UNMOVABLE"
+   ],
+   "min_any": 4,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "INTIMIDATING_HELMET"
+   ],
+   "gives": [
+    "block"
+   ],
+   "vs": "all",
+   "points": 1,
+   "partial": 0,
+   "source": "15 号稀有遗物（骇人头盔）",
+   "note": "打出实际花 ≥2 能量的牌先得 4 格挡；免费 / 减费 / 自动打出的不算",
+   "data": {
+    "c2_n": 44,
+    "c2_wr": 0.386,
+    "c2_wr_without": 0.448,
+    "win_share": 0.009,
+    "lose_share": 0.011
+   }
+  },
+  {
+   "id": "str_demon_form_multi",
+   "zh": "恶魔形态 + 多段攻击",
+   "line": "力量多段线",
+   "need_all": [
+    "DEMON_FORM"
+   ],
+   "need_any": [
+    "SWORD_BOOMERANG",
+    "TWIN_STRIKE",
+    "WHIRLWIND",
+    "CONFLAGRATION",
+    "FIGHT_ME",
+    "THRASH",
+    "TEAR_ASUNDER",
+    "VOLLEY",
+    "EXTERMINATE",
+    "EXPECT_A_FIGHT"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [],
+   "per_extra": 1,
+   "max_extra": 2,
+   "gives": [
+    "scaling",
+    "single"
+   ],
+   "vs": "single",
+   "points": 4,
+   "partial": 2,
+   "source": "16 号 4.1/4.2；共现 lift（恶魔形态→跃跃欲试 1.69、飞剑回旋镖 1.61、双重打击 1.40）",
+   "note": "每回合 +3 力量（升级 +4），多段每段都吃；长战 Boss 的主要成长。数据 +1",
+   "data": {
+    "c2_n": 265,
+    "c2_wr": 0.46,
+    "c2_wr_without": 0.446,
+    "win_share": 0.061,
+    "lose_share": 0.058
+   }
+  },
+  {
+   "id": "str_conflagration",
+   "zh": "焚烧 + 力量来源",
+   "line": "力量多段线",
+   "need_all": [
+    "CONFLAGRATION"
+   ],
+   "need_any": [
+    "DEMON_FORM",
+    "INFLAME",
+    "FIGHT_ME",
+    "RUPTURE",
+    "BRAND",
+    "DOMINATE",
+    "PROWESS",
+    "FEEDING_FRENZY"
+   ],
+   "min_any": 1,
+   "relics_any": [
+    "VAJRA",
+    "SWORD_OF_JADE",
+    "GIRYA",
+    "BRIMSTONE",
+    "TOASTY_MITTENS",
+    "SHURIKEN",
+    "EMBER_TEA",
+    "SLING_OF_COURAGE",
+    "RED_SKULL"
+   ],
+   "potions_any": [
+    "STRENGTH_POTION",
+    "FLEX_POTION",
+    "MAZALETHS_GIFT",
+    "FYSH_OIL"
+   ],
+   "per_extra": 1,
+   "max_extra": 1,
+   "gives": [
+    "aoe"
+   ],
+   "vs": "multi",
+   "points": 3,
+   "partial": 1,
+   "source": "16 号 4.2（全体多段，多敌人时最好的力量终端）",
+   "note": "全体 2×4 段（升级 5 段），+5 力量时每个敌人多 20。数据 −1",
+   "data": {
+    "c2_n": 396,
+    "c2_wr": 0.442,
+    "c2_wr_without": 0.448,
+    "win_share": 0.088,
+    "lose_share": 0.089
+   }
+  },
+  {
+   "id": "str_whirlwind",
+   "zh": "旋风斩 + 力量来源",
+   "line": "力量多段线",
+   "need_all": [
+    "WHIRLWIND"
+   ],
+   "need_any": [
+    "DEMON_FORM",
+    "INFLAME",
+    "FIGHT_ME",
+    "RUPTURE",
+    "BRAND",
+    "DOMINATE",
+    "PROWESS",
+    "FEEDING_FRENZY"
+   ],
+   "min_any": 1,
+   "relics_any": [
+    "VAJRA",
+    "SWORD_OF_JADE",
+    "GIRYA",
+    "BRIMSTONE",
+    "TOASTY_MITTENS",
+    "SHURIKEN",
+    "EMBER_TEA",
+    "SLING_OF_COURAGE",
+    "RED_SKULL"
+   ],
+   "potions_any": [
+    "STRENGTH_POTION",
+    "FLEX_POTION",
+    "MAZALETHS_GIFT",
+    "FYSH_OIL"
+   ],
+   "per_extra": 1,
+   "max_extra": 1,
+   "gives": [
+    "aoe"
+   ],
+   "vs": "multi",
+   "points": 3,
+   "partial": 1,
+   "source": "16 号 4.2；共现 lift（燃烧→旋风斩 1.38）",
+   "note": "全体 5×X 段，每段吃力量。数据 −5",
+   "data": {
+    "c2_n": 473,
+    "c2_wr": 0.402,
+    "c2_wr_without": 0.453,
+    "win_share": 0.095,
+    "lose_share": 0.115
+   }
+  },
+  {
+   "id": "str_relic_multi",
+   "zh": "开战力量遗物 + 多段攻击 ≥2",
+   "line": "力量多段线",
+   "need_all": [],
+   "need_any": [
+    "SWORD_BOOMERANG",
+    "TWIN_STRIKE",
+    "WHIRLWIND",
+    "CONFLAGRATION",
+    "FIGHT_ME",
+    "THRASH",
+    "TEAR_ASUNDER",
+    "VOLLEY",
+    "EXTERMINATE"
+   ],
+   "min_any": 2,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "SWORD_OF_JADE",
+    "GIRYA",
+    "VAJRA",
+    "EMBER_TEA",
+    "SLING_OF_COURAGE",
+    "TOASTY_MITTENS"
+   ],
+   "gives": [
+    "single"
+   ],
+   "vs": "all",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号 4.1；15 号（玉之剑 ②+8）",
+   "note": "开战就有的力量，多段每段都吃。数据 −3",
+   "data": {
+    "c2_n": 376,
+    "c2_wr": 0.423,
+    "c2_wr_without": 0.45,
+    "win_share": 0.08,
+    "lose_share": 0.088
+   }
+  },
+  {
+   "id": "str_brimstone",
+   "zh": "硫磺 + 多段攻击 ≥2（快攻）",
+   "line": "力量多段线",
+   "need_all": [],
+   "need_any": [
+    "SWORD_BOOMERANG",
+    "TWIN_STRIKE",
+    "WHIRLWIND",
+    "CONFLAGRATION",
+    "FIGHT_ME",
+    "THRASH",
+    "TEAR_ASUNDER",
+    "VOLLEY",
+    "EXTERMINATE"
+   ],
+   "min_any": 2,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "BRIMSTONE"
+   ],
+   "gives": [
+    "scaling"
+   ],
+   "vs": "single",
+   "points": 1,
+   "partial": 0,
+   "source": "15 号陷阱 3；16 号九（续）",
+   "note": "每回合你 +2、每个敌人 +1 力量：只适合 4~5 回合打完的快攻；多敌、多段敌人、长战越拖越亏。数据 −1（32 局）",
+   "data": {
+    "c2_n": 32,
+    "c2_wr": 0.438,
+    "c2_wr_without": 0.447,
+    "win_share": 0.007,
+    "lose_share": 0.007
+   }
+  },
+  {
+   "id": "str_ruined_helmet",
+   "zh": "损毁头盔 + 大额的第一次力量",
+   "line": "力量多段线",
+   "need_all": [],
+   "need_any": [
+    "DOMINATE",
+    "FIGHT_ME",
+    "DEMON_FORM",
+    "SETUP_STRIKE",
+    "INFLAME"
+   ],
+   "min_any": 1,
+   "relics_any": [
+    "SWORD_OF_JADE",
+    "REPTILE_TRINKET"
+   ],
+   "potions_any": [
+    "FLEX_POTION",
+    "STRENGTH_POTION"
+   ],
+   "req_relics": [
+    "RUINED_HELMET"
+   ],
+   "anti": {
+    "relics": [
+     "VAJRA",
+     "GIRYA",
+     "SLING_OF_COURAGE",
+     "EMBER_TEA"
+    ],
+    "mult": 0.3,
+    "why": "开战就给小力量的遗物会先吃掉头盔的翻倍"
+   },
+   "gives": [
+    "scaling"
+   ],
+   "vs": "all",
+   "points": 1,
+   "partial": 0,
+   "source": "15 号陷阱 5；16 号 4.1",
+   "note": "每场第一次获得的力量翻倍：主宰一次 5 → 10；肌肉药水 / 预备打击的临时力量翻倍后净赚永久力量。数据 −3（82 局）",
+   "data": {
+    "c2_n": 82,
+    "c2_wr": 0.415,
+    "c2_wr_without": 0.448,
+    "win_share": 0.017,
+    "lose_share": 0.019
+   }
+  },
+  {
+   "id": "str_chemx",
+   "zh": "化学物X + X 费牌",
+   "line": "力量多段线",
+   "need_all": [],
+   "need_any": [
+    "WHIRLWIND",
+    "CASCADE",
+    "VOLLEY"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "CHEMICAL_X"
+   ],
+   "gives": [
+    "aoe"
+   ],
+   "vs": "multi",
+   "points": 3,
+   "partial": 0,
+   "source": "15 号商店遗物（没有 X 费牌是废品）",
+   "note": "X +2：旋风斩 0 能量也打 2 段；历史课 / 精炼混沌自动打出时同样 +2",
+   "data": {
+    "c2_n": 35,
+    "c2_wr": 0.486,
+    "c2_wr_without": 0.447,
+    "win_share": 0.009,
+    "lose_share": 0.007
+   }
+  },
+  {
+   "id": "str_history",
+   "zh": "历史课 + 回合末的大攻击",
+   "line": "力量多段线",
+   "need_all": [],
+   "need_any": [
+    "WHIRLWIND",
+    "BLUDGEON",
+    "RAMPAGE",
+    "FEED",
+    "MANGLE",
+    "CONFLAGRATION",
+    "HOWL_FROM_BEYOND"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "HISTORY_COURSE"
+   ],
+   "gives": [
+    "single",
+    "aoe"
+   ],
+   "vs": "all",
+   "points": 3,
+   "partial": 0,
+   "source": "15 号事件遗物（历史课 A）",
+   "note": "每回合免费重打一次「上回合最后一张攻击」：旋风斩自动打出 X = 当时全部能量且不花能量。别让恶魔之焰当最后一张",
+   "data": {
+    "c2_n": 1,
+    "c2_wr": 1.0,
+    "c2_wr_without": 0.447,
+    "win_share": 0.001,
+    "lose_share": 0.0
+   }
+  },
+  {
+   "id": "str_akabeko",
+   "zh": "赤牛 + 多段 / 群攻",
+   "line": "力量多段线",
+   "need_all": [],
+   "need_any": [
+    "TWIN_STRIKE",
+    "SWORD_BOOMERANG",
+    "CONFLAGRATION",
+    "WHIRLWIND",
+    "FIGHT_ME",
+    "THRASH"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "AKABEKO"
+   ],
+   "gives": [
+    "single",
+    "aoe"
+   ],
+   "vs": "all",
+   "points": 1,
+   "partial": 0,
+   "source": "15 号罕见遗物",
+   "note": "第一张攻击每段 +8：焚烧每个敌人 +32",
+   "data": {
+    "c2_n": 203,
+    "c2_wr": 0.448,
+    "c2_wr_without": 0.447,
+    "win_share": 0.046,
+    "lose_share": 0.045
+   }
+  },
+  {
+   "id": "str_gnarled_hammer",
+   "zh": "扭曲锤子 + 多段攻击",
+   "line": "力量多段线",
+   "need_all": [],
+   "need_any": [
+    "SWORD_BOOMERANG",
+    "CONFLAGRATION",
+    "WHIRLWIND",
+    "TWIN_STRIKE",
+    "THRASH"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "GNARLED_HAMMER"
+   ],
+   "gives": [
+    "single"
+   ],
+   "vs": "all",
+   "points": 1,
+   "partial": 0,
+   "source": "15 号商店遗物",
+   "note": "至多 3 张攻击附锋利 3：每段 +3",
+   "data": {
+    "c2_n": 35,
+    "c2_wr": 0.343,
+    "c2_wr_without": 0.448,
+    "win_share": 0.006,
+    "lose_share": 0.009
+   }
+  },
+  {
+   "id": "str_reptile",
+   "zh": "爬行动物饰品 + 多段攻击",
+   "line": "力量多段线",
+   "need_all": [],
+   "need_any": [
+    "SWORD_BOOMERANG",
+    "TWIN_STRIKE",
+    "WHIRLWIND",
+    "CONFLAGRATION",
+    "FIGHT_ME",
+    "THRASH",
+    "TEAR_ASUNDER",
+    "VOLLEY",
+    "EXTERMINATE"
+   ],
+   "min_any": 1,
+   "relics_any": [
+    "POTION_BELT",
+    "WHITE_BEAST_STATUE"
+   ],
+   "potions_any": [],
+   "req_relics": [
+    "REPTILE_TRINKET"
+   ],
+   "gives": [
+    "single"
+   ],
+   "vs": "all",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号 4.1/九",
+   "note": "每用一瓶药水本回合 +3 力量：在攻击回合喝药",
+   "data": {
+    "c2_n": 227,
+    "c2_wr": 0.467,
+    "c2_wr_without": 0.446,
+    "win_share": 0.053,
+    "lose_share": 0.049
+   }
+  },
+  {
+   "id": "vuln_colossus",
+   "zh": "巨像 + 易伤来源 ≥2",
+   "line": "易伤线",
+   "need_all": [
+    "COLOSSUS"
+   ],
+   "need_any": [
+    "BASH",
+    "TAUNT",
+    "TREMBLE",
+    "UPPERCUT",
+    "THUNDERCLAP",
+    "SHOCKWAVE",
+    "MOLTEN_FIST",
+    "DOMINATE",
+    "BREAK"
+   ],
+   "min_any": 2,
+   "relics_any": [
+    "BAG_OF_MARBLES",
+    "HAND_DRILL"
+   ],
+   "potions_any": [
+    "VULNERABLE_POTION",
+    "POTION_OF_BINDING"
+   ],
+   "gives": [
+    "block"
+   ],
+   "vs": "all",
+   "points": 3,
+   "partial": 1,
+   "source": "16 号 5.2/5.3（巨像是格挡端最强的易伤收益）",
+   "note": "带易伤的敌人对你的攻击伤害 ×0.5：Boss 大招回合先挂易伤再打巨像",
+   "data": {
+    "c2_n": 1261,
+    "c2_wr": 0.466,
+    "c2_wr_without": 0.44,
+    "win_share": 0.294,
+    "lose_share": 0.272
+   }
+  },
+  {
+   "id": "vuln_dominate",
+   "zh": "主宰 + 多层易伤",
+   "line": "易伤线",
+   "need_all": [
+    "DOMINATE"
+   ],
+   "need_any": [
+    "TREMBLE",
+    "BASH",
+    "MOLTEN_FIST",
+    "SHOCKWAVE",
+    "UPPERCUT",
+    "TAUNT",
+    "BREAK"
+   ],
+   "min_any": 2,
+   "relics_any": [
+    "UNSETTLING_LAMP",
+    "BAG_OF_MARBLES",
+    "RUINED_HELMET"
+   ],
+   "potions_any": [
+    "VULNERABLE_POTION",
+    "POTION_OF_BINDING"
+   ],
+   "gives": [
+    "scaling"
+   ],
+   "vs": "single",
+   "points": 3,
+   "partial": 1,
+   "source": "16 号 4.1/5.2；15 号损毁头盔",
+   "note": "按目标身上易伤层数加力量（自带消耗）：战栗 3 层 + 主宰 1 层 = +4 力量；损毁头盔再翻倍",
+   "data": {
+    "c2_n": 573,
+    "c2_wr": 0.48,
+    "c2_wr_without": 0.443,
+    "win_share": 0.138,
+    "lose_share": 0.121
+   }
+  },
+  {
+   "id": "vuln_bully",
+   "zh": "欺凌 + 多层易伤",
+   "line": "易伤线",
+   "need_all": [
+    "BULLY"
+   ],
+   "need_any": [
+    "TREMBLE",
+    "MOLTEN_FIST",
+    "SHOCKWAVE",
+    "BASH",
+    "UPPERCUT",
+    "BREAK",
+    "DOMINATE"
+   ],
+   "min_any": 2,
+   "relics_any": [
+    "UNSETTLING_LAMP",
+    "BAG_OF_MARBLES",
+    "HAND_DRILL"
+   ],
+   "potions_any": [
+    "VULNERABLE_POTION",
+    "POTION_OF_BINDING"
+   ],
+   "gives": [
+    "single"
+   ],
+   "vs": "single",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号 5.2",
+   "note": "0 费：4 + 每层易伤 +2（升级 +3）。数据 −4",
+   "data": {
+    "c2_n": 503,
+    "c2_wr": 0.414,
+    "c2_wr_without": 0.452,
+    "win_share": 0.104,
+    "lose_share": 0.119
+   }
+  },
+  {
+   "id": "vuln_dismantle",
+   "zh": "拆卸 + 易伤来源 ≥2",
+   "line": "易伤线",
+   "need_all": [
+    "DISMANTLE"
+   ],
+   "need_any": [
+    "BASH",
+    "TAUNT",
+    "TREMBLE",
+    "UPPERCUT",
+    "THUNDERCLAP",
+    "SHOCKWAVE",
+    "MOLTEN_FIST",
+    "DOMINATE",
+    "BREAK"
+   ],
+   "min_any": 2,
+   "relics_any": [
+    "BAG_OF_MARBLES",
+    "HAND_DRILL"
+   ],
+   "potions_any": [
+    "VULNERABLE_POTION",
+    "POTION_OF_BINDING"
+   ],
+   "gives": [
+    "single"
+   ],
+   "vs": "single",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号 5.2",
+   "note": "有易伤时打 2 段；弹珠袋第 1 回合直接两段。数据 −8",
+   "data": {
+    "c2_n": 524,
+    "c2_wr": 0.38,
+    "c2_wr_without": 0.456,
+    "win_share": 0.1,
+    "lose_share": 0.132
+   }
+  },
+  {
+   "id": "vuln_cruelty",
+   "zh": "残酷 + 易伤来源 ≥3",
+   "line": "易伤线",
+   "need_all": [
+    "CRUELTY"
+   ],
+   "need_any": [
+    "BASH",
+    "TAUNT",
+    "TREMBLE",
+    "UPPERCUT",
+    "THUNDERCLAP",
+    "SHOCKWAVE",
+    "MOLTEN_FIST",
+    "DOMINATE",
+    "BREAK"
+   ],
+   "min_any": 3,
+   "relics_any": [
+    "BAG_OF_MARBLES",
+    "HAND_DRILL",
+    "PAPER_PHROG"
+   ],
+   "potions_any": [
+    "VULNERABLE_POTION",
+    "POTION_OF_BINDING"
+   ],
+   "gives": [
+    "single"
+   ],
+   "vs": "single",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号 5.1；07 号（前期拿 −7.8）",
+   "note": "易伤 ×1.5 → ×1.75（升级 ×2.0），和纸蛙相加；只加强攻击牌。数据 −2",
+   "data": {
+    "c2_n": 862,
+    "c2_wr": 0.433,
+    "c2_wr_without": 0.451,
+    "win_share": 0.187,
+    "lose_share": 0.198
+   }
+  },
+  {
+   "id": "vuln_vicious",
+   "zh": "凶恶 + 易伤来源 ≥2",
+   "line": "易伤线",
+   "need_all": [
+    "VICIOUS"
+   ],
+   "need_any": [
+    "BASH",
+    "TAUNT",
+    "TREMBLE",
+    "UPPERCUT",
+    "THUNDERCLAP",
+    "SHOCKWAVE",
+    "MOLTEN_FIST",
+    "DOMINATE",
+    "BREAK"
+   ],
+   "min_any": 2,
+   "relics_any": [
+    "BAG_OF_MARBLES",
+    "HAND_DRILL"
+   ],
+   "potions_any": [
+    "VULNERABLE_POTION",
+    "POTION_OF_BINDING"
+   ],
+   "per_extra": 1,
+   "max_extra": 1,
+   "gives": [
+    "draw"
+   ],
+   "vs": "all",
+   "points": 4,
+   "partial": 2,
+   "source": "16 号 5.2；landmark 第二幕 +8.3",
+   "note": "每次施加易伤（每个目标算一次）抽 1（升级 2）：闪电霹雳、震荡波对一群敌人一次抽好几张。数据 +9（727 局）",
+   "data": {
+    "c2_n": 727,
+    "c2_wr": 0.52,
+    "c2_wr_without": 0.433,
+    "win_share": 0.189,
+    "lose_share": 0.141
+   }
+  },
+  {
+   "id": "vuln_phrog",
+   "zh": "纸蛙 + 易伤来源 ≥2",
+   "line": "易伤线",
+   "need_all": [],
+   "need_any": [
+    "BASH",
+    "TAUNT",
+    "TREMBLE",
+    "UPPERCUT",
+    "THUNDERCLAP",
+    "SHOCKWAVE",
+    "MOLTEN_FIST",
+    "DOMINATE",
+    "BREAK",
+    "BULLY",
+    "DISMANTLE"
+   ],
+   "min_any": 2,
+   "relics_any": [
+    "BAG_OF_MARBLES",
+    "HAND_DRILL"
+   ],
+   "potions_any": [
+    "VULNERABLE_POTION",
+    "POTION_OF_BINDING"
+   ],
+   "req_relics": [
+    "PAPER_PHROG"
+   ],
+   "gives": [
+    "single"
+   ],
+   "vs": "single",
+   "points": 3,
+   "partial": 0,
+   "source": "15 号（纸蛙 ①+8，易伤流 A）",
+   "note": "攻击牌打易伤敌人 ×1.75；遗物、药水、狱火、势不可当的伤害不吃",
+   "data": {
+    "c2_n": 304,
+    "c2_wr": 0.523,
+    "c2_wr_without": 0.442,
+    "win_share": 0.08,
+    "lose_share": 0.059
+   }
+  },
+  {
+   "id": "vuln_lamp",
+   "zh": "不安油灯 + 多层减益牌",
+   "line": "易伤线",
+   "need_all": [],
+   "need_any": [
+    "TREMBLE",
+    "BASH",
+    "UPPERCUT",
+    "DOMINATE",
+    "SHOCKWAVE"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "UNSETTLING_LAMP"
+   ],
+   "gives": [
+    "single"
+   ],
+   "vs": "single",
+   "points": 1,
+   "partial": 0,
+   "source": "15 号；16 号 5.2",
+   "note": "每场第一张挂减益的牌翻倍：战栗 3→6；先打闪电霹雳就浪费了",
+   "data": {
+    "c2_n": 164,
+    "c2_wr": 0.47,
+    "c2_wr_without": 0.446,
+    "win_share": 0.039,
+    "lose_share": 0.035
+   }
+  },
+  {
+   "id": "vuln_hand_drill",
+   "zh": "手钻 + 易伤收益",
+   "line": "易伤线",
+   "need_all": [],
+   "need_any": [
+    "DISMANTLE",
+    "BULLY",
+    "COLOSSUS",
+    "CRUELTY",
+    "VICIOUS",
+    "DOMINATE"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "HAND_DRILL"
+   ],
+   "gives": [
+    "single"
+   ],
+   "vs": "single",
+   "points": 1,
+   "partial": 0,
+   "source": "15 号事件遗物",
+   "note": "打穿格挡时给 2 层易伤；女王、地道虫这种带格挡的敌人",
+   "data": {
+    "c2_n": 18,
+    "c2_wr": 0.278,
+    "c2_wr_without": 0.448,
+    "win_share": 0.003,
+    "lose_share": 0.005
+   }
+  },
+  {
+   "id": "vuln_rend",
+   "zh": "撕碎 + 多种减益",
+   "line": "易伤线",
+   "need_all": [
+    "REND"
+   ],
+   "need_any": [
+    "SHOCKWAVE",
+    "UPPERCUT",
+    "BASH",
+    "TREMBLE",
+    "TAUNT",
+    "THUNDERCLAP",
+    "DARK_SHACKLES"
+   ],
+   "min_any": 2,
+   "relics_any": [],
+   "potions_any": [],
+   "gives": [
+    "single"
+   ],
+   "vs": "single",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号 5.2（无色）",
+   "note": "10 + 每种负面状态 +5：震荡波一次给易伤和虚弱两种。样本只有 2 局",
+   "data": {
+    "c2_n": 2,
+    "c2_wr": 0.0,
+    "c2_wr_without": 0.448,
+    "win_share": 0.0,
+    "lose_share": 0.001
+   }
+  },
+  {
+   "id": "vuln_molten_fist",
+   "zh": "熔融之拳 + 多层易伤",
+   "line": "易伤线",
+   "need_all": [
+    "MOLTEN_FIST"
+   ],
+   "need_any": [
+    "TREMBLE",
+    "SHOCKWAVE",
+    "BREAK",
+    "DOMINATE"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [],
+   "gives": [
+    "single"
+   ],
+   "vs": "single",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号 5.2",
+   "note": "易伤层数翻倍（自带消耗），给欺凌、主宰铺层数",
+   "data": {
+    "c2_n": 697,
+    "c2_wr": 0.38,
+    "c2_wr_without": 0.46,
+    "win_share": 0.133,
+    "lose_share": 0.175
+   }
+  },
+  {
+   "id": "strike_hellraiser",
+   "zh": "地狱狂徒 + 打击类牌",
+   "line": "打击线",
+   "need_all": [
+    "HELLRAISER"
+   ],
+   "need_any": [
+    "POMMEL_STRIKE",
+    "TWIN_STRIKE",
+    "PERFECTED_STRIKE",
+    "ASHEN_STRIKE",
+    "SETUP_STRIKE",
+    "ULTIMATE_STRIKE",
+    "SEEKER_STRIKE"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [],
+   "per_extra": 1,
+   "max_extra": 2,
+   "gives": [
+    "single"
+   ],
+   "vs": "single",
+   "points": 2,
+   "partial": 1,
+   "source": "16 号 6.2；规律 8（地狱狂徒 21% → 配剑柄打击 44%）",
+   "note": "任何抽牌抽到带打击标签的牌就免费自动打出；剑柄打击自动打出还抽 1，连锁。升级 2→1 费。数据 −5；规律 8：比地狱狂徒单独（21%）好很多，但仍低于平均",
+   "data": {
+    "c2_n": 185,
+    "c2_wr": 0.395,
+    "c2_wr_without": 0.45,
+    "win_share": 0.037,
+    "lose_share": 0.045
+   }
+  },
+  {
+   "id": "strike_perfected",
+   "zh": "完美打击 + 打击类牌 ≥6",
+   "line": "打击线",
+   "need_all": [
+    "PERFECTED_STRIKE"
+   ],
+   "need_any": [
+    "STRIKE_IRONCLAD",
+    "POMMEL_STRIKE",
+    "TWIN_STRIKE",
+    "ASHEN_STRIKE",
+    "SETUP_STRIKE",
+    "ULTIMATE_STRIKE",
+    "SEEKER_STRIKE"
+   ],
+   "min_any": 6,
+   "relics_any": [],
+   "potions_any": [],
+   "gives": [
+    "single"
+   ],
+   "vs": "single",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号 6.2/6.3（打击流在这一代是陷阱）",
+   "note": "6 + 2（升级 3）× 所有牌堆的打击标签牌数（含消耗堆、含自己）；删打击会削弱它。数据 −11",
+   "data": {
+    "c2_n": 525,
+    "c2_wr": 0.352,
+    "c2_wr_without": 0.46,
+    "win_share": 0.093,
+    "lose_share": 0.138
+   }
+  },
+  {
+   "id": "strike_soup",
+   "zh": "营养汤 + 打击收益",
+   "line": "打击线",
+   "need_all": [],
+   "need_any": [
+    "HELLRAISER",
+    "PERFECTED_STRIKE"
+   ],
+   "min_any": 1,
+   "relics_any": [
+    "STRIKE_DUMMY",
+    "MYSTIC_LIGHTER"
+   ],
+   "potions_any": [
+    "SOLDIERS_STEW"
+   ],
+   "req_relics": [
+    "NUTRITIOUS_SOUP"
+   ],
+   "gives": [
+    "single"
+   ],
+   "vs": "single",
+   "points": 1,
+   "partial": 0,
+   "source": "15 号先古（营养汤）；16 号 6.2",
+   "note": "基础打击永久 0 费 +3 伤（永恒，删不掉）；配地狱狂徒、打击木偶、士兵炖汤。数据 −12（135 局）",
+   "data": {
+    "c2_n": 135,
+    "c2_wr": 0.333,
+    "c2_wr_without": 0.451,
+    "win_share": 0.023,
+    "lose_share": 0.036
+   }
+  },
+  {
+   "id": "strike_lighter",
+   "zh": "神秘打火机 + 附魔来源",
+   "line": "打击线",
+   "need_all": [],
+   "need_any": [],
+   "min_any": 1,
+   "relics_any": [
+    "NUTRITIOUS_SOUP",
+    "GNARLED_HAMMER",
+    "PUNCH_DAGGER",
+    "TRI_BOOMERANG",
+    "GLITTER",
+    "SILKEN_TRESS",
+    "WING_CHARM",
+    "KIFUDA"
+   ],
+   "potions_any": [],
+   "req_relics": [
+    "MYSTIC_LIGHTER"
+   ],
+   "gives": [
+    "single"
+   ],
+   "vs": "single",
+   "points": 2,
+   "partial": 0,
+   "source": "15 号陷阱（没附魔是废品）",
+   "note": "带附魔的攻击每段 +9：营养汤的 5 张 0 费打击每张 18。数据 +10（11 局，样本极小）",
+   "data": {
+    "c2_n": 11,
+    "c2_wr": 0.545,
+    "c2_wr_without": 0.447,
+    "win_share": 0.003,
+    "lose_share": 0.002
+   }
+  },
+  {
+   "id": "strike_dummy",
+   "zh": "打击木偶 + 打击类牌",
+   "line": "打击线",
+   "need_all": [],
+   "need_any": [
+    "TWIN_STRIKE",
+    "POMMEL_STRIKE",
+    "PERFECTED_STRIKE",
+    "ASHEN_STRIKE",
+    "SETUP_STRIKE",
+    "ULTIMATE_STRIKE",
+    "SEEKER_STRIKE",
+    "HELLRAISER"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "STRIKE_DUMMY"
+   ],
+   "gives": [
+    "single"
+   ],
+   "vs": "single",
+   "points": 1,
+   "partial": 0,
+   "source": "15 号普通遗物",
+   "note": "打击类每段 +3：双重打击 +6",
+   "data": {
+    "c2_n": 660,
+    "c2_wr": 0.442,
+    "c2_wr_without": 0.448,
+    "win_share": 0.146,
+    "lose_share": 0.149
+   }
+  },
+  {
+   "id": "strike_primal",
+   "zh": "原始力量 + 留着的基础打击",
+   "line": "打击线",
+   "need_all": [
+    "PRIMAL_FORCE"
+   ],
+   "need_any": [
+    "STRIKE_IRONCLAD",
+    "ANGER",
+    "POMMEL_STRIKE",
+    "TWIN_STRIKE"
+   ],
+   "min_any": 4,
+   "relics_any": [],
+   "potions_any": [],
+   "gives": [
+    "single"
+   ],
+   "vs": "single",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号 6.2",
+   "note": "手里所有攻击变巨石（1 费 20，升级 24），攻击牌越多越赚；数据偏负",
+   "data": {
+    "c2_n": 283,
+    "c2_wr": 0.336,
+    "c2_wr_without": 0.455,
+    "win_share": 0.048,
+    "lose_share": 0.076
+   }
+  },
+  {
+   "id": "cnt_shuriken",
+   "zh": "手里剑 + 0 费攻击 ≥2",
+   "line": "出牌数线",
+   "need_all": [],
+   "need_any": [
+    "ANGER",
+    "BULLY",
+    "SPITE",
+    "PACTS_END",
+    "WHIRLWIND",
+    "OMNISLICE",
+    "FLASH_OF_STEEL",
+    "BOLAS",
+    "VOLLEY",
+    "DRAMATIC_ENTRANCE"
+   ],
+   "min_any": 2,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "SHURIKEN"
+   ],
+   "gives": [
+    "scaling"
+   ],
+   "vs": "all",
+   "points": 2,
+   "partial": 0,
+   "source": "16 号七；15 号",
+   "note": "同一回合每打 3 张攻击 +1 力量（本场）",
+   "data": {
+    "c2_n": 38,
+    "c2_wr": 0.5,
+    "c2_wr_without": 0.447,
+    "win_share": 0.01,
+    "lose_share": 0.008
+   }
+  },
+  {
+   "id": "cnt_three_attacks",
+   "zh": "苦无 / 精致折扇 / 锁镰 + 0 费攻击 ≥2",
+   "line": "出牌数线",
+   "need_all": [],
+   "need_any": [
+    "ANGER",
+    "BULLY",
+    "SPITE",
+    "PACTS_END",
+    "WHIRLWIND",
+    "OMNISLICE",
+    "FLASH_OF_STEEL",
+    "BOLAS",
+    "VOLLEY",
+    "DRAMATIC_ENTRANCE"
+   ],
+   "min_any": 2,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "KUNAI",
+    "ORNAMENTAL_FAN",
+    "KUSARIGAMA"
+   ],
+   "gives": [
+    "block",
+    "single"
+   ],
+   "vs": "all",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号七；15 号",
+   "note": "每 3 张攻击：+1 敏捷 / 4 格挡 / 随机 6 伤",
+   "data": {
+    "c2_n": 143,
+    "c2_wr": 0.427,
+    "c2_wr_without": 0.448,
+    "win_share": 0.031,
+    "lose_share": 0.033
+   }
+  },
+  {
+   "id": "cnt_stomp",
+   "zh": "踩踏 + 便宜攻击 ≥3",
+   "line": "出牌数线",
+   "need_all": [
+    "STOMP"
+   ],
+   "need_any": [
+    "ANGER",
+    "BULLY",
+    "SPITE",
+    "PACTS_END",
+    "WHIRLWIND",
+    "OMNISLICE",
+    "FLASH_OF_STEEL",
+    "BOLAS",
+    "VOLLEY",
+    "DRAMATIC_ENTRANCE",
+    "POMMEL_STRIKE",
+    "TWIN_STRIKE",
+    "SWORD_BOOMERANG"
+   ],
+   "min_any": 3,
+   "relics_any": [],
+   "potions_any": [],
+   "gives": [
+    "aoe"
+   ],
+   "vs": "multi",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号七；landmark 第二幕 −11.8",
+   "note": "本回合每打一张攻击（含自动打出、重放）减 1 费，全体 12。数据 −16",
+   "data": {
+    "c2_n": 121,
+    "c2_wr": 0.289,
+    "c2_wr_without": 0.452,
+    "win_share": 0.018,
+    "lose_share": 0.035
+   }
+  },
+  {
+   "id": "cnt_juggling",
+   "zh": "杂耍 + 0 费攻击 ≥2",
+   "line": "出牌数线",
+   "need_all": [
+    "JUGGLING"
+   ],
+   "need_any": [
+    "ANGER",
+    "BULLY",
+    "SPITE",
+    "PACTS_END",
+    "WHIRLWIND",
+    "OMNISLICE",
+    "FLASH_OF_STEEL",
+    "BOLAS",
+    "VOLLEY",
+    "DRAMATIC_ENTRANCE"
+   ],
+   "min_any": 2,
+   "relics_any": [],
+   "potions_any": [],
+   "gives": [
+    "single"
+   ],
+   "vs": "all",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号七",
+   "note": "每回合第 3 张攻击复制一张进手。数据 −8",
+   "data": {
+    "c2_n": 78,
+    "c2_wr": 0.372,
+    "c2_wr_without": 0.449,
+    "win_share": 0.015,
+    "lose_share": 0.02
+   }
+  },
+  {
+   "id": "cnt_one_two",
+   "zh": "连环拳 + 大攻击",
+   "line": "出牌数线",
+   "need_all": [
+    "ONE_TWO_PUNCH"
+   ],
+   "need_any": [
+    "BLUDGEON",
+    "WHIRLWIND",
+    "CONFLAGRATION",
+    "HOWL_FROM_BEYOND",
+    "MANGLE",
+    "FIEND_FIRE",
+    "BODY_SLAM",
+    "ASHEN_STRIKE"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [],
+   "anti": {
+    "cards": [
+     "HELLRAISER",
+     "STAMPEDE"
+    ],
+    "relics": [
+     "HISTORY_COURSE"
+    ],
+    "mult": 0.5,
+    "why": "自动打出的攻击会把连环拳提前用掉"
+   },
+   "gives": [
+    "single"
+   ],
+   "vs": "single",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号七；07 号（连环拳 −28）",
+   "note": "下 1 张（升级 2 张）攻击多打一次",
+   "data": {
+    "c2_n": 116,
+    "c2_wr": 0.371,
+    "c2_wr_without": 0.449,
+    "win_share": 0.022,
+    "lose_share": 0.03
+   }
+  },
+  {
+   "id": "cnt_unrelenting",
+   "zh": "无情猛攻 + 高费攻击",
+   "line": "出牌数线",
+   "need_all": [
+    "UNRELENTING"
+   ],
+   "need_any": [
+    "BLUDGEON",
+    "STOMP",
+    "MANGLE",
+    "HOWL_FROM_BEYOND",
+    "FIEND_FIRE",
+    "UPPERCUT",
+    "TEAR_ASUNDER",
+    "FIGHT_ME"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [],
+   "gives": [
+    "single"
+   ],
+   "vs": "single",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号七；07 号（无情猛攻两头都好）",
+   "note": "14 伤后下一张攻击 0 费：接重锤 = 2 能量打 46。数据持平",
+   "data": {
+    "c2_n": 603,
+    "c2_wr": 0.448,
+    "c2_wr_without": 0.447,
+    "win_share": 0.135,
+    "lose_share": 0.135
+   }
+  },
+  {
+   "id": "cnt_aggression",
+   "zh": "好勇斗狠 + 值得反复打的攻击 ≥2",
+   "line": "出牌数线",
+   "need_all": [
+    "AGGRESSION"
+   ],
+   "need_any": [
+    "RAMPAGE",
+    "FEED",
+    "BLUDGEON",
+    "SPITE",
+    "FIGHT_ME",
+    "CONFLAGRATION",
+    "WHIRLWIND",
+    "MANGLE",
+    "HEMOKINESIS",
+    "UPPERCUT"
+   ],
+   "min_any": 2,
+   "relics_any": [],
+   "potions_any": [],
+   "gives": [
+    "single"
+   ],
+   "vs": "single",
+   "points": 2,
+   "partial": 0,
+   "source": "共现 lift（好勇斗狠→怨恨 1.38、与我一战！1.36、暴走 1.31）；landmark 第二幕 +3.9",
+   "note": "每回合开始从弃牌堆拿一张攻击回手并升级：暴走越打越大、狂宴反复斩杀加上限",
+   "data": {
+    "c2_n": 124,
+    "c2_wr": 0.46,
+    "c2_wr_without": 0.447,
+    "win_share": 0.029,
+    "lose_share": 0.027
+   }
+  },
+  {
+   "id": "cnt_stampede",
+   "zh": "惊逃 + 留在手里的大攻击",
+   "line": "出牌数线",
+   "need_all": [
+    "STAMPEDE"
+   ],
+   "need_any": [
+    "BLUDGEON",
+    "HOWL_FROM_BEYOND",
+    "MANGLE",
+    "STOMP",
+    "WHIRLWIND"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [],
+   "gives": [
+    "single"
+   ],
+   "vs": "all",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号七；landmark −9",
+   "note": "回合末随机免费打出手里一张攻击；旋风斩被自动打出时 X = 当时剩余能量",
+   "data": {
+    "c2_n": 378,
+    "c2_wr": 0.328,
+    "c2_wr_without": 0.458,
+    "win_share": 0.062,
+    "lose_share": 0.103
+   }
+  },
+  {
+   "id": "cnt_letter_opener",
+   "zh": "开信刀 + 便宜技能 ≥3",
+   "line": "出牌数线",
+   "need_all": [],
+   "need_any": [
+    "CORRUPTION",
+    "BATTLE_TRANCE",
+    "BLOODLETTING",
+    "OFFERING",
+    "BRAND",
+    "RAGE",
+    "PURITY",
+    "FINESSE",
+    "BURNING_PACT",
+    "SHRUG_IT_OFF",
+    "TRUE_GRIT"
+   ],
+   "min_any": 3,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "LETTER_OPENER"
+   ],
+   "per_extra": 1,
+   "max_extra": 1,
+   "gives": [
+    "aoe"
+   ],
+   "vs": "multi",
+   "points": 2,
+   "partial": 0,
+   "source": "15 号（腐化流 B）",
+   "note": "同一回合 3 张技能全体 5；腐化让技能全 0 费",
+   "data": {
+    "c2_n": 148,
+    "c2_wr": 0.52,
+    "c2_wr_without": 0.445,
+    "win_share": 0.039,
+    "lose_share": 0.029
+   }
+  },
+  {
+   "id": "cnt_nunchaku",
+   "zh": "双截棍 + 0 费攻击 ≥2",
+   "line": "出牌数线",
+   "need_all": [],
+   "need_any": [
+    "ANGER",
+    "BULLY",
+    "SPITE",
+    "PACTS_END",
+    "WHIRLWIND",
+    "OMNISLICE",
+    "FLASH_OF_STEEL",
+    "BOLAS",
+    "VOLLEY",
+    "DRAMATIC_ENTRANCE"
+   ],
+   "min_any": 2,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "NUNCHAKU"
+   ],
+   "gives": [
+    "energy"
+   ],
+   "vs": "all",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号七；15 号",
+   "note": "每打 10 张攻击 +1 能量，计数跨战斗保留",
+   "data": {
+    "c2_n": 59,
+    "c2_wr": 0.424,
+    "c2_wr_without": 0.448,
+    "win_share": 0.013,
+    "lose_share": 0.014
+   }
+  },
+  {
+   "id": "cnt_pen_nib",
+   "zh": "钢笔尖 + 大攻击",
+   "line": "出牌数线",
+   "need_all": [],
+   "need_any": [
+    "BLUDGEON",
+    "MANGLE",
+    "ASHEN_STRIKE",
+    "BODY_SLAM",
+    "PERFECTED_STRIKE",
+    "WHIRLWIND",
+    "CONFLAGRATION",
+    "HEMOKINESIS"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "PEN_NIB"
+   ],
+   "gives": [
+    "single"
+   ],
+   "vs": "single",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号七；15 号（计数跨战斗保留）",
+   "note": "每第 10 张攻击伤害 ×2：进 Boss 前看计数，到 9 时第一张攻击打大的",
+   "data": {
+    "c2_n": 260,
+    "c2_wr": 0.488,
+    "c2_wr_without": 0.445,
+    "win_share": 0.064,
+    "lose_share": 0.054
+   }
+  },
+  {
+   "id": "cnt_punch_dagger",
+   "zh": "拳刃 + 常回手的攻击",
+   "line": "出牌数线",
+   "need_all": [],
+   "need_any": [
+    "POMMEL_STRIKE",
+    "UNRELENTING",
+    "AGGRESSION",
+    "ANGER",
+    "HEADBUTT"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "PUNCH_DAGGER"
+   ],
+   "gives": [
+    "single"
+   ],
+   "vs": "single",
+   "points": 1,
+   "partial": 0,
+   "source": "15 号商店遗物（拳刃）",
+   "note": "一张攻击附动量 5：本场每打一次永久 +5；好勇斗狠每回合把它拿回手",
+   "data": {
+    "c2_n": 56,
+    "c2_wr": 0.375,
+    "c2_wr_without": 0.448,
+    "win_share": 0.011,
+    "lose_share": 0.014
+   }
+  },
+  {
+   "id": "cnt_unceasing_top",
+   "zh": "不休陀螺 + 0 费牌 ≥3",
+   "line": "出牌数线",
+   "need_all": [],
+   "need_any": [
+    "ANGER",
+    "BULLY",
+    "SPITE",
+    "PACTS_END",
+    "WHIRLWIND",
+    "OMNISLICE",
+    "FLASH_OF_STEEL",
+    "BOLAS",
+    "VOLLEY",
+    "DRAMATIC_ENTRANCE",
+    "BATTLE_TRANCE",
+    "BLOODLETTING",
+    "OFFERING",
+    "BRAND",
+    "RAGE",
+    "PURITY",
+    "FINESSE"
+   ],
+   "min_any": 3,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "UNCEASING_TOP"
+   ],
+   "gives": [
+    "draw"
+   ],
+   "vs": "all",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号九（续）；15 号",
+   "note": "手牌打空时抽 1",
+   "data": {
+    "c2_n": 62,
+    "c2_wr": 0.435,
+    "c2_wr_without": 0.447,
+    "win_share": 0.014,
+    "lose_share": 0.014
+   }
+  },
+  {
+   "id": "cnt_panache",
+   "zh": "神气制胜 + 0 费牌 ≥3",
+   "line": "出牌数线",
+   "need_all": [
+    "PANACHE"
+   ],
+   "need_any": [
+    "ANGER",
+    "BULLY",
+    "SPITE",
+    "PACTS_END",
+    "WHIRLWIND",
+    "OMNISLICE",
+    "FLASH_OF_STEEL",
+    "BOLAS",
+    "VOLLEY",
+    "DRAMATIC_ENTRANCE",
+    "BATTLE_TRANCE",
+    "BLOODLETTING",
+    "OFFERING",
+    "BRAND",
+    "RAGE",
+    "PURITY",
+    "FINESSE"
+   ],
+   "min_any": 3,
+   "relics_any": [],
+   "potions_any": [],
+   "gives": [
+    "aoe"
+   ],
+   "vs": "multi",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号七（无色）",
+   "note": "一回合打 5 张牌全体 10",
+   "data": {
+    "c2_n": 11,
+    "c2_wr": 0.455,
+    "c2_wr_without": 0.447,
+    "win_share": 0.003,
+    "lose_share": 0.002
+   }
+  },
+  {
+   "id": "pow_game_piece",
+   "zh": "棋子 + 能力牌 ≥4",
+   "line": "能力牌线",
+   "need_all": [],
+   "need_any": [
+    "DEMON_FORM",
+    "INFLAME",
+    "RUPTURE",
+    "INFERNO",
+    "FEEL_NO_PAIN",
+    "DARK_EMBRACE",
+    "BARRICADE",
+    "UNMOVABLE",
+    "JUGGERNAUT",
+    "CRIMSON_MANTLE",
+    "HELLRAISER",
+    "AGGRESSION",
+    "PYRE",
+    "JUGGLING",
+    "STAMPEDE",
+    "STONE_ARMOR",
+    "CRUELTY",
+    "VICIOUS",
+    "CORRUPTION"
+   ],
+   "min_any": 4,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "GAME_PIECE"
+   ],
+   "gives": [
+    "draw"
+   ],
+   "vs": "all",
+   "points": 2,
+   "partial": 0,
+   "source": "16 号八；15 号",
+   "note": "每打一张能力抽 1",
+   "data": {
+    "c2_n": 42,
+    "c2_wr": 0.548,
+    "c2_wr_without": 0.446,
+    "win_share": 0.012,
+    "lose_share": 0.008
+   }
+  },
+  {
+   "id": "pow_mummified_hand",
+   "zh": "干瘪之手 + 能力牌 ≥4",
+   "line": "能力牌线",
+   "need_all": [],
+   "need_any": [
+    "DEMON_FORM",
+    "INFLAME",
+    "RUPTURE",
+    "INFERNO",
+    "FEEL_NO_PAIN",
+    "DARK_EMBRACE",
+    "BARRICADE",
+    "UNMOVABLE",
+    "JUGGERNAUT",
+    "CRIMSON_MANTLE",
+    "HELLRAISER",
+    "AGGRESSION",
+    "PYRE",
+    "JUGGLING",
+    "STAMPEDE",
+    "STONE_ARMOR",
+    "CRUELTY",
+    "VICIOUS",
+    "CORRUPTION"
+   ],
+   "min_any": 4,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "MUMMIFIED_HAND"
+   ],
+   "gives": [
+    "energy"
+   ],
+   "vs": "all",
+   "points": 3,
+   "partial": 0,
+   "source": "16 号八；15 号（①+8）",
+   "note": "每打一张能力，手里随机一张有费用的牌本回合免费。数据 +18（51 局）",
+   "data": {
+    "c2_n": 51,
+    "c2_wr": 0.627,
+    "c2_wr_without": 0.445,
+    "win_share": 0.016,
+    "lose_share": 0.008
+   }
+  },
+  {
+   "id": "pow_lost_wisp",
+   "zh": "迷失鬼火 + 能力牌 ≥4",
+   "line": "能力牌线",
+   "need_all": [],
+   "need_any": [
+    "DEMON_FORM",
+    "INFLAME",
+    "RUPTURE",
+    "INFERNO",
+    "FEEL_NO_PAIN",
+    "DARK_EMBRACE",
+    "BARRICADE",
+    "UNMOVABLE",
+    "JUGGERNAUT",
+    "CRIMSON_MANTLE",
+    "HELLRAISER",
+    "AGGRESSION",
+    "PYRE",
+    "JUGGLING",
+    "STAMPEDE",
+    "STONE_ARMOR",
+    "CRUELTY",
+    "VICIOUS",
+    "CORRUPTION"
+   ],
+   "min_any": 4,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "LOST_WISP"
+   ],
+   "gives": [
+    "aoe"
+   ],
+   "vs": "multi",
+   "points": 2,
+   "partial": 0,
+   "source": "16 号八；15 号（②+8）",
+   "note": "每打一张能力全体 8",
+   "data": {
+    "c2_n": 43,
+    "c2_wr": 0.535,
+    "c2_wr_without": 0.446,
+    "win_share": 0.012,
+    "lose_share": 0.008
+   }
+  },
+  {
+   "id": "pow_rainbow",
+   "zh": "彩虹戒指 + 能力牌 ≥5",
+   "line": "能力牌线",
+   "need_all": [],
+   "need_any": [
+    "DEMON_FORM",
+    "INFLAME",
+    "RUPTURE",
+    "INFERNO",
+    "FEEL_NO_PAIN",
+    "DARK_EMBRACE",
+    "BARRICADE",
+    "UNMOVABLE",
+    "JUGGERNAUT",
+    "CRIMSON_MANTLE",
+    "HELLRAISER",
+    "AGGRESSION",
+    "PYRE",
+    "JUGGLING",
+    "STAMPEDE",
+    "STONE_ARMOR",
+    "CRUELTY",
+    "VICIOUS",
+    "CORRUPTION"
+   ],
+   "min_any": 5,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "RAINBOW_RING"
+   ],
+   "gives": [
+    "scaling"
+   ],
+   "vs": "all",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号八；15 号",
+   "note": "一回合攻击、技能、能力各打一张 +1 力量 +1 敏捷",
+   "data": {
+    "c2_n": 22,
+    "c2_wr": 0.545,
+    "c2_wr_without": 0.447,
+    "win_share": 0.006,
+    "lose_share": 0.004
+   }
+  },
+  {
+   "id": "en_whirlwind",
+   "zh": "旋风斩 + 额外能量",
+   "line": "能量线",
+   "need_all": [
+    "WHIRLWIND"
+   ],
+   "need_any": [
+    "BLOODLETTING",
+    "OFFERING",
+    "PYRE",
+    "FORGOTTEN_RITUAL",
+    "DRUM_OF_BATTLE"
+   ],
+   "min_any": 1,
+   "relics_any": [
+    "ICE_CREAM"
+   ],
+   "potions_any": [
+    "ENERGY_POTION",
+    "RADIANT_TINCTURE",
+    "CURE_ALL"
+   ],
+   "per_extra": 1,
+   "max_extra": 1,
+   "gives": [
+    "aoe"
+   ],
+   "vs": "multi",
+   "points": 2,
+   "partial": 1,
+   "source": "16 号 4.2；共现 lift（薪火之源→旋风斩 1.67）",
+   "note": "X 费：放血、祭品多出来的能量直接变成段数。数据 −3",
+   "data": {
+    "c2_n": 398,
+    "c2_wr": 0.422,
+    "c2_wr_without": 0.45,
+    "win_share": 0.084,
+    "lose_share": 0.093
+   }
+  },
+  {
+   "id": "en_big_cards",
+   "zh": "额外能量 + 3 费大牌 ≥2",
+   "line": "能量线",
+   "need_all": [],
+   "need_one": [
+    "BLOODLETTING",
+    "OFFERING",
+    "PYRE",
+    "FORGOTTEN_RITUAL"
+   ],
+   "need_any": [
+    "BLUDGEON",
+    "DEMON_FORM",
+    "BARRICADE",
+    "STOMP",
+    "MANGLE",
+    "EXPECT_A_FIGHT",
+    "HOWL_FROM_BEYOND"
+   ],
+   "min_any": 2,
+   "relics_any": [],
+   "potions_any": [],
+   "gives": [
+    "energy"
+   ],
+   "vs": "all",
+   "points": 2,
+   "partial": 0,
+   "source": "16 号 2.1；15 号冰淇淋",
+   "note": "放血 / 祭品 / 薪火之源让 3 费牌和格挡同回合打得出来",
+   "data": {
+    "c2_n": 446,
+    "c2_wr": 0.462,
+    "c2_wr_without": 0.446,
+    "win_share": 0.103,
+    "lose_share": 0.097
+   }
+  },
+  {
+   "id": "en_pocketwatch",
+   "zh": "怀表 + 高费牌 ≥3",
+   "line": "能量线",
+   "need_all": [],
+   "need_any": [
+    "BLUDGEON",
+    "DEMON_FORM",
+    "BARRICADE",
+    "STOMP",
+    "MANGLE",
+    "EXPECT_A_FIGHT",
+    "HOWL_FROM_BEYOND",
+    "IMPERVIOUS",
+    "FIEND_FIRE",
+    "UPPERCUT",
+    "FIGHT_ME",
+    "UNRELENTING",
+    "FLAME_BARRIER",
+    "BLOOD_WALL",
+    "TEAR_ASUNDER",
+    "JUGGERNAUT",
+    "UNMOVABLE"
+   ],
+   "min_any": 3,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "POCKETWATCH"
+   ],
+   "gives": [
+    "draw"
+   ],
+   "vs": "all",
+   "points": 3,
+   "partial": 0,
+   "source": "15 号（怀表 S）；17 号第八节",
+   "note": "上回合 ≤3 张 → 这回合多抽 3；大牌多的牌组每回合都触发。数据 +14（105 局）",
+   "data": {
+    "c2_n": 105,
+    "c2_wr": 0.581,
+    "c2_wr_without": 0.444,
+    "win_share": 0.031,
+    "lose_share": 0.018
+   }
+  },
+  {
+   "id": "en_ice_cream",
+   "zh": "冰淇淋 + 额外能量 / 大牌",
+   "line": "能量线",
+   "need_all": [],
+   "need_any": [
+    "BLOODLETTING",
+    "OFFERING",
+    "PYRE",
+    "FORGOTTEN_RITUAL",
+    "DRUM_OF_BATTLE",
+    "BLUDGEON",
+    "DEMON_FORM",
+    "BARRICADE",
+    "STOMP",
+    "MANGLE",
+    "EXPECT_A_FIGHT",
+    "HOWL_FROM_BEYOND"
+   ],
+   "min_any": 2,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "ICE_CREAM"
+   ],
+   "gives": [
+    "energy"
+   ],
+   "vs": "all",
+   "points": 2,
+   "partial": 0,
+   "source": "15 号（冰淇淋 A）",
+   "note": "剩下的能量留到下回合，攒着打 3 费大牌",
+   "data": {
+    "c2_n": 115,
+    "c2_wr": 0.539,
+    "c2_wr_without": 0.445,
+    "win_share": 0.031,
+    "lose_share": 0.021
+   }
+  },
+  {
+   "id": "en_snecko_eye",
+   "zh": "异蛇之眼 + 3 费大牌 ≥2",
+   "line": "能量线",
+   "need_all": [],
+   "need_any": [
+    "BLUDGEON",
+    "DEMON_FORM",
+    "BARRICADE",
+    "STOMP",
+    "MANGLE",
+    "EXPECT_A_FIGHT",
+    "HOWL_FROM_BEYOND"
+   ],
+   "min_any": 2,
+   "relics_any": [],
+   "potions_any": [],
+   "req_relics": [
+    "SNECKO_EYE"
+   ],
+   "gives": [
+    "energy",
+    "draw"
+   ],
+   "vs": "all",
+   "points": 2,
+   "partial": 0,
+   "source": "15 号先古（异蛇之眼 75% vs 44%）",
+   "note": "每回合多抽 2，抽到的牌费用随机 0~3：3 费大牌有机会变 0，1 费小牌可能变贵",
+   "data": {
+    "c2_n": 17,
+    "c2_wr": 0.882,
+    "c2_wr_without": 0.446,
+    "win_share": 0.008,
+    "lose_share": 0.001
+   }
+  },
+  {
+   "id": "pot_duplicator",
+   "zh": "复制药水 + 值得打两次的牌",
+   "line": "药水×牌",
+   "need_all": [],
+   "need_any": [
+    "DEMON_FORM",
+    "INFLAME",
+    "OFFERING",
+    "BLUDGEON",
+    "WHIRLWIND",
+    "DRUM_OF_BATTLE",
+    "IMPERVIOUS",
+    "MANGLE",
+    "CONFLAGRATION",
+    "FEED",
+    "RAMPAGE"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [],
+   "req_potions": [
+    "DUPLICATOR"
+   ],
+   "gives": [
+    "scaling",
+    "single"
+   ],
+   "vs": "all",
+   "points": 2,
+   "partial": 0,
+   "source": "16 号九；15 号 5.2",
+   "note": "恶魔形态打两次 = 每回合 +6；战鼓 + 复制 = 双倍能量。陷阱：恶魔之焰、重振精神第二次手牌已空",
+   "data": {
+    "uses_with": 466,
+    "d_dmg_with": -0.8,
+    "uses_without": 322,
+    "d_dmg_without": -0.2
+   }
+  },
+  {
+   "id": "pot_giga",
+   "zh": "超巨化药水 + 大攻击",
+   "line": "药水×牌",
+   "need_all": [],
+   "need_any": [
+    "BLUDGEON",
+    "ASHEN_STRIKE",
+    "BODY_SLAM",
+    "CONFLAGRATION",
+    "WHIRLWIND",
+    "FIEND_FIRE",
+    "PERFECTED_STRIKE",
+    "MANGLE"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [],
+   "req_potions": [
+    "GIGANTIFICATION_POTION"
+   ],
+   "gives": [
+    "single"
+   ],
+   "vs": "single",
+   "points": 2,
+   "partial": 0,
+   "source": "16 号九；15 号 5.3（A，Δ精 −3.5）",
+   "note": "下一张攻击整次伤害 ×3（多段每段都 ×3，和易伤相乘）：恶魔之焰每烧一张一段。超巨化本身就强（药水分 3），配大攻击后少掉的血没有更多（−3.6 vs −4.1）",
+   "data": {
+    "uses_with": 201,
+    "d_dmg_with": -3.6,
+    "uses_without": 106,
+    "d_dmg_without": -4.1
+   }
+  },
+  {
+   "id": "pot_flex_multi",
+   "zh": "力量 / 肌肉药水 + 多段攻击",
+   "line": "药水×牌",
+   "need_all": [],
+   "need_any": [
+    "CONFLAGRATION",
+    "WHIRLWIND",
+    "SWORD_BOOMERANG",
+    "TWIN_STRIKE",
+    "EXPECT_A_FIGHT",
+    "FIGHT_ME",
+    "THRASH"
+   ],
+   "min_any": 1,
+   "relics_any": [
+    "RUINED_HELMET"
+   ],
+   "potions_any": [],
+   "req_potions": [
+    "FLEX_POTION",
+    "STRENGTH_POTION",
+    "MAZALETHS_GIFT"
+   ],
+   "gives": [
+    "single",
+    "aoe"
+   ],
+   "vs": "all",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号九",
+   "note": "焚烧 +5 力量每个敌人 +20；跃跃欲试升级后 +40 格挡",
+   "data": {
+    "uses_with": 1571,
+    "d_dmg_with": -0.2,
+    "uses_without": 1511,
+    "d_dmg_without": 0.6
+   }
+  },
+  {
+   "id": "pot_insanity",
+   "zh": "癫狂之触 + 反复打的高费牌",
+   "line": "药水×牌",
+   "need_all": [],
+   "need_any": [
+    "BLUDGEON",
+    "STOMP",
+    "EXPECT_A_FIGHT",
+    "BODY_SLAM",
+    "BARRICADE",
+    "DEMON_FORM",
+    "MANGLE"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [],
+   "req_potions": [
+    "TOUCH_OF_INSANITY"
+   ],
+   "gives": [
+    "energy"
+   ],
+   "vs": "all",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号九；15 号 5.2",
+   "note": "一张牌本场 0 费；别选自带消耗的",
+   "data": {
+    "uses_with": 279,
+    "d_dmg_with": 0.3,
+    "uses_without": 411,
+    "d_dmg_without": -0.1
+   }
+  },
+  {
+   "id": "pot_ashwater",
+   "zh": "灰水 + 消耗收益",
+   "line": "药水×牌",
+   "need_all": [],
+   "need_any": [
+    "ASHEN_STRIKE",
+    "PACTS_END",
+    "FEEL_NO_PAIN",
+    "DARK_EMBRACE",
+    "HOWL_FROM_BEYOND",
+    "DRUM_OF_BATTLE",
+    "EVIL_EYE"
+   ],
+   "min_any": 1,
+   "relics_any": [
+    "CHARONS_ASHES",
+    "BURNING_STICKS",
+    "JOSS_PAPER"
+   ],
+   "potions_any": [],
+   "req_potions": [
+    "ASHWATER"
+   ],
+   "per_extra": 1,
+   "max_extra": 1,
+   "gives": [
+    "block",
+    "draw",
+    "aoe"
+   ],
+   "vs": "all",
+   "points": 3,
+   "partial": 0,
+   "source": "16 号九；15 号 5.2（消耗流 A）",
+   "note": "手里任选几张消耗：先灰水再打灰烬打击 / 契约终结；清呼唤、毒素、凋萎。用灰水的精英 / Boss 战：有消耗收益时比平均多掉 1.0，没有时多掉 7.9",
+   "data": {
+    "uses_with": 245,
+    "d_dmg_with": 1.0,
+    "uses_without": 138,
+    "d_dmg_without": 7.9
+   }
+  },
+  {
+   "id": "pot_glowwater",
+   "zh": "发光水 + 消耗引擎",
+   "line": "药水×牌",
+   "need_all": [],
+   "need_any": [
+    "FEEL_NO_PAIN",
+    "DARK_EMBRACE",
+    "ASHEN_STRIKE",
+    "PACTS_END"
+   ],
+   "min_any": 1,
+   "relics_any": [
+    "CHARONS_ASHES"
+   ],
+   "potions_any": [],
+   "req_potions": [
+    "GLOWWATER_POTION"
+   ],
+   "gives": [
+    "block",
+    "draw",
+    "aoe"
+   ],
+   "vs": "all",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号九；15 号 5.4",
+   "note": "整手消耗再抽 10。样本 34 次，看不出差别",
+   "data": {
+    "uses_with": 34,
+    "d_dmg_with": 1.4,
+    "uses_without": 112,
+    "d_dmg_without": -1.1
+   }
+  },
+  {
+   "id": "pot_stew",
+   "zh": "士兵炖汤 + 打击类牌 ≥5",
+   "line": "药水×牌",
+   "need_all": [],
+   "need_any": [
+    "STRIKE_IRONCLAD",
+    "POMMEL_STRIKE",
+    "TWIN_STRIKE",
+    "ASHEN_STRIKE",
+    "SETUP_STRIKE",
+    "PERFECTED_STRIKE",
+    "ULTIMATE_STRIKE",
+    "SEEKER_STRIKE"
+   ],
+   "min_any": 5,
+   "relics_any": [
+    "STRIKE_DUMMY",
+    "NUTRITIOUS_SOUP"
+   ],
+   "potions_any": [],
+   "req_potions": [
+    "SOLDIERS_STEW"
+   ],
+   "gives": [
+    "single"
+   ],
+   "vs": "single",
+   "points": 3,
+   "partial": 0,
+   "source": "16 号 6.2/九；15 号 5.3（Δ精 −3.9）",
+   "note": "本场所有打击类牌重放 +1（只付一次费）；完美打击、双重打击最赚",
+   "data": {
+    "uses_with": 223,
+    "d_dmg_with": -4.5,
+    "uses_without": 87,
+    "d_dmg_without": -1.2
+   }
+  },
+  {
+   "id": "pot_fortifier",
+   "zh": "固化药水 + 全身撞击 / 壁垒",
+   "line": "药水×牌",
+   "need_all": [],
+   "need_any": [
+    "BODY_SLAM",
+    "BARRICADE"
+   ],
+   "min_any": 1,
+   "relics_any": [],
+   "potions_any": [],
+   "req_potions": [
+    "FORTIFIER"
+   ],
+   "gives": [
+    "single",
+    "block"
+   ],
+   "vs": "all",
+   "points": 3,
+   "partial": 0,
+   "source": "16 号 3.1/九",
+   "note": "格挡 ×3 再撞；壁垒下三倍的格挡留到之后。用固化的那场：有全身撞击 / 壁垒时少掉 3.7，没有时多掉 1.9",
+   "data": {
+    "uses_with": 94,
+    "d_dmg_with": -3.7,
+    "uses_without": 530,
+    "d_dmg_without": 1.9
+   }
+  },
+  {
+   "id": "pot_block_bodyslam",
+   "zh": "格挡药水 / 瓶中船 + 全身撞击",
+   "line": "药水×牌",
+   "need_all": [
+    "BODY_SLAM"
+   ],
+   "need_any": [],
+   "min_any": 0,
+   "relics_any": [],
+   "potions_any": [],
+   "req_potions": [
+    "BLOCK_POTION",
+    "SHIP_IN_A_BOTTLE"
+   ],
+   "gives": [
+    "single"
+   ],
+   "vs": "single",
+   "points": 2,
+   "partial": 0,
+   "source": "15 号 5.1",
+   "note": "先喝再撞：+12 格挡 = +12 伤。少掉 2.3 vs 多掉 0.1",
+   "data": {
+    "uses_with": 191,
+    "d_dmg_with": -2.3,
+    "uses_without": 1817,
+    "d_dmg_without": 0.1
+   }
+  },
+  {
+   "id": "pot_vuln",
+   "zh": "易伤 / 缚魂药水 + 易伤收益",
+   "line": "药水×牌",
+   "need_all": [],
+   "need_any": [
+    "BULLY",
+    "DISMANTLE",
+    "COLOSSUS",
+    "DOMINATE",
+    "CRUELTY",
+    "VICIOUS"
+   ],
+   "min_any": 1,
+   "relics_any": [
+    "PAPER_PHROG"
+   ],
+   "potions_any": [],
+   "req_potions": [
+    "VULNERABLE_POTION",
+    "POTION_OF_BINDING"
+   ],
+   "gives": [
+    "single",
+    "block"
+   ],
+   "vs": "all",
+   "points": 1,
+   "partial": 0,
+   "source": "16 号九",
+   "note": "对遗物 / 药水 / 狱火伤害没用",
+   "data": {
+    "uses_with": 1109,
+    "d_dmg_with": 1.1,
+    "uses_without": 940,
+    "d_dmg_without": 1.3
+   }
+  }
+ ],
+ "cores": [
+  {
+   "id": "exhaust_engine",
+   "zh": "消耗引擎",
+   "cards": [
+    "FEEL_NO_PAIN",
+    "DARK_EMBRACE",
+    "CORRUPTION"
+   ],
+   "min_cards": 1,
+   "companions": [
+    "BURNING_PACT",
+    "TRUE_GRIT",
+    "SECOND_WIND",
+    "STOKE",
+    "FIEND_FIRE",
+    "HAVOC",
+    "BRAND",
+    "CINDER",
+    "THRASH"
+   ],
+   "min_companions": 2,
+   "count_mode": "kinds",
+   "points": 8,
+   "source": "规律 8（57%）；16 号第一节；docs/scripts/cores.py",
+   "note": "引擎 ≥1 种 + 主动消耗牌 ≥2 种。社区胜率最高的一派",
+   "data": {
+    "c2_n": 801,
+    "c2_wr": 0.584,
+    "c2_wr_without": 0.417,
+    "c1_n": 321,
+    "c1_wr": 0.464,
+    "c1_wr_without": 0.335,
+    "win_share": 0.234,
+    "lose_share": 0.135
+   }
+  },
+  {
+   "id": "block_payoff",
+   "zh": "格挡转伤害",
+   "cards": [
+    "BODY_SLAM",
+    "JUGGERNAUT"
+   ],
+   "min_cards": 1,
+   "companions": [
+    "BARRICADE",
+    "UNMOVABLE",
+    "FEEL_NO_PAIN",
+    "JUGGERNAUT",
+    "STONE_ARMOR",
+    "CRIMSON_MANTLE",
+    "RAGE"
+   ],
+   "min_companions": 1,
+   "count_mode": "kinds",
+   "points": 5,
+   "source": "规律 8（53%）；16 号第三节；docs/scripts/cores.py",
+   "note": "全身撞击 / 势不可当 + 一种格挡引擎（壁垒、坚定不移、无惧疼痛、岩石铠甲、绯红披风、狂怒，或另一张终端）",
+   "data": {
+    "c2_n": 564,
+    "c2_wr": 0.514,
+    "c2_wr_without": 0.438,
+    "c1_n": 320,
+    "c1_wr": 0.391,
+    "c1_wr_without": 0.339,
+    "win_share": 0.145,
+    "lose_share": 0.111
+   }
+  },
+  {
+   "id": "exhaust_block",
+   "zh": "消耗引擎 + 格挡转伤害",
+   "cards": [],
+   "min_cards": 0,
+   "companions": [],
+   "min_companions": 0,
+   "count_mode": "kinds",
+   "requires_cores": [
+    "exhaust_engine",
+    "block_payoff"
+   ],
+   "points": 3,
+   "source": "规律 8（62%，所有流派最高）",
+   "note": "两个核心同时成型时额外加分",
+   "data": {
+    "c2_n": 141,
+    "c2_wr": 0.652,
+    "c2_wr_without": 0.441,
+    "c1_n": 28,
+    "c1_wr": 0.5,
+    "c1_wr_without": 0.341,
+    "win_share": 0.046,
+    "lose_share": 0.02
+   }
+  },
+  {
+   "id": "self_damage",
+   "zh": "自伤",
+   "cards": [
+    "INFERNO",
+    "RUPTURE"
+   ],
+   "min_cards": 1,
+   "companions": [
+    "BLOODLETTING",
+    "CRIMSON_MANTLE",
+    "OFFERING",
+    "HEMOKINESIS",
+    "BREAKTHROUGH",
+    "BLOOD_WALL",
+    "BRAND"
+   ],
+   "min_companions": 2,
+   "count_mode": "kinds",
+   "points": 2,
+   "source": "规律 8（42%）；16 号第二节；docs/scripts/cores.py",
+   "note": "狱火 / 撕裂 + 自伤牌 ≥2 种。群伤和成长都有，但数据上胜率不高；有钨合金棍别走",
+   "data": {
+    "c2_n": 718,
+    "c2_wr": 0.425,
+    "c2_wr_without": 0.452,
+    "c1_n": 441,
+    "c1_wr": 0.295,
+    "c1_wr_without": 0.345,
+    "win_share": 0.153,
+    "lose_share": 0.167
+   }
+  },
+  {
+   "id": "strength_multi",
+   "zh": "力量多段",
+   "cards": [
+    "DEMON_FORM",
+    "INFLAME",
+    "FIGHT_ME",
+    "BRAND",
+    "DOMINATE"
+   ],
+   "min_cards": 1,
+   "companions": [
+    "WHIRLWIND",
+    "CONFLAGRATION",
+    "SWORD_BOOMERANG",
+    "TWIN_STRIKE",
+    "FIGHT_ME",
+    "THRASH",
+    "TEAR_ASUNDER",
+    "EXPECT_A_FIGHT"
+   ],
+   "min_companions": 2,
+   "count_mode": "kinds",
+   "points": 2,
+   "source": "规律 8（38%）；16 号第四节；docs/scripts/cores.py",
+   "note": "力量来源 ≥1 + 多段 ≥2 种。力量牌种类越多胜率越低，只在有多段终端时拿第二张力量",
+   "data": {
+    "c2_n": 683,
+    "c2_wr": 0.411,
+    "c2_wr_without": 0.454,
+    "c1_n": 401,
+    "c1_wr": 0.304,
+    "c1_wr_without": 0.344,
+    "win_share": 0.141,
+    "lose_share": 0.163
+   }
+  },
+  {
+   "id": "vulnerable",
+   "zh": "易伤",
+   "cards": [
+    "VICIOUS",
+    "CRUELTY",
+    "BULLY",
+    "DOMINATE",
+    "DISMANTLE",
+    "MOLTEN_FIST"
+   ],
+   "min_cards": 2,
+   "companions": [
+    "TREMBLE",
+    "UPPERCUT",
+    "TAUNT",
+    "THUNDERCLAP",
+    "SHOCKWAVE"
+   ],
+   "min_companions": 1,
+   "count_mode": "kinds",
+   "points": 1,
+   "source": "规律 8（43%）；16 号第五节；docs/scripts/cores.py",
+   "note": "易伤收益 ≥2 种 + 痛击以外的来源 ≥1。更适合当辅助",
+   "data": {
+    "c2_n": 1161,
+    "c2_wr": 0.431,
+    "c2_wr_without": 0.453,
+    "c1_n": 695,
+    "c1_wr": 0.312,
+    "c1_wr_without": 0.346,
+    "win_share": 0.25,
+    "lose_share": 0.268
+   }
+  },
+  {
+   "id": "strike",
+   "zh": "打击",
+   "cards": [
+    "PERFECTED_STRIKE",
+    "HELLRAISER"
+   ],
+   "min_cards": 1,
+   "companions": [
+    "STRIKE_IRONCLAD",
+    "POMMEL_STRIKE",
+    "PERFECTED_STRIKE",
+    "ASHEN_STRIKE",
+    "SETUP_STRIKE",
+    "TWIN_STRIKE",
+    "ULTIMATE_STRIKE",
+    "SEEKER_STRIKE"
+   ],
+   "min_companions": 7,
+   "count_mode": "copies",
+   "points": 1,
+   "source": "规律 8（36%）；16 号第六节；docs/scripts/cores.py",
+   "note": "完美打击 / 地狱狂徒 + 打击标签牌 ≥7 张（按张数）。这一代是陷阱，成型也只给 1 分",
+   "data": {
+    "c2_n": 395,
+    "c2_wr": 0.342,
+    "c2_wr_without": 0.458,
+    "c1_n": 301,
+    "c1_wr": 0.289,
+    "c1_wr_without": 0.345,
+    "win_share": 0.068,
+    "lose_share": 0.105
+   }
+  }
+ ],
+ "card_tier": {
+  "STOKE": 4,
+  "SECOND_WIND": 4,
+  "FEEL_NO_PAIN": 4,
+  "BURNING_PACT": 4,
+  "BATTLE_TRANCE": 4,
+  "CORRUPTION": 4,
+  "DARK_EMBRACE": 3,
+  "FIEND_FIRE": 3,
+  "BARRICADE": 3,
+  "BLOODLETTING": 3,
+  "TRUE_GRIT": 3,
+  "UPPERCUT": 3,
+  "MANGLE": 3,
+  "OFFERING": 3,
+  "APOTHEOSIS": 3,
+  "MASTER_OF_STRATEGY": 3,
+  "HAVOC": 2,
+  "VICIOUS": 2,
+  "CASCADE": 2,
+  "ASHEN_STRIKE": 2,
+  "AGGRESSION": 2,
+  "FORGOTTEN_RITUAL": 2,
+  "EVIL_EYE": 2,
+  "HOWL_FROM_BEYOND": 2,
+  "UNMOVABLE": 2,
+  "CRIMSON_MANTLE": 2,
+  "PYRE": 2,
+  "IMPERVIOUS": 2,
+  "COLOSSUS": 2,
+  "SHRUG_IT_OFF": 2,
+  "DEMON_FORM": 2,
+  "UNRELENTING": 2,
+  "FIGHT_ME": 2,
+  "BLUDGEON": 2,
+  "BREAK": 2,
+  "OMNISLICE": 2,
+  "DRAMATIC_ENTRANCE": 2,
+  "SHOCKWAVE": 2,
+  "HAND_OF_GREED": 2,
+  "JACKPOT": 2,
+  "SCRAWL": 2,
+  "ROLLING_BOULDER": 2,
+  "ETERNAL_ARMOR": 2,
+  "WHISTLE": 2,
+  "RELAX": 2,
+  "ABUNDANCE": 2,
+  "BRIGHTEST_FLAME": 2,
+  "EXTERMINATE": 2,
+  "APPARITION": 2,
+  "BODY_SLAM": 1,
+  "DRUM_OF_BATTLE": 1,
+  "TEAR_ASUNDER": 1,
+  "JUGGLING": 1,
+  "NOT_YET": 1,
+  "EXPECT_A_FIGHT": 1,
+  "THRASH": 1,
+  "PILLAGE": 1,
+  "TREMBLE": 1,
+  "CINDER": 1,
+  "DOMINATE": 1,
+  "BRAND": 1,
+  "PACTS_END": 1,
+  "TAUNT": 1,
+  "POMMEL_STRIKE": 1,
+  "INFERNO": 1,
+  "FEED": 1,
+  "STONE_ARMOR": 1,
+  "BLOOD_WALL": 1,
+  "HEADBUTT": 1,
+  "ARMAMENTS": 1,
+  "SWORD_BOOMERANG": 1,
+  "CONFLAGRATION": 1,
+  "BULLY": 1,
+  "TWIN_STRIKE": 1,
+  "FLAME_BARRIER": 1,
+  "ANGER": 1,
+  "WHIRLWIND": 1,
+  "DISMANTLE": 1,
+  "BREAKTHROUGH": 1,
+  "INFLAME": 1,
+  "JUGGERNAUT": 1,
+  "FLASH_OF_STEEL": 1,
+  "FINESSE": 1,
+  "PANIC_BUTTON": 1,
+  "THE_BOMB": 1,
+  "ULTIMATE_DEFEND": 1,
+  "ULTIMATE_STRIKE": 1,
+  "PURITY": 1,
+  "SECRET_WEAPON": 1,
+  "SECRET_TECHNIQUE": 1,
+  "PROWESS": 1,
+  "DARK_SHACKLES": 1,
+  "EQUILIBRIUM": 1,
+  "VOLLEY": 1,
+  "PREP_TIME": 1,
+  "CALAMITY": 1,
+  "THRUMMING_HATCHET": 1,
+  "SEEKER_STRIKE": 1,
+  "SALVO": 1,
+  "FISTICUFFS": 1,
+  "REND": 1,
+  "AUTOMATION": 1,
+  "MAYHEM": 1,
+  "BEAT_DOWN": 1,
+  "HIDDEN_GEM": 1,
+  "ALCHEMIZE": 1,
+  "DISCOVERY": 1,
+  "PRODUCTION": 1,
+  "PROLONG": 1,
+  "BOLAS": 1,
+  "SPLASH": 1,
+  "THINKING_AHEAD": 1,
+  "WISH": 1,
+  "NEOWS_FURY": 1,
+  "BYRD_SWOOP": 1,
+  "CLASH": 1,
+  "ENTRENCH": 1,
+  "SQUASH": 1,
+  "MAUL": 1,
+  "TORIC_TOUGHNESS": 1,
+  "METAMORPHOSIS": 1,
+  "DUAL_WIELD": 1,
+  "CALTROPS": 1,
+  "HELLO_WORLD": 1,
+  "FEEDING_FRENZY": 1,
+  "ENLIGHTENMENT": 1,
+  "RIP_AND_TEAR": 1,
+  "MAD_SCIENCE": 1,
+  "OUTMANEUVER": 1,
+  "STACK": 1,
+  "RUPTURE": 0,
+  "CRUELTY": 0,
+  "HELLRAISER": 0,
+  "PERFECTED_STRIKE": 0,
+  "SETUP_STRIKE": 0,
+  "SPITE": 0,
+  "RAMPAGE": 0,
+  "INFERNAL_BLADE": 0,
+  "PRIMAL_FORCE": 0,
+  "MOLTEN_FIST": 0,
+  "RAGE": 0,
+  "STAMPEDE": 0,
+  "IRON_WAVE": 0,
+  "ONE_TWO_PUNCH": 0,
+  "HEMOKINESIS": 0,
+  "STOMP": 0,
+  "THUNDERCLAP": 0,
+  "BASH": 0,
+  "STRIKE_IRONCLAD": 0,
+  "DEFEND_IRONCLAD": 0
+ },
+ "upgrade_bonus": {
+  "TRUE_GRIT": 2,
+  "BODY_SLAM": 1,
+  "BARRICADE": 1,
+  "DARK_EMBRACE": 1,
+  "UNMOVABLE": 1,
+  "HELLRAISER": 1,
+  "HAVOC": 1,
+  "AGGRESSION": 1,
+  "EXPECT_A_FIGHT": 1,
+  "JUGGERNAUT": 1,
+  "HOWL_FROM_BEYOND": 1,
+  "PACTS_END": 1,
+  "ASHEN_STRIKE": 1,
+  "BASH": 1,
+  "BLUDGEON": 1,
+  "CORRUPTION": 1
+ },
+ "relic_tier": {
+  "BURNING_BLOOD": 0,
+  "BLACK_BLOOD": 1,
+  "RED_SKULL": 1,
+  "CHARONS_ASHES": 3,
+  "DEMON_TONGUE": 3,
+  "RUINED_HELMET": 1,
+  "PAPER_PHROG": 2,
+  "BRIMSTONE": 2,
+  "SELF_FORMING_CLAY": 2,
+  "BAG_OF_PREPARATION": 2,
+  "CENTENNIAL_PUZZLE": 2,
+  "GORGET": 2,
+  "ANCHOR": 2,
+  "LANTERN": 2,
+  "BAG_OF_MARBLES": 1,
+  "VENERABLE_TEA_SET": 2,
+  "ODDLY_SMOOTH_STONE": 1,
+  "HAPPY_FLOWER": 1,
+  "PENDULUM": 1,
+  "VAJRA": 1,
+  "RED_MASK": 1,
+  "FESTIVE_POPPER": 1,
+  "BRONZE_SCALES": 1,
+  "POTION_BELT": 2,
+  "BOOK_OF_FIVE_RINGS": 1,
+  "AMETHYST_AUBERGINE": 0,
+  "JUZU_BRACELET": 0,
+  "MEAL_TICKET": 1,
+  "REGAL_PILLOW": 0,
+  "BLOOD_VIAL": 0,
+  "STRAWBERRY": 1,
+  "WAR_PAINT": 0,
+  "WHETSTONE": 0,
+  "STRIKE_DUMMY": 1,
+  "HORN_CLEAT": 4,
+  "PANTOGRAPH": 4,
+  "ETERNAL_FEATHER": 3,
+  "VAMBRACE": 2,
+  "AKABEKO": 2,
+  "CANDELABRA": 2,
+  "MERCURY_HOURGLASS": 2,
+  "MINIATURE_CANNON": 1,
+  "ORICHALCUM": 2,
+  "GREMLIN_HORN": 1,
+  "PERMAFROST": 1,
+  "SPARKLING_ROUGE": 1,
+  "PEN_NIB": 1,
+  "NUNCHAKU": 1,
+  "KUSARIGAMA": 1,
+  "ORNAMENTAL_FAN": 1,
+  "LETTER_OPENER": 1,
+  "TUNING_FORK": 0,
+  "JOSS_PAPER": 1,
+  "REPTILE_TRINKET": 1,
+  "PETRIFIED_TOAD": 1,
+  "STONE_CRACKER": 1,
+  "PEAR": 1,
+  "PLANISPHERE": 1,
+  "BOWLER_HAT": 0,
+  "LUCKY_FYSH": 0,
+  "RIPPLE_BASIN": 0,
+  "PARRYING_SHIELD": 0,
+  "TINY_MAILBOX": 0,
+  "LASTING_CANDY": 0,
+  "POCKETWATCH": 5,
+  "WHITE_STAR": 3,
+  "ICE_CREAM": 4,
+  "VEXING_PUZZLEBOX": 3,
+  "TOXIC_EGG": 2,
+  "CHANDELIER": 3,
+  "MUMMIFIED_HAND": 3,
+  "BEATING_REMNANT": 3,
+  "FROZEN_EGG": 2,
+  "MOLTEN_EGG": 1,
+  "RAZOR_TOOTH": 2,
+  "BELLOWS": 2,
+  "CLOAK_CLASP": 2,
+  "GAME_PIECE": 2,
+  "CAPTAINS_WHEEL": 2,
+  "STURDY_CLAMP": 2,
+  "WHITE_BEAST_STATUE": 1,
+  "THE_COURIER": 1,
+  "OLD_COIN": 0,
+  "LIZARD_TAIL": 3,
+  "TUNGSTEN_ROD": 2,
+  "MEAT_ON_THE_BONE": 1,
+  "UNSETTLING_LAMP": 1,
+  "STONE_CALENDAR": 1,
+  "SHOVEL": 1,
+  "GIRYA": 1,
+  "INTIMIDATING_HELMET": 1,
+  "SHURIKEN": 1,
+  "RAINBOW_RING": 1,
+  "GAMBLING_CHIP": 1,
+  "MANGO": 1,
+  "KUNAI": 1,
+  "UNCEASING_TOP": 1,
+  "PRAYER_WHEEL": 0,
+  "ART_OF_WAR": 0,
+  "MEMBERSHIP_CARD": 1,
+  "GHOST_SEED": 2,
+  "TOOLBOX": 2,
+  "MINIATURE_TENT": 1,
+  "KIFUDA": 1,
+  "BURNING_STICKS": 1,
+  "CHEMICAL_X": 0,
+  "DOLLYS_MIRROR": 0,
+  "BREAD": 1,
+  "RINGING_TRIANGLE": 1,
+  "GNARLED_HAMMER": 1,
+  "PUNCH_DAGGER": 1,
+  "ORRERY": 0,
+  "LEES_WAFFLE": 0,
+  "DRAGON_FRUIT": 1,
+  "LAVA_LAMP": 1,
+  "ROYAL_STAMP": 1,
+  "WING_CHARM": 1,
+  "BELT_BUCKLE": 0,
+  "SLING_OF_COURAGE": 1,
+  "SCREAMING_FLAGON": 1,
+  "THE_ABACUS": 0,
+  "DINGY_RUG": 0,
+  "MYSTIC_LIGHTER": 0,
+  "CAULDRON": 0,
+  "SWORD_OF_JADE": 4,
+  "SWORD_OF_STONE": 1,
+  "HISTORY_COURSE": 4,
+  "LOST_WISP": 2,
+  "POLLINOUS_CORE": 2,
+  "CHOSEN_CHEESE": 1,
+  "WONGOS_MYSTERY_TICKET": 0,
+  "HAND_DRILL": 1,
+  "MR_STRUGGLES": 1,
+  "THE_BOOT": 1,
+  "DAUGHTER_OF_THE_WIND": 1,
+  "FRESNEL_LENS": 1,
+  "EMBER_TEA": 1,
+  "BONE_TEA": 0,
+  "BIG_MUSHROOM": 1,
+  "MAW_BANK": 0,
+  "DREAM_CATCHER": 0,
+  "DARKSTONE_PERIAPT": 0,
+  "BING_BONG": 0,
+  "BYRDPIP": 0,
+  "FORGOTTEN_SOUL": 0,
+  "ROYAL_POISON": 0,
+  "TEA_OF_DISCOURTESY": 0,
+  "FAKE_VENERABLE_TEA_SET": 1,
+  "FAKE_ANCHOR": 1,
+  "FAKE_HAPPY_FLOWER": 0,
+  "FAKE_STRIKE_DUMMY": 0,
+  "FAKE_ORICHALCUM": 1,
+  "FAKE_MANGO": 0,
+  "FAKE_BLOOD_VIAL": 0,
+  "FAKE_LEES_WAFFLE": 0,
+  "FAKE_SNECKO_EYE": 0,
+  "FAKE_MERCHANTS_RUG": 0,
+  "WONGO_CUSTOMER_APPRECIATION_BADGE": 0,
+  "CIRCLET": 0,
+  "BOOMING_CONCH": 4,
+  "NEOWS_SACRIFICE": 0,
+  "NEOWS_TALISMAN": 0,
+  "LAVA_ROCK": 0,
+  "PRECISE_SCISSORS": 0,
+  "PHIAL_HOLSTER": 1,
+  "GOLDEN_PEARL": 0,
+  "NEOWS_TORMENT": 0,
+  "SMALL_CAPSULE": 0,
+  "LARGE_CAPSULE": 0,
+  "LEAFY_POULTICE": 0,
+  "SILKEN_TRESS": 0,
+  "CURSED_PEARL": 0,
+  "PRECARIOUS_SHEARS": 0,
+  "NEOWS_BONES": 0,
+  "LEAD_PAPERWEIGHT": 0,
+  "DOWSING_ROD": 0,
+  "POMANDER": 0,
+  "WINGED_BOOTS": 0,
+  "STONE_HUMIDIFIER": 0,
+  "NEW_LEAF": 0,
+  "SCROLL_BOXES": 0,
+  "SILVER_CRUCIBLE": 0,
+  "ARCANE_SCROLL": 0,
+  "KALEIDOSCOPE": 0,
+  "LOST_COFFER": 0,
+  "FISHING_ROD": 1,
+  "HEFTY_TABLET": 0,
+  "NUTRITIOUS_OYSTER": 0,
+  "MASSIVE_SCROLL": 0,
+  "SNECKO_EYE": 4,
+  "RUNIC_PYRAMID": 4,
+  "TOASTY_MITTENS": 4,
+  "BIIIG_HUG": 1,
+  "PAELS_BLOOD": 4,
+  "RADIANT_PEARL": 3,
+  "PRISMATIC_GEM": 3,
+  "ALCHEMICAL_COFFER": 2,
+  "PANDORAS_BOX": 0,
+  "DUSTY_TOME": 0,
+  "PHILOSOPHERS_STONE": 3,
+  "PAELS_CLAW": 2,
+  "PAELS_HORN": 0,
+  "ASTROLABE": 0,
+  "PAELS_LEGION": 2,
+  "ELECTRIC_SHRYMP": 2,
+  "STORYBOOK": 0,
+  "PUMPKIN_CANDLE": 1,
+  "PAELS_TEARS": 1,
+  "PAELS_TOOTH": 1,
+  "TOY_BOX": 1,
+  "GLASS_EYE": 0,
+  "ARCHAIC_TOOTH": 0,
+  "VERY_HOT_COCOA": 2,
+  "PAELS_FLESH": 2,
+  "SOZU": 1,
+  "SEAL_OF_GOLD": 1,
+  "GOLDEN_COMPASS": 0,
+  "NUTRITIOUS_SOUP": 1,
+  "YUMMY_COOKIE": 0,
+  "EMPTY_CAGE": 0,
+  "VELVET_CHOKER": 2,
+  "CALLING_BELL": 0,
+  "ECTOPLASM": 2,
+  "PAELS_EYE": 1,
+  "TOUCH_OF_OROBAS": 0,
+  "FRAGRANT_MUSHROOM": 0,
+  "PAELS_WING": 0,
+  "PAELS_GROWTH": 0,
+  "SAND_CASTLE": 0,
+  "DRIFTWOOD": 0,
+  "SEA_GLASS": 0,
+  "BLACK_STAR": 1,
+  "CROSSBOW": 4,
+  "BRILLIANT_SCARF": 3,
+  "JEWELRY_BOX": 0,
+  "SAI": 3,
+  "MUSIC_BOX": 3,
+  "FIDDLE": 2,
+  "MEAT_CLEAVER": 1,
+  "IRON_CLUB": 2,
+  "DIAMOND_DIADEM": 2,
+  "PRESERVED_FOG": 0,
+  "BEAUTIFUL_BRACELET": 1,
+  "JEWELED_MASK": 1,
+  "SERE_TALON": 1,
+  "DISTINGUISHED_CAPE": 1,
+  "TRI_BOOMERANG": 1,
+  "DELICATE_FROND": 2,
+  "LORDS_PARASOL": 1,
+  "BLESSED_ANTLER": 1,
+  "GLITTER": 0,
+  "WAR_HAMMER": 1,
+  "SPIKED_GAUNTLETS": 1,
+  "THROWING_AXE": 1,
+  "SIGNET_RING": 0,
+  "CHOICES_PARADOX": 1,
+  "TANXS_WHISTLE": 0,
+  "LOOMING_FRUIT": 1,
+  "CLAWS": 0,
+  "BLOOD_SOAKED_ROSE": 1,
+  "FUR_COAT": 0,
+  "WHISPERING_EARRING": 0
+ },
+ "potion_tier": {
+  "FAIRY_IN_A_BOTTLE": 3,
+  "GIGANTIFICATION_POTION": 3,
+  "POWDERED_DEMISE": 3,
+  "POWER_POTION": 3,
+  "HEART_OF_IRON": 3,
+  "OROBIC_ACID": 3,
+  "AMBERGRIS": 3,
+  "SHACKLING_POTION": 2,
+  "BLOCK_POTION": 2,
+  "WEAK_POTION": 2,
+  "ENERGY_POTION": 2,
+  "DUPLICATOR": 2,
+  "RADIANT_TINCTURE": 2,
+  "LUCKY_TONIC": 2,
+  "SHIP_IN_A_BOTTLE": 2,
+  "BEETLE_JUICE": 2,
+  "MAZALETHS_GIFT": 2,
+  "ATTACK_POTION": 2,
+  "SKILL_POTION": 2,
+  "COLORLESS_POTION": 2,
+  "EXPLOSIVE_AMPOULE": 2,
+  "DISTILLED_CHAOS": 2,
+  "SOLDIERS_STEW": 1,
+  "FORTIFIER": 1,
+  "ASHWATER": 1,
+  "FIRE_POTION": 1,
+  "STRENGTH_POTION": 1,
+  "SWIFT_POTION": 1,
+  "VULNERABLE_POTION": 1,
+  "BLOOD_POTION": 1,
+  "CURE_ALL": 1,
+  "TOUCH_OF_INSANITY": 1,
+  "REGEN_POTION": 1,
+  "LIQUID_MEMORIES": 1,
+  "SNECKO_OIL": 1,
+  "DEXTERITY_POTION": 1,
+  "FLEX_POTION": 1,
+  "POTION_OF_BINDING": 1,
+  "CLARITY": 1,
+  "ENTROPIC_BREW": 1,
+  "DROPLET_OF_PRECOGNITION": 1,
+  "FYSH_OIL": 1,
+  "BLESSING_OF_THE_FORGE": 1,
+  "GAMBLERS_BREW": 1,
+  "LIQUID_BRONZE": 1,
+  "GLOWWATER_POTION": 1,
+  "POTION_SHAPED_ROCK": 1,
+  "STABLE_SERUM": 0,
+  "SPEED_POTION": 0,
+  "BOTTLED_POTENTIAL": 0,
+  "FRUIT_JUICE": 0,
+  "FOUL_POTION": 0
+ }
+}

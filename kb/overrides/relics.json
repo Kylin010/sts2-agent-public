@@ -1,0 +1,304 @@
+{
+ "_说明": "手写修正：只写影响决策的遗物。groups 分组；effects 给战斗规划用的效果；boost_tags 选牌时给哪些牌型加分（数值 = 加多少分）；note 备注",
+ "ANCHOR": {
+  "groups": [
+   "combat_start"
+  ],
+  "effects": {
+   "start_block": 10
+  }
+ },
+ "PEN_NIB": {
+  "groups": [
+   "counter",
+   "on_attack"
+  ],
+  "effects": {
+   "counter": 10,
+   "double_attack": true
+  },
+  "boost_tags": {
+   "damage": 0.03
+  },
+  "note": "计数到 9：下一张攻击翻倍；战斗快结束时留到下一场"
+ },
+ "NUNCHAKU": {
+  "groups": [
+   "counter",
+   "on_attack"
+  ],
+  "boost_tags": {
+   "multi_hit": 0.02,
+   "damage": 0.02
+  }
+ },
+ "TUNING_FORK": {
+  "groups": [
+   "counter"
+  ],
+  "boost_tags": {
+   "block": 0.02
+  }
+ },
+ "ICE_CREAM": {
+  "groups": [
+   "turn_end",
+   "energy"
+  ],
+  "effects": {
+   "save_energy": true
+  },
+  "note": "多余能量留到下回合：不必为了花完能量硬出牌"
+ },
+ "ART_OF_WAR": {
+  "groups": [
+   "turn_end",
+   "energy"
+  ],
+  "effects": {
+   "no_attack_energy": 1
+  }
+ },
+ "RIPPLE_BASIN": {
+  "groups": [
+   "turn_end"
+  ],
+  "effects": {
+   "no_attack_block": 4
+  }
+ },
+ "ORICHALCUM": {
+  "groups": [
+   "turn_end"
+  ],
+  "effects": {
+   "zero_block_gain": 6
+  }
+ },
+ "FAKE_ORICHALCUM": {
+  "groups": [
+   "turn_end"
+  ],
+  "effects": {
+   "zero_block_gain": 3
+  }
+ },
+ "CLOAK_CLASP": {
+  "groups": [
+   "turn_end"
+  ],
+  "effects": {
+   "block_per_card_in_hand": 1
+  }
+ },
+ "STURDY_CLAMP": {
+  "groups": [
+   "turn_end"
+  ],
+  "effects": {
+   "carry_block": 10
+  }
+ },
+ "PARRYING_SHIELD": {
+  "groups": [
+   "turn_end"
+  ],
+  "effects": {
+   "block10_damage": 6
+  }
+ },
+ "SCREAMING_FLAGON": {
+  "groups": [
+   "turn_end"
+  ],
+  "effects": {
+   "empty_hand_aoe": 20
+  }
+ },
+ "PAELS_EYE": {
+  "groups": [
+   "turn_end"
+  ],
+  "effects": {
+   "skip_for_extra_turn": true
+  }
+ },
+ "TOASTY_MITTENS": {
+  "groups": [
+   "turn_start"
+  ],
+  "effects": {
+   "auto_exhaust_worst": true
+  }
+ },
+ "MEAT_ON_THE_BONE": {
+  "groups": [
+   "hp"
+  ],
+  "effects": {
+   "end_heal_below_half": 12
+  }
+ },
+ "BOOK_OF_FIVE_RINGS": {
+  "groups": [
+   "deck_add",
+   "counter"
+  ],
+  "effects": {
+   "heal_per_5_cards": 20
+  }
+ },
+ "LUCKY_FYSH": {
+  "groups": [
+   "deck_add"
+  ],
+  "effects": {
+   "gold_per_card": 15
+  }
+ },
+ "GIRYA": {
+  "groups": [
+   "rest"
+  ],
+  "effects": {
+   "rest_lift": 3
+  }
+ },
+ "CHARONS_ASHES": {
+  "groups": [
+   "on_exhaust"
+  ],
+  "boost_tags": {
+   "exhaust_fuel": 0.08,
+   "exhaust_engine": 0.05
+  }
+ },
+ "FORGOTTEN_SOUL": {
+  "groups": [
+   "on_exhaust"
+  ],
+  "boost_tags": {
+   "exhaust_fuel": 0.04
+  }
+ },
+ "JOSS_PAPER": {
+  "groups": [
+   "on_exhaust",
+   "counter"
+  ],
+  "boost_tags": {
+   "exhaust_fuel": 0.04
+  }
+ },
+ "GALACTIC_DUST": {
+  "groups": [
+   "counter"
+  ],
+  "boost_tags": {}
+ },
+ "VAJRA": {
+  "groups": [
+   "combat_start"
+  ],
+  "boost_tags": {
+   "multi_hit": 0.05
+  }
+ },
+ "BRIMSTONE": {
+  "boost_tags": {
+   "multi_hit": 0.05,
+   "damage": 0.02
+  }
+ },
+ "DAUGHTER_OF_THE_WIND": {
+  "groups": [
+   "on_attack"
+  ],
+  "boost_tags": {
+   "multi_hit": 0.03
+  }
+ },
+ "MUMMIFIED_HAND": {
+  "groups": [
+   "on_power"
+  ],
+  "boost_tags": {
+   "power": 0.05
+  }
+ },
+ "GAME_PIECE": {
+  "groups": [
+   "on_power"
+  ],
+  "boost_tags": {
+   "power": 0.05
+  }
+ },
+ "LOST_WISP": {
+  "groups": [
+   "on_power"
+  ],
+  "boost_tags": {
+   "power": 0.06
+  }
+ },
+ "RUNIC_PYRAMID": {
+  "groups": [
+   "turn_end"
+  ],
+  "effects": {
+   "keep_hand": true
+  }
+ },
+ "STONE_CALENDAR": {
+  "groups": [
+   "counter"
+  ],
+  "effects": {
+   "turn7_aoe": 52
+  }
+ },
+ "DEMON_TONGUE": {
+  "boost_tags": {
+   "self_damage": 0.05
+  }
+ },
+ "LAVA_ROCK": {
+  "groups": [
+   "pathing"
+  ],
+  "note": "第一幕 Boss 多掉 2 件遗物"
+ },
+ "_角色和替换": "遗物池：253 件通用 + 每个角色各 9 件专属（kb/relics.json 的 pool 字段）。铁甲战士只会遇到 shared + ironclad。替换：欧洛巴斯之触把初始遗物换成先古版（燃烧之血 → 黑暗之血）；石之剑打败 5 个精英后变成玉之剑（每场开局 +3 力量）",
+ "SWORD_OF_STONE": {
+  "groups": [
+   "counter",
+   "pathing"
+  ],
+  "effects": {
+   "elites_to_transform": 5
+  },
+  "note": "打败 5 个精英后变成玉之剑：路线多打精英"
+ },
+ "SWORD_OF_JADE": {
+  "groups": [
+   "combat_start"
+  ],
+  "boost_tags": {
+   "multi_hit": 0.04
+  },
+  "note": "石之剑变来的：每场开局 +3 力量"
+ },
+ "TOUCH_OF_OROBAS": {
+  "groups": [
+   "hp"
+  ],
+  "note": "拾起时把初始遗物换成先古版：燃烧之血 → 黑暗之血（战后回 12）"
+ },
+ "BLACK_BLOOD": {
+  "groups": [
+   "hp"
+  ],
+  "note": "燃烧之血的先古版：战后回 12"
+ }
+}

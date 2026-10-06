@@ -1,0 +1,16 @@
+--- a/src/Sts2Headless/RunSimulator.cs	2026-10-02 03:13:54.339794539 +0000
++++ b/src/Sts2Headless/RunSimulator.cs	2026-10-02 03:13:54.361794751 +0000
+@@ -3007,9 +3007,13 @@
+                 try { foreach (var dv in r.DynamicVars.Values) vars[dv.Name] = (int)dv.BaseValue; } catch { }
+                 return new Dictionary<string, object?>
+                 {
++                    ["id"] = r.Id.Entry,
+                     ["name"] = _loc.Relic(r.Id.Entry),
+                     ["description"] = _loc.Bilingual("relics", r.Id.Entry + ".description"),
+                     ["vars"] = vars.Count > 0 ? vars : null,
++                    // 计数类遗物（钢笔尖、双截棍、开心小花……）的当前计数和状态：Active = 差一下就触发
++                    ["counter"] = r.ShowCounter ? r.DisplayAmount : (int?)null,
++                    ["status"] = r.Status.ToString(),
+                 };
+             }).ToList(),
+             ["potions"] = player.Potions?.Select((p, i) =>

@@ -1,0 +1,59 @@
+[
+  {
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/TemporaryStrengthPower.cs",
+    "sha256": "5a0bd8788489f1e6b01dcec2a9614b882b6e86ef445da461f7c147ce91e4d9d4"
+  },
+  {
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/TemporaryDexterityPower.cs",
+    "sha256": "c72505343f0ed59f1338097823c0b3d3219d2718d2a324f81f991675bba52c37"
+  },
+  {
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ArtifactPower.cs",
+    "sha256": "7fbccd6288412f8f5c5d183596f98c5117210bc4fe0da15634fbacdb5d0c4a8e"
+  },
+  {
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models/PowerModel.cs",
+    "sha256": "2cc44bddbdd6de6e1d3ded50110a0aace66bc37a942dbf1c5af2af08b9a80dbc"
+  },
+  {
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Commands/PowerCmd.cs",
+    "sha256": "d61e73c082ebcdbafe4abdc6992424598372a0f2fa84e50b8bb43e8d1ed015f6"
+  },
+  {
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Combat/CombatState.cs",
+    "sha256": "bd5f86957741c078fd279bad8d089b54ca5e17326d14e18cdecf9832a5661bb8"
+  },
+  {
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Hooks/Hook.cs",
+    "sha256": "fdb5fc0401e7f7018acb52cd8c8050f6f937bd3a210e4c595feb5946db12bde8"
+  },
+  {
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Entities.Creatures/Creature.cs",
+    "sha256": "7a38841c525d5cc8873a2151e993e30e2ee84ecb345ea57e2570bbac4516c20d"
+  },
+  {
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Nodes.Combat/NPowerContainer.cs",
+    "sha256": "459d96e19a10966d16ddce48a6809eba6f090a0131ec5873d426400a0a2a1743"
+  },
+  {
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Potions/ShacklingPotion.cs",
+    "sha256": "53e86052e754b0aec57e2c4d45c17f690d434e7f97ec8e0a7ab7cd4f4a599953"
+  },
+  {
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/RuinedHelmet.cs",
+    "sha256": "a88f33545295ad4025ad3c95e7e5bed4f32f892309eb3c10246010e3d8b32ff3"
+  },
+  {
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/UnsettlingLamp.cs",
+    "sha256": "9e346d15a956de6d6ba122dbf95eb0192f07626e332c373c735a0362a01ded64"
+  },
+  {
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/SneckoSkull.cs",
+    "sha256": "6aedb8cd861eb8870e9aa934b8d37ab9697382fcfc01faa972b7908fe8610b3e"
+  },
+  {
+    "source": "/opt/slay-the-spire-2/codex-agent/engine/src/Sts2Headless/RunSimulator.cs",
+    "sha256": "480080e50d2ebfe79f1a713bafb98b9b56bb92462029df735eabfa587a58d7ea",
+    "scope": "source inspection only; no deployment/update; visible power export preserves Where/Select order around2507"
+  }
+]

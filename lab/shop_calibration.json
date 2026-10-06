@@ -1,0 +1,21 @@
+{
+ "best": {
+  "shop_card_unit": 5.71,
+  "shop_relic_base": 25.045,
+  "shop_relic_unit": 8.947,
+  "shop_remove_strike_logit": 1.455,
+  "shop_remove_defend_logit": 0.259,
+  "shop_v_gold": 0.046,
+  "shop_relic_logit_ref": -1.306
+ },
+ "f1": 0.4654449105762862,
+ "counts": {
+  "p_card": 0.6,
+  "p_relic": 0.69,
+  "p_remove": 0.64,
+  "t_card": 0.79,
+  "t_relic": 0.66,
+  "t_remove": 0.39
+ },
+ "current_f1": 0.42441860465116277
+}

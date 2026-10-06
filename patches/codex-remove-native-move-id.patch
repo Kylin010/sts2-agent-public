@@ -1,0 +1,6 @@
+--- a/src/Sts2Headless/RunSimulator.cs
++++ b/src/Sts2Headless/RunSimulator.cs
+@@ -2894,3 +2894,2 @@
+                     ["monster_id"] = e.Monster?.Id.Entry,
+                     ["slot"] = e.SlotName,                     // p25cv：站位（屏幕上的位置，公开信息），新引擎按它配对 / 生成敌人
+-                    ["move_id"] = e.Monster?.NextMove?.StateId,

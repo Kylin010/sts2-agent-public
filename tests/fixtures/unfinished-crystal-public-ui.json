@@ -1,0 +1,384 @@
+{
+  "type": "decision",
+  "decision": "event_choice",
+  "context": {
+    "act": 2,
+    "act_name": "Hive",
+    "floor": 3,
+    "room_type": "Event",
+    "boss": {
+      "id": "KNOWLEDGE_DEMON_BOSS",
+      "name": "Knowledge Demon"
+    }
+  },
+  "event_name": "Crystal Sphere",
+  "description": "“I predicted you'd enter...!”\n\nA raspy voice calls out as you enter a mystic hut.\n\n“Your destiny has brought you here. We must uncover your future and fortunes so you can SAVE US ALL!!”\n“Okay, here are the options for the Crystal Sphere reading. Be sure to sign this waiver as well,” she says while bringing out pen and parchment.",
+  "options": [
+    {
+      "index": 0,
+      "title": "Uncover Future",
+      "description": "Pay {UncoverFutureCost} Gold. Divine {UncoverFutureProphesizeCount} times.",
+      "text_key": "CRYSTAL_SPHERE.pages.INITIAL.options.UNCOVER_FUTURE",
+      "is_locked": false,
+      "vars": {
+        "UncoverFutureCost": 87,
+        "UncoverFutureProphesizeCount": 3,
+        "PaymentPlanCount": 6,
+        "CurseTitle": 0
+      }
+    },
+    {
+      "index": 1,
+      "title": "Payment Plan",
+      "description": "Gain a {CurseTitle}. Divine {PaymentPlanCount} times.",
+      "text_key": "CRYSTAL_SPHERE.pages.INITIAL.options.PAYMENT_PLAN",
+      "is_locked": false,
+      "vars": {
+        "UncoverFutureCost": 87,
+        "UncoverFutureProphesizeCount": 3,
+        "PaymentPlanCount": 6,
+        "CurseTitle": 0
+      }
+    }
+  ],
+  "player": {
+    "name": "The Ironclad",
+    "hp": 63,
+    "max_hp": 77,
+    "block": 0,
+    "gold": 292,
+    "potion_slots": 2,
+    "relics": [
+      {
+        "id": "BURNING_BLOOD",
+        "name": "Burning Blood",
+        "description": "At the end of combat, heal {Heal} HP.",
+        "vars": {
+          "Heal": 6
+        },
+        "counter": null,
+        "status": "Normal"
+      },
+      {
+        "id": "PRECARIOUS_SHEARS",
+        "name": "Precarious Shears",
+        "description": "Upon pickup, remove {Cards} {Cards:plural:card|cards} from your Deck and lose {Damage} HP.",
+        "vars": {
+          "Cards": 2,
+          "Damage": 16
+        },
+        "counter": null,
+        "status": "Normal"
+      },
+      {
+        "id": "WAR_PAINT",
+        "name": "War Paint",
+        "description": "Upon pickup, Upgrade {Cards} random {Cards:plural:Skill|Skills}.",
+        "vars": {
+          "Cards": 2
+        },
+        "counter": null,
+        "status": "Normal"
+      },
+      {
+        "id": "BIIIG_HUG",
+        "name": "Biiig Hug",
+        "description": "Upon pickup, remove {Cards} cards from your Deck. Whenever you shuffle your Draw Pile, add a Soot into your Draw Pile.",
+        "vars": {
+          "Cards": 4
+        },
+        "counter": null,
+        "status": "Normal"
+      }
+    ],
+    "potions": [],
+    "deck_size": 15,
+    "deck": [
+      {
+        "id": "CARD.DEFEND_IRONCLAD",
+        "name": "Defend",
+        "cost": 1,
+        "type": "Skill",
+        "upgraded": true,
+        "description": "Gain {Block:diff()} Block.",
+        "stats": {
+          "block": 8
+        },
+        "keywords": null,
+        "after_upgrade": null
+      },
+      {
+        "id": "CARD.DEFEND_IRONCLAD",
+        "name": "Defend",
+        "cost": 1,
+        "type": "Skill",
+        "upgraded": false,
+        "description": "Gain {Block:diff()} Block.",
+        "stats": {
+          "block": 5
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "block": 8
+          },
+          "description": "Gain {Block:diff()} Block.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.DEFEND_IRONCLAD",
+        "name": "Defend",
+        "cost": 1,
+        "type": "Skill",
+        "upgraded": false,
+        "description": "Gain {Block:diff()} Block.",
+        "stats": {
+          "block": 5
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "block": 8
+          },
+          "description": "Gain {Block:diff()} Block.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.DEFEND_IRONCLAD",
+        "name": "Defend",
+        "cost": 1,
+        "type": "Skill",
+        "upgraded": true,
+        "description": "Gain {Block:diff()} Block.",
+        "stats": {
+          "block": 8
+        },
+        "keywords": null,
+        "after_upgrade": null
+      },
+      {
+        "id": "CARD.BASH",
+        "name": "Bash",
+        "cost": 2,
+        "type": "Attack",
+        "upgraded": false,
+        "description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} Vulnerable.",
+        "stats": {
+          "damage": 8,
+          "vulnerablepower": 2
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 2,
+          "stats": {
+            "damage": 10,
+            "vulnerablepower": 3
+          },
+          "description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} Vulnerable.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.ASCENDERS_BANE",
+        "name": "Ascender's Bane",
+        "cost": 0,
+        "type": "Curse",
+        "upgraded": false,
+        "description": "",
+        "stats": null,
+        "keywords": [
+          "Eternal",
+          "Unplayable",
+          "Ethereal"
+        ],
+        "after_upgrade": null
+      },
+      {
+        "id": "CARD.BLOODLETTING",
+        "name": "Bloodletting",
+        "cost": 0,
+        "type": "Skill",
+        "upgraded": false,
+        "description": "Lose {HpLoss:diff()} HP.\nGain {Energy:energyIcons()}.",
+        "stats": {
+          "hploss": 3,
+          "energy": 2
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 0,
+          "stats": {
+            "hploss": 3,
+            "energy": 3
+          },
+          "description": "Lose {HpLoss:diff()} HP.\nGain {Energy:energyIcons()}.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.SHRUG_IT_OFF",
+        "name": "Shrug It Off",
+        "cost": 1,
+        "type": "Skill",
+        "upgraded": false,
+        "description": "Gain {Block:diff()} Block.\nDraw {Cards:diff()} card.",
+        "stats": {
+          "block": 8,
+          "cards": 1
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "block": 11,
+            "cards": 1
+          },
+          "description": "Gain {Block:diff()} Block.\nDraw {Cards:diff()} card.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.UPPERCUT",
+        "name": "Uppercut",
+        "cost": 2,
+        "type": "Attack",
+        "upgraded": true,
+        "description": "Deal {Damage:diff()} damage.\nApply {Power:diff()} Weak.\nApply {Power:diff()} Vulnerable.",
+        "stats": {
+          "damage": 13,
+          "power": 2
+        },
+        "keywords": null,
+        "after_upgrade": null
+      },
+      {
+        "id": "CARD.WHIRLWIND",
+        "name": "Whirlwind",
+        "cost": 0,
+        "type": "Attack",
+        "upgraded": false,
+        "description": "Deal {Damage:diff()} damage to ALL enemies X times.",
+        "stats": {
+          "damage": 5
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 0,
+          "stats": {
+            "damage": 8
+          },
+          "description": "Deal {Damage:diff()} damage to ALL enemies X times.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.BLOODLETTING",
+        "name": "Bloodletting",
+        "cost": 0,
+        "type": "Skill",
+        "upgraded": true,
+        "description": "Lose {HpLoss:diff()} HP.\nGain {Energy:energyIcons()}.",
+        "stats": {
+          "hploss": 3,
+          "energy": 3
+        },
+        "keywords": null,
+        "after_upgrade": null
+      },
+      {
+        "id": "CARD.FIGHT_ME",
+        "name": "Fight Me!",
+        "cost": 2,
+        "type": "Attack",
+        "upgraded": false,
+        "description": "Deal {Damage:diff()} damage twice.\nGain {StrengthPower:diff()} Strength.\nThe enemy gains {EnemyStrength:diff()} Strength.",
+        "stats": {
+          "damage": 5,
+          "repeat": 2,
+          "strengthpower": 3,
+          "enemystrength": 1
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 2,
+          "stats": {
+            "damage": 6,
+            "repeat": 2,
+            "strengthpower": 4,
+            "enemystrength": 1
+          },
+          "description": "Deal {Damage:diff()} damage twice.\nGain {StrengthPower:diff()} Strength.\nThe enemy gains {EnemyStrength:diff()} Strength.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.AGGRESSION",
+        "name": "Aggression",
+        "cost": 1,
+        "type": "Power",
+        "upgraded": false,
+        "description": "At the start of your turn, put a random Attack from your Discard Pile into your Hand and Upgrade it.",
+        "stats": null,
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": null,
+          "description": "At the start of your turn, put a random Attack from your Discard Pile into your Hand and Upgrade it.",
+          "added_keywords": [
+            "Innate"
+          ],
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.UNMOVABLE",
+        "name": "Unmovable",
+        "cost": 2,
+        "type": "Power",
+        "upgraded": false,
+        "description": "The first time you gain Block from a card each turn, double the amount gained.",
+        "stats": null,
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": null,
+          "description": "The first time you gain Block from a card each turn, double the amount gained.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.EVIL_EYE",
+        "name": "Evil Eye",
+        "cost": 1,
+        "type": "Skill",
+        "upgraded": false,
+        "description": "Gain {Block:diff()} Block.\nGain another {Block:diff()} Block if you have Exhausted a card this turn.",
+        "stats": {
+          "block": 8
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "block": 11
+          },
+          "description": "Gain {Block:diff()} Block.\nGain another {Block:diff()} Block if you have Exhausted a card this turn.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      }
+    ]
+  }
+}

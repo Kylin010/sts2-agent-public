@@ -1,0 +1,29 @@
+// 加到 RunSimulator.cs：PatchTalkCmd(); 之后调用 PatchCosmeticDeathHooks();
+// YieldPatches 里加：
+//   public static bool SkipTaskPrefix(ref Task __result) { __result = Task.CompletedTask; return false; }
+//   public static bool SkipVoidPrefix() => false;
+
+    // 后台模式下界面单例（NAudioManager / NCombatRoom）是空的。这两个死亡钩子里只有音效、动画、音乐，
+    // 直接跳过，免得抛空引用打断死亡流程（10/2 引擎体检发现：帝皇蟹的火箭和粉碎者、灵魂枢纽）
+    private static void PatchCosmeticDeathHooks()
+    {
+        try
+        {
+            var harmony = new Harmony("sts2headless.cosmeticdeath");
+            var asm = typeof(CombatManager).Assembly;
+            var flags = System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Public
+                        | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.DeclaredOnly;
+            var sflags = System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Public;
+            var skipTask = typeof(YieldPatches).GetMethod(nameof(YieldPatches.SkipTaskPrefix), sflags);
+            var skipVoid = typeof(YieldPatches).GetMethod(nameof(YieldPatches.SkipVoidPrefix), sflags);
+            var rocket = asm.GetType("MegaCrit.Sts2.Core.Models.Monsters.Rocket")?.GetMethod("BeforeDeath", flags);
+            if (rocket != null && skipTask != null) harmony.Patch(rocket, new HarmonyMethod(skipTask));
+            var crusher = asm.GetType("MegaCrit.Sts2.Core.Models.Monsters.Crusher")?.GetMethod("BeforeDeath", flags);
+            if (crusher != null && skipTask != null) harmony.Patch(crusher, new HarmonyMethod(skipTask));
+            var nexus = asm.GetType("MegaCrit.Sts2.Core.Models.Monsters.SoulNexus")?.GetMethod("AfterDeath", flags);
+            if (nexus != null && skipVoid != null) harmony.Patch(nexus, new HarmonyMethod(skipVoid));
+            Console.Error.WriteLine($"[INFO] Patched cosmetic death hooks (Rocket={rocket != null}, Crusher={crusher != null}, SoulNexus={nexus != null})");
+        }
+        catch (Exception ex) { Console.Error.WriteLine($"[WARN] Failed to patch cosmetic death hooks: {ex.Message}"); }
+    }
+

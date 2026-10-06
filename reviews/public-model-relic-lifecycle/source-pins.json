@@ -1,0 +1,26 @@
+[
+  {
+    "path": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Entities.Players/Player.cs",
+    "sha256": "9fa253c367c1f2d709cee662c49a9579dd32ab989073a3dfdf4be53e073eda6d"
+  },
+  {
+    "path": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Combat/CombatState.cs",
+    "sha256": "bd5f86957741c078fd279bad8d089b54ca5e17326d14e18cdecf9832a5661bb8"
+  },
+  {
+    "path": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models/RelicModel.cs",
+    "sha256": "82d29bc5857bbf1dadaf26a6d55dbb05c19af0067bf8a642dd6d225999303f7b"
+  },
+  {
+    "path": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/ToyBox.cs",
+    "sha256": "bda7689393bf69cea11f328ffc222af9156c73bd604bd452fb704e98c62695f1"
+  },
+  {
+    "path": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Relics/BoneTea.cs",
+    "sha256": "e7aa581caffc77b37ad2a6f0a98c2785c6c811cb5efd977282aa511ce3df8c5a"
+  },
+  {
+    "path": "/opt/slay-the-spire-2/codex-agent/research/claude-value/sts2-cli-p27cv/src/Sts2Headless/RunSimulator.cs",
+    "sha256": "2b4813d40b42e6b46e17fcee4d892fecb20df0f39287338a97916d2808a0e348"
+  }
+]

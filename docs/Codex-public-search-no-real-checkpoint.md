@@ -1,0 +1,11 @@
+# 公开推演：移除普通地图决策中的真实写档
+
+确认代码问题：master的普通路线与follow路线，在search_on开启时仍向真实sim发送 `write_continue_save`；条件没有排除search_public。当前iter-pub/iter-pub-dev的配置均search_on=true、search_public=true。它们已用独立公开模型计算，此真实写档是遗留调用，不是普通玩家UI动作，也违反当前的存读档禁令。
+
+独立分支移除两处地图写档/recipe_pending。run.drive拒绝真实sl_on、save_dir；普通play_one在创建原生进程前拒绝god改血量和sl_on。search.enabled不再启动真实存档重放模式，直接调用search_turn的旧模式也明确拒绝。公开模型search_public仍能用独立随机流计算，不改候选或动作评分。
+
+这是明确规定的公平性边界，不用默认关闭实验flag恢复违规入口。源码历史中的legacy重放帮助函数仍保留作证据，已断开普通搜索入口；本报告**没有证明所有历史工具、原生CLI命令和公开模型字段都已完成公平性审计**。尤其build_public仍引用move_id/move_next、旧draw字段，是否来自合法UI/静态推导须核当前p27原生输出；不能仅凭search_public=true认证其公平性。后续将追查接口，不读取实际未来随机数来验证。
+
+14纯边界检查+37移植检查通过/Popen阻断：路线和follow只查公开地图、不写档；高血与SL在acquire前拒绝；旧recipe不能开重放；公开模型构建失败不计分；各候选共享同一独立种子，修改真实seed不改变模型随机流。未启动新原生游戏、批量、模型服务或远端。
+
+旧test_search_reset_contract假定真实存档重放入口仍可用，6项/13子断言因新边界明确拒绝而报错；原测试与日志保留reviews/public-search-no-checkpoint，当前测试改成独立公开模型契约，7项通过。没有用这些检查声称胜率提高或所有信息泄漏已取消。未修改Claude工作树、部署、队列或进程；交Claude优先验证后合并。

@@ -1,0 +1,28 @@
+--- a/src/Sts2Headless/RunSimulator.cs
++++ b/src/Sts2Headless/RunSimulator.cs
+@@ -2879,7 +2879,7 @@
+                 catch { }
+ 
+                 // Enemy powers
+-                var ePowers = e.Powers?.Select(pw => new Dictionary<string, object?>
++                var ePowers = e.Powers?.Where(pw => pw.IsVisible).Select(pw => new Dictionary<string, object?>
+                 {
+                     ["id"] = pw.Id.Entry,
+                     ["name"] = _loc.Power(pw.Id.Entry),
+@@ -2894,7 +2894,6 @@
+                     ["monster_id"] = e.Monster?.Id.Entry,
+                     ["slot"] = e.SlotName,                     // p25cv：站位（屏幕上的位置，公开信息），新引擎按它配对 / 生成敌人
+                     ["move_id"] = e.Monster?.NextMove?.StateId,
+-                    ["move_next"] = e.Monster?.NextMove?.StateId == "STUNNED" ? e.Monster.NextMove.FollowUpStateId : null,
+                     ["hp"] = e.CurrentHp,
+                     ["max_hp"] = e.MaxHp,
+                     ["block"] = e.Block,
+@@ -2905,7 +2904,7 @@
+             }).ToList() ?? new();
+ 
+         // Player powers/buffs
+-        var playerPowers = player.Creature?.Powers?.Select(pw => new Dictionary<string, object?>
++        var playerPowers = player.Creature?.Powers?.Where(pw => pw.IsVisible).Select(pw => new Dictionary<string, object?>
+         {
+             ["id"] = pw.Id.Entry,
+             ["name"] = _loc.Power(pw.Id.Entry),

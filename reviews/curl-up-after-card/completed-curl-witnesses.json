@@ -1,0 +1,70 @@
+{
+  "scope": "Completed historical replay actions; validation only, not normal No-SL qualification or candidate win-rate",
+  "files_read": 1050,
+  "examples": [
+    {
+      "source": "/opt/slay-the-spire-2/sources/community-runs/replays/ironclad-a10/d89c55f212974207.ndjson.gz",
+      "source_sha256": "03d6945e261b0f7b3ee62a30ddf111320e5d0e984e96439162ff52c387ab357d",
+      "header": {
+        "seed": "U3F06ZT323WD",
+        "build_id": "v0.111.0",
+        "replay_version": 4,
+        "ascension": 10,
+        "reloads": 0
+      },
+      "play": {
+        "t": "play",
+        "s": 1968,
+        "ms": 553589,
+        "floor": 23,
+        "act": 2,
+        "c": 311,
+        "deck_c": 10,
+        "id": "BASH",
+        "up": 0,
+        "target": "LOUSE_PROGENITOR",
+        "cost_paid": 2,
+        "stars_paid": 0,
+        "auto": false,
+        "play_index": 0,
+        "play_count": 1,
+        "turn": 3
+      },
+      "events": [
+        {
+          "t": "hit",
+          "s": 1969,
+          "ms": 553656,
+          "floor": 23,
+          "act": 2,
+          "src": "player",
+          "dst": "LOUSE_PROGENITOR",
+          "dmg": 0,
+          "blocked": 9,
+          "killed": false,
+          "card": "BASH"
+        },
+        {
+          "t": "power",
+          "s": 1970,
+          "ms": 553876,
+          "floor": 23,
+          "act": 2,
+          "src": "player",
+          "id": "VULNERABLE_POWER",
+          "n": 2,
+          "tgt": "LOUSE_PROGENITOR"
+        },
+        {
+          "t": "block",
+          "s": 1971,
+          "ms": 554102,
+          "floor": 23,
+          "act": 2,
+          "src": "LOUSE_PROGENITOR",
+          "n": 18
+        }
+      ]
+    }
+  ]
+}

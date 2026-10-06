@@ -1,0 +1,36 @@
+diff --git a/src/Sts2Headless/RunSimulator.cs b/src/Sts2Headless/RunSimulator.cs
+index c9a7108..911f841 100644
+--- a/src/Sts2Headless/RunSimulator.cs
++++ b/src/Sts2Headless/RunSimulator.cs
+@@ -1262,6 +1262,7 @@ public class RunSimulator
+ 
+         // Ensure no actions are still running before ending turn
+         WaitForActionExecutor();
++        var roundBefore = CombatManager.Instance.DebugOnlyGetState()?.RoundNumber ?? 0;   // 10/3（B-020）：结束回合后等回合真的推进
+ 
+         Log($"Ending turn (round={CombatManager.Instance.DebugOnlyGetState()?.RoundNumber ?? 0})");
+         _turnStarted.Reset();
+@@ -1410,6 +1411,23 @@ public class RunSimulator
+             }
+         }
+ 
++        // 10/3（B-020）：事件里开打的战斗（拳击事件的两只打孔构装体等），结束回合的动作排在还没走完的事件任务后面，
++        // 上面的等待一看「还是出牌阶段」就返回了——回传的局面落后一步，程序按旧手牌 / 旧意图决定，接连结束回合等于跳过自己的回合
++        // （实测 100 局里 5 局因此死在普通战）。这里等回合数真的变了（或战斗结束 / 死了 / 弹出选牌），最多 10 秒；还不变就报技术故障，不回传旧局面。
++        var swEnd = System.Diagnostics.Stopwatch.StartNew();
++        // 新的玩家回合开始 = 回合数变了，或者「回合开始」信号来了而且现在是出牌阶段（额外回合不加回合数：「Player is taking an extra turn」，
++        // 只看回合数会误判卡住——10/3 p18 对照 6 局误报；敌人回合开始也会发同一个信号，但那时不是出牌阶段）
++        bool NewPlayerTurn() => (CombatManager.Instance.DebugOnlyGetState()?.RoundNumber ?? roundBefore) != roundBefore || (_turnStarted.IsSet && IsPlayPhase());
++        while (CombatManager.Instance.IsInProgress && !player.Creature.IsDead && !_cardSelector.HasPending && !_cardSelector.HasPendingReward
++               && !NewPlayerTurn() && swEnd.ElapsedMilliseconds < 10000)
++        {
++            _syncCtx.Pump();
++            Thread.Sleep(5);
++        }
++        if (CombatManager.Instance.IsInProgress && !player.Creature.IsDead && !_cardSelector.HasPending && !_cardSelector.HasPendingReward
++            && !NewPlayerTurn())
++            return Error($"ENDTURN_STALE: round still {roundBefore} after end_turn (treat the run as a technical failure)");
++        WaitForActionExecutor();
+         return DetectDecisionPoint();
+     }
+ 

@@ -1,0 +1,34 @@
+--- a/src/Sts2Headless/RunSimulator.cs
++++ b/src/Sts2Headless/RunSimulator.cs
+@@ -806,6 +806,22 @@
+                     var relic = player.Relics.FirstOrDefault(r => string.Equals(r.Id.Entry, prop.Name.Replace("RELIC.", ""), StringComparison.OrdinalIgnoreCase));
+                     if (relic == null || setStatus == null) continue;
+                     try { setStatus.Invoke(relic, new object[] { Enum.Parse(relic.Status.GetType(), prop.Value.GetString() ?? "Normal") }); } catch { missing.Add("relic_status:" + prop.Name); }
++                }
++            }
++            // Independent public model only: use explicit UI flags, never infer
++            // IsMelted from Status or copy a private native lifetime counter.
++            if (args.TryGetValue("relic_lifecycle", out var lifeEl))
++            {
++                foreach (var prop in lifeEl.EnumerateObject())
++                {
++                    var relic = player.Relics.FirstOrDefault(r => string.Equals(r.Id.Entry, prop.Name.Replace("RELIC.", ""), StringComparison.OrdinalIgnoreCase));
++                    if (relic == null) { missing.Add("relic_lifecycle:" + prop.Name); continue; }
++                    var flags = prop.Value;
++                    if (!flags.TryGetProperty("is_wax", out var wax) || wax.ValueKind is not (System.Text.Json.JsonValueKind.True or System.Text.Json.JsonValueKind.False)
++                        || !flags.TryGetProperty("is_melted", out var melted) || melted.ValueKind is not (System.Text.Json.JsonValueKind.True or System.Text.Json.JsonValueKind.False))
++                    { missing.Add("relic_lifecycle:" + prop.Name); continue; }
++                    relic.IsWax = wax.GetBoolean();
++                    relic.IsMelted = melted.GetBoolean();
+                 }
+             }
+             if (args.TryGetValue("relic_counters", out var rcEl))
+@@ -3649,6 +3665,8 @@
+                     // 计数类遗物（钢笔尖、双截棍、开心小花……）的当前计数和状态：Active = 差一下就触发
+                     ["counter"] = r.ShowCounter ? r.DisplayAmount : (int?)null,
+                     ["status"] = r.Status.ToString(),
++                    ["is_wax"] = r.IsWax,
++                    ["is_melted"] = r.IsMelted,
+                 };
+             }).ToList(),
+             ["potions"] = player.Potions?.Select((p, i) =>

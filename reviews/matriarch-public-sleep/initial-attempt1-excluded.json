@@ -1,0 +1,1368 @@
+{
+  "scope": "Historical completed public intent/power/move order. Fixed-source timing validation only; not own No-SL qualification, causal wake strategy comparison or win-rate uplift. No RNG/save/private phase fields used by the decision function or exported here. Initial audit incorrectly selected attempt_id=1 (not the strict no-restart subset). Retained as an excluded exploratory audit; no win/lose strategy conclusion.",
+  "files_read": 1050,
+  "eligible_combats": 22,
+  "prefix_counts": [
+    {
+      "terminal": "death",
+      "first_three_moves": [],
+      "count": 1
+    },
+    {
+      "terminal": "death",
+      "first_three_moves": [
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE"
+      ],
+      "count": 1
+    },
+    {
+      "terminal": "death",
+      "first_three_moves": [
+        "SLEEP_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE"
+      ],
+      "count": 4
+    },
+    {
+      "terminal": "death",
+      "first_three_moves": [
+        "SLEEP_MOVE",
+        "SLEEP_MOVE",
+        "SLASH_MOVE"
+      ],
+      "count": 4
+    },
+    {
+      "terminal": "death",
+      "first_three_moves": [
+        "SLEEP_MOVE",
+        "SLEEP_MOVE",
+        "SLEEP_MOVE"
+      ],
+      "count": 3
+    },
+    {
+      "terminal": "death",
+      "first_three_moves": [
+        "SLEEP_MOVE",
+        "SLEEP_MOVE",
+        "STUNNED"
+      ],
+      "count": 1
+    },
+    {
+      "terminal": "left_run",
+      "first_three_moves": [],
+      "count": 2
+    },
+    {
+      "terminal": "left_run",
+      "first_three_moves": [
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE"
+      ],
+      "count": 2
+    },
+    {
+      "terminal": "left_run",
+      "first_three_moves": [
+        "SLEEP_MOVE",
+        "SLEEP_MOVE",
+        "SLASH_MOVE"
+      ],
+      "count": 3
+    },
+    {
+      "terminal": "left_run",
+      "first_three_moves": [
+        "SLEEP_MOVE",
+        "SLEEP_MOVE",
+        "SLEEP_MOVE"
+      ],
+      "count": 1
+    }
+  ],
+  "examples": {
+    "natural": {
+      "source": "/opt/slay-the-spire-2/sources/community-runs/replays/ironclad-a10/05af732876663619.ndjson.gz",
+      "sha256": "54472f0477638a7f6ccb994aeb4f60b3f9d137117292a1fa9ce68517d0af7ca0",
+      "header": {
+        "seed": "DVN230MC8WN7",
+        "build_id": "v0.111.0",
+        "reloads": 0,
+        "player_count": 1,
+        "ascension": 10
+      },
+      "public_events": [
+        {
+          "after_last_end_turn": 1,
+          "event": {
+            "t": "intent",
+            "s": 1149,
+            "ms": 3412805,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 49,
+            "id": "SLEEP_MOVE",
+            "at": "turn_start",
+            "intents": [
+              "sleep"
+            ]
+          }
+        },
+        {
+          "round": 1,
+          "event": {
+            "t": "move",
+            "s": 1160,
+            "ms": 3424935,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 49,
+            "id": "SLEEP_MOVE",
+            "intents": [
+              "sleep"
+            ]
+          }
+        },
+        {
+          "round": 1,
+          "event": {
+            "t": "power",
+            "s": 1163,
+            "ms": 3425168,
+            "floor": 17,
+            "act": 1,
+            "src": "effect",
+            "id": "ASLEEP_POWER",
+            "n": -1,
+            "amount": 2,
+            "tgt": "LAGAVULIN_MATRIARCH",
+            "tgt_cid": 49
+          }
+        },
+        {
+          "after_last_end_turn": 1,
+          "event": {
+            "t": "intent",
+            "s": 1173,
+            "ms": 3426489,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 49,
+            "id": "SLEEP_MOVE",
+            "at": "turn_start",
+            "intents": [
+              "sleep"
+            ]
+          }
+        },
+        {
+          "round": 2,
+          "event": {
+            "t": "move",
+            "s": 1190,
+            "ms": 3435802,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 49,
+            "id": "SLEEP_MOVE",
+            "intents": [
+              "sleep"
+            ]
+          }
+        },
+        {
+          "round": 2,
+          "event": {
+            "t": "power",
+            "s": 1193,
+            "ms": 3436034,
+            "floor": 17,
+            "act": 1,
+            "src": "effect",
+            "id": "ASLEEP_POWER",
+            "n": -1,
+            "amount": 1,
+            "tgt": "LAGAVULIN_MATRIARCH",
+            "tgt_cid": 49
+          }
+        },
+        {
+          "after_last_end_turn": 2,
+          "event": {
+            "t": "intent",
+            "s": 1203,
+            "ms": 3437354,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 49,
+            "id": "SLEEP_MOVE",
+            "at": "turn_start",
+            "intents": [
+              "sleep"
+            ]
+          }
+        },
+        {
+          "round": 3,
+          "event": {
+            "t": "move",
+            "s": 1215,
+            "ms": 3452218,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 49,
+            "id": "SLEEP_MOVE",
+            "intents": [
+              "sleep"
+            ]
+          }
+        },
+        {
+          "round": 3,
+          "event": {
+            "t": "power",
+            "s": 1218,
+            "ms": 3452551,
+            "floor": 17,
+            "act": 1,
+            "src": "effect",
+            "id": "ASLEEP_POWER",
+            "n": -1,
+            "amount": 0,
+            "tgt": "LAGAVULIN_MATRIARCH",
+            "tgt_cid": 49
+          }
+        },
+        {
+          "after_last_end_turn": 3,
+          "event": {
+            "t": "intent",
+            "s": 1228,
+            "ms": 3455006,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 49,
+            "id": "SLASH_MOVE",
+            "at": "turn_start",
+            "intents": [
+              "attack"
+            ],
+            "dmg": 21,
+            "hits": 1
+          }
+        },
+        {
+          "round": 4,
+          "event": {
+            "t": "move",
+            "s": 1267,
+            "ms": 3478328,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 49,
+            "id": "SLASH_MOVE",
+            "intents": [
+              "attack"
+            ]
+          }
+        },
+        {
+          "after_last_end_turn": 4,
+          "event": {
+            "t": "intent",
+            "s": 1279,
+            "ms": 3479921,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 49,
+            "id": "DISEMBOWEL_MOVE",
+            "at": "turn_start",
+            "intents": [
+              "attack"
+            ],
+            "dmg": 10,
+            "hits": 2
+          }
+        },
+        {
+          "round": 5,
+          "event": {
+            "t": "move",
+            "s": 1303,
+            "ms": 3494935,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 49,
+            "id": "DISEMBOWEL_MOVE",
+            "intents": [
+              "attack"
+            ]
+          }
+        },
+        {
+          "after_last_end_turn": 5,
+          "event": {
+            "t": "intent",
+            "s": 1317,
+            "ms": 3496571,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 49,
+            "id": "SLASH2_MOVE",
+            "at": "turn_start",
+            "intents": [
+              "attack",
+              "defend"
+            ],
+            "dmg": 14,
+            "hits": 1
+          }
+        },
+        {
+          "round": 6,
+          "event": {
+            "t": "move",
+            "s": 1338,
+            "ms": 3510730,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 49,
+            "id": "SLASH2_MOVE",
+            "intents": [
+              "attack",
+              "defend"
+            ]
+          }
+        },
+        {
+          "after_last_end_turn": 6,
+          "event": {
+            "t": "intent",
+            "s": 1351,
+            "ms": 3512404,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 49,
+            "id": "SOUL_SIPHON_MOVE",
+            "at": "turn_start",
+            "intents": [
+              "debuff",
+              "buff"
+            ]
+          }
+        },
+        {
+          "round": 7,
+          "event": {
+            "t": "move",
+            "s": 1364,
+            "ms": 3523591,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 49,
+            "id": "SOUL_SIPHON_MOVE",
+            "intents": [
+              "debuff",
+              "buff"
+            ]
+          }
+        },
+        {
+          "after_last_end_turn": 7,
+          "event": {
+            "t": "intent",
+            "s": 1377,
+            "ms": 3525525,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 49,
+            "id": "SLASH_MOVE",
+            "at": "turn_start",
+            "intents": [
+              "attack"
+            ],
+            "dmg": 23,
+            "hits": 1
+          }
+        },
+        {
+          "round": 8,
+          "event": {
+            "t": "move",
+            "s": 1403,
+            "ms": 3544094,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 49,
+            "id": "SLASH_MOVE",
+            "intents": [
+              "attack"
+            ]
+          }
+        },
+        {
+          "after_last_end_turn": 8,
+          "event": {
+            "t": "intent",
+            "s": 1416,
+            "ms": 3546171,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 49,
+            "id": "DISEMBOWEL_MOVE",
+            "at": "turn_start",
+            "intents": [
+              "attack"
+            ],
+            "dmg": 12,
+            "hits": 2
+          }
+        }
+      ],
+      "sequence": [
+        "SLEEP_MOVE",
+        "SLEEP_MOVE",
+        "SLEEP_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE",
+        "SOUL_SIPHON_MOVE",
+        "SLASH_MOVE"
+      ],
+      "terminal": {
+        "terminal_reason": "death",
+        "floor": null,
+        "act": null
+      }
+    },
+    "stunned": {
+      "source": "/opt/slay-the-spire-2/sources/community-runs/replays/ironclad-a10/507957e95fd277a4.ndjson.gz",
+      "sha256": "87084c60901aee8608a49a434ae6064786c7a654ff1432e4e20774f1ba8ad84b",
+      "header": {
+        "seed": "0YGJ6ET28FWF",
+        "build_id": "v0.111.0",
+        "reloads": 0,
+        "player_count": 1,
+        "ascension": 10
+      },
+      "public_events": [
+        {
+          "after_last_end_turn": 1,
+          "event": {
+            "t": "intent",
+            "s": 1705,
+            "ms": 1706,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 45,
+            "id": "SLEEP_MOVE",
+            "at": "turn_start",
+            "intents": [
+              "sleep"
+            ]
+          }
+        },
+        {
+          "round": 1,
+          "event": {
+            "t": "move",
+            "s": 1715,
+            "ms": 5675,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 45,
+            "id": "SLEEP_MOVE",
+            "intents": [
+              "sleep"
+            ]
+          }
+        },
+        {
+          "round": 1,
+          "event": {
+            "t": "power",
+            "s": 1718,
+            "ms": 5893,
+            "floor": 17,
+            "act": 1,
+            "src": "effect",
+            "id": "ASLEEP_POWER",
+            "n": -1,
+            "amount": 2,
+            "tgt": "LAGAVULIN_MATRIARCH",
+            "tgt_cid": 45
+          }
+        },
+        {
+          "after_last_end_turn": 1,
+          "event": {
+            "t": "intent",
+            "s": 1726,
+            "ms": 7044,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 45,
+            "id": "SLEEP_MOVE",
+            "at": "turn_start",
+            "intents": [
+              "sleep"
+            ]
+          }
+        },
+        {
+          "round": 2,
+          "event": {
+            "t": "move",
+            "s": 1749,
+            "ms": 13193,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 45,
+            "id": "SLEEP_MOVE",
+            "intents": [
+              "sleep"
+            ]
+          }
+        },
+        {
+          "round": 2,
+          "event": {
+            "t": "power",
+            "s": 1752,
+            "ms": 13410,
+            "floor": 17,
+            "act": 1,
+            "src": "effect",
+            "id": "ASLEEP_POWER",
+            "n": -1,
+            "amount": 1,
+            "tgt": "LAGAVULIN_MATRIARCH",
+            "tgt_cid": 45
+          }
+        },
+        {
+          "after_last_end_turn": 2,
+          "event": {
+            "t": "intent",
+            "s": 1760,
+            "ms": 14544,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 45,
+            "id": "SLEEP_MOVE",
+            "at": "turn_start",
+            "intents": [
+              "sleep"
+            ]
+          }
+        },
+        {
+          "after_last_end_turn": 2,
+          "event": {
+            "t": "intent",
+            "s": 1779,
+            "ms": 20449,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 45,
+            "id": "STUNNED",
+            "at": "set",
+            "from": "SLEEP_MOVE",
+            "intents": [
+              "stun"
+            ]
+          }
+        },
+        {
+          "round": 3,
+          "event": {
+            "t": "move",
+            "s": 1784,
+            "ms": 21648,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 45,
+            "id": "STUNNED",
+            "intents": [
+              "stun"
+            ]
+          }
+        },
+        {
+          "after_last_end_turn": 3,
+          "event": {
+            "t": "intent",
+            "s": 1795,
+            "ms": 22901,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 45,
+            "id": "SLASH_MOVE",
+            "at": "turn_start",
+            "intents": [
+              "attack"
+            ],
+            "dmg": 21,
+            "hits": 1
+          }
+        },
+        {
+          "round": 4,
+          "event": {
+            "t": "move",
+            "s": 1827,
+            "ms": 40559,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 45,
+            "id": "SLASH_MOVE",
+            "intents": [
+              "attack"
+            ]
+          }
+        },
+        {
+          "after_last_end_turn": 4,
+          "event": {
+            "t": "intent",
+            "s": 1839,
+            "ms": 42287,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 45,
+            "id": "DISEMBOWEL_MOVE",
+            "at": "turn_start",
+            "intents": [
+              "attack"
+            ],
+            "dmg": 10,
+            "hits": 2
+          }
+        },
+        {
+          "round": 5,
+          "event": {
+            "t": "move",
+            "s": 1864,
+            "ms": 52468,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 45,
+            "id": "DISEMBOWEL_MOVE",
+            "intents": [
+              "attack"
+            ]
+          }
+        },
+        {
+          "after_last_end_turn": 5,
+          "event": {
+            "t": "intent",
+            "s": 1878,
+            "ms": 54020,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 45,
+            "id": "SLASH2_MOVE",
+            "at": "turn_start",
+            "intents": [
+              "attack",
+              "defend"
+            ],
+            "dmg": 14,
+            "hits": 1
+          }
+        },
+        {
+          "round": 6,
+          "event": {
+            "t": "move",
+            "s": 1897,
+            "ms": 61138,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 45,
+            "id": "SLASH2_MOVE",
+            "intents": [
+              "attack",
+              "defend"
+            ]
+          }
+        },
+        {
+          "after_last_end_turn": 6,
+          "event": {
+            "t": "intent",
+            "s": 1911,
+            "ms": 63511,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 45,
+            "id": "SOUL_SIPHON_MOVE",
+            "at": "turn_start",
+            "intents": [
+              "debuff",
+              "buff"
+            ]
+          }
+        },
+        {
+          "round": 7,
+          "event": {
+            "t": "move",
+            "s": 1937,
+            "ms": 72754,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 45,
+            "id": "SOUL_SIPHON_MOVE",
+            "intents": [
+              "debuff",
+              "buff"
+            ]
+          }
+        },
+        {
+          "after_last_end_turn": 7,
+          "event": {
+            "t": "intent",
+            "s": 1949,
+            "ms": 74484,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 45,
+            "id": "SLASH_MOVE",
+            "at": "turn_start",
+            "intents": [
+              "attack"
+            ],
+            "dmg": 23,
+            "hits": 1
+          }
+        },
+        {
+          "round": 8,
+          "event": {
+            "t": "move",
+            "s": 1967,
+            "ms": 79823,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 45,
+            "id": "SLASH_MOVE",
+            "intents": [
+              "attack"
+            ]
+          }
+        },
+        {
+          "after_last_end_turn": 8,
+          "event": {
+            "t": "intent",
+            "s": 1979,
+            "ms": 81749,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 45,
+            "id": "DISEMBOWEL_MOVE",
+            "at": "turn_start",
+            "intents": [
+              "attack"
+            ],
+            "dmg": 12,
+            "hits": 2
+          }
+        },
+        {
+          "round": 9,
+          "event": {
+            "t": "move",
+            "s": 2004,
+            "ms": 89795,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 45,
+            "id": "DISEMBOWEL_MOVE",
+            "intents": [
+              "attack"
+            ]
+          }
+        },
+        {
+          "after_last_end_turn": 9,
+          "event": {
+            "t": "intent",
+            "s": 2019,
+            "ms": 91763,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 45,
+            "id": "SLASH2_MOVE",
+            "at": "turn_start",
+            "intents": [
+              "attack",
+              "defend"
+            ],
+            "dmg": 16,
+            "hits": 1
+          }
+        },
+        {
+          "round": 10,
+          "event": {
+            "t": "move",
+            "s": 2037,
+            "ms": 99829,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 45,
+            "id": "SLASH2_MOVE",
+            "intents": [
+              "attack",
+              "defend"
+            ]
+          }
+        },
+        {
+          "after_last_end_turn": 10,
+          "event": {
+            "t": "intent",
+            "s": 2050,
+            "ms": 101612,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 45,
+            "id": "SOUL_SIPHON_MOVE",
+            "at": "turn_start",
+            "intents": [
+              "debuff",
+              "buff"
+            ]
+          }
+        },
+        {
+          "round": 11,
+          "event": {
+            "t": "move",
+            "s": 2076,
+            "ms": 110629,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 45,
+            "id": "SOUL_SIPHON_MOVE",
+            "intents": [
+              "debuff",
+              "buff"
+            ]
+          }
+        },
+        {
+          "after_last_end_turn": 11,
+          "event": {
+            "t": "intent",
+            "s": 2091,
+            "ms": 112858,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 45,
+            "id": "SLASH_MOVE",
+            "at": "turn_start",
+            "intents": [
+              "attack"
+            ],
+            "dmg": 25,
+            "hits": 1
+          }
+        },
+        {
+          "after_last_end_turn": 11,
+          "event": {
+            "t": "intent",
+            "s": 2109,
+            "ms": 125519,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 45,
+            "id": "SLASH_MOVE",
+            "at": "turn_end",
+            "intents": [
+              "attack"
+            ],
+            "dmg": 17,
+            "hits": 1
+          }
+        },
+        {
+          "round": 12,
+          "event": {
+            "t": "move",
+            "s": 2113,
+            "ms": 126392,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 45,
+            "id": "SLASH_MOVE",
+            "intents": [
+              "attack"
+            ]
+          }
+        },
+        {
+          "after_last_end_turn": 12,
+          "event": {
+            "t": "intent",
+            "s": 2126,
+            "ms": 128220,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 45,
+            "id": "DISEMBOWEL_MOVE",
+            "at": "turn_start",
+            "intents": [
+              "attack"
+            ],
+            "dmg": 9,
+            "hits": 2
+          }
+        },
+        {
+          "round": 13,
+          "event": {
+            "t": "move",
+            "s": 2150,
+            "ms": 140242,
+            "floor": 17,
+            "act": 1,
+            "src": "LAGAVULIN_MATRIARCH",
+            "src_cid": 45,
+            "id": "DISEMBOWEL_MOVE",
+            "intents": [
+              "attack"
+            ]
+          }
+        }
+      ],
+      "sequence": [
+        "SLEEP_MOVE",
+        "SLEEP_MOVE",
+        "STUNNED",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE",
+        "SOUL_SIPHON_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE",
+        "SOUL_SIPHON_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE"
+      ],
+      "terminal": {
+        "terminal_reason": "death",
+        "floor": null,
+        "act": null
+      }
+    }
+  },
+  "rows": [
+    {
+      "source": "/opt/slay-the-spire-2/sources/community-runs/replays/ironclad-a10/05af732876663619.ndjson.gz",
+      "seed": "DVN230MC8WN7",
+      "run_terminal_reason": "death",
+      "combat_finish": "combat_end",
+      "wake_last_end_turn": null,
+      "moves": [
+        "SLEEP_MOVE",
+        "SLEEP_MOVE",
+        "SLEEP_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE",
+        "SOUL_SIPHON_MOVE",
+        "SLASH_MOVE"
+      ]
+    },
+    {
+      "source": "/opt/slay-the-spire-2/sources/community-runs/replays/ironclad-a10/0bb2b0e1c17d13fa.ndjson.gz",
+      "seed": "17_09_2026_1P",
+      "run_terminal_reason": "left_run",
+      "combat_finish": "end",
+      "wake_last_end_turn": null,
+      "moves": [
+        "SLEEP_MOVE",
+        "SLEEP_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE",
+        "SOUL_SIPHON_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE"
+      ]
+    },
+    {
+      "source": "/opt/slay-the-spire-2/sources/community-runs/replays/ironclad-a10/197f76ec482f6b15.ndjson.gz",
+      "seed": "GDJAW4D6U8GG",
+      "run_terminal_reason": "left_run",
+      "combat_finish": "end",
+      "wake_last_end_turn": null,
+      "moves": []
+    },
+    {
+      "source": "/opt/slay-the-spire-2/sources/community-runs/replays/ironclad-a10/265510948114f743.ndjson.gz",
+      "seed": "DBU0A3K70WE7",
+      "run_terminal_reason": "left_run",
+      "combat_finish": "end",
+      "wake_last_end_turn": null,
+      "moves": [
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE",
+        "SOUL_SIPHON_MOVE",
+        "SLASH_MOVE"
+      ]
+    },
+    {
+      "source": "/opt/slay-the-spire-2/sources/community-runs/replays/ironclad-a10/355c8b6f52f6efc8.ndjson.gz",
+      "seed": "17_09_2026_1P",
+      "run_terminal_reason": "death",
+      "combat_finish": "end",
+      "wake_last_end_turn": null,
+      "moves": [
+        "SLEEP_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE",
+        "SOUL_SIPHON_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE",
+        "SOUL_SIPHON_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE"
+      ]
+    },
+    {
+      "source": "/opt/slay-the-spire-2/sources/community-runs/replays/ironclad-a10/3a6b5b287f1d7be5.ndjson.gz",
+      "seed": "JBQGSJZ08J3H",
+      "run_terminal_reason": "death",
+      "combat_finish": "combat_end",
+      "wake_last_end_turn": null,
+      "moves": [
+        "SLEEP_MOVE",
+        "SLEEP_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE",
+        "SOUL_SIPHON_MOVE"
+      ]
+    },
+    {
+      "source": "/opt/slay-the-spire-2/sources/community-runs/replays/ironclad-a10/42f90af84855aeaf.ndjson.gz",
+      "seed": "QPZ2HHWM7UA9",
+      "run_terminal_reason": "death",
+      "combat_finish": "combat_end",
+      "wake_last_end_turn": null,
+      "moves": [
+        "SLEEP_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE",
+        "SOUL_SIPHON_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE"
+      ]
+    },
+    {
+      "source": "/opt/slay-the-spire-2/sources/community-runs/replays/ironclad-a10/507957e95fd277a4.ndjson.gz",
+      "seed": "0YGJ6ET28FWF",
+      "run_terminal_reason": "death",
+      "combat_finish": "end",
+      "wake_last_end_turn": 2,
+      "moves": [
+        "SLEEP_MOVE",
+        "SLEEP_MOVE",
+        "STUNNED",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE",
+        "SOUL_SIPHON_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE",
+        "SOUL_SIPHON_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE"
+      ]
+    },
+    {
+      "source": "/opt/slay-the-spire-2/sources/community-runs/replays/ironclad-a10/571e2d70bf534721.ndjson.gz",
+      "seed": "P3XAQLB01M7P",
+      "run_terminal_reason": "left_run",
+      "combat_finish": "combat_end",
+      "wake_last_end_turn": null,
+      "moves": [
+        "SLEEP_MOVE",
+        "SLEEP_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE"
+      ]
+    },
+    {
+      "source": "/opt/slay-the-spire-2/sources/community-runs/replays/ironclad-a10/596b064d8dbbf6d4.ndjson.gz",
+      "seed": "SEX5PNKQ2KU3",
+      "run_terminal_reason": "death",
+      "combat_finish": "combat_end",
+      "wake_last_end_turn": null,
+      "moves": [
+        "SLEEP_MOVE",
+        "SLEEP_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE",
+        "SOUL_SIPHON_MOVE",
+        "SLASH_MOVE"
+      ]
+    },
+    {
+      "source": "/opt/slay-the-spire-2/sources/community-runs/replays/ironclad-a10/5f53b261adde2bd3.ndjson.gz",
+      "seed": "ZBQS87WAFNEY",
+      "run_terminal_reason": "death",
+      "combat_finish": "combat_end",
+      "wake_last_end_turn": null,
+      "moves": [
+        "SLEEP_MOVE",
+        "SLEEP_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE",
+        "SOUL_SIPHON_MOVE",
+        "SLASH_MOVE"
+      ]
+    },
+    {
+      "source": "/opt/slay-the-spire-2/sources/community-runs/replays/ironclad-a10/6a5c54f2518b123e.ndjson.gz",
+      "seed": "62X5LAM8XFZ4",
+      "run_terminal_reason": "death",
+      "combat_finish": "end",
+      "wake_last_end_turn": null,
+      "moves": [
+        "SLEEP_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE",
+        "SOUL_SIPHON_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE",
+        "SOUL_SIPHON_MOVE",
+        "SLASH_MOVE"
+      ]
+    },
+    {
+      "source": "/opt/slay-the-spire-2/sources/community-runs/replays/ironclad-a10/751ea0026deab04f.ndjson.gz",
+      "seed": "REJ8ZBD3SRC9",
+      "run_terminal_reason": "death",
+      "combat_finish": "combat_end",
+      "wake_last_end_turn": null,
+      "moves": [
+        "SLEEP_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE",
+        "SOUL_SIPHON_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE"
+      ]
+    },
+    {
+      "source": "/opt/slay-the-spire-2/sources/community-runs/replays/ironclad-a10/8823873c82ebf6c8.ndjson.gz",
+      "seed": "T8E3T6TC1QP5",
+      "run_terminal_reason": "death",
+      "combat_finish": "end",
+      "wake_last_end_turn": null,
+      "moves": [
+        "SLEEP_MOVE",
+        "SLEEP_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE",
+        "SOUL_SIPHON_MOVE"
+      ]
+    },
+    {
+      "source": "/opt/slay-the-spire-2/sources/community-runs/replays/ironclad-a10/c5a938a530b7a66a.ndjson.gz",
+      "seed": "FKF65P65RUZC",
+      "run_terminal_reason": "death",
+      "combat_finish": "combat_end",
+      "wake_last_end_turn": null,
+      "moves": [
+        "SLEEP_MOVE",
+        "SLEEP_MOVE",
+        "SLEEP_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE",
+        "SOUL_SIPHON_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE"
+      ]
+    },
+    {
+      "source": "/opt/slay-the-spire-2/sources/community-runs/replays/ironclad-a10/c72f35f3d3eeb4c3.ndjson.gz",
+      "seed": "FKPU635U5FMS",
+      "run_terminal_reason": "left_run",
+      "combat_finish": "combat_end",
+      "wake_last_end_turn": null,
+      "moves": [
+        "SLEEP_MOVE",
+        "SLEEP_MOVE",
+        "SLEEP_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE",
+        "SOUL_SIPHON_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE",
+        "SOUL_SIPHON_MOVE",
+        "SLASH_MOVE"
+      ]
+    },
+    {
+      "source": "/opt/slay-the-spire-2/sources/community-runs/replays/ironclad-a10/cc778dc5cd1dca9c.ndjson.gz",
+      "seed": "B2FKB1F0V45C",
+      "run_terminal_reason": "left_run",
+      "combat_finish": "end",
+      "wake_last_end_turn": null,
+      "moves": []
+    },
+    {
+      "source": "/opt/slay-the-spire-2/sources/community-runs/replays/ironclad-a10/e6f8a90a0ee67333.ndjson.gz",
+      "seed": "9D2WVM9HDHDQ",
+      "run_terminal_reason": "death",
+      "combat_finish": "end",
+      "wake_last_end_turn": null,
+      "moves": [
+        "SLEEP_MOVE",
+        "SLEEP_MOVE",
+        "SLEEP_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE"
+      ]
+    },
+    {
+      "source": "/opt/slay-the-spire-2/sources/community-runs/replays/ironclad-a10/e701e50d7245e9a5.ndjson.gz",
+      "seed": "3LZYT87KUXB5",
+      "run_terminal_reason": "death",
+      "combat_finish": "end",
+      "wake_last_end_turn": null,
+      "moves": []
+    },
+    {
+      "source": "/opt/slay-the-spire-2/sources/community-runs/replays/ironclad-a10/fc152eff7e54aa86.ndjson.gz",
+      "seed": "3X3CLDCMLAKN",
+      "run_terminal_reason": "left_run",
+      "combat_finish": "combat_end",
+      "wake_last_end_turn": null,
+      "moves": [
+        "SLEEP_MOVE",
+        "SLEEP_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE",
+        "SOUL_SIPHON_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE",
+        "SOUL_SIPHON_MOVE",
+        "SLASH_MOVE"
+      ]
+    },
+    {
+      "source": "/opt/slay-the-spire-2/sources/community-runs/replays/ironclad-a10/feb65c943b719282.ndjson.gz",
+      "seed": "8LWP8H138VKM",
+      "run_terminal_reason": "left_run",
+      "combat_finish": "combat_end",
+      "wake_last_end_turn": null,
+      "moves": [
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE",
+        "SOUL_SIPHON_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE"
+      ]
+    },
+    {
+      "source": "/opt/slay-the-spire-2/sources/community-runs/replays/ironclad-a10/fee98b76c9604e35.ndjson.gz",
+      "seed": "N3BR4STSHWE3",
+      "run_terminal_reason": "death",
+      "combat_finish": "end",
+      "wake_last_end_turn": null,
+      "moves": [
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE",
+        "SOUL_SIPHON_MOVE",
+        "SLASH_MOVE",
+        "DISEMBOWEL_MOVE",
+        "SLASH2_MOVE",
+        "SOUL_SIPHON_MOVE",
+        "SLASH_MOVE"
+      ]
+    }
+  ]
+}

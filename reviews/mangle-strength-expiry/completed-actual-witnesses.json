@@ -1,0 +1,206 @@
+{
+  "source_path": "/opt/slay-the-spire-2/agent/results/it-iter-pub-dev-1005-0034.jsonl",
+  "source_sha256": "09ce291f4be2460aa7094a36eec55a9ec7e894de8550dfdcda4e88da5e33a12d",
+  "scope": "Read-only completed historical game records; future rows do not feed decisions",
+  "cases": [
+    {
+      "seed": "CJ2AJ95KRVKS",
+      "completed_trace_step": 357,
+      "current_public": {
+        "act": 2,
+        "floor": 16,
+        "d": "combat",
+        "r": 6,
+        "hp": 64,
+        "blk": 11,
+        "en": 0,
+        "hand": [
+          "Defend",
+          "Defend",
+          "Strike"
+        ],
+        "foes": [
+          [
+            "Knowledge Demon",
+            242,
+            0,
+            11
+          ]
+        ],
+        "a": "end_turn",
+        "np": [
+          0,
+          1,
+          2
+        ],
+        "cost": [
+          1,
+          1,
+          1
+        ],
+        "pots": [
+          "Fire Potion"
+        ],
+        "fpow": [
+          {
+            "Vulnerable": 3,
+            "Strength": -7,
+            "MANGLE_POWER.title": 10
+          }
+        ],
+        "ppow": {
+          "Strength": 3,
+          "Dexterity": 1,
+          "Crimson Mantle": 7,
+          "Mind Rot": 1,
+          "Stampede": 1,
+          "Thorns": 3,
+          "Sloth": 3
+        }
+      },
+      "next_completed_public": {
+        "act": 2,
+        "floor": 16,
+        "d": "combat",
+        "r": 7,
+        "hp": 63,
+        "blk": 7,
+        "en": 3,
+        "hand": [
+          "Strike",
+          "Shrug It Off",
+          "Battle Trance",
+          "Primal Force"
+        ],
+        "foes": [
+          [
+            "Knowledge Demon",
+            226,
+            0,
+            36
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "pots": [
+          "Fire Potion"
+        ],
+        "card": "Battle Trance"
+      },
+      "identified_current_move": "SLAP_MOVE",
+      "legacy_next_damage": [
+        6.0
+      ],
+      "expiry_corrected_next_damage": [
+        36.0
+      ],
+      "observed_next_damage": 36
+    },
+    {
+      "seed": "CJ2AJ95KRVKS",
+      "completed_trace_step": 373,
+      "current_public": {
+        "act": 2,
+        "floor": 16,
+        "d": "combat",
+        "r": 10,
+        "hp": 31,
+        "blk": 11,
+        "en": 0,
+        "hand": [
+          "Giant Rock",
+          "Strike",
+          "Defend"
+        ],
+        "foes": [
+          [
+            "Knowledge Demon",
+            66,
+            0,
+            14
+          ]
+        ],
+        "a": "end_turn",
+        "np": [
+          0,
+          1,
+          2
+        ],
+        "cost": [
+          1,
+          1,
+          1
+        ],
+        "pots": [
+          "Fire Potion"
+        ],
+        "fpow": [
+          {
+            "Strength": -4,
+            "Vulnerable": 1,
+            "MANGLE_POWER.title": 10
+          }
+        ],
+        "ppow": {
+          "Strength": 6,
+          "Dexterity": 1,
+          "Crimson Mantle": 7,
+          "Mind Rot": 1,
+          "Stampede": 1,
+          "Thorns": 3,
+          "Sloth": 3,
+          "Disintegration": 8
+        }
+      },
+      "next_completed_public": {
+        "act": 2,
+        "floor": 16,
+        "d": "combat",
+        "r": 11,
+        "hp": 19,
+        "blk": 7,
+        "en": 3,
+        "hand": [
+          "True Grit",
+          "Strike",
+          "Defend",
+          "Giant Rock"
+        ],
+        "foes": [
+          [
+            "Knowledge Demon",
+            24,
+            0,
+            45
+          ]
+        ],
+        "a": "use_potion",
+        "np": [],
+        "cost": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "pots": [
+          "Fire Potion"
+        ],
+        "potion": "Fire Potion"
+      },
+      "identified_current_move": "SLAP_MOVE",
+      "legacy_next_damage": [
+        15.0
+      ],
+      "expiry_corrected_next_damage": [
+        45.0
+      ],
+      "observed_next_damage": 45
+    }
+  ]
+}

@@ -1,0 +1,462 @@
+{
+  "type": "decision",
+  "decision": "event_choice",
+  "context": {
+    "act": 1,
+    "act_name": "Underdocks",
+    "floor": 9,
+    "room_type": "Event",
+    "boss": {
+      "id": "WATERFALL_GIANT_BOSS",
+      "name": "Waterfall Giant"
+    }
+  },
+  "event_name": "Endless Conveyor",
+  "description": "You grab the {LastDishTitle} from the belt and scarf it down.\nTasty!",
+  "options": [
+    {
+      "index": 0,
+      "title": "Grab Jelly Liver off the Belt",
+      "description": "Pay {Gold} Gold. Transform a card. Continue feasting!",
+      "text_key": "ENDLESS_CONVEYOR.pages.ALL.options.JELLY_LIVER",
+      "is_locked": false,
+      "vars": {
+        "Gold": 40,
+        "GoldenFyshGold": 75,
+        "ClamRollHeal": 10,
+        "CaviarMaxHp": 4,
+        "CurrentDishTitle": 0,
+        "LastDishTitle": 0
+      }
+    },
+    {
+      "index": 1,
+      "title": "Leave",
+      "description": "",
+      "text_key": "ENDLESS_CONVEYOR.pages.GRAB_SOMETHING_OFF_THE_BELT.options.LEAVE",
+      "is_locked": false,
+      "vars": {
+        "Gold": 40,
+        "GoldenFyshGold": 75,
+        "ClamRollHeal": 10,
+        "CaviarMaxHp": 4,
+        "CurrentDishTitle": 0,
+        "LastDishTitle": 0
+      }
+    }
+  ],
+  "player": {
+    "name": "The Ironclad",
+    "hp": 63,
+    "max_hp": 84,
+    "block": 0,
+    "gold": 113,
+    "potion_slots": 2,
+    "relics": [
+      {
+        "id": "BURNING_BLOOD",
+        "name": "Burning Blood",
+        "description": "At the end of combat, heal {Heal} HP.",
+        "vars": {
+          "Heal": 6
+        },
+        "counter": null,
+        "status": "Normal"
+      },
+      {
+        "id": "NEOWS_TORMENT",
+        "name": "Neow's Torment",
+        "description": "Upon pickup, add 1 Neow's Fury to your Deck.",
+        "vars": null,
+        "counter": null,
+        "status": "Normal"
+      }
+    ],
+    "potions": [
+      {
+        "index": 0,
+        "name": "Cure All",
+        "description": "Gain {Energy:energyIcons()}. Draw {Cards} {Cards:plural:card|cards}.",
+        "vars": {
+          "Energy": 1,
+          "Cards": 2
+        },
+        "target_type": "AnyPlayer"
+      },
+      {
+        "index": 1,
+        "name": "Fysh Oil",
+        "description": "Gain {StrengthPower} Strength and {DexterityPower} Dexterity.",
+        "vars": {
+          "StrengthPower": 1,
+          "DexterityPower": 1
+        },
+        "target_type": "AnyPlayer"
+      }
+    ],
+    "deck_size": 17,
+    "deck": [
+      {
+        "id": "CARD.STRIKE_IRONCLAD",
+        "name": "Strike",
+        "cost": 1,
+        "type": "Attack",
+        "upgraded": false,
+        "description": "Deal {Damage:diff()} damage.",
+        "stats": {
+          "damage": 6
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "damage": 9
+          },
+          "description": "Deal {Damage:diff()} damage.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.STRIKE_IRONCLAD",
+        "name": "Strike",
+        "cost": 1,
+        "type": "Attack",
+        "upgraded": false,
+        "description": "Deal {Damage:diff()} damage.",
+        "stats": {
+          "damage": 6
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "damage": 9
+          },
+          "description": "Deal {Damage:diff()} damage.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.STRIKE_IRONCLAD",
+        "name": "Strike",
+        "cost": 1,
+        "type": "Attack",
+        "upgraded": false,
+        "description": "Deal {Damage:diff()} damage.",
+        "stats": {
+          "damage": 6
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "damage": 9
+          },
+          "description": "Deal {Damage:diff()} damage.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.STRIKE_IRONCLAD",
+        "name": "Strike",
+        "cost": 1,
+        "type": "Attack",
+        "upgraded": false,
+        "description": "Deal {Damage:diff()} damage.",
+        "stats": {
+          "damage": 6
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "damage": 9
+          },
+          "description": "Deal {Damage:diff()} damage.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.STRIKE_IRONCLAD",
+        "name": "Strike",
+        "cost": 1,
+        "type": "Attack",
+        "upgraded": false,
+        "description": "Deal {Damage:diff()} damage.",
+        "stats": {
+          "damage": 6
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "damage": 9
+          },
+          "description": "Deal {Damage:diff()} damage.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.DEFEND_IRONCLAD",
+        "name": "Defend",
+        "cost": 1,
+        "type": "Skill",
+        "upgraded": false,
+        "description": "Gain {Block:diff()} Block.",
+        "stats": {
+          "block": 5
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "block": 8
+          },
+          "description": "Gain {Block:diff()} Block.",
+          "added_keywords": null,
+          "removed_keywords": null
+        },
+        "enchantment": "Spiral",
+        "enchantment_amount": 1
+      },
+      {
+        "id": "CARD.DEFEND_IRONCLAD",
+        "name": "Defend",
+        "cost": 1,
+        "type": "Skill",
+        "upgraded": false,
+        "description": "Gain {Block:diff()} Block.",
+        "stats": {
+          "block": 5
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "block": 8
+          },
+          "description": "Gain {Block:diff()} Block.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.DEFEND_IRONCLAD",
+        "name": "Defend",
+        "cost": 1,
+        "type": "Skill",
+        "upgraded": false,
+        "description": "Gain {Block:diff()} Block.",
+        "stats": {
+          "block": 5
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "block": 8
+          },
+          "description": "Gain {Block:diff()} Block.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.DEFEND_IRONCLAD",
+        "name": "Defend",
+        "cost": 1,
+        "type": "Skill",
+        "upgraded": false,
+        "description": "Gain {Block:diff()} Block.",
+        "stats": {
+          "block": 5
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "block": 8
+          },
+          "description": "Gain {Block:diff()} Block.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.BASH",
+        "name": "Bash",
+        "cost": 2,
+        "type": "Attack",
+        "upgraded": false,
+        "description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} Vulnerable.",
+        "stats": {
+          "damage": 8,
+          "vulnerablepower": 2
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 2,
+          "stats": {
+            "damage": 10,
+            "vulnerablepower": 3
+          },
+          "description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} Vulnerable.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.ASCENDERS_BANE",
+        "name": "Ascender's Bane",
+        "cost": 0,
+        "type": "Curse",
+        "upgraded": false,
+        "description": "",
+        "stats": null,
+        "keywords": [
+          "Eternal",
+          "Unplayable",
+          "Ethereal"
+        ],
+        "after_upgrade": null
+      },
+      {
+        "id": "CARD.NEOWS_FURY",
+        "name": "Neow's Fury",
+        "cost": 1,
+        "type": "Attack",
+        "upgraded": false,
+        "description": "Deal {Damage:diff()} damage.\nPut up to {Cards:diff()} {Cards:plural:card|cards} from your Discard Pile into your Hand.",
+        "stats": {
+          "damage": 10,
+          "cards": 2
+        },
+        "keywords": [
+          "Exhaust"
+        ],
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "damage": 14,
+            "cards": 3
+          },
+          "description": "Deal {Damage:diff()} damage.\nPut up to {Cards:diff()} {Cards:plural:card|cards} from your Discard Pile into your Hand.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.TRUE_GRIT",
+        "name": "True Grit",
+        "cost": 1,
+        "type": "Skill",
+        "upgraded": false,
+        "description": "Gain {Block:diff()} Block.\nExhaust 1 card{IfUpgraded:show:| at random}.",
+        "stats": {
+          "block": 7
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "block": 9
+          },
+          "description": "Gain {Block:diff()} Block.\nExhaust 1 card{IfUpgraded:show:| at random}.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.UPPERCUT",
+        "name": "Uppercut",
+        "cost": 2,
+        "type": "Attack",
+        "upgraded": false,
+        "description": "Deal {Damage:diff()} damage.\nApply {Power:diff()} Weak.\nApply {Power:diff()} Vulnerable.",
+        "stats": {
+          "damage": 13,
+          "power": 1
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 2,
+          "stats": {
+            "damage": 13,
+            "power": 2
+          },
+          "description": "Deal {Damage:diff()} damage.\nApply {Power:diff()} Weak.\nApply {Power:diff()} Vulnerable.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.INFERNO",
+        "name": "Inferno",
+        "cost": 1,
+        "type": "Power",
+        "upgraded": false,
+        "description": "At the start of your turn, lose 1 HP.\nWhenever you lose HP on your turn, deal {InfernoPower:diff()} damage to ALL enemies.",
+        "stats": {
+          "infernopower": 6
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "infernopower": 9
+          },
+          "description": "At the start of your turn, lose 1 HP.\nWhenever you lose HP on your turn, deal {InfernoPower:diff()} damage to ALL enemies.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.UNRELENTING",
+        "name": "Unrelenting",
+        "cost": 2,
+        "type": "Attack",
+        "upgraded": false,
+        "description": "Deal {Damage:diff()} damage.\nThe next Attack you play costs 0 {energyPrefix:energyIcons(1)}.",
+        "stats": {
+          "damage": 14
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 2,
+          "stats": {
+            "damage": 20
+          },
+          "description": "Deal {Damage:diff()} damage.\nThe next Attack you play costs 0 {energyPrefix:energyIcons(1)}.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.INFERNO",
+        "name": "Inferno",
+        "cost": 1,
+        "type": "Power",
+        "upgraded": false,
+        "description": "At the start of your turn, lose 1 HP.\nWhenever you lose HP on your turn, deal {InfernoPower:diff()} damage to ALL enemies.",
+        "stats": {
+          "infernopower": 6
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "infernopower": 9
+          },
+          "description": "At the start of your turn, lose 1 HP.\nWhenever you lose HP on your turn, deal {InfernoPower:diff()} damage to ALL enemies.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      }
+    ]
+  }
+}

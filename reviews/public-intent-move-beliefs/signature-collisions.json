@@ -1,0 +1,613 @@
+{
+  "note": "Static KB collision inventory, not source-complete runtime proof.",
+  "shape_collisions": [
+    {
+      "id": "AXE_RUBY_RAIDER",
+      "name": "Axe Raider",
+      "signature": [
+        [
+          "attack",
+          1
+        ],
+        [
+          "defend",
+          1
+        ]
+      ],
+      "moves": [
+        "SWING_1",
+        "SWING_2"
+      ]
+    },
+    {
+      "id": "BOWLBUG_NECTAR",
+      "name": "Bowlbug (Nectar)",
+      "signature": [
+        [
+          "attack",
+          1
+        ]
+      ],
+      "moves": [
+        "THRASH_MOVE",
+        "THRASH2_MOVE"
+      ]
+    },
+    {
+      "id": "BYGONE_EFFIGY",
+      "name": "Bygone Effigy",
+      "signature": [
+        [
+          "sleep",
+          1
+        ]
+      ],
+      "moves": [
+        "SLEEP_MOVE",
+        "SLEEP_MOVE_2"
+      ]
+    },
+    {
+      "id": "CEREMONIAL_BEAST",
+      "name": "Ceremonial Beast",
+      "signature": [
+        [
+          "attack",
+          1
+        ],
+        [
+          "buff",
+          1
+        ]
+      ],
+      "moves": [
+        "PLOW_MOVE",
+        "CRUSH_MOVE"
+      ]
+    },
+    {
+      "id": "CRUSHER",
+      "name": "Crusher",
+      "signature": [
+        [
+          "attack",
+          1
+        ]
+      ],
+      "moves": [
+        "THRASH_MOVE",
+        "ENLARGING_STRIKE_MOVE"
+      ]
+    },
+    {
+      "id": "CUBEX_CONSTRUCT",
+      "name": "Cubex Construct",
+      "signature": [
+        [
+          "attack",
+          1
+        ],
+        [
+          "buff",
+          1
+        ]
+      ],
+      "moves": [
+        "REPEATER_BLAST_MOVE",
+        "REPEATER_BLAST_MOVE_2"
+      ]
+    },
+    {
+      "id": "FOGMOG",
+      "name": "Fogmog",
+      "signature": [
+        [
+          "attack",
+          1
+        ],
+        [
+          "buff",
+          1
+        ]
+      ],
+      "moves": [
+        "SWIPE_MOVE",
+        "SWIPE_RANDOM_MOVE"
+      ]
+    },
+    {
+      "id": "FROG_KNIGHT",
+      "name": "Frog Knight",
+      "signature": [
+        [
+          "attack",
+          1
+        ]
+      ],
+      "moves": [
+        "STRIKE_DOWN_EVIL",
+        "BEETLE_CHARGE"
+      ]
+    },
+    {
+      "id": "FUZZY_WURM_CRAWLER",
+      "name": "Fuzzy Wurm Crawler",
+      "signature": [
+        [
+          "attack",
+          1
+        ]
+      ],
+      "moves": [
+        "FIRST_ACID_GOOP",
+        "ACID_GOOP"
+      ]
+    },
+    {
+      "id": "INKLET",
+      "name": "Inklet",
+      "signature": [
+        [
+          "attack",
+          1
+        ]
+      ],
+      "moves": [
+        "JAB_MOVE",
+        "PIERCING_GAZE_MOVE"
+      ]
+    },
+    {
+      "id": "KIN_PRIEST",
+      "name": "Kin Priest",
+      "signature": [
+        [
+          "attack",
+          1
+        ],
+        [
+          "debuff",
+          1
+        ]
+      ],
+      "moves": [
+        "ORB_OF_FRAILTY_MOVE",
+        "ORB_OF_WEAKNESS_MOVE"
+      ]
+    },
+    {
+      "id": "MAGI_KNIGHT",
+      "name": "Magi Knight",
+      "signature": [
+        [
+          "attack",
+          1
+        ]
+      ],
+      "moves": [
+        "MAGIC_BOMB",
+        "RAM_MOVE"
+      ]
+    },
+    {
+      "id": "MECHA_KNIGHT",
+      "name": "Mecha Knight",
+      "signature": [
+        [
+          "attack",
+          1
+        ]
+      ],
+      "moves": [
+        "CHARGE_MOVE",
+        "HEAVY_CLEAVE_MOVE"
+      ]
+    },
+    {
+      "id": "PHANTASMAL_GARDENER",
+      "name": "Phantasmal Gardener",
+      "signature": [
+        [
+          "attack",
+          1
+        ]
+      ],
+      "moves": [
+        "BITE_MOVE",
+        "LASH_MOVE"
+      ]
+    },
+    {
+      "id": "ROCKET",
+      "name": "Rocket",
+      "signature": [
+        [
+          "attack",
+          1
+        ]
+      ],
+      "moves": [
+        "TARGETING_RETICLE_MOVE",
+        "PRECISION_BEAM_MOVE",
+        "LASER_MOVE"
+      ]
+    },
+    {
+      "id": "SHRINKER_BEETLE",
+      "name": "Shrinker Beetle",
+      "signature": [
+        [
+          "attack",
+          1
+        ]
+      ],
+      "moves": [
+        "CHOMP_MOVE",
+        "STOMP_MOVE"
+      ]
+    },
+    {
+      "id": "SKULKING_COLONY",
+      "name": "Skulking Colony",
+      "signature": [
+        [
+          "attack",
+          1
+        ]
+      ],
+      "moves": [
+        "ZOOM_MOVE",
+        "ZOOM_MOVE_2"
+      ]
+    },
+    {
+      "id": "SPINY_TOAD",
+      "name": "Spiny Toad",
+      "signature": [
+        [
+          "attack",
+          1
+        ]
+      ],
+      "moves": [
+        "SPIKE_EXPLOSION_MOVE",
+        "TONGUE_LASH_MOVE"
+      ]
+    },
+    {
+      "id": "TEST_SUBJECT",
+      "name": "Test Subject #C{Count}",
+      "signature": [
+        [
+          "attack",
+          1
+        ]
+      ],
+      "moves": [
+        "BITE_MOVE",
+        "BIG_POUNCE"
+      ]
+    },
+    {
+      "id": "TEST_SUBJECT",
+      "name": "Test Subject #C{Count}",
+      "signature": [
+        [
+          "attack",
+          3
+        ]
+      ],
+      "moves": [
+        "MULTI_CLAW_MOVE",
+        "PHASE3_LACERATE_MOVE"
+      ]
+    },
+    {
+      "id": "THE_INSATIABLE",
+      "name": "The Insatiable",
+      "signature": [
+        [
+          "attack",
+          2
+        ]
+      ],
+      "moves": [
+        "THRASH_MOVE",
+        "THRASH_MOVE_2"
+      ]
+    },
+    {
+      "id": "THIEVING_HOPPER",
+      "name": "Thieving Hopper",
+      "signature": [
+        [
+          "attack",
+          1
+        ]
+      ],
+      "moves": [
+        "NAB_MOVE",
+        "HAT_TRICK_MOVE"
+      ]
+    },
+    {
+      "id": "TORCH_HEAD_AMALGAM",
+      "name": "Torch Head Amalgam",
+      "signature": [
+        [
+          "attack",
+          1
+        ]
+      ],
+      "moves": [
+        "STRONG_TACKLE_MOVE",
+        "TACKLE_2_MOVE",
+        "TACKLE_3_MOVE",
+        "TACKLE_4_MOVE"
+      ]
+    },
+    {
+      "id": "TUNNELER",
+      "name": "Tunneler",
+      "signature": [
+        [
+          "attack",
+          1
+        ]
+      ],
+      "moves": [
+        "BITE_MOVE",
+        "BELOW_MOVE"
+      ]
+    },
+    {
+      "id": "TURRET_OPERATOR",
+      "name": "Turret Operator",
+      "signature": [
+        [
+          "attack",
+          5
+        ]
+      ],
+      "moves": [
+        "UNLOAD_MOVE",
+        "UNLOAD_MOVE_2"
+      ]
+    },
+    {
+      "id": "TWO_TAILED_RAT",
+      "name": "Two-Tailed Rat",
+      "signature": [
+        [
+          "attack",
+          1
+        ]
+      ],
+      "moves": [
+        "SCRATCH_MOVE",
+        "DISEASE_BITE_MOVE"
+      ]
+    },
+    {
+      "id": "WATERFALL_GIANT",
+      "name": "Waterfall Giant",
+      "signature": [
+        [
+          "attack",
+          1
+        ],
+        [
+          "buff",
+          1
+        ]
+      ],
+      "moves": [
+        "RAM_MOVE",
+        "PRESSURE_GUN_MOVE",
+        "PRESSURE_UP_MOVE"
+      ]
+    }
+  ],
+  "base_damage_identical": [
+    {
+      "id": "AXE_RUBY_RAIDER",
+      "name": "Axe Raider",
+      "signature": [
+        [
+          "attack",
+          6,
+          1
+        ],
+        [
+          "defend",
+          0,
+          1
+        ]
+      ],
+      "moves": [
+        "SWING_1",
+        "SWING_2"
+      ]
+    },
+    {
+      "id": "BOWLBUG_NECTAR",
+      "name": "Bowlbug (Nectar)",
+      "signature": [
+        [
+          "attack",
+          3,
+          1
+        ]
+      ],
+      "moves": [
+        "THRASH_MOVE",
+        "THRASH2_MOVE"
+      ]
+    },
+    {
+      "id": "BYGONE_EFFIGY",
+      "name": "Bygone Effigy",
+      "signature": [
+        [
+          "sleep",
+          0,
+          1
+        ]
+      ],
+      "moves": [
+        "SLEEP_MOVE",
+        "SLEEP_MOVE_2"
+      ]
+    },
+    {
+      "id": "CUBEX_CONSTRUCT",
+      "name": "Cubex Construct",
+      "signature": [
+        [
+          "attack",
+          8,
+          1
+        ],
+        [
+          "buff",
+          0,
+          1
+        ]
+      ],
+      "moves": [
+        "REPEATER_BLAST_MOVE",
+        "REPEATER_BLAST_MOVE_2"
+      ]
+    },
+    {
+      "id": "FOGMOG",
+      "name": "Fogmog",
+      "signature": [
+        [
+          "attack",
+          9,
+          1
+        ],
+        [
+          "buff",
+          0,
+          1
+        ]
+      ],
+      "moves": [
+        "SWIPE_MOVE",
+        "SWIPE_RANDOM_MOVE"
+      ]
+    },
+    {
+      "id": "FUZZY_WURM_CRAWLER",
+      "name": "Fuzzy Wurm Crawler",
+      "signature": [
+        [
+          "attack",
+          6,
+          1
+        ]
+      ],
+      "moves": [
+        "FIRST_ACID_GOOP",
+        "ACID_GOOP"
+      ]
+    },
+    {
+      "id": "KIN_PRIEST",
+      "name": "Kin Priest",
+      "signature": [
+        [
+          "attack",
+          9,
+          1
+        ],
+        [
+          "debuff",
+          0,
+          1
+        ]
+      ],
+      "moves": [
+        "ORB_OF_FRAILTY_MOVE",
+        "ORB_OF_WEAKNESS_MOVE"
+      ]
+    },
+    {
+      "id": "SKULKING_COLONY",
+      "name": "Skulking Colony",
+      "signature": [
+        [
+          "attack",
+          16,
+          1
+        ]
+      ],
+      "moves": [
+        "ZOOM_MOVE",
+        "ZOOM_MOVE_2"
+      ]
+    },
+    {
+      "id": "TEST_SUBJECT",
+      "name": "Test Subject #C{Count}",
+      "signature": [
+        [
+          "attack",
+          11,
+          3
+        ]
+      ],
+      "moves": [
+        "MULTI_CLAW_MOVE",
+        "PHASE3_LACERATE_MOVE"
+      ]
+    },
+    {
+      "id": "THE_INSATIABLE",
+      "name": "The Insatiable",
+      "signature": [
+        [
+          "attack",
+          9,
+          2
+        ]
+      ],
+      "moves": [
+        "THRASH_MOVE",
+        "THRASH_MOVE_2"
+      ]
+    },
+    {
+      "id": "TORCH_HEAD_AMALGAM",
+      "name": "Torch Head Amalgam",
+      "signature": [
+        [
+          "attack",
+          16,
+          1
+        ]
+      ],
+      "moves": [
+        "TACKLE_3_MOVE",
+        "TACKLE_4_MOVE"
+      ]
+    },
+    {
+      "id": "TURRET_OPERATOR",
+      "name": "Turret Operator",
+      "signature": [
+        [
+          "attack",
+          4,
+          5
+        ]
+      ],
+      "moves": [
+        "UNLOAD_MOVE",
+        "UNLOAD_MOVE_2"
+      ]
+    }
+  ]
+}

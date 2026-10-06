@@ -1,0 +1,10 @@
+{
+  "original_source_path": "/opt/slay-the-spire-2/codex-agent/research/claude-value/sts2-cli-p27cv/src/Sts2Headless/RunSimulator.cs",
+  "original_source_sha256": "2b4813d40b42e6b46e17fcee4d892fecb20df0f39287338a97916d2808a0e348",
+  "copy_source_sha256": "b614dcba53131861b18ede0720f078e22bca68a5036dbaabadbd712c846d6284",
+  "copy_binary_sha256": "6f66d367134b50091ab15f683ee537d095473886a66b9debc17f4bdb08cc65c4",
+  "original_source_not_patched": true,
+  "native_processes_started": 0,
+  "remote_jobs": 0,
+  "isolated_build_only": true
+}

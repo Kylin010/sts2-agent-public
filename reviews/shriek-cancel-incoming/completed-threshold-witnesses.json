@@ -1,0 +1,2844 @@
+{
+  "scope": "Historical completed observations only; after rows are validation, not decision input",
+  "counts": {
+    "all_crossings": 36,
+    "attack_to_zero": 36
+  },
+  "cases": [
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-1005-0032.jsonl",
+      "sha256": "177bd9c2c23b5d78aa15efb8b994989ebaf7debd2ab21d07c74ffeabec4e79e4",
+      "seed": "TW01NSMQNY8J",
+      "step": 146,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 15,
+        "d": "combat",
+        "r": 7,
+        "hp": 53,
+        "blk": 8,
+        "en": 1,
+        "hand": [
+          "Strike",
+          "Strike",
+          "Strike"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            87,
+            0,
+            24
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          1,
+          1
+        ],
+        "pots": [],
+        "card": "Strike",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 15,
+        "d": "combat",
+        "r": 7,
+        "hp": 53,
+        "blk": 8,
+        "en": 1,
+        "hand": [
+          "Strike",
+          "Strike"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            69,
+            0,
+            0
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          1
+        ],
+        "pots": [],
+        "card": "Strike"
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-1005-0032.jsonl",
+      "sha256": "177bd9c2c23b5d78aa15efb8b994989ebaf7debd2ab21d07c74ffeabec4e79e4",
+      "seed": "XWQUYJQAL784",
+      "step": 79,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 7,
+        "d": "combat",
+        "r": 7,
+        "hp": 17,
+        "blk": 0,
+        "en": 3,
+        "hand": [
+          "Strike",
+          "Bash",
+          "Strike",
+          "Defend",
+          "Strike"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            77,
+            0,
+            24
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          2,
+          1,
+          1,
+          1
+        ],
+        "pots": [],
+        "card": "Bash",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 7,
+        "d": "combat",
+        "r": 7,
+        "hp": 17,
+        "blk": 0,
+        "en": 1,
+        "hand": [
+          "Strike",
+          "Strike",
+          "Defend",
+          "Strike"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            69,
+            0,
+            0
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "pots": [],
+        "card": "Strike",
+        "tgt": "Terror Eel"
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-1005-0032.jsonl",
+      "sha256": "177bd9c2c23b5d78aa15efb8b994989ebaf7debd2ab21d07c74ffeabec4e79e4",
+      "seed": "EYQL1JFBFGPA",
+      "step": 123,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 14,
+        "d": "combat",
+        "r": 3,
+        "hp": 65,
+        "blk": 0,
+        "en": 1,
+        "hand": [
+          "Strike",
+          "Breakthrough",
+          "Defend",
+          "Setup Strike"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            82,
+            0,
+            24
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "pots": [
+          "Beetle Juice"
+        ],
+        "card": "Setup Strike",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 14,
+        "d": "combat",
+        "r": 3,
+        "hp": 65,
+        "blk": 0,
+        "en": 0,
+        "hand": [
+          "Strike",
+          "Breakthrough",
+          "Defend"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            72,
+            0,
+            0
+          ]
+        ],
+        "a": "end_turn",
+        "np": [
+          0,
+          1,
+          2
+        ],
+        "cost": [
+          1,
+          1,
+          1
+        ],
+        "pots": [
+          "Beetle Juice"
+        ],
+        "fpow": [
+          {
+            "Vigor": 6,
+            "Vulnerable": 2
+          }
+        ],
+        "ppow": {
+          "Inferno": 6,
+          "Strength": 3,
+          "SETUP_STRIKE_POWER.title": 3
+        }
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-1005-0032.jsonl",
+      "sha256": "177bd9c2c23b5d78aa15efb8b994989ebaf7debd2ab21d07c74ffeabec4e79e4",
+      "seed": "PYNPQBDXM433",
+      "step": 131,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 12,
+        "d": "combat",
+        "r": 4,
+        "hp": 43,
+        "blk": 13,
+        "en": 1,
+        "hand": [
+          "Strike",
+          "Bash",
+          "Clash"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            83,
+            0,
+            12
+          ]
+        ],
+        "a": "play_card",
+        "np": [
+          1
+        ],
+        "cost": [
+          1,
+          2,
+          0
+        ],
+        "pots": [
+          "Skill Potion"
+        ],
+        "card": "Strike",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 12,
+        "d": "combat",
+        "r": 4,
+        "hp": 43,
+        "blk": 13,
+        "en": 0,
+        "hand": [
+          "Bash",
+          "Clash"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            70,
+            0,
+            0
+          ]
+        ],
+        "a": "play_card",
+        "np": [
+          0
+        ],
+        "cost": [
+          2,
+          0
+        ],
+        "pots": [
+          "Skill Potion"
+        ],
+        "card": "Clash",
+        "tgt": "Terror Eel"
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-1005-0032.jsonl",
+      "sha256": "177bd9c2c23b5d78aa15efb8b994989ebaf7debd2ab21d07c74ffeabec4e79e4",
+      "seed": "DD6FBHRGC9F4",
+      "step": 153,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 15,
+        "d": "combat",
+        "r": 4,
+        "hp": 34,
+        "blk": 5,
+        "en": 1,
+        "hand": [
+          "Strike",
+          "Spoils Map",
+          "Ashen Strike"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            84,
+            0,
+            12
+          ]
+        ],
+        "a": "play_card",
+        "np": [
+          1
+        ],
+        "cost": [
+          1,
+          0,
+          1
+        ],
+        "pots": [
+          "Flex Potion"
+        ],
+        "card": "Ashen Strike",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 15,
+        "d": "combat",
+        "r": 4,
+        "hp": 34,
+        "blk": 5,
+        "en": 0,
+        "hand": [
+          "Strike",
+          "Spoils Map"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            69,
+            0,
+            0
+          ]
+        ],
+        "a": "end_turn",
+        "np": [
+          0,
+          1
+        ],
+        "cost": [
+          1,
+          0
+        ],
+        "pots": [
+          "Flex Potion"
+        ],
+        "fpow": [
+          {}
+        ],
+        "ppow": {
+          "Thorns": 3,
+          "Plating": 1
+        }
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-1005-0032.jsonl",
+      "sha256": "177bd9c2c23b5d78aa15efb8b994989ebaf7debd2ab21d07c74ffeabec4e79e4",
+      "seed": "RHAMHV6M4ZZ6",
+      "step": 130,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 14,
+        "d": "combat",
+        "r": 3,
+        "hp": 60,
+        "blk": 5,
+        "en": 2,
+        "hand": [
+          "Bash",
+          "Pommel Strike",
+          "Strike"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            88,
+            0,
+            24
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          2,
+          1,
+          1
+        ],
+        "pots": [
+          "Power Potion"
+        ],
+        "card": "Pommel Strike",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 14,
+        "d": "combat",
+        "r": 3,
+        "hp": 60,
+        "blk": 5,
+        "en": 1,
+        "hand": [
+          "Bash",
+          "Strike",
+          "Defend"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            75,
+            0,
+            0
+          ]
+        ],
+        "a": "play_card",
+        "np": [
+          0
+        ],
+        "cost": [
+          2,
+          1,
+          1
+        ],
+        "pots": [
+          "Power Potion"
+        ],
+        "card": "Strike",
+        "tgt": "Terror Eel"
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-1005-0032.jsonl",
+      "sha256": "177bd9c2c23b5d78aa15efb8b994989ebaf7debd2ab21d07c74ffeabec4e79e4",
+      "seed": "8TANNMRCKC4D",
+      "step": 127,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 15,
+        "d": "combat",
+        "r": 3,
+        "hp": 39,
+        "blk": 0,
+        "en": 3,
+        "hand": [
+          "Ascender's Bane",
+          "Thunderclap",
+          "Bloodletting",
+          "Strike",
+          "Defend"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            81,
+            0,
+            24
+          ]
+        ],
+        "a": "play_card",
+        "np": [
+          0
+        ],
+        "cost": [
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "pots": [
+          "Touch of Insanity"
+        ],
+        "card": "Thunderclap"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 15,
+        "d": "combat",
+        "r": 3,
+        "hp": 39,
+        "blk": 0,
+        "en": 2,
+        "hand": [
+          "Ascender's Bane",
+          "Bloodletting",
+          "Strike",
+          "Defend"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            75,
+            0,
+            0
+          ]
+        ],
+        "a": "play_card",
+        "np": [
+          0
+        ],
+        "cost": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "pots": [
+          "Touch of Insanity"
+        ],
+        "card": "Strike",
+        "tgt": "Terror Eel"
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-1005-0032.jsonl",
+      "sha256": "177bd9c2c23b5d78aa15efb8b994989ebaf7debd2ab21d07c74ffeabec4e79e4",
+      "seed": "BTFS4EUP3X2L",
+      "step": 74,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 7,
+        "d": "combat",
+        "r": 3,
+        "hp": 34,
+        "blk": 0,
+        "en": 3,
+        "hand": [
+          "Cinder",
+          "Strike",
+          "Neow's Fury",
+          "Bloodletting",
+          "Strike"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            90,
+            0,
+            24
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          2,
+          1,
+          1,
+          0,
+          1
+        ],
+        "pots": [],
+        "card": "Cinder",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 7,
+        "d": "combat",
+        "r": 3,
+        "hp": 34,
+        "blk": 0,
+        "en": 1,
+        "hand": [
+          "Strike",
+          "Bloodletting",
+          "Strike"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            60,
+            0,
+            0
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          0,
+          1
+        ],
+        "pots": [],
+        "card": "Bloodletting"
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-1005-0032.jsonl",
+      "sha256": "177bd9c2c23b5d78aa15efb8b994989ebaf7debd2ab21d07c74ffeabec4e79e4",
+      "seed": "BN8NVZXLZJVA",
+      "step": 168,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 14,
+        "d": "combat",
+        "r": 5,
+        "hp": 28,
+        "blk": 0,
+        "en": 3,
+        "hand": [
+          "Bash",
+          "Strike",
+          "Anger",
+          "True Grit",
+          "Defend"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            86,
+            0,
+            24
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          2,
+          1,
+          0,
+          1,
+          1
+        ],
+        "pots": [
+          "Vulnerable Potion",
+          "Flex Potion",
+          "Power Potion"
+        ],
+        "card": "Bash",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 14,
+        "d": "combat",
+        "r": 5,
+        "hp": 28,
+        "blk": 0,
+        "en": 1,
+        "hand": [
+          "Strike",
+          "Anger",
+          "True Grit",
+          "Defend",
+          "Strike"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            70,
+            0,
+            0
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "pots": [
+          "Vulnerable Potion",
+          "Flex Potion",
+          "Power Potion"
+        ],
+        "card": "True Grit"
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-1005-0032.jsonl",
+      "sha256": "177bd9c2c23b5d78aa15efb8b994989ebaf7debd2ab21d07c74ffeabec4e79e4",
+      "seed": "VF6T9PJC4KJJ",
+      "step": 128,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 14,
+        "d": "combat",
+        "r": 4,
+        "hp": 35,
+        "blk": 0,
+        "en": 2,
+        "hand": [
+          "Strike",
+          "Ascender's Bane",
+          "Defend",
+          "Cinder"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            99,
+            0,
+            12
+          ]
+        ],
+        "a": "play_card",
+        "np": [
+          1
+        ],
+        "cost": [
+          1,
+          0,
+          1,
+          2
+        ],
+        "pots": [
+          "Dexterity Potion"
+        ],
+        "card": "Cinder",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 14,
+        "d": "combat",
+        "r": 4,
+        "hp": 35,
+        "blk": 0,
+        "en": 0,
+        "hand": [
+          "Strike",
+          "Ascender's Bane"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            72,
+            0,
+            0
+          ]
+        ],
+        "a": "end_turn",
+        "np": [
+          0,
+          1
+        ],
+        "cost": [
+          1,
+          0
+        ],
+        "pots": [
+          "Dexterity Potion"
+        ],
+        "fpow": [
+          {
+            "Vulnerable": 4
+          }
+        ],
+        "ppow": {}
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-1005-0032.jsonl",
+      "sha256": "177bd9c2c23b5d78aa15efb8b994989ebaf7debd2ab21d07c74ffeabec4e79e4",
+      "seed": "YJVK0A9MYYKL",
+      "step": 64,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 8,
+        "d": "combat",
+        "r": 3,
+        "hp": 54,
+        "blk": 0,
+        "en": 3,
+        "hand": [
+          "Breakthrough",
+          "Defend",
+          "Strike",
+          "Strike",
+          "Unrelenting"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            95,
+            0,
+            24
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          1,
+          1,
+          1,
+          2
+        ],
+        "pots": [],
+        "card": "Unrelenting",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 8,
+        "d": "combat",
+        "r": 3,
+        "hp": 54,
+        "blk": 0,
+        "en": 1,
+        "hand": [
+          "Breakthrough",
+          "Defend",
+          "Strike",
+          "Strike"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            65,
+            0,
+            0
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "pots": [],
+        "card": "Breakthrough"
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-1005-0032.jsonl",
+      "sha256": "177bd9c2c23b5d78aa15efb8b994989ebaf7debd2ab21d07c74ffeabec4e79e4",
+      "seed": "3JKN1PL1GAES",
+      "step": 115,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 9,
+        "d": "combat",
+        "r": 4,
+        "hp": 23,
+        "blk": 0,
+        "en": 2,
+        "hand": [
+          "Cinder",
+          "Strike",
+          "Strike",
+          "Defend"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            87,
+            0,
+            12
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          2,
+          1,
+          1,
+          1
+        ],
+        "pots": [],
+        "card": "Cinder",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 9,
+        "d": "combat",
+        "r": 4,
+        "hp": 23,
+        "blk": 0,
+        "en": 0,
+        "hand": [
+          "Strike",
+          "Defend"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            60,
+            0,
+            0
+          ]
+        ],
+        "a": "end_turn",
+        "np": [
+          0,
+          1
+        ],
+        "cost": [
+          1,
+          1
+        ],
+        "pots": [],
+        "fpow": [
+          {
+            "Vulnerable": 1
+          }
+        ],
+        "ppow": {
+          "Inferno": 6
+        }
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-1005-0032.jsonl",
+      "sha256": "177bd9c2c23b5d78aa15efb8b994989ebaf7debd2ab21d07c74ffeabec4e79e4",
+      "seed": "YTVD2UMK9K9Z",
+      "step": 166,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 14,
+        "d": "combat",
+        "r": 4,
+        "hp": 27,
+        "blk": 0,
+        "en": 2,
+        "hand": [
+          "Stomp",
+          "Anger",
+          "Strike",
+          "Anger"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            83,
+            0,
+            12
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          2,
+          0,
+          1,
+          0
+        ],
+        "pots": [
+          "Energy Potion"
+        ],
+        "card": "Anger",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 14,
+        "d": "combat",
+        "r": 4,
+        "hp": 27,
+        "blk": 0,
+        "en": 2,
+        "hand": [
+          "Stomp",
+          "Strike",
+          "Anger"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            74,
+            0,
+            0
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          1,
+          0
+        ],
+        "pots": [
+          "Energy Potion"
+        ],
+        "card": "Stomp"
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-1005-0032.jsonl",
+      "sha256": "177bd9c2c23b5d78aa15efb8b994989ebaf7debd2ab21d07c74ffeabec4e79e4",
+      "seed": "NNQKL6TA5E60",
+      "step": 117,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 8,
+        "d": "combat",
+        "r": 6,
+        "hp": 31,
+        "blk": 0,
+        "en": 3,
+        "hand": [
+          "Anger",
+          "Defend",
+          "Anger",
+          "Thunderclap",
+          "Defend"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            80,
+            0,
+            12
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "pots": [],
+        "card": "Thunderclap"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 8,
+        "d": "combat",
+        "r": 6,
+        "hp": 31,
+        "blk": 0,
+        "en": 2,
+        "hand": [
+          "Anger",
+          "Defend",
+          "Anger",
+          "Defend"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            71,
+            0,
+            0
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "pots": [],
+        "card": "Anger",
+        "tgt": "Terror Eel"
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-1005-0032.jsonl",
+      "sha256": "177bd9c2c23b5d78aa15efb8b994989ebaf7debd2ab21d07c74ffeabec4e79e4",
+      "seed": "CE8VF68X68XA",
+      "step": 159,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 14,
+        "d": "combat",
+        "r": 3,
+        "hp": 56,
+        "blk": 0,
+        "en": 2,
+        "hand": [
+          "Rampage",
+          "Strike",
+          "Neow's Fury"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            77,
+            0,
+            24
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          1,
+          1
+        ],
+        "pots": [
+          "Dexterity Potion"
+        ],
+        "card": "Rampage",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 14,
+        "d": "combat",
+        "r": 3,
+        "hp": 56,
+        "blk": 0,
+        "en": 1,
+        "hand": [
+          "Strike",
+          "Neow's Fury"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            62,
+            0,
+            0
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          1
+        ],
+        "pots": [
+          "Dexterity Potion"
+        ],
+        "card": "Neow's Fury",
+        "tgt": "Terror Eel"
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-1005-0032.jsonl",
+      "sha256": "177bd9c2c23b5d78aa15efb8b994989ebaf7debd2ab21d07c74ffeabec4e79e4",
+      "seed": "TFSZJRBXWMEG",
+      "step": 123,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 14,
+        "d": "combat",
+        "r": 5,
+        "hp": 41,
+        "blk": 7,
+        "en": 1,
+        "hand": [
+          "Juggernaut",
+          "Breakthrough",
+          "Cascade"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            79,
+            0,
+            24
+          ]
+        ],
+        "a": "play_card",
+        "np": [
+          0
+        ],
+        "cost": [
+          2,
+          1,
+          0
+        ],
+        "pots": [
+          "Skill Potion"
+        ],
+        "card": "Cascade"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 14,
+        "d": "combat",
+        "r": 5,
+        "hp": 41,
+        "blk": 7,
+        "en": 0,
+        "hand": [
+          "Juggernaut",
+          "Breakthrough"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            70,
+            0,
+            0
+          ]
+        ],
+        "a": "end_turn",
+        "np": [
+          0,
+          1
+        ],
+        "cost": [
+          2,
+          1
+        ],
+        "pots": [
+          "Skill Potion"
+        ],
+        "fpow": [
+          {
+            "Vulnerable": 1,
+            "Vigor": 6
+          }
+        ],
+        "ppow": {
+          "Dexterity": 2
+        }
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-1005-0032.jsonl",
+      "sha256": "177bd9c2c23b5d78aa15efb8b994989ebaf7debd2ab21d07c74ffeabec4e79e4",
+      "seed": "NZ02QBCQ9PYH",
+      "step": 66,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 8,
+        "d": "combat",
+        "r": 3,
+        "hp": 54,
+        "blk": 15,
+        "en": 1,
+        "hand": [
+          "Strike",
+          "Strike"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            76,
+            0,
+            24
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          1
+        ],
+        "pots": [
+          "Explosive Ampoule"
+        ],
+        "card": "Strike",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 8,
+        "d": "combat",
+        "r": 3,
+        "hp": 54,
+        "blk": 15,
+        "en": 0,
+        "hand": [
+          "Strike"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            70,
+            0,
+            0
+          ]
+        ],
+        "a": "end_turn",
+        "np": [
+          0
+        ],
+        "cost": [
+          1
+        ],
+        "pots": [
+          "Explosive Ampoule"
+        ],
+        "fpow": [
+          {
+            "Vigor": 6
+          }
+        ],
+        "ppow": {
+          "Pyre": 1
+        }
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-1005-0032.jsonl",
+      "sha256": "177bd9c2c23b5d78aa15efb8b994989ebaf7debd2ab21d07c74ffeabec4e79e4",
+      "seed": "SD681EH3E3P8",
+      "step": 122,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 15,
+        "d": "combat",
+        "r": 3,
+        "hp": 64,
+        "blk": 0,
+        "en": 3,
+        "hand": [
+          "Pillage",
+          "Perfected Strike",
+          "Unrelenting",
+          "Defend",
+          "Defend"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            82,
+            0,
+            24
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          2,
+          2,
+          1,
+          1
+        ],
+        "pots": [
+          "Liquid Bronze"
+        ],
+        "card": "Unrelenting",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 15,
+        "d": "combat",
+        "r": 3,
+        "hp": 64,
+        "blk": 0,
+        "en": 1,
+        "hand": [
+          "Pillage",
+          "Perfected Strike",
+          "Defend",
+          "Defend"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            68,
+            0,
+            0
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "pots": [
+          "Liquid Bronze"
+        ],
+        "card": "Perfected Strike",
+        "tgt": "Terror Eel"
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-dev-1005-0034.jsonl",
+      "sha256": "09ce291f4be2460aa7094a36eec55a9ec7e894de8550dfdcda4e88da5e33a12d",
+      "seed": "CJ2AJ95KRVKS",
+      "step": 126,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 11,
+        "d": "combat",
+        "r": 4,
+        "hp": 5,
+        "blk": 0,
+        "en": 3,
+        "hand": [
+          "Defend",
+          "Defend",
+          "Unrelenting",
+          "Defend",
+          "Pommel Strike"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            81,
+            0,
+            12
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          1,
+          2,
+          1,
+          1
+        ],
+        "pots": [],
+        "card": "Unrelenting",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 11,
+        "d": "combat",
+        "r": 4,
+        "hp": 5,
+        "blk": 0,
+        "en": 1,
+        "hand": [
+          "Defend",
+          "Defend",
+          "Defend",
+          "Pommel Strike"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            59,
+            0,
+            0
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          1,
+          1,
+          0
+        ],
+        "pots": [],
+        "card": "Pommel Strike",
+        "tgt": "Terror Eel"
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-dev-1005-0034.jsonl",
+      "sha256": "09ce291f4be2460aa7094a36eec55a9ec7e894de8550dfdcda4e88da5e33a12d",
+      "seed": "KAQ0Y0RED8DF",
+      "step": 155,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 14,
+        "d": "combat",
+        "r": 3,
+        "hp": 25,
+        "blk": 0,
+        "en": 2,
+        "hand": [
+          "Injury",
+          "Strike",
+          "Strike"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            79,
+            0,
+            24
+          ]
+        ],
+        "a": "play_card",
+        "np": [
+          0
+        ],
+        "cost": [
+          0,
+          1,
+          0
+        ],
+        "pots": [],
+        "card": "Strike",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 14,
+        "d": "combat",
+        "r": 3,
+        "hp": 25,
+        "blk": 0,
+        "en": 1,
+        "hand": [
+          "Injury",
+          "Strike"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            70,
+            0,
+            0
+          ]
+        ],
+        "a": "play_card",
+        "np": [
+          0
+        ],
+        "cost": [
+          0,
+          0
+        ],
+        "pots": [],
+        "card": "Strike"
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-dev-1005-0034.jsonl",
+      "sha256": "09ce291f4be2460aa7094a36eec55a9ec7e894de8550dfdcda4e88da5e33a12d",
+      "seed": "HJSD29JFY44F",
+      "step": 69,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 7,
+        "d": "combat",
+        "r": 6,
+        "hp": 11,
+        "blk": 0,
+        "en": 4,
+        "hand": [
+          "Strike",
+          "Defend",
+          "Bash",
+          "Strike",
+          "Strike",
+          "Defend",
+          "Defend",
+          "Taunt",
+          "Defend",
+          "Strike"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            78,
+            0,
+            12
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          3,
+          1,
+          1,
+          2,
+          2,
+          3,
+          1,
+          3,
+          1,
+          3
+        ],
+        "pots": [],
+        "card": "Bash",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 7,
+        "d": "combat",
+        "r": 6,
+        "hp": 11,
+        "blk": 0,
+        "en": 3,
+        "hand": [
+          "Strike",
+          "Defend",
+          "Strike",
+          "Strike",
+          "Defend",
+          "Defend",
+          "Taunt",
+          "Defend",
+          "Strike"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            66,
+            0,
+            0
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          3,
+          1,
+          2,
+          2,
+          3,
+          1,
+          3,
+          1,
+          3
+        ],
+        "pots": [],
+        "card": "Strike",
+        "tgt": "Terror Eel"
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-dev-1005-0034.jsonl",
+      "sha256": "09ce291f4be2460aa7094a36eec55a9ec7e894de8550dfdcda4e88da5e33a12d",
+      "seed": "PMHPRNBJCUY4",
+      "step": 99,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 11,
+        "d": "combat",
+        "r": 5,
+        "hp": 26,
+        "blk": 0,
+        "en": 3,
+        "hand": [
+          "Strike",
+          "Strike",
+          "Bully",
+          "Rampage",
+          "Defend"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            77,
+            0,
+            24
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "pots": [],
+        "card": "Strike",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 11,
+        "d": "combat",
+        "r": 5,
+        "hp": 26,
+        "blk": 0,
+        "en": 2,
+        "hand": [
+          "Strike",
+          "Bully",
+          "Rampage",
+          "Defend"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            67,
+            0,
+            0
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "pots": [],
+        "card": "Strike",
+        "tgt": "Terror Eel"
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-dev-1005-0034.jsonl",
+      "sha256": "09ce291f4be2460aa7094a36eec55a9ec7e894de8550dfdcda4e88da5e33a12d",
+      "seed": "0T30FTPDMSRG",
+      "step": 129,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 14,
+        "d": "combat",
+        "r": 3,
+        "hp": 52,
+        "blk": 0,
+        "en": 2,
+        "hand": [
+          "Strike",
+          "Defend",
+          "Defend",
+          "Strike"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            84,
+            0,
+            24
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "pots": [
+          "Speed Potion",
+          "Energy Potion"
+        ],
+        "card": "Strike",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 14,
+        "d": "combat",
+        "r": 3,
+        "hp": 52,
+        "blk": 0,
+        "en": 1,
+        "hand": [
+          "Defend",
+          "Defend",
+          "Strike"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            71,
+            0,
+            0
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          1,
+          1
+        ],
+        "pots": [
+          "Speed Potion",
+          "Energy Potion"
+        ],
+        "card": "Strike",
+        "tgt": "Terror Eel"
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-dev-1005-0034.jsonl",
+      "sha256": "09ce291f4be2460aa7094a36eec55a9ec7e894de8550dfdcda4e88da5e33a12d",
+      "seed": "GR3MDPJB2MCH",
+      "step": 92,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 9,
+        "d": "combat",
+        "r": 3,
+        "hp": 68,
+        "blk": 0,
+        "en": 3,
+        "hand": [
+          "Perfected Strike",
+          "Strike",
+          "Strike",
+          "Body Slam",
+          "Bash"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            87,
+            0,
+            24
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          2,
+          1,
+          1,
+          1,
+          2
+        ],
+        "pots": [],
+        "card": "Bash",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 9,
+        "d": "combat",
+        "r": 3,
+        "hp": 68,
+        "blk": 0,
+        "en": 1,
+        "hand": [
+          "Perfected Strike",
+          "Strike",
+          "Strike",
+          "Body Slam"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            75,
+            0,
+            0
+          ]
+        ],
+        "a": "play_card",
+        "np": [
+          0
+        ],
+        "cost": [
+          2,
+          1,
+          1,
+          1
+        ],
+        "pots": [],
+        "card": "Strike",
+        "tgt": "Terror Eel"
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-dev-1005-0034.jsonl",
+      "sha256": "09ce291f4be2460aa7094a36eec55a9ec7e894de8550dfdcda4e88da5e33a12d",
+      "seed": "AL505P7BTUS7",
+      "step": 75,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 8,
+        "d": "combat",
+        "r": 3,
+        "hp": 40,
+        "blk": 0,
+        "en": 0,
+        "hand": [
+          "Ascender's Bane",
+          "Strike",
+          "Flash of Steel"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            78,
+            0,
+            24
+          ]
+        ],
+        "a": "play_card",
+        "np": [
+          0,
+          1
+        ],
+        "cost": [
+          0,
+          1,
+          0
+        ],
+        "pots": [],
+        "card": "Flash of Steel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 8,
+        "d": "combat",
+        "r": 3,
+        "hp": 40,
+        "blk": 0,
+        "en": 0,
+        "hand": [
+          "Ascender's Bane",
+          "Strike",
+          "Strike"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            71,
+            0,
+            0
+          ]
+        ],
+        "a": "end_turn",
+        "np": [
+          0,
+          1,
+          2
+        ],
+        "cost": [
+          0,
+          1,
+          1
+        ],
+        "pots": [],
+        "fpow": [
+          {
+            "Vigor": 6,
+            "Vulnerable": 2
+          }
+        ],
+        "ppow": {}
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-dev-1005-0034.jsonl",
+      "sha256": "09ce291f4be2460aa7094a36eec55a9ec7e894de8550dfdcda4e88da5e33a12d",
+      "seed": "CYNH40VJ6B9S",
+      "step": 158,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 14,
+        "d": "combat",
+        "r": 1,
+        "hp": 60,
+        "blk": 0,
+        "en": 0,
+        "hand": [
+          "Strike",
+          "Ascender's Bane",
+          "Strike",
+          "Strike",
+          "Thrash"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            80,
+            0,
+            18
+          ]
+        ],
+        "a": "play_card",
+        "np": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "cost": [
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "pots": [
+          "Fortifier"
+        ],
+        "card": "Thrash",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 14,
+        "d": "combat",
+        "r": 1,
+        "hp": 60,
+        "blk": 0,
+        "en": 0,
+        "hand": [
+          "Strike",
+          "Ascender's Bane",
+          "Strike"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            68,
+            0,
+            0
+          ]
+        ],
+        "a": "end_turn",
+        "np": [
+          0,
+          1,
+          2
+        ],
+        "cost": [
+          1,
+          0,
+          1
+        ],
+        "pots": [
+          "Fortifier"
+        ],
+        "fpow": [
+          {
+            "Vulnerable": 2
+          }
+        ],
+        "ppow": {}
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-dev-1005-0034.jsonl",
+      "sha256": "09ce291f4be2460aa7094a36eec55a9ec7e894de8550dfdcda4e88da5e33a12d",
+      "seed": "FZY7081JJX34",
+      "step": 139,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 14,
+        "d": "combat",
+        "r": 3,
+        "hp": 62,
+        "blk": 0,
+        "en": 3,
+        "hand": [
+          "Taunt",
+          "Shrug It Off",
+          "Bash",
+          "Strike",
+          "Defend"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            81,
+            0,
+            24
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          1,
+          2,
+          1,
+          1
+        ],
+        "pots": [
+          "Speed Potion",
+          "Power Potion"
+        ],
+        "card": "Bash",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 14,
+        "d": "combat",
+        "r": 3,
+        "hp": 62,
+        "blk": 0,
+        "en": 1,
+        "hand": [
+          "Taunt",
+          "Shrug It Off",
+          "Strike",
+          "Defend"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            73,
+            0,
+            0
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "pots": [
+          "Speed Potion",
+          "Power Potion"
+        ],
+        "card": "Strike",
+        "tgt": "Terror Eel"
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-dev-1005-0034.jsonl",
+      "sha256": "09ce291f4be2460aa7094a36eec55a9ec7e894de8550dfdcda4e88da5e33a12d",
+      "seed": "N73TB4GBC59Q",
+      "step": 139,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 11,
+        "d": "combat",
+        "r": 3,
+        "hp": 48,
+        "blk": 0,
+        "en": 3,
+        "hand": [
+          "Bash",
+          "Defend",
+          "Bloodletting",
+          "Defend",
+          "Anger"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            76,
+            0,
+            24
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          2,
+          1,
+          0,
+          1,
+          0
+        ],
+        "pots": [],
+        "card": "Bash",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 11,
+        "d": "combat",
+        "r": 3,
+        "hp": 48,
+        "blk": 0,
+        "en": 1,
+        "hand": [
+          "Defend",
+          "Bloodletting",
+          "Defend",
+          "Anger"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            68,
+            0,
+            0
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "pots": [],
+        "card": "Anger",
+        "tgt": "Terror Eel"
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-dev-1005-0034.jsonl",
+      "sha256": "09ce291f4be2460aa7094a36eec55a9ec7e894de8550dfdcda4e88da5e33a12d",
+      "seed": "82WM02T9GP58",
+      "step": 152,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 14,
+        "d": "combat",
+        "r": 3,
+        "hp": 59,
+        "blk": 5,
+        "en": 1,
+        "hand": [
+          "Strike",
+          "Anger",
+          "Ascender's Bane",
+          "Strike"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            81,
+            0,
+            24
+          ]
+        ],
+        "a": "play_card",
+        "np": [
+          2
+        ],
+        "cost": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "pots": [
+          "Fysh Oil",
+          "Speed Potion"
+        ],
+        "card": "Strike",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 14,
+        "d": "combat",
+        "r": 3,
+        "hp": 59,
+        "blk": 5,
+        "en": 0,
+        "hand": [
+          "Anger",
+          "Ascender's Bane",
+          "Strike"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            72,
+            0,
+            0
+          ]
+        ],
+        "a": "play_card",
+        "np": [
+          1,
+          2
+        ],
+        "cost": [
+          0,
+          0,
+          1
+        ],
+        "pots": [
+          "Fysh Oil",
+          "Speed Potion"
+        ],
+        "card": "Anger",
+        "tgt": "Terror Eel"
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-dev-1005-0034.jsonl",
+      "sha256": "09ce291f4be2460aa7094a36eec55a9ec7e894de8550dfdcda4e88da5e33a12d",
+      "seed": "GRW33CKE35CJ",
+      "step": 100,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 9,
+        "d": "combat",
+        "r": 5,
+        "hp": 17,
+        "blk": 5,
+        "en": 2,
+        "hand": [
+          "Strike",
+          "Strike",
+          "Pommel Strike",
+          "Strike"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            83,
+            0,
+            24
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "pots": [],
+        "card": "Strike",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 9,
+        "d": "combat",
+        "r": 5,
+        "hp": 17,
+        "blk": 5,
+        "en": 1,
+        "hand": [
+          "Strike",
+          "Pommel Strike",
+          "Strike"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            71,
+            0,
+            0
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          1,
+          1
+        ],
+        "pots": [],
+        "card": "Pommel Strike",
+        "tgt": "Terror Eel"
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-dev-1005-0034.jsonl",
+      "sha256": "09ce291f4be2460aa7094a36eec55a9ec7e894de8550dfdcda4e88da5e33a12d",
+      "seed": "4JWSTGS9UXN5",
+      "step": 110,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 12,
+        "d": "combat",
+        "r": 3,
+        "hp": 52,
+        "blk": 0,
+        "en": 2,
+        "hand": [
+          "Strike",
+          "Defend",
+          "Molten Fist",
+          "Defend"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            80,
+            0,
+            24
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "pots": [
+          "Flex Potion",
+          "Vulnerable Potion"
+        ],
+        "card": "Strike",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 12,
+        "d": "combat",
+        "r": 3,
+        "hp": 52,
+        "blk": 0,
+        "en": 1,
+        "hand": [
+          "Defend",
+          "Molten Fist",
+          "Defend"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            71,
+            0,
+            0
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          1,
+          1
+        ],
+        "pots": [
+          "Flex Potion",
+          "Vulnerable Potion"
+        ],
+        "card": "Molten Fist",
+        "tgt": "Terror Eel"
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-dev-1005-0034.jsonl",
+      "sha256": "09ce291f4be2460aa7094a36eec55a9ec7e894de8550dfdcda4e88da5e33a12d",
+      "seed": "U89MT3XEGV9Z",
+      "step": 78,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 9,
+        "d": "combat",
+        "r": 4,
+        "hp": 34,
+        "blk": 0,
+        "en": 3,
+        "hand": [
+          "Strike",
+          "Defend",
+          "Strike",
+          "Strike",
+          "Spoils Map"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            81,
+            0,
+            12
+          ]
+        ],
+        "a": "play_card",
+        "np": [
+          4
+        ],
+        "cost": [
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "pots": [],
+        "card": "Strike",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 9,
+        "d": "combat",
+        "r": 4,
+        "hp": 34,
+        "blk": 0,
+        "en": 2,
+        "hand": [
+          "Defend",
+          "Strike",
+          "Strike",
+          "Spoils Map"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            75,
+            0,
+            0
+          ]
+        ],
+        "a": "play_card",
+        "np": [
+          3
+        ],
+        "cost": [
+          1,
+          1,
+          1,
+          0
+        ],
+        "pots": [],
+        "card": "Defend"
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-dev-1005-0034.jsonl",
+      "sha256": "09ce291f4be2460aa7094a36eec55a9ec7e894de8550dfdcda4e88da5e33a12d",
+      "seed": "ZAR5WF3VHCG5",
+      "step": 114,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 11,
+        "d": "combat",
+        "r": 2,
+        "hp": 48,
+        "blk": 0,
+        "en": 1,
+        "hand": [
+          "Defend",
+          "Defend",
+          "Hemokinesis"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            103,
+            0,
+            12
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          1,
+          1
+        ],
+        "pots": [],
+        "card": "Hemokinesis",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 11,
+        "d": "combat",
+        "r": 2,
+        "hp": 46,
+        "blk": 0,
+        "en": 0,
+        "hand": [
+          "Defend",
+          "Defend"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            75,
+            0,
+            0
+          ]
+        ],
+        "a": "end_turn",
+        "np": [
+          0,
+          1
+        ],
+        "cost": [
+          1,
+          1
+        ],
+        "pots": [],
+        "fpow": [
+          {}
+        ],
+        "ppow": {
+          "Strength": 8,
+          "FLEX_POTION_POWER.title": 5
+        }
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-dev-1005-0034.jsonl",
+      "sha256": "09ce291f4be2460aa7094a36eec55a9ec7e894de8550dfdcda4e88da5e33a12d",
+      "seed": "GVTNZL7NSJ22",
+      "step": 106,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 12,
+        "d": "combat",
+        "r": 4,
+        "hp": 24,
+        "blk": 0,
+        "en": 3,
+        "hand": [
+          "Bash",
+          "Strike",
+          "Defend",
+          "Defend",
+          "Taunt"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            81,
+            0,
+            12
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        "pots": [
+          "Weak Potion",
+          "Clarity Extract"
+        ],
+        "card": "Bash",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 12,
+        "d": "combat",
+        "r": 4,
+        "hp": 24,
+        "blk": 0,
+        "en": 1,
+        "hand": [
+          "Strike",
+          "Defend",
+          "Defend",
+          "Taunt"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            73,
+            0,
+            0
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "pots": [
+          "Weak Potion",
+          "Clarity Extract"
+        ],
+        "card": "Strike",
+        "tgt": "Terror Eel"
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-dev-1005-0034.jsonl",
+      "sha256": "09ce291f4be2460aa7094a36eec55a9ec7e894de8550dfdcda4e88da5e33a12d",
+      "seed": "PNK3USYZ87R7",
+      "step": 147,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 14,
+        "d": "combat",
+        "r": 3,
+        "hp": 24,
+        "blk": 0,
+        "en": 2,
+        "hand": [
+          "Defend",
+          "Strike",
+          "Strike",
+          "Defend",
+          "Demon Form"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            86,
+            0,
+            24
+          ]
+        ],
+        "a": "play_card",
+        "np": [
+          4
+        ],
+        "cost": [
+          1,
+          1,
+          1,
+          1,
+          3
+        ],
+        "pots": [],
+        "card": "Strike",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 14,
+        "d": "combat",
+        "r": 3,
+        "hp": 24,
+        "blk": 0,
+        "en": 1,
+        "hand": [
+          "Defend",
+          "Strike",
+          "Defend",
+          "Demon Form"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            73,
+            0,
+            0
+          ]
+        ],
+        "a": "play_card",
+        "np": [
+          3
+        ],
+        "cost": [
+          1,
+          1,
+          1,
+          3
+        ],
+        "pots": [],
+        "card": "Defend"
+      }
+    },
+    {
+      "source": "/opt/slay-the-spire-2/agent/results/it-iter-pub-dev-1005-0034.jsonl",
+      "sha256": "09ce291f4be2460aa7094a36eec55a9ec7e894de8550dfdcda4e88da5e33a12d",
+      "seed": "KURR6UPP7J20",
+      "step": 128,
+      "before_completed_action": {
+        "act": 1,
+        "floor": 14,
+        "d": "combat",
+        "r": 4,
+        "hp": 39,
+        "blk": 0,
+        "en": 2,
+        "hand": [
+          "Molten Fist",
+          "Defend",
+          "Strike",
+          "Defend"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            81,
+            0,
+            12
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "pots": [
+          "Fortifier"
+        ],
+        "card": "Molten Fist",
+        "tgt": "Terror Eel"
+      },
+      "after_completed_action": {
+        "act": 1,
+        "floor": 14,
+        "d": "combat",
+        "r": 4,
+        "hp": 39,
+        "blk": 0,
+        "en": 1,
+        "hand": [
+          "Defend",
+          "Strike",
+          "Defend"
+        ],
+        "foes": [
+          [
+            "Terror Eel",
+            66,
+            0,
+            0
+          ]
+        ],
+        "a": "play_card",
+        "np": [],
+        "cost": [
+          1,
+          1,
+          1
+        ],
+        "pots": [
+          "Fortifier"
+        ],
+        "card": "Strike",
+        "tgt": "Terror Eel"
+      }
+    }
+  ]
+}

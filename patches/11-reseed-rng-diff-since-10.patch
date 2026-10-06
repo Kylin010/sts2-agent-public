@@ -1,0 +1,58 @@
+diff --git a/src/Sts2Headless/Program.cs b/src/Sts2Headless/Program.cs
+index c882c4d..d94e2bc 100644
+--- a/src/Sts2Headless/Program.cs
++++ b/src/Sts2Headless/Program.cs
+@@ -186,6 +186,8 @@ class Program
+                 return sim.SetDrawOrder(cards);
+             }
+ 
++            case "reseed_rng":
++                return sim.ReseedRng(cmd.TryGetProperty("seed", out var rs) ? rs.GetInt32() : 0);
+             case "shuffle_draw":
+                 return sim.ShuffleDrawPile(cmd.TryGetProperty("seed", out var sd) ? sd.GetInt32() : 0);
+ 
+diff --git a/src/Sts2Headless/RunSimulator.cs b/src/Sts2Headless/RunSimulator.cs
+index eff7950..0030514 100644
+--- a/src/Sts2Headless/RunSimulator.cs
++++ b/src/Sts2Headless/RunSimulator.cs
+@@ -528,6 +528,40 @@ public class RunSimulator
+         catch (Exception ex) { return ErrorWithTrace("ShuffleDrawPile failed", ex); }
+     }
+ 
++    // 10/3：推演影子引擎读档后重置战斗相关的随机数（不只是抽牌堆），让推演看不到真实对局未来的随机结果
++    // （敌人随机出招、随机目标、随机生成的牌 / 药水、抽空后洗牌顺序）。地图问号 / 宝箱遗物 / 开局随机不动。
++    public Dictionary<string, object?> ReseedRng(int seed)
++    {
++        try
++        {
++            if (_runState == null) return Error("No run in progress");
++            var set = _runState.Rng;
++            var f = typeof(MegaCrit.Sts2.Core.Runs.RunRngSet).GetField("_rngs", BindingFlags.NonPublic | BindingFlags.Instance);
++            var dict = (Dictionary<MegaCrit.Sts2.Core.Entities.Rngs.RunRngType, MegaCrit.Sts2.Core.Random.Rng>)f!.GetValue(set)!;
++            int n = 0;
++            foreach (var k in dict.Keys.ToList())
++            {
++                if (k == MegaCrit.Sts2.Core.Entities.Rngs.RunRngType.UpFront || k == MegaCrit.Sts2.Core.Entities.Rngs.RunRngType.UnknownMapPoint
++                    || k == MegaCrit.Sts2.Core.Entities.Rngs.RunRngType.TreasureRoomRelics) continue;
++                dict[k] = new MegaCrit.Sts2.Core.Random.Rng((ulong)(uint)seed * 2654435761UL + (ulong)k + 1UL);
++                n++;
++            }
++            int m = 0;
++            var state = CombatManager.Instance.DebugOnlyGetState();
++            if (state != null)
++            {
++                foreach (var c in state.Enemies)
++                {
++                    if (c.Monster == null) continue;
++                    c.Monster.Rng = new MegaCrit.Sts2.Core.Random.Rng((ulong)(uint)seed * 40503UL + (ulong)c.CombatId.Value + 7UL);
++                    m++;
++                }
++            }
++            return new Dictionary<string, object?> { ["type"] = "ok", ["run_rngs"] = n, ["monster_rngs"] = m };
++        }
++        catch (Exception ex) { return ErrorWithTrace("ReseedRng failed", ex); }
++    }
++
+     // ─── Game actions ───
+     public Dictionary<string, object?> LoadSave(string saveJson, string lang = "en")
+     {

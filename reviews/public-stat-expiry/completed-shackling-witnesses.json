@@ -1,0 +1,303 @@
+{
+  "scope": "Strict no-recorded-restart historical completed sequence. Matching same creature cid, temporary amount, enemy end-turn then positive Strength restoration; source explains cause. Not own normal qualification, actual full outcome improvement or future data used for decisions.",
+  "files_read": 1050,
+  "matches": 1,
+  "examples": [
+    {
+      "source": "/opt/slay-the-spire-2/sources/community-runs/replays/ironclad-a10/4cf7a30c1507b320.ndjson.gz",
+      "sha256": "ad032bec6b0b120b986ab0450aa7b00627d9196ad68e399c41ba131ebd360b58",
+      "header": {
+        "seed": "YGXE1YZVYL6K",
+        "build_id": "v0.111.0",
+        "reloads": 0,
+        "ascension": 10
+      },
+      "run_win": true,
+      "temporary_applied": {
+        "t": "power",
+        "s": 4135,
+        "ms": 3136188,
+        "floor": 48,
+        "act": 3,
+        "src": "player",
+        "id": "SHACKLING_POTION_POWER",
+        "n": 7,
+        "amount": 7,
+        "tgt": "AEONGLASS",
+        "tgt_cid": 109
+      },
+      "matched_restore": {
+        "t": "power",
+        "s": 4153,
+        "ms": 3140472,
+        "floor": 48,
+        "act": 3,
+        "src": "AEONGLASS",
+        "src_cid": 109,
+        "id": "STRENGTH_POWER",
+        "n": 7,
+        "amount": 0,
+        "tgt": "AEONGLASS",
+        "tgt_cid": 109
+      },
+      "events": [
+        {
+          "t": "hit",
+          "s": 4130,
+          "ms": 3132223,
+          "floor": 48,
+          "act": 3,
+          "src": "player",
+          "dst": "AEONGLASS",
+          "dst_cid": 109,
+          "dmg": 0,
+          "blocked": 18,
+          "full_block": true,
+          "killed": false,
+          "dmg_type": [
+            "move"
+          ],
+          "card": "UPPERCUT",
+          "atk": 565,
+          "mods": [
+            "STRENGTH_POWER"
+          ]
+        },
+        {
+          "t": "power",
+          "s": 4131,
+          "ms": 3132423,
+          "floor": 48,
+          "act": 3,
+          "src": "player",
+          "id": "WEAK_POWER",
+          "n": 2,
+          "amount": 2,
+          "tgt": "AEONGLASS",
+          "tgt_cid": 109
+        },
+        {
+          "t": "power",
+          "s": 4132,
+          "ms": 3132555,
+          "floor": 48,
+          "act": 3,
+          "src": "player",
+          "id": "VULNERABLE_POWER",
+          "n": 2,
+          "amount": 2,
+          "tgt": "AEONGLASS",
+          "tgt_cid": 109
+        },
+        {
+          "t": "power",
+          "s": 4134,
+          "ms": 3136085,
+          "floor": 48,
+          "act": 3,
+          "src": "player",
+          "id": "STRENGTH_POWER",
+          "n": -7,
+          "amount": -7,
+          "tgt": "AEONGLASS",
+          "tgt_cid": 109
+        },
+        {
+          "t": "power",
+          "s": 4135,
+          "ms": 3136188,
+          "floor": 48,
+          "act": 3,
+          "src": "player",
+          "id": "SHACKLING_POTION_POWER",
+          "n": 7,
+          "amount": 7,
+          "tgt": "AEONGLASS",
+          "tgt_cid": 109
+        },
+        {
+          "t": "intent",
+          "s": 4137,
+          "ms": 3138032,
+          "floor": 48,
+          "act": 3,
+          "src": "AEONGLASS",
+          "src_cid": 109,
+          "id": "EYE_LASERS_MOVE",
+          "at": "turn_end",
+          "intents": [
+            "attack"
+          ],
+          "dmg": 3,
+          "hits": 2
+        },
+        {
+          "t": "hit",
+          "s": 4138,
+          "ms": 3138291,
+          "floor": 48,
+          "act": 3,
+          "src": "player",
+          "dst": "player",
+          "dmg": 3,
+          "blocked": 0,
+          "killed": false,
+          "dmg_type": [
+            "unpowered",
+            "move"
+          ],
+          "card": "WITHER"
+        },
+        {
+          "t": "end_turn",
+          "s": 4140,
+          "ms": 3138419,
+          "floor": 48,
+          "act": 3,
+          "n": 2,
+          "round": 2,
+          "side": "player"
+        },
+        {
+          "t": "move",
+          "s": 4143,
+          "ms": 3139278,
+          "floor": 48,
+          "act": 3,
+          "src": "AEONGLASS",
+          "src_cid": 109,
+          "id": "EYE_LASERS_MOVE",
+          "intents": [
+            "attack"
+          ]
+        },
+        {
+          "t": "hit",
+          "s": 4144,
+          "ms": 3139505,
+          "floor": 48,
+          "act": 3,
+          "src": "player",
+          "dst": "AEONGLASS",
+          "dst_cid": 109,
+          "dmg": 3,
+          "blocked": 0,
+          "killed": false,
+          "dmg_type": [
+            "unpowered",
+            "skiphurtanim"
+          ]
+        },
+        {
+          "t": "hit",
+          "s": 4145,
+          "ms": 3139596,
+          "floor": 48,
+          "act": 3,
+          "src": "AEONGLASS",
+          "src_cid": 109,
+          "dst": "player",
+          "dmg": 3,
+          "blocked": 0,
+          "killed": false,
+          "dmg_type": [
+            "move"
+          ],
+          "atk": 566,
+          "mods": [
+            "STRENGTH_POWER",
+            "WEAK_POWER"
+          ]
+        },
+        {
+          "t": "hit",
+          "s": 4146,
+          "ms": 3139718,
+          "floor": 48,
+          "act": 3,
+          "src": "player",
+          "dst": "AEONGLASS",
+          "dst_cid": 109,
+          "dmg": 3,
+          "blocked": 0,
+          "killed": false,
+          "dmg_type": [
+            "unpowered",
+            "skiphurtanim"
+          ]
+        },
+        {
+          "t": "hit",
+          "s": 4147,
+          "ms": 3139825,
+          "floor": 48,
+          "act": 3,
+          "src": "AEONGLASS",
+          "src_cid": 109,
+          "dst": "player",
+          "dmg": 3,
+          "blocked": 0,
+          "killed": false,
+          "dmg_type": [
+            "move"
+          ],
+          "atk": 566,
+          "mods": [
+            "STRENGTH_POWER",
+            "WEAK_POWER"
+          ]
+        },
+        {
+          "t": "end_turn",
+          "s": 4149,
+          "ms": 3140052,
+          "floor": 48,
+          "act": 3,
+          "n": 2,
+          "round": 2,
+          "side": "enemy"
+        },
+        {
+          "t": "power",
+          "s": 4150,
+          "ms": 3140052,
+          "floor": 48,
+          "act": 3,
+          "src": "effect",
+          "id": "WEAK_POWER",
+          "n": -1,
+          "amount": 1,
+          "tgt": "AEONGLASS",
+          "tgt_cid": 109
+        },
+        {
+          "t": "power",
+          "s": 4151,
+          "ms": 3140158,
+          "floor": 48,
+          "act": 3,
+          "src": "effect",
+          "id": "VULNERABLE_POWER",
+          "n": -1,
+          "amount": 1,
+          "tgt": "AEONGLASS",
+          "tgt_cid": 109
+        },
+        {
+          "t": "power",
+          "s": 4153,
+          "ms": 3140472,
+          "floor": 48,
+          "act": 3,
+          "src": "AEONGLASS",
+          "src_cid": 109,
+          "id": "STRENGTH_POWER",
+          "n": 7,
+          "amount": 0,
+          "tgt": "AEONGLASS",
+          "tgt_cid": 109
+        }
+      ]
+    }
+  ]
+}

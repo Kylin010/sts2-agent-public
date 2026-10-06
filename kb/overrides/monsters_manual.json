@@ -1,0 +1,1817 @@
+{
+ "//": "extract_monsters.py 会把这里深度合并进自动解析结果（字典逐层合并，列表整体替换；字段值写成 {\"__replace__\": true, ...} 表示整个字典替换）。notes/tags 全部手写；moves.*.effects / intents 只在自动解析不对时才覆盖。数值格式同 monsters.json：{\"a0\":普通,\"a10\":进阶10}。",
+ "monsters": {
+  "AEONGLASS": {
+   "tags": [
+    "boss",
+    "adds_status",
+    "punishes_card_count",
+    "scaling",
+    "artifact"
+   ],
+   "notes": "第三幕 Boss。开局给玩家挂凋萎存在（你每打 6 张牌往手里塞一张凋萎：不能打出、回合结束在手里受 3 伤，每被升级一次 +3）并自带 3 层人工制品。循环 退潮(22/26 + 33 格挡) → 眼部激光 11/12×2 → 愈发强烈（所有凋萎再升级一次、往弃牌堆塞 1/2 张凋萎、力量 +3/4，之后每用一次多 +1）。少打牌、别让凋萎留在手里，战斗越拖越痛。",
+   "moves": {
+    "INCREASING_INTENSITY_MOVE": {
+     "effects": [
+      {
+       "kind": "upgrade_cards",
+       "card": "Wither",
+       "where": "玩家所有凋萎（含之后生成的）",
+       "amount": "每次 +3 伤害"
+      },
+      {
+       "kind": "add_card",
+       "card": "Wither",
+       "pile": "discard",
+       "count": {
+        "a0": 1,
+        "a10": 2
+       },
+       "to": "player"
+      },
+      {
+       "kind": "apply_power",
+       "power": "StrengthPower",
+       "target": "self",
+       "amount": {
+        "a0": 3,
+        "a10": 4,
+        "dynamic": true,
+        "formula": "3/4 + 本招已用次数（第 n 次 = 基础 + n - 1）"
+       }
+      }
+     ]
+    }
+   }
+  },
+  "ARCHITECT": {
+   "tags": [
+    "event"
+   ],
+   "notes": "终局事件「建筑师」里的对象，9999 血、不行动（剧情战），不用打。"
+  },
+  "ASSASSIN_RUBY_RAIDER": {
+   "tags": [
+    "glass_cannon"
+   ],
+   "notes": "红宝石劫掠者之一：血少（18-23 / 19-24），每回合刺杀 10/11，优先秒掉。"
+  },
+  "AXE_RUBY_RAIDER": {
+   "notes": "红宝石劫掠者之一：挥砍 5/6 + 5/6 格挡 连续两次，然后大挥砍 12/13，循环。"
+  },
+  "BRUTE_RUBY_RAIDER": {
+   "tags": [
+    "scaling"
+   ],
+   "notes": "红宝石劫掠者之一：殴打 7/8 与咆哮(+3 力量)交替，越拖越痛。"
+  },
+  "CROSSBOW_RUBY_RAIDER": {
+   "notes": "红宝石劫掠者之一：先装填(3 格挡)，再射击 14/16，两招交替；射击回合是这组里最痛的一下。"
+  },
+  "TRACKER_RUBY_RAIDER": {
+   "tags": [
+    "multi_hit"
+   ],
+   "notes": "红宝石劫掠者之一：第 1 回合追踪(2 脆弱)，之后每回合猎犬 1×8/9（多段，力量/易伤按段加成，荆棘按段反伤）。"
+  },
+  "AXEBOT": {
+   "tags": [
+    "revives",
+    "summoner"
+   ],
+   "notes": "第三幕。库存 2：被打死时原地补一台新的巨斧机器人（库存 -1、最大生命 +10，新的那台先「启动」：10/15 格挡 + 力量 3/4×已替换次数）。原始那台第一招就是上勾拳 14/18 + 2 虚弱 2 脆弱，之后 一二连击 10/11×2 与上勾拳交替。相当于要连杀三台（A0 约 70-78 / 80-88 / 90-98 血，A10 76-86 起）。",
+   "moves": {
+    "BOOT_UP_MOVE": {
+     "effects": [
+      {
+       "kind": "block",
+       "target": "self",
+       "amount": {
+        "a0": 10,
+        "a10": 15
+       }
+      },
+      {
+       "kind": "apply_power",
+       "power": "StrengthPower",
+       "target": "self",
+       "amount": {
+        "a0": 3,
+        "a10": 4,
+        "dynamic": true,
+        "formula": "3/4 × (2 - 剩余库存)：第一台替补 3/4，第二台替补 6/8；原始那台不会用这招"
+       }
+      }
+     ]
+    }
+   }
+  },
+  "BATTLE_FRIEND_V1": {
+   "tags": [
+    "event",
+    "timer"
+   ],
+   "notes": "第三幕事件「历战假人」：75 血，不行动；时间限制 3 回合，到时自己跑掉（战斗不给常规奖励）。"
+  },
+  "BATTLE_FRIEND_V2": {
+   "tags": [
+    "event",
+    "timer"
+   ],
+   "notes": "第三幕事件「历战假人」：150 血，不行动；时间限制 3 回合，到时自己跑掉。"
+  },
+  "BATTLE_FRIEND_V3": {
+   "tags": [
+    "event",
+    "timer"
+   ],
+   "notes": "第三幕事件「历战假人」：300 血，不行动；时间限制 3 回合，到时自己跑掉。"
+  },
+  "BIG_DUMMY": {
+   "tags": [
+    "test"
+   ],
+   "notes": "测试用怪物，正式游戏不会出现。"
+  },
+  "ONE_HP_MONSTER": {
+   "tags": [
+    "test"
+   ],
+   "notes": "测试用怪物（1 血），正式游戏不会出现。"
+  },
+  "TEN_HP_MONSTER": {
+   "tags": [
+    "test"
+   ],
+   "notes": "测试用怪物（10 血），正式游戏不会出现。"
+  },
+  "SINGLE_ATTACK_MOVE_MONSTER": {
+   "tags": [
+    "test"
+   ],
+   "notes": "测试用怪物，正式游戏不会出现。"
+  },
+  "MULTI_ATTACK_MOVE_MONSTER": {
+   "tags": [
+    "test"
+   ],
+   "notes": "测试用怪物，正式游戏不会出现。"
+  },
+  "DEPRECATED_MONSTER": {
+   "tags": [
+    "test"
+   ],
+   "notes": "已移除怪物的占位（只用于历史记录），正式游戏不会出现。"
+  },
+  "BYRDPIP": {
+   "tags": [
+    "pet"
+   ],
+   "notes": "遗物「异鸟宝宝」召唤的宠物，站在玩家一侧，不是敌人。"
+  },
+  "OSTY": {
+   "tags": [
+    "pet"
+   ],
+   "notes": "亡灵契约师的宠物骨头（奥斯提），站在玩家一侧，不是敌人。"
+  },
+  "PAELS_LEGION": {
+   "tags": [
+    "pet"
+   ],
+   "notes": "遗物「佩尔的军团」的召唤物，站在玩家一侧，不是敌人。"
+  },
+  "BOWLBUG_EGG": {
+   "notes": "盛碗虫（卵）：每回合咬 7/8 并获得 7/8 格挡。"
+  },
+  "BOWLBUG_NECTAR": {
+   "tags": [
+    "scaling"
+   ],
+   "notes": "盛碗虫（蜜）：第 1 回合拍打 3，第 2 回合 +15/16 力量，之后每回合拍打 3+力量（≈18/19）。最好在它第 3 次行动前打死。"
+  },
+  "BOWLBUG_ROCK": {
+   "tags": [
+    "stun_if_fully_blocked"
+   ],
+   "notes": "盛碗虫（石）：失衡——如果它的攻击被完全格挡，下回合眩晕（不行动），然后再头槌。每回合头槌 15/16；能全挡就等于它隔回合才打一次。",
+   "forced_moves": [
+    {
+     "id": "STUNNED",
+     "intents": [
+      {
+       "type": "stun",
+       "cli_type": "Stun"
+      }
+     ],
+     "trigger": "头槌被完全格挡（失衡）",
+     "then": "HEADBUTT_MOVE"
+    }
+   ]
+  },
+  "BOWLBUG_SILK": {
+   "notes": "盛碗虫（丝）：先吐毒(1 虚弱)，之后与拍打 4/5×2 交替。"
+  },
+  "BYGONE_EFFIGY": {
+   "tags": [
+    "elite",
+    "sleeps",
+    "rewards_card_count"
+   ],
+   "notes": "第一幕精英。缓慢：本回合你每打一张牌，它受到的攻击伤害 +10%（敌方回合开始清零）——先打便宜牌再打大攻击。第 1 回合睡觉、第 2 回合醒来 +10 力量、之后每回合斩击 13/15（加力量后 23/25）。前两回合不攻击，抓紧输出。SLEEP_MOVE_2 在源码里没有入口，实际不会出现。"
+  },
+  "BYRDONIS": {
+   "tags": [
+    "elite",
+    "scaling"
+   ],
+   "notes": "第一幕精英。领地意识：每个它的回合结束 +1 力量（永久累积）。俯冲 17/19 与啄 3/4×3 交替（先俯冲）；啄是三段，每段都吃力量。速战速决。"
+  },
+  "CALCIFIED_CULTIST": {
+   "tags": [
+    "scaling"
+   ],
+   "notes": "第 1 回合咒语获得 2 层仪式（从下个回合结束起每回合 +2 力量），之后每回合黑暗打击 9/11 + 力量（第 2 回合 9/11，第 3 回合 11/13…）。"
+  },
+  "DAMP_CULTIST": {
+   "tags": [
+    "scaling"
+   ],
+   "notes": "第 1 回合咒语获得 5/6 层仪式（从下个回合结束起每回合 +5/6 力量），之后每回合黑暗打击 1/3 + 力量：第 2 回合 1/3，第 3 回合 6/9，第 4 回合 11/15… 增长极快，优先击杀。"
+  },
+  "CEREMONIAL_BEAST": {
+   "tags": [
+    "boss",
+    "hp_threshold",
+    "scaling",
+    "card_restriction"
+   ],
+   "notes": "第一幕 Boss。第 1 回合跺地获得横冲直撞 150/160；之后每回合横冲 18/20 并 +2 力量（一直叠）。它受到未格挡伤害后血量 ≤150/160 时：力量全部清零、眩晕一回合，进入二阶段循环 野兽咆哮（昏眩：你下个回合只能打 1 张牌）→ 践踏 15/17 → 碾碎 17/19 + 3/4 力量。要点：尽快打掉约 102 血触发二阶段把力量清零；咆哮之后那回合只能出 1 张牌。",
+   "forced_moves": [
+    {
+     "id": "STUNNED",
+     "intents": [
+      {
+       "type": "stun",
+       "cli_type": "Stun"
+      }
+     ],
+     "trigger": "受到未格挡伤害后 HP ≤ 横冲直撞层数（150/160），同时移除全部力量；只触发一次",
+     "then": "BEAST_CRY_MOVE",
+     "note": "状态机里的 STUN_MOVE 实际不会用到，游戏里显示的招式 id 是 STUNNED"
+    }
+   ]
+  },
+  "CHOMPER": {
+   "tags": [
+    "adds_status",
+    "artifact"
+   ],
+   "notes": "第二幕。人工制品 2。钳击 8/9×2 与尖叫（往弃牌堆塞 3 张晕眩）交替；成对出现时其中一只先尖叫。"
+  },
+  "CORPSE_SLUG": {
+   "tags": [
+    "scaling",
+    "death_trigger"
+   ],
+   "notes": "第一幕(暗港)。饥饿 4/5：任何同伴死掉时它会吃掉尸体——自己眩晕一回合，但永久 +4/5 力量。三招循环 鞭打 3×2 → 吞咽 8/9 → 黏液(2 脆弱)，同组每只起手招都不同。尽量同一回合一起打死（AOE），逐个击杀会让剩下的越来越强。",
+   "forced_moves": [
+    {
+     "id": "STUNNED",
+     "intents": [
+      {
+       "type": "stun",
+       "cli_type": "Stun"
+      }
+     ],
+     "trigger": "任意同伴死亡（吃掉尸体，+4/5 力量）",
+     "then": "重复眩晕前最后执行的那一招"
+    }
+   ]
+  },
+  "CRUSHER": {
+   "tags": [
+    "boss",
+    "back_attack",
+    "enrage_on_ally_death"
+   ],
+   "notes": "第二幕 Boss 帝皇蟹的左钳（和火箭一起）。玩家开局被包围：你最近一次用指向性卡牌/药水指向的那只钳在你面前，另一只在你背后、打你 ×1.5（开局面朝火箭，所以碾碎爪先在背后）。蟹之怒：另一只钳先死时 +6 力量、+99 格挡（一次）。循环 痛打 12/14 → 增大打击 4 → 虫刺 6/7×2 + 2 虚弱 2 脆弱 → 适应 +2/3 力量 → 防守打击 12/14 + 18 格挡。"
+  },
+  "ROCKET": {
+   "tags": [
+    "boss",
+    "back_attack",
+    "enrage_on_ally_death"
+   ],
+   "notes": "第二幕 Boss 帝皇蟹的右钳。开局给玩家挂「遭到包围」。你面朝碾碎爪时它在背后、打你 ×1.5。蟹之怒同上（+6 力量 +99 格挡）。循环 瞄准 3/4 → 精准光束 18/20 → 充能 +2/3 力量 → 激光 31/35 → 充电（不行动）。激光那回合要么大格挡、要么先指向它把它转到正面。"
+  },
+  "CUBEX_CONSTRUCT": {
+   "tags": [
+    "scaling",
+    "artifact"
+   ],
+   "notes": "开局 13 格挡 + 1 层人工制品。充能 +2 力量 → 连射 7/8（+2 力量）×2 → 喷射 5/6×2 → 回到连射；力量几乎每回合 +2，持续成长。"
+  },
+  "DECIMILLIPEDE_SEGMENT_FRONT": {
+   "tags": [
+    "elite",
+    "revives",
+    "multi_body"
+   ],
+   "notes": "第二幕精英「残杀千足虫」三节之一（三节逻辑相同）。每节血量不同（都是偶数），起手招各不相同。一节被打死后进入死亡状态，下下个敌方回合以 25 血接回（只要还有别的节活着；死亡状态下不能被选中）；三节都死才结束。招式 扭动 5/6×2 / 胀大 6/7 + 2 力量 / 紧缠 8/9 + 1 虚弱，复活后随机不重复。要点：AOE，把三节都压低再在同一窗口收掉。",
+   "forced_moves": [
+    {
+     "id": "DEAD_MOVE",
+     "intents": [],
+     "trigger": "被打死且还有别的节活着",
+     "then": "下一个敌方回合执行 DEAD_MOVE（什么都不做），再下一个敌方回合 REATTACH_MOVE 接回 25 血，之后进 RAND"
+    }
+   ]
+  },
+  "DECIMILLIPEDE_SEGMENT_MIDDLE": {
+   "tags": [
+    "elite",
+    "revives",
+    "multi_body"
+   ],
+   "notes": "第二幕精英「残杀千足虫」三节之一（三节逻辑相同）。每节血量不同（都是偶数），起手招各不相同。一节被打死后进入死亡状态，下下个敌方回合以 25 血接回（只要还有别的节活着；死亡状态下不能被选中）；三节都死才结束。招式 扭动 5/6×2 / 胀大 6/7 + 2 力量 / 紧缠 8/9 + 1 虚弱，复活后随机不重复。要点：AOE，把三节都压低再在同一窗口收掉。",
+   "forced_moves": [
+    {
+     "id": "DEAD_MOVE",
+     "intents": [],
+     "trigger": "被打死且还有别的节活着",
+     "then": "下一个敌方回合执行 DEAD_MOVE（什么都不做），再下一个敌方回合 REATTACH_MOVE 接回 25 血，之后进 RAND"
+    }
+   ]
+  },
+  "DECIMILLIPEDE_SEGMENT_BACK": {
+   "tags": [
+    "elite",
+    "revives",
+    "multi_body"
+   ],
+   "notes": "第二幕精英「残杀千足虫」三节之一（三节逻辑相同）。每节血量不同（都是偶数），起手招各不相同。一节被打死后进入死亡状态，下下个敌方回合以 25 血接回（只要还有别的节活着；死亡状态下不能被选中）；三节都死才结束。招式 扭动 5/6×2 / 胀大 6/7 + 2 力量 / 紧缠 8/9 + 1 虚弱，复活后随机不重复。要点：AOE，把三节都压低再在同一窗口收掉。",
+   "forced_moves": [
+    {
+     "id": "DEAD_MOVE",
+     "intents": [],
+     "trigger": "被打死且还有别的节活着",
+     "then": "下一个敌方回合执行 DEAD_MOVE（什么都不做），再下一个敌方回合 REATTACH_MOVE 接回 25 血，之后进 RAND"
+    }
+   ]
+  },
+  "DEVOTED_SCULPTOR": {
+   "tags": [
+    "scaling"
+   ],
+   "notes": "第三幕弱遭遇但很危险：第 1 回合禁忌咒语获得 9 层仪式（从下个回合结束起每回合 +9 力量），之后每回合野蛮 12/15 + 力量：第 2 回合 12/15，第 3 回合 21/24，第 4 回合 30/33…。162/172 血，要在几回合内打死。"
+  },
+  "ENTOMANCER": {
+   "tags": [
+    "elite",
+    "adds_status",
+    "punishes_multi_hit",
+    "scaling"
+   ],
+   "notes": "第二幕精英。人体蜂房：它每被攻击命中一次，就往你的抽牌堆随机位置塞 N 张晕眩（N = 蜂房层数，开局 1，最多 3）。开局先放蜂群 3×7/8，之后 信息素（蜂房 +1 且 +1 力量；蜂房满 3 层后改为 +2 力量）→ 蜂群 → 长矛 18/20 循环。少用多段攻击，用大单发。"
+  },
+  "EXOSKELETON": {
+   "tags": [
+    "damage_cap"
+   ],
+   "notes": "第二幕（3-4 只一组）。难以杀灭 9：每次受到的伤害最多 9。按站位起手：1 号疾走 1×3/4、2 号下颚 8/9、3 号激怒 +2 力量、4 号随机；之后在疾走/下颚中随机不重复，下颚之后必接激怒。用多段中等伤害、AOE 最有效，单发大伤害被截到 9。"
+  },
+  "EYE_WITH_TEETH": {
+   "tags": [
+    "minion",
+    "illusion",
+    "adds_status"
+   ],
+   "notes": "雾菇召唤的幻象（6 血，爪牙）：死后下回合满血复活（复活中不能被选中）；每回合往你弃牌堆塞 3 张晕眩。打死雾菇本体它就消失，打它基本是浪费。",
+   "forced_moves": [
+    {
+     "id": "REVIVE_MOVE",
+     "intents": [
+      {
+       "type": "heal",
+       "cli_type": "Heal"
+      }
+     ],
+     "trigger": "被打死（幻象）",
+     "then": "死前最后执行的那一招",
+     "note": "复活中不能被选中；执行时回满血"
+    }
+   ]
+  },
+  "FABRICATOR": {
+   "tags": [
+    "summoner"
+   ],
+   "notes": "第三幕。150/155 血。场上存活敌人（含自己）少于 4 个时随机：组装（召唤 1 个防御机器人[守护/噪音] + 1 个进攻机器人[电击/戳刺]）或 组装打击（18/21 + 召唤 1 个进攻机器人）；满员时改为瓦解 11/13。机器人都是爪牙：组装师一死全部消失、战斗结束。同一种机器人不会连着召唤两次。守护机器人每回合给组装师 15 格挡。集火组装师。",
+   "spawns": [
+    "GUARDBOT",
+    "NOISEBOT",
+    "ZAPBOT",
+    "STABBOT"
+   ],
+   "moves": {
+    "FABRICATE_MOVE": {
+     "effects": [
+      {
+       "kind": "summon",
+       "monster": null,
+       "one_of": [
+        "GUARDBOT",
+        "NOISEBOT"
+       ],
+       "count": 1,
+       "note": "防御机器人，不会和上一个召唤的相同"
+      },
+      {
+       "kind": "apply_power",
+       "power": "MinionPower",
+       "target": "summoned",
+       "amount": {
+        "a0": 1,
+        "a10": 1
+       }
+      },
+      {
+       "kind": "summon",
+       "monster": null,
+       "one_of": [
+        "ZAPBOT",
+        "STABBOT"
+       ],
+       "count": 1,
+       "note": "进攻机器人"
+      },
+      {
+       "kind": "apply_power",
+       "power": "MinionPower",
+       "target": "summoned",
+       "amount": {
+        "a0": 1,
+        "a10": 1
+       }
+      }
+     ]
+    },
+    "FABRICATING_STRIKE_MOVE": {
+     "effects": [
+      {
+       "kind": "attack",
+       "damage": {
+        "a0": 18,
+        "a10": 21
+       },
+       "hits": 1,
+       "target": "player"
+      },
+      {
+       "kind": "summon",
+       "monster": null,
+       "one_of": [
+        "ZAPBOT",
+        "STABBOT"
+       ],
+       "count": 1,
+       "note": "进攻机器人，不会和上一个召唤的相同"
+      },
+      {
+       "kind": "apply_power",
+       "power": "MinionPower",
+       "target": "summoned",
+       "amount": {
+        "a0": 1,
+        "a10": 1
+       }
+      }
+     ]
+    }
+   }
+  },
+  "GUARDBOT": {
+   "tags": [
+    "minion"
+   ],
+   "notes": "组装师的防御机器人（爪牙）：每回合给组装师 15 格挡。"
+  },
+  "NOISEBOT": {
+   "tags": [
+    "minion",
+    "adds_status"
+   ],
+   "notes": "组装师的防御机器人（爪牙）：每回合往你的弃牌堆和抽牌堆（随机位置）各塞 1 张晕眩。"
+  },
+  "STABBOT": {
+   "tags": [
+    "minion"
+   ],
+   "notes": "组装师的进攻机器人（爪牙）：每回合戳刺 11/12 + 1 脆弱。"
+  },
+  "ZAPBOT": {
+   "tags": [
+    "minion",
+    "scaling"
+   ],
+   "notes": "组装师的进攻机器人（爪牙）：高电压 2（每个它的回合结束 +2 力量），每回合电击 14/15 + 力量。"
+  },
+  "FAKE_MERCHANT_MONSTER": {
+   "tags": [
+    "event"
+   ],
+   "notes": "共享事件「商人？？？」里的战斗：165/175 血，赢了给 300 金币。随机出招不重复：挥击 13/15 / 喷金币 2×8 / 扔遗物 9/10 + 1 脆弱（之后只会接攻击招）/ 激怒 +2 力量（3 回合冷却）。"
+  },
+  "FAT_GREMLIN": {
+   "tags": [
+    "escapes",
+    "steals_gold"
+   ],
+   "notes": "地精佣兵死后出现，身上带着被偷走的金币（盗窃：它被打死时把金币还给你）。出场回合眩晕，下一个回合逃跑。要拿回金币必须在它逃跑前打死（13-17 / 14-18 血）。"
+  },
+  "SNEAKY_GREMLIN": {
+   "notes": "地精佣兵死后出现：出场回合眩晕，之后每回合撞击 9/10。"
+  },
+  "GREMLIN_MERC": {
+   "tags": [
+    "steals_gold",
+    "death_trigger",
+    "summoner"
+   ],
+   "notes": "第一幕(暗港)。每次攻击后偷你最多 20 金币。意外：它死后召唤卑鄙地精（每回合 9/10）和胖地精（拿着偷走的金币，下回合逃跑）——战斗不会在它死时结束。循环 给我 7/8×2 → 双重猛击 6/7×2 + 2 虚弱 → 嘿嘿 8/9 + 2 力量。"
+  },
+  "FLAIL_KNIGHT": {
+   "tags": [
+    "elite"
+   ],
+   "notes": "第三幕精英「骑士团伙」之一。开局冲撞 15/17，之后随机：战吼 +3 力量（不连用）/ 连枷 9/10×2 / 冲撞 15/17（后两招最多连用 2 次）。"
+  },
+  "MYSTERIOUS_KNIGHT": {
+   "tags": [
+    "event"
+   ],
+   "notes": "第二幕事件「灯笼钥匙」里的神秘骑士：连枷骑士的强化版，开局 +6 力量、+6 覆甲，招式同连枷骑士。"
+  },
+  "MAGI_KNIGHT": {
+   "tags": [
+    "elite",
+    "card_restriction"
+   ],
+   "notes": "第三幕精英「骑士团伙」之一。抑制：它活着时你所有牌被降级（它死后恢复）。循环 能量盾 6/7 + 5/9 格挡 → 抑制 → 冲撞 10/11 → 准备（5/9 格挡）→ 魔法炸弹 35/40 → 冲撞 → …，炸弹回合必须挡。",
+   "moves": {
+    "DAMPEN_MOVE": {
+     "effects": [
+      {
+       "kind": "apply_power",
+       "power": "DampenPower",
+       "target": "player",
+       "amount": {
+        "a0": 1,
+        "a10": 1
+       },
+       "when": [
+        "玩家身上还没有抑制时才施加（之后只是登记施法者）"
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "SPECTRAL_KNIGHT": {
+   "tags": [
+    "elite",
+    "card_restriction"
+   ],
+   "notes": "第三幕精英「骑士团伙」之一。第 1 回合邪咒：它活着时你所有牌获得虚无（回合结束没打就消耗）。之后 灵魂斩 15/17 → 随机（灵魂斩最多连 2 次 / 灵魂火焰 3/4×3 不连用）。优先击杀以解除虚无。"
+  },
+  "FLYCONID": {
+   "tags": [
+    "debuffer"
+   ],
+   "notes": "开局随机 脆弱孢子（8/9 + 2 脆弱）或 猛击 11/12；之后随机不重复：易伤孢子（2 易伤，3 回合冷却）/ 脆弱孢子（2 回合冷却）/ 猛击。"
+  },
+  "FOGMOG": {
+   "tags": [
+    "summoner",
+    "scaling"
+   ],
+   "notes": "第一幕。第 1 回合召唤利齿之眼（幻象，会无限复活，爪牙），之后 挥击 8/9 + 1 力量 → 随机（40% 再挥击一次后头槌 / 60% 直接头槌 14/16）→ 回到挥击。集火本体，雾菇死了眼睛就消失。"
+  },
+  "FOSSIL_STALKER": {
+   "tags": [
+    "scaling"
+   ],
+   "notes": "第一幕(暗港)。吮吸 3：它的每个攻击招只要打出未格挡伤害，就 +3 力量。起手扣住 12/14，之后随机（每招最多连用 2 次）：撕扯 9/11 + 1 脆弱 / 扣住 12/14 / 鞭打 3/4×2。挡住它就不会成长。"
+  },
+  "FROG_KNIGHT": {
+   "tags": [
+    "hp_threshold"
+   ],
+   "notes": "第三幕。开局覆甲 15/19。循环 舌鞭 13/14 + 2 脆弱 → 斩邪 21/23 → 为了女王 +5 力量 → …；血量首次低于 50% 后，在「为了女王」之后插入一次甲虫冲锋 35/40（只用一次）。打到半血时预留格挡。"
+  },
+  "FUZZY_WURM_CRAWLER": {
+   "tags": [
+    "scaling"
+   ],
+   "notes": "第一幕弱怪。三回合一循环：酸液 → 吸气（+7 力量）→ 酸液 → 酸液 → 吸气…，伤害 4/6 → 11/13 → 11/13 → 18/20…，速杀。"
+  },
+  "GAS_BOMB": {
+   "tags": [
+    "minion",
+    "self_destruct"
+   ],
+   "notes": "活雾召唤的气态炸弹（7/8 血，爪牙）：下一个敌方回合自爆 8/9（致命一击意图，可格挡）然后死亡。顺手能打死就别让它炸。"
+  },
+  "GLOBE_HEAD": {
+   "tags": [
+    "punishes_powers"
+   ],
+   "notes": "第三幕。流电 6/8：你每打出一张能力牌受到 6/8 伤害。循环 电击掌掴 13/14 + 2 脆弱 → 雷霆打击 6/7×3 → 电涌爆发 16/17 + 2 力量。"
+  },
+  "HAUNTED_SHIP": {
+   "tags": [
+    "adds_status"
+   ],
+   "notes": "第一幕(暗港)。开局作祟：3 虚弱 + 往弃牌堆塞 5 张晕眩；之后挥击 13/14 与践踏 4/5×3 交替。"
+  },
+  "HUNTER_KILLER": {
+   "tags": [
+    "punishes_card_count"
+   ],
+   "notes": "第二幕。第 1 回合嫩化黏液：给你柔嫩（整场有效：本回合你每打一张牌 -1 力量 -1 敏捷，回合结束全部还原）。之后随机 撕咬 17/19（不连用）/ 穿刺 7/8×3（最多连 2 次）。少打牌：每多打一张，后面的攻击和格挡都更弱（大牌先打）。"
+  },
+  "INFESTED_PRISM": {
+   "tags": [
+    "elite",
+    "punishes_skills",
+    "scaling"
+   ],
+   "notes": "第二幕精英。活力火花 2/3：你的技能牌都被污染——每打出一张，直到敌方回合结束你受到的攻击伤害 +2/3（可叠）。循环 戳刺 15/17 → 放射 11/13 + 11/13 格挡 → 旋风 5/6×3 → 脉动 8/10 + 20/22 格挡、活力火花再 +2/3。在它攻击的回合少打技能（旋风三段吃三次加成）。"
+  },
+  "INKLET": {
+   "tags": [
+    "damage_cap"
+   ],
+   "notes": "第一幕（三只一组）。滑溜 1：第一次掉血只掉 1。中间那只起手旋风 2/3×3，其余起手戳刺 3/4；之后 戳刺 → 随机（穿刺凝视 10/11 / 旋风，都不连用）→ 戳刺 → …（INIT_RAND 在源码里没被登记，不会用到）。"
+  },
+  "KIN_FOLLOWER": {
+   "tags": [
+    "minion",
+    "scaling"
+   ],
+   "notes": "第一幕 Boss 同族小队的信徒（爪牙）：神官一死它们一起消失。快斩 5 → 回旋镖 2×2 → 力量之舞 +2/3 力量，循环；1 号位那只起手就跳舞。"
+  },
+  "KIN_PRIEST": {
+   "tags": [
+    "boss",
+    "scaling"
+   ],
+   "notes": "第一幕 Boss（同族小队首领）。循环 脆弱法球 8/9 + 1 脆弱 → 虚弱法球 8/9 + 1 虚弱 → 灵魂光束 3×3 → 黑暗仪式 +2/3 力量（源码招式名叫 RITUAL，实际直接加力量）。两个信徒是爪牙：集火神官（190/199 血）即可结束战斗。"
+  },
+  "KNOWLEDGE_DEMON": {
+   "tags": [
+    "boss",
+    "permanent_player_debuff",
+    "heals",
+    "scaling"
+   ],
+   "notes": "第二幕 Boss。循环 知识诅咒 → 掌掴 17/18 → 知识压制 8/9×3 → 沉思（11/13 + 回 30 血 + 2/3 力量）→ 再诅咒。前三次知识诅咒让你二选一一个整场负面：瓦解（每回合结束受 6/7/8 伤害，可叠）或依次 心灵腐化（每回合少抽 1）/ 懒惰（每回合最多打 3 张）/ 衰朽（每回合少 1 能量）；用完三次后循环里不再诅咒（直接掌掴）。",
+   "moves": {
+    "CURSE_OF_KNOWLEDGE_MOVE": {
+     "effects": [
+      {
+       "kind": "player_choose_card",
+       "options_by_use": [
+        [
+         "Disintegration(6)",
+         "MindRot"
+        ],
+        [
+         "Disintegration(7)",
+         "Sloth"
+        ],
+        [
+         "Disintegration(8)",
+         "WasteAway"
+        ]
+       ],
+       "note": "第 n 次用这招给第 n 组二选一；选中的牌立即生效为对应能力（瓦解/心灵腐化/懒惰/衰朽）"
+      }
+     ]
+    }
+   }
+  },
+  "LAGAVULIN_MATRIARCH": {
+   "tags": [
+    "boss",
+    "sleeps",
+    "permanent_player_debuff",
+    "scaling"
+   ],
+   "notes": "第一幕(暗港) Boss。开局沉睡 3 + 覆甲 12：受到未格挡伤害就醒（覆甲移除，醒来那回合眩晕，之后斩击），睡满 3 回合也会醒（最后一回合覆甲先掉）。醒后循环 斩击 19/21 → 开膛 9/10×2 → 斩击二 12/14 + 12/14 格挡 → 灵魂虹吸（你 -2 力量 -2 敏捷，它 +2 力量）。睡觉期间可以先铺能力/攒资源，叫醒时机自己掌握。",
+   "forced_moves": [
+    {
+     "id": "STUNNED",
+     "intents": [
+      {
+       "type": "stun",
+       "cli_type": "Stun"
+      }
+     ],
+     "trigger": "沉睡中受到未格挡伤害（被吵醒，覆甲移除）",
+     "then": "SLASH_MOVE"
+    },
+    {
+     "id": "(无眩晕)",
+     "trigger": "睡满 3 回合自然醒",
+     "then": "SLASH_MOVE"
+    }
+   ]
+  },
+  "LEAF_SLIME_M": {
+   "tags": [
+    "adds_status"
+   ],
+   "notes": "黏液射击（往弃牌堆塞 2 张黏液）与团块 8/9 交替，先射。黏液：1 费、抽 1 张、消耗。"
+  },
+  "LEAF_SLIME_S": {
+   "tags": [
+    "adds_status"
+   ],
+   "notes": "随机不重复：撞击 3/4 / 黏液（1 张黏液进弃牌堆）。"
+  },
+  "TWIG_SLIME_M": {
+   "tags": [
+    "adds_status"
+   ],
+   "notes": "起手黏液射击（1 张黏液进弃牌堆），之后随机：戳扑 11/12（最多连 2 次）/ 黏液射击（不连用）。"
+  },
+  "TWIG_SLIME_S": {
+   "notes": "每回合撞击 4/5。"
+  },
+  "LIVING_FOG": {
+   "tags": [
+    "summoner",
+    "card_restriction"
+   ],
+   "notes": "第一幕(暗港)。高级毒气 8/9 + 烟雾弥漫（整场：每回合只能打 1 张技能）→ 膨胀（召唤 1 个气态炸弹，再打 5/6）→ 超级毒气 8/9 → 膨胀 → …。炸弹 7/8 血、下个敌方回合自爆 8/9；活雾一死炸弹全部消失。",
+   "moves": {
+    "BLOAT_MOVE": {
+     "effects": [
+      {
+       "kind": "summon",
+       "monster": "GAS_BOMB",
+       "count": 1,
+       "when": [
+        "有空位"
+       ]
+      },
+      {
+       "kind": "attack",
+       "damage": {
+        "a0": 5,
+        "a10": 6
+       },
+       "hits": 1,
+       "target": "player"
+      }
+     ]
+    }
+   }
+  },
+  "LIVING_SHIELD": {
+   "tags": [
+    "protector"
+   ],
+   "notes": "第三幕（与高塔炮手同组）。盾墙 25：每个玩家回合开始给高塔炮手 25 格挡。炮手活着时它每回合盾击 6；身边没有活着的同伴后改为每回合猛击 16/18 + 3 力量。通常先杀它（55/65 血），炮手就没有格挡了。"
+  },
+  "TURRET_OPERATOR": {
+   "tags": [
+    "multi_hit",
+    "scaling"
+   ],
+   "notes": "第三幕弱遭遇（与活体盾同组）。卸载 3/4×5 连续两次 → 装填 +1 力量，循环（五段攻击，力量按段加成）。活体盾活着时它每个玩家回合开始有 25 格挡。"
+  },
+  "LOUSE_PROGENITOR": {
+   "tags": [
+    "scaling"
+   ],
+   "notes": "第二幕。蜷身 14/18：第一次被打后（那张牌结算完）获得 14/18 格挡，只触发一次。循环 蛛网炮 9/10 + 2 脆弱 → 蜷缩成长（14/18 格挡 +5/7 力量）→ 猛扑 14/16。每 3 回合力量 +5/7。"
+  },
+  "MAWLER": {
+   "notes": "第一幕。起手爪击 4/5×2，之后随机：撕裂 14/16 / 咆哮（3 易伤，整场只用一次）/ 爪击，撕裂和爪击不会连用。"
+  },
+  "MECHA_KNIGHT": {
+   "tags": [
+    "elite",
+    "adds_status",
+    "scaling",
+    "artifact"
+   ],
+   "notes": "第三幕精英。人工制品 3。冲锋 25/30 → 火焰喷射（8/12 + 往你手里塞 4 张灼伤：回合结束在手里受 2 伤）→ 蓄力（15 格挡 +5 力量）→ 重劈 35/40 + 力量 → 火焰喷射 → …。重劈回合要大格挡。"
+  },
+  "MYTE": {
+   "tags": [
+    "adds_status",
+    "scaling"
+   ],
+   "notes": "第二幕（两只一组）。1 号位起手毒素（往你手里塞 2 张毒素：回合结束在手里受 5 伤，可花 1 费打掉并消耗），2 号位起手吸吮（4/6 + 2/3 力量）。循环 毒素 → 撕咬 13/15 → 吸吮。"
+  },
+  "NIBBIT": {
+   "notes": "第一幕。单只出现时起手顶撞 12/13；两只时前排起手切割（6/7 + 5/6 格挡）、后排起手嘶嘶（+2/3 力量）。循环 顶撞 → 切割 → 嘶嘶。"
+  },
+  "OVICOPTER": {
+   "tags": [
+    "summoner",
+    "scaling"
+   ],
+   "notes": "第二幕。产卵（在空位放 3 个结实的卵，都是爪牙）→ 猛击 16/17 → 嫩化 7/8 + 2 易伤 → 场上存活 ≤3 个（含自己）就再产卵，否则营养糊 +3/4 力量 → 猛击 → …。卵第一次行动时孵化成幼虫（血量重置为 19-22 / 20-23，每回合啃 4/5）。集火本体，卵和幼虫随本体一起消失。"
+  },
+  "TOUGH_EGG": {
+   "tags": [
+    "minion",
+    "transforms"
+   ],
+   "notes": "直飞产卵虫下的卵（爪牙）。第一次行动时孵化：移除自己除爪牙外的所有能力，最大/当前生命重置为 19-22（A10 20-23），名字变成「幼虫」，之后每回合啃咬 4/5。孵化前打的伤害如果没把它打死就白费了。",
+   "start_powers": [
+    {
+     "power": "HatchPower",
+     "amount": "敌方回合内被产下=2，否则=1（只是孵化倒计时显示）",
+     "when": [
+      "!IsHatched"
+     ]
+    },
+    {
+     "power": "MinionPower",
+     "amount": {
+      "a0": 1,
+      "a10": 1
+     },
+     "note": "由直飞产卵虫施加"
+    }
+   ],
+   "start_effects": [],
+   "moves": {
+    "HATCH_MOVE": {
+     "effects": [
+      {
+       "kind": "remove_power",
+       "power": "HatchPower",
+       "target": "self"
+      },
+      {
+       "kind": "remove_power",
+       "power": "ALL_EXCEPT_MinionPower",
+       "target": "self"
+      },
+      {
+       "kind": "set_hp",
+       "target": "self",
+       "amount": {
+        "a0": [
+         19,
+         22
+        ],
+        "a10": [
+         20,
+         23
+        ],
+        "random_range": true
+       }
+      }
+     ]
+    }
+   }
+  },
+  "OWL_MAGISTRATE": {
+   "tags": [
+    "damage_reduction"
+   ],
+   "notes": "第三幕。循环 审查 16/17 → 啄击 4×6 → 司法飞行（翱翔：受到的攻击伤害 -50%，直到落地）→ 判决 33/36 + 4 易伤（落地并移除翱翔）。飞行那回合别浪费大攻击；判决回合大格挡。"
+  },
+  "PARAFRIGHT": {
+   "tags": [
+    "minion",
+    "illusion"
+   ],
+   "notes": "胧光怪召唤的幻象（21 血，爪牙）：死后下回合满血复活（复活中不能被选中）；每回合猛击 16/17。打死胧光怪它就消失。",
+   "forced_moves": [
+    {
+     "id": "REVIVE_MOVE",
+     "intents": [
+      {
+       "type": "heal",
+       "cli_type": "Heal"
+      }
+     ],
+     "trigger": "被打死（幻象）",
+     "then": "死前最后执行的那一招",
+     "note": "复活中不能被选中；执行时回满血"
+    }
+   ]
+  },
+  "PHANTASMAL_GARDENER": {
+   "tags": [
+    "elite",
+    "multi_body"
+   ],
+   "notes": "第一幕(暗港)精英，四只一组（每只 26-31 / 27-32 血）。胆小 6/7：每回合第一次被攻击后获得 6/7 格挡。按站位起手（1 号连打 1×3、2 号啃 5、3 号鞭 7、4 号变大 +2/3 力量），循环 啃 5 → 鞭 7 → 连打 1×3 → 变大 +2/3 力量。AOE 很好用；对单体先用小攻击触发胆小再上大伤害。"
+  },
+  "PHROG_PARASITE": {
+   "tags": [
+    "elite",
+    "death_trigger",
+    "summoner",
+    "adds_status"
+   ],
+   "notes": "第一幕精英。寄生物：死后召唤 4 只扭动虫（出场先眩晕一回合）——它死了战斗不会结束。循环 感染（往弃牌堆塞 3 张感染：回合结束在手里受 3 伤）→ 鞭打 4/5×4。源码里有个 RAND 分支没被用到。"
+  },
+  "WRIGGLER": {
+   "tags": [
+    "adds_status",
+    "scaling"
+   ],
+   "notes": "异蛙寄生虫死后出现的扭动虫（出场先眩晕一回合），或密林事件里的 4 只。按站位：1/3 号起手撕咬 6/7，2/4 号起手扭动（往弃牌堆塞 1 张感染 + 2 力量），两招交替。"
+  },
+  "PUNCH_CONSTRUCT": {
+   "tags": [
+    "artifact"
+   ],
+   "notes": "人工制品 1。循环 预备（10 格挡）→ 快拳 5/6×2 + 1 脆弱 → 重拳 14/16。"
+  },
+  "QUEEN": {
+   "tags": [
+    "boss",
+    "permanent_player_debuff",
+    "card_restriction"
+   ],
+   "notes": "第三幕 Boss（和火炬头聚合体一起；聚合体是爪牙，女王一死它也死）。第 1 回合傀儡丝线（魂缚锁链 3：每回合前 3 张抽到的牌被魂缚，魂缚牌每回合只能打 1 张），第 2 回合你是我的：你 99 层脆弱 + 虚弱 + 易伤。聚合体活着时女王每回合燃烧吧（聚合体 +1 力量、女王 20 格挡）；聚合体死后进入 斩首 3/4×5 → 处决 15/18 → 激怒 +2 力量 的循环（如果当时女王的下一招正是燃烧吧，会立刻改成激怒）。杀女王（400/419 血）即可结束战斗。",
+   "forced_moves": [
+    {
+     "id": "ENRAGE_MOVE",
+     "intents": [
+      {
+       "type": "buff",
+       "cli_type": "Buff"
+      }
+     ],
+     "trigger": "火炬头聚合体死亡时女王的下一招正好是燃烧吧",
+     "then": "OFF_WITH_YOUR_HEAD_MOVE"
+    }
+   ]
+  },
+  "TORCH_HEAD_AMALGAM": {
+   "tags": [
+    "minion"
+   ],
+   "notes": "女王 Boss 里的火炬头聚合体（爪牙，女王死它就死）。强力冲撞 26/32 → 冲撞 18/22 → 灵魂光束 8×3 → 冲撞 14/16 ×2 → 光束 → …；女王的燃烧吧每次给它 +1 力量。"
+  },
+  "SCROLL_OF_BITING": {
+   "tags": [
+    "max_hp_loss",
+    "scaling"
+   ],
+   "notes": "第三幕（3-4 只一组）。纸伤难愈 2：它的攻击每造成一次未格挡伤害，你失去 2 点最大生命（永久）。同组起手招各不相同；循环 咬 14/16 → 长牙 +2 力量 → 咀嚼 5/6×2 → 随机（咬 / 咀嚼，咀嚼最多连 2 次）。务必挡住。"
+  },
+  "SEAPUNK": {
+   "tags": [
+    "scaling"
+   ],
+   "notes": "第一幕(暗港)。海踢 11/13 → 旋踢 2×4 → 泡泡嗝（7/8 格挡 +1/2 力量），循环。"
+  },
+  "SEWER_CLAM": {
+   "tags": [
+    "scaling"
+   ],
+   "notes": "第一幕(暗港)。开局覆甲 8/9。起手喷射 10/11，与加压 +4 力量交替。"
+  },
+  "SHRINKER_BEETLE": {
+   "tags": [
+    "permanent_player_debuff"
+   ],
+   "notes": "第一幕。第 1 回合缩小：只要它活着，你的攻击伤害 -30%（不会自然消失）。之后咬 7/8 与践踏 13/14 交替。优先击杀解除缩小。"
+  },
+  "SKULKING_COLONY": {
+   "tags": [
+    "elite",
+    "damage_cap",
+    "scaling"
+   ],
+   "notes": "第一幕(暗港)精英。硬化外壳 20：每回合最多失去 20 生命（75/80 血至少要 4 回合）。循环 冲刺 14/16 ×2 → 惯性 9/11 + 2/4 力量 → 穿刺 7/8×2。每回合打够 20 即可，多余的伤害浪费，剩余资源用来格挡。"
+  },
+  "SLIMED_BERSERKER": {
+   "tags": [
+    "adds_status",
+    "scaling"
+   ],
+   "notes": "第三幕。循环 呕吐（往弃牌堆塞 10 张黏液）→ 狂怒连打 4/5×4 → 吸血拥抱（3 虚弱 +3 力量）→ 窒息 30/33。黏液可以花 1 费打掉（抽 1、消耗）。"
+  },
+  "SLITHERING_STRANGLER": {
+   "tags": [
+    "scaling_dot"
+   ],
+   "notes": "第一幕（与果子/史莱姆同组）。紧缠：它活着时你每回合结束受到紧缠层数的伤害；第 1 回合紧缠 3，之后每隔一回合再 +3（3、6、9…）。中间那回合随机 重击 7/8 + 5 格挡 / 鞭打 12/13。优先击杀，死了紧缠就消失。"
+  },
+  "SLUDGE_SPINNER": {
+   "notes": "第一幕(暗港)弱怪。起手油喷 8/9 + 1 虚弱，之后随机不重复：油喷 / 猛击 11/12 / 狂暴 6/7 + 3 力量。"
+  },
+  "SLUMBERING_BEETLE": {
+   "tags": [
+    "sleeps",
+    "scaling"
+   ],
+   "notes": "第二幕。开局覆甲 15/18 + 熟睡 3：受到 3 次未格挡伤害（醒来那回合眩晕）或过 3 回合后醒来，醒来时覆甲移除；之后每回合滚动 16/18 并 +2 力量，越拖越痛。睡着时它不行动，可以先处理同组的盛碗虫，但别拖太久。",
+   "forced_moves": [
+    {
+     "id": "STUNNED",
+     "intents": [
+      {
+       "type": "stun",
+       "cli_type": "Stun"
+      }
+     ],
+     "trigger": "熟睡层数被未格挡伤害打到 0（被吵醒，覆甲移除）",
+     "then": "ROLL_OUT_MOVE"
+    },
+    {
+     "id": "(无眩晕)",
+     "trigger": "过 3 回合自然醒（覆甲移除）",
+     "then": "ROLL_OUT_MOVE"
+    }
+   ]
+  },
+  "SNAPPING_JAXFRUIT": {
+   "tags": [
+    "scaling"
+   ],
+   "notes": "每回合能量球 3/4 并 +2 力量，越拖越痛；血少（31-33 / 34-36），优先击杀。"
+  },
+  "SOUL_FYSH": {
+   "tags": [
+    "boss",
+    "adds_status",
+    "damage_cap"
+   ],
+   "notes": "第一幕(暗港) Boss。循环 呼唤（往抽牌堆随机位置和弃牌堆各塞 1 张呼唤：回合结束在手里失去 6 生命，可花 1 费打出送走）→ 排气 16/18 → 凝视 7/8 + 1 张呼唤 → 隐没（2 层无实体：接下来那个玩家回合所有伤害降为 1）→ 尖啸 13/15 + 3 易伤。隐没后那回合别浪费输出，改做格挡/铺垫。"
+  },
+  "SOUL_NEXUS": {
+   "tags": [
+    "elite"
+   ],
+   "notes": "第三幕精英。234/254 血，随机不重复：灵魂灼烧 29/31 / 漩涡 6/7×4 / 汲取生命 18/19 + 2 易伤 2 虚弱。"
+  },
+  "SPINY_TOAD": {
+   "tags": [
+    "thorns"
+   ],
+   "notes": "第二幕。循环 突刺（荆棘 +5）→ 尖刺爆发 23/25（荆棘 -5）→ 舌鞭 17/19。有荆棘的那个玩家回合别用多段攻击打它（每段被反 5）。"
+  },
+  "TERROR_EEL": {
+   "tags": [
+    "elite",
+    "hp_threshold",
+    "permanent_player_debuff"
+   ],
+   "notes": "第一幕(暗港)精英。尖叫 70/75：血量第一次掉到 70/75 及以下时眩晕一回合，然后恐吓（你 99 层易伤）。平时撞击 16/18 与狂甩 3/4×3 + 6 活力（下一次攻击 +6）交替。触发血线后它每一击都 ×1.5，最好一口气从 70/75 以上直接打到很低甚至打死。",
+   "forced_moves": [
+    {
+     "id": "STUNNED",
+     "intents": [
+      {
+       "type": "stun",
+       "cli_type": "Stun"
+      }
+     ],
+     "trigger": "受到未格挡伤害后 HP ≤ 尖叫层数（70/75），只触发一次",
+     "then": "TERROR_MOVE",
+     "note": "状态机里的 STUN_MOVE 实际不会用到"
+    }
+   ]
+  },
+  "TEST_SUBJECT": {
+   "tags": [
+    "boss",
+    "revives",
+    "punishes_skills",
+    "scaling",
+    "adds_status"
+   ],
+   "notes": "第三幕 Boss，三条命：100/111 → 200/212 → 300/313。激怒 2/3：你每打一张技能牌它 +2/3 力量（整场）。一阶段 撕咬 20/22 与颅击 14/16 + 1 易伤交替；被打死后下个敌方回合复活（复活期间不能被选中），复活回合不攻击。二阶段 疼痛戳刺（你每次受到未格挡攻击伤害，往弃牌堆塞 1 张伤口）+ 每回合多重爪击 10/11×(3 + 已用次数)；三阶段 天罚（每隔一回合获得 1 层无实体）+ 撕裂 10/11×3 → 猛扑 45 → 灼烧咆哮（3/5 张灼伤 + 2/3 力量）循环。",
+   "hp_phases": {
+    "a0": [
+     100,
+     200,
+     300
+    ],
+    "a10": [
+     111,
+     212,
+     313
+    ]
+   },
+   "moves": {
+    "RESPAWN_MOVE": {
+     "effects": [
+      {
+       "kind": "set_max_hp",
+       "target": "self",
+       "amount": {
+        "a0": 200,
+        "a10": 212
+       },
+       "when": [
+        "第 1 次复活"
+       ]
+      },
+      {
+       "kind": "heal",
+       "target": "self",
+       "amount": "回满",
+       "when": [
+        "第 1 次复活"
+       ]
+      },
+      {
+       "kind": "apply_power",
+       "power": "PainfulStabsPower",
+       "target": "self",
+       "amount": {
+        "a0": 1,
+        "a10": 1
+       },
+       "when": [
+        "第 1 次复活"
+       ]
+      },
+      {
+       "kind": "set_max_hp",
+       "target": "self",
+       "amount": {
+        "a0": 300,
+        "a10": 313
+       },
+       "when": [
+        "第 2 次复活"
+       ]
+      },
+      {
+       "kind": "heal",
+       "target": "self",
+       "amount": "回满",
+       "when": [
+        "第 2 次复活"
+       ]
+      },
+      {
+       "kind": "apply_power",
+       "power": "NemesisPower",
+       "target": "self",
+       "amount": {
+        "a0": 1,
+        "a10": 1
+       },
+       "when": [
+        "第 2 次复活"
+       ]
+      },
+      {
+       "kind": "remove_power",
+       "power": "AdaptablePower",
+       "target": "self",
+       "when": [
+        "第 2 次复活（之后再死就是真死）"
+       ]
+      },
+      {
+       "kind": "remove_power",
+       "power": "PainfulStabsPower",
+       "target": "self",
+       "when": [
+        "第 2 次复活"
+       ]
+      }
+     ]
+    },
+    "MULTI_CLAW_MOVE": {
+     "intents": [
+      {
+       "type": "attack",
+       "cli_type": "Attack",
+       "damage": {
+        "a0": 10,
+        "a10": 11
+       },
+       "hits": {
+        "a0": 3,
+        "a10": 3,
+        "dynamic": true,
+        "formula": "3 + 本招已用次数"
+       }
+      }
+     ]
+    }
+   },
+   "forced_moves": [
+    {
+     "id": "RESPAWN_MOVE",
+     "intents": [
+      {
+       "type": "heal",
+       "cli_type": "Heal"
+      },
+      {
+       "type": "buff",
+       "cli_type": "Buff"
+      }
+     ],
+     "trigger": "被打死且还有适者生存（前两条命）",
+     "then": "REVIVE_BRANCH"
+    }
+   ]
+  },
+  "THE_ADVERSARY_MK_ONE": {
+   "tags": [
+    "unused"
+   ],
+   "notes": "当前版本没有任何遭遇使用（旧版/预留怪物），不会遇到。"
+  },
+  "THE_ADVERSARY_MK_TWO": {
+   "tags": [
+    "unused"
+   ],
+   "notes": "当前版本没有任何遭遇使用（旧版/预留怪物），不会遇到。"
+  },
+  "THE_ADVERSARY_MK_THREE": {
+   "tags": [
+    "unused"
+   ],
+   "notes": "当前版本没有任何遭遇使用（旧版/预留怪物），不会遇到。"
+  },
+  "THE_FORGOTTEN": {
+   "tags": [
+    "steals_stats",
+    "scaling"
+   ],
+   "notes": "第三幕（与失落之物同组）。抢夺速度：瘴气每次偷你 2 敏捷（它 +2 敏捷并获得 8 格挡），它死后归还。恐惧伤害 = 13/15 + 它当前的敏捷。瘴气与恐惧交替（先瘴气）。",
+   "moves": {
+    "DREAD": {
+     "intents": [
+      {
+       "type": "attack",
+       "cli_type": "Attack",
+       "damage": {
+        "a0": 13,
+        "a10": 15,
+        "dynamic": true,
+        "formula": "13/15 + 自身当前敏捷（每次瘴气 +2）"
+       },
+       "hits": 1
+      }
+     ],
+     "effects": [
+      {
+       "kind": "attack",
+       "damage": {
+        "a0": 13,
+        "a10": 15,
+        "dynamic": true,
+        "formula": "13/15 + 自身当前敏捷（每次瘴气 +2）"
+       },
+       "hits": 1,
+       "target": "player"
+      }
+     ]
+    }
+   }
+  },
+  "THE_LOST": {
+   "tags": [
+    "steals_stats",
+    "scaling"
+   ],
+   "notes": "第三幕（与遗忘之物同组）。抢夺力量：衰弱烟雾每次偷你 2 力量（它 +2），它死后归还。烟雾与眼部激光 4/5×2 交替（先烟雾）。"
+  },
+  "THE_INSATIABLE": {
+   "tags": [
+    "boss",
+    "doom_timer",
+    "adds_status",
+    "scaling"
+   ],
+   "notes": "第二幕 Boss。第 1 回合液化地面：给你挂沙坑 4——每个敌方回合开始 -1，归零时你被吃掉直接死亡；同时往你的抽牌堆随机塞 3 张、弃牌堆塞 3 张狂乱逃离（1 费：沙坑 +1，每打一次这张牌费用 +1）。之后 狂甩 8/9×2 → 猛咬 28/31 → 流涎 +2/3 力量 → 狂甩 → 猛咬 → …。必须打狂乱逃离续命，或在倒计时内打死（321/341 血）。",
+   "moves": {
+    "LIQUIFY_GROUND_MOVE": {
+     "effects": [
+      {
+       "kind": "apply_power",
+       "power": "SandpitPower",
+       "target": "self",
+       "power_target": "player",
+       "amount": {
+        "a0": 4,
+        "a10": 4
+       }
+      },
+      {
+       "kind": "add_card",
+       "card": "FranticEscape",
+       "pile": "draw",
+       "position": "random",
+       "count": 3,
+       "to": "player"
+      },
+      {
+       "kind": "add_card",
+       "card": "FranticEscape",
+       "pile": "discard",
+       "count": 3,
+       "to": "player"
+      }
+     ]
+    }
+   }
+  },
+  "THE_OBSCURA": {
+   "tags": [
+    "summoner"
+   ],
+   "notes": "第二幕。第 1 回合召唤寄生惧魔（幻象，21 血，死后下回合满血复活，爪牙）。之后随机不重复：穿刺凝视 10/11 / 哀嚎（所有敌人 +3 力量）/ 硬化打击 6/7 + 6/7 格挡。集火本体。"
+  },
+  "THIEVING_HOPPER": {
+   "tags": [
+    "escapes",
+    "steals_card",
+    "damage_reduction"
+   ],
+   "notes": "第二幕弱怪但要小心：第 5 次行动时逃跑（逃脱大师 5）。第 1 回合偷窃 17/19，同时从你的抽牌堆/弃牌堆偷 1 张牌（优先非附魔的罕见牌，其次普通/稀有/事件牌，再次基础牌）——这张牌从牌组永久移除，只有在它逃跑前杀死才能拿回。之后 振翅（受到攻击伤害 -50%；被未格挡攻击命中 5 次就眩晕）→ 帽子戏法 21/23 → 抢夺 14/16 → 逃跑。79/84 血：它第 5 次行动就跑，你一共只有 5 个回合（第 5 回合结束前）把它打死。",
+   "forced_moves": [
+    {
+     "id": "STUNNED",
+     "intents": [
+      {
+       "type": "stun",
+       "cli_type": "Stun"
+      }
+     ],
+     "trigger": "振翅期间被未格挡攻击命中 5 次",
+     "then": "眩晕前原定的下一招"
+    }
+   ]
+  },
+  "TOADPOLE": {
+   "tags": [
+    "thorns"
+   ],
+   "notes": "第一幕(暗港)弱怪（两只）。前排起手长刺（荆棘 +2），后排起手旋转 7/8；循环 旋转 → 长刺（荆棘 +2）→ 吐刺 3/4×3（先失去 2 荆棘）。"
+  },
+  "TUNNELER": {
+   "tags": [
+    "block_break_stun"
+   ],
+   "notes": "第二幕。撕咬 13/15 → 钻地（埋地：格挡不会在回合开始消失，并获得 32/37 格挡）→ 之后每回合地下突袭 23/26。把它的格挡全部打掉会让它眩晕一回合、解除埋地，然后回到撕咬。",
+   "forced_moves": [
+    {
+     "id": "STUNNED",
+     "intents": [
+      {
+       "type": "stun",
+       "cli_type": "Stun"
+      }
+     ],
+     "trigger": "埋地状态下格挡被全部打掉（同时移除埋地）",
+     "then": "BITE_MOVE",
+     "note": "状态机里的 DIZZY_MOVE 实际不会用到"
+    }
+   ]
+  },
+  "TWO_TAILED_RAT": {
+   "tags": [
+    "summoner"
+   ],
+   "notes": "第一幕(暗港)，三只起手招各不相同。随机不重复：抓挠 8/9 / 病咬 6/7 / 尖叫（1 脆弱，3 回合冷却）/ 呼叫支援（召唤一只新双尾鼠：每只只用一次、全组最多 3 次、需要空位、自己行动 2 回合后才可能叫；能叫的时候约 75% 概率叫）。尽快减员。"
+  },
+  "VANTOM": {
+   "tags": [
+    "boss",
+    "damage_cap",
+    "adds_status",
+    "scaling"
+   ],
+   "notes": "第一幕 Boss。滑溜 8/9：接下来 8/9 次掉血每次只掉 1——先用多段小伤害把层数磨掉再上大伤害。循环 墨渍 7/8 → 墨枪 6/7×2 → 肢解 26/30 + 3 张伤口进弃牌堆 → 准备 +2 力量。肢解回合要大格挡。"
+  },
+  "VINE_SHAMBLER": {
+   "tags": [
+    "card_restriction"
+   ],
+   "notes": "第一幕。起手挥击 6/7×2 → 缠绕藤蔓 8/9（缠结：你下个回合攻击牌费用 +1）→ 啃咬 16/18 → 挥击 → …。"
+  },
+  "WATERFALL_GIANT": {
+   "tags": [
+    "boss",
+    "death_trigger",
+    "self_destruct",
+    "heals"
+   ],
+   "notes": "第一幕(暗港) Boss。加压获得蒸汽喷发 15/20，之后每个招式再 +3。循环 践踏 15/16 + 1 虚弱 → 冲撞 10/11 → 虹吸（回 10/15 血）→ 压力枪 20/23（每用一次 +5）→ 增压 13/14 → 践踏 → …。被打死时不会立刻死：变成无限血、下个敌方回合眩晕（不能被打死），再下一个敌方回合以喷发层数发动致命一击然后自毁——击杀后的下一个玩家回合要准备 ≥ 喷发层数的格挡。",
+   "moves": {
+    "PRESSURE_GUN_MOVE": {
+     "intents": [
+      {
+       "type": "attack",
+       "cli_type": "Attack",
+       "damage": {
+        "a0": 20,
+        "a10": 23,
+        "dynamic": true,
+        "formula": "首次 20/23，之后每用一次 +5"
+       },
+       "hits": 1
+      },
+      {
+       "type": "buff",
+       "cli_type": "Buff"
+      }
+     ],
+     "effects": [
+      {
+       "kind": "attack",
+       "damage": {
+        "a0": 20,
+        "a10": 23,
+        "dynamic": true,
+        "formula": "首次 20/23，之后每用一次 +5"
+       },
+       "hits": 1,
+       "target": "player"
+      },
+      {
+       "kind": "apply_power",
+       "power": "SteamEruptionPower",
+       "target": "self",
+       "amount": {
+        "a0": 3,
+        "a10": 3
+       }
+      }
+     ]
+    },
+    "EXPLODE_MOVE": {
+     "intents": [
+      {
+       "type": "death_blow",
+       "cli_type": "DeathBlow",
+       "damage": "= 被打死那一刻身上的蒸汽喷发层数（15/20 起，每个招式 +3）",
+       "hits": 1
+      }
+     ],
+     "effects": [
+      {
+       "kind": "attack",
+       "damage": "= 被打死那一刻身上的蒸汽喷发层数（15/20 起，每个招式 +3）",
+       "hits": 1,
+       "target": "player"
+      },
+      {
+       "kind": "suicide",
+       "target": "self"
+      }
+     ]
+    }
+   },
+   "forced_moves": [
+    {
+     "id": "ABOUT_TO_BLOW_MOVE",
+     "intents": [
+      {
+       "type": "stun",
+       "cli_type": "Stun"
+      }
+     ],
+     "trigger": "被打死（身上有蒸汽喷发）：变成无限血",
+     "then": "EXPLODE_MOVE"
+    }
+   ]
+  }
+ },
+ "encounters": {
+  "BOWLBUGS_NORMAL": {
+   "monsters": [
+    {
+     "monster": "BOWLBUG_ROCK",
+     "slot": "first"
+    },
+    {
+     "monster": null,
+     "one_of": [
+      "BOWLBUG_EGG",
+      "BOWLBUG_SILK",
+      "BOWLBUG_NECTAR"
+     ],
+     "slot": "middle"
+    },
+    {
+     "monster": null,
+     "one_of": [
+      "BOWLBUG_EGG",
+      "BOWLBUG_SILK",
+      "BOWLBUG_NECTAR"
+     ],
+     "slot": "last",
+     "note": "与 middle 不重复"
+    }
+   ],
+   "notes": "石头盛碗虫固定在第一位，另外两只从 卵/丝/蜜 里随机挑两种不同的。"
+  },
+  "BOWLBUGS_WEAK": {
+   "monsters": [
+    {
+     "monster": "BOWLBUG_ROCK",
+     "slot": "odd"
+    },
+    {
+     "monster": null,
+     "one_of": [
+      "BOWLBUG_EGG",
+      "BOWLBUG_NECTAR"
+     ],
+     "slot": "even"
+    }
+   ],
+   "notes": "石头盛碗虫 + 卵/蜜 随机一只。"
+  },
+  "CORPSE_SLUGS_NORMAL": {
+   "notes": "三只噬尸蛞蝓，起手招随机轮换且互不相同（鞭打/吞咽/黏液各一）。饥饿：死一只其余的眩晕一回合但 +4/5 力量。"
+  },
+  "CORPSE_SLUGS_WEAK": {
+   "notes": "两只噬尸蛞蝓，起手招随机且互不相同。"
+  },
+  "DECIMILLIPEDE_ELITE": {
+   "notes": "千足虫三节（前/中/后），起手招随机轮换且互不相同；一节死后两个敌方回合复活 25 血，三节都死才结束。"
+  },
+  "DENSE_VEGETATION_EVENT_ENCOUNTER": {
+   "monsters": [
+    {
+     "monster": "WRIGGLER",
+     "slot": "wriggler1",
+     "config": {
+      "StartStunned": false
+     },
+     "initial_move": "NASTY_BITE_MOVE"
+    },
+    {
+     "monster": "WRIGGLER",
+     "slot": "wriggler2",
+     "config": {
+      "StartStunned": false
+     },
+     "initial_move": "WRIGGLE_MOVE"
+    },
+    {
+     "monster": "WRIGGLER",
+     "slot": "wriggler3",
+     "config": {
+      "StartStunned": false
+     },
+     "initial_move": "NASTY_BITE_MOVE"
+    },
+    {
+     "monster": "WRIGGLER",
+     "slot": "wriggler4",
+     "config": {
+      "StartStunned": false
+     },
+     "initial_move": "WRIGGLE_MOVE"
+    }
+   ],
+   "notes": "第一幕(密林)事件「茂密植被」里的战斗：4 只扭动虫（不先眩晕），1/3 号起手撕咬、2/4 号起手扭动。"
+  },
+  "FABRICATOR_NORMAL": {
+   "notes": "开局只有组装师一个，机器人在战斗中召唤（最多凑满 4 个敌人）。机器人都是爪牙。"
+  },
+  "FAKE_MERCHANT_EVENT_ENCOUNTER": {
+   "notes": "共享事件「假商人」触发的战斗，任意幕都可能出现；奖励固定 300 金币。"
+  },
+  "FLYCONID_NORMAL": {
+   "monsters": [
+    {
+     "monster": null,
+     "one_of": [
+      "LEAF_SLIME_M",
+      "TWIG_SLIME_M"
+     ],
+     "slot": null
+    },
+    {
+     "monster": "FLYCONID",
+     "slot": null,
+     "initial_move": "INITIAL"
+    }
+   ],
+   "notes": "一只中型史莱姆（树叶/树枝随机）+ 飞蝇菌子。"
+  },
+  "FOGMOG_NORMAL": {
+   "notes": "开局只有雾菇，第 1 回合召唤利齿之眼（幻象，爪牙）。"
+  },
+  "GREMLIN_MERC_NORMAL": {
+   "notes": "开局只有地精佣兵；它死后出现卑鄙地精 + 胖地精（拿着偷走的金币，下回合逃跑）。胖地精逃跑会让金币奖励减半（如果它偷过钱则奖励为 0）。"
+  },
+  "LIVING_FOG_NORMAL": {
+   "notes": "开局只有活雾，膨胀时召唤气态炸弹（爪牙，最多 5 个空位）。"
+  },
+  "OVICOPTER_NORMAL": {
+   "notes": "开局只有直飞产卵虫，第 1 回合产 3 个卵（爪牙）。"
+  },
+  "PHROG_PARASITE_ELITE": {
+   "notes": "开局只有异蛙寄生虫；它死后召唤 4 只扭动虫（先眩晕一回合）。"
+  },
+  "PUNCH_OFF_EVENT_ENCOUNTER": {
+   "notes": "第一幕(暗港)事件「拳击比赛」：两台拳击构装体，开局各随机少 2-9 血，其中一台起手快拳。"
+  },
+  "QUEEN_BOSS": {
+   "notes": "女王 + 火炬头聚合体（爪牙）。杀女王即胜。"
+  },
+  "RUBY_RAIDERS_NORMAL": {
+   "monsters": [
+    {
+     "monster": null,
+     "one_of": [
+      "AXE_RUBY_RAIDER",
+      "ASSASSIN_RUBY_RAIDER",
+      "BRUTE_RUBY_RAIDER",
+      "CROSSBOW_RUBY_RAIDER",
+      "TRACKER_RUBY_RAIDER"
+     ],
+     "slot": null
+    },
+    {
+     "monster": null,
+     "one_of": [
+      "AXE_RUBY_RAIDER",
+      "ASSASSIN_RUBY_RAIDER",
+      "BRUTE_RUBY_RAIDER",
+      "CROSSBOW_RUBY_RAIDER",
+      "TRACKER_RUBY_RAIDER"
+     ],
+     "slot": null
+    },
+    {
+     "monster": null,
+     "one_of": [
+      "AXE_RUBY_RAIDER",
+      "ASSASSIN_RUBY_RAIDER",
+      "BRUTE_RUBY_RAIDER",
+      "CROSSBOW_RUBY_RAIDER",
+      "TRACKER_RUBY_RAIDER"
+     ],
+     "slot": null
+    }
+   ],
+   "notes": "从 5 种劫掠者里随机挑 3 种（不重复）。"
+  },
+  "SCROLLS_OF_BITING_NORMAL": {
+   "notes": "4 只咬人卷轴：前三只起手招随机轮换且互不相同，第四只固定起手长牙（+2 力量）。"
+  },
+  "SCROLLS_OF_BITING_WEAK": {
+   "notes": "3 只咬人卷轴，起手招随机轮换且互不相同。"
+  },
+  "SLIMES_NORMAL": {
+   "monsters": [
+    {
+     "monster": "TWIG_SLIME_M",
+     "slot": null,
+     "initial_move": "STICKY_SHOT_MOVE"
+    },
+    {
+     "monster": "LEAF_SLIME_M",
+     "slot": null,
+     "initial_move": "STICKY_SHOT"
+    },
+    {
+     "monster": null,
+     "one_of": [
+      "LEAF_SLIME_S",
+      "TWIG_SLIME_S"
+     ],
+     "slot": null
+    },
+    {
+     "monster": null,
+     "one_of": [
+      "LEAF_SLIME_S",
+      "TWIG_SLIME_S"
+     ],
+     "slot": null,
+     "note": "与上一只不同"
+    }
+   ],
+   "notes": "树枝中、树叶中各一只 + 树叶小、树枝小各一只（两只小的顺序随机）。"
+  },
+  "SLIMES_WEAK": {
+   "monsters": [
+    {
+     "monster": null,
+     "one_of": [
+      "LEAF_SLIME_S",
+      "TWIG_SLIME_S"
+     ],
+     "slot": null
+    },
+    {
+     "monster": null,
+     "one_of": [
+      "LEAF_SLIME_M",
+      "TWIG_SLIME_M"
+     ],
+     "slot": null
+    },
+    {
+     "monster": null,
+     "one_of": [
+      "LEAF_SLIME_S",
+      "TWIG_SLIME_S"
+     ],
+     "slot": null,
+     "note": "与第一只不同"
+    }
+   ],
+   "notes": "两只小史莱姆（树叶、树枝各一，顺序随机）+ 一只随机中史莱姆。"
+  },
+  "SLITHERING_STRANGLER_NORMAL": {
+   "monsters": [
+    {
+     "monster": null,
+     "one_of_groups": [
+      [
+       "SNAPPING_JAXFRUIT"
+      ],
+      [
+       "LEAF_SLIME_M"
+      ],
+      [
+       "TWIG_SLIME_M"
+      ],
+      [
+       "LEAF_SLIME_S",
+       "LEAF_SLIME_S"
+      ],
+      [
+       "LEAF_SLIME_S",
+       "TWIG_SLIME_S"
+      ],
+      [
+       "TWIG_SLIME_S",
+       "TWIG_SLIME_S"
+      ]
+     ],
+     "group_weights": [
+      0.3333,
+      0.1667,
+      0.1667,
+      0.0833,
+      0.1667,
+      0.0833
+     ],
+     "slot": null,
+     "note": "同伴三类各 1/3：闪光贾克斯果 / 一只中史莱姆（树叶或树枝）/ 两只小史莱姆（各自独立随机，可重复）"
+    },
+    {
+     "monster": "SLITHERING_STRANGLER",
+     "slot": null,
+     "initial_move": "CONSTRICT"
+    }
+   ],
+   "notes": "蛇行扼杀者 + 同伴（贾克斯果 / 中史莱姆 / 两只小史莱姆 三类等概率）。扼杀者的紧缠每隔一回合叠 3，优先击杀。"
+  },
+  "THE_OBSCURA_NORMAL": {
+   "notes": "开局只有胧光怪，第 1 回合召唤寄生惧魔（幻象，爪牙）。"
+  },
+  "THE_KIN_BOSS": {
+   "notes": "两个信徒（爪牙）+ 神官；1 号位信徒起手跳舞。杀神官即胜。"
+  },
+  "TUNNELER_NORMAL": {
+   "notes": "当前版本没有任何一幕的遭遇池包含它（只有 TUNNELER_WEAK 在第二幕），正常不会遇到。"
+  },
+  "TWO_TAILED_RATS_NORMAL": {
+   "notes": "开局 3 只双尾鼠占第 3-5 号位，起手招随机轮换且互不相同；1-2 号位留给呼叫支援。"
+  },
+  "BATTLEWORN_DUMMY_EVENT_V1_ENCOUNTER": {
+   "notes": "第三幕事件「历战假人」：3 回合内打死假人（不给常规奖励）。"
+  },
+  "BATTLEWORN_DUMMY_EVENT_V2_ENCOUNTER": {
+   "notes": "第三幕事件「历战假人」：3 回合内打死假人（不给常规奖励）。"
+  },
+  "BATTLEWORN_DUMMY_EVENT_V3_ENCOUNTER": {
+   "notes": "第三幕事件「历战假人」：3 回合内打死假人（不给常规奖励）。"
+  },
+  "MYSTERIOUS_KNIGHT_EVENT_ENCOUNTER": {
+   "notes": "第二幕事件「灯笼钥匙」里的战斗。"
+  },
+  "THE_ARCHITECT_EVENT_ENCOUNTER": {
+   "notes": "终局事件「建筑师」，不是常规战斗。"
+  },
+  "DEPRECATED_ENCOUNTER": {
+   "notes": "已移除遭遇的占位，不会出现。"
+  }
+ }
+}

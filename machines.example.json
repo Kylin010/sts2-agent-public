@@ -1,0 +1,8 @@
+{
+  "_说明": "dist.py 的机器列表示例。复制成 machines.local.json（已在 .gitignore 里，不会进仓库）再改成自己的机器；地址 203.0.113.x 是文档专用的占位地址。key = --hosts 里用的短名；本机那项不写 ssh；workers = 最多开几个对局进程（0 = 只调度不跑）；keep_gb = 给机器留的内存（GB）；speed = 相对速度。远端需要先装好 Python 3 + numpy、.NET 9 和打过补丁的 sts2-cli，并能用 SSH 密钥免密登录。",
+  "hosts": [
+    {"key": "l", "name": "本机", "workers": 4, "speed": 1},
+    {"key": "a", "name": "worker-a", "ssh": "user@203.0.113.10", "workers": 8, "keep_gb": 2.0, "speed": 3},
+    {"key": "b", "name": "worker-b", "ssh": "user@203.0.113.11", "port": 2222, "workers": 12, "keep_gb": 2.0, "speed": 1}
+  ]
+}

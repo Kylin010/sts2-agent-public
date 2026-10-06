@@ -1,0 +1,215 @@
+{
+  "scope": "Historical completed replay events, source and attack result sequence only. Not game outcome improvement or No-SL certification. No future event feeds a decision.",
+  "files_read": 197,
+  "examples": [
+    {
+      "source": "/opt/slay-the-spire-2/sources/community-runs/replays/ironclad-a10/2e57f02535d7e8cd.ndjson.gz",
+      "sha256": "1657a5dfd321b4fe4e8d8b2ffaf9cffbffc1f27276be2921ff32c8296561c4f5",
+      "header": {
+        "seed": "QEG48MY16THW",
+        "build_id": "v0.111.0",
+        "replay_version": 4,
+        "ascension": 10,
+        "reloads": 0
+      },
+      "completed_play": {
+        "t": "play",
+        "s": 476,
+        "ms": 184134,
+        "floor": 11,
+        "act": 1,
+        "c": 117,
+        "deck_c": 38,
+        "id": "TWIN_STRIKE",
+        "up": 0,
+        "target": "PHANTASMAL_GARDENER",
+        "cost_paid": 1,
+        "stars_paid": 0,
+        "auto": false,
+        "play_index": 0,
+        "play_count": 1,
+        "turn": 4
+      },
+      "events": [
+        {
+          "t": "hit",
+          "s": 477,
+          "ms": 184216,
+          "floor": 11,
+          "act": 1,
+          "src": "player",
+          "dst": "PHANTASMAL_GARDENER",
+          "dmg": 8,
+          "blocked": 0,
+          "killed": false,
+          "card": "TWIN_STRIKE"
+        },
+        {
+          "t": "hit",
+          "s": 478,
+          "ms": 184396,
+          "floor": 11,
+          "act": 1,
+          "src": "player",
+          "dst": "PHANTASMAL_GARDENER",
+          "dmg": 8,
+          "blocked": 0,
+          "killed": false,
+          "card": "TWIN_STRIKE"
+        },
+        {
+          "t": "block",
+          "s": 479,
+          "ms": 184739,
+          "floor": 11,
+          "act": 1,
+          "src": "PHANTASMAL_GARDENER",
+          "n": 7
+        }
+      ]
+    },
+    {
+      "source": "/opt/slay-the-spire-2/sources/community-runs/replays/ironclad-a10/338849debec1b820.ndjson.gz",
+      "sha256": "7b807a5acd4ffc72d5ffecf281835ab12040172cae7a189a34768ce7c6383041",
+      "header": {
+        "seed": "H27DAGUWXQUH",
+        "build_id": "v0.111.0",
+        "replay_version": 4,
+        "ascension": 10,
+        "reloads": 0
+      },
+      "completed_play": {
+        "t": "play",
+        "s": 395,
+        "ms": 48531,
+        "floor": 9,
+        "act": 1,
+        "c": 31,
+        "deck_c": 12,
+        "id": "TWIN_STRIKE",
+        "up": 0,
+        "target": "PHANTASMAL_GARDENER",
+        "cost_paid": 1,
+        "stars_paid": 0,
+        "auto": false,
+        "play_index": 0,
+        "play_count": 1,
+        "turn": 2
+      },
+      "events": [
+        {
+          "t": "hit",
+          "s": 396,
+          "ms": 48605,
+          "floor": 9,
+          "act": 1,
+          "src": "player",
+          "dst": "PHANTASMAL_GARDENER",
+          "dmg": 5,
+          "blocked": 0,
+          "killed": false,
+          "card": "TWIN_STRIKE"
+        },
+        {
+          "t": "hit",
+          "s": 397,
+          "ms": 48790,
+          "floor": 9,
+          "act": 1,
+          "src": "player",
+          "dst": "PHANTASMAL_GARDENER",
+          "dmg": 5,
+          "blocked": 0,
+          "killed": false,
+          "card": "TWIN_STRIKE"
+        },
+        {
+          "t": "block",
+          "s": 398,
+          "ms": 49157,
+          "floor": 9,
+          "act": 1,
+          "src": "PHANTASMAL_GARDENER",
+          "n": 7
+        }
+      ]
+    },
+    {
+      "source": "/opt/slay-the-spire-2/sources/community-runs/replays/ironclad-a10/338849debec1b820.ndjson.gz",
+      "sha256": "7b807a5acd4ffc72d5ffecf281835ab12040172cae7a189a34768ce7c6383041",
+      "header": {
+        "seed": "H27DAGUWXQUH",
+        "build_id": "v0.111.0",
+        "replay_version": 4,
+        "ascension": 10,
+        "reloads": 0
+      },
+      "completed_play": {
+        "t": "play",
+        "s": 459,
+        "ms": 83369,
+        "floor": 9,
+        "act": 1,
+        "c": 31,
+        "deck_c": 12,
+        "id": "TWIN_STRIKE",
+        "up": 0,
+        "target": "PHANTASMAL_GARDENER",
+        "cost_paid": 1,
+        "stars_paid": 0,
+        "auto": false,
+        "play_index": 0,
+        "play_count": 1,
+        "turn": 4
+      },
+      "events": [
+        {
+          "t": "hit",
+          "s": 460,
+          "ms": 83444,
+          "floor": 9,
+          "act": 1,
+          "src": "player",
+          "dst": "PHANTASMAL_GARDENER",
+          "dmg": 5,
+          "blocked": 0,
+          "killed": false,
+          "card": "TWIN_STRIKE"
+        },
+        {
+          "t": "hit",
+          "s": 461,
+          "ms": 83636,
+          "floor": 9,
+          "act": 1,
+          "src": "player",
+          "dst": "PHANTASMAL_GARDENER",
+          "dmg": 5,
+          "blocked": 0,
+          "killed": false,
+          "card": "TWIN_STRIKE"
+        },
+        {
+          "t": "block",
+          "s": 462,
+          "ms": 84002,
+          "floor": 9,
+          "act": 1,
+          "src": "PHANTASMAL_GARDENER",
+          "n": 7
+        },
+        {
+          "t": "power",
+          "s": 465,
+          "ms": 84334,
+          "floor": 9,
+          "act": 1,
+          "src": "effect",
+          "id": "REGEN_POWER",
+          "n": -1,
+          "tgt": "IRONCLAD"
+        }
+      ]
+    }
+  ]
+}

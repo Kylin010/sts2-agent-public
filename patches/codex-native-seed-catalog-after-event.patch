@@ -1,0 +1,35 @@
+--- a/src/Sts2Headless/RunSimulator.cs
++++ b/src/Sts2Headless/RunSimulator.cs
+@@ -336,1 +336,20 @@
++    public Dictionary<string, object?> GenerateSeeds(int count)
++    {
++        if (_runState != null)
++            return Error("Seed generation is only allowed before starting a run");
++        if (count < 1 || count > 10000)
++            return Error("Seed count must be between 1 and 10000");
++        // One ordinary pre-run Chaotic stream, before worker processes start.
++        // Keep the entire returned list; the coordinator rejects duplicate pools.
++        var seeds = Enumerable.Range(0, count)
++            .Select(_ => SeedHelper.GetRandomSeed()).ToArray();
++        return new Dictionary<string, object?>
++        {
++            ["type"] = "seed_catalog",
++            ["source"] = "SeedHelper.GetRandomSeed; one normal Rng.Chaotic stream",
++            ["count"] = count,
++            ["seeds"] = seeds,
++        };
++    }
++
+     public Dictionary<string, object?> StartRun(string character, int ascension = 0, string? seed = null, string lang = "en")
+--- a/src/Sts2Headless/Program.cs
++++ b/src/Sts2Headless/Program.cs
+@@ -113,6 +113,9 @@
+         var cmdType = cmd.GetProperty("cmd").GetString() ?? "";
+         switch (cmdType)
+         {
++            case "generate_seeds":
++                return sim.GenerateSeeds(cmd.TryGetProperty("count", out var seedCount) ? seedCount.GetInt32() : 1);
++
+             case "start_run":
+                 return sim.StartRun(
+                     cmd.TryGetProperty("character", out var ch) ? ch.GetString() ?? "Ironclad" : "Ironclad",

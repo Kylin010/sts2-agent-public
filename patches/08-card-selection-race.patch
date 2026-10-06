@@ -1,0 +1,43 @@
+ -867,6 +872,14 @@ public class RunSimulator
+ 
+             var player = _runState.Players[0];
+ 
++            // 战斗里还有没处理的选牌（例：敌方回合里连续弹出两次选牌，第二次在回到玩家回合之后才出现，
++            // 返回给调用方的却是普通出牌状态）：先把选牌交给调用方，不然出牌 / 结束回合都没反应，双方互等到超时（10/2 永世沙漏）
++            if ((action == "play_card" || action == "end_turn" || action == "use_potion") && _cardSelector.HasPending)
++            {
++                Log($"Card selection still pending; surfacing it instead of {action}");
++                return DetectDecisionPoint();
++            }
++
+             switch (action)
+             {
+                 case "select_map_node":
+@@ -3355,11 +3425,14 @@ public class RunSimulator
+             return _pendingTcs.Task;
+         }
+ 
++        // 先清空再交结果：TrySetResult 会让游戏代码当场接着跑，若它马上又发起下一次选牌，
++        // 原来的「交结果后再清空」会把新的待选一起清掉，游戏永远等不到回应（10/2 永世沙漏那场卡死的原因）
+         public void ResolvePending(IEnumerable<CardModel> selected)
+         {
+-            _pendingTcs?.TrySetResult(selected);
++            var tcs = _pendingTcs;
+             PendingOptions = null;
+             _pendingTcs = null;
++            tcs?.TrySetResult(selected);
+         }
+ 
+         public void ResolvePendingByIndices(int[] indices)
+@@ -3374,9 +3447,10 @@ public class RunSimulator
+ 
+         public void CancelPending()
+         {
+-            _pendingTcs?.TrySetResult(Array.Empty<CardModel>());
++            var tcs = _pendingTcs;
+             PendingOptions = null;
+             _pendingTcs = null;
++            tcs?.TrySetResult(Array.Empty<CardModel>());
+         }
+ 
+         // Pending card reward from events (GetSelectedCardReward blocks until resolved)

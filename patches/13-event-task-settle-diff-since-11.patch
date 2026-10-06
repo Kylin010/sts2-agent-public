@@ -1,0 +1,99 @@
+diff --git a/src/Sts2Headless/RunSimulator.cs b/src/Sts2Headless/RunSimulator.cs
+index 0030514..35d30a5 100644
+--- a/src/Sts2Headless/RunSimulator.cs
++++ b/src/Sts2Headless/RunSimulator.cs
+@@ -230,6 +230,29 @@ public class RunSimulator
+     // Pending bundle selection (Scroll Boxes: pick 1 of N packs)
+     private IReadOnlyList<IReadOnlyList<CardModel>>? _pendingBundles;
+     private TaskCompletionSource<IEnumerable<CardModel>>? _pendingBundleTcs;
++    // 10/3（B-010）：事件选项在后台线程跑，await 之后的步骤（回血、换页、进战斗）排在同步队列里，要边推进队列边等它走完。
++    // 原来只推约 1 秒、再 task.Wait(2000) 干等（不推队列，任务走不动），负载高时返回旧选项；再选一次会在旧选项没走完时
++    // 又执行一个选项（实测：茂密植被先休息回血、又执行继续前进拿金币，强制战斗被跳过）。
++    private Task? _eventTask;
++    // 事件选项任务崩了（后台没有界面单例：音效 / 震屏 / 肖像）或超时：这一局按技术故障停下（Codex 审查：结束事件会保留一半效果，
++    // 例如茂密植被回了血却跳过强制战斗；回传旧页又能再选一次）。之后每个命令都回 EVENT_FAULT 错误，开新局 / 读档才清掉。
++    private string? _eventFault;
++
++    private void SettleEventTask(int maxMs = 30000)
++    {
++        var t = _eventTask;
++        if (t == null) return;
++        var sw = System.Diagnostics.Stopwatch.StartNew();
++        while (!t.IsCompleted && sw.ElapsedMilliseconds < maxMs)
++        {
++            _syncCtx.Pump();
++            if (_cardSelector.HasPending || _cardSelector.HasPendingReward || _pendingBundles != null) return;   // 事件在等玩家选牌 / 选包
++            Thread.Sleep(5);
++        }
++        if (t.IsFaulted) { Log($"Event option task faulted: {t.Exception?.GetBaseException()}"); _eventFault = $"faulted: {t.Exception?.GetBaseException().Message}"; }
++        if (t.IsCompleted) { _eventTask = null; _syncCtx.Pump(); }
++        else { Log($"Event option task still running after {maxMs} ms"); _eventFault = $"timeout {maxMs} ms"; }
++    }
+ 
+     public Dictionary<string, object?> StartRun(string character, int ascension = 0, string? seed = null, string lang = "en")
+     {
+@@ -240,6 +263,7 @@ public class RunSimulator
+ 
+             // 同一个进程里开新局：先清理上一局（不然 RunManager 报 State is already set，第二次开局直接失败）。
+             // 这样一个引擎进程可以连续开很多局，省掉每局约 5 秒的初始化（10/2 加，为了让引擎推演跑得动）
++            _eventFault = null; _eventTask = null;
+             if (_runState != null || RunManager.Instance.IsInProgress)
+             {
+                 try { _cardSelector.CancelPending(); } catch { }
+@@ -573,6 +597,7 @@ public class RunSimulator
+             Log("Loading save file...");
+ 
+             // 同一进程里读档：先清理上一局（和 StartRun 一样，否则 State is already set）
++            _eventFault = null; _eventTask = null;
+             if (_runState != null || RunManager.Instance.IsInProgress)
+             {
+                 try { _cardSelector.CancelPending(); } catch { }
+@@ -1762,21 +1787,13 @@ public class RunSimulator
+                         _eventOptionChosen = true;
+                         _lastEventOptionCount = options.Count;
+                         // Run on thread pool so GetSelectedCards/GetSelectedCardReward can block
+-                        var task = Task.Run(() => options[optionIndex].Chosen());
+-                        for (int i = 0; i < 100; i++)
+-                        {
+-                            _syncCtx.Pump();
+-                            if (_cardSelector.HasPending || _cardSelector.HasPendingReward) break;
+-                            if (_pendingBundles != null) break;
+-                            if (task.IsCompleted) break;
+-                            Thread.Sleep(10);
+-                        }
++                        _eventTask = Task.Run(() => options[optionIndex].Chosen());
++                        SettleEventTask();                 // B-010：边推进同步队列边等，直到走完或要玩家选牌（原来推 1 秒 + 干等 2 秒）
+                         if (_cardSelector.HasPending || _cardSelector.HasPendingReward || _pendingBundles != null)
+                         {
+                             WaitForActionExecutor();
+                             return DetectDecisionPoint();
+                         }
+-                        if (!task.IsCompleted) task.Wait(2000);
+                         _syncCtx.Pump();
+                     }
+                     catch (Exception ex) { Log($"Event choose: {ex.Message}"); }
+@@ -1884,6 +1901,16 @@ public class RunSimulator
+         if (_runState == null)
+             return Error("No run in progress");
+ 
++        // B-010：选牌 / 选包之后回到事件时，原来的选项任务可能还没走完（还在换页、回血、进战斗），先走完再看局面，
++        // 否则回传的是旧选项。事件选项进了战斗就不等（有的选项要等战斗打完才算结束，战斗中每一步都等会卡住）。
++        if (_eventTask != null)
++        {
++            if (_runState.CurrentRoom is EventRoom && !CombatManager.Instance.IsInProgress) SettleEventTask();
++            else if (_eventTask.IsCompleted || _runState.CurrentRoom is not EventRoom) _eventTask = null;
++        }
++        if (_eventFault != null)
++            return Error($"EVENT_FAULT: event option task {_eventFault} (headless cannot finish this option; treat the run as a technical failure)");
++
+         var player = _runState.Players[0];
+ 
+         // Check game over (death)
+@@ -3088,6 +3115,7 @@ public class RunSimulator
+             ["max_hp"] = player.Creature?.MaxHp ?? 0,
+             ["block"] = player.Creature?.Block ?? 0,
+             ["gold"] = player.Gold,
++            ["potion_slots"] = player.MaxPotionCount,   // 10/3：potions 列表只有已持有的（空栏被 Player.Potions 过滤掉），策略算「还有几个空栏」要靠这个
+             ["relics"] = player.Relics?.Select(r =>
+             {
+                 var vars = new Dictionary<string, object?>();

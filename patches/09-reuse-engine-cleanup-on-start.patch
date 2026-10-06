@@ -1,0 +1,15 @@
++            // 同一个进程里开新局：先清理上一局（不然 RunManager 报 State is already set，第二次开局直接失败）。
++            // 这样一个引擎进程可以连续开很多局，省掉每局约 5 秒的初始化（10/2 加，为了让引擎推演跑得动）
++            if (_runState != null || RunManager.Instance.IsInProgress)
++            {
++                try { _cardSelector.CancelPending(); } catch { }
++                CleanUp();
++                _syncCtx.Pump();
++            }
++
+             var player = CreatePlayer(character);
+             if (player == null)
+                 return Error($"Unknown character: {character}");
+ 
+-            var seedStr = seed ?? "headless_" + DateTimeOffset.UtcNow.ToUnixTimeSeconds();
++            // 不传种子时用游戏自己的种子生成（12 位，字符集不含 O 和 I，过滤不雅词），和真游戏开新局一样

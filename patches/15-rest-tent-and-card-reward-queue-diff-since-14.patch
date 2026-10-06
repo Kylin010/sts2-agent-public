@@ -1,0 +1,158 @@
+diff --git a/src/Sts2Headless/RunSimulator.cs b/src/Sts2Headless/RunSimulator.cs
+index 85d632a..8f57c5f 100644
+--- a/src/Sts2Headless/RunSimulator.cs
++++ b/src/Sts2Headless/RunSimulator.cs
+@@ -240,6 +240,38 @@ public class RunSimulator
+     // 10/3（B-014，claude-value 发现）：删牌后游戏靠界面 NMerchantCardRemoval 把「删牌服务」标成用过，后台没有界面，
+     // Used 永远是 false，同一个商店能无限删、价格不涨（真人每店一次）。这里记下删之前的次数，次数涨了就由引擎自己 SetUsed()
+     private MerchantCardRemovalEntry? _removalEntry;
++    // 10/3（B-015）：篝火选项任务。原来做完一件事就无条件 ForceToMap，迷你帐篷（做完不禁用其余选项）失效；
++    // 锻造选完牌后 Sleep(200) 就回地图，升级可能还没生效（E03）。现在推进同步队列等任务走完，还有选项就留在篝火
++    private Task? _restTask;
++    // 10/3（B-016）：战后有多组卡牌奖励（祈祷轮、白星、狩猎）时，原来只给第一组，其余丢掉
++    private readonly Queue<CardReward> _cardRewardQueue = new();
++
++    private bool PumpUntilDone(Task? t, int maxMs = 30000)
++    {
++        if (t == null) return true;
++        var sw = System.Diagnostics.Stopwatch.StartNew();
++        while (!t.IsCompleted && sw.ElapsedMilliseconds < maxMs)
++        {
++            _syncCtx.Pump();
++            if (_cardSelector.HasPending || _cardSelector.HasPendingReward) return false;
++            Thread.Sleep(5);
++        }
++        _syncCtx.Pump();
++        return t.IsCompleted;
++    }
++
++    private Dictionary<string, object?> AfterRestOption()
++    {
++        WaitForActionExecutor();
++        var left = RunManager.Instance.RestSiteSynchronizer?.GetLocalOptions();
++        if (left != null && left.Count > 0)
++        {
++            Log($"Rest site: {left.Count} option(s) still available (e.g. Miniature Tent), staying");
++            return DetectDecisionPoint();
++        }
++        ForceToMap();
++        return MapSelectState();
++    }
+     private int _removalsBefore;
+ 
+     private void SyncCardRemovalUsed()
+@@ -1053,7 +1085,7 @@ public class RunSimulator
+ 
+         // Reset tracking for new room
+         _rewardsProcessed = false;
+-        _pendingCardReward = null;
++        _pendingCardReward = null; _cardRewardQueue.Clear();
+         _eventOptionChosen = false;
+         _lastEventOptionCount = 0;
+         _pendingRewards = null;
+@@ -1382,7 +1414,7 @@ public class RunSimulator
+         }
+         catch (Exception ex) { Log($"Add card to deck: {ex.Message}"); }
+ 
+-        _pendingCardReward = null;
++        _pendingCardReward = _cardRewardQueue.Count > 0 ? _cardRewardQueue.Dequeue() : null;   // B-016：还有下一组就接着给
+         // Check if more rewards pending
+         return DetectDecisionPoint();
+     }
+@@ -1402,7 +1434,7 @@ public class RunSimulator
+         {
+             Log("Skipping card reward");
+             _pendingCardReward.OnSkipped();
+-            _pendingCardReward = null;
++            _pendingCardReward = _cardRewardQueue.Count > 0 ? _cardRewardQueue.Dequeue() : null;   // B-016
+         }
+         return DetectDecisionPoint();
+     }
+@@ -1608,13 +1640,10 @@ public class RunSimulator
+         // needs time to complete the upgrade after card selection resolves.
+         if (_runState?.CurrentRoom is RestSiteRoom)
+         {
+-            Thread.Sleep(200);
+-            _syncCtx.Pump();
+-            WaitForActionExecutor();
+-            // Force to map after SMITH completes (same pattern as HEAL)
+-            Log("Card selection in rest site (SMITH), forcing to map");
+-            ForceToMap();
+-            return MapSelectState();
++            PumpUntilDone(_restTask);          // 等锻造真的升级完（E03：原来 Sleep(200) 就回地图）
++            if (_cardSelector.HasPending) { WaitForActionExecutor(); return DetectDecisionPoint(); }
++            Log("Card selection in rest site (SMITH) done");
++            return AfterRestOption();
+         }
+ 
+         // Extra wait for shop card removal: the purchase task needs to finish
+@@ -1753,21 +1782,14 @@ public class RunSimulator
+             try
+             {
+                 // Run on background thread so Smith card selection can pause
+-                var task = Task.Run(() => RunManager.Instance.RestSiteSynchronizer.ChooseLocalOption(optionIndex));
+-                for (int i = 0; i < 100; i++)
+-                {
+-                    _syncCtx.Pump();
+-                    if (_cardSelector.HasPending) break;
+-                    if (task.IsCompleted) break;
+-                    Thread.Sleep(10);
+-                }
++                _restTask = Task.Run(() => RunManager.Instance.RestSiteSynchronizer.ChooseLocalOption(optionIndex));
++                PumpUntilDone(_restTask);
+                 if (_cardSelector.HasPending)
+                 {
+                     WaitForActionExecutor();
+                     return DetectDecisionPoint();
+                 }
+-                if (!task.IsCompleted) task.Wait(2000);
+-                _syncCtx.Pump();
++                if (_restTask.IsFaulted) Log($"Rest site option task faulted: {_restTask.Exception?.GetBaseException().Message}");
+             }
+             catch (Exception ex)
+             {
+@@ -1778,15 +1800,8 @@ public class RunSimulator
+             // Wait for the action to complete (heal/dig), then force transition to map.
+             if (!_cardSelector.HasPending)
+             {
+-                Log("Rest site: option chosen (non-Smith), waiting for action then forcing to map");
+-                // Give the action time to complete (heal HP, dig for relic, etc.)
+-                WaitForActionExecutor();
+-                _syncCtx.Pump();
+-                Thread.Sleep(200);
+-                _syncCtx.Pump();
+-                WaitForActionExecutor();
+-                ForceToMap();
+-                return MapSelectState();
++                Log("Rest site: option chosen (non-Smith)");
++                return AfterRestOption();
+             }
+         }
+         // For events — use EventSynchronizer
+@@ -2547,6 +2562,8 @@ public class RunSimulator
+                 if (cardRewards.Count > 0)
+                 {
+                     _pendingCardReward = cardRewards[0];
++                    _cardRewardQueue.Clear();
++                    foreach (var extra in cardRewards.Skip(1)) _cardRewardQueue.Enqueue(extra);   // B-016
+                     _pendingRewards = rewards;
+                     return CardRewardState(player, combatRoom);
+                 }
+@@ -2557,7 +2574,7 @@ public class RunSimulator
+         }
+ 
+         // No more pending rewards — proceed
+-        _pendingCardReward = null;
++        _pendingCardReward = null; _cardRewardQueue.Clear();
+         _pendingRewards = null;
+         _rewardsProcessed = true;
+ 
+@@ -4112,7 +4129,7 @@ public class RunSimulator
+     private void ResetRoomTracking()
+     {
+         _rewardsProcessed = false;
+-        _pendingCardReward = null;
++        _pendingCardReward = null; _cardRewardQueue.Clear();
+         _eventOptionChosen = false;
+         _lastEventOptionCount = 0;
+         _pendingRewards = null;

@@ -1,0 +1,48 @@
+--- a/src/Sts2Headless/RunSimulator.cs	2026-10-02 02:46:40.147710571 +0000
++++ b/src/Sts2Headless/RunSimulator.cs	2026-10-02 02:46:40.172710792 +0000
+@@ -1082,6 +1082,8 @@
+                 for (int i = 0; i < 50; i++)
+                 {
+                     _syncCtx.Pump();
++                    // 敌人回合里弹出了选牌（如知识恶魔的「知识诅咒」），交给玩家选，不要当成卡住
++                    if (_cardSelector.HasPending || _cardSelector.HasPendingReward) break;
+                     if (_turnStarted.IsSet || _combatEnded.IsSet) break;
+                     if (!CombatManager.Instance.IsInProgress || player.Creature.IsDead) break;
+                     if (IsPlayPhase()) break;
+@@ -1094,6 +1096,12 @@
+             YieldPatches.SuppressYield = false;
+         }
+ 
++        if (_cardSelector.HasPending || _cardSelector.HasPendingReward)
++        {
++            Log("Enemy turn opened a card selection; surfacing it to the player");
++            return DetectDecisionPoint();
++        }
++
+         // Second fallback: if still stuck after SuppressYield window, cancel and retry.
+         // The WaitUntilQueue TCS is likely deadlocked.
+         if (CombatManager.Instance.IsInProgress && !IsPlayPhase() && !player.Creature.IsDead)
+@@ -1446,6 +1454,23 @@
+         _syncCtx.Pump();
+         WaitForActionExecutor();
+ 
++        // 选牌发生在敌人回合里：选完后继续推进敌人回合，直到回到玩家回合（或战斗结束、又弹出新的选牌）
++        if (CombatManager.Instance.IsInProgress && !IsPlayPhase() && !player.Creature.IsDead && !_cardSelector.HasPending)
++        {
++            YieldPatches.SuppressYield = true;
++            try
++            {
++                for (int i = 0; i < 200; i++)
++                {
++                    _syncCtx.Pump();
++                    if (_cardSelector.HasPending || _cardSelector.HasPendingReward) break;
++                    if (!CombatManager.Instance.IsInProgress || player.Creature.IsDead || IsPlayPhase()) break;
++                    Thread.Sleep(5);
++                }
++            }
++            finally { YieldPatches.SuppressYield = false; }
++        }
++
+         // Extra wait for rest-site SMITH: the background ChooseLocalOption task
+         // needs time to complete the upgrade after card selection resolves.
+         if (_runState?.CurrentRoom is RestSiteRoom)

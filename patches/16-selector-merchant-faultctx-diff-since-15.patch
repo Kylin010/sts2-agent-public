@@ -1,0 +1,173 @@
+diff --git a/src/Sts2Headless/RunSimulator.cs b/src/Sts2Headless/RunSimulator.cs
+index 8f57c5f..c796021 100644
+--- a/src/Sts2Headless/RunSimulator.cs
++++ b/src/Sts2Headless/RunSimulator.cs
+@@ -217,6 +217,35 @@ public class RunSimulator
+     private readonly ManualResetEventSlim _combatEnded = new(false);
+     private static readonly LocLookup _loc = new();
+     private bool _eventOptionChosen;
++    private Task<bool>? _merchantPurchaseTask;
++    private Exception? _merchantPurchaseFailure;
++    private string _merchantReceiptName = "";
++    private int _merchantReceiptPrice;
++
++    private void SettleMerchantPurchase(int maxMs = 25000)
++    {
++        var task = _merchantPurchaseTask;
++        if (task == null) return;
++        try
++        {
++            var deadline = Environment.TickCount64 + maxMs;
++            while (!task.IsCompleted)
++            {
++                _syncCtx.Pump();
++                if (_cardSelector.HasPending || _cardSelector.HasPendingReward
++                    || (_pendingBundles != null && _pendingBundleTcs?.Task.IsCompleted == false)) return;
++                if (Environment.TickCount64 >= deadline)
++                    throw new TimeoutException("Relic purchase did not finish or request player input");
++                Thread.Sleep(5);
++            }
++            if (!task.GetAwaiter().GetResult())
++                throw new InvalidOperationException("Native relic purchase declined");
++        }
++        catch (Exception ex) { _merchantPurchaseFailure = ex; throw; }
++        _merchantPurchaseTask = null;
++        Log($"Bought relic: {_merchantReceiptName} for {_merchantReceiptPrice}g");
++    }
++
+     private int _lastEventOptionCount;
+ 
+     // Pending rewards for card selection (populated after combat, before proceeding)
+@@ -237,6 +266,7 @@ public class RunSimulator
+     // 事件选项任务崩了（后台没有界面单例：音效 / 震屏 / 肖像）或超时：这一局按技术故障停下（Codex 审查：结束事件会保留一半效果，
+     // 例如茂密植被回了血却跳过强制战斗；回传旧页又能再选一次）。之后每个命令都回 EVENT_FAULT 错误，开新局 / 读档才清掉。
+     private string? _eventFault;
++    private string _eventFaultCtx = "";   // 哪个事件的哪个选项（报错时带上，方便定位）
+     // 10/3（B-014，claude-value 发现）：删牌后游戏靠界面 NMerchantCardRemoval 把「删牌服务」标成用过，后台没有界面，
+     // Used 永远是 false，同一个商店能无限删、价格不涨（真人每店一次）。这里记下删之前的次数，次数涨了就由引擎自己 SetUsed()
+     private MerchantCardRemovalEntry? _removalEntry;
+@@ -1020,6 +1050,17 @@ public class RunSimulator
+             if (_runState == null)
+                 return Error("No run in progress");
+ 
++            if (_merchantPurchaseFailure != null)
++                return Error("MERCHANT_FAULT: " + _merchantPurchaseFailure.Message);
++
++            // A paused pickup accepts its requested answer; never start a second purchase
++            // or leave while the first native task is still changing this shop.
++            if (_merchantPurchaseTask != null
++                && action != "select_cards" && action != "skip_select"
++                && action != "select_card_reward" && action != "skip_card_reward"
++                && action != "select_bundle")
++                return DetectDecisionPoint();
++
+             var player = _runState.Players[0];
+ 
+             // 战斗里还有没处理的选牌（例：敌方回合里连续弹出两次选牌，第二次在回到玩家回合之后才出现，
+@@ -1482,32 +1523,22 @@ public class RunSimulator
+         if (!entry.IsStocked) return Error("Relic already purchased");
+         if (player.Gold < entry.Cost) return Error("Not enough gold");
+ 
++        // Native purchase clears or restocks the slot. Keep receipt fields before it changes.
++        var purchasedRelicName = entry.Model!.GetType().Name;
++        var purchasePrice = entry.Cost;
++
+         try
+         {
+-            // The pickup effect can open a card_select (e.g. KIFUDA → enchant up to 3 with
+-            // Adroit, #80). Run the purchase on a background task and yield as soon as a
+-            // pending selection appears so the caller can resolve it; the background task
+-            // continues once the selector's TCS is fed by select_cards.
+-            var inv = merchantRoom.GetLocalInventory();
+-            var task = Task.Run(() => entry.OnTryPurchaseWrapper(inv));
+-            for (int i = 0; i < 100; i++)
+-            {
+-                _syncCtx.Pump();
+-                if (_cardSelector.HasPending || _cardSelector.HasPendingReward) break;
+-                if (_pendingBundles != null) break;
+-                if (task.IsCompleted) break;
+-                Thread.Sleep(10);
+-            }
+-            if (_cardSelector.HasPending || _cardSelector.HasPendingReward || _pendingBundles != null)
+-            {
+-                Log($"Buy relic {entry.Model.GetType().Name}: yielded for pending selection");
+-                return DetectDecisionPoint();
+-            }
+-            if (!task.IsCompleted) task.Wait(2000);
+-            _syncCtx.Pump();
+-            Log($"Bought relic: {entry.Model.GetType().Name} for {entry.Cost}g");
++            _merchantReceiptName = purchasedRelicName;
++            _merchantReceiptPrice = purchasePrice;
++            _merchantPurchaseTask = Task.Run(() => entry.OnTryPurchaseWrapper(merchantRoom.GetLocalInventory()));
++            SettleMerchantPurchase();
++        }
++        catch (Exception ex)
++        {
++            _merchantPurchaseFailure = ex;
++            return Error("MERCHANT_FAULT: " + ex.Message);
+         }
+-        catch (Exception ex) { return Error($"Buy relic failed: {ex.Message}"); }
+ 
+         return DetectDecisionPoint();
+     }
+@@ -1821,6 +1852,7 @@ public class RunSimulator
+                         _eventOptionChosen = true;
+                         _lastEventOptionCount = options.Count;
+                         // Run on thread pool so GetSelectedCards/GetSelectedCardReward can block
++                        _eventFaultCtx = $"{localEvent.GetType().Name} / {options[optionIndex].TextKey}";
+                         _eventTask = Task.Run(() => options[optionIndex].Chosen());
+                         SettleEventTask();                 // B-010：边推进同步队列边等，直到走完或要玩家选牌（原来推 1 秒 + 干等 2 秒）
+                         if (_cardSelector.HasPending || _cardSelector.HasPendingReward || _pendingBundles != null)
+@@ -1944,7 +1976,12 @@ public class RunSimulator
+         }
+         SyncCardRemovalUsed();
+         if (_eventFault != null)
+-            return Error($"EVENT_FAULT: event option task {_eventFault} (headless cannot finish this option; treat the run as a technical failure)");
++            return Error($"EVENT_FAULT: [{_eventFaultCtx}] event option task {_eventFault} (headless cannot finish this option; treat the run as a technical failure)");
++
++        if (_merchantPurchaseFailure != null)
++            return Error("MERCHANT_FAULT: " + _merchantPurchaseFailure.Message);
++        try { SettleMerchantPurchase(); }
++        catch (Exception ex) { return Error("MERCHANT_FAULT: " + ex.Message); }
+ 
+         var player = _runState.Players[0];
+ 
+@@ -3539,9 +3576,9 @@ public class RunSimulator
+         public int PendingMinSelect { get; private set; }
+         public int PendingMaxSelect { get; private set; }
+         public string PendingPrompt { get; private set; } = "";
+-        private TaskCompletionSource<IEnumerable<CardModel>>? _pendingTcs;
++        private volatile TaskCompletionSource<IEnumerable<CardModel>>? _pendingTcs;
+ 
+-        public bool HasPending => _pendingTcs != null && !_pendingTcs.Task.IsCompleted;
++        public bool HasPending => _pendingTcs?.Task.IsCompleted == false;
+ 
+         public Task<IEnumerable<CardModel>> GetSelectedCards(
+             IEnumerable<CardModel> options, int minSelect, int maxSelect)
+@@ -3558,12 +3595,13 @@ public class RunSimulator
+             PendingOptions = optList;
+             PendingMinSelect = minSelect;
+             PendingMaxSelect = maxSelect;
+-            _pendingTcs = new TaskCompletionSource<IEnumerable<CardModel>>();
++            var pending = new TaskCompletionSource<IEnumerable<CardModel>>();
++            _pendingTcs = pending;
+ 
+             Console.Error.WriteLine($"[SIM] Card selection pending: {optList.Count} options, select {minSelect}-{maxSelect}");
+ 
+             // Return the task — the main loop will complete it
+-            return _pendingTcs.Task;
++            return pending.Task;
+         }
+ 
+         // 先清空再交结果：TrySetResult 会让游戏代码当场接着跑，若它马上又发起下一次选牌，
+@@ -4128,6 +4166,10 @@ public class RunSimulator
+ 
+     private void ResetRoomTracking()
+     {
++        _merchantPurchaseTask = null;
++        _merchantPurchaseFailure = null;
++        _merchantReceiptName = "";
++        _merchantReceiptPrice = 0;
+         _rewardsProcessed = false;
+         _pendingCardReward = null; _cardRewardQueue.Clear();
+         _eventOptionChosen = false;

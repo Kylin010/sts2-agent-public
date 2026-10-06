@@ -1,0 +1,9 @@
+{
+  "_说明": "强制流派：选牌时给这些标签的牌额外加 bonus 分（标签见 kb/cards.json）。default = 不强制",
+  "default": {"tags": [], "bonus": 0},
+  "exhaust": {"tags": ["exhaust_engine", "exhaust_fuel", "exhaust_payoff"], "bonus": 0.25, "note": "消耗引擎：无惧疼痛 / 黑暗之拥 + 燃烧契约 / 重振精神 / 添柴"},
+  "block": {"tags": ["block", "block_payoff"], "bonus": 0.2, "note": "格挡转伤害：全身撞击 / 势不可当 / 壁垒"},
+  "strength": {"tags": ["strength", "multi_hit", "scaling"], "bonus": 0.2, "note": "力量 + 多段"},
+  "vuln": {"tags": ["vuln"], "bonus": 0.2, "note": "易伤：残酷 / 凶恶 / 欺凌"},
+  "selfdamage": {"tags": ["self_damage"], "bonus": 0.25, "note": "自伤：狱火 / 撕裂"}
+}

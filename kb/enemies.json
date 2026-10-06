@@ -1,0 +1,272 @@
+{
+ "_说明": "敌人的特殊机制，给战斗规划用。键是遭遇 id 或怪物名（英文）。字段：skill_penalty 每张技能让它每段攻击 +N；revive 被打死后会复活（集火同时打死）；hp_threshold 跨过这个血量会晕；card_count 每打 N 张牌塞一张凋萎；scaling 会越打越强（多抢输出）；prefer_target 优先目标；curse_order 知识恶魔的诅咒偏好；note 人话说明；counter_tags 应对这个敌人需要的牌型（标签 → 选牌加分），第一幕就按本幕 Boss 和常见精英提前拿；block_priority 没挡住的伤害代价乘几倍；power_penalty 每打一张能力牌自扣多少；card_penalty 每多打一张牌的代价（猎人杀手）",
+ "INFESTED_PRISMS_ELITE": {
+  "skill_penalty": 3,
+  "note": "每张技能让它这回合每段攻击 +3（脉冲后 +6）",
+  "counter_tags": {
+   "power": 0.05,
+   "damage": 0.04
+  }
+ },
+ "DECIMILLIPEDE_ELITE": {
+  "revive": true,
+  "note": "一节死后两个敌方回合复活回 25 血；三节要在同一窗口里死",
+  "counter_tags": {
+   "aoe": 0.07,
+   "scaling": 0.04
+  }
+ },
+ "CEREMONIAL_BEAST_BOSS": {
+  "hp_threshold": 160,
+  "scaling": true,
+  "note": "第一次掉到 160 以下晕一回合、力量清零；之后每轮 +4 力量",
+  "counter_tags": {
+   "damage": 0.06,
+   "vuln": 0.05,
+   "strength": 0.04,
+   "block": 0.03
+  }
+ },
+ "AEONGLASS_BOSS": {
+  "card_count": 6,
+  "note": "每打 6 张牌往手里塞一张凋萎",
+  "counter_tags": {
+   "damage": 0.05,
+   "block": 0.05,
+   "block_payoff": 0.04
+  }
+ },
+ "TERROR_EEL_ELITE": {
+  "hp_threshold": 75,
+  "note": "150 血。第一次打穿格挡后 ≤75：当回合晕、下回合「恐吓」给我 99 层易伤（只触发一次）。平时：撞击 18 → 撕扯 4×3 并 +6 活力（下一次撞击 24）",
+  "threshold_care": true,
+  "counter_tags": {
+   "damage": 0.05,
+   "vuln": 0.03
+  }
+ },
+ "BYRDONIS_ELITE": {
+  "scaling": true,
+  "note": "每回合结束 +1 力量",
+  "counter_tags": {
+   "damage": 0.05,
+   "vuln": 0.04
+  }
+ },
+ "BYGONE_EFFIGY_ELITE": {
+  "note": "第 2 回合醒来不攻击，是秒杀窗口；之后每回合砍 25",
+  "counter_tags": {
+   "damage": 0.05,
+   "block": 0.04
+  }
+ },
+ "SKULKING_COLONY_ELITE": {
+  "damage_cap": 20,
+  "note": "硬化外壳：每「半回合」最多掉 20 血（玩家回合、敌方回合开始都清零，只算打穿格挡的掉血）。荆棘 / 火焰屏障也受上限，但它们在敌方回合触发、有自己的 20 点。80 血 = 正好 4 个回合打满。出招：猛冲 16 → 猛冲 16 → 惯性 11 +4 力量 → 戳 8×2 循环",
+  "counter_tags": {
+   "block": 0.05
+  }
+ },
+ "EXOSKELETONS_NORMAL": {
+  "damage_cap_per_hit": 9,
+  "note": "每次伤害最多 9：用多段"
+ },
+ "EXOSKELETONS_WEAK": {
+  "damage_cap_per_hit": 9
+ },
+ "KAISER_CRAB_BOSS": {
+  "prefer_target": "Rocket",
+  "note": "先打死火箭；一只死了另一只 +6 力量 +99 格挡",
+  "counter_tags": {
+   "aoe": 0.07,
+   "block": 0.05,
+   "strength": 0.04
+  },
+  "facing": true,
+  "note_facing": "10/3：背后那只伤害 ×1.5，最后一张带目标的牌决定朝向；打分时按朝向算实际来伤（combat._facing_extra）"
+ },
+ "KNOWLEDGE_DEMON_BOSS": {
+  "curse_order": [
+   "MIND_ROT",
+   "SLOTH",
+   "DISINTEGRATION",
+   "WASTE_AWAY"
+  ],
+  "scaling": true,
+  "counter_tags": {
+   "damage": 0.06,
+   "block": 0.05,
+   "scaling": 0.05
+  }
+ },
+ "THE_INSATIABLE_BOSS": {
+  "deadline": true,
+  "note": "沙坑归零直接死：死线前多余的血全换输出",
+  "counter_tags": {
+   "damage": 0.08,
+   "strength": 0.05,
+   "scaling": 0.04
+  }
+ },
+ "THE_KIN_BOSS": {
+  "prefer_target": "Kin Follower",
+  "note": "集火神官，神官死了随从全跑",
+  "counter_tags": {
+   "aoe": 0.08,
+   "damage": 0.05
+  },
+  "note_prefer": "10/3 实测改回先杀信徒：按研究 10 号改成集火神官后，死在同族小队的 5 个种子全部还是输，而且死得更早（5~7 回合，先杀信徒是 7~11 回合）。研究的推算假设完全不格挡；我们的牌组输出低，先杀信徒能降低每回合来伤、多撑几回合。两种打法都赢不了这 5 局，根子是牌组输出不够（每回合约 20，要 30）"
+ },
+ "QUEEN_BOSS": {
+  "prefer_target": "Torch Head",
+  "note": "先杀聚合体",
+  "counter_tags": {
+   "damage": 0.07,
+   "block": 0.05
+  }
+ },
+ "MECHA_KNIGHT_ELITE": {
+  "note": "人工制品 3：先用便宜减益剥掉"
+ },
+ "VANTOM_BOSS": {
+  "note": "滑溜 9：前 9 段每段只算 1；第 7 回合二次肢解前打死",
+  "counter_tags": {
+   "multi_hit": 0.08,
+   "damage": 0.04,
+   "block": 0.04
+  }
+ },
+ "LAGAVULIN_MATRIARCH_BOSS": {
+  "counter_tags": {
+   "scaling": 0.08,
+   "power": 0.05,
+   "damage": 0.04
+  },
+  "note": "233 血，开局 12 镀甲 + 睡 3 回合。只有打穿格挡（掉血）才会醒；痛击被格挡挡住不会醒，易伤照样挂上。镀甲：第 1、2 回合各给 12/11 格挡，睡到最后一回合移除。醒后：斩击 21 → 开膛 10×2 → 斩击二 14 + 14 格挡 → 吸魂（我 -2 力量 -2 敏捷，它 +2 力量）循环"
+ },
+ "SOUL_FYSH_BOSS": {
+  "counter_tags": {
+   "exhaust_fuel": 0.06,
+   "damage": 0.05,
+   "vuln": 0.03
+  },
+  "note": "221 血。塞「呼唤」（1 费可打出，没消耗；回合结束还在手里就掉 6 血、无视格挡）。循环：呼唤（塞 2 张）→ 排气 18 → 凝视 8 + 塞 1 张 → 消逝（2 层无形，下个玩家回合每次掉血压到 1）→ 尖叫 15 + 3 层易伤"
+ },
+ "WATERFALL_GIANT_BOSS": {
+  "counter_tags": {
+   "damage": 0.07,
+   "block": 0.04,
+   "block_payoff": 0.03
+  }
+ },
+ "TEST_SUBJECT_BOSS": {
+  "counter_tags": {
+   "damage": 0.06,
+   "block_payoff": 0.05,
+   "scaling": 0.04
+  }
+ },
+ "PHANTASMAL_GARDENERS_ELITE": {
+  "counter_tags": {
+   "multi_hit": 0.05,
+   "aoe": 0.05
+  }
+ },
+ "PHROG_PARASITE_ELITE": {
+  "counter_tags": {
+   "aoe": 0.06
+  }
+ },
+ "ENTOMANCER_ELITE": {
+  "counter_tags": {
+   "block": 0.04,
+   "damage": 0.04
+  }
+ },
+ "_act_elites": {
+  "1": [
+   "BYRDONIS_ELITE",
+   "BYGONE_EFFIGY_ELITE",
+   "PHANTASMAL_GARDENERS_ELITE",
+   "PHROG_PARASITE_ELITE",
+   "SKULKING_COLONY_ELITE",
+   "TERROR_EEL_ELITE"
+  ],
+  "2": [
+   "DECIMILLIPEDE_ELITE",
+   "ENTOMANCER_ELITE",
+   "INFESTED_PRISMS_ELITE"
+  ],
+  "3": [
+   "KNIGHTS_ELITE",
+   "MECHA_KNIGHT_ELITE",
+   "SOUL_NEXUS_ELITE"
+  ]
+ },
+ "FABRICATOR_NORMAL": {
+  "prefer_target": "Fabricator",
+  "note": "只打组装师，它一死机器人全跑"
+ },
+ "SCROLLS_OF_BITING_NORMAL": {
+  "block_priority": 1.8,
+  "note": "没挡住的每一下扣 2 点最大生命：必须挡"
+ },
+ "SCROLLS_OF_BITING_WEAK": {
+  "block_priority": 1.8
+ },
+ "SLIMED_BERSERKER_NORMAL": {
+  "block_priority": 1.3,
+  "scaling": true,
+  "note": "塞黏液、窒息 33+：大招回合堆格挡"
+ },
+ "CONSTRUCT_MENAGERIE_NORMAL": {
+  "prefer_target": "Cubex",
+  "note": "方柱每次射击 +力量：先杀"
+ },
+ "THE_LOST_AND_FORGOTTEN_NORMAL": {
+  "prefer_target": "The Lost",
+  "note": "失落之物偷力量：先杀"
+ },
+ "FROG_KNIGHT_NORMAL": {
+  "hp_threshold": 99,
+  "threshold_care": true,
+  "note": "第一次低于一半后下一轮甲虫冲锋 40：能打完才跨"
+ },
+ "THE_OBSCURA_NORMAL": {
+  "prefer_target": "The Obscura",
+  "note": "惧魂是随从，打本体"
+ },
+ "OVICOPTER_NORMAL": {
+  "prefer_target": "Ovicopter",
+  "note": "蛋和小虫是随从，打本体"
+ },
+ "TURRET_OPERATOR_WEAK": {
+  "prefer_target": "Living Shield",
+  "note": "先杀活体盾，否则炮手每回合 +25 格挡"
+ },
+ "GLOBE_HEAD_NORMAL": {
+  "power_penalty": 8,
+  "note": "每打一张能力牌自扣 8"
+ },
+ "HUNTER_KILLER_NORMAL": {
+  "card_penalty": 1.5,
+  "note": "嫩化：每打一张牌本回合 −1 力量 −1 敏捷，少打牌、先打大牌"
+ },
+ "DEVOTED_SCULPTOR_WEAK": {
+  "scaling": true,
+  "note": "每回合 +9 力量：抢输出"
+ },
+ "MYTES_NORMAL": {
+  "scaling": true,
+  "note": "轮流塞毒素：拖越久越亏"
+ },
+ "HAUNTED_SHIP_NORMAL": {
+  "note": "67 血，自己没有减伤。第 1 回合「纠缠」：不攻击，给我 3 层虚弱 + 往弃牌堆塞 5 张晕眩 → 之后我的伤害打七五折，所以第 1 回合打满（ud_rules）。之后扫击 14 / 践踏 5×3 交替"
+ },
+ "SEAPUNK_NORMAL": {
+  "note": "钙化教徒（39~42 血，第 1 回合拿 2 层仪式，之后每回合 +2 力量，打 11/13/15…）+ 海洋混混（47~49 血，每 3 回合 +2 力量）→ 先打教徒（ud_rules）"
+ },
+ "PUNCH_OFF_EVENT_ENCOUNTER": {
+  "note": "事件「重拳出击」打的两台拳击构装体（各 60 血开局少 2~9、1 层人工制品）。事件选「顺走」= 受伤诅咒换遗物、不打仗（punchoff_nab）"
+ }
+}

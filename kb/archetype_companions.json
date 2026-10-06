@@ -1,0 +1,161 @@
+{
+ "_说明": "社区赢家第二幕结束时的牌组：有这张核心牌时，各张牌出现的倍数（lift，≥1.3 才列）。tools 里一次性算的，给选牌的流派加分用",
+ "core": {
+  "FEEL_NO_PAIN": {
+   "n": 567,
+   "companions": {
+    "JUGGERNAUT": 1.56,
+    "DARK_EMBRACE": 1.51,
+    "HOWL_FROM_BEYOND": 1.44,
+    "STOKE": 1.44,
+    "CINDER": 1.4,
+    "ASHEN_STRIKE": 1.39
+   }
+  },
+  "DARK_EMBRACE": {
+   "n": 243,
+   "companions": {
+    "ASHEN_STRIKE": 1.7,
+    "FEEL_NO_PAIN": 1.51,
+    "HAVOC": 1.41,
+    "CINDER": 1.39,
+    "SHOCKWAVE": 1.39,
+    "DRUM_OF_BATTLE": 1.39,
+    "STOMP": 1.3
+   }
+  },
+  "DEMON_FORM": {
+   "n": 184,
+   "companions": {
+    "EXPECT_A_FIGHT": 1.69,
+    "SWORD_BOOMERANG": 1.61,
+    "TWIN_STRIKE": 1.4,
+    "ULTIMATE_STRIKE": 1.36,
+    "RAMPAGE": 1.31
+   }
+  },
+  "BARRICADE": {
+   "n": 211,
+   "companions": {
+    "BODY_SLAM": 2.28,
+    "JUGGERNAUT": 1.46,
+    "PRIMAL_FORCE": 1.44,
+    "STONE_ARMOR": 1.41,
+    "BLOOD_WALL": 1.39
+   }
+  },
+  "INFERNO": {
+   "n": 281,
+   "companions": {
+    "TEAR_ASUNDER": 2.94,
+    "RUPTURE": 2.66,
+    "SPITE": 2.01,
+    "HEMOKINESIS": 1.94,
+    "BLOOD_WALL": 1.56,
+    "BREAKTHROUGH": 1.54,
+    "NOT_YET": 1.3
+   }
+  },
+  "RUPTURE": {
+   "n": 213,
+   "companions": {
+    "INFERNO": 2.66,
+    "SPITE": 2.65,
+    "HEMOKINESIS": 2.56,
+    "TEAR_ASUNDER": 2.2,
+    "BREAKTHROUGH": 2.0,
+    "CRIMSON_MANTLE": 1.72,
+    "EXPECT_A_FIGHT": 1.66,
+    "BLOOD_WALL": 1.65
+   }
+  },
+  "JUGGERNAUT": {
+   "n": 88,
+   "companions": {
+    "STONE_ARMOR": 1.97,
+    "IRON_WAVE": 1.84,
+    "HELLRAISER": 1.76,
+    "CASCADE": 1.75,
+    "LANTERN_KEY": 1.7,
+    "RAGE": 1.58,
+    "FEEL_NO_PAIN": 1.56,
+    "BODY_SLAM": 1.54
+   }
+  },
+  "STOKE": {
+   "n": 373,
+   "companions": {
+    "FEEL_NO_PAIN": 1.44,
+    "INFERNAL_BLADE": 1.39,
+    "HOWL_FROM_BEYOND": 1.34,
+    "CINDER": 1.3,
+    "ASHEN_STRIKE": 1.3
+   }
+  },
+  "FIEND_FIRE": {
+   "n": 223,
+   "companions": {
+    "ASHEN_STRIKE": 1.61,
+    "HOWL_FROM_BEYOND": 1.52,
+    "HAVOC": 1.33
+   }
+  },
+  "BODY_SLAM": {
+   "n": 268,
+   "companions": {
+    "BARRICADE": 2.28,
+    "UNMOVABLE": 1.6,
+    "JUGGERNAUT": 1.54,
+    "DOWSING": 1.53
+   }
+  },
+  "CRIMSON_MANTLE": {
+   "n": 327,
+   "companions": {
+    "SPITE": 1.85,
+    "RUPTURE": 1.72,
+    "TEAR_ASUNDER": 1.39,
+    "HEMOKINESIS": 1.34,
+    "FINESSE": 1.32
+   }
+  },
+  "AGGRESSION": {
+   "n": 184,
+   "companions": {
+    "SPITE": 1.38,
+    "FIGHT_ME": 1.36,
+    "LANTERN_KEY": 1.32,
+    "INFERNAL_BLADE": 1.31,
+    "RAMPAGE": 1.31,
+    "ULTIMATE_DEFEND": 1.31
+   }
+  },
+  "UNMOVABLE": {
+   "n": 394,
+   "companions": {
+    "BODY_SLAM": 1.6
+   }
+  },
+  "INFLAME": {
+   "n": 238,
+   "companions": {
+    "EXTERMINATE": 1.62,
+    "RAMPAGE": 1.42,
+    "WHIRLWIND": 1.38,
+    "EXPECT_A_FIGHT": 1.38,
+    "PACTS_END": 1.34,
+    "MANGLE": 1.33
+   }
+  },
+  "PYRE": {
+   "n": 242,
+   "companions": {
+    "IRON_WAVE": 1.87,
+    "WHIRLWIND": 1.67,
+    "JUGGERNAUT": 1.45,
+    "FISTICUFFS": 1.38,
+    "SHOCKWAVE": 1.33
+   }
+  }
+ }
+}

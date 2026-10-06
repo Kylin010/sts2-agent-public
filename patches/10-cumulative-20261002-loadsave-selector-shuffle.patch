@@ -1,0 +1,430 @@
+diff --git a/src/GodotStubs/Core.cs b/src/GodotStubs/Core.cs
+index b80bedc..3a3d277 100644
+--- a/src/GodotStubs/Core.cs
++++ b/src/GodotStubs/Core.cs
+@@ -89,6 +89,7 @@ public class Node : GodotObject
+     public bool IsAncestorOf(Node node) => false;
+     public bool IsInsideTree() => false;
+     public int GetChildCount(bool includeInternal = false) => _children.Count;
++    public int GetIndex(bool includeInternal = false) => _parent == null ? 0 : Math.Max(0, _parent._children.IndexOf(this));   // 千足虫接回时会用
+ 
+     public void CallDeferred(StringName method, params Variant[] args) { }
+ 
+diff --git a/src/GodotStubs/Math.cs b/src/GodotStubs/Math.cs
+index e1be94d..0c3a62f 100644
+--- a/src/GodotStubs/Math.cs
++++ b/src/GodotStubs/Math.cs
+@@ -148,4 +148,33 @@ public static class Mathf
+     }
+     public static bool IsEqualApprox(float a, float b) => MathF.Abs(a - b) < Epsilon;
+     public static float Snapped(float value, float step) => step != 0 ? MathF.Round(value / step) * step : value;
++    // 以下是游戏代码用到、替身库原来缺的（缺了会抛 MissingMethodException，敌方回合卡死被判负，例：幻影园丁用 Log）
++    public static float Log(float s) => MathF.Log(s);
++    public static double Log(double s) => Math.Log(s);
++    public static float Exp(float s) => MathF.Exp(s);
++    public static float Atan2(float y, float x) => MathF.Atan2(y, x);
++    public static float Atan(float s) => MathF.Atan(s);
++    public static float Acos(float s) => MathF.Acos(s);
++    public static float Asin(float s) => MathF.Asin(s);
++    public static float InverseLerp(float from, float to, float weight) => to != from ? (weight - from) / (to - from) : 0f;
++    public static float LerpAngle(float from, float to, float weight)
++    {
++        float diff = (to - from) % Tau; float dist = (2f * diff) % Tau - diff;
++        return from + dist * weight;
++    }
++    public static float LinearToDb(float linear) => linear > 0 ? 20f * MathF.Log10(linear) : -80f;
++    public static float DbToLinear(float db) => MathF.Pow(10f, db / 20f);
++    public static float Wrap(float value, float min, float max) { float r = max - min; return r == 0 ? min : min + ((value - min) % r + r) % r; }
++    public static int Wrap(int value, int min, int max) { int r = max - min; return r == 0 ? min : min + ((value - min) % r + r) % r; }
++    public static float PosMod(float a, float b) => ((a % b) + b) % b;
++    public static int PosMod(int a, int b) => ((a % b) + b) % b;
++    public static float MoveToward(float from, float to, float delta) => MathF.Abs(to - from) <= delta ? to : from + MathF.Sign(to - from) * delta;
++    public static float SmoothStep(float from, float to, float s) { float t = Math.Clamp((s - from) / (to - from), 0f, 1f); return t * t * (3f - 2f * t); }
++    public static double Lerp(double from, double to, double weight) => from + (to - from) * weight;
++    public static double Clamp(double value, double min, double max) => Math.Clamp(value, min, max);
++    public static double Abs(double s) => Math.Abs(s);
++    public static double Sqrt(double s) => Math.Sqrt(s);
++    public static double Pow(double b, double e) => Math.Pow(b, e);
++    public static double Min(double a, double b) => Math.Min(a, b);
++    public static double Max(double a, double b) => Math.Max(a, b);
+ }
+diff --git a/src/GodotStubs/UI.cs b/src/GodotStubs/UI.cs
+index 7017644..098f5e9 100644
+--- a/src/GodotStubs/UI.cs
++++ b/src/GodotStubs/UI.cs
+@@ -6,6 +6,13 @@ public class CanvasItem : Node
+     public Color Modulate { get; set; } = Color.White;
+     public Color SelfModulate { get; set; } = Color.White;
+     public bool Visible { get; set; } = true;
++    // 真 Godot 的属性都有对应的 Set/Get 方法；游戏代码（如实验体复活）会直接调用，缺了会抛 MissingMethodException 卡死敌方回合
++    public void SetSelfModulate(Color c) => SelfModulate = c;
++    public Color GetSelfModulate() => SelfModulate;
++    public void SetModulate(Color c) => Modulate = c;
++    public Color GetModulate() => Modulate;
++    public void SetVisible(bool v) => Visible = v;
++    public bool IsVisible() => Visible;
+     public virtual void Show() => Visible = true;
+     public virtual void Hide() => Visible = false;
+     public bool IsVisibleInTree() => Visible;
+diff --git a/src/Sts2Headless/Program.cs b/src/Sts2Headless/Program.cs
+index 68d74ca..c882c4d 100644
+--- a/src/Sts2Headless/Program.cs
++++ b/src/Sts2Headless/Program.cs
+@@ -186,6 +186,9 @@ class Program
+                 return sim.SetDrawOrder(cards);
+             }
+ 
++            case "shuffle_draw":
++                return sim.ShuffleDrawPile(cmd.TryGetProperty("seed", out var sd) ? sd.GetInt32() : 0);
++
+             case "write_continue_save":
+             {
+                 var outputPath = cmd.TryGetProperty("path", out var op) ? op.GetString() : null;
+diff --git a/src/Sts2Headless/RunSimulator.cs b/src/Sts2Headless/RunSimulator.cs
+index d780b2a..eff7950 100644
+--- a/src/Sts2Headless/RunSimulator.cs
++++ b/src/Sts2Headless/RunSimulator.cs
+@@ -205,6 +205,7 @@ internal class LocLookup
+ /// </summary>
+ public class RunSimulator
+ {
++    private string? _seedStr;
+     private static int? _expectedSaveSchemaVersion;
+     private static bool _expectedSaveSchemaVersionReady;
+     private static readonly object _expectedSaveSchemaVersionLock = new();
+@@ -225,6 +226,7 @@ public class RunSimulator
+     private int _goldBeforeCombat;
+     private int _lastKnownHp;
+     private readonly HeadlessCardSelector _cardSelector = new();
++    private IDisposable? _selectorScope;     // UseSelector 的句柄：清理上一局时释放，下一局才能重新登记（10/2）
+     // Pending bundle selection (Scroll Boxes: pick 1 of N packs)
+     private IReadOnlyList<IReadOnlyList<CardModel>>? _pendingBundles;
+     private TaskCompletionSource<IEnumerable<CardModel>>? _pendingBundleTcs;
+@@ -236,11 +238,22 @@ public class RunSimulator
+             _loc.Lang = lang;
+             EnsureModelDbInitialized();
+ 
++            // 同一个进程里开新局：先清理上一局（不然 RunManager 报 State is already set，第二次开局直接失败）。
++            // 这样一个引擎进程可以连续开很多局，省掉每局约 5 秒的初始化（10/2 加，为了让引擎推演跑得动）
++            if (_runState != null || RunManager.Instance.IsInProgress)
++            {
++                try { _cardSelector.CancelPending(); } catch { }
++                CleanUp();
++                _syncCtx.Pump();
++            }
++
+             var player = CreatePlayer(character);
+             if (player == null)
+                 return Error($"Unknown character: {character}");
+ 
+-            var seedStr = seed ?? "headless_" + DateTimeOffset.UtcNow.ToUnixTimeSeconds();
++            // 不传种子时用游戏自己的种子生成（12 位，字符集不含 O 和 I，过滤不雅词），和真游戏开新局一样
++            var seedStr = string.IsNullOrEmpty(seed) ? MegaCrit.Sts2.Core.Helpers.SeedHelper.GetRandomSeed() : MegaCrit.Sts2.Core.Helpers.SeedHelper.CanonicalizeSeed(seed);
++            _seedStr = seedStr;
+             Log($"Creating RunState with seed={seedStr}");
+ 
+             // Use CreateForTest which properly handles mutable copies internally
+@@ -279,7 +292,8 @@ public class RunSimulator
+             Log("Entered Act 0");
+ 
+             // Register card selector for cards that need player choice
+-            CardSelectCmd.UseSelector(_cardSelector);
++            _selectorScope?.Dispose();
++            _selectorScope = CardSelectCmd.UseSelector(_cardSelector);
+             LocPatches._bundleSimRef = this;
+ 
+             // Now we should be at the map — detect decision point
+@@ -325,17 +339,15 @@ public class RunSimulator
+ 
+             if (args.TryGetValue("relics", out var relicsEl))
+             {
+-                var list = GetBackingList<RelicModel>(player, "_relics");
+-                if (list != null)
++                // 用游戏自己的 Add/RemoveRelicInternal：会设置遗物的主人（直接往列表里塞会缺 Owner，进房间时报空引用）
++                foreach (var r in player.Relics.ToList())
++                    player.RemoveRelicInternal(r, silent: true);
++                foreach (var rEl in relicsEl.EnumerateArray())
+                 {
+-                    list.Clear();
+-                    foreach (var rEl in relicsEl.EnumerateArray())
+-                    {
+-                        var id = rEl.GetString();
+-                        if (id == null) continue;
+-                        var model = ModelDb.GetById<RelicModel>(new ModelId("RELIC", id));
+-                        if (model != null) list.Add(model.ToMutable());
+-                    }
++                    var id = rEl.GetString();
++                    if (id == null) continue;
++                    var model = ModelDb.GetById<RelicModel>(new ModelId("RELIC", id));
++                    if (model != null) player.AddRelicInternal(model.ToMutable(), silent: true);
+                 }
+             }
+             if (args.TryGetValue("deck", out var deckEl))
+@@ -349,10 +361,14 @@ public class RunSimulator
+                 {
+                     var id = cEl.GetString();
+                     if (id == null) continue;
++                    // 牌名后面带 + 表示升级过（例如 "BASH+"）
++                    var upgrades = 0;
++                    while (id.EndsWith("+")) { upgrades++; id = id.Substring(0, id.Length - 1); }
+                     var canonical = ModelDb.GetById<CardModel>(new ModelId("CARD", id));
+                     if (canonical != null)
+                     {
+                         var card = _runState.CreateCard(canonical, player);
++                        for (int u = 0; u < upgrades && card.IsUpgradable; u++) card.UpgradeInternal();
+                         player.Deck.AddInternal(card, silent: true);
+                     }
+                 }
+@@ -404,6 +420,7 @@ public class RunSimulator
+             if (_runState == null) return Error("No run in progress");
+             var runState = _runState;
+             Log($"EnterRoom: type={roomType} encounter={encounter} event={eventId}");
++            ResetRoomTracking();   // 10/2：和选地图节点一样，进新房间前清掉上一个房间留下的待领奖励（否则下一场开局会「领」到上一场的卡牌奖励）
+ 
+             AbstractRoom room;
+             switch (roomType.ToLowerInvariant())
+@@ -490,6 +507,27 @@ public class RunSimulator
+         catch (Exception ex) { return ErrorWithTrace("SetDrawOrder failed", ex); }
+     }
+ 
++    /// 把抽牌堆按给定种子随机打乱（10/2 加：推演候选方案前打乱，推演就不会「偷看」真实的抽牌顺序）
++    public Dictionary<string, object?> ShuffleDrawPile(int seed)
++    {
++        try
++        {
++            if (_runState == null) return Error("No run in progress");
++            var pcs = _runState.Players[0].PlayerCombatState;
++            if (pcs?.DrawPile == null) return Error("Not in combat");
++            var drawList = GetBackingList<CardModel>(pcs.DrawPile, "_cards");
++            if (drawList == null) return Error("Cannot access draw pile");
++            var rng = new System.Random(seed);
++            for (int i = drawList.Count - 1; i > 0; i--)
++            {
++                int j = rng.Next(i + 1);
++                (drawList[i], drawList[j]) = (drawList[j], drawList[i]);
++            }
++            return new Dictionary<string, object?> { ["type"] = "ok", ["draw_pile_count"] = drawList.Count };
++        }
++        catch (Exception ex) { return ErrorWithTrace("ShuffleDrawPile failed", ex); }
++    }
++
+     // ─── Game actions ───
+     public Dictionary<string, object?> LoadSave(string saveJson, string lang = "en")
+     {
+@@ -500,6 +538,14 @@ public class RunSimulator
+ 
+             Log("Loading save file...");
+ 
++            // 同一进程里读档：先清理上一局（和 StartRun 一样，否则 State is already set）
++            if (_runState != null || RunManager.Instance.IsInProgress)
++            {
++                try { _cardSelector.CancelPending(); } catch { }
++                CleanUp();
++                _syncCtx.Pump();
++            }
++
+             if (!ValidateSaveSchemaVersion(saveJson, out var schemaError))
+                 return Error($"Save schema mismatch: {schemaError}");
+ 
+@@ -522,7 +568,8 @@ public class RunSimulator
+ 
+             CombatManager.Instance.TurnStarted += _ => _turnStarted.Set();
+             CombatManager.Instance.CombatEnded += _ => _combatEnded.Set();
+-            CardSelectCmd.UseSelector(_cardSelector);
++            _selectorScope?.Dispose();
++            _selectorScope = CardSelectCmd.UseSelector(_cardSelector);
+             LocPatches._bundleSimRef = this;
+ 
+             var savedRoom = _runState.CurrentRoom;
+@@ -867,6 +914,14 @@ public class RunSimulator
+ 
+             var player = _runState.Players[0];
+ 
++            // 战斗里还有没处理的选牌（例：敌方回合里连续弹出两次选牌，第二次在回到玩家回合之后才出现，
++            // 返回给调用方的却是普通出牌状态）：先把选牌交给调用方，不然出牌 / 结束回合都没反应，双方互等到超时（10/2 永世沙漏）
++            if ((action == "play_card" || action == "end_turn" || action == "use_potion") && _cardSelector.HasPending)
++            {
++                Log($"Card selection still pending; surfacing it instead of {action}");
++                return DetectDecisionPoint();
++            }
++
+             switch (action)
+             {
+                 case "select_map_node":
+@@ -1082,6 +1137,8 @@ public class RunSimulator
+                 for (int i = 0; i < 50; i++)
+                 {
+                     _syncCtx.Pump();
++                    // 敌人回合里弹出了选牌（如知识恶魔的「知识诅咒」），交给玩家选，不要当成卡住
++                    if (_cardSelector.HasPending || _cardSelector.HasPendingReward) break;
+                     if (_turnStarted.IsSet || _combatEnded.IsSet) break;
+                     if (!CombatManager.Instance.IsInProgress || player.Creature.IsDead) break;
+                     if (IsPlayPhase()) break;
+@@ -1094,6 +1151,12 @@ public class RunSimulator
+             YieldPatches.SuppressYield = false;
+         }
+ 
++        if (_cardSelector.HasPending || _cardSelector.HasPendingReward)
++        {
++            Log("Enemy turn opened a card selection; surfacing it to the player");
++            return DetectDecisionPoint();
++        }
++
+         // Second fallback: if still stuck after SuppressYield window, cancel and retry.
+         // The WaitUntilQueue TCS is likely deadlocked.
+         if (CombatManager.Instance.IsInProgress && !IsPlayPhase() && !player.Creature.IsDead)
+@@ -1446,6 +1509,23 @@ public class RunSimulator
+         _syncCtx.Pump();
+         WaitForActionExecutor();
+ 
++        // 选牌发生在敌人回合里：选完后继续推进敌人回合，直到回到玩家回合（或战斗结束、又弹出新的选牌）
++        if (CombatManager.Instance.IsInProgress && !IsPlayPhase() && !player.Creature.IsDead && !_cardSelector.HasPending)
++        {
++            YieldPatches.SuppressYield = true;
++            try
++            {
++                for (int i = 0; i < 200; i++)
++                {
++                    _syncCtx.Pump();
++                    if (_cardSelector.HasPending || _cardSelector.HasPendingReward) break;
++                    if (!CombatManager.Instance.IsInProgress || player.Creature.IsDead || IsPlayPhase()) break;
++                    Thread.Sleep(5);
++                }
++            }
++            finally { YieldPatches.SuppressYield = false; }
++        }
++
+         // Extra wait for rest-site SMITH: the background ChooseLocalOption task
+         // needs time to complete the upgrade after card selection resolves.
+         if (_runState?.CurrentRoom is RestSiteRoom)
+@@ -2980,9 +3060,13 @@ public class RunSimulator
+                 try { foreach (var dv in r.DynamicVars.Values) vars[dv.Name] = (int)dv.BaseValue; } catch { }
+                 return new Dictionary<string, object?>
+                 {
++                    ["id"] = r.Id.Entry,
+                     ["name"] = _loc.Relic(r.Id.Entry),
+                     ["description"] = _loc.Bilingual("relics", r.Id.Entry + ".description"),
+                     ["vars"] = vars.Count > 0 ? vars : null,
++                    // 计数类遗物（钢笔尖、双截棍、开心小花……）的当前计数和状态：Active = 差一下就触发
++                    ["counter"] = r.ShowCounter ? r.DisplayAmount : (int?)null,
++                    ["status"] = r.Status.ToString(),
+                 };
+             }).ToList(),
+             ["potions"] = player.Potions?.Select((p, i) =>
+@@ -3040,11 +3124,14 @@ public class RunSimulator
+         if (_runState == null) return new();
+         var ctx = new Dictionary<string, object?>
+         {
++            ["seed"] = _seedStr,
+             ["act"] = _runState.CurrentActIndex + 1,
+             ["act_name"] = _loc.Act(_runState.Act?.Id.Entry ?? "OVERGROWTH"),
+             ["floor"] = _runState.ActFloor,
+             ["room_type"] = _runState.CurrentRoom?.RoomType.ToString(),
+         };
++        // 当前战斗的遭遇 id（例如 DECIMILLIPEDE_ELITE），策略按它查敌人的特殊机制
++        try { if (_runState.CurrentRoom is CombatRoom cr) ctx["encounter"] = cr.Encounter?.Id.Entry; } catch { }
+ 
+         // Boss encounter info — use BossEncounter?.Id?.Entry
+         try
+@@ -3118,6 +3205,7 @@ public class RunSimulator
+         // Patch TalkCmd.Play to a no-op (issue #64). Monster speech-bubble VFX during
+         // moves (e.g. BygoneEffigy.WakeMove) NRE in headless and break the enemy turn.
+         PatchTalkCmd();
++        PatchCosmeticDeathHooks();
+ 
+         // Initialize localization system (needed for events, cards, etc.)
+         InitLocManager();
+@@ -3280,6 +3368,30 @@ public class RunSimulator
+         }
+     }
+ 
++    // 后台模式下界面单例（NAudioManager / NCombatRoom）是空的。这两个死亡钩子里只有音效、动画、音乐，
++    // 直接跳过，免得抛空引用打断死亡流程（10/2 引擎体检发现：帝皇蟹的火箭和粉碎者、灵魂枢纽）
++    private static void PatchCosmeticDeathHooks()
++    {
++        try
++        {
++            var harmony = new Harmony("sts2headless.cosmeticdeath");
++            var asm = typeof(CombatManager).Assembly;
++            var flags = System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Public
++                        | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.DeclaredOnly;
++            var sflags = System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Public;
++            var skipTask = typeof(YieldPatches).GetMethod(nameof(YieldPatches.SkipTaskPrefix), sflags);
++            var skipVoid = typeof(YieldPatches).GetMethod(nameof(YieldPatches.SkipVoidPrefix), sflags);
++            var rocket = asm.GetType("MegaCrit.Sts2.Core.Models.Monsters.Rocket")?.GetMethod("BeforeDeath", flags);
++            if (rocket != null && skipTask != null) harmony.Patch(rocket, new HarmonyMethod(skipTask));
++            var crusher = asm.GetType("MegaCrit.Sts2.Core.Models.Monsters.Crusher")?.GetMethod("BeforeDeath", flags);
++            if (crusher != null && skipTask != null) harmony.Patch(crusher, new HarmonyMethod(skipTask));
++            var nexus = asm.GetType("MegaCrit.Sts2.Core.Models.Monsters.SoulNexus")?.GetMethod("AfterDeath", flags);
++            if (nexus != null && skipVoid != null) harmony.Patch(nexus, new HarmonyMethod(skipVoid));
++            Console.Error.WriteLine($"[INFO] Patched cosmetic death hooks (Rocket={rocket != null}, Crusher={crusher != null}, SoulNexus={nexus != null})");
++        }
++        catch (Exception ex) { Console.Error.WriteLine($"[WARN] Failed to patch cosmetic death hooks: {ex.Message}"); }
++    }
++
+     private static void PatchTaskYield()
+     {
+         try
+@@ -3355,11 +3467,14 @@ public class RunSimulator
+             return _pendingTcs.Task;
+         }
+ 
++        // 先清空再交结果：TrySetResult 会让游戏代码当场接着跑，若它马上又发起下一次选牌，
++        // 原来的「交结果后再清空」会把新的待选一起清掉，游戏永远等不到回应（10/2 永世沙漏那场卡死的原因）
+         public void ResolvePending(IEnumerable<CardModel> selected)
+         {
+-            _pendingTcs?.TrySetResult(selected);
++            var tcs = _pendingTcs;
+             PendingOptions = null;
+             _pendingTcs = null;
++            tcs?.TrySetResult(selected);
+         }
+ 
+         public void ResolvePendingByIndices(int[] indices)
+@@ -3374,9 +3489,10 @@ public class RunSimulator
+ 
+         public void CancelPending()
+         {
+-            _pendingTcs?.TrySetResult(Array.Empty<CardModel>());
++            var tcs = _pendingTcs;
+             PendingOptions = null;
+             _pendingTcs = null;
++            tcs?.TrySetResult(Array.Empty<CardModel>());
+         }
+ 
+         // Pending card reward from events (GetSelectedCardReward blocks until resolved)
+@@ -3442,6 +3558,9 @@ public class RunSimulator
+         }
+ 
+         /// <summary>Harmony prefix: make Cmd.Wait() return completed task immediately (no-op in headless).</summary>
++        public static bool SkipTaskPrefix(ref Task __result) { __result = Task.CompletedTask; return false; }
++        public static bool SkipVoidPrefix() => false;
++
+         public static bool CmdWaitPrefix(ref Task __result)
+         {
+             __result = Task.CompletedTask;
+@@ -3908,6 +4027,15 @@ public class RunSimulator
+         };
+     }
+ 
++    private void ResetRoomTracking()
++    {
++        _rewardsProcessed = false;
++        _pendingCardReward = null;
++        _eventOptionChosen = false;
++        _lastEventOptionCount = 0;
++        _pendingRewards = null;
++    }
++
+     public void CleanUp()
+     {
+         try
+@@ -3915,6 +4043,8 @@ public class RunSimulator
+             if (RunManager.Instance.IsInProgress)
+                 RunManager.Instance.CleanUp(graceful: true);
+             _runState = null;
++            ResetRoomTracking();                                   // 10/2：开新局 / 读档时清掉上一局留下的待领奖励
++            _selectorScope?.Dispose(); _selectorScope = null;     // 清空选牌器栈（测试模式下 CardSelectCmd.Reset 不会清）
+         }
+         catch (Exception ex)
+         {

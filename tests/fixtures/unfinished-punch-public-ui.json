@@ -1,0 +1,377 @@
+{
+  "type": "decision",
+  "decision": "event_choice",
+  "context": {
+    "act": 1,
+    "act_name": "Underdocks",
+    "floor": 7,
+    "room_type": "Event",
+    "boss": {
+      "id": "LAGAVULIN_MATRIARCH_BOSS",
+      "name": "Lagavulin Matriarch"
+    }
+  },
+  "event_name": "Punch Off",
+  "description": "Two Punch Constructs are duking it out and you see some treasure in between them...\n\nShould you try to nab it?",
+  "options": [
+    {
+      "index": 0,
+      "title": "Nab",
+      "description": "Add Injury to your Deck. Obtain a random Relic.",
+      "text_key": "PUNCH_OFF.pages.INITIAL.options.NAB",
+      "is_locked": false,
+      "vars": {
+        "Gold": 92
+      }
+    },
+    {
+      "index": 1,
+      "title": "I Can Take Them",
+      "description": "Fight them for Greater Rewards.",
+      "text_key": "PUNCH_OFF.pages.INITIAL.options.I_CAN_TAKE_THEM",
+      "is_locked": false,
+      "vars": {
+        "Gold": 92
+      }
+    }
+  ],
+  "player": {
+    "name": "The Ironclad",
+    "hp": 66,
+    "max_hp": 80,
+    "block": 0,
+    "gold": 65,
+    "potion_slots": 2,
+    "relics": [
+      {
+        "id": "BURNING_BLOOD",
+        "name": "Burning Blood",
+        "description": "At the end of combat, heal {Heal} HP.",
+        "vars": {
+          "Heal": 6
+        },
+        "counter": null,
+        "status": "Normal"
+      },
+      {
+        "id": "SMALL_CAPSULE",
+        "name": "Small Capsule",
+        "description": "Upon pickup, obtain a random Relic.",
+        "vars": null,
+        "counter": null,
+        "status": "Normal"
+      },
+      {
+        "id": "WAR_PAINT",
+        "name": "War Paint",
+        "description": "Upon pickup, Upgrade {Cards} random {Cards:plural:Skill|Skills}.",
+        "vars": {
+          "Cards": 2
+        },
+        "counter": null,
+        "status": "Normal"
+      }
+    ],
+    "potions": [
+      {
+        "index": 0,
+        "name": "Flex Potion",
+        "description": "Gain {StrengthPower} Strength. At the end of your turn, lose {StrengthPower} Strength.",
+        "vars": {
+          "StrengthPower": 5
+        },
+        "target_type": "AnyPlayer"
+      },
+      {
+        "index": 1,
+        "name": "Vulnerable Potion",
+        "description": "Apply {VulnerablePower} Vulnerable.",
+        "vars": {
+          "VulnerablePower": 3
+        },
+        "target_type": "AnyEnemy"
+      }
+    ],
+    "deck_size": 14,
+    "deck": [
+      {
+        "id": "CARD.STRIKE_IRONCLAD",
+        "name": "Strike",
+        "cost": 1,
+        "type": "Attack",
+        "upgraded": false,
+        "description": "Deal {Damage:diff()} damage.",
+        "stats": {
+          "damage": 6
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "damage": 9
+          },
+          "description": "Deal {Damage:diff()} damage.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.STRIKE_IRONCLAD",
+        "name": "Strike",
+        "cost": 1,
+        "type": "Attack",
+        "upgraded": false,
+        "description": "Deal {Damage:diff()} damage.",
+        "stats": {
+          "damage": 6
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "damage": 9
+          },
+          "description": "Deal {Damage:diff()} damage.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.STRIKE_IRONCLAD",
+        "name": "Strike",
+        "cost": 1,
+        "type": "Attack",
+        "upgraded": false,
+        "description": "Deal {Damage:diff()} damage.",
+        "stats": {
+          "damage": 6
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "damage": 9
+          },
+          "description": "Deal {Damage:diff()} damage.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.STRIKE_IRONCLAD",
+        "name": "Strike",
+        "cost": 1,
+        "type": "Attack",
+        "upgraded": false,
+        "description": "Deal {Damage:diff()} damage.",
+        "stats": {
+          "damage": 6
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "damage": 9
+          },
+          "description": "Deal {Damage:diff()} damage.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.STRIKE_IRONCLAD",
+        "name": "Strike",
+        "cost": 1,
+        "type": "Attack",
+        "upgraded": false,
+        "description": "Deal {Damage:diff()} damage.",
+        "stats": {
+          "damage": 6
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "damage": 9
+          },
+          "description": "Deal {Damage:diff()} damage.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.DEFEND_IRONCLAD",
+        "name": "Defend",
+        "cost": 1,
+        "type": "Skill",
+        "upgraded": false,
+        "description": "Gain {Block:diff()} Block.",
+        "stats": {
+          "block": 5
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "block": 8
+          },
+          "description": "Gain {Block:diff()} Block.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.DEFEND_IRONCLAD",
+        "name": "Defend",
+        "cost": 1,
+        "type": "Skill",
+        "upgraded": false,
+        "description": "Gain {Block:diff()} Block.",
+        "stats": {
+          "block": 5
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "block": 8
+          },
+          "description": "Gain {Block:diff()} Block.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.DEFEND_IRONCLAD",
+        "name": "Defend",
+        "cost": 1,
+        "type": "Skill",
+        "upgraded": true,
+        "description": "Gain {Block:diff()} Block.",
+        "stats": {
+          "block": 8
+        },
+        "keywords": null,
+        "after_upgrade": null
+      },
+      {
+        "id": "CARD.DEFEND_IRONCLAD",
+        "name": "Defend",
+        "cost": 1,
+        "type": "Skill",
+        "upgraded": true,
+        "description": "Gain {Block:diff()} Block.",
+        "stats": {
+          "block": 8
+        },
+        "keywords": null,
+        "after_upgrade": null
+      },
+      {
+        "id": "CARD.BASH",
+        "name": "Bash",
+        "cost": 2,
+        "type": "Attack",
+        "upgraded": false,
+        "description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} Vulnerable.",
+        "stats": {
+          "damage": 8,
+          "vulnerablepower": 2
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 2,
+          "stats": {
+            "damage": 10,
+            "vulnerablepower": 3
+          },
+          "description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} Vulnerable.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.ASCENDERS_BANE",
+        "name": "Ascender's Bane",
+        "cost": 0,
+        "type": "Curse",
+        "upgraded": false,
+        "description": "",
+        "stats": null,
+        "keywords": [
+          "Eternal",
+          "Unplayable",
+          "Ethereal"
+        ],
+        "after_upgrade": null
+      },
+      {
+        "id": "CARD.TAUNT",
+        "name": "Taunt",
+        "cost": 1,
+        "type": "Skill",
+        "upgraded": false,
+        "description": "Gain {Block:diff()} Block.\nApply {VulnerablePower:diff()} Vulnerable.",
+        "stats": {
+          "block": 6,
+          "vulnerablepower": 1
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "block": 7,
+            "vulnerablepower": 2
+          },
+          "description": "Gain {Block:diff()} Block.\nApply {VulnerablePower:diff()} Vulnerable.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.TRUE_GRIT",
+        "name": "True Grit",
+        "cost": 1,
+        "type": "Skill",
+        "upgraded": false,
+        "description": "Gain {Block:diff()} Block.\nExhaust 1 card{IfUpgraded:show:| at random}.",
+        "stats": {
+          "block": 7
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "block": 9
+          },
+          "description": "Gain {Block:diff()} Block.\nExhaust 1 card{IfUpgraded:show:| at random}.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.TREMBLE",
+        "name": "Tremble",
+        "cost": 1,
+        "type": "Skill",
+        "upgraded": false,
+        "description": "Apply {VulnerablePower:diff()} Vulnerable.",
+        "stats": {
+          "vulnerablepower": 3
+        },
+        "keywords": [
+          "Exhaust"
+        ],
+        "after_upgrade": {
+          "cost": 1,
+          "stats": {
+            "vulnerablepower": 4
+          },
+          "description": "Apply {VulnerablePower:diff()} Vulnerable.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      }
+    ]
+  }
+}

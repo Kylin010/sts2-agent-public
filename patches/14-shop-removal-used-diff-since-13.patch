@@ -1,0 +1,46 @@
+diff --git a/src/Sts2Headless/RunSimulator.cs b/src/Sts2Headless/RunSimulator.cs
+index 35d30a5..85d632a 100644
+--- a/src/Sts2Headless/RunSimulator.cs
++++ b/src/Sts2Headless/RunSimulator.cs
+@@ -237,6 +237,23 @@ public class RunSimulator
+     // 事件选项任务崩了（后台没有界面单例：音效 / 震屏 / 肖像）或超时：这一局按技术故障停下（Codex 审查：结束事件会保留一半效果，
+     // 例如茂密植被回了血却跳过强制战斗；回传旧页又能再选一次）。之后每个命令都回 EVENT_FAULT 错误，开新局 / 读档才清掉。
+     private string? _eventFault;
++    // 10/3（B-014，claude-value 发现）：删牌后游戏靠界面 NMerchantCardRemoval 把「删牌服务」标成用过，后台没有界面，
++    // Used 永远是 false，同一个商店能无限删、价格不涨（真人每店一次）。这里记下删之前的次数，次数涨了就由引擎自己 SetUsed()
++    private MerchantCardRemovalEntry? _removalEntry;
++    private int _removalsBefore;
++
++    private void SyncCardRemovalUsed()
++    {
++        if (_removalEntry == null) return;
++        var player = _runState?.Players[0];
++        if (_runState?.CurrentRoom is not MerchantRoom || player == null) { _removalEntry = null; return; }
++        if (player.ExtraFields.CardShopRemovalsUsed > _removalsBefore)
++        {
++            _removalEntry.SetUsed();
++            Log("Card removal marked used (headless: no NMerchantCardRemoval UI to do it)");
++            _removalEntry = null;
++        }
++    }
+ 
+     private void SettleEventTask(int maxMs = 30000)
+     {
+@@ -1500,7 +1517,9 @@ public class RunSimulator
+ 
+         var removal = merchantRoom.GetLocalInventory().CardRemovalEntry;
+         if (removal == null) return Error("No card removal available");
++        if (removal.Used) return Error("Card removal already used in this shop");
+         if (player.Gold < removal.Cost) return Error("Not enough gold");
++        _removalEntry = removal; _removalsBefore = player.ExtraFields.CardShopRemovalsUsed;
+ 
+         try
+         {
+@@ -1908,6 +1927,7 @@ public class RunSimulator
+             if (_runState.CurrentRoom is EventRoom && !CombatManager.Instance.IsInProgress) SettleEventTask();
+             else if (_eventTask.IsCompleted || _runState.CurrentRoom is not EventRoom) _eventTask = null;
+         }
++        SyncCardRemovalUsed();
+         if (_eventFault != null)
+             return Error($"EVENT_FAULT: event option task {_eventFault} (headless cannot finish this option; treat the run as a technical failure)");
+ 

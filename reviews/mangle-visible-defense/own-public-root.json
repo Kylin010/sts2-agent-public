@@ -1,0 +1,1162 @@
+{
+  "type": "decision",
+  "decision": "combat_play",
+  "context": {
+    "seed": "PUB6447",
+    "act": 3,
+    "act_name": "Glory",
+    "floor": 15,
+    "room_type": "Boss",
+    "encounter": "TEST_SUBJECT_BOSS",
+    "boss": {
+      "id": "TEST_SUBJECT_BOSS",
+      "name": "Test Subject #C{Count}"
+    }
+  },
+  "round": 7,
+  "energy": 3,
+  "max_energy": 3,
+  "hand": [
+    {
+      "index": 0,
+      "id": "CARD.BREAKTHROUGH",
+      "name": "Breakthrough",
+      "cost": 1,
+      "costs_x": false,
+      "type": "Attack",
+      "rarity": "Common",
+      "can_play": true,
+      "upgraded": false,
+      "public_replay_count": 0,
+      "target_type": "AllEnemies",
+      "stats": {
+        "damage": 21,
+        "hploss": 1
+      },
+      "description": "Lose {HpLoss:diff()} HP.\nDeal {Damage:diff()} damage to ALL enemies.",
+      "damage_by_target": [
+        {
+          "target_index": 0,
+          "name": "Test Subject #C{Count}",
+          "damage": 1
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "id": "CARD.BASH",
+      "name": "Bash",
+      "cost": 2,
+      "costs_x": false,
+      "type": "Attack",
+      "rarity": "Basic",
+      "can_play": true,
+      "upgraded": false,
+      "public_replay_count": 0,
+      "target_type": "AnyEnemy",
+      "stats": {
+        "damage": 20,
+        "vulnerablepower": 2
+      },
+      "description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} Vulnerable.",
+      "damage_by_target": [
+        {
+          "target_index": 0,
+          "name": "Test Subject #C{Count}",
+          "damage": 1
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "id": "CARD.DEFEND_IRONCLAD",
+      "name": "Defend",
+      "cost": 1,
+      "costs_x": false,
+      "type": "Skill",
+      "rarity": "Basic",
+      "can_play": true,
+      "upgraded": false,
+      "public_replay_count": 0,
+      "target_type": "Self",
+      "stats": {
+        "block": 10
+      },
+      "description": "Gain {Block:diff()} Block."
+    },
+    {
+      "index": 3,
+      "id": "CARD.STRIKE_IRONCLAD",
+      "name": "Strike",
+      "cost": 1,
+      "costs_x": false,
+      "type": "Attack",
+      "rarity": "Basic",
+      "can_play": true,
+      "upgraded": false,
+      "public_replay_count": 0,
+      "target_type": "AnyEnemy",
+      "stats": {
+        "damage": 18
+      },
+      "description": "Deal {Damage:diff()} damage.",
+      "damage_by_target": [
+        {
+          "target_index": 0,
+          "name": "Test Subject #C{Count}",
+          "damage": 1
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "id": "CARD.DEFEND_IRONCLAD",
+      "name": "Defend",
+      "cost": 1,
+      "costs_x": false,
+      "type": "Skill",
+      "rarity": "Basic",
+      "can_play": true,
+      "upgraded": false,
+      "public_replay_count": 0,
+      "target_type": "Self",
+      "stats": {
+        "block": 10
+      },
+      "description": "Gain {Block:diff()} Block."
+    },
+    {
+      "index": 5,
+      "id": "CARD.DEFEND_IRONCLAD",
+      "name": "Defend",
+      "cost": 1,
+      "costs_x": false,
+      "type": "Skill",
+      "rarity": "Basic",
+      "can_play": true,
+      "upgraded": false,
+      "public_replay_count": 0,
+      "target_type": "Self",
+      "stats": {
+        "block": 10
+      },
+      "description": "Gain {Block:diff()} Block."
+    },
+    {
+      "index": 6,
+      "id": "CARD.PECK",
+      "name": "Peck",
+      "cost": 1,
+      "costs_x": false,
+      "type": "Attack",
+      "rarity": "Event",
+      "can_play": true,
+      "upgraded": false,
+      "public_replay_count": 0,
+      "target_type": "AnyEnemy",
+      "stats": {
+        "damage": 14,
+        "repeat": 3
+      },
+      "description": "Deal {Damage:diff()} damage {Repeat:diff()} times.",
+      "damage_by_target": [
+        {
+          "target_index": 0,
+          "name": "Test Subject #C{Count}",
+          "damage": 1,
+          "repeat": 3,
+          "total_damage": 3
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "id": "CARD.MANGLE",
+      "name": "Mangle",
+      "cost": 3,
+      "costs_x": false,
+      "type": "Attack",
+      "rarity": "Rare",
+      "can_play": true,
+      "upgraded": true,
+      "public_replay_count": 0,
+      "target_type": "AnyEnemy",
+      "stats": {
+        "damage": 38,
+        "strengthloss": 15
+      },
+      "description": "Deal {Damage:diff()} damage.\nEnemy loses {StrengthLoss:diff()} Strength this turn.",
+      "damage_by_target": [
+        {
+          "target_index": 0,
+          "name": "Test Subject #C{Count}",
+          "damage": 1
+        }
+      ]
+    }
+  ],
+  "enemies": [
+    {
+      "index": 0,
+      "name": "Test Subject #C{Count}",
+      "hp": 313,
+      "max_hp": 313,
+      "hp_display": "Normal",
+      "hp_numbers_visible": true,
+      "alive": true,
+      "block": 0,
+      "intents": [
+        {
+          "type": "Attack",
+          "damage": 11,
+          "hits": 3,
+          "total_damage": 33
+        }
+      ],
+      "intends_attack": true,
+      "powers": [
+        {
+          "id": "NEMESIS_POWER",
+          "display_amount": 1,
+          "name": "Nemesis",
+          "description": "At the end of every other turn, gains Intangible 1.",
+          "amount": 1
+        },
+        {
+          "id": "INTANGIBLE_POWER",
+          "display_amount": 1,
+          "name": "Intangible",
+          "description": "Reduce all damage taken and HP loss to 1 this turn.",
+          "amount": 1
+        }
+      ]
+    }
+  ],
+  "player": {
+    "name": "The Ironclad",
+    "hp": 65,
+    "max_hp": 86,
+    "block": 0,
+    "gold": 99,
+    "potion_slots": 3,
+    "relics": [
+      {
+        "id": "BURNING_BLOOD",
+        "name": "Burning Blood",
+        "description": "At the end of combat, heal {Heal} HP.",
+        "vars": {
+          "Heal": 6
+        },
+        "counter": null,
+        "status": "Normal"
+      },
+      {
+        "id": "PHIAL_HOLSTER",
+        "name": "Phial Holster",
+        "description": "Upon pickup, gain {PotionSlots} potion {PotionSlots:plural:slot|slots} and procure {Potions} random {Potions:plural:Potion|Potions}.",
+        "vars": {
+          "PotionSlots": 1,
+          "Potions": 2
+        },
+        "counter": null,
+        "status": "Normal"
+      },
+      {
+        "id": "BOOK_OF_FIVE_RINGS",
+        "name": "Book of Five Rings",
+        "description": "Every {Cards} {Cards:plural:card|cards} you add to your Deck, heal {Heal} HP.",
+        "vars": {
+          "Cards": 5,
+          "Heal": 20
+        },
+        "counter": 0,
+        "status": "Normal"
+      },
+      {
+        "id": "GREMLIN_HORN",
+        "name": "Gremlin Horn",
+        "description": "Whenever an enemy dies, gain {Energy:energyIcons()} and draw {Cards} {Cards:plural:card|cards}.",
+        "vars": {
+          "Energy": 1,
+          "Cards": 1
+        },
+        "counter": null,
+        "status": "Normal"
+      },
+      {
+        "id": "YUMMY_COOKIE",
+        "name": "Yummy Cookie",
+        "description": "Upon pickup, Upgrade {Cards} {Cards:plural:card|cards}.",
+        "vars": {
+          "Cards": 4
+        },
+        "counter": null,
+        "status": "Normal"
+      },
+      {
+        "id": "TEA_OF_DISCOURTESY",
+        "name": "Tea of Discourtesy",
+        "description": "At the start of the next combat, shuffle {DazedCount} Dazed into your Draw Pile.",
+        "vars": {
+          "Heal": 1,
+          "Combats": 0,
+          "DazedCount": 2
+        },
+        "counter": null,
+        "status": "Disabled"
+      },
+      {
+        "id": "ORNAMENTAL_FAN",
+        "name": "Ornamental Fan",
+        "description": "Every time you play {Cards} Attacks in a single turn, gain {Block} Block.",
+        "vars": {
+          "Cards": 3,
+          "Block": 4
+        },
+        "counter": 0,
+        "status": "Normal"
+      },
+      {
+        "id": "CENTENNIAL_PUZZLE",
+        "name": "Centennial Puzzle",
+        "description": "The first time you lose HP each combat, draw {Cards} {Cards:plural:card|cards}.",
+        "vars": {
+          "Cards": 3
+        },
+        "counter": null,
+        "status": "Normal"
+      },
+      {
+        "id": "CHOSEN_CHEESE",
+        "name": "The Chosen Cheese",
+        "description": "At the end of combat, gain {MaxHp} Max HP.",
+        "vars": {
+          "MaxHp": 1
+        },
+        "counter": null,
+        "status": "Normal"
+      },
+      {
+        "id": "CANDELABRA",
+        "name": "Candelabra",
+        "description": "At the start of your 2nd turn, gain {Energy:energyIcons()}.",
+        "vars": {
+          "Energy": 2
+        },
+        "counter": null,
+        "status": "Normal"
+      },
+      {
+        "id": "SIGNET_RING",
+        "name": "Signet Ring",
+        "description": "Upon pickup, gain {Gold} Gold.",
+        "vars": {
+          "Gold": 888
+        },
+        "counter": null,
+        "status": "Normal"
+      },
+      {
+        "id": "VAMBRACE",
+        "name": "Vambrace",
+        "description": "The first time you gain Block from a card each combat, double the amount gained.",
+        "vars": null,
+        "counter": null,
+        "status": "Normal"
+      },
+      {
+        "id": "TUNING_FORK",
+        "name": "Tuning Fork",
+        "description": "Every time you play {Cards} Skills, gain {Block} Block.",
+        "vars": {
+          "Cards": 10,
+          "Block": 7
+        },
+        "counter": 4,
+        "status": "Normal"
+      },
+      {
+        "id": "BAG_OF_PREPARATION",
+        "name": "Bag of Preparation",
+        "description": "At the start of each combat, draw {Cards} additional {Cards:plural:card|cards}.",
+        "vars": {
+          "Cards": 2
+        },
+        "counter": null,
+        "status": "Normal"
+      },
+      {
+        "id": "GORGET",
+        "name": "Gorget",
+        "description": "At the start of each combat, gain {PlatingPower} Plating.",
+        "vars": {
+          "PlatingPower": 4
+        },
+        "counter": null,
+        "status": "Normal"
+      },
+      {
+        "id": "ROYAL_STAMP",
+        "name": "Royal Stamp",
+        "description": "Upon pickup, choose an Attack or Skill in your Deck to Enchant with {Enchantment}.",
+        "vars": {
+          "Cards": 1,
+          "Enchantment": 0
+        },
+        "counter": null,
+        "status": "Normal"
+      },
+      {
+        "id": "BRONZE_SCALES",
+        "name": "Bronze Scales",
+        "description": "Start each combat with {ThornsPower} Thorns.",
+        "vars": {
+          "ThornsPower": 3
+        },
+        "counter": null,
+        "status": "Normal"
+      }
+    ],
+    "potions": [],
+    "deck_size": 23,
+    "deck": [
+      {
+        "id": "CARD.STRIKE_IRONCLAD",
+        "name": "Strike",
+        "cost": 1,
+        "costs_x": false,
+        "type": "Attack",
+        "upgraded": false,
+        "description": "Deal {Damage:diff()} damage.",
+        "stats": {
+          "damage": 6
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "costs_x": false,
+          "stats": {
+            "damage": 9
+          },
+          "description": "Deal {Damage:diff()} damage.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.STRIKE_IRONCLAD",
+        "name": "Strike",
+        "cost": 1,
+        "costs_x": false,
+        "type": "Attack",
+        "upgraded": false,
+        "description": "Deal {Damage:diff()} damage.",
+        "stats": {
+          "damage": 6
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "costs_x": false,
+          "stats": {
+            "damage": 9
+          },
+          "description": "Deal {Damage:diff()} damage.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.STRIKE_IRONCLAD",
+        "name": "Strike",
+        "cost": 1,
+        "costs_x": false,
+        "type": "Attack",
+        "upgraded": false,
+        "description": "Deal {Damage:diff()} damage.",
+        "stats": {
+          "damage": 6
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "costs_x": false,
+          "stats": {
+            "damage": 9
+          },
+          "description": "Deal {Damage:diff()} damage.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.DEFEND_IRONCLAD",
+        "name": "Defend",
+        "cost": 1,
+        "costs_x": false,
+        "type": "Skill",
+        "upgraded": false,
+        "description": "Gain {Block:diff()} Block.",
+        "stats": {
+          "block": 5
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "costs_x": false,
+          "stats": {
+            "block": 8
+          },
+          "description": "Gain {Block:diff()} Block.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.DEFEND_IRONCLAD",
+        "name": "Defend",
+        "cost": 1,
+        "costs_x": false,
+        "type": "Skill",
+        "upgraded": false,
+        "description": "Gain {Block:diff()} Block.",
+        "stats": {
+          "block": 5
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "costs_x": false,
+          "stats": {
+            "block": 8
+          },
+          "description": "Gain {Block:diff()} Block.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.DEFEND_IRONCLAD",
+        "name": "Defend",
+        "cost": 1,
+        "costs_x": false,
+        "type": "Skill",
+        "upgraded": false,
+        "description": "Gain {Block:diff()} Block.",
+        "stats": {
+          "block": 5
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "costs_x": false,
+          "stats": {
+            "block": 8
+          },
+          "description": "Gain {Block:diff()} Block.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.DEFEND_IRONCLAD",
+        "name": "Defend",
+        "cost": 1,
+        "costs_x": false,
+        "type": "Skill",
+        "upgraded": false,
+        "description": "Gain {Block:diff()} Block.",
+        "stats": {
+          "block": 5
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "costs_x": false,
+          "stats": {
+            "block": 8
+          },
+          "description": "Gain {Block:diff()} Block.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.BASH",
+        "name": "Bash",
+        "cost": 2,
+        "costs_x": false,
+        "type": "Attack",
+        "upgraded": false,
+        "description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} Vulnerable.",
+        "stats": {
+          "damage": 8,
+          "vulnerablepower": 2
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 2,
+          "costs_x": false,
+          "stats": {
+            "damage": 10,
+            "vulnerablepower": 3
+          },
+          "description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} Vulnerable.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.ASCENDERS_BANE",
+        "name": "Ascender's Bane",
+        "cost": 0,
+        "costs_x": false,
+        "type": "Curse",
+        "upgraded": false,
+        "description": "",
+        "stats": null,
+        "keywords": [
+          "Eternal",
+          "Unplayable",
+          "Ethereal"
+        ],
+        "after_upgrade": null
+      },
+      {
+        "id": "CARD.TAUNT",
+        "name": "Taunt",
+        "cost": 1,
+        "costs_x": false,
+        "type": "Skill",
+        "upgraded": true,
+        "description": "Gain {Block:diff()} Block.\nApply {VulnerablePower:diff()} Vulnerable.",
+        "stats": {
+          "block": 7,
+          "vulnerablepower": 2
+        },
+        "keywords": null,
+        "after_upgrade": null
+      },
+      {
+        "id": "CARD.TREMBLE",
+        "name": "Tremble",
+        "cost": 1,
+        "costs_x": false,
+        "type": "Skill",
+        "upgraded": false,
+        "description": "Apply {VulnerablePower:diff()} Vulnerable.",
+        "stats": {
+          "vulnerablepower": 3
+        },
+        "keywords": [
+          "Exhaust"
+        ],
+        "after_upgrade": {
+          "cost": 1,
+          "costs_x": false,
+          "stats": {
+            "vulnerablepower": 4
+          },
+          "description": "Apply {VulnerablePower:diff()} Vulnerable.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.PECK",
+        "name": "Peck",
+        "cost": 1,
+        "costs_x": false,
+        "type": "Attack",
+        "upgraded": false,
+        "description": "Deal {Damage:diff()} damage {Repeat:diff()} times.",
+        "stats": {
+          "damage": 2,
+          "repeat": 3
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "costs_x": false,
+          "stats": {
+            "damage": 2,
+            "repeat": 4
+          },
+          "description": "Deal {Damage:diff()} damage {Repeat:diff()} times.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.BLOODLETTING",
+        "name": "Bloodletting",
+        "cost": 0,
+        "costs_x": false,
+        "type": "Skill",
+        "upgraded": true,
+        "description": "Lose {HpLoss:diff()} HP.\nGain {Energy:energyIcons()}.",
+        "stats": {
+          "hploss": 3,
+          "energy": 3
+        },
+        "keywords": [
+          "Innate",
+          "Retain"
+        ],
+        "after_upgrade": null,
+        "enchantment": "Royally Approved",
+        "enchantment_status": "Normal"
+      },
+      {
+        "id": "CARD.BREAKTHROUGH",
+        "name": "Breakthrough",
+        "cost": 1,
+        "costs_x": false,
+        "type": "Attack",
+        "upgraded": false,
+        "description": "Lose {HpLoss:diff()} HP.\nDeal {Damage:diff()} damage to ALL enemies.",
+        "stats": {
+          "damage": 9,
+          "hploss": 1
+        },
+        "keywords": null,
+        "after_upgrade": {
+          "cost": 1,
+          "costs_x": false,
+          "stats": {
+            "damage": 13,
+            "hploss": 1
+          },
+          "description": "Lose {HpLoss:diff()} HP.\nDeal {Damage:diff()} damage to ALL enemies.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.FIGHT_ME",
+        "name": "Fight Me!",
+        "cost": 2,
+        "costs_x": false,
+        "type": "Attack",
+        "upgraded": true,
+        "description": "Deal {Damage:diff()} damage twice.\nGain {StrengthPower:diff()} Strength.\nThe enemy gains {EnemyStrength:diff()} Strength.",
+        "stats": {
+          "damage": 6,
+          "repeat": 2,
+          "strengthpower": 4,
+          "enemystrength": 1
+        },
+        "keywords": null,
+        "after_upgrade": null
+      },
+      {
+        "id": "CARD.FIGHT_ME",
+        "name": "Fight Me!",
+        "cost": 2,
+        "costs_x": false,
+        "type": "Attack",
+        "upgraded": true,
+        "description": "Deal {Damage:diff()} damage twice.\nGain {StrengthPower:diff()} Strength.\nThe enemy gains {EnemyStrength:diff()} Strength.",
+        "stats": {
+          "damage": 6,
+          "repeat": 2,
+          "strengthpower": 4,
+          "enemystrength": 1
+        },
+        "keywords": null,
+        "after_upgrade": null
+      },
+      {
+        "id": "CARD.FISTICUFFS",
+        "name": "Fisticuffs",
+        "cost": 1,
+        "costs_x": false,
+        "type": "Attack",
+        "upgraded": true,
+        "description": "Deal {Damage:diff()} damage.\nGain Block equal to damage dealt.",
+        "stats": {
+          "damage": 9
+        },
+        "keywords": null,
+        "after_upgrade": null
+      },
+      {
+        "id": "CARD.IMPERVIOUS",
+        "name": "Impervious",
+        "cost": 2,
+        "costs_x": false,
+        "type": "Skill",
+        "upgraded": false,
+        "description": "Gain {Block:diff()} Block.",
+        "stats": {
+          "block": 30
+        },
+        "keywords": [
+          "Exhaust"
+        ],
+        "after_upgrade": {
+          "cost": 2,
+          "costs_x": false,
+          "stats": {
+            "block": 40
+          },
+          "description": "Gain {Block:diff()} Block.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.FORGOTTEN_RITUAL",
+        "name": "Forgotten Ritual",
+        "cost": 1,
+        "costs_x": false,
+        "type": "Skill",
+        "upgraded": false,
+        "description": "Gain {Energy:energyIcons()}.",
+        "stats": {
+          "energy": 3
+        },
+        "keywords": [
+          "Exhaust"
+        ],
+        "after_upgrade": {
+          "cost": 1,
+          "costs_x": false,
+          "stats": {
+            "energy": 4
+          },
+          "description": "Gain {Energy:energyIcons()}.",
+          "added_keywords": null,
+          "removed_keywords": null
+        }
+      },
+      {
+        "id": "CARD.BATTLE_TRANCE",
+        "name": "Battle Trance",
+        "cost": 0,
+        "costs_x": false,
+        "type": "Skill",
+        "upgraded": true,
+        "description": "Draw {Cards:diff()} cards.\nYou cannot draw additional cards this turn.",
+        "stats": {
+          "cards": 4
+        },
+        "keywords": null,
+        "after_upgrade": null
+      },
+      {
+        "id": "CARD.VICIOUS",
+        "name": "Vicious",
+        "cost": 1,
+        "costs_x": false,
+        "type": "Power",
+        "upgraded": true,
+        "description": "Whenever you apply Vulnerable, draw {Cards:diff()} {Cards:plural:card|cards}.",
+        "stats": {
+          "cards": 2
+        },
+        "keywords": null,
+        "after_upgrade": null
+      },
+      {
+        "id": "CARD.MANGLE",
+        "name": "Mangle",
+        "cost": 3,
+        "costs_x": false,
+        "type": "Attack",
+        "upgraded": true,
+        "description": "Deal {Damage:diff()} damage.\nEnemy loses {StrengthLoss:diff()} Strength this turn.",
+        "stats": {
+          "damage": 26,
+          "strengthloss": 15
+        },
+        "keywords": null,
+        "after_upgrade": null
+      },
+      {
+        "id": "CARD.UNMOVABLE",
+        "name": "Unmovable",
+        "cost": 1,
+        "costs_x": false,
+        "type": "Power",
+        "upgraded": true,
+        "description": "The first time you gain Block from a card each turn, double the amount gained.",
+        "stats": null,
+        "keywords": null,
+        "after_upgrade": null,
+        "enchantment": "Swift",
+        "enchantment_amount": 2,
+        "enchantment_status": "Normal"
+      }
+    ]
+  },
+  "player_powers": [
+    {
+      "id": "THORNS_POWER",
+      "display_amount": 3,
+      "name": "Thorns",
+      "description": "When hit by an attack, deal damage back.",
+      "amount": 3
+    },
+    {
+      "id": "UNMOVABLE_POWER",
+      "display_amount": 1,
+      "name": "Unmovable",
+      "description": "The first time you gain Block from a card each turn, double the amount gained.",
+      "amount": 1
+    },
+    {
+      "id": "VICIOUS_POWER",
+      "display_amount": 2,
+      "name": "Vicious",
+      "description": "Whenever you apply Vulnerable, draw 1 card.",
+      "amount": 2
+    },
+    {
+      "id": "STRENGTH_POWER",
+      "display_amount": 12,
+      "name": "Strength",
+      "description": "Strength adds additional damage to Attacks.",
+      "amount": 12
+    },
+    {
+      "id": "NO_DRAW_POWER",
+      "display_amount": 1,
+      "name": "No Draw",
+      "description": "You may not draw any more cards this turn.",
+      "amount": 1
+    }
+  ],
+  "draw_pile_count": 2,
+  "discard_pile_count": 7,
+  "exhaust_pile_count": 4,
+  "draw_pile_composition": [
+    {
+      "affliction": null,
+      "cost": 1,
+      "costs_x": false,
+      "enchantment": null,
+      "id": "CARD.DEFEND_IRONCLAD",
+      "keywords": [],
+      "public_replay_count": 0,
+      "stats": {
+        "block": 5
+      },
+      "stats_preview_scope": "pile_without_global_hooks_printed_variables",
+      "target_type": "Self",
+      "type": "Skill",
+      "upgraded": false,
+      "count": 1
+    },
+    {
+      "affliction": null,
+      "cost": 1,
+      "costs_x": false,
+      "enchantment": null,
+      "id": "CARD.STRIKE_IRONCLAD",
+      "keywords": [],
+      "public_replay_count": 0,
+      "stats": {
+        "damage": 6
+      },
+      "stats_preview_scope": "pile_without_global_hooks_printed_variables",
+      "target_type": "AnyEnemy",
+      "type": "Attack",
+      "upgraded": false,
+      "count": 1
+    }
+  ],
+  "discard_pile_composition": [
+    {
+      "affliction": null,
+      "cost": 0,
+      "costs_x": false,
+      "enchantment": null,
+      "id": "CARD.BATTLE_TRANCE",
+      "keywords": [],
+      "public_replay_count": 0,
+      "stats": {
+        "cards": 4
+      },
+      "stats_preview_scope": "pile_without_global_hooks_printed_variables",
+      "target_type": "Self",
+      "type": "Skill",
+      "upgraded": true,
+      "count": 1
+    },
+    {
+      "affliction": null,
+      "cost": 0,
+      "costs_x": false,
+      "enchantment": {
+        "description": "ROYALLY_APPROVED.description",
+        "id": "ENCHANTMENT.ROYALLY_APPROVED",
+        "title": "ROYALLY_APPROVED.title"
+      },
+      "id": "CARD.BLOODLETTING",
+      "keywords": [
+        "Innate",
+        "Retain"
+      ],
+      "public_replay_count": 0,
+      "stats": {
+        "energy": 3,
+        "hploss": 3
+      },
+      "stats_preview_scope": "pile_without_global_hooks_printed_variables",
+      "target_type": "Self",
+      "type": "Skill",
+      "upgraded": true,
+      "count": 1
+    },
+    {
+      "affliction": null,
+      "cost": 1,
+      "costs_x": false,
+      "enchantment": null,
+      "id": "CARD.FISTICUFFS",
+      "keywords": [],
+      "public_replay_count": 0,
+      "stats": {
+        "damage": 9
+      },
+      "stats_preview_scope": "pile_without_global_hooks_printed_variables",
+      "target_type": "AnyEnemy",
+      "type": "Attack",
+      "upgraded": true,
+      "count": 1
+    },
+    {
+      "affliction": null,
+      "cost": 1,
+      "costs_x": false,
+      "enchantment": null,
+      "id": "CARD.STRIKE_IRONCLAD",
+      "keywords": [],
+      "public_replay_count": 0,
+      "stats": {
+        "damage": 6
+      },
+      "stats_preview_scope": "pile_without_global_hooks_printed_variables",
+      "target_type": "AnyEnemy",
+      "type": "Attack",
+      "upgraded": false,
+      "count": 1
+    },
+    {
+      "affliction": null,
+      "cost": 1,
+      "costs_x": false,
+      "enchantment": null,
+      "id": "CARD.TAUNT",
+      "keywords": [],
+      "public_replay_count": 0,
+      "stats": {
+        "block": 7,
+        "vulnerablepower": 2
+      },
+      "stats_preview_scope": "pile_without_global_hooks_printed_variables",
+      "target_type": "AnyEnemy",
+      "type": "Skill",
+      "upgraded": true,
+      "count": 1
+    },
+    {
+      "affliction": null,
+      "cost": 2,
+      "costs_x": false,
+      "enchantment": null,
+      "id": "CARD.FIGHT_ME",
+      "keywords": [],
+      "public_replay_count": 0,
+      "stats": {
+        "damage": 6,
+        "enemystrength": 1,
+        "strengthpower": 4
+      },
+      "stats_preview_scope": "pile_without_global_hooks_printed_variables",
+      "target_type": "AnyEnemy",
+      "type": "Attack",
+      "upgraded": true,
+      "count": 2
+    }
+  ],
+  "exhaust_pile_composition": [
+    {
+      "affliction": null,
+      "cost": 1,
+      "costs_x": false,
+      "enchantment": null,
+      "id": "CARD.FORGOTTEN_RITUAL",
+      "keywords": [
+        "Exhaust"
+      ],
+      "public_replay_count": 0,
+      "stats": {
+        "energy": 3
+      },
+      "stats_preview_scope": "pile_without_global_hooks_printed_variables",
+      "target_type": "Self",
+      "type": "Skill",
+      "upgraded": false,
+      "count": 1
+    },
+    {
+      "affliction": null,
+      "cost": 1,
+      "costs_x": false,
+      "enchantment": null,
+      "id": "CARD.TREMBLE",
+      "keywords": [
+        "Exhaust"
+      ],
+      "public_replay_count": 0,
+      "stats": {
+        "vulnerablepower": 3
+      },
+      "stats_preview_scope": "pile_without_global_hooks_printed_variables",
+      "target_type": "AnyEnemy",
+      "type": "Skill",
+      "upgraded": false,
+      "count": 1
+    },
+    {
+      "affliction": null,
+      "cost": 2,
+      "costs_x": false,
+      "enchantment": null,
+      "id": "CARD.IMPERVIOUS",
+      "keywords": [
+        "Exhaust"
+      ],
+      "public_replay_count": 0,
+      "stats": {
+        "block": 30
+      },
+      "stats_preview_scope": "pile_without_global_hooks_printed_variables",
+      "target_type": "Self",
+      "type": "Skill",
+      "upgraded": false,
+      "count": 1
+    },
+    {
+      "affliction": null,
+      "cost": null,
+      "costs_x": false,
+      "enchantment": null,
+      "id": "CARD.ASCENDERS_BANE",
+      "keywords": [
+        "Eternal",
+        "Ethereal",
+        "Unplayable"
+      ],
+      "public_replay_count": 0,
+      "stats": {},
+      "stats_preview_scope": "pile_without_global_hooks_printed_variables",
+      "target_type": "None",
+      "type": "Curse",
+      "upgraded": false,
+      "count": 1
+    }
+  ]
+}

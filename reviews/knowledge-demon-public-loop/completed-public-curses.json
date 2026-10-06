@@ -1,0 +1,684 @@
+{
+  "scope": "Current fields of completed normal mainline historical END observations only; no later observation or private counter needed for the inference",
+  "counts": {
+    "ambiguous": 232,
+    "proved_three": 10
+  },
+  "distinct_games": {
+    "ambiguous": 30,
+    "proved_three": 8
+  },
+  "source_sha256": {
+    "/opt/slay-the-spire-2/agent/results/it-iter-pub-1005-0032.jsonl": "177bd9c2c23b5d78aa15efb8b994989ebaf7debd2ab21d07c74ffeabec4e79e4",
+    "/opt/slay-the-spire-2/agent/results/it-iter-pub-dev-1005-0034.jsonl": "09ce291f4be2460aa7094a36eec55a9ec7e894de8550dfdcda4e88da5e33a12d"
+  },
+  "proved_cases": [
+    {
+      "source": "it-iter-pub-1005-0032.jsonl",
+      "seed": "BN8NVZXLZJVA",
+      "step": 389,
+      "current_public": {
+        "act": 2,
+        "floor": 16,
+        "d": "combat",
+        "r": 10,
+        "hp": 16,
+        "blk": 10,
+        "en": 0,
+        "hand": [
+          "Dismantle",
+          "Pommel Strike",
+          "Bash"
+        ],
+        "foes": [
+          [
+            "Knowledge Demon",
+            60,
+            0,
+            24
+          ]
+        ],
+        "a": "end_turn",
+        "np": [
+          0,
+          1,
+          2
+        ],
+        "cost": [
+          1,
+          1,
+          2
+        ],
+        "pots": [],
+        "fpow": [
+          {
+            "Strength": 6
+          }
+        ],
+        "ppow": {
+          "Strength": 2,
+          "Mind Rot": 1,
+          "Cruelty": 50,
+          "Sloth": 3,
+          "Disintegration": 8
+        }
+      },
+      "derived_public_curses": [
+        {
+          "id": "MIND_ROT_POWER",
+          "amount": 1
+        },
+        {
+          "id": "SLOTH_POWER",
+          "amount": 3
+        },
+        {
+          "id": "DISINTEGRATION_POWER",
+          "amount": 8
+        }
+      ],
+      "possible_completed_stages": [
+        3
+      ]
+    },
+    {
+      "source": "it-iter-pub-1005-0032.jsonl",
+      "seed": "GRNSN4LTMJ9Q",
+      "step": 452,
+      "current_public": {
+        "act": 2,
+        "floor": 16,
+        "d": "combat",
+        "r": 10,
+        "hp": 57,
+        "blk": 21,
+        "en": 1,
+        "hand": [
+          "Strike",
+          "Strike"
+        ],
+        "foes": [
+          [
+            "Knowledge Demon",
+            40,
+            0,
+            26
+          ]
+        ],
+        "a": "end_turn",
+        "np": [
+          0,
+          1
+        ],
+        "cost": [
+          1,
+          1
+        ],
+        "pots": [],
+        "fpow": [
+          {
+            "Strength": 8
+          }
+        ],
+        "ppow": {
+          "Strength": 10,
+          "Mind Rot": 1,
+          "Sloth": 3,
+          "Unmovable": 1,
+          "Disintegration": 8
+        }
+      },
+      "derived_public_curses": [
+        {
+          "id": "MIND_ROT_POWER",
+          "amount": 1
+        },
+        {
+          "id": "SLOTH_POWER",
+          "amount": 3
+        },
+        {
+          "id": "DISINTEGRATION_POWER",
+          "amount": 8
+        }
+      ],
+      "possible_completed_stages": [
+        3
+      ]
+    },
+    {
+      "source": "it-iter-pub-1005-0032.jsonl",
+      "seed": "3JKN1PL1GAES",
+      "step": 405,
+      "current_public": {
+        "act": 2,
+        "floor": 16,
+        "d": "combat",
+        "r": 10,
+        "hp": 4,
+        "blk": 0,
+        "en": 2,
+        "hand": [
+          "Thunderclap"
+        ],
+        "foes": [
+          [
+            "Knowledge Demon",
+            66,
+            0,
+            24
+          ]
+        ],
+        "a": "end_turn",
+        "np": [
+          0
+        ],
+        "cost": [
+          1
+        ],
+        "pots": [],
+        "fpow": [
+          {
+            "Strength": 6,
+            "Vulnerable": 7
+          }
+        ],
+        "ppow": {
+          "Inferno": 6,
+          "Mind Rot": 1,
+          "Unmovable": 1,
+          "Sloth": 3,
+          "Disintegration": 8
+        }
+      },
+      "derived_public_curses": [
+        {
+          "id": "MIND_ROT_POWER",
+          "amount": 1
+        },
+        {
+          "id": "SLOTH_POWER",
+          "amount": 3
+        },
+        {
+          "id": "DISINTEGRATION_POWER",
+          "amount": 8
+        }
+      ],
+      "possible_completed_stages": [
+        3
+      ]
+    },
+    {
+      "source": "it-iter-pub-1005-0032.jsonl",
+      "seed": "B3KRHZC8W9RP",
+      "step": 466,
+      "current_public": {
+        "act": 2,
+        "floor": 16,
+        "d": "combat",
+        "r": 10,
+        "hp": 18,
+        "blk": 24,
+        "en": 0,
+        "hand": [
+          "Defend"
+        ],
+        "foes": [
+          [
+            "Knowledge Demon",
+            24,
+            0,
+            12
+          ]
+        ],
+        "a": "end_turn",
+        "np": [
+          0
+        ],
+        "cost": [
+          1
+        ],
+        "pots": [],
+        "fpow": [
+          {
+            "Strength": 6,
+            "Vulnerable": 2
+          }
+        ],
+        "ppow": {
+          "Cruelty": 50,
+          "Mind Rot": 1,
+          "Rupture": 2,
+          "Crimson Mantle": 7,
+          "Sloth": 3,
+          "Strength": 10,
+          "Dexterity": 1,
+          "Disintegration": 8,
+          "Colossus": 1,
+          "Free Attack": 1
+        }
+      },
+      "derived_public_curses": [
+        {
+          "id": "MIND_ROT_POWER",
+          "amount": 1
+        },
+        {
+          "id": "SLOTH_POWER",
+          "amount": 3
+        },
+        {
+          "id": "DISINTEGRATION_POWER",
+          "amount": 8
+        }
+      ],
+      "possible_completed_stages": [
+        3
+      ]
+    },
+    {
+      "source": "it-iter-pub-1005-0032.jsonl",
+      "seed": "JKPGGMF8HP7T",
+      "step": 508,
+      "current_public": {
+        "act": 2,
+        "floor": 16,
+        "d": "combat",
+        "r": 10,
+        "hp": 4,
+        "blk": 47,
+        "en": 0,
+        "hand": [
+          "Bash"
+        ],
+        "foes": [
+          [
+            "Knowledge Demon",
+            214,
+            0,
+            24
+          ]
+        ],
+        "a": "end_turn",
+        "np": [
+          0
+        ],
+        "cost": [
+          2
+        ],
+        "pots": [
+          "Strength Potion"
+        ],
+        "fpow": [
+          {
+            "Vulnerable": 4,
+            "Strength": 6
+          }
+        ],
+        "ppow": {
+          "Crimson Mantle": 17,
+          "Mind Rot": 1,
+          "Vicious": 2,
+          "Stampede": 1,
+          "Sloth": 3,
+          "Barricade": 1,
+          "Disintegration": 8
+        }
+      },
+      "derived_public_curses": [
+        {
+          "id": "MIND_ROT_POWER",
+          "amount": 1
+        },
+        {
+          "id": "SLOTH_POWER",
+          "amount": 3
+        },
+        {
+          "id": "DISINTEGRATION_POWER",
+          "amount": 8
+        }
+      ],
+      "possible_completed_stages": [
+        3
+      ]
+    },
+    {
+      "source": "it-iter-pub-1005-0032.jsonl",
+      "seed": "JKPGGMF8HP7T",
+      "step": 513,
+      "current_public": {
+        "act": 2,
+        "floor": 16,
+        "d": "combat",
+        "r": 11,
+        "hp": 2,
+        "blk": 45,
+        "en": 0,
+        "hand": [
+          "Strike",
+          "Taunt"
+        ],
+        "foes": [
+          [
+            "Knowledge Demon",
+            214,
+            0,
+            45
+          ]
+        ],
+        "a": "end_turn",
+        "np": [
+          0,
+          1
+        ],
+        "cost": [
+          1,
+          1
+        ],
+        "pots": [],
+        "fpow": [
+          {
+            "Vulnerable": 3,
+            "Strength": 6
+          }
+        ],
+        "ppow": {
+          "Crimson Mantle": 17,
+          "Mind Rot": 1,
+          "Vicious": 2,
+          "Stampede": 1,
+          "Sloth": 3,
+          "Barricade": 1,
+          "Disintegration": 8,
+          "Strength": 2,
+          "Hellraiser": 1
+        }
+      },
+      "derived_public_curses": [
+        {
+          "id": "MIND_ROT_POWER",
+          "amount": 1
+        },
+        {
+          "id": "SLOTH_POWER",
+          "amount": 3
+        },
+        {
+          "id": "DISINTEGRATION_POWER",
+          "amount": 8
+        }
+      ],
+      "possible_completed_stages": [
+        3
+      ]
+    },
+    {
+      "source": "it-iter-pub-dev-1005-0034.jsonl",
+      "seed": "CJ2AJ95KRVKS",
+      "step": 373,
+      "current_public": {
+        "act": 2,
+        "floor": 16,
+        "d": "combat",
+        "r": 10,
+        "hp": 31,
+        "blk": 11,
+        "en": 0,
+        "hand": [
+          "Giant Rock",
+          "Strike",
+          "Defend"
+        ],
+        "foes": [
+          [
+            "Knowledge Demon",
+            66,
+            0,
+            14
+          ]
+        ],
+        "a": "end_turn",
+        "np": [
+          0,
+          1,
+          2
+        ],
+        "cost": [
+          1,
+          1,
+          1
+        ],
+        "pots": [
+          "Fire Potion"
+        ],
+        "fpow": [
+          {
+            "Strength": -4,
+            "Vulnerable": 1,
+            "MANGLE_POWER.title": 10
+          }
+        ],
+        "ppow": {
+          "Strength": 6,
+          "Dexterity": 1,
+          "Crimson Mantle": 7,
+          "Mind Rot": 1,
+          "Stampede": 1,
+          "Thorns": 3,
+          "Sloth": 3,
+          "Disintegration": 8
+        }
+      },
+      "derived_public_curses": [
+        {
+          "id": "MIND_ROT_POWER",
+          "amount": 1
+        },
+        {
+          "id": "SLOTH_POWER",
+          "amount": 3
+        },
+        {
+          "id": "DISINTEGRATION_POWER",
+          "amount": 8
+        }
+      ],
+      "possible_completed_stages": [
+        3
+      ]
+    },
+    {
+      "source": "it-iter-pub-dev-1005-0034.jsonl",
+      "seed": "CJ2AJ95KRVKS",
+      "step": 379,
+      "current_public": {
+        "act": 2,
+        "floor": 16,
+        "d": "combat",
+        "r": 11,
+        "hp": 19,
+        "blk": 29,
+        "en": 1,
+        "hand": [
+          "Giant Rock"
+        ],
+        "foes": [
+          [
+            "Knowledge Demon",
+            4,
+            0,
+            45
+          ]
+        ],
+        "a": "end_turn",
+        "np": [
+          0
+        ],
+        "cost": [
+          1
+        ],
+        "pots": [],
+        "fpow": [
+          {
+            "Strength": 6
+          }
+        ],
+        "ppow": {
+          "Strength": 6,
+          "Dexterity": 1,
+          "Crimson Mantle": 7,
+          "Mind Rot": 1,
+          "Stampede": 1,
+          "Thorns": 3,
+          "Sloth": 3,
+          "Disintegration": 8
+        }
+      },
+      "derived_public_curses": [
+        {
+          "id": "MIND_ROT_POWER",
+          "amount": 1
+        },
+        {
+          "id": "SLOTH_POWER",
+          "amount": 3
+        },
+        {
+          "id": "DISINTEGRATION_POWER",
+          "amount": 8
+        }
+      ],
+      "possible_completed_stages": [
+        3
+      ]
+    },
+    {
+      "source": "it-iter-pub-dev-1005-0034.jsonl",
+      "seed": "T122WFFW7D5Z",
+      "step": 421,
+      "current_public": {
+        "act": 2,
+        "floor": 16,
+        "d": "combat",
+        "r": 10,
+        "hp": 10,
+        "blk": 7,
+        "en": 0,
+        "hand": [
+          "Headbutt",
+          "Strike",
+          "Strike"
+        ],
+        "foes": [
+          [
+            "Knowledge Demon",
+            57,
+            0,
+            24
+          ]
+        ],
+        "a": "end_turn",
+        "np": [
+          0,
+          1,
+          2
+        ],
+        "cost": [
+          1,
+          1,
+          1
+        ],
+        "pots": [],
+        "fpow": [
+          {
+            "Strength": 6,
+            "Vulnerable": 2
+          }
+        ],
+        "ppow": {
+          "Thorns": 5,
+          "Strength": 2,
+          "Mind Rot": 1,
+          "Inferno": 6,
+          "Sloth": 3,
+          "Disintegration": 8
+        }
+      },
+      "derived_public_curses": [
+        {
+          "id": "MIND_ROT_POWER",
+          "amount": 1
+        },
+        {
+          "id": "SLOTH_POWER",
+          "amount": 3
+        },
+        {
+          "id": "DISINTEGRATION_POWER",
+          "amount": 8
+        }
+      ],
+      "possible_completed_stages": [
+        3
+      ]
+    },
+    {
+      "source": "it-iter-pub-dev-1005-0034.jsonl",
+      "seed": "NHSXBVESU9XQ",
+      "step": 439,
+      "current_public": {
+        "act": 2,
+        "floor": 16,
+        "d": "combat",
+        "r": 10,
+        "hp": 32,
+        "blk": 7,
+        "en": 0,
+        "hand": [],
+        "foes": [
+          [
+            "Knowledge Demon",
+            19,
+            0,
+            24
+          ]
+        ],
+        "a": "end_turn",
+        "np": [],
+        "cost": [],
+        "pots": [],
+        "fpow": [
+          {
+            "Vulnerable": 14,
+            "Strength": 6
+          }
+        ],
+        "ppow": {
+          "Cruelty": 25,
+          "Mind Rot": 1,
+          "Sloth": 3,
+          "Disintegration": 8
+        }
+      },
+      "derived_public_curses": [
+        {
+          "id": "MIND_ROT_POWER",
+          "amount": 1
+        },
+        {
+          "id": "SLOTH_POWER",
+          "amount": 3
+        },
+        {
+          "id": "DISINTEGRATION_POWER",
+          "amount": 8
+        }
+      ],
+      "possible_completed_stages": [
+        3
+      ]
+    }
+  ]
+}

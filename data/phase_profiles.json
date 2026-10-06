@@ -1,0 +1,2530 @@
+{
+"PHROG_PARASITE_ELITE": {
+"PHROG_PARASITE:INFECT_MOVE": {
+"atk": 0.699,
+"blk": 0.135,
+"pow": 0.101,
+"util": 0.065,
+"n": 167,
+"energy": 3.05
+},
+"_all": {
+"atk": 0.628,
+"blk": 0.264,
+"pow": 0.041,
+"util": 0.067,
+"n": 670,
+"energy": 3.14
+},
+"PHROG_PARASITE:LASH_MOVE": {
+"atk": 0.433,
+"blk": 0.433,
+"pow": 0.036,
+"util": 0.098,
+"n": 98,
+"energy": 3.39
+},
+"WRIGGLER:SPAWNED_MOVE|WRIGGLER:SPAWNED_MOVE|WRIGGLER:SPAWNED_MOVE|WRIGGLER:SPAWNED_MOVE": {
+"atk": 0.755,
+"blk": 0.116,
+"pow": 0.044,
+"util": 0.085,
+"n": 105,
+"energy": 3.25
+},
+"WRIGGLER:WRIGGLE_MOVE|WRIGGLER:WRIGGLE_MOVE": {
+"atk": 0.721,
+"blk": 0.162,
+"pow": 0.0,
+"util": 0.117,
+"n": 18,
+"energy": 3.08
+},
+"WRIGGLER:NASTY_BITE_MOVE|WRIGGLER:NASTY_BITE_MOVE|WRIGGLER:WRIGGLE_MOVE": {
+"atk": 0.507,
+"blk": 0.493,
+"pow": 0.0,
+"util": 0.0,
+"n": 23,
+"energy": 3.0
+},
+"WRIGGLER:WRIGGLE_MOVE": {
+"atk": 0.772,
+"blk": 0.186,
+"pow": 0.0,
+"util": 0.042,
+"n": 65,
+"energy": 2.93
+},
+"WRIGGLER:NASTY_BITE_MOVE": {
+"atk": 0.563,
+"blk": 0.43,
+"pow": 0.0,
+"util": 0.006,
+"n": 30,
+"energy": 2.63
+},
+"WRIGGLER:NASTY_BITE_MOVE|WRIGGLER:WRIGGLE_MOVE": {
+"atk": 0.59,
+"blk": 0.345,
+"pow": 0.005,
+"util": 0.06,
+"n": 61,
+"energy": 3.14
+},
+"WRIGGLER:NASTY_BITE_MOVE|WRIGGLER:NASTY_BITE_MOVE|WRIGGLER:WRIGGLE_MOVE|WRIGGLER:WRIGGLE_MOVE": {
+"atk": 0.335,
+"blk": 0.584,
+"pow": 0.027,
+"util": 0.054,
+"n": 29,
+"energy": 3.19
+},
+"WRIGGLER:NASTY_BITE_MOVE|WRIGGLER:WRIGGLE_MOVE|WRIGGLER:WRIGGLE_MOVE": {
+"atk": 0.638,
+"blk": 0.319,
+"pow": 0.011,
+"util": 0.031,
+"n": 58,
+"energy": 3.05
+},
+"WRIGGLER:NASTY_BITE_MOVE|WRIGGLER:NASTY_BITE_MOVE": {
+"atk": 0.238,
+"blk": 0.619,
+"pow": 0.095,
+"util": 0.048,
+"n": 4,
+"energy": 2.62
+},
+"WRIGGLER:SPAWNED_MOVE|WRIGGLER:SPAWNED_MOVE|WRIGGLER:SPAWNED_MOVE": {
+"atk": 0.789,
+"blk": 0.132,
+"pow": 0.026,
+"util": 0.053,
+"n": 10,
+"energy": 3.8
+},
+"WRIGGLER:SPAWNED_MOVE|WRIGGLER:SPAWNED_MOVE": {
+"atk": 0.333,
+"blk": 0.074,
+"pow": 0.074,
+"util": 0.519,
+"n": 2,
+"energy": 6.75
+}
+},
+"BYGONE_EFFIGY_ELITE": {
+"BYGONE_EFFIGY:SLEEP_MOVE": {
+"atk": 0.745,
+"blk": 0.11,
+"pow": 0.074,
+"util": 0.071,
+"n": 125,
+"energy": 3.39
+},
+"_all": {
+"atk": 0.64,
+"blk": 0.243,
+"pow": 0.049,
+"util": 0.067,
+"n": 425,
+"energy": 3.41
+},
+"BYGONE_EFFIGY:WAKE_MOVE": {
+"atk": 0.742,
+"blk": 0.129,
+"pow": 0.063,
+"util": 0.066,
+"n": 121,
+"energy": 3.33
+},
+"BYGONE_EFFIGY:SLASHES_MOVE": {
+"atk": 0.498,
+"blk": 0.412,
+"pow": 0.022,
+"util": 0.067,
+"n": 174,
+"energy": 3.46
+},
+"NONE": {
+"atk": 0.659,
+"blk": 0.293,
+"pow": 0.024,
+"util": 0.024,
+"n": 5,
+"energy": 4.1
+}
+},
+"BYRDONIS_ELITE": {
+"BYRDONIS:SWOOP_MOVE": {
+"atk": 0.435,
+"blk": 0.427,
+"pow": 0.071,
+"util": 0.066,
+"n": 234,
+"energy": 3.39
+},
+"_all": {
+"atk": 0.45,
+"blk": 0.42,
+"pow": 0.062,
+"util": 0.067,
+"n": 405,
+"energy": 3.34
+},
+"BYRDONIS:PECK_MOVE": {
+"atk": 0.47,
+"blk": 0.41,
+"pow": 0.05,
+"util": 0.069,
+"n": 170,
+"energy": 3.28
+},
+"NONE": {
+"atk": 0.5,
+"blk": 0.5,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 4.0
+}
+},
+"VANTOM_BOSS": {
+"VANTOM:INK_BLOT_MOVE": {
+"atk": 0.551,
+"blk": 0.299,
+"pow": 0.063,
+"util": 0.087,
+"n": 64,
+"energy": 3.6
+},
+"_all": {
+"atk": 0.549,
+"blk": 0.332,
+"pow": 0.044,
+"util": 0.076,
+"n": 222,
+"energy": 3.5
+},
+"VANTOM:INKY_LANCE_MOVE": {
+"atk": 0.47,
+"blk": 0.423,
+"pow": 0.039,
+"util": 0.068,
+"n": 60,
+"energy": 3.42
+},
+"VANTOM:DISMEMBER_MOVE": {
+"atk": 0.46,
+"blk": 0.423,
+"pow": 0.034,
+"util": 0.082,
+"n": 51,
+"energy": 3.71
+},
+"VANTOM:PREPARE_MOVE": {
+"atk": 0.759,
+"blk": 0.147,
+"pow": 0.035,
+"util": 0.059,
+"n": 46,
+"energy": 3.11
+},
+"NONE": {
+"atk": 0.8,
+"blk": 0.1,
+"pow": 0.0,
+"util": 0.1,
+"n": 1,
+"energy": 10.0
+}
+},
+"ENTOMANCER_ELITE": {
+"ENTOMANCER:BEES_MOVE": {
+"atk": 0.252,
+"blk": 0.489,
+"pow": 0.121,
+"util": 0.138,
+"n": 181,
+"energy": 3.36
+},
+"_all": {
+"atk": 0.356,
+"blk": 0.366,
+"pow": 0.126,
+"util": 0.152,
+"n": 482,
+"energy": 3.24
+},
+"ENTOMANCER:SPEAR_MOVE": {
+"atk": 0.38,
+"blk": 0.375,
+"pow": 0.107,
+"util": 0.138,
+"n": 161,
+"energy": 3.43
+},
+"ENTOMANCER:PHEROMONE_SPIT_MOVE": {
+"atk": 0.486,
+"blk": 0.157,
+"pow": 0.158,
+"util": 0.199,
+"n": 138,
+"energy": 2.77
+},
+"NONE": {
+"atk": 0.371,
+"blk": 0.4,
+"pow": 0.171,
+"util": 0.057,
+"n": 2,
+"energy": 8.75
+}
+},
+"CEREMONIAL_BEAST_BOSS": {
+"CEREMONIAL_BEAST:STAMP_MOVE": {
+"atk": 0.583,
+"blk": 0.184,
+"pow": 0.158,
+"util": 0.075,
+"n": 37,
+"energy": 3.08
+},
+"_all": {
+"atk": 0.512,
+"blk": 0.334,
+"pow": 0.072,
+"util": 0.082,
+"n": 279,
+"energy": 3.01
+},
+"CEREMONIAL_BEAST:PLOW_MOVE": {
+"atk": 0.355,
+"blk": 0.458,
+"pow": 0.087,
+"util": 0.1,
+"n": 78,
+"energy": 3.54
+},
+"NONE": {
+"atk": 0.754,
+"blk": 0.082,
+"pow": 0.074,
+"util": 0.09,
+"n": 34,
+"energy": 3.59
+},
+"CEREMONIAL_BEAST:BEAST_CRY_MOVE": {
+"atk": 0.72,
+"blk": 0.157,
+"pow": 0.03,
+"util": 0.093,
+"n": 55,
+"energy": 3.02
+},
+"CEREMONIAL_BEAST:STOMP_MOVE": {
+"atk": 0.241,
+"blk": 0.759,
+"pow": 0.0,
+"util": 0.0,
+"n": 42,
+"energy": 1.29
+},
+"CEREMONIAL_BEAST:CRUSH_MOVE": {
+"atk": 0.352,
+"blk": 0.57,
+"pow": 0.01,
+"util": 0.067,
+"n": 30,
+"energy": 3.22
+},
+"CEREMONIAL_BEAST:STUNNED": {
+"atk": 0.619,
+"blk": 0.095,
+"pow": 0.286,
+"util": 0.0,
+"n": 3,
+"energy": 3.5
+}
+},
+"INFESTED_PRISMS_ELITE": {
+"INFESTED_PRISM:JAB_MOVE": {
+"atk": 0.436,
+"blk": 0.297,
+"pow": 0.139,
+"util": 0.128,
+"n": 157,
+"energy": 3.76
+},
+"_all": {
+"atk": 0.445,
+"blk": 0.297,
+"pow": 0.134,
+"util": 0.124,
+"n": 457,
+"energy": 3.57
+},
+"INFESTED_PRISM:RADIATE_MOVE": {
+"atk": 0.429,
+"blk": 0.287,
+"pow": 0.136,
+"util": 0.149,
+"n": 132,
+"energy": 3.83
+},
+"INFESTED_PRISM:WHIRLWIND_MOVE": {
+"atk": 0.477,
+"blk": 0.289,
+"pow": 0.173,
+"util": 0.061,
+"n": 93,
+"energy": 2.92
+},
+"INFESTED_PRISM:PULSATE_MOVE": {
+"atk": 0.467,
+"blk": 0.332,
+"pow": 0.063,
+"util": 0.137,
+"n": 68,
+"energy": 3.48
+},
+"NONE": {
+"atk": 0.439,
+"blk": 0.281,
+"pow": 0.211,
+"util": 0.07,
+"n": 7,
+"energy": 4.07
+}
+},
+"KAISER_CRAB_BOSS": {
+"CRUSHER:THRASH_MOVE|ROCKET:TARGETING_RETICLE_MOVE": {
+"atk": 0.387,
+"blk": 0.354,
+"pow": 0.088,
+"util": 0.172,
+"n": 58,
+"energy": 4.22
+},
+"_all": {
+"atk": 0.425,
+"blk": 0.343,
+"pow": 0.06,
+"util": 0.171,
+"n": 315,
+"energy": 4.39
+},
+"CRUSHER:ENLARGING_STRIKE_MOVE|ROCKET:PRECISION_BEAM_MOVE": {
+"atk": 0.366,
+"blk": 0.359,
+"pow": 0.128,
+"util": 0.147,
+"n": 47,
+"energy": 4.41
+},
+"CRUSHER:BUG_STING_MOVE|ROCKET:CHARGE_UP_MOVE": {
+"atk": 0.416,
+"blk": 0.296,
+"pow": 0.087,
+"util": 0.202,
+"n": 44,
+"energy": 4.73
+},
+"CRUSHER:ADAPT_MOVE": {
+"atk": 0.76,
+"blk": 0.128,
+"pow": 0.032,
+"util": 0.08,
+"n": 19,
+"energy": 3.29
+},
+"CRUSHER:GUARDED_STRIKE_MOVE": {
+"atk": 0.416,
+"blk": 0.496,
+"pow": 0.0,
+"util": 0.088,
+"n": 15,
+"energy": 4.17
+},
+"CRUSHER:ADAPT_MOVE|ROCKET:LASER_MOVE": {
+"atk": 0.346,
+"blk": 0.346,
+"pow": 0.036,
+"util": 0.271,
+"n": 31,
+"energy": 4.94
+},
+"CRUSHER:GUARDED_STRIKE_MOVE|ROCKET:RECHARGE_MOVE": {
+"atk": 0.412,
+"blk": 0.352,
+"pow": 0.03,
+"util": 0.206,
+"n": 24,
+"energy": 4.15
+},
+"ROCKET:TARGETING_RETICLE_MOVE": {
+"atk": 0.66,
+"blk": 0.227,
+"pow": 0.01,
+"util": 0.103,
+"n": 9,
+"energy": 5.39
+},
+"ROCKET:PRECISION_BEAM_MOVE": {
+"atk": 0.208,
+"blk": 0.528,
+"pow": 0.0,
+"util": 0.264,
+"n": 7,
+"energy": 3.79
+},
+"ROCKET:RECHARGE_MOVE": {
+"atk": 0.537,
+"blk": 0.317,
+"pow": 0.024,
+"util": 0.122,
+"n": 7,
+"energy": 2.93
+},
+"ROCKET:CHARGE_UP_MOVE": {
+"atk": 0.81,
+"blk": 0.071,
+"pow": 0.048,
+"util": 0.071,
+"n": 5,
+"energy": 4.2
+},
+"CRUSHER:BUG_STING_MOVE": {
+"atk": 0.529,
+"blk": 0.388,
+"pow": 0.024,
+"util": 0.059,
+"n": 10,
+"energy": 4.25
+},
+"CRUSHER:THRASH_MOVE": {
+"atk": 0.438,
+"blk": 0.463,
+"pow": 0.0,
+"util": 0.099,
+"n": 13,
+"energy": 4.65
+},
+"CRUSHER:ENLARGING_STRIKE_MOVE": {
+"atk": 0.455,
+"blk": 0.372,
+"pow": 0.014,
+"util": 0.159,
+"n": 18,
+"energy": 4.03
+},
+"ROCKET:LASER_MOVE": {
+"atk": 0.222,
+"blk": 0.333,
+"pow": 0.0,
+"util": 0.444,
+"n": 2,
+"energy": 4.5
+},
+"NONE": {
+"atk": 0.322,
+"blk": 0.402,
+"pow": 0.069,
+"util": 0.207,
+"n": 6,
+"energy": 7.25
+}
+},
+"MECHA_KNIGHT_ELITE": {
+"MECHA_KNIGHT:CHARGE_MOVE": {
+"atk": 0.325,
+"blk": 0.326,
+"pow": 0.147,
+"util": 0.202,
+"n": 64,
+"energy": 5.22
+},
+"_all": {
+"atk": 0.39,
+"blk": 0.302,
+"pow": 0.117,
+"util": 0.191,
+"n": 302,
+"energy": 4.68
+},
+"MECHA_KNIGHT:FLAMETHROWER_MOVE": {
+"atk": 0.366,
+"blk": 0.29,
+"pow": 0.135,
+"util": 0.21,
+"n": 96,
+"energy": 4.52
+},
+"MECHA_KNIGHT:WINDUP_MOVE": {
+"atk": 0.494,
+"blk": 0.206,
+"pow": 0.118,
+"util": 0.182,
+"n": 84,
+"energy": 4.48
+},
+"MECHA_KNIGHT:HEAVY_CLEAVE_MOVE": {
+"atk": 0.349,
+"blk": 0.438,
+"pow": 0.05,
+"util": 0.163,
+"n": 55,
+"energy": 4.74
+},
+"NONE": {
+"atk": 0.789,
+"blk": 0.105,
+"pow": 0.0,
+"util": 0.105,
+"n": 3,
+"energy": 3.17
+}
+},
+"AEONGLASS_BOSS": {
+"AEONGLASS:EBB_MOVE": {
+"atk": 0.354,
+"blk": 0.309,
+"pow": 0.119,
+"util": 0.218,
+"n": 133,
+"energy": 5.17
+},
+"_all": {
+"atk": 0.401,
+"blk": 0.275,
+"pow": 0.116,
+"util": 0.208,
+"n": 348,
+"energy": 4.63
+},
+"AEONGLASS:EYE_LASERS_MOVE": {
+"atk": 0.347,
+"blk": 0.348,
+"pow": 0.105,
+"util": 0.201,
+"n": 114,
+"energy": 4.48
+},
+"AEONGLASS:INCREASING_INTENSITY_MOVE": {
+"atk": 0.546,
+"blk": 0.129,
+"pow": 0.125,
+"util": 0.199,
+"n": 100,
+"energy": 4.14
+},
+"NONE": {
+"atk": 0.0,
+"blk": 0.0,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 1.0
+}
+},
+"QUEEN_BOSS": {
+"QUEEN:PUPPET_STRINGS_MOVE|TORCH_HEAD_AMALGAM:STRONG_TACKLE_MOVE": {
+"atk": 0.343,
+"blk": 0.251,
+"pow": 0.175,
+"util": 0.232,
+"n": 56,
+"energy": 5.16
+},
+"_all": {
+"atk": 0.412,
+"blk": 0.255,
+"pow": 0.108,
+"util": 0.225,
+"n": 359,
+"energy": 4.87
+},
+"QUEEN:YOU_ARE_MINE_MOVE|TORCH_HEAD_AMALGAM:TACKLE_2_MOVE": {
+"atk": 0.315,
+"blk": 0.249,
+"pow": 0.182,
+"util": 0.254,
+"n": 50,
+"energy": 5.23
+},
+"QUEEN:BURN_BRIGHT_FOR_ME_MOVE|TORCH_HEAD_AMALGAM:BEAM_MOVE": {
+"atk": 0.342,
+"blk": 0.266,
+"pow": 0.106,
+"util": 0.286,
+"n": 52,
+"energy": 5.64
+},
+"NONE": {
+"atk": 0.551,
+"blk": 0.176,
+"pow": 0.078,
+"util": 0.195,
+"n": 39,
+"energy": 4.79
+},
+"QUEEN:BURN_BRIGHT_FOR_ME_MOVE|TORCH_HEAD_AMALGAM:TACKLE_3_MOVE": {
+"atk": 0.437,
+"blk": 0.264,
+"pow": 0.106,
+"util": 0.193,
+"n": 37,
+"energy": 4.2
+},
+"QUEEN:BURN_BRIGHT_FOR_ME_MOVE|TORCH_HEAD_AMALGAM:TACKLE_4_MOVE": {
+"atk": 0.373,
+"blk": 0.303,
+"pow": 0.061,
+"util": 0.263,
+"n": 26,
+"energy": 4.38
+},
+"QUEEN:OFF_WITH_YOUR_HEAD_MOVE": {
+"atk": 0.463,
+"blk": 0.313,
+"pow": 0.047,
+"util": 0.176,
+"n": 40,
+"energy": 4.75
+},
+"QUEEN:EXECUTION_MOVE": {
+"atk": 0.482,
+"blk": 0.372,
+"pow": 0.018,
+"util": 0.128,
+"n": 28,
+"energy": 4.04
+},
+"QUEEN:YOU_ARE_MINE_MOVE": {
+"atk": 0.632,
+"blk": 0.105,
+"pow": 0.105,
+"util": 0.158,
+"n": 5,
+"energy": 5.7
+},
+"QUEEN:ENRAGE_MOVE": {
+"atk": 0.574,
+"blk": 0.157,
+"pow": 0.074,
+"util": 0.194,
+"n": 25,
+"energy": 4.32
+},
+"QUEEN:PUPPET_STRINGS_MOVE": {
+"atk": 0.316,
+"blk": 0.0,
+"pow": 0.053,
+"util": 0.632,
+"n": 1,
+"energy": 9.5
+}
+},
+"THE_KIN_BOSS": {
+"KIN_FOLLOWER:POWER_DANCE_MOVE|KIN_FOLLOWER:QUICK_SLASH_MOVE|KIN_PRIEST:ORB_OF_FRAILTY_MOVE": {
+"atk": 0.423,
+"blk": 0.337,
+"pow": 0.135,
+"util": 0.106,
+"n": 41,
+"energy": 3.8
+},
+"_all": {
+"atk": 0.498,
+"blk": 0.363,
+"pow": 0.054,
+"util": 0.086,
+"n": 367,
+"energy": 3.45
+},
+"KIN_PRIEST:ORB_OF_WEAKNESS_MOVE": {
+"atk": 0.551,
+"blk": 0.383,
+"pow": 0.0,
+"util": 0.066,
+"n": 43,
+"energy": 3.52
+},
+"KIN_PRIEST:BEAM_MOVE": {
+"atk": 0.409,
+"blk": 0.509,
+"pow": 0.004,
+"util": 0.079,
+"n": 41,
+"energy": 3.4
+},
+"KIN_FOLLOWER:BOOMERANG_MOVE|KIN_FOLLOWER:QUICK_SLASH_MOVE|KIN_PRIEST:ORB_OF_WEAKNESS_MOVE": {
+"atk": 0.305,
+"blk": 0.417,
+"pow": 0.171,
+"util": 0.107,
+"n": 29,
+"energy": 3.22
+},
+"KIN_FOLLOWER:BOOMERANG_MOVE|KIN_FOLLOWER:POWER_DANCE_MOVE|KIN_PRIEST:BEAM_MOVE": {
+"atk": 0.376,
+"blk": 0.423,
+"pow": 0.121,
+"util": 0.081,
+"n": 22,
+"energy": 3.39
+},
+"KIN_FOLLOWER:QUICK_SLASH_MOVE|KIN_PRIEST:RITUAL_MOVE": {
+"atk": 0.534,
+"blk": 0.295,
+"pow": 0.068,
+"util": 0.102,
+"n": 14,
+"energy": 3.14
+},
+"KIN_FOLLOWER:BOOMERANG_MOVE|KIN_PRIEST:ORB_OF_FRAILTY_MOVE": {
+"atk": 0.408,
+"blk": 0.553,
+"pow": 0.0,
+"util": 0.039,
+"n": 12,
+"energy": 3.17
+},
+"KIN_PRIEST:RITUAL_MOVE": {
+"atk": 0.752,
+"blk": 0.142,
+"pow": 0.014,
+"util": 0.092,
+"n": 44,
+"energy": 3.2
+},
+"KIN_PRIEST:ORB_OF_FRAILTY_MOVE": {
+"atk": 0.512,
+"blk": 0.417,
+"pow": 0.0,
+"util": 0.071,
+"n": 45,
+"energy": 3.62
+},
+"KIN_FOLLOWER:BOOMERANG_MOVE|KIN_PRIEST:ORB_OF_WEAKNESS_MOVE": {
+"atk": 0.597,
+"blk": 0.226,
+"pow": 0.065,
+"util": 0.113,
+"n": 8,
+"energy": 3.88
+},
+"KIN_FOLLOWER:POWER_DANCE_MOVE|KIN_PRIEST:BEAM_MOVE": {
+"atk": 0.469,
+"blk": 0.327,
+"pow": 0.102,
+"util": 0.102,
+"n": 14,
+"energy": 3.5
+},
+"NONE": {
+"atk": 0.512,
+"blk": 0.38,
+"pow": 0.025,
+"util": 0.083,
+"n": 18,
+"energy": 3.36
+},
+"KIN_FOLLOWER:QUICK_SLASH_MOVE|KIN_PRIEST:ORB_OF_WEAKNESS_MOVE": {
+"atk": 0.655,
+"blk": 0.31,
+"pow": 0.0,
+"util": 0.034,
+"n": 5,
+"energy": 2.9
+},
+"KIN_FOLLOWER:BOOMERANG_MOVE|KIN_PRIEST:BEAM_MOVE": {
+"atk": 0.167,
+"blk": 0.833,
+"pow": 0.0,
+"util": 0.0,
+"n": 2,
+"energy": 3.0
+},
+"KIN_FOLLOWER:POWER_DANCE_MOVE|KIN_PRIEST:RITUAL_MOVE": {
+"atk": 0.709,
+"blk": 0.073,
+"pow": 0.109,
+"util": 0.109,
+"n": 8,
+"energy": 3.44
+},
+"KIN_FOLLOWER:POWER_DANCE_MOVE|KIN_FOLLOWER:QUICK_SLASH_MOVE|KIN_PRIEST:RITUAL_MOVE": {
+"atk": 0.459,
+"blk": 0.279,
+"pow": 0.098,
+"util": 0.164,
+"n": 9,
+"energy": 3.39
+},
+"KIN_FOLLOWER:POWER_DANCE_MOVE|KIN_PRIEST:ORB_OF_WEAKNESS_MOVE": {
+"atk": 0.579,
+"blk": 0.421,
+"pow": 0.0,
+"util": 0.0,
+"n": 3,
+"energy": 3.17
+},
+"KIN_FOLLOWER:QUICK_SLASH_MOVE|KIN_PRIEST:BEAM_MOVE": {
+"atk": 0.571,
+"blk": 0.286,
+"pow": 0.0,
+"util": 0.143,
+"n": 1,
+"energy": 3.5
+},
+"KIN_FOLLOWER:QUICK_SLASH_MOVE|KIN_PRIEST:ORB_OF_FRAILTY_MOVE": {
+"atk": 0.408,
+"blk": 0.49,
+"pow": 0.041,
+"util": 0.061,
+"n": 6,
+"energy": 4.08
+},
+"KIN_FOLLOWER:POWER_DANCE_MOVE|KIN_PRIEST:ORB_OF_FRAILTY_MOVE": {
+"atk": 0.615,
+"blk": 0.154,
+"pow": 0.154,
+"util": 0.077,
+"n": 1,
+"energy": 6.5
+},
+"KIN_FOLLOWER:BOOMERANG_MOVE|KIN_FOLLOWER:QUICK_SLASH_MOVE|KIN_PRIEST:ORB_OF_FRAILTY_MOVE": {
+"atk": 0.429,
+"blk": 0.571,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 3.5
+}
+},
+"DECIMILLIPEDE_ELITE": {
+"DECIMILLIPEDE_SEGMENT_BACK:WRITHE_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:BULK_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:CONSTRICT_MOVE": {
+"atk": 0.306,
+"blk": 0.325,
+"pow": 0.172,
+"util": 0.197,
+"n": 44,
+"energy": 4.09
+},
+"_all": {
+"atk": 0.442,
+"blk": 0.323,
+"pow": 0.096,
+"util": 0.139,
+"n": 383,
+"energy": 4.11
+},
+"DECIMILLIPEDE_SEGMENT_BACK:CONSTRICT_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:BULK_MOVE": {
+"atk": 0.512,
+"blk": 0.298,
+"pow": 0.066,
+"util": 0.124,
+"n": 16,
+"energy": 3.78
+},
+"DECIMILLIPEDE_SEGMENT_BACK:BULK_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:REATTACH_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:WRITHE_MOVE": {
+"atk": 0.173,
+"blk": 0.48,
+"pow": 0.133,
+"util": 0.213,
+"n": 12,
+"energy": 3.12
+},
+"DECIMILLIPEDE_SEGMENT_BACK:WRITHE_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:CONSTRICT_MOVE": {
+"atk": 0.51,
+"blk": 0.286,
+"pow": 0.082,
+"util": 0.122,
+"n": 6,
+"energy": 4.08
+},
+"DECIMILLIPEDE_SEGMENT_BACK:BULK_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:CONSTRICT_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:WRITHE_MOVE": {
+"atk": 0.322,
+"blk": 0.374,
+"pow": 0.119,
+"util": 0.184,
+"n": 45,
+"energy": 4.1
+},
+"NONE": {
+"atk": 0.56,
+"blk": 0.286,
+"pow": 0.131,
+"util": 0.024,
+"n": 8,
+"energy": 5.25
+},
+"DECIMILLIPEDE_SEGMENT_BACK:CONSTRICT_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:WRITHE_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:BULK_MOVE": {
+"atk": 0.299,
+"blk": 0.37,
+"pow": 0.188,
+"util": 0.144,
+"n": 39,
+"energy": 4.37
+},
+"DECIMILLIPEDE_SEGMENT_FRONT:BULK_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:CONSTRICT_MOVE": {
+"atk": 0.599,
+"blk": 0.244,
+"pow": 0.035,
+"util": 0.122,
+"n": 18,
+"energy": 4.78
+},
+"DECIMILLIPEDE_SEGMENT_BACK:REATTACH_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:WRITHE_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:BULK_MOVE": {
+"atk": 0.276,
+"blk": 0.586,
+"pow": 0.034,
+"util": 0.103,
+"n": 8,
+"energy": 3.62
+},
+"DECIMILLIPEDE_SEGMENT_BACK:CONSTRICT_MOVE": {
+"atk": 0.842,
+"blk": 0.105,
+"pow": 0.0,
+"util": 0.053,
+"n": 7,
+"energy": 4.07
+},
+"DECIMILLIPEDE_SEGMENT_BACK:WRITHE_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:BULK_MOVE": {
+"atk": 0.5,
+"blk": 0.306,
+"pow": 0.056,
+"util": 0.139,
+"n": 9,
+"energy": 4.0
+},
+"DECIMILLIPEDE_SEGMENT_FRONT:WRITHE_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:BULK_MOVE": {
+"atk": 0.506,
+"blk": 0.289,
+"pow": 0.12,
+"util": 0.084,
+"n": 9,
+"energy": 4.61
+},
+"DECIMILLIPEDE_SEGMENT_BACK:REATTACH_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:CONSTRICT_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:WRITHE_MOVE": {
+"atk": 0.269,
+"blk": 0.5,
+"pow": 0.115,
+"util": 0.115,
+"n": 7,
+"energy": 3.71
+},
+"DECIMILLIPEDE_SEGMENT_BACK:BULK_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:CONSTRICT_MOVE": {
+"atk": 0.532,
+"blk": 0.247,
+"pow": 0.058,
+"util": 0.162,
+"n": 16,
+"energy": 4.81
+},
+"DECIMILLIPEDE_SEGMENT_FRONT:CONSTRICT_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:WRITHE_MOVE": {
+"atk": 0.427,
+"blk": 0.387,
+"pow": 0.053,
+"util": 0.133,
+"n": 7,
+"energy": 5.36
+},
+"DECIMILLIPEDE_SEGMENT_BACK:REATTACH_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:CONSTRICT_MOVE": {
+"atk": 0.667,
+"blk": 0.121,
+"pow": 0.121,
+"util": 0.091,
+"n": 4,
+"energy": 4.12
+},
+"DECIMILLIPEDE_SEGMENT_BACK:WRITHE_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:WRITHE_MOVE": {
+"atk": 0.333,
+"blk": 0.333,
+"pow": 0.333,
+"util": 0.0,
+"n": 1,
+"energy": 3.0
+},
+"DECIMILLIPEDE_SEGMENT_FRONT:CONSTRICT_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:REATTACH_MOVE": {
+"atk": 0.357,
+"blk": 0.5,
+"pow": 0.143,
+"util": 0.0,
+"n": 4,
+"energy": 3.5
+},
+"DECIMILLIPEDE_SEGMENT_BACK:REATTACH_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:BULK_MOVE": {
+"atk": 0.686,
+"blk": 0.229,
+"pow": 0.0,
+"util": 0.086,
+"n": 5,
+"energy": 3.5
+},
+"DECIMILLIPEDE_SEGMENT_BACK:WRITHE_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:REATTACH_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:WRITHE_MOVE": {
+"atk": 1.0,
+"blk": 0.0,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 3.5
+},
+"DECIMILLIPEDE_SEGMENT_BACK:WRITHE_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:REATTACH_MOVE": {
+"atk": 0.571,
+"blk": 0.143,
+"pow": 0.143,
+"util": 0.143,
+"n": 2,
+"energy": 3.5
+},
+"DECIMILLIPEDE_SEGMENT_BACK:REATTACH_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:WRITHE_MOVE": {
+"atk": 0.433,
+"blk": 0.4,
+"pow": 0.0,
+"util": 0.167,
+"n": 3,
+"energy": 5.0
+},
+"DECIMILLIPEDE_SEGMENT_FRONT:BULK_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:REATTACH_MOVE": {
+"atk": 0.679,
+"blk": 0.25,
+"pow": 0.071,
+"util": 0.0,
+"n": 3,
+"energy": 4.67
+},
+"DECIMILLIPEDE_SEGMENT_BACK:REATTACH_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:WRITHE_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:CONSTRICT_MOVE": {
+"atk": 0.333,
+"blk": 0.667,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 3.0
+},
+"DECIMILLIPEDE_SEGMENT_BACK:BULK_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:REATTACH_MOVE": {
+"atk": 0.739,
+"blk": 0.087,
+"pow": 0.0,
+"util": 0.174,
+"n": 3,
+"energy": 3.83
+},
+"DECIMILLIPEDE_SEGMENT_BACK:REATTACH_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:BULK_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:CONSTRICT_MOVE": {
+"atk": 0.375,
+"blk": 0.45,
+"pow": 0.05,
+"util": 0.125,
+"n": 5,
+"energy": 4.0
+},
+"DECIMILLIPEDE_SEGMENT_BACK:BULK_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:WRITHE_MOVE": {
+"atk": 0.231,
+"blk": 0.462,
+"pow": 0.154,
+"util": 0.154,
+"n": 2,
+"energy": 3.25
+},
+"DECIMILLIPEDE_SEGMENT_BACK:WRITHE_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:CONSTRICT_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:REATTACH_MOVE": {
+"atk": 0.0,
+"blk": 1.0,
+"pow": 0.0,
+"util": 0.0,
+"n": 2,
+"energy": 3.0
+},
+"DECIMILLIPEDE_SEGMENT_FRONT:BULK_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:BULK_MOVE": {
+"atk": 0.333,
+"blk": 0.667,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 3.0
+},
+"DECIMILLIPEDE_SEGMENT_BACK:REATTACH_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:WRITHE_MOVE": {
+"atk": 0.333,
+"blk": 0.667,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 3.0
+},
+"DECIMILLIPEDE_SEGMENT_BACK:WRITHE_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:REATTACH_MOVE": {
+"atk": 0.429,
+"blk": 0.571,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 3.5
+},
+"DECIMILLIPEDE_SEGMENT_FRONT:REATTACH_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:WRITHE_MOVE": {
+"atk": 0.741,
+"blk": 0.222,
+"pow": 0.0,
+"util": 0.037,
+"n": 3,
+"energy": 4.5
+},
+"DECIMILLIPEDE_SEGMENT_FRONT:WRITHE_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:REATTACH_MOVE": {
+"atk": 0.857,
+"blk": 0.0,
+"pow": 0.0,
+"util": 0.143,
+"n": 1,
+"energy": 3.5
+},
+"DECIMILLIPEDE_SEGMENT_FRONT:CONSTRICT_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:CONSTRICT_MOVE": {
+"atk": 0.429,
+"blk": 0.286,
+"pow": 0.0,
+"util": 0.286,
+"n": 1,
+"energy": 3.5
+},
+"DECIMILLIPEDE_SEGMENT_BACK:REATTACH_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:BULK_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:BULK_MOVE": {
+"atk": 0.5,
+"blk": 0.25,
+"pow": 0.0,
+"util": 0.25,
+"n": 1,
+"energy": 4.0
+},
+"DECIMILLIPEDE_SEGMENT_BACK:WRITHE_MOVE": {
+"atk": 0.571,
+"blk": 0.0,
+"pow": 0.0,
+"util": 0.429,
+"n": 1,
+"energy": 3.5
+},
+"DECIMILLIPEDE_SEGMENT_FRONT:BULK_MOVE": {
+"atk": 0.522,
+"blk": 0.261,
+"pow": 0.0,
+"util": 0.217,
+"n": 3,
+"energy": 3.83
+},
+"DECIMILLIPEDE_SEGMENT_BACK:CONSTRICT_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:WRITHE_MOVE": {
+"atk": 0.542,
+"blk": 0.186,
+"pow": 0.068,
+"util": 0.203,
+"n": 5,
+"energy": 5.9
+},
+"DECIMILLIPEDE_SEGMENT_BACK:BULK_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:CONSTRICT_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:REATTACH_MOVE": {
+"atk": 0.333,
+"blk": 0.583,
+"pow": 0.083,
+"util": 0.0,
+"n": 3,
+"energy": 4.0
+},
+"DECIMILLIPEDE_SEGMENT_BACK:BULK_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:DEAD_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:WRITHE_MOVE": {
+"atk": 1.0,
+"blk": 0.0,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 3.5
+},
+"DECIMILLIPEDE_SEGMENT_BACK:WRITHE_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:REATTACH_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:CONSTRICT_MOVE": {
+"atk": 0.231,
+"blk": 0.462,
+"pow": 0.308,
+"util": 0.0,
+"n": 2,
+"energy": 3.25
+},
+"DECIMILLIPEDE_SEGMENT_BACK:CONSTRICT_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:BULK_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:BULK_MOVE": {
+"atk": 0.0,
+"blk": 0.769,
+"pow": 0.154,
+"util": 0.077,
+"n": 2,
+"energy": 3.25
+},
+"DECIMILLIPEDE_SEGMENT_BACK:BULK_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:WRITHE_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:DEAD_MOVE": {
+"atk": 0.667,
+"blk": 0.333,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 3.0
+},
+"DECIMILLIPEDE_SEGMENT_BACK:DEAD_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:CONSTRICT_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:REATTACH_MOVE": {
+"atk": 0.571,
+"blk": 0.286,
+"pow": 0.0,
+"util": 0.143,
+"n": 1,
+"energy": 3.5
+},
+"DECIMILLIPEDE_SEGMENT_BACK:WRITHE_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:BULK_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:REATTACH_MOVE": {
+"atk": 0.286,
+"blk": 0.429,
+"pow": 0.082,
+"util": 0.204,
+"n": 8,
+"energy": 3.06
+},
+"DECIMILLIPEDE_SEGMENT_MIDDLE:BULK_MOVE": {
+"atk": 0.794,
+"blk": 0.118,
+"pow": 0.059,
+"util": 0.029,
+"n": 4,
+"energy": 4.25
+},
+"DECIMILLIPEDE_SEGMENT_BACK:BULK_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:WRITHE_MOVE": {
+"atk": 0.8,
+"blk": 0.1,
+"pow": 0.1,
+"util": 0.0,
+"n": 3,
+"energy": 3.33
+},
+"DECIMILLIPEDE_SEGMENT_MIDDLE:CONSTRICT_MOVE": {
+"atk": 0.614,
+"blk": 0.273,
+"pow": 0.045,
+"util": 0.068,
+"n": 5,
+"energy": 4.4
+},
+"DECIMILLIPEDE_SEGMENT_FRONT:CONSTRICT_MOVE": {
+"atk": 0.742,
+"blk": 0.194,
+"pow": 0.0,
+"util": 0.065,
+"n": 4,
+"energy": 3.88
+},
+"DECIMILLIPEDE_SEGMENT_BACK:WRITHE_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:BULK_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:DEAD_MOVE": {
+"atk": 0.429,
+"blk": 0.286,
+"pow": 0.286,
+"util": 0.0,
+"n": 1,
+"energy": 3.5
+},
+"DECIMILLIPEDE_SEGMENT_BACK:CONSTRICT_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:WRITHE_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:REATTACH_MOVE": {
+"atk": 0.292,
+"blk": 0.208,
+"pow": 0.0,
+"util": 0.5,
+"n": 3,
+"energy": 4.0
+},
+"DECIMILLIPEDE_SEGMENT_BACK:DEAD_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:CONSTRICT_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:WRITHE_MOVE": {
+"atk": 0.444,
+"blk": 0.444,
+"pow": 0.0,
+"util": 0.111,
+"n": 1,
+"energy": 4.5
+},
+"DECIMILLIPEDE_SEGMENT_BACK:BULK_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:BULK_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:CONSTRICT_MOVE": {
+"atk": 0.4,
+"blk": 0.4,
+"pow": 0.0,
+"util": 0.2,
+"n": 1,
+"energy": 7.5
+},
+"DECIMILLIPEDE_SEGMENT_FRONT:REATTACH_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:BULK_MOVE": {
+"atk": 0.667,
+"blk": 0.19,
+"pow": 0.0,
+"util": 0.143,
+"n": 3,
+"energy": 3.5
+},
+"DECIMILLIPEDE_SEGMENT_FRONT:REATTACH_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:CONSTRICT_MOVE": {
+"atk": 1.0,
+"blk": 0.0,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 3.0
+},
+"DECIMILLIPEDE_SEGMENT_BACK:BULK_MOVE": {
+"atk": 0.424,
+"blk": 0.152,
+"pow": 0.121,
+"util": 0.303,
+"n": 3,
+"energy": 5.5
+},
+"DECIMILLIPEDE_SEGMENT_BACK:WRITHE_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:BULK_MOVE": {
+"atk": 0.5,
+"blk": 0.5,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 2.0
+},
+"DECIMILLIPEDE_SEGMENT_FRONT:CONSTRICT_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:BULK_MOVE": {
+"atk": 0.333,
+"blk": 0.333,
+"pow": 0.0,
+"util": 0.333,
+"n": 1,
+"energy": 3.0
+},
+"DECIMILLIPEDE_SEGMENT_BACK:REATTACH_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:BULK_MOVE": {
+"atk": 0.381,
+"blk": 0.095,
+"pow": 0.095,
+"util": 0.429,
+"n": 2,
+"energy": 5.25
+},
+"DECIMILLIPEDE_SEGMENT_BACK:CONSTRICT_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:REATTACH_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:BULK_MOVE": {
+"atk": 0.432,
+"blk": 0.432,
+"pow": 0.054,
+"util": 0.081,
+"n": 4,
+"energy": 4.62
+},
+"DECIMILLIPEDE_SEGMENT_BACK:CONSTRICT_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:WRITHE_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:WRITHE_MOVE": {
+"atk": 0.333,
+"blk": 0.667,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 3.0
+},
+"DECIMILLIPEDE_SEGMENT_FRONT:WRITHE_MOVE": {
+"atk": 0.6,
+"blk": 0.1,
+"pow": 0.0,
+"util": 0.3,
+"n": 2,
+"energy": 5.0
+},
+"DECIMILLIPEDE_SEGMENT_MIDDLE:WRITHE_MOVE": {
+"atk": 0.556,
+"blk": 0.167,
+"pow": 0.222,
+"util": 0.056,
+"n": 5,
+"energy": 3.6
+},
+"DECIMILLIPEDE_SEGMENT_BACK:CONSTRICT_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:DEAD_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:BULK_MOVE": {
+"atk": 1.0,
+"blk": 0.0,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 4.0
+},
+"DECIMILLIPEDE_SEGMENT_BACK:DEAD_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:BULK_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:CONSTRICT_MOVE": {
+"atk": 0.75,
+"blk": 0.25,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 4.0
+},
+"DECIMILLIPEDE_SEGMENT_BACK:WRITHE_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:REATTACH_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:BULK_MOVE": {
+"atk": 0.0,
+"blk": 1.0,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 2.0
+},
+"DECIMILLIPEDE_SEGMENT_BACK:CONSTRICT_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:REATTACH_MOVE": {
+"atk": 0.6,
+"blk": 0.4,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 5.0
+},
+"DECIMILLIPEDE_SEGMENT_BACK:REATTACH_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:BULK_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:REATTACH_MOVE": {
+"atk": 0.5,
+"blk": 0.5,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 2.0
+},
+"DECIMILLIPEDE_SEGMENT_FRONT:BULK_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:WRITHE_MOVE": {
+"atk": 0.5,
+"blk": 0.5,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 4.0
+},
+"DECIMILLIPEDE_SEGMENT_BACK:WRITHE_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:CONSTRICT_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:WRITHE_MOVE": {
+"atk": 0.0,
+"blk": 1.0,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 3.0
+},
+"DECIMILLIPEDE_SEGMENT_BACK:CONSTRICT_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:BULK_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:CONSTRICT_MOVE": {
+"atk": 0.667,
+"blk": 0.333,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 3.0
+},
+"DECIMILLIPEDE_SEGMENT_BACK:BULK_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:BULK_MOVE": {
+"atk": 0.727,
+"blk": 0.182,
+"pow": 0.0,
+"util": 0.091,
+"n": 1,
+"energy": 5.5
+},
+"DECIMILLIPEDE_SEGMENT_BACK:DEAD_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:WRITHE_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:DEAD_MOVE": {
+"atk": 0.778,
+"blk": 0.222,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 4.5
+},
+"DECIMILLIPEDE_SEGMENT_BACK:REATTACH_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:WRITHE_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:REATTACH_MOVE": {
+"atk": 0.0,
+"blk": 1.0,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 2.0
+},
+"DECIMILLIPEDE_SEGMENT_BACK:WRITHE_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:DEAD_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:CONSTRICT_MOVE": {
+"atk": 0.429,
+"blk": 0.286,
+"pow": 0.0,
+"util": 0.286,
+"n": 1,
+"energy": 3.5
+},
+"DECIMILLIPEDE_SEGMENT_BACK:BULK_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:CONSTRICT_MOVE": {
+"atk": 0.333,
+"blk": 0.667,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 3.0
+},
+"DECIMILLIPEDE_SEGMENT_BACK:CONSTRICT_MOVE|DECIMILLIPEDE_SEGMENT_MIDDLE:REATTACH_MOVE": {
+"atk": 0.75,
+"blk": 0.0,
+"pow": 0.25,
+"util": 0.0,
+"n": 1,
+"energy": 4.0
+},
+"DECIMILLIPEDE_SEGMENT_BACK:REATTACH_MOVE|DECIMILLIPEDE_SEGMENT_FRONT:CONSTRICT_MOVE": {
+"atk": 1.0,
+"blk": 0.0,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 3.0
+}
+},
+"KNOWLEDGE_DEMON_BOSS": {
+"KNOWLEDGE_DEMON:CURSE_OF_KNOWLEDGE_MOVE": {
+"atk": 0.575,
+"blk": 0.152,
+"pow": 0.105,
+"util": 0.168,
+"n": 80,
+"energy": 3.98
+},
+"_all": {
+"atk": 0.453,
+"blk": 0.279,
+"pow": 0.094,
+"util": 0.174,
+"n": 235,
+"energy": 4.24
+},
+"KNOWLEDGE_DEMON:SLAP_MOVE": {
+"atk": 0.313,
+"blk": 0.368,
+"pow": 0.139,
+"util": 0.18,
+"n": 60,
+"energy": 4.26
+},
+"KNOWLEDGE_DEMON:KNOWLEDGE_OVERWHELMING_MOVE": {
+"atk": 0.406,
+"blk": 0.363,
+"pow": 0.067,
+"util": 0.164,
+"n": 50,
+"energy": 4.46
+},
+"KNOWLEDGE_DEMON:PONDER_MOVE": {
+"atk": 0.49,
+"blk": 0.274,
+"pow": 0.05,
+"util": 0.186,
+"n": 45,
+"energy": 4.42
+}
+},
+"SOUL_NEXUS_ELITE": {
+"SOUL_NEXUS:SOUL_BURN_MOVE": {
+"atk": 0.333,
+"blk": 0.325,
+"pow": 0.114,
+"util": 0.228,
+"n": 86,
+"energy": 4.99
+},
+"_all": {
+"atk": 0.356,
+"blk": 0.328,
+"pow": 0.119,
+"util": 0.197,
+"n": 191,
+"energy": 4.88
+},
+"SOUL_NEXUS:DRAIN_LIFE_MOVE": {
+"atk": 0.359,
+"blk": 0.334,
+"pow": 0.127,
+"util": 0.18,
+"n": 50,
+"energy": 4.88
+},
+"SOUL_NEXUS:MAELSTROM_MOVE": {
+"atk": 0.381,
+"blk": 0.334,
+"pow": 0.12,
+"util": 0.165,
+"n": 53,
+"energy": 4.8
+},
+"NONE": {
+"atk": 1.0,
+"blk": 0.0,
+"pow": 0.0,
+"util": 0.0,
+"n": 2,
+"energy": 2.0
+}
+},
+"THE_INSATIABLE_BOSS": {
+"THE_INSATIABLE:LIQUIFY_GROUND_MOVE": {
+"atk": 0.497,
+"blk": 0.129,
+"pow": 0.206,
+"util": 0.169,
+"n": 44,
+"energy": 3.98
+},
+"_all": {
+"atk": 0.419,
+"blk": 0.293,
+"pow": 0.128,
+"util": 0.16,
+"n": 272,
+"energy": 3.59
+},
+"THE_INSATIABLE:THRASH_MOVE": {
+"atk": 0.377,
+"blk": 0.383,
+"pow": 0.11,
+"util": 0.13,
+"n": 74,
+"energy": 3.32
+},
+"THE_INSATIABLE:LUNGING_BITE_MOVE": {
+"atk": 0.331,
+"blk": 0.388,
+"pow": 0.09,
+"util": 0.191,
+"n": 60,
+"energy": 4.06
+},
+"THE_INSATIABLE:SALIVATE_MOVE": {
+"atk": 0.557,
+"blk": 0.15,
+"pow": 0.159,
+"util": 0.135,
+"n": 53,
+"energy": 3.08
+},
+"THE_INSATIABLE:THRASH_MOVE_2": {
+"atk": 0.387,
+"blk": 0.341,
+"pow": 0.091,
+"util": 0.181,
+"n": 40,
+"energy": 3.59
+},
+"NONE": {
+"atk": 0.5,
+"blk": 0.333,
+"pow": 0.167,
+"util": 0.0,
+"n": 1,
+"energy": 6.0
+}
+},
+"KNIGHTS_ELITE": {
+"FLAIL_KNIGHT:RAM_MOVE|MAGI_KNIGHT:POWER_SHIELD_MOVE|SPECTRAL_KNIGHT:HEX": {
+"atk": 0.376,
+"blk": 0.269,
+"pow": 0.17,
+"util": 0.184,
+"n": 57,
+"energy": 4.43
+},
+"_all": {
+"atk": 0.421,
+"blk": 0.237,
+"pow": 0.107,
+"util": 0.235,
+"n": 216,
+"energy": 4.66
+},
+"FLAIL_KNIGHT:RAM_MOVE|MAGI_KNIGHT:DAMPEN_MOVE|SPECTRAL_KNIGHT:SOUL_SLASH": {
+"atk": 0.192,
+"blk": 0.365,
+"pow": 0.154,
+"util": 0.288,
+"n": 10,
+"energy": 5.2
+},
+"FLAIL_KNIGHT:WAR_CHANT|MAGI_KNIGHT:RAM_MOVE|SPECTRAL_KNIGHT:SOUL_FLAME": {
+"atk": 0.0,
+"blk": 0.0,
+"pow": 0.625,
+"util": 0.375,
+"n": 3,
+"energy": 2.67
+},
+"FLAIL_KNIGHT:FLAIL_MOVE|MAGI_KNIGHT:PREP_MOVE|SPECTRAL_KNIGHT:SOUL_SLASH": {
+"atk": 0.231,
+"blk": 0.462,
+"pow": 0.154,
+"util": 0.154,
+"n": 2,
+"energy": 3.25
+},
+"FLAIL_KNIGHT:WAR_CHANT|SPECTRAL_KNIGHT:SOUL_FLAME": {
+"atk": 0.677,
+"blk": 0.065,
+"pow": 0.129,
+"util": 0.129,
+"n": 4,
+"energy": 3.88
+},
+"SPECTRAL_KNIGHT:SOUL_SLASH": {
+"atk": 0.468,
+"blk": 0.241,
+"pow": 0.063,
+"util": 0.228,
+"n": 7,
+"energy": 5.64
+},
+"FLAIL_KNIGHT:WAR_CHANT|SPECTRAL_KNIGHT:SOUL_SLASH": {
+"atk": 0.393,
+"blk": 0.214,
+"pow": 0.107,
+"util": 0.286,
+"n": 3,
+"energy": 4.67
+},
+"MAGI_KNIGHT:DAMPEN_MOVE|SPECTRAL_KNIGHT:SOUL_SLASH": {
+"atk": 0.492,
+"blk": 0.14,
+"pow": 0.067,
+"util": 0.302,
+"n": 14,
+"energy": 6.39
+},
+"MAGI_KNIGHT:RAM_MOVE": {
+"atk": 0.566,
+"blk": 0.229,
+"pow": 0.0,
+"util": 0.205,
+"n": 11,
+"energy": 3.77
+},
+"MAGI_KNIGHT:PREP_MOVE": {
+"atk": 0.619,
+"blk": 0.19,
+"pow": 0.127,
+"util": 0.063,
+"n": 9,
+"energy": 3.5
+},
+"FLAIL_KNIGHT:FLAIL_MOVE|MAGI_KNIGHT:DAMPEN_MOVE": {
+"atk": 0.5,
+"blk": 0.308,
+"pow": 0.077,
+"util": 0.115,
+"n": 3,
+"energy": 4.33
+},
+"FLAIL_KNIGHT:WAR_CHANT|MAGI_KNIGHT:RAM_MOVE": {
+"atk": 0.455,
+"blk": 0.327,
+"pow": 0.073,
+"util": 0.145,
+"n": 7,
+"energy": 3.93
+},
+"FLAIL_KNIGHT:WAR_CHANT|MAGI_KNIGHT:RAM_MOVE|SPECTRAL_KNIGHT:SOUL_SLASH": {
+"atk": 1.0,
+"blk": 0.0,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 4.0
+},
+"MAGI_KNIGHT:PREP_MOVE|SPECTRAL_KNIGHT:SOUL_FLAME": {
+"atk": 0.339,
+"blk": 0.107,
+"pow": 0.0,
+"util": 0.554,
+"n": 3,
+"energy": 9.33
+},
+"MAGI_KNIGHT:MAGIC_BOMB|SPECTRAL_KNIGHT:SOUL_SLASH": {
+"atk": 0.667,
+"blk": 0.067,
+"pow": 0.0,
+"util": 0.267,
+"n": 1,
+"energy": 7.5
+},
+"FLAIL_KNIGHT:FLAIL_MOVE|SPECTRAL_KNIGHT:SOUL_SLASH": {
+"atk": 0.536,
+"blk": 0.25,
+"pow": 0.071,
+"util": 0.143,
+"n": 3,
+"energy": 4.67
+},
+"MAGI_KNIGHT:MAGIC_BOMB": {
+"atk": 0.377,
+"blk": 0.34,
+"pow": 0.0,
+"util": 0.283,
+"n": 5,
+"energy": 5.3
+},
+"FLAIL_KNIGHT:WAR_CHANT|MAGI_KNIGHT:DAMPEN_MOVE": {
+"atk": 0.759,
+"blk": 0.069,
+"pow": 0.0,
+"util": 0.172,
+"n": 3,
+"energy": 4.83
+},
+"FLAIL_KNIGHT:FLAIL_MOVE|MAGI_KNIGHT:RAM_MOVE": {
+"atk": 0.0,
+"blk": 0.643,
+"pow": 0.0,
+"util": 0.357,
+"n": 2,
+"energy": 3.5
+},
+"FLAIL_KNIGHT:FLAIL_MOVE|MAGI_KNIGHT:PREP_MOVE": {
+"atk": 0.278,
+"blk": 0.444,
+"pow": 0.0,
+"util": 0.278,
+"n": 4,
+"energy": 2.25
+},
+"FLAIL_KNIGHT:RAM_MOVE|MAGI_KNIGHT:DAMPEN_MOVE": {
+"atk": 0.44,
+"blk": 0.107,
+"pow": 0.08,
+"util": 0.373,
+"n": 6,
+"energy": 6.25
+},
+"FLAIL_KNIGHT:FLAIL_MOVE|MAGI_KNIGHT:MAGIC_BOMB": {
+"atk": 0.286,
+"blk": 0.286,
+"pow": 0.0,
+"util": 0.429,
+"n": 1,
+"energy": 7.0
+},
+"FLAIL_KNIGHT:RAM_MOVE|MAGI_KNIGHT:PREP_MOVE|SPECTRAL_KNIGHT:SOUL_SLASH": {
+"atk": 0.0,
+"blk": 0.0,
+"pow": 0.0,
+"util": 1.0,
+"n": 1,
+"energy": 3.0
+},
+"FLAIL_KNIGHT:RAM_MOVE": {
+"atk": 0.432,
+"blk": 0.108,
+"pow": 0.162,
+"util": 0.297,
+"n": 5,
+"energy": 3.7
+},
+"MAGI_KNIGHT:RAM_MOVE|SPECTRAL_KNIGHT:SOUL_SLASH": {
+"atk": 0.325,
+"blk": 0.3,
+"pow": 0.15,
+"util": 0.225,
+"n": 5,
+"energy": 4.0
+},
+"MAGI_KNIGHT:POWER_SHIELD_MOVE|SPECTRAL_KNIGHT:HEX": {
+"atk": 0.565,
+"blk": 0.0,
+"pow": 0.043,
+"util": 0.391,
+"n": 3,
+"energy": 7.67
+},
+"SPECTRAL_KNIGHT:SOUL_FLAME": {
+"atk": 0.609,
+"blk": 0.261,
+"pow": 0.087,
+"util": 0.043,
+"n": 3,
+"energy": 3.83
+},
+"FLAIL_KNIGHT:RAM_MOVE|SPECTRAL_KNIGHT:HEX": {
+"atk": 0.596,
+"blk": 0.115,
+"pow": 0.077,
+"util": 0.212,
+"n": 3,
+"energy": 8.67
+},
+"FLAIL_KNIGHT:WAR_CHANT": {
+"atk": 0.491,
+"blk": 0.14,
+"pow": 0.105,
+"util": 0.263,
+"n": 5,
+"energy": 5.7
+},
+"FLAIL_KNIGHT:FLAIL_MOVE|MAGI_KNIGHT:DAMPEN_MOVE|SPECTRAL_KNIGHT:SOUL_SLASH": {
+"atk": 0.338,
+"blk": 0.39,
+"pow": 0.117,
+"util": 0.156,
+"n": 8,
+"energy": 4.81
+},
+"FLAIL_KNIGHT:RAM_MOVE|MAGI_KNIGHT:RAM_MOVE|SPECTRAL_KNIGHT:SOUL_FLAME": {
+"atk": 0.361,
+"blk": 0.278,
+"pow": 0.167,
+"util": 0.194,
+"n": 4,
+"energy": 4.5
+},
+"MAGI_KNIGHT:PREP_MOVE|SPECTRAL_KNIGHT:SOUL_SLASH": {
+"atk": 0.5,
+"blk": 0.0,
+"pow": 0.25,
+"util": 0.25,
+"n": 1,
+"energy": 4.0
+},
+"FLAIL_KNIGHT:WAR_CHANT|MAGI_KNIGHT:DAMPEN_MOVE|SPECTRAL_KNIGHT:SOUL_SLASH": {
+"atk": 0.25,
+"blk": 0.4,
+"pow": 0.1,
+"util": 0.25,
+"n": 4,
+"energy": 2.5
+},
+"FLAIL_KNIGHT:FLAIL_MOVE|SPECTRAL_KNIGHT:SOUL_FLAME": {
+"atk": 0.267,
+"blk": 0.533,
+"pow": 0.0,
+"util": 0.2,
+"n": 2,
+"energy": 3.75
+},
+"FLAIL_KNIGHT:RAM_MOVE|MAGI_KNIGHT:PREP_MOVE": {
+"atk": 0.5,
+"blk": 0.0,
+"pow": 0.167,
+"util": 0.333,
+"n": 1,
+"energy": 6.0
+},
+"FLAIL_KNIGHT:RAM_MOVE|MAGI_KNIGHT:RAM_MOVE": {
+"atk": 0.2,
+"blk": 0.6,
+"pow": 0.0,
+"util": 0.2,
+"n": 1,
+"energy": 5.0
+},
+"FLAIL_KNIGHT:FLAIL_MOVE": {
+"atk": 0.421,
+"blk": 0.421,
+"pow": 0.0,
+"util": 0.158,
+"n": 3,
+"energy": 3.17
+},
+"MAGI_KNIGHT:RAM_MOVE|SPECTRAL_KNIGHT:SOUL_FLAME": {
+"atk": 0.692,
+"blk": 0.154,
+"pow": 0.154,
+"util": 0.0,
+"n": 2,
+"energy": 3.25
+},
+"FLAIL_KNIGHT:RAM_MOVE|SPECTRAL_KNIGHT:SOUL_SLASH": {
+"atk": 0.259,
+"blk": 0.296,
+"pow": 0.222,
+"util": 0.222,
+"n": 3,
+"energy": 4.5
+},
+"FLAIL_KNIGHT:WAR_CHANT|MAGI_KNIGHT:PREP_MOVE|SPECTRAL_KNIGHT:SOUL_SLASH": {
+"atk": 0.286,
+"blk": 0.571,
+"pow": 0.0,
+"util": 0.143,
+"n": 1,
+"energy": 3.5
+},
+"FLAIL_KNIGHT:RAM_MOVE|MAGI_KNIGHT:MAGIC_BOMB|SPECTRAL_KNIGHT:SOUL_SLASH": {
+"atk": 0.0,
+"blk": 1.0,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 3.0
+},
+"FLAIL_KNIGHT:RAM_MOVE|MAGI_KNIGHT:POWER_SHIELD_MOVE": {
+"atk": 0.417,
+"blk": 0.0,
+"pow": 0.0,
+"util": 0.583,
+"n": 1,
+"energy": 6.0
+}
+},
+"TEST_SUBJECT_BOSS": {
+"NONE": {
+"atk": 0.428,
+"blk": 0.151,
+"pow": 0.129,
+"util": 0.292,
+"n": 108,
+"energy": 4.88
+},
+"_all": {
+"atk": 0.404,
+"blk": 0.269,
+"pow": 0.106,
+"util": 0.221,
+"n": 424,
+"energy": 4.69
+},
+"TEST_SUBJECT:PHASE3_LACERATE_MOVE": {
+"atk": 0.395,
+"blk": 0.352,
+"pow": 0.037,
+"util": 0.217,
+"n": 66,
+"energy": 5.28
+},
+"TEST_SUBJECT:BITE_MOVE": {
+"atk": 0.319,
+"blk": 0.283,
+"pow": 0.238,
+"util": 0.16,
+"n": 63,
+"energy": 4.46
+},
+"TEST_SUBJECT:MULTI_CLAW_MOVE": {
+"atk": 0.371,
+"blk": 0.339,
+"pow": 0.052,
+"util": 0.237,
+"n": 70,
+"energy": 5.45
+},
+"TEST_SUBJECT:BIG_POUNCE": {
+"atk": 0.465,
+"blk": 0.398,
+"pow": 0.0,
+"util": 0.137,
+"n": 42,
+"energy": 4.61
+},
+"TEST_SUBJECT:BURNING_GROWL_MOVE": {
+"atk": 0.626,
+"blk": 0.118,
+"pow": 0.038,
+"util": 0.218,
+"n": 34,
+"energy": 3.1
+},
+"TEST_SUBJECT:SKULL_BASH_MOVE": {
+"atk": 0.367,
+"blk": 0.256,
+"pow": 0.233,
+"util": 0.144,
+"n": 34,
+"energy": 3.97
+},
+"TEST_SUBJECT:RESPAWN_MOVE": {
+"atk": 0.2,
+"blk": 0.057,
+"pow": 0.4,
+"util": 0.343,
+"n": 7,
+"energy": 2.5
+}
+},
+"PHANTASMAL_GARDENERS_ELITE": {
+"PHANTASMAL_GARDENER:BITE_MOVE|PHANTASMAL_GARDENER:ENLARGE_MOVE|PHANTASMAL_GARDENER:FLAIL_MOVE|PHANTASMAL_GARDENER:LASH_MOVE": {
+"atk": 0.412,
+"blk": 0.426,
+"pow": 0.08,
+"util": 0.081,
+"n": 129,
+"energy": 3.24
+},
+"_all": {
+"atk": 0.536,
+"blk": 0.361,
+"pow": 0.035,
+"util": 0.068,
+"n": 458,
+"energy": 3.27
+},
+"PHANTASMAL_GARDENER:ENLARGE_MOVE|PHANTASMAL_GARDENER:FLAIL_MOVE|PHANTASMAL_GARDENER:LASH_MOVE": {
+"atk": 0.651,
+"blk": 0.292,
+"pow": 0.014,
+"util": 0.043,
+"n": 41,
+"energy": 3.43
+},
+"PHANTASMAL_GARDENER:BITE_MOVE|PHANTASMAL_GARDENER:ENLARGE_MOVE|PHANTASMAL_GARDENER:FLAIL_MOVE": {
+"atk": 0.539,
+"blk": 0.355,
+"pow": 0.039,
+"util": 0.066,
+"n": 49,
+"energy": 3.39
+},
+"PHANTASMAL_GARDENER:BITE_MOVE|PHANTASMAL_GARDENER:ENLARGE_MOVE": {
+"atk": 0.631,
+"blk": 0.323,
+"pow": 0.0,
+"util": 0.046,
+"n": 20,
+"energy": 3.25
+},
+"PHANTASMAL_GARDENER:BITE_MOVE|PHANTASMAL_GARDENER:LASH_MOVE": {
+"atk": 0.433,
+"blk": 0.537,
+"pow": 0.0,
+"util": 0.03,
+"n": 11,
+"energy": 3.05
+},
+"PHANTASMAL_GARDENER:LASH_MOVE": {
+"atk": 0.514,
+"blk": 0.417,
+"pow": 0.0,
+"util": 0.069,
+"n": 23,
+"energy": 3.13
+},
+"PHANTASMAL_GARDENER:FLAIL_MOVE": {
+"atk": 0.444,
+"blk": 0.465,
+"pow": 0.0,
+"util": 0.091,
+"n": 16,
+"energy": 3.09
+},
+"PHANTASMAL_GARDENER:BITE_MOVE": {
+"atk": 0.561,
+"blk": 0.389,
+"pow": 0.0,
+"util": 0.051,
+"n": 25,
+"energy": 3.14
+},
+"PHANTASMAL_GARDENER:BITE_MOVE|PHANTASMAL_GARDENER:FLAIL_MOVE": {
+"atk": 0.358,
+"blk": 0.517,
+"pow": 0.067,
+"util": 0.058,
+"n": 18,
+"energy": 3.33
+},
+"PHANTASMAL_GARDENER:ENLARGE_MOVE|PHANTASMAL_GARDENER:LASH_MOVE": {
+"atk": 0.563,
+"blk": 0.319,
+"pow": 0.0,
+"util": 0.118,
+"n": 19,
+"energy": 3.13
+},
+"PHANTASMAL_GARDENER:ENLARGE_MOVE": {
+"atk": 0.874,
+"blk": 0.051,
+"pow": 0.009,
+"util": 0.065,
+"n": 35,
+"energy": 3.06
+},
+"PHANTASMAL_GARDENER:ENLARGE_MOVE|PHANTASMAL_GARDENER:FLAIL_MOVE": {
+"atk": 0.721,
+"blk": 0.233,
+"pow": 0.023,
+"util": 0.023,
+"n": 26,
+"energy": 3.31
+},
+"PHANTASMAL_GARDENER:BITE_MOVE|PHANTASMAL_GARDENER:ENLARGE_MOVE|PHANTASMAL_GARDENER:LASH_MOVE": {
+"atk": 0.457,
+"blk": 0.45,
+"pow": 0.02,
+"util": 0.073,
+"n": 24,
+"energy": 3.15
+},
+"PHANTASMAL_GARDENER:FLAIL_MOVE|PHANTASMAL_GARDENER:LASH_MOVE": {
+"atk": 0.44,
+"blk": 0.52,
+"pow": 0.0,
+"util": 0.04,
+"n": 8,
+"energy": 3.12
+},
+"PHANTASMAL_GARDENER:BITE_MOVE|PHANTASMAL_GARDENER:FLAIL_MOVE|PHANTASMAL_GARDENER:LASH_MOVE": {
+"atk": 0.535,
+"blk": 0.283,
+"pow": 0.04,
+"util": 0.141,
+"n": 12,
+"energy": 4.12
+},
+"NONE": {
+"atk": 0.652,
+"blk": 0.261,
+"pow": 0.0,
+"util": 0.087,
+"n": 2,
+"energy": 5.75
+}
+},
+"TERROR_EEL_ELITE": {
+"TERROR_EEL:CRASH_MOVE": {
+"atk": 0.385,
+"blk": 0.495,
+"pow": 0.057,
+"util": 0.063,
+"n": 203,
+"energy": 3.26
+},
+"_all": {
+"atk": 0.557,
+"blk": 0.337,
+"pow": 0.039,
+"util": 0.067,
+"n": 543,
+"energy": 3.26
+},
+"TERROR_EEL:THRASH_MOVE": {
+"atk": 0.497,
+"blk": 0.389,
+"pow": 0.042,
+"util": 0.073,
+"n": 152,
+"energy": 3.31
+},
+"NONE": {
+"atk": 0.763,
+"blk": 0.131,
+"pow": 0.021,
+"util": 0.085,
+"n": 103,
+"energy": 3.3
+},
+"TERROR_EEL:TERROR_MOVE": {
+"atk": 0.831,
+"blk": 0.111,
+"pow": 0.016,
+"util": 0.042,
+"n": 79,
+"energy": 3.15
+},
+"TERROR_EEL:STUNNED": {
+"atk": 0.892,
+"blk": 0.054,
+"pow": 0.0,
+"util": 0.054,
+"n": 6,
+"energy": 3.08
+}
+},
+"SKULKING_COLONY_ELITE": {
+"SKULKING_COLONY:ZOOM_MOVE": {
+"atk": 0.405,
+"blk": 0.469,
+"pow": 0.05,
+"util": 0.076,
+"n": 146,
+"energy": 3.35
+},
+"_all": {
+"atk": 0.414,
+"blk": 0.47,
+"pow": 0.043,
+"util": 0.072,
+"n": 464,
+"energy": 3.27
+},
+"SKULKING_COLONY:ZOOM_MOVE_2": {
+"atk": 0.414,
+"blk": 0.444,
+"pow": 0.059,
+"util": 0.084,
+"n": 125,
+"energy": 3.21
+},
+"SKULKING_COLONY:INERTIA_MOVE": {
+"atk": 0.485,
+"blk": 0.405,
+"pow": 0.031,
+"util": 0.079,
+"n": 109,
+"energy": 3.15
+},
+"SKULKING_COLONY:PIERCING_STABS_MOVE": {
+"atk": 0.34,
+"blk": 0.59,
+"pow": 0.027,
+"util": 0.043,
+"n": 83,
+"energy": 3.37
+},
+"NONE": {
+"atk": 0.538,
+"blk": 0.462,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 6.5
+}
+},
+"SOUL_FYSH_BOSS": {
+"SOUL_FYSH:BECKON_MOVE": {
+"atk": 0.717,
+"blk": 0.148,
+"pow": 0.08,
+"util": 0.055,
+"n": 60,
+"energy": 2.71
+},
+"_all": {
+"atk": 0.534,
+"blk": 0.35,
+"pow": 0.051,
+"util": 0.065,
+"n": 241,
+"energy": 2.79
+},
+"SOUL_FYSH:DE_GAS_MOVE": {
+"atk": 0.423,
+"blk": 0.473,
+"pow": 0.057,
+"util": 0.047,
+"n": 49,
+"energy": 3.06
+},
+"SOUL_FYSH:GAZE_MOVE": {
+"atk": 0.402,
+"blk": 0.458,
+"pow": 0.049,
+"util": 0.091,
+"n": 46,
+"energy": 2.87
+},
+"SOUL_FYSH:FADE_MOVE": {
+"atk": 0.73,
+"blk": 0.18,
+"pow": 0.032,
+"util": 0.059,
+"n": 43,
+"energy": 2.58
+},
+"SOUL_FYSH:SCREAM_MOVE": {
+"atk": 0.384,
+"blk": 0.507,
+"pow": 0.023,
+"util": 0.087,
+"n": 42,
+"energy": 2.61
+},
+"NONE": {
+"atk": 0.429,
+"blk": 0.571,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 7.0
+}
+},
+"WATERFALL_GIANT_BOSS": {
+"WATERFALL_GIANT:PRESSURIZE_MOVE": {
+"atk": 0.54,
+"blk": 0.21,
+"pow": 0.161,
+"util": 0.089,
+"n": 36,
+"energy": 3.11
+},
+"_all": {
+"atk": 0.495,
+"blk": 0.366,
+"pow": 0.04,
+"util": 0.099,
+"n": 363,
+"energy": 3.21
+},
+"WATERFALL_GIANT:STOMP_MOVE": {
+"atk": 0.403,
+"blk": 0.446,
+"pow": 0.034,
+"util": 0.117,
+"n": 70,
+"energy": 3.35
+},
+"WATERFALL_GIANT:RAM_MOVE": {
+"atk": 0.445,
+"blk": 0.447,
+"pow": 0.037,
+"util": 0.071,
+"n": 63,
+"energy": 3.02
+},
+"WATERFALL_GIANT:SIPHON_MOVE": {
+"atk": 0.689,
+"blk": 0.159,
+"pow": 0.067,
+"util": 0.085,
+"n": 56,
+"energy": 2.93
+},
+"WATERFALL_GIANT:PRESSURE_GUN_MOVE": {
+"atk": 0.293,
+"blk": 0.571,
+"pow": 0.006,
+"util": 0.13,
+"n": 48,
+"energy": 3.52
+},
+"WATERFALL_GIANT:PRESSURE_UP_MOVE": {
+"atk": 0.52,
+"blk": 0.43,
+"pow": 0.0,
+"util": 0.05,
+"n": 42,
+"energy": 3.32
+},
+"NONE": {
+"atk": 0.657,
+"blk": 0.197,
+"pow": 0.01,
+"util": 0.137,
+"n": 47,
+"energy": 3.35
+},
+"WATERFALL_GIANT:ABOUT_TO_BLOW_MOVE": {
+"atk": 0.0,
+"blk": 0.0,
+"pow": 0.0,
+"util": 0.0,
+"n": 1,
+"energy": 1.0
+}
+},
+"LAGAVULIN_MATRIARCH_BOSS": {
+"LAGAVULIN_MATRIARCH:SLEEP_MOVE": {
+"atk": 0.32,
+"blk": 0.173,
+"pow": 0.347,
+"util": 0.16,
+"n": 53,
+"energy": 1.42
+},
+"_all": {
+"atk": 0.577,
+"blk": 0.272,
+"pow": 0.052,
+"util": 0.098,
+"n": 266,
+"energy": 3.21
+},
+"NONE": {
+"atk": 0.645,
+"blk": 0.083,
+"pow": 0.066,
+"util": 0.207,
+"n": 31,
+"energy": 3.9
+},
+"LAGAVULIN_MATRIARCH:SLASH_MOVE": {
+"atk": 0.492,
+"blk": 0.395,
+"pow": 0.056,
+"util": 0.056,
+"n": 53,
+"energy": 3.51
+},
+"LAGAVULIN_MATRIARCH:DISEMBOWEL_MOVE": {
+"atk": 0.501,
+"blk": 0.413,
+"pow": 0.0,
+"util": 0.085,
+"n": 48,
+"energy": 3.91
+},
+"LAGAVULIN_MATRIARCH:SLASH2_MOVE": {
+"atk": 0.619,
+"blk": 0.313,
+"pow": 0.0,
+"util": 0.068,
+"n": 43,
+"energy": 3.57
+},
+"LAGAVULIN_MATRIARCH:SOUL_SIPHON_MOVE": {
+"atk": 0.846,
+"blk": 0.077,
+"pow": 0.0,
+"util": 0.077,
+"n": 38,
+"energy": 3.42
+}
+}
+}

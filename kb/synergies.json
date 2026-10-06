@@ -1,0 +1,19 @@
+{
+  "_说明": "选牌时的联动规则。每条：when 条件（deck_tags 牌组里某类牌的数量下限 / deck_cards 有某张牌 / relics 有某个遗物 / potions 有某种药水），boost 给哪类牌加多少分（tag:标签 或 card:牌 id），note 为什么。人类数据的结论：联动主要体现在「引擎 + 燃料」这一层，收尾牌没有引擎时是废牌",
+  "rules": [
+    {"name": "有消耗引擎 → 燃料更值钱", "when": {"deck_tags": {"exhaust_engine": 1}}, "boost": {"tag:exhaust_fuel": 0.12, "tag:exhaust_payoff": 0.08}},
+    {"name": "燃料够多 → 引擎更值钱", "when": {"deck_tags": {"exhaust_fuel": 2}}, "boost": {"tag:exhaust_engine": 0.15}},
+    {"name": "没有引擎 → 消耗收尾牌没用", "when": {"deck_tags_max": {"exhaust_engine": 0}}, "boost": {"tag:exhaust_payoff": -0.06}},
+    {"name": "有格挡转伤害 → 格挡牌更值钱", "when": {"deck_tags": {"block_payoff": 1}}, "boost": {"tag:block": 0.05}},
+    {"name": "格挡牌够多 → 格挡转伤害更值钱", "when": {"deck_tags": {"block": 6}}, "boost": {"tag:block_payoff": 0.08}},
+    {"name": "有力量来源 → 多段攻击更值钱", "when": {"deck_tags": {"strength": 2}}, "boost": {"tag:multi_hit": 0.06}},
+    {"name": "多段攻击够多 → 力量更值钱", "when": {"deck_tags": {"multi_hit": 3}}, "boost": {"tag:strength": 0.05}},
+    {"name": "有易伤来源 → 易伤收益牌", "when": {"deck_tags": {"vuln": 2}}, "boost": {"card:CRUELTY": 0.06, "card:VICIOUS": 0.05, "card:BULLY": 0.04, "card:DISMANTLE": 0.03, "card:COLOSSUS": 0.04}},
+    {"name": "有狱火 / 撕裂 → 自伤牌更值钱", "when": {"deck_cards": ["INFERNO"]}, "boost": {"tag:self_damage": 0.06}},
+    {"name": "有撕裂 → 自伤牌更值钱", "when": {"deck_cards": ["RUPTURE"]}, "boost": {"tag:self_damage": 0.06}},
+    {"name": "有自伤牌 → 撕裂更值钱", "when": {"deck_tags": {"self_damage": 2}}, "boost": {"card:RUPTURE": 0.08, "card:INFERNO": 0.05}},
+    {"name": "打击类牌组的收尾", "when": {"deck_tags": {"strike_arch": 2}}, "boost": {"card:HELLRAISER": 0.05}},
+    {"name": "第一幕缺群伤", "when": {"act_max": 1, "deck_tags_max": {"aoe": 1}}, "boost": {"tag:aoe": 0.08}},
+    {"name": "复制药水 → 大攻击 / 能力更值钱", "when": {"potions": ["DUPLICATOR"]}, "boost": {"tag:power": 0.03}}
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "scope": "Completed mainline records only; Matriarch encounters identified by combat.enemies, not nonexistent encounter key. Initial query using encounter/enc wrongly returned zero; not used as evidence. Boss survival inferred from reaching act2/full win; not candidate uplift.",
+  "sources": [
+    {
+      "path": "/opt/slay-the-spire-2/agent/results/it-iter-pub-1005-0032.jsonl",
+      "sha256": "177bd9c2c23b5d78aa15efb8b994989ebaf7debd2ab21d07c74ffeabec4e79e4",
+      "records": 100,
+      "n": 14,
+      "boss_survivors": 11,
+      "rows": [
+        {
+          "seed": "71BMX9FLRCXV",
+          "boss_survived": true,
+          "rounds": 8,
+          "old_dmg": 27
+        },
+        {
+          "seed": "L2WUEGPAFWSQ",
+          "boss_survived": false,
+          "rounds": 5,
+          "old_dmg": 30
+        },
+        {
+          "seed": "EYQL1JFBFGPA",
+          "boss_survived": true,
+          "rounds": 7,
+          "old_dmg": 28
+        },
+        {
+          "seed": "WX3APT7KAL56",
+          "boss_survived": true,
+          "rounds": 9,
+          "old_dmg": 60
+        },
+        {
+          "seed": "7XA0WGRMZYL2",
+          "boss_survived": true,
+          "rounds": 6,
+          "old_dmg": 27
+        },
+        {
+          "seed": "MZW48PKH7KHV",
+          "boss_survived": true,
+          "rounds": 11,
+          "old_dmg": 60
+        },
+        {
+          "seed": "5QT6UQ92VQN3",
+          "boss_survived": true,
+          "rounds": 8,
+          "old_dmg": 27
+        },
+        {
+          "seed": "BN8NVZXLZJVA",
+          "boss_survived": true,
+          "rounds": 8,
+          "old_dmg": 55
+        },
+        {
+          "seed": "5NERW2FKAJ8V",
+          "boss_survived": true,
+          "rounds": 11,
+          "old_dmg": 66
+        },
+        {
+          "seed": "3JKN1PL1GAES",
+          "boss_survived": true,
+          "rounds": 7,
+          "old_dmg": 32
+        },
+        {
+          "seed": "G77SERW61SVH",
+          "boss_survived": false,
+          "rounds": 11,
+          "old_dmg": 70
+        },
+        {
+          "seed": "CGLV29HEPN5Z",
+          "boss_survived": true,
+          "rounds": 7,
+          "old_dmg": 26
+        },
+        {
+          "seed": "TFSZJRBXWMEG",
+          "boss_survived": false,
+          "rounds": 7,
+          "old_dmg": 42
+        },
+        {
+          "seed": "4FPDA0QW6KPZ",
+          "boss_survived": true,
+          "rounds": 7,
+          "old_dmg": 28
+        }
+      ]
+    },
+    {
+      "path": "/opt/slay-the-spire-2/agent/results/it-iter-pub-dev-1005-0034.jsonl",
+      "sha256": "09ce291f4be2460aa7094a36eec55a9ec7e894de8550dfdcda4e88da5e33a12d",
+      "records": 60,
+      "n": 10,
+      "boss_survivors": 9,
+      "rows": [
+        {
+          "seed": "CJ2AJ95KRVKS",
+          "boss_survived": true,
+          "rounds": 6,
+          "old_dmg": 8
+        },
+        {
+          "seed": "U9U0RG3VTMDE",
+          "boss_survived": true,
+          "rounds": 7,
+          "old_dmg": 21
+        },
+        {
+          "seed": "ACC9ZK24EV7G",
+          "boss_survived": true,
+          "rounds": 8,
+          "old_dmg": 90
+        },
+        {
+          "seed": "DT2RDCXC1J03",
+          "boss_survived": true,
+          "rounds": 6,
+          "old_dmg": 30
+        },
+        {
+          "seed": "82WM02T9GP58",
+          "boss_survived": true,
+          "rounds": 8,
+          "old_dmg": 56
+        },
+        {
+          "seed": "4JWSTGS9UXN5",
+          "boss_survived": false,
+          "rounds": 12,
+          "old_dmg": 58
+        },
+        {
+          "seed": "GPVB9CWQU41D",
+          "boss_survived": true,
+          "rounds": 8,
+          "old_dmg": 54
+        },
+        {
+          "seed": "U89MT3XEGV9Z",
+          "boss_survived": true,
+          "rounds": 10,
+          "old_dmg": 80
+        },
+        {
+          "seed": "PNK3USYZ87R7",
+          "boss_survived": true,
+          "rounds": 6,
+          "old_dmg": 31
+        },
+        {
+          "seed": "HYAZNCVTQWYD",
+          "boss_survived": true,
+          "rounds": 9,
+          "old_dmg": 59
+        }
+      ]
+    }
+  ]
+}

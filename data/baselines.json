@@ -1,0 +1,562 @@
+{
+ "CORPSE_SLUGS_WEAK": {
+  "zh": "一些噬尸蛞蝓",
+  "names": "Corpse Slug",
+  "win_avg": 6.5,
+  "all_avg": 8.3,
+  "n_win": 747
+ },
+ "SEAPUNK_WEAK": {
+  "zh": "海洋混混",
+  "names": "Seapunk",
+  "win_avg": 7.3,
+  "all_avg": 8.6,
+  "n_win": 711
+ },
+ "TOADPOLES_WEAK": {
+  "zh": "蟾蜍蝌蚪",
+  "names": "Toadpole",
+  "win_avg": 6.5,
+  "all_avg": 8.4,
+  "n_win": 734
+ },
+ "CULTISTS_NORMAL": {
+  "zh": "邪教徒们",
+  "names": "Calcified Cultist + Damp Cultist",
+  "win_avg": 6.8,
+  "all_avg": 10.8,
+  "n_win": 206
+ },
+ "SEAPUNK_NORMAL": {
+  "zh": "暗港野生动物",
+  "names": "Calcified Cultist + Seapunk",
+  "win_avg": 11.0,
+  "all_avg": 15.2,
+  "n_win": 158
+ },
+ "SKULKING_COLONY_ELITE": {
+  "zh": "鬼祟珊瑚群",
+  "names": "Skulking Colony",
+  "win_avg": 23.7,
+  "all_avg": 28.0,
+  "n_win": 798
+ },
+ "TWO_TAILED_RATS_NORMAL": {
+  "zh": "双尾鼠",
+  "names": "Two-Tailed Rat",
+  "win_avg": 7.5,
+  "all_avg": 9.8,
+  "n_win": 196
+ },
+ "TERROR_EEL_ELITE": {
+  "zh": "骇鳗",
+  "names": "Terror Eel",
+  "win_avg": 19.8,
+  "all_avg": 24.7,
+  "n_win": 822
+ },
+ "SOUL_FYSH_BOSS": {
+  "zh": "灵魂异鱼",
+  "names": "Soul Fysh",
+  "win_avg": 29.8,
+  "all_avg": 35.2,
+  "n_win": 350
+ },
+ "THIEVING_HOPPER_WEAK": {
+  "zh": "偷窃草蜢",
+  "names": "Thieving Hopper",
+  "win_avg": 9.3,
+  "all_avg": 12.4,
+  "n_win": 981
+ },
+ "BOWLBUGS_WEAK": {
+  "zh": "盛碗虫",
+  "names": "Bowlbug (Egg) + Bowlbug (Nectar) + Bowlbug (Rock)",
+  "win_avg": 7.3,
+  "all_avg": 9.8,
+  "n_win": 1017
+ },
+ "INFESTED_PRISMS_ELITE": {
+  "zh": "感染棱柱",
+  "names": "Infested Prism",
+  "win_avg": 21.6,
+  "all_avg": 26.2,
+  "n_win": 1551
+ },
+ "LOUSE_PROGENITOR_NORMAL": {
+  "zh": "虱虫之祖",
+  "names": "Louse Progenitor",
+  "win_avg": 9.5,
+  "all_avg": 13.1,
+  "n_win": 472
+ },
+ "SPINY_TOAD_NORMAL": {
+  "zh": "棘刺蟾蜍",
+  "names": "Spiny Toad",
+  "win_avg": 11.4,
+  "all_avg": 15.1,
+  "n_win": 497
+ },
+ "HUNTER_KILLER_NORMAL": {
+  "zh": "猎人杀手",
+  "names": "Hunter Killer",
+  "win_avg": 12.6,
+  "all_avg": 18.1,
+  "n_win": 461
+ },
+ "KNOWLEDGE_DEMON_BOSS": {
+  "zh": "知识恶魔",
+  "names": "Knowledge Demon",
+  "win_avg": 30.1,
+  "all_avg": 37.9,
+  "n_win": 685
+ },
+ "SLIMES_WEAK": {
+  "zh": "一群史莱姆",
+  "names": "Leaf Slime (M) + Leaf Slime (S) + Twig Slime (M) + Twig Slime (S)",
+  "win_avg": 5.1,
+  "all_avg": 6.4,
+  "n_win": 759
+ },
+ "SHRINKER_BEETLE_WEAK": {
+  "zh": "缩小甲虫",
+  "names": "Shrinker Beetle",
+  "win_avg": 4.6,
+  "all_avg": 5.2,
+  "n_win": 745
+ },
+ "NIBBITS_WEAK": {
+  "zh": "一只落单的小啃兽",
+  "names": "Nibbit",
+  "win_avg": 7.0,
+  "all_avg": 7.8,
+  "n_win": 783
+ },
+ "MAWLER_NORMAL": {
+  "zh": "蛮兽",
+  "names": "Mawler",
+  "win_avg": 8.4,
+  "all_avg": 10.6,
+  "n_win": 183
+ },
+ "VINE_SHAMBLER_NORMAL": {
+  "zh": "藤蔓蹒跚者",
+  "names": "Vine Shambler",
+  "win_avg": 11.3,
+  "all_avg": 14.4,
+  "n_win": 171
+ },
+ "SLITHERING_STRANGLER_NORMAL": {
+  "zh": "扼杀者与伙伴",
+  "names": "Leaf Slime (M) + Leaf Slime (S) + Slithering Strangler + Snapping Jaxfruit + Twig Slime (M) + Twig Slime (S)",
+  "win_avg": 9.2,
+  "all_avg": 11.4,
+  "n_win": 135
+ },
+ "CUBEX_CONSTRUCT_NORMAL": {
+  "zh": "方柱构装体",
+  "names": "Cubex Construct",
+  "win_avg": 6.4,
+  "all_avg": 8.2,
+  "n_win": 191
+ },
+ "CEREMONIAL_BEAST_BOSS": {
+  "zh": "仪式兽",
+  "names": "Ceremonial Beast",
+  "win_avg": 28.6,
+  "all_avg": 34.2,
+  "n_win": 373
+ },
+ "THE_INSATIABLE_BOSS": {
+  "zh": "无厌沙虫",
+  "names": "The Insatiable",
+  "win_avg": 30.8,
+  "all_avg": 36.5,
+  "n_win": 699
+ },
+ "DEVOTED_SCULPTOR_WEAK": {
+  "zh": "虔诚雕刻师",
+  "names": "Devoted Sculptor",
+  "win_avg": 7.0,
+  "all_avg": 9.5,
+  "n_win": 1340
+ },
+ "TURRET_OPERATOR_WEAK": {
+  "zh": "高塔炮手",
+  "names": "Living Shield + Turret Operator",
+  "win_avg": 9.4,
+  "all_avg": 11.5,
+  "n_win": 1314
+ },
+ "KNIGHTS_ELITE": {
+  "zh": "骑士团伙",
+  "names": "Flail Knight + Magi Knight + Spectral Knight",
+  "win_avg": 16.3,
+  "all_avg": 20.3,
+  "n_win": 1248
+ },
+ "AEONGLASS_BOSS": {
+  "zh": "永世沙漏",
+  "names": "Aeonglass",
+  "win_avg": 29.3,
+  "all_avg": 36.6,
+  "n_win": 1372
+ },
+ "FUZZY_WURM_CRAWLER_WEAK": {
+  "zh": "毛绒伏地虫",
+  "names": "Fuzzy Wurm Crawler",
+  "win_avg": 4.8,
+  "all_avg": 5.6,
+  "n_win": 748
+ },
+ "OVERGROWTH_CRAWLERS": {
+  "zh": "密林爬虫",
+  "names": "Fuzzy Wurm Crawler + Shrinker Beetle",
+  "win_avg": 9.6,
+  "all_avg": 13.3,
+  "n_win": 140
+ },
+ "NIBBITS_NORMAL": {
+  "zh": "两只小啃兽",
+  "names": "Nibbit",
+  "win_avg": 10.9,
+  "all_avg": 14.6,
+  "n_win": 183
+ },
+ "PHROG_PARASITE_ELITE": {
+  "zh": "异蛙寄生虫",
+  "names": "Phrog Parasite + Wriggler",
+  "win_avg": 16.3,
+  "all_avg": 21.4,
+  "n_win": 890
+ },
+ "RUBY_RAIDERS_NORMAL": {
+  "zh": "红宝石劫掠者",
+  "names": "Assassin Raider + Axe Raider + Brute Raider + Crossbow Raider + Tracker Raider",
+  "win_avg": 10.5,
+  "all_avg": 13.8,
+  "n_win": 191
+ },
+ "FLYCONID_NORMAL": {
+  "zh": "真菌与史莱姆",
+  "names": "Flyconid + Leaf Slime (M) + Twig Slime (M)",
+  "win_avg": 11.4,
+  "all_avg": 13.7,
+  "n_win": 121
+ },
+ "SLUDGE_SPINNER_WEAK": {
+  "zh": "淤泥旋螺",
+  "names": "Sludge Spinner",
+  "win_avg": 7.5,
+  "all_avg": 8.0,
+  "n_win": 746
+ },
+ "PHANTASMAL_GARDENERS_ELITE": {
+  "zh": "花园幽灵鳗",
+  "names": "Phantasmal Gardener",
+  "win_avg": 15.8,
+  "all_avg": 21.0,
+  "n_win": 835
+ },
+ "PUNCH_CONSTRUCT_NORMAL": {
+  "zh": "拳击构装体",
+  "names": "Punch Construct",
+  "win_avg": 6.8,
+  "all_avg": 9.3,
+  "n_win": 206
+ },
+ "WATERFALL_GIANT_BOSS": {
+  "zh": "瀑布巨兽",
+  "names": "Waterfall Giant",
+  "win_avg": 35.2,
+  "all_avg": 42.2,
+  "n_win": 304
+ },
+ "BYGONE_EFFIGY_ELITE": {
+  "zh": "旧日雕像",
+  "names": "Bygone Effigy",
+  "win_avg": 15.1,
+  "all_avg": 21.9,
+  "n_win": 880
+ },
+ "VANTOM_BOSS": {
+  "zh": "墨影幻灵",
+  "names": "Vantom",
+  "win_avg": 36.5,
+  "all_avg": 43.0,
+  "n_win": 333
+ },
+ "SNAPPING_JAXFRUIT_NORMAL": {
+  "zh": "密林植物",
+  "names": "Flyconid + Snapping Jaxfruit",
+  "win_avg": 14.2,
+  "all_avg": 16.8,
+  "n_win": 153
+ },
+ "BYRDONIS_ELITE": {
+  "zh": "多尼斯异鸟",
+  "names": "Byrdonis",
+  "win_avg": 20.7,
+  "all_avg": 25.3,
+  "n_win": 905
+ },
+ "EXOSKELETONS_WEAK": {
+  "zh": "外骨骼虫",
+  "names": "Exoskeleton",
+  "win_avg": 7.0,
+  "all_avg": 9.0,
+  "n_win": 1010
+ },
+ "TUNNELER_WEAK": {
+  "zh": "地道虫",
+  "names": "Tunneler",
+  "win_avg": 6.7,
+  "all_avg": 9.4,
+  "n_win": 985
+ },
+ "CHOMPERS_NORMAL": {
+  "zh": "一对自动机械",
+  "names": "Chomper",
+  "win_avg": 11.3,
+  "all_avg": 15.1,
+  "n_win": 467
+ },
+ "THE_OBSCURA_NORMAL": {
+  "zh": "胧光怪",
+  "names": "Parafright + The Obscura",
+  "win_avg": 8.1,
+  "all_avg": 12.2,
+  "n_win": 490
+ },
+ "ENTOMANCER_ELITE": {
+  "zh": "蜂群术士",
+  "names": "Entomancer",
+  "win_avg": 18.3,
+  "all_avg": 23.8,
+  "n_win": 1521
+ },
+ "DECIMILLIPEDE_ELITE": {
+  "zh": "残杀千足虫",
+  "names": "Decimillipede Segment Back + Decimillipede Segment Front + Decimillipede Segment Middle",
+  "win_avg": 22.1,
+  "all_avg": 28.3,
+  "n_win": 1520
+ },
+ "SCROLLS_OF_BITING_WEAK": {
+  "zh": "咬人卷轴",
+  "names": "Scroll of Biting",
+  "win_avg": 5.6,
+  "all_avg": 7.0,
+  "n_win": 1330
+ },
+ "SLIMED_BERSERKER_NORMAL": {
+  "zh": "史莱姆狂战士",
+  "names": "Slimed Berserker",
+  "win_avg": 9.4,
+  "all_avg": 12.5,
+  "n_win": 471
+ },
+ "CONSTRUCT_MENAGERIE_NORMAL": {
+  "zh": "一些构装体",
+  "names": "Cubex Construct + Punch Construct",
+  "win_avg": 9.3,
+  "all_avg": 12.8,
+  "n_win": 446
+ },
+ "MECHA_KNIGHT_ELITE": {
+  "zh": "机甲骑士",
+  "names": "Mecha Knight",
+  "win_avg": 20.5,
+  "all_avg": 25.9,
+  "n_win": 1188
+ },
+ "SLIMES_NORMAL": {
+  "zh": "一大群史莱姆",
+  "names": "Leaf Slime (M) + Leaf Slime (S) + Twig Slime (M) + Twig Slime (S)",
+  "win_avg": 7.6,
+  "all_avg": 10.0,
+  "n_win": 147
+ },
+ "BOWLBUGS_NORMAL": {
+  "zh": "盛碗虫群",
+  "names": "Bowlbug (Egg) + Bowlbug (Nectar) + Bowlbug (Rock) + Bowlbug (Silk)",
+  "win_avg": 9.4,
+  "all_avg": 12.6,
+  "n_win": 401
+ },
+ "EXOSKELETONS_NORMAL": {
+  "zh": "许多外骨骼虫",
+  "names": "Exoskeleton",
+  "win_avg": 9.8,
+  "all_avg": 13.6,
+  "n_win": 409
+ },
+ "KAISER_CRAB_BOSS": {
+  "zh": "帝皇蟹",
+  "names": "Crusher + Rocket",
+  "win_avg": 37.7,
+  "all_avg": 46.1,
+  "n_win": 615
+ },
+ "SCROLLS_OF_BITING_NORMAL": {
+  "zh": "许多咬人卷轴",
+  "names": "Scroll of Biting",
+  "win_avg": 6.4,
+  "all_avg": 8.5,
+  "n_win": 401
+ },
+ "TEST_SUBJECT_BOSS": {
+  "zh": "实验体",
+  "names": "Test Subject #C{Count}",
+  "win_avg": 30.7,
+  "all_avg": 38.4,
+  "n_win": 1323
+ },
+ "SEWER_CLAM_NORMAL": {
+  "zh": "下水道蚌",
+  "names": "Sewer Clam",
+  "win_avg": 6.8,
+  "all_avg": 8.7,
+  "n_win": 207
+ },
+ "FROG_KNIGHT_NORMAL": {
+  "zh": "青蛙骑士",
+  "names": "Frog Knight",
+  "win_avg": 10.9,
+  "all_avg": 13.3,
+  "n_win": 440
+ },
+ "SOUL_NEXUS_ELITE": {
+  "zh": "灵魂枢纽",
+  "names": "Soul Nexus",
+  "win_avg": 18.2,
+  "all_avg": 22.8,
+  "n_win": 1189
+ },
+ "QUEEN_BOSS": {
+  "zh": "女王",
+  "names": "Queen + Torch Head Amalgam",
+  "win_avg": 35.3,
+  "all_avg": 43.5,
+  "n_win": 1303
+ },
+ "CORPSE_SLUGS_NORMAL": {
+  "zh": "许多噬尸蛞蝓",
+  "names": "Corpse Slug",
+  "win_avg": 6.0,
+  "all_avg": 8.3,
+  "n_win": 183
+ },
+ "LAGAVULIN_MATRIARCH_BOSS": {
+  "zh": "乐加维林族母",
+  "names": "Lagavulin Matriarch",
+  "win_avg": 26.3,
+  "all_avg": 34.1,
+  "n_win": 328
+ },
+ "FABRICATOR_NORMAL": {
+  "zh": "组装师",
+  "names": "Fabricator",
+  "win_avg": 9.7,
+  "all_avg": 12.0,
+  "n_win": 443
+ },
+ "INKLETS_NORMAL": {
+  "zh": "墨宝",
+  "names": "Inklet",
+  "win_avg": 10.3,
+  "all_avg": 12.4,
+  "n_win": 186
+ },
+ "THE_KIN_BOSS": {
+  "zh": "同族小队",
+  "names": "Kin Follower + Kin Priest",
+  "win_avg": 34.5,
+  "all_avg": 40.4,
+  "n_win": 311
+ },
+ "GLOBE_HEAD_NORMAL": {
+  "zh": "一个孤单的电球头",
+  "names": "Globe Head",
+  "win_avg": 10.5,
+  "all_avg": 12.1,
+  "n_win": 427
+ },
+ "FOGMOG_NORMAL": {
+  "zh": "雾菇",
+  "names": "Eye with Teeth + Fogmog",
+  "win_avg": 6.2,
+  "all_avg": 9.4,
+  "n_win": 155
+ },
+ "SLUMBERING_BEETLE_NORMAL": {
+  "zh": "熟睡派对",
+  "names": "Bowlbug (Rock) + Bowlbug (Silk) + Slumbering Beetle",
+  "win_avg": 12.3,
+  "all_avg": 17.9,
+  "n_win": 376
+ },
+ "OVICOPTER_NORMAL": {
+  "zh": "直飞产卵虫",
+  "names": "Ovicopter + Tough Egg",
+  "win_avg": 9.3,
+  "all_avg": 12.7,
+  "n_win": 489
+ },
+ "FOSSIL_STALKER_NORMAL": {
+  "zh": "化石追踪者",
+  "names": "Fossil Stalker",
+  "win_avg": 8.6,
+  "all_avg": 11.1,
+  "n_win": 206
+ },
+ "HAUNTED_SHIP_NORMAL": {
+  "zh": "幽灵船",
+  "names": "Haunted Ship",
+  "win_avg": 8.8,
+  "all_avg": 11.7,
+  "n_win": 196
+ },
+ "GREMLIN_MERC_NORMAL": {
+  "zh": "穿着一件大衣的两只地精",
+  "names": "Fat Gremlin + Gremlin Merc + Sneaky Gremlin",
+  "win_avg": 11.6,
+  "all_avg": 13.4,
+  "n_win": 196
+ },
+ "LIVING_FOG_NORMAL": {
+  "zh": "邪恶气体",
+  "names": "Gas Bomb + Living Fog",
+  "win_avg": 7.6,
+  "all_avg": 10.1,
+  "n_win": 210
+ },
+ "MYTES_NORMAL": {
+  "zh": "一群异螨",
+  "names": "Myte",
+  "win_avg": 8.6,
+  "all_avg": 12.4,
+  "n_win": 474
+ },
+ "AXEBOTS_NORMAL": {
+  "zh": "巨斧机器人",
+  "names": "Axebot",
+  "win_avg": 13.1,
+  "all_avg": 18.1,
+  "n_win": 422
+ },
+ "OWL_MAGISTRATE_NORMAL": {
+  "zh": "猫头鹰法官",
+  "names": "Owl Magistrate",
+  "win_avg": 11.1,
+  "all_avg": 15.2,
+  "n_win": 429
+ },
+ "THE_LOST_AND_FORGOTTEN_NORMAL": {
+  "zh": "失落与遗忘之物",
+  "names": "The Forgotten + The Lost",
+  "win_avg": 9.7,
+  "all_avg": 11.7,
+  "n_win": 483
+ }
+}

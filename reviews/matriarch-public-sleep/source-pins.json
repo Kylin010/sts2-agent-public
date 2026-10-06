@@ -1,0 +1,96 @@
+[
+  {
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/AsleepPower.cs",
+    "sha256": "8a48187e4c0369d92adc6a2c72dd1f4972ab41645a386e69717cb438502c05da",
+    "lines": {
+      "AfterDamageReceived": [
+        21
+      ],
+      "AfterSideTurnEnd": [
+        46
+      ],
+      "BeforeSideTurnEndVeryEarly": [
+        38
+      ]
+    }
+  },
+  {
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Monsters/LagavulinMatriarch.cs",
+    "sha256": "760df06168aab29b83fb9c0faf89cab7784adaf57d02be22b4c76649c199de41",
+    "lines": {
+      "GenerateMoveStateMachine": [
+        160
+      ],
+      "SoulSiphonMove": [
+        167,
+        234
+      ]
+    }
+  },
+  {
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Combat/CombatManager.cs",
+    "sha256": "590b7a9b013b5f72cfc90330330f3eca7e7fd2adaed180872b521549e654d1ad",
+    "lines": {
+      "StartTurn": [
+        610,
+        617,
+        622,
+        688
+      ],
+      "PrepareForNextTurn": [
+        743
+      ],
+      "EndEnemyTurnInternal": [
+        1087,
+        1691
+      ],
+      "AfterSideTurnEnd": [
+        1699,
+        1774
+      ]
+    }
+  },
+  {
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Entities.Creatures/Creature.cs",
+    "sha256": "7a38841c525d5cc8873a2151e993e30e2ee84ecb345ea57e2570bbac4516c20d",
+    "lines": {
+      "StunInternal": [
+        525
+      ],
+      "PrepareForNextTurn": [
+        547
+      ]
+    }
+  },
+  {
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/PlatingPower.cs",
+    "sha256": "d3cd1402c704dcc379caf0981595356d449ccd81da10ff043836e0c1644cc2f1",
+    "lines": {
+      "BeforeSideTurnEndEarly": [
+        61
+      ],
+      "AfterSideTurnStart": [
+        70
+      ]
+    }
+  },
+  {
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Cards/Whistle.cs",
+    "sha256": "f9519f20a3959c8fa5816aa7cf90f5d41bdd00a962fd237fae092f5e83d1a1fa",
+    "lines": {
+      "CreatureCmd.Stun": [
+        33
+      ]
+    }
+  },
+  {
+    "source": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Commands/CreatureCmd.cs",
+    "sha256": "b4c0eace35caeb0998edb70af5b626f96835c0d3149d474b9b7c4693d9e30278",
+    "lines": {
+      "Task Stun": [
+        925,
+        939
+      ]
+    }
+  }
+]

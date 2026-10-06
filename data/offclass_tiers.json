@@ -1,0 +1,532 @@
+{
+"ADRENALINE": {
+"tier": "S",
+"rarity": "稀有",
+"color": "绿"
+},
+"BLADE_OF_INK": {
+"tier": "A",
+"rarity": "稀有",
+"color": "绿"
+},
+"AFTERIMAGE": {
+"tier": "A",
+"rarity": "稀有",
+"color": "绿"
+},
+"MALAISE": {
+"tier": "A",
+"rarity": "稀有",
+"color": "绿"
+},
+"EXPOSE": {
+"tier": "A",
+"rarity": "罕见",
+"color": "绿"
+},
+"FOOTWORK": {
+"tier": "A",
+"rarity": "罕见",
+"color": "绿"
+},
+"LEG_SWEEP": {
+"tier": "A",
+"rarity": "罕见",
+"color": "绿"
+},
+"PIERCING_WAIL": {
+"tier": "A",
+"rarity": "普通",
+"color": "绿"
+},
+"BACKFLIP": {
+"tier": "A",
+"rarity": "普通",
+"color": "绿"
+},
+"ASSASSINATE": {
+"tier": "B",
+"rarity": "稀有",
+"color": "绿"
+},
+"WELL_LAID_PLANS": {
+"tier": "B",
+"rarity": "稀有",
+"color": "绿"
+},
+"BULLET_TIME": {
+"tier": "B",
+"rarity": "稀有",
+"color": "绿"
+},
+"TOOLS_OF_THE_TRADE": {
+"tier": "B",
+"rarity": "稀有",
+"color": "绿"
+},
+"BURST": {
+"tier": "B",
+"rarity": "稀有",
+"color": "绿"
+},
+"THE_HUNT": {
+"tier": "B",
+"rarity": "稀有",
+"color": "绿"
+},
+"SERPENT_FORM": {
+"tier": "B",
+"rarity": "稀有",
+"color": "绿"
+},
+"DASH": {
+"tier": "B",
+"rarity": "罕见",
+"color": "绿"
+},
+"ECHOING_SLASH": {
+"tier": "B",
+"rarity": "罕见",
+"color": "绿"
+},
+"INFINITE_BLADES": {
+"tier": "B",
+"rarity": "罕见",
+"color": "绿"
+},
+"SKEWER": {
+"tier": "B",
+"rarity": "罕见",
+"color": "绿"
+},
+"BACKSTAB": {
+"tier": "B",
+"rarity": "罕见",
+"color": "绿"
+},
+"CALCULATED_GAMBLE": {
+"tier": "B",
+"rarity": "罕见",
+"color": "绿"
+},
+"ACROBATICS": {
+"tier": "B",
+"rarity": "罕见",
+"color": "绿"
+},
+"BLADE_DANCE": {
+"tier": "B",
+"rarity": "普通",
+"color": "绿"
+},
+"LEADING_STRIKE": {
+"tier": "B",
+"rarity": "普通",
+"color": "绿"
+},
+"CLOAK_AND_DAGGER": {
+"tier": "B",
+"rarity": "普通",
+"color": "绿"
+},
+"SUCKER_PUNCH": {
+"tier": "B",
+"rarity": "普通",
+"color": "绿"
+},
+"DEFLECT": {
+"tier": "B",
+"rarity": "普通",
+"color": "绿"
+},
+"DAGGER_SPRAY": {
+"tier": "B",
+"rarity": "普通",
+"color": "绿"
+},
+"SUPERCRITICAL": {
+"tier": "S",
+"rarity": "稀有",
+"color": "蓝"
+},
+"MACHINE_LEARNING": {
+"tier": "A",
+"rarity": "稀有",
+"color": "蓝"
+},
+"HYPERBEAM": {
+"tier": "A",
+"rarity": "稀有",
+"color": "蓝"
+},
+"ECHO_FORM": {
+"tier": "A",
+"rarity": "稀有",
+"color": "蓝"
+},
+"BULK_UP": {
+"tier": "A",
+"rarity": "罕见",
+"color": "蓝"
+},
+"SKIM": {
+"tier": "A",
+"rarity": "罕见",
+"color": "蓝"
+},
+"BOOT_SEQUENCE": {
+"tier": "A",
+"rarity": "罕见",
+"color": "蓝"
+},
+"CHARGE_BATTERY": {
+"tier": "A",
+"rarity": "普通",
+"color": "蓝"
+},
+"ADAPTIVE_STRIKE": {
+"tier": "B",
+"rarity": "稀有",
+"color": "蓝"
+},
+"BUFFER": {
+"tier": "B",
+"rarity": "稀有",
+"color": "蓝"
+},
+"REBOOT": {
+"tier": "B",
+"rarity": "稀有",
+"color": "蓝"
+},
+"OVERCLOCK": {
+"tier": "B",
+"rarity": "罕见",
+"color": "蓝"
+},
+"DOUBLE_ENERGY": {
+"tier": "B",
+"rarity": "罕见",
+"color": "蓝"
+},
+"WHITE_NOISE": {
+"tier": "B",
+"rarity": "罕见",
+"color": "蓝"
+},
+"SCAVENGE": {
+"tier": "B",
+"rarity": "罕见",
+"color": "蓝"
+},
+"FIGHT_THROUGH": {
+"tier": "B",
+"rarity": "罕见",
+"color": "蓝"
+},
+"FUSION": {
+"tier": "B",
+"rarity": "罕见",
+"color": "蓝"
+},
+"SYNTHESIS": {
+"tier": "B",
+"rarity": "罕见",
+"color": "蓝"
+},
+"TURBO": {
+"tier": "B",
+"rarity": "普通",
+"color": "蓝"
+},
+"BEAM_CELL": {
+"tier": "B",
+"rarity": "普通",
+"color": "蓝"
+},
+"MOMENTUM_STRIKE": {
+"tier": "B",
+"rarity": "普通",
+"color": "蓝"
+},
+"LEAP": {
+"tier": "B",
+"rarity": "普通",
+"color": "蓝"
+},
+"BOOST_AWAY": {
+"tier": "B",
+"rarity": "普通",
+"color": "蓝"
+},
+"HOLOGRAM": {
+"tier": "B",
+"rarity": "普通",
+"color": "蓝"
+},
+"GO_FOR_THE_EYES": {
+"tier": "B",
+"rarity": "普通",
+"color": "蓝"
+},
+"SWEEPING_BEAM": {
+"tier": "B",
+"rarity": "普通",
+"color": "蓝"
+},
+"TYRANNY": {
+"tier": "S",
+"rarity": "稀有",
+"color": "橙"
+},
+"BOMBARDMENT": {
+"tier": "S",
+"rarity": "稀有",
+"color": "橙"
+},
+"GUARDS": {
+"tier": "A",
+"rarity": "稀有",
+"color": "橙"
+},
+"CHARGE": {
+"tier": "A",
+"rarity": "罕见",
+"color": "橙"
+},
+"KNOW_THY_PLACE": {
+"tier": "A",
+"rarity": "普通",
+"color": "橙"
+},
+"BIG_BANG": {
+"tier": "B",
+"rarity": "稀有",
+"color": "橙"
+},
+"HEAVENLY_DRILL": {
+"tier": "B",
+"rarity": "稀有",
+"color": "橙"
+},
+"MONARCHS_GAZE": {
+"tier": "B",
+"rarity": "稀有",
+"color": "橙"
+},
+"ROYALTIES": {
+"tier": "B",
+"rarity": "稀有",
+"color": "橙"
+},
+"MONOLOGUE": {
+"tier": "B",
+"rarity": "罕见",
+"color": "橙"
+},
+"HEGEMONY": {
+"tier": "B",
+"rarity": "罕见",
+"color": "橙"
+},
+"ORBIT": {
+"tier": "B",
+"rarity": "罕见",
+"color": "橙"
+},
+"KNOCKOUT_BLOW": {
+"tier": "B",
+"rarity": "罕见",
+"color": "橙"
+},
+"PROPHESIZE": {
+"tier": "B",
+"rarity": "罕见",
+"color": "橙"
+},
+"GLIMMER": {
+"tier": "B",
+"rarity": "罕见",
+"color": "橙"
+},
+"BULWARK": {
+"tier": "B",
+"rarity": "罕见",
+"color": "橙"
+},
+"MANIFEST_AUTHORITY": {
+"tier": "B",
+"rarity": "罕见",
+"color": "橙"
+},
+"CELESTIAL_MIGHT": {
+"tier": "B",
+"rarity": "普通",
+"color": "橙"
+},
+"CRUSH_UNDER": {
+"tier": "B",
+"rarity": "普通",
+"color": "橙"
+},
+"PHOTON_CUT": {
+"tier": "B",
+"rarity": "普通",
+"color": "橙"
+},
+"COSMIC_INDIFFERENCE": {
+"tier": "B",
+"rarity": "普通",
+"color": "橙"
+},
+"PATTER": {
+"tier": "B",
+"rarity": "普通",
+"color": "橙"
+},
+"GLITTERSTREAM": {
+"tier": "B",
+"rarity": "普通",
+"color": "橙"
+},
+"COLLISION_COURSE": {
+"tier": "B",
+"rarity": "普通",
+"color": "橙"
+},
+"BEGONE": {
+"tier": "B",
+"rarity": "普通",
+"color": "橙"
+},
+"DEMESNE": {
+"tier": "A",
+"rarity": "稀有",
+"color": "粉"
+},
+"ERADICATE": {
+"tier": "A",
+"rarity": "稀有",
+"color": "粉"
+},
+"PUTREFY": {
+"tier": "A",
+"rarity": "罕见",
+"color": "粉"
+},
+"LETHALITY": {
+"tier": "A",
+"rarity": "罕见",
+"color": "粉"
+},
+"GRAVE_WARDEN": {
+"tier": "A",
+"rarity": "普通",
+"color": "粉"
+},
+"CALL_OF_THE_VOID": {
+"tier": "B",
+"rarity": "稀有",
+"color": "粉"
+},
+"THE_SCYTHE": {
+"tier": "B",
+"rarity": "稀有",
+"color": "粉"
+},
+"REAPER_FORM": {
+"tier": "B",
+"rarity": "稀有",
+"color": "粉"
+},
+"UNDEATH": {
+"tier": "B",
+"rarity": "稀有",
+"color": "粉"
+},
+"ENFEEBLING_TOUCH": {
+"tier": "B",
+"rarity": "罕见",
+"color": "粉"
+},
+"DELAY": {
+"tier": "B",
+"rarity": "罕见",
+"color": "粉"
+},
+"DEBILITATE": {
+"tier": "B",
+"rarity": "罕见",
+"color": "粉"
+},
+"BORROWED_TIME": {
+"tier": "B",
+"rarity": "罕见",
+"color": "粉"
+},
+"DREDGE": {
+"tier": "B",
+"rarity": "罕见",
+"color": "粉"
+},
+"CAPTURE_SPIRIT": {
+"tier": "B",
+"rarity": "罕见",
+"color": "粉"
+},
+"SEVERANCE": {
+"tier": "B",
+"rarity": "罕见",
+"color": "粉"
+},
+"PARSE": {
+"tier": "B",
+"rarity": "罕见",
+"color": "粉"
+},
+"DEFY": {
+"tier": "B",
+"rarity": "普通",
+"color": "粉"
+},
+"WISP": {
+"tier": "B",
+"rarity": "普通",
+"color": "粉"
+},
+"REAVE": {
+"tier": "B",
+"rarity": "普通",
+"color": "粉"
+},
+"GRAVEBLAST": {
+"tier": "B",
+"rarity": "普通",
+"color": "粉"
+},
+"SOW": {
+"tier": "B",
+"rarity": "普通",
+"color": "粉"
+},
+"FEAR": {
+"tier": "B",
+"rarity": "普通",
+"color": "粉"
+},
+"DEFILE": {
+"tier": "B",
+"rarity": "普通",
+"color": "粉"
+},
+"DRAIN_POWER": {
+"tier": "B",
+"rarity": "普通",
+"color": "粉"
+},
+"INVOKE": {
+"tier": "B",
+"rarity": "普通",
+"color": "粉"
+}
+}

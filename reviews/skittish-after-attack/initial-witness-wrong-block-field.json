@@ -1,0 +1,5 @@
+{
+  "scope": "Historical completed replay events, source and attack result sequence only. Not game outcome improvement or No-SL certification. No future event feeds a decision.",
+  "files_read": 1050,
+  "examples": []
+}

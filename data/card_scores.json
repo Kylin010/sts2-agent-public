@@ -1,0 +1,7205 @@
+{
+ "INFERNO": {
+  "1": {
+   "score": 0.326,
+   "n_win": 647,
+   "n_elite": 118
+  },
+  "2": {
+   "score": 0.094,
+   "n_win": 681,
+   "n_elite": 81
+  },
+  "3": {
+   "score": 0.042,
+   "n_win": 729,
+   "n_elite": 76
+  }
+ },
+ "THUNDERCLAP": {
+  "1": {
+   "score": 0.092,
+   "n_win": 1595,
+   "n_elite": 222
+  },
+  "2": {
+   "score": 0.044,
+   "n_win": 1407,
+   "n_elite": 158
+  },
+  "3": {
+   "score": 0.026,
+   "n_win": 1300,
+   "n_elite": 116
+  }
+ },
+ "HEADBUTT": {
+  "1": {
+   "score": 0.195,
+   "n_win": 1613,
+   "n_elite": 207
+  },
+  "2": {
+   "score": 0.144,
+   "n_win": 1445,
+   "n_elite": 151
+  },
+  "3": {
+   "score": 0.106,
+   "n_win": 1283,
+   "n_elite": 123
+  }
+ },
+ "FORGOTTEN_RITUAL": {
+  "1": {
+   "score": 0.45,
+   "n_win": 597,
+   "n_elite": 64
+  },
+  "2": {
+   "score": 0.449,
+   "n_win": 529,
+   "n_elite": 63
+  },
+  "3": {
+   "score": 0.402,
+   "n_win": 525,
+   "n_elite": 68
+  }
+ },
+ "UPPERCUT": {
+  "1": {
+   "score": 0.567,
+   "n_win": 660,
+   "n_elite": 76
+  },
+  "2": {
+   "score": 0.323,
+   "n_win": 570,
+   "n_elite": 61
+  },
+  "3": {
+   "score": 0.282,
+   "n_win": 555,
+   "n_elite": 48
+  }
+ },
+ "SWORD_BOOMERANG": {
+  "1": {
+   "score": 0.085,
+   "n_win": 1621,
+   "n_elite": 197
+  },
+  "2": {
+   "score": 0.059,
+   "n_win": 1397,
+   "n_elite": 158
+  },
+  "3": {
+   "score": 0.043,
+   "n_win": 1363,
+   "n_elite": 139
+  }
+ },
+ "FEEL_NO_PAIN": {
+  "1": {
+   "score": 0.336,
+   "n_win": 634,
+   "n_elite": 85
+  },
+  "2": {
+   "score": 0.451,
+   "n_win": 634,
+   "n_elite": 68
+  },
+  "3": {
+   "score": 0.421,
+   "n_win": 655,
+   "n_elite": 57
+  }
+ },
+ "SETUP_STRIKE": {
+  "1": {
+   "score": 0.07,
+   "n_win": 1559,
+   "n_elite": 192
+  },
+  "2": {
+   "score": 0.024,
+   "n_win": 1478,
+   "n_elite": 171
+  },
+  "3": {
+   "score": 0.011,
+   "n_win": 1335,
+   "n_elite": 145
+  }
+ },
+ "RAGE": {
+  "1": {
+   "score": 0.237,
+   "n_win": 570,
+   "n_elite": 76
+  },
+  "2": {
+   "score": 0.187,
+   "n_win": 590,
+   "n_elite": 56
+  },
+  "3": {
+   "score": 0.107,
+   "n_win": 534,
+   "n_elite": 56
+  }
+ },
+ "RUPTURE": {
+  "1": {
+   "score": 0.125,
+   "n_win": 622,
+   "n_elite": 82
+  },
+  "3": {
+   "score": 0.153,
+   "n_win": 673,
+   "n_elite": 88
+  },
+  "2": {
+   "score": 0.18,
+   "n_win": 697,
+   "n_elite": 73
+  }
+ },
+ "MOLTEN_FIST": {
+  "1": {
+   "score": 0.125,
+   "n_win": 1621,
+   "n_elite": 203
+  },
+  "2": {
+   "score": 0.094,
+   "n_win": 1422,
+   "n_elite": 151
+  },
+  "3": {
+   "score": 0.077,
+   "n_win": 1357,
+   "n_elite": 135
+  }
+ },
+ "IMPERVIOUS": {
+  "1": {
+   "score": 0.397,
+   "n_win": 327,
+   "n_elite": 38
+  },
+  "2": {
+   "score": 0.384,
+   "n_win": 309,
+   "n_elite": 36
+  },
+  "3": {
+   "score": 0.383,
+   "n_win": 84,
+   "n_elite": 7
+  }
+ },
+ "STONE_ARMOR": {
+  "1": {
+   "score": 0.326,
+   "n_win": 694,
+   "n_elite": 86
+  },
+  "2": {
+   "score": 0.224,
+   "n_win": 716,
+   "n_elite": 72
+  },
+  "3": {
+   "score": 0.195,
+   "n_win": 667,
+   "n_elite": 82
+  }
+ },
+ "TAUNT": {
+  "1": {
+   "score": 0.397,
+   "n_win": 1624,
+   "n_elite": 144
+  },
+  "2": {
+   "score": 0.206,
+   "n_win": 1630,
+   "n_elite": 128
+  },
+  "3": {
+   "score": 0.158,
+   "n_win": 1533,
+   "n_elite": 110
+  }
+ },
+ "CINDER": {
+  "1": {
+   "score": 0.081,
+   "n_win": 1584,
+   "n_elite": 204
+  },
+  "2": {
+   "score": 0.006,
+   "n_win": 1518,
+   "n_elite": 166
+  },
+  "3": {
+   "score": 0.004,
+   "n_win": 1256,
+   "n_elite": 139
+  }
+ },
+ "POMMEL_STRIKE": {
+  "1": {
+   "score": 0.408,
+   "n_win": 1528,
+   "n_elite": 207
+  },
+  "2": {
+   "score": 0.301,
+   "n_win": 1397,
+   "n_elite": 175
+  },
+  "3": {
+   "score": 0.24,
+   "n_win": 1330,
+   "n_elite": 120
+  }
+ },
+ "INFERNAL_BLADE": {
+  "1": {
+   "score": 0.19,
+   "n_win": 600,
+   "n_elite": 80
+  },
+  "2": {
+   "score": 0.074,
+   "n_win": 582,
+   "n_elite": 53
+  },
+  "3": {
+   "score": 0.063,
+   "n_win": 580,
+   "n_elite": 54
+  }
+ },
+ "BODY_SLAM": {
+  "1": {
+   "score": 0.066,
+   "n_win": 1598,
+   "n_elite": 226
+  },
+  "2": {
+   "score": 0.086,
+   "n_win": 1488,
+   "n_elite": 151
+  },
+  "3": {
+   "score": 0.116,
+   "n_win": 1235,
+   "n_elite": 137
+  }
+ },
+ "BREAKTHROUGH": {
+  "1": {
+   "score": 0.214,
+   "n_win": 1555,
+   "n_elite": 193
+  },
+  "2": {
+   "score": 0.054,
+   "n_win": 1461,
+   "n_elite": 172
+  },
+  "3": {
+   "score": 0.008,
+   "n_win": 1362,
+   "n_elite": 120
+  }
+ },
+ "DISMANTLE": {
+  "1": {
+   "score": 0.21,
+   "n_win": 593,
+   "n_elite": 73
+  },
+  "2": {
+   "score": 0.065,
+   "n_win": 577,
+   "n_elite": 87
+  },
+  "3": {
+   "score": 0.047,
+   "n_win": 534,
+   "n_elite": 53
+  }
+ },
+ "BLOOD_WALL": {
+  "1": {
+   "score": 0.193,
+   "n_win": 1682,
+   "n_elite": 224
+  },
+  "2": {
+   "score": 0.131,
+   "n_win": 1616,
+   "n_elite": 195
+  },
+  "3": {
+   "score": 0.09,
+   "n_win": 1560,
+   "n_elite": 171
+  }
+ },
+ "INFLAME": {
+  "1": {
+   "score": 0.241,
+   "n_win": 674,
+   "n_elite": 76
+  },
+  "2": {
+   "score": 0.071,
+   "n_win": 720,
+   "n_elite": 78
+  },
+  "3": {
+   "score": 0.079,
+   "n_win": 691,
+   "n_elite": 67
+  }
+ },
+ "CATASTROPHE": {
+  "1": {
+   "score": 0.022,
+   "n_win": 72,
+   "n_elite": 5
+  },
+  "2": {
+   "score": 0.053,
+   "n_win": 88,
+   "n_elite": 8
+  },
+  "3": {
+   "score": 0.02,
+   "n_win": 76,
+   "n_elite": 8
+  }
+ },
+ "HIDDEN_GEM": {
+  "1": {
+   "score": 0.01,
+   "n_win": 76,
+   "n_elite": 7
+  },
+  "2": {
+   "score": 0.007,
+   "n_win": 94,
+   "n_elite": 18
+  },
+  "3": {
+   "score": 0.007,
+   "n_win": 98,
+   "n_elite": 13
+  }
+ },
+ "CONFLAGRATION": {
+  "1": {
+   "score": 0.344,
+   "n_win": 315,
+   "n_elite": 25
+  },
+  "2": {
+   "score": 0.327,
+   "n_win": 302,
+   "n_elite": 20
+  },
+  "3": {
+   "score": 0.185,
+   "n_win": 89,
+   "n_elite": 13
+  }
+ },
+ "HELLRAISER": {
+  "1": {
+   "score": 0.153,
+   "n_win": 294,
+   "n_elite": 41
+  },
+  "2": {
+   "score": 0.086,
+   "n_win": 376,
+   "n_elite": 37
+  },
+  "3": {
+   "score": 0.092,
+   "n_win": 78,
+   "n_elite": 6
+  }
+ },
+ "CASCADE": {
+  "1": {
+   "score": 0.337,
+   "n_win": 341,
+   "n_elite": 28
+  },
+  "2": {
+   "score": 0.249,
+   "n_win": 321,
+   "n_elite": 26
+  },
+  "3": {
+   "score": 0.255,
+   "n_win": 114,
+   "n_elite": 11
+  }
+ },
+ "JUGGLING": {
+  "2": {
+   "score": 0.078,
+   "n_win": 723,
+   "n_elite": 77
+  },
+  "3": {
+   "score": 0.039,
+   "n_win": 737,
+   "n_elite": 72
+  },
+  "1": {
+   "score": 0.057,
+   "n_win": 696,
+   "n_elite": 88
+  }
+ },
+ "HOWL_FROM_BEYOND": {
+  "2": {
+   "score": 0.151,
+   "n_win": 528,
+   "n_elite": 70
+  },
+  "1": {
+   "score": 0.192,
+   "n_win": 617,
+   "n_elite": 86
+  },
+  "3": {
+   "score": 0.102,
+   "n_win": 481,
+   "n_elite": 51
+  }
+ },
+ "STAMPEDE": {
+  "2": {
+   "score": 0.089,
+   "n_win": 705,
+   "n_elite": 86
+  },
+  "1": {
+   "score": 0.139,
+   "n_win": 690,
+   "n_elite": 109
+  },
+  "3": {
+   "score": 0.059,
+   "n_win": 727,
+   "n_elite": 67
+  }
+ },
+ "TRUE_GRIT": {
+  "2": {
+   "score": 0.153,
+   "n_win": 1612,
+   "n_elite": 197
+  },
+  "3": {
+   "score": 0.119,
+   "n_win": 1455,
+   "n_elite": 161
+  },
+  "1": {
+   "score": 0.23,
+   "n_win": 1632,
+   "n_elite": 213
+  }
+ },
+ "DRUM_OF_BATTLE": {
+  "2": {
+   "score": 0.285,
+   "n_win": 577,
+   "n_elite": 69
+  },
+  "1": {
+   "score": 0.106,
+   "n_win": 587,
+   "n_elite": 74
+  },
+  "3": {
+   "score": 0.349,
+   "n_win": 526,
+   "n_elite": 59
+  }
+ },
+ "FLAME_BARRIER": {
+  "2": {
+   "score": 0.326,
+   "n_win": 569,
+   "n_elite": 68
+  },
+  "1": {
+   "score": 0.506,
+   "n_win": 570,
+   "n_elite": 69
+  },
+  "3": {
+   "score": 0.159,
+   "n_win": 560,
+   "n_elite": 52
+  }
+ },
+ "SHOCKWAVE": {
+  "2": {
+   "score": 0.137,
+   "n_win": 56,
+   "n_elite": 5
+  },
+  "3": {
+   "score": 0.037,
+   "n_win": 55,
+   "n_elite": 8
+  },
+  "1": {
+   "score": 0.212,
+   "n_win": 62,
+   "n_elite": 7
+  }
+ },
+ "BATTLE_TRANCE": {
+  "2": {
+   "score": 0.548,
+   "n_win": 583,
+   "n_elite": 58
+  },
+  "3": {
+   "score": 0.378,
+   "n_win": 513,
+   "n_elite": 55
+  },
+  "1": {
+   "score": 0.661,
+   "n_win": 635,
+   "n_elite": 84
+  }
+ },
+ "EXPECT_A_FIGHT": {
+  "2": {
+   "score": 0.234,
+   "n_win": 593,
+   "n_elite": 75
+  },
+  "3": {
+   "score": 0.256,
+   "n_win": 561,
+   "n_elite": 49
+  },
+  "1": {
+   "score": 0.123,
+   "n_win": 583,
+   "n_elite": 60
+  }
+ },
+ "HEMOKINESIS": {
+  "2": {
+   "score": 0.036,
+   "n_win": 535,
+   "n_elite": 68
+  },
+  "1": {
+   "score": 0.131,
+   "n_win": 566,
+   "n_elite": 86
+  },
+  "3": {
+   "score": 0.014,
+   "n_win": 486,
+   "n_elite": 56
+  }
+ },
+ "HAVOC": {
+  "2": {
+   "score": 0.092,
+   "n_win": 1688,
+   "n_elite": 174
+  },
+  "1": {
+   "score": 0.072,
+   "n_win": 1723,
+   "n_elite": 217
+  },
+  "3": {
+   "score": 0.075,
+   "n_win": 1547,
+   "n_elite": 169
+  }
+ },
+ "SHRUG_IT_OFF": {
+  "2": {
+   "score": 0.262,
+   "n_win": 1601,
+   "n_elite": 187
+  },
+  "3": {
+   "score": 0.187,
+   "n_win": 1523,
+   "n_elite": 163
+  },
+  "1": {
+   "score": 0.402,
+   "n_win": 1672,
+   "n_elite": 223
+  }
+ },
+ "FASTEN": {
+  "2": {
+   "score": 0.082,
+   "n_win": 59,
+   "n_elite": 8
+  },
+  "1": {
+   "score": 0.222,
+   "n_win": 55,
+   "n_elite": 2
+  },
+  "3": {
+   "score": 0.02,
+   "n_win": 70,
+   "n_elite": 9
+  }
+ },
+ "REND": {
+  "2": {
+   "score": 0.007,
+   "n_win": 101,
+   "n_elite": 11
+  },
+  "3": {
+   "score": 0.006,
+   "n_win": 117,
+   "n_elite": 16
+  },
+  "1": {
+   "score": 0.007,
+   "n_win": 97,
+   "n_elite": 14
+  }
+ },
+ "SECOND_WIND": {
+  "2": {
+   "score": 0.418,
+   "n_win": 534,
+   "n_elite": 68
+  },
+  "3": {
+   "score": 0.404,
+   "n_win": 515,
+   "n_elite": 37
+  },
+  "1": {
+   "score": 0.444,
+   "n_win": 568,
+   "n_elite": 63
+  }
+ },
+ "FIGHT_ME": {
+  "2": {
+   "score": 0.136,
+   "n_win": 572,
+   "n_elite": 64
+  },
+  "3": {
+   "score": 0.09,
+   "n_win": 555,
+   "n_elite": 58
+  },
+  "1": {
+   "score": 0.412,
+   "n_win": 573,
+   "n_elite": 74
+  }
+ },
+ "STOKE": {
+  "2": {
+   "score": 0.516,
+   "n_win": 373,
+   "n_elite": 41
+  },
+  "1": {
+   "score": 0.546,
+   "n_win": 339,
+   "n_elite": 34
+  },
+  "3": {
+   "score": 0.466,
+   "n_win": 98,
+   "n_elite": 11
+  }
+ },
+ "DOMINATE": {
+  "2": {
+   "score": 0.519,
+   "n_win": 331,
+   "n_elite": 49
+  },
+  "1": {
+   "score": 0.651,
+   "n_win": 361,
+   "n_elite": 52
+  },
+  "3": {
+   "score": 0.517,
+   "n_win": 90,
+   "n_elite": 19
+  }
+ },
+ "ARMAMENTS": {
+  "3": {
+   "score": 0.03,
+   "n_win": 1565,
+   "n_elite": 171
+  },
+  "1": {
+   "score": 0.183,
+   "n_win": 1685,
+   "n_elite": 203
+  },
+  "2": {
+   "score": 0.061,
+   "n_win": 1701,
+   "n_elite": 191
+  }
+ },
+ "ASHEN_STRIKE": {
+  "3": {
+   "score": 0.238,
+   "n_win": 527,
+   "n_elite": 56
+  },
+  "1": {
+   "score": 0.28,
+   "n_win": 633,
+   "n_elite": 93
+  },
+  "2": {
+   "score": 0.325,
+   "n_win": 572,
+   "n_elite": 68
+  }
+ },
+ "ANGER": {
+  "3": {
+   "score": 0.018,
+   "n_win": 1345,
+   "n_elite": 151
+  },
+  "1": {
+   "score": 0.206,
+   "n_win": 1562,
+   "n_elite": 202
+  },
+  "2": {
+   "score": 0.03,
+   "n_win": 1426,
+   "n_elite": 174
+  }
+ },
+ "WHIRLWIND": {
+  "3": {
+   "score": 0.039,
+   "n_win": 515,
+   "n_elite": 67
+  },
+  "1": {
+   "score": 0.248,
+   "n_win": 574,
+   "n_elite": 76
+  },
+  "2": {
+   "score": 0.105,
+   "n_win": 533,
+   "n_elite": 63
+  }
+ },
+ "EVIL_EYE": {
+  "3": {
+   "score": 0.226,
+   "n_win": 522,
+   "n_elite": 55
+  },
+  "1": {
+   "score": 0.287,
+   "n_win": 568,
+   "n_elite": 84
+  },
+  "2": {
+   "score": 0.286,
+   "n_win": 571,
+   "n_elite": 55
+  }
+ },
+ "DISCOVERY": {
+  "3": {
+   "score": 0.033,
+   "n_win": 75,
+   "n_elite": 5
+  },
+  "2": {
+   "score": 0.104,
+   "n_win": 60,
+   "n_elite": 5
+  },
+  "1": {
+   "score": 0.197,
+   "n_win": 49,
+   "n_elite": 5
+  }
+ },
+ "SCRAWL": {
+  "3": {
+   "score": 0.008,
+   "n_win": 98,
+   "n_elite": 7
+  },
+  "1": {
+   "score": 0.008,
+   "n_win": 85,
+   "n_elite": 11
+  },
+  "2": {
+   "score": 0.008,
+   "n_win": 100,
+   "n_elite": 9
+  }
+ },
+ "PILLAGE": {
+  "1": {
+   "score": 0.127,
+   "n_win": 566,
+   "n_elite": 74
+  },
+  "2": {
+   "score": 0.116,
+   "n_win": 563,
+   "n_elite": 68
+  },
+  "3": {
+   "score": 0.089,
+   "n_win": 535,
+   "n_elite": 56
+  }
+ },
+ "PERFECTED_STRIKE": {
+  "1": {
+   "score": 0.154,
+   "n_win": 1525,
+   "n_elite": 199
+  },
+  "3": {
+   "score": 0.04,
+   "n_win": 1363,
+   "n_elite": 146
+  },
+  "2": {
+   "score": 0.045,
+   "n_win": 1494,
+   "n_elite": 165
+  }
+ },
+ "VICIOUS": {
+  "1": {
+   "score": 0.163,
+   "n_win": 639,
+   "n_elite": 95
+  },
+  "2": {
+   "score": 0.243,
+   "n_win": 646,
+   "n_elite": 88
+  },
+  "3": {
+   "score": 0.199,
+   "n_win": 674,
+   "n_elite": 80
+  }
+ },
+ "DARK_EMBRACE": {
+  "1": {
+   "score": 0.367,
+   "n_win": 295,
+   "n_elite": 29
+  },
+  "2": {
+   "score": 0.546,
+   "n_win": 360,
+   "n_elite": 32
+  },
+  "3": {
+   "score": 0.479,
+   "n_win": 107,
+   "n_elite": 11
+  }
+ },
+ "JUGGERNAUT": {
+  "1": {
+   "score": 0.145,
+   "n_win": 337,
+   "n_elite": 48
+  },
+  "2": {
+   "score": 0.166,
+   "n_win": 324,
+   "n_elite": 36
+  },
+  "3": {
+   "score": 0.2,
+   "n_win": 100,
+   "n_elite": 6
+  }
+ },
+ "TEAR_ASUNDER": {
+  "1": {
+   "score": 0.232,
+   "n_win": 340,
+   "n_elite": 44
+  },
+  "2": {
+   "score": 0.23,
+   "n_win": 316,
+   "n_elite": 43
+  },
+  "3": {
+   "score": 0.242,
+   "n_win": 88,
+   "n_elite": 14
+  }
+ },
+ "CRUELTY": {
+  "2": {
+   "score": 0.336,
+   "n_win": 661,
+   "n_elite": 52
+  },
+  "1": {
+   "score": 0.316,
+   "n_win": 615,
+   "n_elite": 60
+  },
+  "3": {
+   "score": 0.252,
+   "n_win": 619,
+   "n_elite": 35
+  }
+ },
+ "TREMBLE": {
+  "2": {
+   "score": 0.207,
+   "n_win": 1546,
+   "n_elite": 185
+  },
+  "3": {
+   "score": 0.155,
+   "n_win": 1434,
+   "n_elite": 147
+  },
+  "1": {
+   "score": 0.323,
+   "n_win": 1598,
+   "n_elite": 218
+  }
+ },
+ "COLOSSUS": {
+  "2": {
+   "score": 0.513,
+   "n_win": 525,
+   "n_elite": 44
+  },
+  "3": {
+   "score": 0.409,
+   "n_win": 515,
+   "n_elite": 41
+  },
+  "1": {
+   "score": 0.531,
+   "n_win": 592,
+   "n_elite": 63
+  }
+ },
+ "BLUDGEON": {
+  "2": {
+   "score": 0.061,
+   "n_win": 569,
+   "n_elite": 63
+  },
+  "3": {
+   "score": 0.044,
+   "n_win": 534,
+   "n_elite": 51
+  },
+  "1": {
+   "score": 0.262,
+   "n_win": 557,
+   "n_elite": 89
+  }
+ },
+ "IRON_WAVE": {
+  "2": {
+   "score": 0.023,
+   "n_win": 1480,
+   "n_elite": 181
+  },
+  "3": {
+   "score": 0.007,
+   "n_win": 1318,
+   "n_elite": 134
+  },
+  "1": {
+   "score": 0.088,
+   "n_win": 1541,
+   "n_elite": 174
+  }
+ },
+ "PANIC_BUTTON": {
+  "2": {
+   "score": 0.071,
+   "n_win": 83,
+   "n_elite": 9
+  },
+  "1": {
+   "score": 0.056,
+   "n_win": 78,
+   "n_elite": 9
+  },
+  "3": {
+   "score": 0.018,
+   "n_win": 81,
+   "n_elite": 10
+  }
+ },
+ "MASTER_OF_STRATEGY": {
+  "2": {
+   "score": 0.009,
+   "n_win": 77,
+   "n_elite": 10
+  },
+  "1": {
+   "score": 0.02,
+   "n_win": 79,
+   "n_elite": 6
+  },
+  "3": {
+   "score": 0.011,
+   "n_win": 58,
+   "n_elite": 11
+  }
+ },
+ "CRIMSON_MANTLE": {
+  "2": {
+   "score": 0.455,
+   "n_win": 351,
+   "n_elite": 42
+  },
+  "1": {
+   "score": 0.571,
+   "n_win": 323,
+   "n_elite": 37
+  },
+  "3": {
+   "score": 0.483,
+   "n_win": 96,
+   "n_elite": 6
+  }
+ },
+ "MANGLE": {
+  "2": {
+   "score": 0.205,
+   "n_win": 335,
+   "n_elite": 34
+  },
+  "1": {
+   "score": 0.251,
+   "n_win": 332,
+   "n_elite": 35
+  },
+  "3": {
+   "score": 0.226,
+   "n_win": 101,
+   "n_elite": 7
+  }
+ },
+ "FEED": {
+  "2": {
+   "score": 0.089,
+   "n_win": 355,
+   "n_elite": 45
+  },
+  "1": {
+   "score": 0.34,
+   "n_win": 299,
+   "n_elite": 36
+  },
+  "3": {
+   "score": 0.018,
+   "n_win": 95,
+   "n_elite": 5
+  }
+ },
+ "TWIN_STRIKE": {
+  "3": {
+   "score": 0.024,
+   "n_win": 1309,
+   "n_elite": 143
+  },
+  "1": {
+   "score": 0.107,
+   "n_win": 1594,
+   "n_elite": 207
+  },
+  "2": {
+   "score": 0.032,
+   "n_win": 1446,
+   "n_elite": 174
+  }
+ },
+ "ULTIMATE_STRIKE": {
+  "3": {
+   "score": 0.008,
+   "n_win": 101,
+   "n_elite": 7
+  },
+  "1": {
+   "score": 0.065,
+   "n_win": 70,
+   "n_elite": 12
+  },
+  "2": {
+   "score": 0.034,
+   "n_win": 71,
+   "n_elite": 5
+  }
+ },
+ "OFFERING": {
+  "3": {
+   "score": 0.667,
+   "n_win": 82,
+   "n_elite": 5
+  },
+  "1": {
+   "score": 0.769,
+   "n_win": 323,
+   "n_elite": 36
+  },
+  "2": {
+   "score": 0.737,
+   "n_win": 355,
+   "n_elite": 28
+  }
+ },
+ "STOMP": {
+  "3": {
+   "score": 0.011,
+   "n_win": 565,
+   "n_elite": 46
+  },
+  "1": {
+   "score": 0.218,
+   "n_win": 561,
+   "n_elite": 78
+  },
+  "2": {
+   "score": 0.055,
+   "n_win": 558,
+   "n_elite": 60
+  }
+ },
+ "THRASH": {
+  "3": {
+   "score": 0.248,
+   "n_win": 98,
+   "n_elite": 7
+  },
+  "1": {
+   "score": 0.389,
+   "n_win": 315,
+   "n_elite": 34
+  },
+  "2": {
+   "score": 0.331,
+   "n_win": 322,
+   "n_elite": 33
+  }
+ },
+ "UNMOVABLE": {
+  "3": {
+   "score": 0.496,
+   "n_win": 91,
+   "n_elite": 8
+  },
+  "1": {
+   "score": 0.68,
+   "n_win": 362,
+   "n_elite": 37
+  },
+  "2": {
+   "score": 0.558,
+   "n_win": 354,
+   "n_elite": 27
+  }
+ },
+ "ONE_TWO_PUNCH": {
+  "3": {
+   "score": 0.126,
+   "n_win": 100,
+   "n_elite": 11
+  },
+  "2": {
+   "score": 0.13,
+   "n_win": 328,
+   "n_elite": 36
+  },
+  "1": {
+   "score": 0.133,
+   "n_win": 303,
+   "n_elite": 34
+  }
+ },
+ "BULLY": {
+  "3": {
+   "score": 0.087,
+   "n_win": 515,
+   "n_elite": 51
+  },
+  "1": {
+   "score": 0.215,
+   "n_win": 584,
+   "n_elite": 63
+  },
+  "2": {
+   "score": 0.119,
+   "n_win": 553,
+   "n_elite": 58
+  }
+ },
+ "OMNISLICE": {
+  "1": {
+   "score": 0.19,
+   "n_win": 58,
+   "n_elite": 8
+  },
+  "2": {
+   "score": 0.052,
+   "n_win": 86,
+   "n_elite": 9
+  },
+  "3": {
+   "score": 0.019,
+   "n_win": 70,
+   "n_elite": 11
+  }
+ },
+ "AUTOMATION": {
+  "1": {
+   "score": 0.027,
+   "n_win": 74,
+   "n_elite": 12
+  },
+  "3": {
+   "score": 0.023,
+   "n_win": 67,
+   "n_elite": 6
+  },
+  "2": {
+   "score": 0.096,
+   "n_win": 84,
+   "n_elite": 6
+  }
+ },
+ "THE_GAMBIT": {
+  "1": {
+   "score": 0.008,
+   "n_win": 88,
+   "n_elite": 12
+  },
+  "3": {
+   "score": 0.007,
+   "n_win": 115,
+   "n_elite": 8
+  },
+  "2": {
+   "score": 0.008,
+   "n_win": 98,
+   "n_elite": 9
+  }
+ },
+ "SALVO": {
+  "1": {
+   "score": 0.086,
+   "n_win": 75,
+   "n_elite": 13
+  },
+  "3": {
+   "score": 0.01,
+   "n_win": 80,
+   "n_elite": 7
+  },
+  "2": {
+   "score": 0.04,
+   "n_win": 72,
+   "n_elite": 9
+  }
+ },
+ "SPITE": {
+  "1": {
+   "score": 0.111,
+   "n_win": 624,
+   "n_elite": 89
+  },
+  "3": {
+   "score": 0.062,
+   "n_win": 534,
+   "n_elite": 46
+  },
+  "2": {
+   "score": 0.081,
+   "n_win": 576,
+   "n_elite": 62
+  }
+ },
+ "BRAND": {
+  "1": {
+   "score": 0.369,
+   "n_win": 320,
+   "n_elite": 41
+  },
+  "2": {
+   "score": 0.312,
+   "n_win": 364,
+   "n_elite": 37
+  },
+  "3": {
+   "score": 0.351,
+   "n_win": 94,
+   "n_elite": 6
+  }
+ },
+ "VOLLEY": {
+  "1": {
+   "score": 0.08,
+   "n_win": 70,
+   "n_elite": 5
+  },
+  "2": {
+   "score": 0.018,
+   "n_win": 75,
+   "n_elite": 11
+  },
+  "3": {
+   "score": 0.011,
+   "n_win": 70,
+   "n_elite": 5
+  }
+ },
+ "DEMON_FORM": {
+  "1": {
+   "score": 0.326,
+   "n_win": 356,
+   "n_elite": 34
+  },
+  "2": {
+   "score": 0.239,
+   "n_win": 313,
+   "n_elite": 36
+  },
+  "3": {
+   "score": 0.29,
+   "n_win": 76,
+   "n_elite": 5
+  }
+ },
+ "BOLAS": {
+  "2": {
+   "score": 0.006,
+   "n_win": 104,
+   "n_elite": 17
+  },
+  "3": {
+   "score": 0.013,
+   "n_win": 121,
+   "n_elite": 9
+  },
+  "1": {
+   "score": 0.008,
+   "n_win": 87,
+   "n_elite": 12
+  }
+ },
+ "ALCHEMIZE": {
+  "2": {
+   "score": 0.019,
+   "n_win": 75,
+   "n_elite": 10
+  },
+  "1": {
+   "score": 0.019,
+   "n_win": 71,
+   "n_elite": 10
+  },
+  "3": {
+   "score": 0.006,
+   "n_win": 124,
+   "n_elite": 13
+  }
+ },
+ "AGGRESSION": {
+  "2": {
+   "score": 0.275,
+   "n_win": 358,
+   "n_elite": 39
+  },
+  "3": {
+   "score": 0.252,
+   "n_win": 89,
+   "n_elite": 8
+  },
+  "1": {
+   "score": 0.276,
+   "n_win": 340,
+   "n_elite": 38
+  }
+ },
+ "NOT_YET": {
+  "2": {
+   "score": 0.296,
+   "n_win": 351,
+   "n_elite": 39
+  },
+  "1": {
+   "score": 0.303,
+   "n_win": 334,
+   "n_elite": 43
+  },
+  "3": {
+   "score": 0.132,
+   "n_win": 91,
+   "n_elite": 7
+  }
+ },
+ "ULTIMATE_DEFEND": {
+  "3": {
+   "score": 0.011,
+   "n_win": 80,
+   "n_elite": 4
+  },
+  "2": {
+   "score": 0.101,
+   "n_win": 69,
+   "n_elite": 6
+  },
+  "1": {
+   "score": 0.106,
+   "n_win": 68,
+   "n_elite": 5
+  }
+ },
+ "MAYHEM": {
+  "3": {
+   "score": 0.006,
+   "n_win": 133,
+   "n_elite": 13
+  },
+  "1": {
+   "score": 0.006,
+   "n_win": 95,
+   "n_elite": 19
+  },
+  "2": {
+   "score": 0.013,
+   "n_win": 122,
+   "n_elite": 12
+  }
+ },
+ "BLOODLETTING": {
+  "3": {
+   "score": 0.442,
+   "n_win": 451,
+   "n_elite": 95
+  },
+  "2": {
+   "score": 0.488,
+   "n_win": 523,
+   "n_elite": 112
+  },
+  "1": {
+   "score": 0.514,
+   "n_win": 582,
+   "n_elite": 159
+  }
+ },
+ "BURNING_PACT": {
+  "3": {
+   "score": 0.487,
+   "n_win": 498,
+   "n_elite": 57
+  },
+  "1": {
+   "score": 0.433,
+   "n_win": 562,
+   "n_elite": 80
+  },
+  "2": {
+   "score": 0.545,
+   "n_win": 547,
+   "n_elite": 60
+  }
+ },
+ "CHARGE_BATTERY": {
+  "1": {
+   "score": 0.5,
+   "n_win": 11,
+   "n_elite": 3
+  },
+  "3": {
+   "score": 0.5,
+   "n_win": 5,
+   "n_elite": 1
+  },
+  "2": {
+   "score": 0.133,
+   "n_win": 10,
+   "n_elite": 1
+  }
+ },
+ "SCOURGE": {
+  "1": {
+   "score": 0.125,
+   "n_win": 3,
+   "n_elite": 1
+  },
+  "2": {
+   "score": 0.067,
+   "n_win": 13,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.077,
+   "n_win": 8,
+   "n_elite": 1
+  }
+ },
+ "WROUGHT_IN_WAR": {
+  "1": {
+   "score": 0.083,
+   "n_win": 7,
+   "n_elite": 1
+  },
+  "2": {
+   "score": 0.05,
+   "n_win": 12,
+   "n_elite": 2
+  },
+  "3": {
+   "score": 0.143,
+   "n_win": 5,
+   "n_elite": 0
+  }
+ },
+ "BULWARK": {
+  "1": {
+   "score": 0.833,
+   "n_win": 4,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.5,
+   "n_win": 3,
+   "n_elite": 1
+  }
+ },
+ "NOXIOUS_FUMES": {
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 0
+  }
+ },
+ "RATTLE": {
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  }
+ },
+ "UNRELENTING": {
+  "1": {
+   "score": 0.358,
+   "n_win": 595,
+   "n_elite": 74
+  },
+  "2": {
+   "score": 0.102,
+   "n_win": 549,
+   "n_elite": 64
+  },
+  "3": {
+   "score": 0.056,
+   "n_win": 536,
+   "n_elite": 47
+  }
+ },
+ "PACTS_END": {
+  "1": {
+   "score": 0.265,
+   "n_win": 322,
+   "n_elite": 34
+  },
+  "2": {
+   "score": 0.281,
+   "n_win": 304,
+   "n_elite": 32
+  },
+  "3": {
+   "score": 0.248,
+   "n_win": 99,
+   "n_elite": 4
+  }
+ },
+ "FIEND_FIRE": {
+  "1": {
+   "score": 0.426,
+   "n_win": 341,
+   "n_elite": 36
+  },
+  "2": {
+   "score": 0.273,
+   "n_win": 315,
+   "n_elite": 25
+  },
+  "3": {
+   "score": 0.267,
+   "n_win": 106,
+   "n_elite": 9
+  }
+ },
+ "RESTLESSNESS": {
+  "2": {
+   "score": 0.008,
+   "n_win": 84,
+   "n_elite": 13
+  },
+  "1": {
+   "score": 0.049,
+   "n_win": 67,
+   "n_elite": 11
+  },
+  "3": {
+   "score": 0.038,
+   "n_win": 78,
+   "n_elite": 8
+  }
+ },
+ "STRATAGEM": {
+  "2": {
+   "score": 0.043,
+   "n_win": 72,
+   "n_elite": 6
+  },
+  "1": {
+   "score": 0.023,
+   "n_win": 71,
+   "n_elite": 5
+  },
+  "3": {
+   "score": 0.043,
+   "n_win": 87,
+   "n_elite": 9
+  }
+ },
+ "FISTICUFFS": {
+  "2": {
+   "score": 0.132,
+   "n_win": 57,
+   "n_elite": 3
+  },
+  "3": {
+   "score": 0.015,
+   "n_win": 55,
+   "n_elite": 3
+  },
+  "1": {
+   "score": 0.33,
+   "n_win": 59,
+   "n_elite": 11
+  }
+ },
+ "DRAMATIC_ENTRANCE": {
+  "2": {
+   "score": 0.061,
+   "n_win": 92,
+   "n_elite": 7
+  },
+  "1": {
+   "score": 0.141,
+   "n_win": 66,
+   "n_elite": 8
+  },
+  "3": {
+   "score": 0.011,
+   "n_win": 70,
+   "n_elite": 6
+  }
+ },
+ "PYRE": {
+  "2": {
+   "score": 0.349,
+   "n_win": 320,
+   "n_elite": 32
+  },
+  "1": {
+   "score": 0.463,
+   "n_win": 318,
+   "n_elite": 41
+  },
+  "3": {
+   "score": 0.371,
+   "n_win": 82,
+   "n_elite": 7
+  }
+ },
+ "ENTROPY": {
+  "3": {
+   "score": 0.007,
+   "n_win": 119,
+   "n_elite": 6
+  },
+  "2": {
+   "score": 0.023,
+   "n_win": 106,
+   "n_elite": 8
+  },
+  "1": {
+   "score": 0.008,
+   "n_win": 82,
+   "n_elite": 14
+  }
+ },
+ "THRUMMING_HATCHET": {
+  "1": {
+   "score": 0.059,
+   "n_win": 83,
+   "n_elite": 11
+  },
+  "3": {
+   "score": 0.017,
+   "n_win": 97,
+   "n_elite": 6
+  },
+  "2": {
+   "score": 0.017,
+   "n_win": 83,
+   "n_elite": 10
+  }
+ },
+ "PROLONG": {
+  "1": {
+   "score": 0.032,
+   "n_win": 73,
+   "n_elite": 6
+  },
+  "3": {
+   "score": 0.022,
+   "n_win": 63,
+   "n_elite": 8
+  },
+  "2": {
+   "score": 0.066,
+   "n_win": 59,
+   "n_elite": 5
+  }
+ },
+ "BULLET_TIME": {
+  "2": {
+   "score": 0.429,
+   "n_win": 9,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "SERPENT_FORM": {
+  "2": {
+   "score": 0.062,
+   "n_win": 11,
+   "n_elite": 1
+  }
+ },
+ "MASTER_PLANNER": {
+  "2": {
+   "score": 0.059,
+   "n_win": 9,
+   "n_elite": 2
+  }
+ },
+ "DAGGER_THROW": {
+  "2": {
+   "score": 0.053,
+   "n_win": 24,
+   "n_elite": 4
+  },
+  "1": {
+   "score": 0.143,
+   "n_win": 2,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.143,
+   "n_win": 5,
+   "n_elite": 0
+  }
+ },
+ "BLADE_DANCE": {
+  "2": {
+   "score": 0.444,
+   "n_win": 16,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.4,
+   "n_win": 5,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "POISONED_STAB": {
+  "2": {
+   "score": 0.053,
+   "n_win": 14,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.125,
+   "n_win": 6,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  }
+ },
+ "BACKSTAB": {
+  "2": {
+   "score": 0.3,
+   "n_win": 8,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.4,
+   "n_win": 3,
+   "n_elite": 0
+  }
+ },
+ "STRANGLE": {
+  "2": {
+   "score": 0.118,
+   "n_win": 12,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.167,
+   "n_win": 1,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  }
+ },
+ "MIRAGE": {
+  "2": {
+   "score": 0.059,
+   "n_win": 9,
+   "n_elite": 2
+  },
+  "3": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "FLASH_OF_STEEL": {
+  "3": {
+   "score": 0.009,
+   "n_win": 76,
+   "n_elite": 10
+  },
+  "1": {
+   "score": 0.141,
+   "n_win": 69,
+   "n_elite": 7
+  },
+  "2": {
+   "score": 0.133,
+   "n_win": 63,
+   "n_elite": 6
+  }
+ },
+ "ROLLING_BOULDER": {
+  "3": {
+   "score": 0.006,
+   "n_win": 144,
+   "n_elite": 10
+  },
+  "1": {
+   "score": 0.008,
+   "n_win": 87,
+   "n_elite": 13
+  },
+  "2": {
+   "score": 0.014,
+   "n_win": 107,
+   "n_elite": 13
+  }
+ },
+ "CALAMITY": {
+  "1": {
+   "score": 0.009,
+   "n_win": 79,
+   "n_elite": 11
+  },
+  "3": {
+   "score": 0.012,
+   "n_win": 137,
+   "n_elite": 9
+  },
+  "2": {
+   "score": 0.006,
+   "n_win": 114,
+   "n_elite": 14
+  }
+ },
+ "SECRET_TECHNIQUE": {
+  "1": {
+   "score": 0.01,
+   "n_win": 80,
+   "n_elite": 7
+  },
+  "3": {
+   "score": 0.008,
+   "n_win": 87,
+   "n_elite": 12
+  },
+  "2": {
+   "score": 0.014,
+   "n_win": 110,
+   "n_elite": 10
+  }
+ },
+ "SEEKER_STRIKE": {
+  "2": {
+   "score": 0.021,
+   "n_win": 71,
+   "n_elite": 8
+  },
+  "1": {
+   "score": 0.053,
+   "n_win": 85,
+   "n_elite": 9
+  },
+  "3": {
+   "score": 0.025,
+   "n_win": 82,
+   "n_elite": 12
+  }
+ },
+ "ANOINTED": {
+  "2": {
+   "score": 0.007,
+   "n_win": 115,
+   "n_elite": 9
+  },
+  "3": {
+   "score": 0.007,
+   "n_win": 115,
+   "n_elite": 12
+  },
+  "1": {
+   "score": 0.007,
+   "n_win": 101,
+   "n_elite": 11
+  }
+ },
+ "BARRICADE": {
+  "2": {
+   "score": 0.387,
+   "n_win": 333,
+   "n_elite": 33
+  },
+  "1": {
+   "score": 0.297,
+   "n_win": 313,
+   "n_elite": 40
+  },
+  "3": {
+   "score": 0.469,
+   "n_win": 87,
+   "n_elite": 3
+  }
+ },
+ "RAMPAGE": {
+  "2": {
+   "score": 0.017,
+   "n_win": 569,
+   "n_elite": 66
+  },
+  "3": {
+   "score": 0.005,
+   "n_win": 562,
+   "n_elite": 58
+  },
+  "1": {
+   "score": 0.145,
+   "n_win": 552,
+   "n_elite": 68
+  }
+ },
+ "THINKING_AHEAD": {
+  "2": {
+   "score": 0.053,
+   "n_win": 94,
+   "n_elite": 12
+  },
+  "1": {
+   "score": 0.056,
+   "n_win": 79,
+   "n_elite": 9
+  },
+  "3": {
+   "score": 0.038,
+   "n_win": 59,
+   "n_elite": 6
+  }
+ },
+ "PRIMAL_FORCE": {
+  "2": {
+   "score": 0.065,
+   "n_win": 327,
+   "n_elite": 45
+  },
+  "1": {
+   "score": 0.254,
+   "n_win": 298,
+   "n_elite": 42
+  },
+  "3": {
+   "score": 0.062,
+   "n_win": 103,
+   "n_elite": 8
+  }
+ },
+ "IMPATIENCE": {
+  "3": {
+   "score": 0.009,
+   "n_win": 78,
+   "n_elite": 12
+  },
+  "2": {
+   "score": 0.025,
+   "n_win": 92,
+   "n_elite": 9
+  },
+  "1": {
+   "score": 0.045,
+   "n_win": 75,
+   "n_elite": 4
+  }
+ },
+ "BEAT_DOWN": {
+  "3": {
+   "score": 0.006,
+   "n_win": 135,
+   "n_elite": 11
+  },
+  "1": {
+   "score": 0.009,
+   "n_win": 93,
+   "n_elite": 6
+  },
+  "2": {
+   "score": 0.018,
+   "n_win": 81,
+   "n_elite": 9
+  }
+ },
+ "EQUILIBRIUM": {
+  "1": {
+   "score": 0.135,
+   "n_win": 63,
+   "n_elite": 8
+  },
+  "2": {
+   "score": 0.141,
+   "n_win": 75,
+   "n_elite": 5
+  },
+  "3": {
+   "score": 0.012,
+   "n_win": 63,
+   "n_elite": 7
+  }
+ },
+ "GOLD_AXE": {
+  "1": {
+   "score": 0.007,
+   "n_win": 104,
+   "n_elite": 10
+  },
+  "3": {
+   "score": 0.006,
+   "n_win": 120,
+   "n_elite": 14
+  },
+  "2": {
+   "score": 0.006,
+   "n_win": 122,
+   "n_elite": 14
+  }
+ },
+ "MIND_BLAST": {
+  "3": {
+   "score": 0.021,
+   "n_win": 81,
+   "n_elite": 4
+  },
+  "1": {
+   "score": 0.03,
+   "n_win": 79,
+   "n_elite": 6
+  },
+  "2": {
+   "score": 0.044,
+   "n_win": 94,
+   "n_elite": 6
+  }
+ },
+ "DARK_SHACKLES": {
+  "3": {
+   "score": 0.011,
+   "n_win": 62,
+   "n_elite": 8
+  },
+  "2": {
+   "score": 0.076,
+   "n_win": 63,
+   "n_elite": 9
+  },
+  "1": {
+   "score": 0.095,
+   "n_win": 70,
+   "n_elite": 4
+  }
+ },
+ "SPLASH": {
+  "3": {
+   "score": 0.016,
+   "n_win": 101,
+   "n_elite": 7
+  },
+  "1": {
+   "score": 0.068,
+   "n_win": 74,
+   "n_elite": 9
+  },
+  "2": {
+   "score": 0.022,
+   "n_win": 109,
+   "n_elite": 9
+  }
+ },
+ "ETERNAL_ARMOR": {
+  "2": {
+   "score": 0.007,
+   "n_win": 96,
+   "n_elite": 14
+  },
+  "3": {
+   "score": 0.006,
+   "n_win": 122,
+   "n_elite": 10
+  },
+  "1": {
+   "score": 0.007,
+   "n_win": 91,
+   "n_elite": 17
+  }
+ },
+ "THE_BOMB": {
+  "1": {
+   "score": 0.048,
+   "n_win": 73,
+   "n_elite": 10
+  },
+  "2": {
+   "score": 0.02,
+   "n_win": 81,
+   "n_elite": 6
+  },
+  "3": {
+   "score": 0.009,
+   "n_win": 89,
+   "n_elite": 6
+  }
+ },
+ "PROWESS": {
+  "1": {
+   "score": 0.202,
+   "n_win": 60,
+   "n_elite": 9
+  },
+  "3": {
+   "score": 0.009,
+   "n_win": 84,
+   "n_elite": 10
+  },
+  "2": {
+   "score": 0.046,
+   "n_win": 61,
+   "n_elite": 8
+  }
+ },
+ "PURITY": {
+  "2": {
+   "score": 0.022,
+   "n_win": 70,
+   "n_elite": 6
+  },
+  "1": {
+   "score": 0.051,
+   "n_win": 80,
+   "n_elite": 18
+  },
+  "3": {
+   "score": 0.01,
+   "n_win": 66,
+   "n_elite": 10
+  }
+ },
+ "BOMBARDMENT": {
+  "2": {
+   "score": 0.895,
+   "n_win": 8,
+   "n_elite": 3
+  },
+  "1": {
+   "score": 0.75,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "THE_SMITH": {
+  "2": {
+   "score": 0.125,
+   "n_win": 6,
+   "n_elite": 0
+  }
+ },
+ "MONARCHS_GAZE": {
+  "2": {
+   "score": 0.636,
+   "n_win": 6,
+   "n_elite": 1
+  }
+ },
+ "CONVERGENCE": {
+  "2": {
+   "score": 0.364,
+   "n_win": 6,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "PARTICLE_WALL": {
+  "2": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.143,
+   "n_win": 2,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.167,
+   "n_win": 1,
+   "n_elite": 1
+  }
+ },
+ "SPECTRUM_SHIFT": {
+  "2": {
+   "score": 0.286,
+   "n_win": 5,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.5,
+   "n_win": 4,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.4,
+   "n_win": 3,
+   "n_elite": 0
+  }
+ },
+ "BEGONE": {
+  "2": {
+   "score": 0.273,
+   "n_win": 6,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.2,
+   "n_win": 5,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.333,
+   "n_win": 4,
+   "n_elite": 2
+  }
+ },
+ "CRUSH_UNDER": {
+  "2": {
+   "score": 0.111,
+   "n_win": 10,
+   "n_elite": 2
+  },
+  "1": {
+   "score": 0.667,
+   "n_win": 7,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.125,
+   "n_win": 6,
+   "n_elite": 0
+  }
+ },
+ "CLOAK_OF_STARS": {
+  "2": {
+   "score": 0.067,
+   "n_win": 10,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.111,
+   "n_win": 7,
+   "n_elite": 0
+  }
+ },
+ "PRODUCTION": {
+  "1": {
+   "score": 0.163,
+   "n_win": 69,
+   "n_elite": 11
+  },
+  "3": {
+   "score": 0.074,
+   "n_win": 55,
+   "n_elite": 8
+  },
+  "2": {
+   "score": 0.133,
+   "n_win": 58,
+   "n_elite": 5
+  }
+ },
+ "SECRET_WEAPON": {
+  "3": {
+   "score": 0.013,
+   "n_win": 126,
+   "n_elite": 7
+  },
+  "2": {
+   "score": 0.014,
+   "n_win": 110,
+   "n_elite": 10
+  },
+  "1": {
+   "score": 0.01,
+   "n_win": 72,
+   "n_elite": 10
+  }
+ },
+ "NOSTALGIA": {
+  "2": {
+   "score": 0.014,
+   "n_win": 106,
+   "n_elite": 10
+  },
+  "1": {
+   "score": 0.017,
+   "n_win": 86,
+   "n_elite": 10
+  },
+  "3": {
+   "score": 0.007,
+   "n_win": 108,
+   "n_elite": 14
+  }
+ },
+ "PANACHE": {
+  "2": {
+   "score": 0.023,
+   "n_win": 84,
+   "n_elite": 15
+  },
+  "3": {
+   "score": 0.022,
+   "n_win": 82,
+   "n_elite": 3
+  },
+  "1": {
+   "score": 0.038,
+   "n_win": 71,
+   "n_elite": 11
+  }
+ },
+ "PREP_TIME": {
+  "3": {
+   "score": 0.009,
+   "n_win": 88,
+   "n_elite": 7
+  },
+  "2": {
+   "score": 0.017,
+   "n_win": 81,
+   "n_elite": 11
+  },
+  "1": {
+   "score": 0.043,
+   "n_win": 72,
+   "n_elite": 14
+  }
+ },
+ "JACKPOT": {
+  "2": {
+   "score": 0.013,
+   "n_win": 96,
+   "n_elite": 17
+  },
+  "3": {
+   "score": 0.006,
+   "n_win": 125,
+   "n_elite": 15
+  },
+  "1": {
+   "score": 0.015,
+   "n_win": 88,
+   "n_elite": 14
+  }
+ },
+ "JACK_OF_ALL_TRADES": {
+  "1": {
+   "score": 0.01,
+   "n_win": 68,
+   "n_elite": 11
+  },
+  "3": {
+   "score": 0.009,
+   "n_win": 93,
+   "n_elite": 6
+  },
+  "2": {
+   "score": 0.017,
+   "n_win": 76,
+   "n_elite": 14
+  }
+ },
+ "NO_ESCAPE": {
+  "1": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.083,
+   "n_win": 7,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "SUNDER": {
+  "1": {
+   "score": 0.6,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.077,
+   "n_win": 8,
+   "n_elite": 1
+  }
+ },
+ "PAGESTORM": {
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.2,
+   "n_win": 8,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "SUPERMASSIVE": {
+  "1": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.143,
+   "n_win": 5,
+   "n_elite": 0
+  }
+ },
+ "GENETIC_ALGORITHM": {
+  "2": {
+   "score": 0.389,
+   "n_win": 13,
+   "n_elite": 1
+  }
+ },
+ "VOLTAIC": {
+  "2": {
+   "score": 0.077,
+   "n_win": 8,
+   "n_elite": 1
+  }
+ },
+ "SHATTER": {
+  "2": {
+   "score": 0.1,
+   "n_win": 8,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "FERAL": {
+  "2": {
+   "score": 0.667,
+   "n_win": 7,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.167,
+   "n_win": 1,
+   "n_elite": 1
+  }
+ },
+ "NULL": {
+  "2": {
+   "score": 0.2,
+   "n_win": 5,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.5,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.333,
+   "n_win": 4,
+   "n_elite": 0
+  }
+ },
+ "FIGHT_THROUGH": {
+  "2": {
+   "score": 0.364,
+   "n_win": 6,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.5,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "CLAW": {
+  "2": {
+   "score": 0.087,
+   "n_win": 18,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.143,
+   "n_win": 5,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.067,
+   "n_win": 4,
+   "n_elite": 3
+  }
+ },
+ "MOMENTUM_STRIKE": {
+  "2": {
+   "score": 0.143,
+   "n_win": 16,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.111,
+   "n_win": 7,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.545,
+   "n_win": 9,
+   "n_elite": 0
+  }
+ },
+ "UPROAR": {
+  "2": {
+   "score": 0.235,
+   "n_win": 15,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.429,
+   "n_win": 5,
+   "n_elite": 0
+  }
+ },
+ "ERADICATE": {
+  "2": {
+   "score": 0.667,
+   "n_win": 7,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "DEMESNE": {
+  "2": {
+   "score": 0.727,
+   "n_win": 6,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "NECRO_MASTERY": {
+  "2": {
+   "score": 0.056,
+   "n_win": 13,
+   "n_elite": 1
+  }
+ },
+ "DANSE_MACABRE": {
+  "2": {
+   "score": 0.222,
+   "n_win": 7,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.714,
+   "n_win": 2,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.3,
+   "n_win": 2,
+   "n_elite": 2
+  }
+ },
+ "DEBILITATE": {
+  "2": {
+   "score": 0.778,
+   "n_win": 4,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.6,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "SPUR": {
+  "2": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 4,
+   "n_elite": 0
+  }
+ },
+ "WISP": {
+  "2": {
+   "score": 0.348,
+   "n_win": 9,
+   "n_elite": 4
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.364,
+   "n_win": 3,
+   "n_elite": 2
+  }
+ },
+ "DEFILE": {
+  "2": {
+   "score": 0.056,
+   "n_win": 13,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.6,
+   "n_win": 5,
+   "n_elite": 1
+  }
+ },
+ "POKE": {
+  "2": {
+   "score": 0.04,
+   "n_win": 17,
+   "n_elite": 2
+  },
+  "3": {
+   "score": 0.083,
+   "n_win": 7,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.143,
+   "n_win": 5,
+   "n_elite": 0
+  }
+ },
+ "HAND_OF_GREED": {
+  "2": {
+   "score": 0.006,
+   "n_win": 133,
+   "n_elite": 9
+  },
+  "3": {
+   "score": 0.006,
+   "n_win": 110,
+   "n_elite": 21
+  },
+  "1": {
+   "score": 0.018,
+   "n_win": 85,
+   "n_elite": 9
+  }
+ },
+ "NEUROSURGE": {
+  "2": {
+   "score": 0.818,
+   "n_win": 9,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "EIDOLON": {
+  "2": {
+   "score": 0.077,
+   "n_win": 11,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "SOUL_STORM": {
+  "2": {
+   "score": 0.111,
+   "n_win": 7,
+   "n_elite": 0
+  }
+ },
+ "CLEANSE": {
+  "2": {
+   "score": 0.5,
+   "n_win": 3,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.75,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.286,
+   "n_win": 2,
+   "n_elite": 1
+  }
+ },
+ "DELAY": {
+  "2": {
+   "score": 0.471,
+   "n_win": 12,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.5,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "DEATHS_DOOR": {
+  "2": {
+   "score": 0.083,
+   "n_win": 7,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.4,
+   "n_win": 3,
+   "n_elite": 0
+  }
+ },
+ "INVOKE": {
+  "2": {
+   "score": 0.211,
+   "n_win": 14,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.143,
+   "n_win": 2,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.071,
+   "n_win": 12,
+   "n_elite": 0
+  }
+ },
+ "NEGATIVE_PULSE": {
+  "2": {
+   "score": 0.048,
+   "n_win": 13,
+   "n_elite": 2
+  },
+  "1": {
+   "score": 0.1,
+   "n_win": 8,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 0
+  }
+ },
+ "FINESSE": {
+  "3": {
+   "score": 0.029,
+   "n_win": 57,
+   "n_elite": 3
+  },
+  "2": {
+   "score": 0.185,
+   "n_win": 69,
+   "n_elite": 7
+  },
+  "1": {
+   "score": 0.152,
+   "n_win": 59,
+   "n_elite": 6
+  }
+ },
+ "SIDESTEP": {
+  "1": {
+   "score": 0.6,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.4,
+   "n_win": 8,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "SIC_EM": {
+  "1": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  }
+ },
+ "KNOCKOUT_BLOW": {
+  "1": {
+   "score": 0.143,
+   "n_win": 2,
+   "n_elite": 1
+  },
+  "2": {
+   "score": 0.125,
+   "n_win": 6,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "HAUNT": {
+  "1": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 0
+  }
+ },
+ "AFTERIMAGE": {
+  "2": {
+   "score": 0.833,
+   "n_win": 7,
+   "n_elite": 1
+  }
+ },
+ "MALAISE": {
+  "2": {
+   "score": 0.35,
+   "n_win": 12,
+   "n_elite": 2
+  },
+  "3": {
+   "score": 0.286,
+   "n_win": 2,
+   "n_elite": 1
+  }
+ },
+ "SHADOWMELD": {
+  "2": {
+   "score": 0.4,
+   "n_win": 15,
+   "n_elite": 1
+  }
+ },
+ "FLICK_FLACK": {
+  "2": {
+   "score": 0.033,
+   "n_win": 16,
+   "n_elite": 4
+  },
+  "3": {
+   "score": 0.1,
+   "n_win": 5,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.4,
+   "n_win": 3,
+   "n_elite": 0
+  }
+ },
+ "ANTICIPATE": {
+  "2": {
+   "score": 0.156,
+   "n_win": 21,
+   "n_elite": 3
+  },
+  "1": {
+   "score": 0.125,
+   "n_win": 6,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "DAGGER_SPRAY": {
+  "2": {
+   "score": 0.036,
+   "n_win": 17,
+   "n_elite": 3
+  },
+  "1": {
+   "score": 0.833,
+   "n_win": 4,
+   "n_elite": 2
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "FINISHER": {
+  "2": {
+   "score": 0.167,
+   "n_win": 7,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.111,
+   "n_win": 4,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "HIDDEN_DAGGERS": {
+  "2": {
+   "score": 0.333,
+   "n_win": 13,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.5,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "GRAVE_WARDEN": {
+  "2": {
+   "score": 0.667,
+   "n_win": 13,
+   "n_elite": 3
+  },
+  "3": {
+   "score": 0.571,
+   "n_win": 5,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.667,
+   "n_win": 4,
+   "n_elite": 1
+  }
+ },
+ "DEFY": {
+  "2": {
+   "score": 0.688,
+   "n_win": 11,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.636,
+   "n_win": 3,
+   "n_elite": 2
+  },
+  "1": {
+   "score": 0.909,
+   "n_win": 3,
+   "n_elite": 2
+  }
+ },
+ "CALL_OF_THE_VOID": {
+  "2": {
+   "score": 0.562,
+   "n_win": 8,
+   "n_elite": 2
+  },
+  "3": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "SQUEEZE": {
+  "2": {
+   "score": 0.1,
+   "n_win": 8,
+   "n_elite": 0
+  }
+ },
+ "SACRIFICE": {
+  "2": {
+   "score": 0.067,
+   "n_win": 13,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "COUNTDOWN": {
+  "2": {
+   "score": 0.286,
+   "n_win": 5,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 4,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  }
+ },
+ "BONE_SHARDS": {
+  "2": {
+   "score": 0.125,
+   "n_win": 6,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.091,
+   "n_win": 3,
+   "n_elite": 2
+  }
+ },
+ "SEVERANCE": {
+  "2": {
+   "score": 0.333,
+   "n_win": 10,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.143,
+   "n_win": 5,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "FOCUSED_STRIKE": {
+  "2": {
+   "score": 0.05,
+   "n_win": 12,
+   "n_elite": 2
+  },
+  "3": {
+   "score": 0.125,
+   "n_win": 6,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.067,
+   "n_win": 4,
+   "n_elite": 3
+  }
+ },
+ "LIGHTNING_ROD": {
+  "2": {
+   "score": 0.05,
+   "n_win": 15,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.1,
+   "n_win": 9,
+   "n_elite": 3
+  },
+  "1": {
+   "score": 0.333,
+   "n_win": 4,
+   "n_elite": 0
+  }
+ },
+ "BALL_LIGHTNING": {
+  "2": {
+   "score": 0.1,
+   "n_win": 15,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.312,
+   "n_win": 2,
+   "n_elite": 4
+  },
+  "3": {
+   "score": 0.1,
+   "n_win": 8,
+   "n_elite": 0
+  }
+ },
+ "COSMIC_INDIFFERENCE": {
+  "2": {
+   "score": 0.5,
+   "n_win": 9,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 2
+  },
+  "3": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 0
+  }
+ },
+ "ROYAL_GAMBLE": {
+  "2": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.167,
+   "n_win": 1,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.125,
+   "n_win": 3,
+   "n_elite": 1
+  }
+ },
+ "DEATH_MARCH": {
+  "2": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  }
+ },
+ "PIERCING_WAIL": {
+  "2": {
+   "score": 0.76,
+   "n_win": 23,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.875,
+   "n_win": 3,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.667,
+   "n_win": 4,
+   "n_elite": 1
+  }
+ },
+ "TACTICIAN": {
+  "2": {
+   "score": 0.077,
+   "n_win": 5,
+   "n_elite": 2
+  },
+  "3": {
+   "score": 0.167,
+   "n_win": 1,
+   "n_elite": 1
+  }
+ },
+ "PARSE": {
+  "2": {
+   "score": 0.222,
+   "n_win": 4,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.429,
+   "n_win": 2,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "PREPARED": {
+  "2": {
+   "score": 0.429,
+   "n_win": 17,
+   "n_elite": 3
+  },
+  "3": {
+   "score": 0.154,
+   "n_win": 8,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.4,
+   "n_win": 2,
+   "n_elite": 2
+  }
+ },
+ "REFINE_BLADE": {
+  "2": {
+   "score": 0.1,
+   "n_win": 15,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.111,
+   "n_win": 4,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 0
+  }
+ },
+ "ORBIT": {
+  "2": {
+   "score": 0.667,
+   "n_win": 13,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "BULK_UP": {
+  "2": {
+   "score": 0.625,
+   "n_win": 6,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.5,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "ECHO_FORM": {
+  "2": {
+   "score": 0.583,
+   "n_win": 10,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "ROYALTIES": {
+  "2": {
+   "score": 0.571,
+   "n_win": 5,
+   "n_elite": 0
+  }
+ },
+ "DECISIONS_DECISIONS": {
+  "2": {
+   "score": 0.143,
+   "n_win": 5,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "CELESTIAL_MIGHT": {
+  "3": {
+   "score": 0.125,
+   "n_win": 6,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.167,
+   "n_win": 7,
+   "n_elite": 1
+  },
+  "2": {
+   "score": 0.333,
+   "n_win": 7,
+   "n_elite": 2
+  }
+ },
+ "BACKFLIP": {
+  "3": {
+   "score": 0.5,
+   "n_win": 12,
+   "n_elite": 2
+  },
+  "2": {
+   "score": 0.632,
+   "n_win": 17,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.077,
+   "n_win": 5,
+   "n_elite": 2
+  }
+ },
+ "UNTOUCHABLE": {
+  "3": {
+   "score": 0.111,
+   "n_win": 7,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.048,
+   "n_win": 16,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.1,
+   "n_win": 5,
+   "n_elite": 1
+  }
+ },
+ "HOLOGRAM": {
+  "3": {
+   "score": 0.556,
+   "n_win": 7,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.438,
+   "n_win": 14,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.714,
+   "n_win": 2,
+   "n_elite": 1
+  }
+ },
+ "STORM": {
+  "3": {
+   "score": 0.1,
+   "n_win": 8,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.143,
+   "n_win": 5,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 0
+  }
+ },
+ "BOOST_AWAY": {
+  "3": {
+   "score": 0.125,
+   "n_win": 6,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.333,
+   "n_win": 19,
+   "n_elite": 2
+  }
+ },
+ "TEMPEST": {
+  "3": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.083,
+   "n_win": 10,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.1,
+   "n_win": 5,
+   "n_elite": 1
+  }
+ },
+ "PUTREFY": {
+  "3": {
+   "score": 0.143,
+   "n_win": 2,
+   "n_elite": 1
+  },
+  "2": {
+   "score": 0.75,
+   "n_win": 10,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.833,
+   "n_win": 4,
+   "n_elite": 0
+  }
+ },
+ "HAILSTORM": {
+  "3": {
+   "score": 0.125,
+   "n_win": 3,
+   "n_elite": 1
+  },
+  "2": {
+   "score": 0.077,
+   "n_win": 8,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.111,
+   "n_win": 4,
+   "n_elite": 1
+  }
+ },
+ "GLACIER": {
+  "2": {
+   "score": 0.417,
+   "n_win": 10,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.714,
+   "n_win": 2,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "COOLANT": {
+  "2": {
+   "score": 0.077,
+   "n_win": 8,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "SIGNAL_BOOST": {
+  "2": {
+   "score": 0.231,
+   "n_win": 8,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.6,
+   "n_win": 3,
+   "n_elite": 0
+  }
+ },
+ "COLD_SNAP": {
+  "2": {
+   "score": 0.32,
+   "n_win": 14,
+   "n_elite": 3
+  },
+  "1": {
+   "score": 0.273,
+   "n_win": 9,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.182,
+   "n_win": 6,
+   "n_elite": 1
+  }
+ },
+ "COOLHEADED": {
+  "2": {
+   "score": 0.417,
+   "n_win": 13,
+   "n_elite": 3
+  },
+  "3": {
+   "score": 0.143,
+   "n_win": 5,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.231,
+   "n_win": 8,
+   "n_elite": 1
+  }
+ },
+ "EXPOSE": {
+  "2": {
+   "score": 0.769,
+   "n_win": 11,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.75,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.857,
+   "n_win": 2,
+   "n_elite": 1
+  }
+ },
+ "BUBBLE_BUBBLE": {
+  "2": {
+   "score": 0.062,
+   "n_win": 8,
+   "n_elite": 2
+  },
+  "1": {
+   "score": 0.091,
+   "n_win": 6,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "ASSASSINATE": {
+  "2": {
+   "score": 0.25,
+   "n_win": 11,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "NIGHTMARE": {
+  "2": {
+   "score": 0.143,
+   "n_win": 12,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "WELL_LAID_PLANS": {
+  "2": {
+   "score": 0.75,
+   "n_win": 10,
+   "n_elite": 0
+  }
+ },
+ "CLOAK_AND_DAGGER": {
+  "2": {
+   "score": 0.212,
+   "n_win": 25,
+   "n_elite": 2
+  },
+  "3": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.714,
+   "n_win": 6,
+   "n_elite": 2
+  }
+ },
+ "PREDATOR": {
+  "2": {
+   "score": 0.042,
+   "n_win": 19,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.2,
+   "n_win": 5,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.4,
+   "n_win": 3,
+   "n_elite": 0
+  }
+ },
+ "SOLAR_STRIKE": {
+  "2": {
+   "score": 0.071,
+   "n_win": 12,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.111,
+   "n_win": 4,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.143,
+   "n_win": 5,
+   "n_elite": 0
+  }
+ },
+ "CHARGE": {
+  "2": {
+   "score": 0.5,
+   "n_win": 5,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.6,
+   "n_win": 3,
+   "n_elite": 0
+  }
+ },
+ "QUASAR": {
+  "2": {
+   "score": 0.143,
+   "n_win": 2,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "BIG_BANG": {
+  "2": {
+   "score": 0.444,
+   "n_win": 7,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.167,
+   "n_win": 1,
+   "n_elite": 1
+  }
+ },
+ "FOREGONE_CONCLUSION": {
+  "2": {
+   "score": 0.111,
+   "n_win": 4,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "DEFLECT": {
+  "2": {
+   "score": 0.391,
+   "n_win": 18,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.1,
+   "n_win": 9,
+   "n_elite": 3
+  },
+  "1": {
+   "score": 0.333,
+   "n_win": 4,
+   "n_elite": 0
+  }
+ },
+ "DEADLY_POISON": {
+  "2": {
+   "score": 0.043,
+   "n_win": 18,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.25,
+   "n_win": 6,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 0
+  }
+ },
+ "SUCKER_PUNCH": {
+  "2": {
+   "score": 0.111,
+   "n_win": 13,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.727,
+   "n_win": 9,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 3,
+   "n_elite": 1
+  }
+ },
+ "CALCULATED_GAMBLE": {
+  "2": {
+   "score": 0.267,
+   "n_win": 10,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  }
+ },
+ "MEMENTO_MORI": {
+  "2": {
+   "score": 0.071,
+   "n_win": 9,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  }
+ },
+ "ACCURACY": {
+  "2": {
+   "score": 0.04,
+   "n_win": 17,
+   "n_elite": 2
+  },
+  "3": {
+   "score": 0.125,
+   "n_win": 3,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "OUTBREAK": {
+  "2": {
+   "score": 0.133,
+   "n_win": 10,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "METEOR_STRIKE": {
+  "2": {
+   "score": 0.25,
+   "n_win": 8,
+   "n_elite": 2
+  }
+ },
+ "HOTFIX": {
+  "2": {
+   "score": 0.031,
+   "n_win": 18,
+   "n_elite": 4
+  },
+  "3": {
+   "score": 0.091,
+   "n_win": 6,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.059,
+   "n_win": 6,
+   "n_elite": 3
+  }
+ },
+ "SWEEPING_BEAM": {
+  "2": {
+   "score": 0.1,
+   "n_win": 18,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.091,
+   "n_win": 6,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.333,
+   "n_win": 4,
+   "n_elite": 2
+  }
+ },
+ "BOOT_SEQUENCE": {
+  "2": {
+   "score": 0.6,
+   "n_win": 8,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.667,
+   "n_win": 4,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "COMPACT": {
+  "2": {
+   "score": 0.5,
+   "n_win": 8,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 1
+  }
+ },
+ "SKIM": {
+  "2": {
+   "score": 0.688,
+   "n_win": 11,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "RICOCHET": {
+  "2": {
+   "score": 0.069,
+   "n_win": 18,
+   "n_elite": 3
+  },
+  "1": {
+   "score": 0.091,
+   "n_win": 9,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "DEATHBRINGER": {
+  "2": {
+   "score": 0.222,
+   "n_win": 4,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.5,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "NEUTRON_AEGIS": {
+  "2": {
+   "score": 0.143,
+   "n_win": 5,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "GLOW": {
+  "2": {
+   "score": 0.059,
+   "n_win": 9,
+   "n_elite": 2
+  },
+  "3": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.111,
+   "n_win": 7,
+   "n_elite": 0
+  }
+ },
+ "ACCELERANT": {
+  "2": {
+   "score": 0.091,
+   "n_win": 9,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "ENVENOM": {
+  "2": {
+   "score": 0.077,
+   "n_win": 15,
+   "n_elite": 3
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "FRIENDSHIP": {
+  "3": {
+   "score": 0.4,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.25,
+   "n_win": 6,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.111,
+   "n_win": 4,
+   "n_elite": 1
+  }
+ },
+ "SCULPTING_STRIKE": {
+  "3": {
+   "score": 0.071,
+   "n_win": 6,
+   "n_elite": 2
+  },
+  "1": {
+   "score": 0.111,
+   "n_win": 4,
+   "n_elite": 1
+  },
+  "2": {
+   "score": 0.333,
+   "n_win": 7,
+   "n_elite": 1
+  }
+ },
+ "RADIATE": {
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.143,
+   "n_win": 5,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.143,
+   "n_win": 2,
+   "n_elite": 1
+  }
+ },
+ "HIDDEN_CACHE": {
+  "3": {
+   "score": 0.077,
+   "n_win": 8,
+   "n_elite": 1
+  },
+  "2": {
+   "score": 0.083,
+   "n_win": 7,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.091,
+   "n_win": 6,
+   "n_elite": 1
+  }
+ },
+ "GO_FOR_THE_EYES": {
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.4,
+   "n_win": 15,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.615,
+   "n_win": 5,
+   "n_elite": 2
+  }
+ },
+ "SOW": {
+  "3": {
+   "score": 0.071,
+   "n_win": 6,
+   "n_elite": 2
+  },
+  "2": {
+   "score": 0.062,
+   "n_win": 15,
+   "n_elite": 5
+  },
+  "1": {
+   "score": 0.5,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "BOUNCING_FLASK": {
+  "3": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.111,
+   "n_win": 10,
+   "n_elite": 2
+  },
+  "1": {
+   "score": 0.222,
+   "n_win": 4,
+   "n_elite": 1
+  }
+ },
+ "STARDUST": {
+  "3": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.1,
+   "n_win": 5,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "FEAR": {
+  "3": {
+   "score": 0.222,
+   "n_win": 7,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.571,
+   "n_win": 2,
+   "n_elite": 1
+  },
+  "2": {
+   "score": 0.095,
+   "n_win": 13,
+   "n_elite": 2
+  }
+ },
+ "COMPILE_DRIVER": {
+  "3": {
+   "score": 0.091,
+   "n_win": 6,
+   "n_elite": 1
+  },
+  "2": {
+   "score": 0.083,
+   "n_win": 10,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.143,
+   "n_win": 5,
+   "n_elite": 0
+  }
+ },
+ "HEAVENLY_DRILL": {
+  "3": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.286,
+   "n_win": 5,
+   "n_elite": 0
+  }
+ },
+ "ENFEEBLING_TOUCH": {
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 1
+  },
+  "2": {
+   "score": 0.778,
+   "n_win": 7,
+   "n_elite": 0
+  }
+ },
+ "LOOP": {
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.1,
+   "n_win": 5,
+   "n_elite": 1
+  }
+ },
+ "UP_MY_SLEEVE": {
+  "3": {
+   "score": 0.5,
+   "n_win": 4,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.2,
+   "n_win": 10,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.5,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "SLICE": {
+  "3": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.074,
+   "n_win": 16,
+   "n_elite": 3
+  },
+  "1": {
+   "score": 0.273,
+   "n_win": 6,
+   "n_elite": 1
+  }
+ },
+ "KNIFE_TRAP": {
+  "2": {
+   "score": 0.118,
+   "n_win": 12,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "GRAND_FINALE": {
+  "2": {
+   "score": 0.067,
+   "n_win": 10,
+   "n_elite": 1
+  }
+ },
+ "BLUR": {
+  "2": {
+   "score": 0.176,
+   "n_win": 9,
+   "n_elite": 2
+  },
+  "3": {
+   "score": 0.6,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.75,
+   "n_win": 3,
+   "n_elite": 1
+  }
+ },
+ "EXPERTISE": {
+  "2": {
+   "score": 0.273,
+   "n_win": 6,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.571,
+   "n_win": 5,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "PRECISE_CUT": {
+  "2": {
+   "score": 0.071,
+   "n_win": 12,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.6,
+   "n_win": 3,
+   "n_elite": 0
+  }
+ },
+ "SKEWER": {
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 1
+  },
+  "2": {
+   "score": 0.062,
+   "n_win": 11,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.167,
+   "n_win": 1,
+   "n_elite": 1
+  }
+ },
+ "ACROBATICS": {
+  "2": {
+   "score": 0.636,
+   "n_win": 9,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.5,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "DODGE_AND_ROLL": {
+  "2": {
+   "score": 0.16,
+   "n_win": 17,
+   "n_elite": 2
+  },
+  "3": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.4,
+   "n_win": 3,
+   "n_elite": 0
+  }
+ },
+ "ADRENALINE": {
+  "2": {
+   "score": 0.826,
+   "n_win": 18,
+   "n_elite": 1
+  }
+ },
+ "FAN_OF_KNIVES": {
+  "2": {
+   "score": 0.5,
+   "n_win": 8,
+   "n_elite": 2
+  }
+ },
+ "PINPOINT": {
+  "2": {
+   "score": 0.062,
+   "n_win": 11,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "GLIMMER": {
+  "2": {
+   "score": 0.25,
+   "n_win": 6,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.833,
+   "n_win": 1,
+   "n_elite": 1
+  }
+ },
+ "DARKNESS": {
+  "2": {
+   "score": 0.045,
+   "n_win": 11,
+   "n_elite": 3
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  }
+ },
+ "SPOILS_OF_BATTLE": {
+  "2": {
+   "score": 0.1,
+   "n_win": 8,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.077,
+   "n_win": 2,
+   "n_elite": 3
+  }
+ },
+ "I_AM_INVINCIBLE": {
+  "2": {
+   "score": 0.111,
+   "n_win": 4,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "RIGHT_HAND_HAND": {
+  "3": {
+   "score": 0.125,
+   "n_win": 3,
+   "n_elite": 1
+  },
+  "2": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "RESONANCE": {
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.077,
+   "n_win": 8,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "BURST": {
+  "2": {
+   "score": 0.25,
+   "n_win": 10,
+   "n_elite": 0
+  }
+ },
+ "BLADE_OF_INK": {
+  "2": {
+   "score": 0.857,
+   "n_win": 17,
+   "n_elite": 3
+  },
+  "3": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "STORM_OF_STEEL": {
+  "2": {
+   "score": 0.182,
+   "n_win": 11,
+   "n_elite": 3
+  }
+ },
+ "ESCAPE_PLAN": {
+  "2": {
+   "score": 0.636,
+   "n_win": 9,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "SYNTHESIS": {
+  "2": {
+   "score": 0.071,
+   "n_win": 9,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "PULL_AGGRO": {
+  "2": {
+   "score": 0.214,
+   "n_win": 12,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.067,
+   "n_win": 4,
+   "n_elite": 3
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "DIRGE": {
+  "2": {
+   "score": 0.636,
+   "n_win": 6,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.125,
+   "n_win": 3,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "TYRANNY": {
+  "2": {
+   "score": 0.737,
+   "n_win": 14,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "BANSHEES_CRY": {
+  "2": {
+   "score": 0.273,
+   "n_win": 9,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "TRACKING": {
+  "2": {
+   "score": 0.067,
+   "n_win": 10,
+   "n_elite": 1
+  }
+ },
+ "SPINNER": {
+  "2": {
+   "score": 0.154,
+   "n_win": 8,
+   "n_elite": 1
+  }
+ },
+ "FLATTEN": {
+  "3": {
+   "score": 0.143,
+   "n_win": 5,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.048,
+   "n_win": 10,
+   "n_elite": 3
+  },
+  "1": {
+   "score": 0.1,
+   "n_win": 5,
+   "n_elite": 1
+  }
+ },
+ "LUNAR_BLAST": {
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.143,
+   "n_win": 2,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  }
+ },
+ "BARRAGE": {
+  "3": {
+   "score": 0.1,
+   "n_win": 5,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.111,
+   "n_win": 4,
+   "n_elite": 1
+  },
+  "2": {
+   "score": 0.077,
+   "n_win": 11,
+   "n_elite": 0
+  }
+ },
+ "CAPTURE_SPIRIT": {
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.5,
+   "n_win": 7,
+   "n_elite": 1
+  }
+ },
+ "KINGLY_KICK": {
+  "3": {
+   "score": 0.2,
+   "n_win": 5,
+   "n_elite": 1
+  },
+  "2": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.25,
+   "n_win": 3,
+   "n_elite": 1
+  }
+ },
+ "KNOW_THY_PLACE": {
+  "3": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.5,
+   "n_win": 6,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.647,
+   "n_win": 9,
+   "n_elite": 2
+  }
+ },
+ "PROPHESIZE": {
+  "3": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  }
+ },
+ "REAP": {
+  "2": {
+   "score": 0.208,
+   "n_win": 19,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.083,
+   "n_win": 4,
+   "n_elite": 2
+  },
+  "1": {
+   "score": 0.556,
+   "n_win": 7,
+   "n_elite": 0
+  }
+ },
+ "CONQUEROR": {
+  "2": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "GATHER_LIGHT": {
+  "2": {
+   "score": 0.077,
+   "n_win": 5,
+   "n_elite": 2
+  },
+  "3": {
+   "score": 0.056,
+   "n_win": 13,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.1,
+   "n_win": 5,
+   "n_elite": 1
+  }
+ },
+ "SENTRY_MODE": {
+  "2": {
+   "score": 0.091,
+   "n_win": 9,
+   "n_elite": 0
+  }
+ },
+ "SCAVENGE": {
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.333,
+   "n_win": 4,
+   "n_elite": 2
+  }
+ },
+ "BEAM_CELL": {
+  "3": {
+   "score": 0.091,
+   "n_win": 9,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.25,
+   "n_win": 19,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "GUNK_UP": {
+  "3": {
+   "score": 0.471,
+   "n_win": 9,
+   "n_elite": 2
+  },
+  "2": {
+   "score": 0.091,
+   "n_win": 6,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.375,
+   "n_win": 5,
+   "n_elite": 3
+  }
+ },
+ "PHOTON_CUT": {
+  "3": {
+   "score": 0.125,
+   "n_win": 6,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.071,
+   "n_win": 9,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.417,
+   "n_win": 4,
+   "n_elite": 2
+  }
+ },
+ "LEG_SWEEP": {
+  "1": {
+   "score": 0.8,
+   "n_win": 8,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.684,
+   "n_win": 8,
+   "n_elite": 3
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "CHAOS": {
+  "1": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.111,
+   "n_win": 10,
+   "n_elite": 2
+  },
+  "3": {
+   "score": 0.125,
+   "n_win": 3,
+   "n_elite": 1
+  }
+ },
+ "LEADING_STRIKE": {
+  "1": {
+   "score": 0.727,
+   "n_win": 9,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.567,
+   "n_win": 19,
+   "n_elite": 3
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 4,
+   "n_elite": 0
+  }
+ },
+ "FOOTWORK": {
+  "2": {
+   "score": 0.8,
+   "n_win": 8,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.5,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "CORROSIVE_WAVE": {
+  "2": {
+   "score": 0.286,
+   "n_win": 9,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "UNDEATH": {
+  "2": {
+   "score": 0.2,
+   "n_win": 5,
+   "n_elite": 1
+  }
+ },
+ "GRAVEBLAST": {
+  "2": {
+   "score": 0.333,
+   "n_win": 13,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.429,
+   "n_win": 5,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "DRAIN_POWER": {
+  "2": {
+   "score": 0.083,
+   "n_win": 10,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.462,
+   "n_win": 8,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.444,
+   "n_win": 4,
+   "n_elite": 1
+  }
+ },
+ "BLIGHT_STRIKE": {
+  "2": {
+   "score": 0.062,
+   "n_win": 11,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.067,
+   "n_win": 7,
+   "n_elite": 2
+  },
+  "1": {
+   "score": 0.375,
+   "n_win": 8,
+   "n_elite": 2
+  }
+ },
+ "MODDED": {
+  "2": {
+   "score": 0.143,
+   "n_win": 12,
+   "n_elite": 0
+  }
+ },
+ "ICE_LANCE": {
+  "2": {
+   "score": 0.231,
+   "n_win": 11,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "FLAK_CANNON": {
+  "2": {
+   "score": 0.25,
+   "n_win": 10,
+   "n_elite": 0
+  }
+ },
+ "OVERCLOCK": {
+  "2": {
+   "score": 0.75,
+   "n_win": 7,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.75,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "CHILL": {
+  "2": {
+   "score": 0.4,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.5,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.75,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "TESLA_COIL": {
+  "2": {
+   "score": 0.083,
+   "n_win": 10,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "AFTERLIFE": {
+  "2": {
+   "score": 0.071,
+   "n_win": 12,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.077,
+   "n_win": 8,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.2,
+   "n_win": 5,
+   "n_elite": 1
+  }
+ },
+ "REANIMATE": {
+  "2": {
+   "score": 0.158,
+   "n_win": 11,
+   "n_elite": 2
+  }
+ },
+ "TRANSFIGURE": {
+  "2": {
+   "score": 0.5,
+   "n_win": 7,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "CRESCENT_SPEAR": {
+  "2": {
+   "score": 0.1,
+   "n_win": 5,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.182,
+   "n_win": 6,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  }
+ },
+ "SMOKESTACK": {
+  "3": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.083,
+   "n_win": 4,
+   "n_elite": 2
+  }
+ },
+ "FUSION": {
+  "3": {
+   "score": 0.4,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.455,
+   "n_win": 9,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.5,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "SUMMON_FORTH": {
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  }
+ },
+ "HEIRLOOM_HAMMER": {
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.1,
+   "n_win": 2,
+   "n_elite": 2
+  }
+ },
+ "GUARDS": {
+  "3": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.5,
+   "n_win": 4,
+   "n_elite": 0
+  }
+ },
+ "ASTRAL_PULSE": {
+  "3": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.091,
+   "n_win": 6,
+   "n_elite": 1
+  },
+  "2": {
+   "score": 0.111,
+   "n_win": 7,
+   "n_elite": 0
+  }
+ },
+ "BUFFER": {
+  "3": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.667,
+   "n_win": 4,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.6,
+   "n_win": 3,
+   "n_elite": 0
+  }
+ },
+ "SHADOW_STEP": {
+  "3": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.273,
+   "n_win": 6,
+   "n_elite": 1
+  }
+ },
+ "SEANCE": {
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.294,
+   "n_win": 6,
+   "n_elite": 3
+  }
+ },
+ "THUNDER": {
+  "2": {
+   "score": 0.091,
+   "n_win": 6,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "SUPERCRITICAL": {
+  "2": {
+   "score": 0.944,
+   "n_win": 10,
+   "n_elite": 2
+  },
+  "1": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "INFINITE_BLADES": {
+  "2": {
+   "score": 0.462,
+   "n_win": 8,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.5,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.143,
+   "n_win": 2,
+   "n_elite": 1
+  }
+ },
+ "REFLEX": {
+  "2": {
+   "score": 0.1,
+   "n_win": 15,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.167,
+   "n_win": 1,
+   "n_elite": 1
+  }
+ },
+ "LEAP": {
+  "1": {
+   "score": 0.1,
+   "n_win": 5,
+   "n_elite": 1
+  },
+  "2": {
+   "score": 0.167,
+   "n_win": 10,
+   "n_elite": 2
+  },
+  "3": {
+   "score": 0.143,
+   "n_win": 5,
+   "n_elite": 0
+  }
+ },
+ "REFRACT": {
+  "2": {
+   "score": 0.167,
+   "n_win": 7,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 1
+  }
+ },
+ "MACHINE_LEARNING": {
+  "2": {
+   "score": 0.655,
+   "n_win": 21,
+   "n_elite": 2
+  }
+ },
+ "ADAPTIVE_STRIKE": {
+  "2": {
+   "score": 0.125,
+   "n_win": 8,
+   "n_elite": 2
+  }
+ },
+ "COLLISION_COURSE": {
+  "2": {
+   "score": 0.077,
+   "n_win": 9,
+   "n_elite": 5
+  },
+  "1": {
+   "score": 0.769,
+   "n_win": 8,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.091,
+   "n_win": 6,
+   "n_elite": 1
+  }
+ },
+ "SNAP": {
+  "2": {
+   "score": 0.053,
+   "n_win": 8,
+   "n_elite": 3
+  },
+  "1": {
+   "score": 0.111,
+   "n_win": 4,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 0
+  }
+ },
+ "BURY": {
+  "2": {
+   "score": 0.071,
+   "n_win": 6,
+   "n_elite": 2
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "MURDER": {
+  "2": {
+   "score": 0.071,
+   "n_win": 6,
+   "n_elite": 2
+  },
+  "1": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 1
+  }
+ },
+ "HELIX_DRILL": {
+  "2": {
+   "score": 0.091,
+   "n_win": 6,
+   "n_elite": 1
+  }
+ },
+ "PALE_BLUE_DOT": {
+  "3": {
+   "score": 0.857,
+   "n_win": 2,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.4,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.1,
+   "n_win": 2,
+   "n_elite": 2
+  }
+ },
+ "HEGEMONY": {
+  "3": {
+   "score": 0.167,
+   "n_win": 1,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.5,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 0
+  }
+ },
+ "END_OF_DAYS": {
+  "3": {
+   "score": 0.167,
+   "n_win": 1,
+   "n_elite": 1
+  },
+  "2": {
+   "score": 0.077,
+   "n_win": 8,
+   "n_elite": 1
+  }
+ },
+ "SUBROUTINE": {
+  "1": {
+   "score": 0.6,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.5,
+   "n_win": 4,
+   "n_elite": 0
+  }
+ },
+ "FLECHETTES": {
+  "2": {
+   "score": 0.1,
+   "n_win": 9,
+   "n_elite": 3
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "DYING_STAR": {
+  "2": {
+   "score": 0.143,
+   "n_win": 5,
+   "n_elite": 0
+  }
+ },
+ "CHILD_OF_THE_STARS": {
+  "2": {
+   "score": 0.143,
+   "n_win": 5,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "PILLAR_OF_CREATION": {
+  "1": {
+   "score": 0.333,
+   "n_win": 4,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.25,
+   "n_win": 6,
+   "n_elite": 0
+  }
+ },
+ "ALL_FOR_ONE": {
+  "2": {
+   "score": 0.333,
+   "n_win": 7,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "FTL": {
+  "2": {
+   "score": 0.167,
+   "n_win": 7,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.167,
+   "n_win": 1,
+   "n_elite": 1
+  }
+ },
+ "SHADOW_SHIELD": {
+  "2": {
+   "score": 0.1,
+   "n_win": 8,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "TURBO": {
+  "2": {
+   "score": 0.429,
+   "n_win": 12,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.5,
+   "n_win": 5,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.2,
+   "n_win": 5,
+   "n_elite": 1
+  }
+ },
+ "ECHOING_SLASH": {
+  "2": {
+   "score": 0.2,
+   "n_win": 8,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.875,
+   "n_win": 3,
+   "n_elite": 1
+  }
+ },
+ "DASH": {
+  "1": {
+   "score": 0.4,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.6,
+   "n_win": 7,
+   "n_elite": 2
+  },
+  "3": {
+   "score": 0.286,
+   "n_win": 5,
+   "n_elite": 0
+  }
+ },
+ "COMET": {
+  "2": {
+   "score": 0.083,
+   "n_win": 7,
+   "n_elite": 1
+  }
+ },
+ "TERRAFORMING": {
+  "2": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.167,
+   "n_win": 1,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "GLITTERSTREAM": {
+  "2": {
+   "score": 0.364,
+   "n_win": 14,
+   "n_elite": 2
+  },
+  "1": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.1,
+   "n_win": 5,
+   "n_elite": 1
+  }
+ },
+ "RAINBOW": {
+  "2": {
+   "score": 0.125,
+   "n_win": 3,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "WHITE_NOISE": {
+  "1": {
+   "score": 0.5,
+   "n_win": 5,
+   "n_elite": 1
+  },
+  "2": {
+   "score": 0.538,
+   "n_win": 8,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "LETHALITY": {
+  "2": {
+   "score": 0.727,
+   "n_win": 9,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.75,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.8,
+   "n_win": 3,
+   "n_elite": 0
+  }
+ },
+ "PULL_FROM_BELOW": {
+  "2": {
+   "score": 0.048,
+   "n_win": 13,
+   "n_elite": 2
+  },
+  "1": {
+   "score": 0.111,
+   "n_win": 7,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.167,
+   "n_win": 1,
+   "n_elite": 1
+  }
+ },
+ "DEVOUR_LIFE": {
+  "2": {
+   "score": 0.125,
+   "n_win": 6,
+   "n_elite": 0
+  }
+ },
+ "MULTI_CAST": {
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.1,
+   "n_win": 8,
+   "n_elite": 0
+  }
+ },
+ "HAZE": {
+  "2": {
+   "score": 0.231,
+   "n_win": 11,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "FETCH": {
+  "1": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.111,
+   "n_win": 7,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "TOOLS_OF_THE_TRADE": {
+  "2": {
+   "score": 0.273,
+   "n_win": 14,
+   "n_elite": 2
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "ABRASIVE": {
+  "2": {
+   "score": 0.105,
+   "n_win": 11,
+   "n_elite": 2
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "POUNCE": {
+  "2": {
+   "score": 0.071,
+   "n_win": 6,
+   "n_elite": 2
+  },
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.167,
+   "n_win": 1,
+   "n_elite": 1
+  }
+ },
+ "THE_HUNT": {
+  "2": {
+   "score": 0.375,
+   "n_win": 11,
+   "n_elite": 1
+  }
+ },
+ "SCRAPE": {
+  "2": {
+   "score": 0.154,
+   "n_win": 8,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.5,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "ITERATION": {
+  "2": {
+   "score": 0.111,
+   "n_win": 7,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "REBOOT": {
+  "2": {
+   "score": 0.6,
+   "n_win": 10,
+   "n_elite": 1
+  }
+ },
+ "PARRY": {
+  "2": {
+   "score": 0.308,
+   "n_win": 5,
+   "n_elite": 2
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.167,
+   "n_win": 1,
+   "n_elite": 1
+  }
+ },
+ "HYPERBEAM": {
+  "2": {
+   "score": 0.3,
+   "n_win": 8,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "DOUBLE_ENERGY": {
+  "2": {
+   "score": 0.3,
+   "n_win": 5,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 4,
+   "n_elite": 0
+  }
+ },
+ "CALCIFY": {
+  "1": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.125,
+   "n_win": 6,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  }
+ },
+ "SPEEDSTER": {
+  "1": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.083,
+   "n_win": 7,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "PHANTOM_BLADES": {
+  "2": {
+   "score": 0.1,
+   "n_win": 8,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.167,
+   "n_win": 1,
+   "n_elite": 1
+  }
+ },
+ "SNAKEBITE": {
+  "2": {
+   "score": 0.045,
+   "n_win": 11,
+   "n_elite": 3
+  },
+  "3": {
+   "score": 0.167,
+   "n_win": 1,
+   "n_elite": 1
+  }
+ },
+ "PATTER": {
+  "2": {
+   "score": 0.538,
+   "n_win": 8,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.125,
+   "n_win": 3,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.273,
+   "n_win": 6,
+   "n_elite": 1
+  }
+ },
+ "CREATIVE_AI": {
+  "2": {
+   "score": 0.667,
+   "n_win": 4,
+   "n_elite": 1
+  }
+ },
+ "ARSENAL": {
+  "3": {
+   "score": 0.857,
+   "n_win": 2,
+   "n_elite": 1
+  },
+  "2": {
+   "score": 0.625,
+   "n_win": 6,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "KINGLY_PUNCH": {
+  "3": {
+   "score": 0.111,
+   "n_win": 4,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 1
+  },
+  "2": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "GLASSWORK": {
+  "3": {
+   "score": 0.125,
+   "n_win": 3,
+   "n_elite": 1
+  },
+  "2": {
+   "score": 0.111,
+   "n_win": 4,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "SHINING_STRIKE": {
+  "1": {
+   "score": 0.167,
+   "n_win": 1,
+   "n_elite": 1
+  },
+  "2": {
+   "score": 0.1,
+   "n_win": 5,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.167,
+   "n_win": 1,
+   "n_elite": 1
+  }
+ },
+ "VEILPIERCER": {
+  "1": {
+   "score": 0.4,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "MISERY": {
+  "2": {
+   "score": 0.375,
+   "n_win": 6,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "HANG": {
+  "2": {
+   "score": 0.182,
+   "n_win": 6,
+   "n_elite": 1
+  }
+ },
+ "SHROUD": {
+  "2": {
+   "score": 0.111,
+   "n_win": 7,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "SHARED_FATE": {
+  "2": {
+   "score": 0.091,
+   "n_win": 6,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "TIMES_UP": {
+  "2": {
+   "score": 0.111,
+   "n_win": 4,
+   "n_elite": 1
+  }
+ },
+ "HIGH_FIVE": {
+  "2": {
+   "score": 0.083,
+   "n_win": 4,
+   "n_elite": 2
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "DEFRAGMENT": {
+  "2": {
+   "score": 0.182,
+   "n_win": 9,
+   "n_elite": 0
+  }
+ },
+ "DREDGE": {
+  "2": {
+   "score": 0.833,
+   "n_win": 4,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.167,
+   "n_win": 1,
+   "n_elite": 1
+  }
+ },
+ "CRASH_LANDING": {
+  "2": {
+   "score": 0.222,
+   "n_win": 7,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "MONOLOGUE": {
+  "1": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.583,
+   "n_win": 7,
+   "n_elite": 1
+  }
+ },
+ "ROCKET_PUNCH": {
+  "2": {
+   "score": 0.091,
+   "n_win": 9,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "CONSUMING_SHADOW": {
+  "2": {
+   "score": 0.1,
+   "n_win": 8,
+   "n_elite": 0
+  }
+ },
+ "THE_SCYTHE": {
+  "2": {
+   "score": 0.333,
+   "n_win": 4,
+   "n_elite": 0
+  }
+ },
+ "BORROWED_TIME": {
+  "2": {
+   "score": 0.769,
+   "n_win": 8,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.5,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.833,
+   "n_win": 1,
+   "n_elite": 1
+  }
+ },
+ "BLACK_HOLE": {
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.143,
+   "n_win": 5,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "MANIFEST_AUTHORITY": {
+  "2": {
+   "score": 0.6,
+   "n_win": 5,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.75,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "DEVASTATE": {
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.125,
+   "n_win": 3,
+   "n_elite": 1
+  }
+ },
+ "CAPACITOR": {
+  "2": {
+   "score": 0.1,
+   "n_win": 5,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.167,
+   "n_win": 1,
+   "n_elite": 1
+  }
+ },
+ "TRASH_TO_TREASURE": {
+  "2": {
+   "score": 0.1,
+   "n_win": 8,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "SLEIGHT_OF_FLESH": {
+  "2": {
+   "score": 0.118,
+   "n_win": 6,
+   "n_elite": 3
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "MELANCHOLY": {
+  "2": {
+   "score": 0.125,
+   "n_win": 6,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "GUIDING_STAR": {
+  "2": {
+   "score": 0.091,
+   "n_win": 6,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.143,
+   "n_win": 5,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.062,
+   "n_win": 5,
+   "n_elite": 3
+  }
+ },
+ "OBLIVION": {
+  "2": {
+   "score": 0.125,
+   "n_win": 6,
+   "n_elite": 0
+  }
+ },
+ "REAVE": {
+  "1": {
+   "score": 0.647,
+   "n_win": 6,
+   "n_elite": 3
+  },
+  "2": {
+   "score": 0.077,
+   "n_win": 11,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.125,
+   "n_win": 6,
+   "n_elite": 0
+  }
+ },
+ "SPIRIT_OF_ASH": {
+  "2": {
+   "score": 0.071,
+   "n_win": 9,
+   "n_elite": 1
+  }
+ },
+ "VOID_FORM": {
+  "2": {
+   "score": 0.125,
+   "n_win": 3,
+   "n_elite": 1
+  },
+  "3": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "WATCHER-JUST_LUCKY": {
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "HAND_TRICK": {
+  "2": {
+   "score": 0.143,
+   "n_win": 5,
+   "n_elite": 0
+  }
+ },
+ "BUNDLE_OF_JOY": {
+  "2": {
+   "score": 0.167,
+   "n_win": 1,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.75,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "WATCHER_FLYING_SLEEVES": {
+  "1": {
+   "score": 0.167,
+   "n_win": 1,
+   "n_elite": 1
+  }
+ },
+ "GAMMA_BLAST": {
+  "2": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "SYNCHRONIZE": {
+  "2": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "FURNACE": {
+  "2": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  },
+  "1": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "MAKE_IT_SO": {
+  "2": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "REAPER_FORM": {
+  "2": {
+   "score": 0.667,
+   "n_win": 4,
+   "n_elite": 1
+  }
+ },
+ "BEAT_INTO_SHAPE": {
+  "2": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  }
+ },
+ "SEEKING_EDGE": {
+  "2": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  }
+ },
+ "ALIGNMENT": {
+  "1": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.167,
+   "n_win": 4,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "GENESIS": {
+  "2": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "SWORD_SAGE": {
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.2,
+   "n_win": 3,
+   "n_elite": 0
+  }
+ },
+ "REFLECT": {
+  "2": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "SEVEN_STARS": {
+  "2": {
+   "score": 0.167,
+   "n_win": 1,
+   "n_elite": 1
+  },
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "DEBRIS": {
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "APPARITION": {
+  "1": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "BIASED_COGNITION": {
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "QUADCAST": {
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "DAZED": {
+  "1": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "BECKON": {
+  "1": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "INFECTION": {
+  "1": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "MAUL": {
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "SUPPRESS": {
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "APOTHEOSIS": {
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "STRIKE_IRONCLAD": {
+  "2": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "SPOILS_MAP": {
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "SLOTH": {
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "WOUND": {
+  "3": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "VOID": {
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "BURN": {
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "DEFEND_SILENT": {
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "POOR_SLEEP": {
+  "3": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "INJURY": {
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "BAD_LUCK": {
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "TOXIC": {
+  "1": {
+   "score": 0.5,
+   "n_win": 2,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "WITHER": {
+  "1": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "SLIMED": {
+  "1": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "2": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "WHISTLE": {
+  "2": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "THE_SEALED_THRONE": {
+  "2": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "WRAITH_FORM": {
+  "2": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "GREED": {
+  "2": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "SHAME": {
+  "2": {
+   "score": 0.25,
+   "n_win": 2,
+   "n_elite": 0
+  }
+ },
+ "ZAP": {
+  "2": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  },
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "SOOT": {
+  "2": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "ENTHRALLED": {
+  "2": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "FOLLY": {
+  "2": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "DECAY": {
+  "2": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "DEBT": {
+  "2": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "STRIKE_REGENT": {
+  "2": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "DEFEND_NECROBINDER": {
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "SOVEREIGN_BLADE": {
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "BREAK": {
+  "3": {
+   "score": 0.667,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "RELAX": {
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "ABUNDANCE": {
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "CORRUPTION": {
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "ENTRENCH": {
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "STACK": {
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ },
+ "HELLO_WORLD": {
+  "3": {
+   "score": 0.333,
+   "n_win": 1,
+   "n_elite": 0
+  }
+ }
+}

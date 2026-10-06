@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "patch": "/opt/slay-the-spire-2/codex-agent/research/combat-model-20261005/mainline-public-model-no-hidden-followup/patches/codex-stun-followup-visible-powers.patch",
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "patch": "/opt/slay-the-spire-2/codex-agent/research/combat-model-20261005/mainline-public-model-relic-lifecycle/patches/codex-public-model-relic-lifecycle.patch",
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "patch": "/opt/slay-the-spire-2/codex-agent/research/combat-model-20261005/mainline-public-intent-move-beliefs/patches/codex-remove-native-move-id.patch",
+      "returncode": 0,
+      "output": ""
+    }
+  ],
+  "owner_sha256": "2b4813d40b42e6b46e17fcee4d892fecb20df0f39287338a97916d2808a0e348",
+  "copy_sha256": "2db6057d3dc43245540ed00d4b4454855eda8cec689b751ae7037b6babca10a8",
+  "owner_edited": false,
+  "compiled": false,
+  "deployed": false
+}

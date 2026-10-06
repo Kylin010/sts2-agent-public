@@ -1,0 +1,613 @@
+diff --git a/src/Sts2Headless/RunSimulator.cs b/src/Sts2Headless/RunSimulator.cs
+index 911f841..6d13f33 100644
+--- a/src/Sts2Headless/RunSimulator.cs
++++ b/src/Sts2Headless/RunSimulator.cs
+@@ -28,6 +28,8 @@ using MegaCrit.Sts2.Core.Localization;
+ using MegaCrit.Sts2.Core.Multiplayer.Serialization;
+ using MegaCrit.Sts2.Core.Saves;
+ using MegaCrit.Sts2.Core.Unlocks;
++using MegaCrit.Sts2.Core.Events.Custom.CrystalSphereEvent;
++using MegaCrit.Sts2.Core.Nodes.Events.Custom.CrystalSphere;
+ 
+ namespace Sts2Headless;
+ 
+@@ -247,26 +249,12 @@ public class RunSimulator
+     }
+ 
+     private int _lastEventOptionCount;
+-
+-    // Pending rewards for card selection (populated after combat, before proceeding)
+-    private List<Reward>? _pendingRewards;
+-    private CardReward? _pendingCardReward;
+-    private bool _rewardsProcessed;
+-    private int _goldBeforeCombat;
+-    private int _lastKnownHp;
+-    private readonly HeadlessCardSelector _cardSelector = new();
+-    private IDisposable? _selectorScope;     // UseSelector 的句柄：清理上一局时释放，下一局才能重新登记（10/2）
+-    // Pending bundle selection (Scroll Boxes: pick 1 of N packs)
+-    private IReadOnlyList<IReadOnlyList<CardModel>>? _pendingBundles;
+-    private TaskCompletionSource<IEnumerable<CardModel>>? _pendingBundleTcs;
+-    // 10/3（B-010）：事件选项在后台线程跑，await 之后的步骤（回血、换页、进战斗）排在同步队列里，要边推进队列边等它走完。
+-    // 原来只推约 1 秒、再 task.Wait(2000) 干等（不推队列，任务走不动），负载高时返回旧选项；再选一次会在旧选项没走完时
+-    // 又执行一个选项（实测：茂密植被先休息回血、又执行继续前进拿金币，强制战斗被跳过）。
+-    private Task? _eventTask;
+-    // 事件选项任务崩了（后台没有界面单例：音效 / 震屏 / 肖像）或超时：这一局按技术故障停下（Codex 审查：结束事件会保留一半效果，
+-    // 例如茂密植被回了血却跳过强制战斗；回传旧页又能再选一次）。之后每个命令都回 EVENT_FAULT 错误，开新局 / 读档才清掉。
+-    private string? _eventFault;
+-    private string _eventFaultCtx = "";   // 哪个事件的哪个选项（报错时带上，方便定位）
++    private Task? _eventChoiceTask;
++    private Task? _eventSelectionReplyTask;
++    private CrystalSphereMinigame? _crystalSphere;
++    private Task? _crystalClickTask;
++    private Exception? _eventFailure;
++    private string _eventFaultCtx = ""; // Keep patch16 visible event/option diagnostics.
+     // 10/3（B-014，claude-value 发现）：删牌后游戏靠界面 NMerchantCardRemoval 把「删牌服务」标成用过，后台没有界面，
+     // Used 永远是 false，同一个商店能无限删、价格不涨（真人每店一次）。这里记下删之前的次数，次数涨了就由引擎自己 SetUsed()
+     private MerchantCardRemovalEntry? _removalEntry;
+@@ -317,21 +305,17 @@ public class RunSimulator
+         }
+     }
+ 
+-    private void SettleEventTask(int maxMs = 30000)
+-    {
+-        var t = _eventTask;
+-        if (t == null) return;
+-        var sw = System.Diagnostics.Stopwatch.StartNew();
+-        while (!t.IsCompleted && sw.ElapsedMilliseconds < maxMs)
+-        {
+-            _syncCtx.Pump();
+-            if (_cardSelector.HasPending || _cardSelector.HasPendingReward || _pendingBundles != null) return;   // 事件在等玩家选牌 / 选包
+-            Thread.Sleep(5);
+-        }
+-        if (t.IsFaulted) { Log($"Event option task faulted: {t.Exception?.GetBaseException()}"); _eventFault = $"faulted: {t.Exception?.GetBaseException().Message}"; }
+-        if (t.IsCompleted) { _eventTask = null; _syncCtx.Pump(); }
+-        else { Log($"Event option task still running after {maxMs} ms"); _eventFault = $"timeout {maxMs} ms"; }
+-    }
++    // Pending rewards for card selection (populated after combat, before proceeding)
++    private List<Reward>? _pendingRewards;
++    private CardReward? _pendingCardReward;
++    private bool _rewardsProcessed;
++    private int _goldBeforeCombat;
++    private int _lastKnownHp;
++    private readonly HeadlessCardSelector _cardSelector = new();
++    private IDisposable? _selectorScope;     // UseSelector 的句柄：清理上一局时释放，下一局才能重新登记（10/2）
++    // Pending bundle selection (Scroll Boxes: pick 1 of N packs)
++    private IReadOnlyList<IReadOnlyList<CardModel>>? _pendingBundles;
++    private volatile TaskCompletionSource<IEnumerable<CardModel>>? _pendingBundleTcs;
+ 
+     public Dictionary<string, object?> StartRun(string character, int ascension = 0, string? seed = null, string lang = "en")
+     {
+@@ -342,7 +326,6 @@ public class RunSimulator
+ 
+             // 同一个进程里开新局：先清理上一局（不然 RunManager 报 State is already set，第二次开局直接失败）。
+             // 这样一个引擎进程可以连续开很多局，省掉每局约 5 秒的初始化（10/2 加，为了让引擎推演跑得动）
+-            _eventFault = null; _eventTask = null;
+             if (_runState != null || RunManager.Instance.IsInProgress)
+             {
+                 try { _cardSelector.CancelPending(); } catch { }
+@@ -674,7 +657,6 @@ public class RunSimulator
+             Log("Loading save file...");
+ 
+             // 同一进程里读档：先清理上一局（和 StartRun 一样，否则 State is already set）
+-            _eventFault = null; _eventTask = null;
+             if (_runState != null || RunManager.Instance.IsInProgress)
+             {
+                 try { _cardSelector.CancelPending(); } catch { }
+@@ -1048,6 +1030,9 @@ public class RunSimulator
+             if (_runState == null)
+                 return Error("No run in progress");
+ 
++            if (_eventFailure != null)
++                return Error($"EVENT_FAULT: [{_eventFaultCtx}] this run requires technical failure reporting: {_eventFailure.Message}");
++
+             if (_merchantPurchaseFailure != null)
+                 return Error("MERCHANT_FAULT: " + _merchantPurchaseFailure.Message);
+ 
+@@ -1079,6 +1064,8 @@ public class RunSimulator
+                     return DoEndTurn(player);
+                 case "choose_option":
+                     return DoChooseOption(player, args);
++                case "crystal_click":
++                    return DoCrystalClick(args);
+                 case "select_card_reward":
+                     return DoSelectCardReward(player, args);
+                 case "skip_card_reward":
+@@ -1111,6 +1098,8 @@ public class RunSimulator
+         }
+         catch (Exception ex)
+         {
++            if (_eventFailure != null)
++                return ErrorWithTrace($"EVENT_FAULT: [{_eventFaultCtx}] action '{action}' failed", ex);
+             return ErrorWithTrace($"Action '{action}' failed", ex);
+         }
+     }
+@@ -1122,7 +1111,22 @@ public class RunSimulator
+         if (args == null || !args.ContainsKey("col") || !args.ContainsKey("row"))
+             return Error("select_map_node requires 'col' and 'row'");
+ 
+-        // Reset tracking for new room
++        // Only the player's current map choices may enter a room. Reject before
++        // clearing rewards or pumping tasks, so an invalid request has no effect.
++        if (_runState?.CurrentRoom is not MapRoom)
++            return Error("select_map_node is only available in a map room");
++        if (_cardSelector.HasPending || _cardSelector.HasPendingReward
++            || _pendingBundles != null || _pendingCardReward != null)
++            return Error("Complete the current selection before choosing a map node");
++        if (args["col"] is not int col || args["row"] is not int row
++            || col < 0 || row < 0 || col > byte.MaxValue || row > byte.MaxValue)
++            return Error("select_map_node requires nonnegative integer map coordinates");
++
++        var coord = new MapCoord(col, row);
++        if (!PlayerTravelableMapPoints().Any(point => point.coord == coord))
++            return Error($"Map coord ({col},{row}) is not currently travelable");
++
++        // Reset tracking only after the current player choice was validated.
+         _rewardsProcessed = false;
+         _pendingCardReward = null; _cardRewardQueue.Clear();
+         _eventOptionChosen = false;
+@@ -1130,10 +1134,6 @@ public class RunSimulator
+         _pendingRewards = null;
+         _lastKnownHp = player.Creature?.CurrentHp ?? 0;
+ 
+-        var col = Convert.ToInt32(args["col"]);
+-        var row = Convert.ToInt32(args["row"]);
+-        var coord = new MapCoord((byte)col, (byte)row);
+-
+         Log($"Moving to map coord ({col},{row})");
+ 
+         // BUG-013: Wait for any pending actions (relic sessions, etc.) to complete before entering new room
+@@ -1441,6 +1441,8 @@ public class RunSimulator
+             var idx = Convert.ToInt32(args["card_index"]);
+             Log($"Resolving event card reward: index {idx}");
+             _cardSelector.ResolveReward(idx);
++            if (_eventChoiceTask != null && !CombatManager.Instance.IsInProgress)
++                return DetectDecisionPoint();
+             Thread.Sleep(50);
+             _syncCtx.Pump();
+             WaitForActionExecutor();
+@@ -1482,6 +1484,8 @@ public class RunSimulator
+         {
+             Log("Skipping event card reward");
+             _cardSelector.SkipReward();
++            if (_eventChoiceTask != null && !CombatManager.Instance.IsInProgress)
++                return DetectDecisionPoint();
+             Thread.Sleep(50);
+             _syncCtx.Pump();
+             WaitForActionExecutor();
+@@ -1641,6 +1645,11 @@ public class RunSimulator
+ 
+         // Set result directly (no ContinueWith/ThreadPool)
+         var selected = (idx >= 0 && idx < bundles.Count) ? bundles[idx] : bundles[0];
++        if (_eventChoiceTask != null && !CombatManager.Instance.IsInProgress)
++        {
++            _eventSelectionReplyTask = Task.Run(() => tcs.TrySetResult(selected));
++            return DetectDecisionPoint();
++        }
+         tcs.TrySetResult(selected);
+ 
+         _syncCtx.Pump();
+@@ -1662,6 +1671,11 @@ public class RunSimulator
+             .ToArray();
+ 
+         Log($"Card selection: indices [{string.Join(",", indices)}]");
++        if (_eventChoiceTask != null && !CombatManager.Instance.IsInProgress)
++        {
++            _eventSelectionReplyTask = _cardSelector.ResolvePendingDeferredByIndices(indices);
++            return DetectDecisionPoint();
++        }
+         _cardSelector.ResolvePendingByIndices(indices);
+         _syncCtx.Pump();
+         WaitForActionExecutor();
+@@ -1710,6 +1724,11 @@ public class RunSimulator
+         if (_cardSelector.HasPending)
+         {
+             Log("Skipping card selection");
++            if (_eventChoiceTask != null && !CombatManager.Instance.IsInProgress)
++            {
++                _eventSelectionReplyTask = _cardSelector.ResolvePendingDeferredByIndices(Array.Empty<int>());
++                return DetectDecisionPoint();
++            }
+             _cardSelector.CancelPending();
+             _syncCtx.Pump();
+             WaitForActionExecutor();
+@@ -1868,14 +1887,23 @@ public class RunSimulator
+                         _eventOptionChosen = true;
+                         _lastEventOptionCount = options.Count;
+                         // Run on thread pool so GetSelectedCards/GetSelectedCardReward can block
+-                        _eventFaultCtx = $"{localEvent.GetType().Name} / {options[optionIndex].TextKey}";
+-                        _eventTask = Task.Run(() => options[optionIndex].Chosen());
+-                        SettleEventTask();                 // B-010：边推进同步队列边等，直到走完或要玩家选牌（原来推 1 秒 + 干等 2 秒）
++                        var chosenOption = options[optionIndex];
++                        _eventFaultCtx = $"{localEvent.GetType().Name} / {chosenOption.TextKey}";
++                        var task = _eventChoiceTask = Task.Run(() => chosenOption.Chosen());
++                        for (int i = 0; i < 100; i++)
++                        {
++                            _syncCtx.Pump();
++                            if (_cardSelector.HasPending || _cardSelector.HasPendingReward) break;
++                            if (_pendingBundles != null) break;
++                            if (task.IsCompleted) break;
++                            Thread.Sleep(10);
++                        }
+                         if (_cardSelector.HasPending || _cardSelector.HasPendingReward || _pendingBundles != null)
+                         {
+                             WaitForActionExecutor();
+                             return DetectDecisionPoint();
+                         }
++                        if (!task.IsCompleted) task.Wait(2000);
+                         _syncCtx.Pump();
+                     }
+                     catch (Exception ex) { Log($"Event choose: {ex.Message}"); }
+@@ -1892,6 +1920,49 @@ public class RunSimulator
+         return DetectDecisionPoint();
+     }
+ 
++    private Dictionary<string, object?> CrystalSphereState()
++    {
++        var game = _crystalSphere!;
++        var cells = new List<Dictionary<string, object?>>();
++        for (int x = 0; x < game.GridSize.X; x++)
++        for (int y = 0; y < game.GridSize.Y; y++)
++        {
++            var cell = game.cells[x, y];
++            var info = new Dictionary<string, object?> {
++                ["x"] = x, ["y"] = y, ["hidden"] = cell.IsHidden };
++            // Visible item textures lie under the cell's fog in the real UI.
++            // Never inspect or emit the item of an obscured cell.
++            if (!cell.IsHidden && cell.Item != null)
++                info["visible_item"] = cell.Item.GetType().Name;
++            cells.Add(info);
++        }
++        return new Dictionary<string, object?> {
++            ["type"] = "decision", ["decision"] = "crystal_sphere",
++            ["context"] = RunContext(), ["player"] = PlayerSummary(_runState!.Players[0]),
++            ["width"] = game.GridSize.X, ["height"] = game.GridSize.Y,
++            ["divinations_left"] = game.DivinationCount, ["cells"] = cells };
++    }
++
++    private Dictionary<string, object?> DoCrystalClick(Dictionary<string, object?>? args)
++    {
++        if (_crystalSphere == null || _crystalSphere.IsFinished)
++            return Error("No crystal sphere decision pending");
++        if (args == null || !args.ContainsKey("x") || !args.ContainsKey("y")
++            || !args.TryGetValue("tool", out var tool) || Convert.ToString(tool) is not ("Big" or "Small"))
++            return Error("crystal_click needs public x, y and Big/Small tool");
++        var game = _crystalSphere;
++        int x = Convert.ToInt32(args["x"]), y = Convert.ToInt32(args["y"]);
++        if (x < 0 || x >= game.GridSize.X || y < 0 || y >= game.GridSize.Y)
++            return Error("Crystal coordinate outside visible board");
++        game.SetTool(Convert.ToString(tool) == "Small"
++            ? CrystalSphereMinigame.CrystalSphereToolType.Small
++            : CrystalSphereMinigame.CrystalSphereToolType.Big);
++        // The last click may run the original reward continuation inline.
++        // Keep it off the request thread, preserving actual reward prompts.
++        _crystalClickTask = Task.Run(() => game.CellClicked(game.cells[x, y]));
++        return DetectDecisionPoint();
++    }
++
+     private Dictionary<string, object?> DoLeaveRoom(Player player)
+     {
+         Log("Leaving room");
+@@ -1978,22 +2049,51 @@ public class RunSimulator
+ 
+     #region Decision Point Detection
+ 
++    private bool HasEventInput(bool allowCrystalInput = true)
++    {
++        var bundle = _pendingBundleTcs;
++        return _cardSelector.HasPending || _cardSelector.HasPendingReward
++            || (_pendingBundles != null && bundle?.Task.IsCompleted == false)
++            || (allowCrystalInput && _crystalSphere != null && !_crystalSphere.IsFinished);
++    }
++
++    // Finish the preceding choice, or expose its next genuine player prompt.
++    // Never return old event options while the callback is still modifying it.
++    private void WaitForEventTask(ref Task? pending, string label, bool pumpContext = true, int maxWaitMs = 25000, bool allowCrystalInput = true)
++    {
++        var task = pending;
++        if (task == null) return;
++        var deadline = Environment.TickCount64 + maxWaitMs;
++        while (!task.IsCompleted)
++        {
++            if (HasEventInput(allowCrystalInput) || CombatManager.Instance.IsInProgress) return;
++            if (pumpContext) _syncCtx.Pump();
++            if (HasEventInput(allowCrystalInput) || CombatManager.Instance.IsInProgress) return;
++            if (Environment.TickCount64 >= deadline)
++            {
++                _eventFailure = new TimeoutException(label + " did not complete or request input");
++                throw _eventFailure;
++            }
++            Thread.Sleep(5);
++        }
++        try { task.GetAwaiter().GetResult(); }
++        catch (Exception ex) { _eventFailure = ex; throw; }
++        pending = null;
++    }
++
+     private Dictionary<string, object?> DetectDecisionPoint()
+     {
++        // Completing an event selector can synchronously reach a blocking
++        // reward. Keep that reply off this request thread and do not pump its
++        // captured context while it is awaiting the next player answer.
++        WaitForEventTask(ref _eventSelectionReplyTask, "Event selection reply", pumpContext: false);
++        WaitForEventTask(ref _crystalClickTask, "Crystal sphere click", pumpContext: false, allowCrystalInput: false);
++        if (_eventSelectionReplyTask == null && _crystalClickTask == null)
++            WaitForEventTask(ref _eventChoiceTask, "Event choice");
+         if (_runState == null)
+             return Error("No run in progress");
+ 
+-        // B-010：选牌 / 选包之后回到事件时，原来的选项任务可能还没走完（还在换页、回血、进战斗），先走完再看局面，
+-        // 否则回传的是旧选项。事件选项进了战斗就不等（有的选项要等战斗打完才算结束，战斗中每一步都等会卡住）。
+-        if (_eventTask != null)
+-        {
+-            if (_runState.CurrentRoom is EventRoom && !CombatManager.Instance.IsInProgress) SettleEventTask();
+-            else if (_eventTask.IsCompleted || _runState.CurrentRoom is not EventRoom) _eventTask = null;
+-        }
+         SyncCardRemovalUsed();
+-        if (_eventFault != null)
+-            return Error($"EVENT_FAULT: [{_eventFaultCtx}] event option task {_eventFault} (headless cannot finish this option; treat the run as a technical failure)");
+-
+         if (_merchantPurchaseFailure != null)
+             return Error("MERCHANT_FAULT: " + _merchantPurchaseFailure.Message);
+         try { SettleMerchantPurchase(); }
+@@ -2120,6 +2220,11 @@ public class RunSimulator
+             return CardRewardState(player, _runState.CurrentRoom as CombatRoom);
+         }
+ 
++        if (_crystalSphere != null && !_crystalSphere.IsFinished)
++            return CrystalSphereState();
++        if (_crystalSphere?.IsFinished == true && _crystalClickTask == null)
++            _crystalSphere = null;
++
+         // Check if RunManager reports game over (victory)
+         if (RunManager.Instance.IsGameOver)
+         {
+@@ -2202,6 +2307,31 @@ public class RunSimulator
+         };
+     }
+ 
++    // Match NMapScreen.RecalculateTravelability, including boss transitions and
++    // the native free-travel hook (Winged Boots). Reading choices consumes no RNG
++    // or relic charges; EnterMapCoord retains the native AfterRoomEntered effects.
++    private IReadOnlyList<MapPoint> PlayerTravelableMapPoints()
++    {
++        var map = _runState?.Map;
++        if (map == null) return Array.Empty<MapPoint>();
++        var visited = _runState!.VisitedMapCoords;
++        if (visited.Count == 0) return new[] { map.StartingMapPoint };
++
++        var coord = visited[visited.Count - 1];
++        if (map.SecondBossMapPoint != null && coord == map.BossMapPoint.coord)
++            return new[] { map.SecondBossMapPoint };
++        if (coord.row == map.GetRowCount() - 1)
++            return new[] { map.BossMapPoint };
++
++        var currentPoint = map.GetPoint(coord);
++        if (currentPoint == null)
++        {
++            Log($"Last visited coord ({coord.col},{coord.row}) not found; offering the native starting point fallback");
++            return new[] { map.StartingMapPoint };
++        }
++        return MapTravel.GetTravelablePointsFrom(_runState, currentPoint).ToList();
++    }
++
+     private Dictionary<string, object?> MapSelectState()
+     {
+         var map = _runState?.Map;
+@@ -2221,70 +2351,14 @@ public class RunSimulator
+             if (map == null)
+                 return Error("No map available");
+         }
+-        var currentCoord = _runState!.CurrentMapCoord;
+-
+-        List<Dictionary<string, object?>> choices;
+-        if (currentCoord.HasValue)
+-        {
+-            var currentPoint = map.GetPoint(currentCoord.Value);
+-            if (currentPoint == null)
+-            {
+-                Log($"GetPoint returned null for coord ({currentCoord.Value.col},{currentCoord.Value.row}), falling back to start");
+-                // Current coord is invalid (stale after forced room transition); treat as no position
+-                choices = new List<Dictionary<string, object?>>();
+-                var sp = map.StartingMapPoint;
+-                if (sp?.Children != null)
+-                {
+-                    foreach (var child in sp.Children)
+-                    {
+-                        choices.Add(new Dictionary<string, object?>
+-                        {
+-                            ["col"] = (int)child.coord.col,
+-                            ["row"] = (int)child.coord.row,
+-                            ["type"] = child.PointType.ToString(),
+-                        });
+-                    }
+-                }
+-            }
+-            else
+-            {
+-                choices = (currentPoint.Children ?? Enumerable.Empty<MapPoint>())
+-                    .Select(child => new Dictionary<string, object?>
+-                    {
+-                        ["col"] = (int)child.coord.col,
+-                        ["row"] = (int)child.coord.row,
+-                        ["type"] = child.PointType.ToString(),
+-                    })
+-                    .ToList();
+-            }
+-        }
+-        else
+-        {
+-            // Starting point — pick from starting row
+-            var startPoint = map.StartingMapPoint;
+-            choices = new List<Dictionary<string, object?>>
++        var choices = PlayerTravelableMapPoints()
++            .Select(point => new Dictionary<string, object?>
+             {
+-                new()
+-                {
+-                    ["col"] = (int)startPoint.coord.col,
+-                    ["row"] = (int)startPoint.coord.row,
+-                    ["type"] = startPoint.PointType.ToString(),
+-                }
+-            };
+-            // Add all children of start point as well since we can travel to them
+-            if (startPoint.Children != null)
+-            {
+-                foreach (var child in startPoint.Children)
+-                {
+-                    choices.Add(new Dictionary<string, object?>
+-                    {
+-                        ["col"] = (int)child.coord.col,
+-                        ["row"] = (int)child.coord.row,
+-                        ["type"] = child.PointType.ToString(),
+-                    });
+-                }
+-            }
+-        }
++                ["col"] = (int)point.coord.col,
++                ["row"] = (int)point.coord.row,
++                ["type"] = point.PointType.ToString(),
++            })
++            .ToList();
+ 
+         return new Dictionary<string, object?>
+         {
+@@ -3205,7 +3279,7 @@ public class RunSimulator
+             ["max_hp"] = player.Creature?.MaxHp ?? 0,
+             ["block"] = player.Creature?.Block ?? 0,
+             ["gold"] = player.Gold,
+-            ["potion_slots"] = player.MaxPotionCount,   // 10/3：potions 列表只有已持有的（空栏被 Player.Potions 过滤掉），策略算「还有几个空栏」要靠这个
++            ["potion_slots"] = player.MaxPotionCount,
+             ["relics"] = player.Relics?.Select(r =>
+             {
+                 var vars = new Dictionary<string, object?>();
+@@ -3358,6 +3432,22 @@ public class RunSimulator
+         // moves (e.g. BygoneEffigy.WakeMove) NRE in headless and break the enemy turn.
+         PatchTalkCmd();
+         PatchCosmeticDeathHooks();
++        // Cosmetic patch contract failures must stop initialization, rather
++        // than leave an engine that can silently skip real event outcomes.
++        EventUiCompatibility.Install();
++        // Event options execute on the worker pool to support blocking selectors.
++        // Native event combat must capture the same serialized context as map combat;
++        // otherwise its enemy loop/draw continuations race public hand enumeration.
++        var eventCombat = typeof(MegaCrit.Sts2.Core.Multiplayer.Game.EventCombatSynchronizer)
++            .GetMethod("ReadyToEnterCombat", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Public)
++            ?? throw new MissingMethodException("EventCombatSynchronizer.ReadyToEnterCombat");
++        new Harmony("sts2headless.event-combat-context").Patch(eventCombat,
++            prefix: new HarmonyMethod(typeof(LocPatches).GetMethod(nameof(LocPatches.EventCombatContextPrefix))),
++            finalizer: new HarmonyMethod(typeof(LocPatches).GetMethod(nameof(LocPatches.EventCombatContextFinalizer))));
++        var crystalScreen = typeof(NCrystalSphereScreen).GetMethod("ShowScreen", BindingFlags.Static | BindingFlags.Public)
++            ?? throw new MissingMethodException("NCrystalSphereScreen.ShowScreen");
++        new Harmony("sts2headless.crystal-input").Patch(crystalScreen,
++            prefix: new HarmonyMethod(typeof(LocPatches).GetMethod(nameof(LocPatches.CrystalScreenPrefix))));
+ 
+         // Initialize localization system (needed for events, cards, etc.)
+         InitLocManager();
+@@ -3657,9 +3747,20 @@ public class RunSimulator
+             tcs?.TrySetResult(Array.Empty<CardModel>());
+         }
+ 
++        public Task ResolvePendingDeferredByIndices(int[] indices)
++        {
++            var options = PendingOptions;
++            var tcs = _pendingTcs;
++            var selected = options == null ? new List<CardModel>() : indices
++                .Where(i => i >= 0 && i < options.Count).Select(i => options[i]).ToList();
++            PendingOptions = null;
++            _pendingTcs = null;
++            return Task.Run(() => tcs?.TrySetResult(selected));
++        }
++
+         // Pending card reward from events (GetSelectedCardReward blocks until resolved)
+         public List<MegaCrit.Sts2.Core.Entities.Cards.CardCreationResult>? PendingRewardCards { get; private set; }
+-        private ManualResetEventSlim? _rewardWait;
++        private volatile ManualResetEventSlim? _rewardWait;
+         private int _rewardChoice = -1;
+ 
+         // NOTE: STS2 build 23372702 changed ICardSelector.GetSelectedCardReward to return
+@@ -3675,10 +3776,11 @@ public class RunSimulator
+             // Store pending and block until main loop resolves
+             PendingRewardCards = options.ToList();
+             _rewardChoice = -1;
+-            _rewardWait = new ManualResetEventSlim(false);
++            var waiter = new ManualResetEventSlim(false);
++            _rewardWait = waiter;
+ 
+             Console.Error.WriteLine($"[SIM] Card reward pending: {options.Count} cards (blocking)");
+-            _rewardWait.Wait(TimeSpan.FromSeconds(300)); // Wait up to 5 min
++            waiter.Wait(TimeSpan.FromSeconds(300)); // Wait up to 5 min
+ 
+             var choice = _rewardChoice;
+             PendingRewardCards = null;
+@@ -3689,7 +3791,14 @@ public class RunSimulator
+             return default;  // Skip (card=null, alternative=null)
+         }
+ 
+-        public bool HasPendingReward => PendingRewardCards != null && _rewardWait != null;
++        public bool HasPendingReward
++        {
++            get
++            {
++                var waiter = _rewardWait;
++                return PendingRewardCards != null && waiter != null && !waiter.IsSet;
++            }
++        }
+ 
+         public void ResolveReward(int index)
+         {
+@@ -4072,10 +4181,11 @@ public class RunSimulator
+             if (sim != null)
+             {
+                 sim._pendingBundles = bundles;
+-                sim._pendingBundleTcs = new TaskCompletionSource<IEnumerable<CardModel>>();
++                var pending = new TaskCompletionSource<IEnumerable<CardModel>>();
++                sim._pendingBundleTcs = pending;
+                 Console.Error.WriteLine($"[SIM] Bundle selection pending: {bundles.Count} packs");
+ 
+-                __result = sim._pendingBundleTcs.Task;
++                __result = pending.Task;
+                 return false;
+             }
+ 
+@@ -4083,6 +4193,28 @@ public class RunSimulator
+             return false;
+         }
+ 
++        public static void EventCombatContextPrefix(out SynchronizationContext? __state)
++        {
++            __state = SynchronizationContext.Current;
++            var sim = _bundleSimRef ?? throw new InvalidOperationException("No active event combat adapter");
++            SynchronizationContext.SetSynchronizationContext(_syncCtx);
++        }
++
++        public static Exception? EventCombatContextFinalizer(SynchronizationContext? __state, Exception? __exception)
++        {
++            SynchronizationContext.SetSynchronizationContext(__state);
++            return __exception;
++        }
++
++        public static bool CrystalScreenPrefix(CrystalSphereMinigame grid, ref NCrystalSphereScreen __result)
++        {
++            if (_bundleSimRef == null)
++                throw new InvalidOperationException("No simulator for crystal sphere input");
++            _bundleSimRef._crystalSphere = grid;
++            __result = null!;
++            return false;
++        }
++
+         // Static reference so Harmony patch can access the simulator instance
+         internal static RunSimulator? _bundleSimRef;
+ 
+@@ -4195,6 +4327,12 @@ public class RunSimulator
+         _merchantPurchaseFailure = null;
+         _merchantReceiptName = "";
+         _merchantReceiptPrice = 0;
++        _eventChoiceTask = null;
++        _eventSelectionReplyTask = null;
++        _crystalSphere = null;
++        _crystalClickTask = null;
++        _eventFailure = null;
++        _eventFaultCtx = "";
+         _rewardsProcessed = false;
+         _pendingCardReward = null; _cardRewardQueue.Clear();
+         _eventOptionChosen = false;

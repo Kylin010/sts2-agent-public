@@ -1,0 +1,45 @@
+{
+  "scope": "Pure public input synthetic example, not a native qualification or win-rate improvement. First two future moves fixed KO/Ponder; third retains unknown-curse legacy mixture until public final proof is supplied.",
+  "enemy": {
+    "name": "Knowledge Demon",
+    "index": 0,
+    "hp": 200,
+    "max_hp": 399,
+    "powers": [
+      {
+        "name": "Strength",
+        "id": "STRENGTH_POWER",
+        "amount": -7
+      },
+      {
+        "id": "SHACKLING_POTION_POWER",
+        "amount": 7
+      }
+    ],
+    "intents": [
+      {
+        "type": "Attack",
+        "damage": 11,
+        "hits": 1
+      }
+    ]
+  },
+  "values": [
+    {
+      "flag": false,
+      "future": [
+        6.0,
+        6.0,
+        7.0
+      ]
+    },
+    {
+      "flag": true,
+      "future": [
+        27.0,
+        13.0,
+        10.5
+      ]
+    }
+  ]
+}

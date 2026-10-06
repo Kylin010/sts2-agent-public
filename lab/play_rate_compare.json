@@ -1,0 +1,162 @@
+{
+"ARMAMENTS": {
+"script": 0.312,
+"human": 0.77,
+"n": 48
+},
+"STAMPEDE": {
+"script": 0.346,
+"human": 0.767,
+"n": 26
+},
+"FIGHT_ME": {
+"script": 0.226,
+"human": 0.613,
+"n": 31
+},
+"TREMBLE": {
+"script": 0.45,
+"human": 0.711,
+"n": 60
+},
+"BECKON": {
+"script": 0.533,
+"human": 0.74,
+"n": 30
+},
+"TAUNT": {
+"script": 0.608,
+"human": 0.805,
+"n": 79
+},
+"BURNING_PACT": {
+"script": 0.452,
+"human": 0.641,
+"n": 31
+},
+"COLOSSUS": {
+"script": 0.444,
+"human": 0.626,
+"n": 36
+},
+"PERFECTED_STRIKE": {
+"script": 0.386,
+"human": 0.542,
+"n": 44
+},
+"FLAME_BARRIER": {
+"script": 0.463,
+"human": 0.591,
+"n": 41
+},
+"BLOOD_WALL": {
+"script": 0.341,
+"human": 0.451,
+"n": 41
+},
+"BODY_SLAM": {
+"script": 0.68,
+"human": 0.762,
+"n": 25
+},
+"RAGE": {
+"script": 0.75,
+"human": 0.786,
+"n": 32
+},
+"TRUE_GRIT": {
+"script": 0.596,
+"human": 0.621,
+"n": 52
+},
+"BLOODLETTING": {
+"script": 0.465,
+"human": 0.466,
+"n": 43
+},
+"BREAKTHROUGH": {
+"script": 0.553,
+"human": 0.553,
+"n": 38
+},
+"POMMEL_STRIKE": {
+"script": 0.724,
+"human": 0.724,
+"n": 76
+},
+"ASCENDERS_BANE": {
+"script": 0.0,
+"human": 0.0,
+"n": 140
+},
+"DAZED": {
+"script": 0.0,
+"human": 0.0,
+"n": 32
+},
+"DEFEND_IRONCLAD": {
+"script": 0.454,
+"human": 0.442,
+"n": 795
+},
+"SHRUG_IT_OFF": {
+"script": 0.74,
+"human": 0.719,
+"n": 96
+},
+"STRIKE_IRONCLAD": {
+"script": 0.494,
+"human": 0.472,
+"n": 873
+},
+"HEADBUTT": {
+"script": 0.721,
+"human": 0.694,
+"n": 61
+},
+"UPPERCUT": {
+"script": 0.772,
+"human": 0.735,
+"n": 57
+},
+"EVIL_EYE": {
+"script": 0.679,
+"human": 0.624,
+"n": 28
+},
+"ANGER": {
+"script": 0.93,
+"human": 0.854,
+"n": 43
+},
+"BATTLE_TRANCE": {
+"script": 0.912,
+"human": 0.834,
+"n": 57
+},
+"FORGOTTEN_RITUAL": {
+"script": 0.69,
+"human": 0.607,
+"n": 29
+},
+"ASHEN_STRIKE": {
+"script": 0.704,
+"human": 0.617,
+"n": 27
+},
+"TWIN_STRIKE": {
+"script": 0.759,
+"human": 0.627,
+"n": 29
+},
+"BASH": {
+"script": 0.754,
+"human": 0.563,
+"n": 207
+},
+"SECOND_WIND": {
+"script": 0.759,
+"human": 0.546,
+"n": 29
+}
+}

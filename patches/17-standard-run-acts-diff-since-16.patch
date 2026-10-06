@@ -1,0 +1,37 @@
+diff --git a/src/Sts2Headless/RunSimulator.cs b/src/Sts2Headless/RunSimulator.cs
+index c796021..c9a7108 100644
+--- a/src/Sts2Headless/RunSimulator.cs
++++ b/src/Sts2Headless/RunSimulator.cs
+@@ -359,12 +359,10 @@ public class RunSimulator
+             _seedStr = seedStr;
+             Log($"Creating RunState with seed={seedStr}");
+ 
+-            // Use CreateForTest which properly handles mutable copies internally
+-            _runState = RunState.CreateForTest(
+-                players: new[] { player },
+-                ascensionLevel: ascension,
+-                seed: seedStr
+-            );
++            // Use the same seeded act-selection and run constructor as an ordinary,
++            // fully unlocked/discovered singleplayer lobby. Keep these choices inside
++            // the engine; decisions receive only the currently visible act.
++            _runState = CreateStandardRun(player, ascension, seedStr);
+ 
+             // Set up RunManager with test mode
+             var netService = new NetSingleplayerGameService();
+@@ -3392,6 +3390,15 @@ public class RunSimulator
+         }
+     }
+ 
++    private static RunState CreateStandardRun(Player player, int ascension, string seed)
++    {
++        var actRng = new MegaCrit.Sts2.Core.Random.Rng(StringHelper.GetDeterministicHashCode(seed), "act_selection");
++        var acts = ActModel.GetRandomList(actRng, UnlockState.all, isMultiplayer: false)
++            .Select(act => act.ToMutable()).ToList();
++        return RunState.CreateForNewRun(new[] { player }, acts, Array.Empty<ModifierModel>(),
++            MegaCrit.Sts2.Core.Runs.GameMode.Standard, ascension, seed);
++    }
++
+     private Player? CreatePlayer(string characterName)
+     {
+         return characterName.ToLowerInvariant() switch

@@ -1,0 +1,38 @@
+[
+  {
+    "path": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Entities.Creatures/Creature.cs",
+    "sha256": "7a38841c525d5cc8873a2151e993e30e2ee84ecb345ea57e2570bbac4516c20d"
+  },
+  {
+    "path": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Commands/CreatureCmd.cs",
+    "sha256": "b4c0eace35caeb0998edb70af5b626f96835c0d3149d474b9b7c4693d9e30278"
+  },
+  {
+    "path": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models/MonsterModel.cs",
+    "sha256": "4b1d47c2021ceeb555a5e86c7dc9912268cc3c7f060eca9963780c6be6e87621"
+  },
+  {
+    "path": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.MonsterMoves.MonsterMoveStateMachine/MoveState.cs",
+    "sha256": "6e3b275ec182774006eb6e1451bc4d835c76ea033fb0a6c73a31d1224473007e"
+  },
+  {
+    "path": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/AsleepPower.cs",
+    "sha256": "8a48187e4c0369d92adc6a2c72dd1f4972ab41645a386e69717cb438502c05da"
+  },
+  {
+    "path": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Powers/ShriekPower.cs",
+    "sha256": "4695f16955ff21fd5b84bb8403067ab0b55e982c8153b1eca3ea05bbeda233df"
+  },
+  {
+    "path": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.Models.Cards/Whistle.cs",
+    "sha256": "f9519f20a3959c8fa5816aa7cf90f5d41bdd00a962fd237fae092f5e83d1a1fa"
+  },
+  {
+    "path": "/opt/slay-the-spire-2/decompiled/v0.111.0/MegaCrit.Sts2.Core.MonsterMoves.Intents/StunIntent.cs",
+    "sha256": "1d57809ca65b7f5e1d526020625cf0c36d7745eb944d6863f8c95053c1743435"
+  },
+  {
+    "path": "/opt/slay-the-spire-2/codex-agent/research/claude-value/sts2-cli-p27cv/src/Sts2Headless/RunSimulator.cs",
+    "sha256": "2b4813d40b42e6b46e17fcee4d892fecb20df0f39287338a97916d2808a0e348"
+  }
+]
