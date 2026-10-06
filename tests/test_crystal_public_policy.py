@@ -7,8 +7,9 @@ import unittest
 from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from tests._gamedata import needs_kb
 
-path = Path(__file__).resolve().parents[1] / 'policy/crystal.py'
+path =Path(__file__).resolve().parents[1] / 'policy/crystal.py'
 spec = importlib.util.spec_from_file_location('crystal_public', path)
 crystal = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(crystal)
@@ -20,6 +21,7 @@ def board():
 
 
 class PublicCrystal(unittest.TestCase):
+    @needs_kb
     def test_compatible_sdk_uses_an_actually_offered_event_option(self):
         import json, params, policy
         state = json.loads((Path(__file__).parent / 'fixtures' /

@@ -1,7 +1,11 @@
 import copy
+from pathlib import Path
+import sys
 import unittest
 from unittest.mock import patch
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from tests._gamedata import require_kb; require_kb(__name__)
 import params
 from policy import route, rest, deckeval, elites, combos, learn
 

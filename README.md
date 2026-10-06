@@ -24,7 +24,7 @@ An automated agent for Slay the Spire 2 (Ironclad) — a turn planner plus publi
    ```
 
    01–09 号是早期的单项补丁，已经合在 10 号里；`codex-*` 开头的是实验性补丁，不用打。
-4. **Python 3.10 以上和 numpy。**
+4. **Python 3.10 以上和 numpy**：`pip install -r requirements.txt`。
 5. **生成知识库**：`kb/` 里有几份文件带游戏文本，不随仓库分发，要用自己的游戏数据生成。两个脚本开头写的是开发机上的绝对路径，先改成自己的：
    - `kb/cards.json`、`kb/relics.json`、`kb/potions.json`：运行 `python3 build_knowledge.py`。输入是 [spire-codex](https://github.com/ptrlrd/spire-codex) 格式的游戏数据（`data-beta/v0.111.0/{eng,zhs}/*.json`），可以用 spire-codex 的工具从自己的游戏文件解出来；路径在脚本的 `SRC`。
    - `kb/monsters.json`、`kb/encounters_src.json`：先用 ILSpy 之类的工具把自己游戏目录里的 `sts2.dll` 按命名空间反编译到一个目录（脚本默认 `decompiled/v0.111.0/`），再运行 `python3 tools/extract_monsters.py`；脚本开头的 `ROOT`（反编译目录、sts2-cli 的本地化目录）和 `KB`（本仓库的 `kb/`）要改成自己的路径。
@@ -43,6 +43,15 @@ python3 run.py 40 --set alpha_max=1.2    # 临时改参数（所有参数在 par
 ```
 
 多台机器一起跑：把 `machines.example.json` 复制成 `machines.local.json`，填上自己的机器（这个文件已在 `.gitignore` 里），然后用 `python3 dist.py`，参数和 `run.py` 一样。
+
+## 跑测试
+
+```bash
+python3 tests/run_all.py                 # 逐个跑 tests/test_*.py，每个文件一个独立进程
+python3 tests/test_shop_visit_card_budget.py   # 只跑一个
+```
+
+测试都不启动引擎。没生成 `kb/cards.json` 等游戏数据时，依赖它的测试会显示「跳过」并写明缺哪个文件，不算失败。
 
 ## 目录
 

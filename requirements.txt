@@ -1,0 +1,2 @@
+# 跑对局和测试只需要 numpy；tools/ 里部分训练脚本还要 torch、scipy，用到时再装
+numpy

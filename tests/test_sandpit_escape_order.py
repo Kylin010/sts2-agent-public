@@ -6,6 +6,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
+from tests._gamedata import require_kb; require_kb(__name__)
 spec = importlib.util.spec_from_file_location('port_fixtures', ROOT / 'tests/test_codex_ports.py')
 fx = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(fx)

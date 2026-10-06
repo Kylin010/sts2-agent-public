@@ -5,6 +5,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from tests._gamedata import require_kb; require_kb(__name__)
 from policy import public_move_beliefs as B, search, nnpolicy, combat
 from params import scoped
 

@@ -5,6 +5,7 @@
 """
 import os, sys, traceback
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from tests._gamedata import require_kb; require_kb(__name__)  # noqa: E402
 
 from params import P  # noqa: E402
 P['cv_weight'] = 0.0          # 战斗估值模型会叠一层学出来的修正，测试只看规则本身

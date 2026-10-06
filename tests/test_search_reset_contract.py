@@ -4,6 +4,7 @@ from pathlib import Path
 import sys, unittest, subprocess
 from unittest.mock import patch
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
+from tests._gamedata import require_kb;require_kb(__name__)
 subprocess.Popen=lambda *a,**k: (_ for _ in ()).throw(AssertionError('No process starts'))
 import params,sim
 from policy import search

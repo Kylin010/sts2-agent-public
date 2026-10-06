@@ -3,6 +3,7 @@ import copy,json
 from pathlib import Path
 import sys,unittest
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
+from tests._gamedata import require_kb;require_kb(__name__)
 import params,policy
 from sim import SimError
 class NoNative:
